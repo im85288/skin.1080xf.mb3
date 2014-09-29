@@ -72,4 +72,10 @@
 	<color name="Cyan Focus">ff00ffff</color>
 	<color name="Magenta Focus">ffff00ff</color>
 	<color name="Imdb Focus">fff3ce13</color>
+	
+	<!-- Tile Colours -->
+	<color name="tilegreen">FF109909</color>
+	<color name="tileblue">FF2D89C2</color>
+	<color name="tileyellow">FFFFD95C</color>
+	<color name="tilepinkyred">FFFF6666</color>
 </colors>

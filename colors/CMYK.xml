@@ -1,0 +1,7 @@
+<colors>	
+	<!-- Tile Colours -->
+	<color name="tilegreen">FF00FFFF</color>
+	<color name="tileblue">FFFF00FF</color>
+	<color name="tileyellow">FFFFFF00</color>
+	<color name="tilepinkyred">FF000000</color>
+</colors>

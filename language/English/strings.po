@@ -1011,7 +1011,7 @@ msgid "Info list"
 msgstr ""
 
 msgctxt "#42223"
-msgid "Info list ���"
+msgid "Info list ���������"
 msgstr ""
 
 msgctxt "#42224"
@@ -1019,7 +1019,7 @@ msgid "Panel"
 msgstr ""
 
 msgctxt "#42225"
-msgid "Panel ���"
+msgid "Panel ���������"
 msgstr ""
 
 msgctxt "#42226"
@@ -1031,7 +1031,7 @@ msgid "Poster"
 msgstr ""
 
 msgctxt "#42228"
-msgid "Poster ���"
+msgid "Poster ���������"
 msgstr ""
 
 msgctxt "#42229"
@@ -1039,7 +1039,7 @@ msgid "Thumbnail"
 msgstr ""
 
 msgctxt "#42230"
-msgid "Thumbnail ���"
+msgid "Thumbnail ���������"
 msgstr ""
 
 msgctxt "#42231"
@@ -1047,7 +1047,7 @@ msgid "Banner"
 msgstr ""
 
 msgctxt "#42232"
-msgid "Banner ���"
+msgid "Banner ���������"
 msgstr ""
 
 msgctxt "#42233"
@@ -1137,5 +1137,17 @@ msgstr ""
 
 msgctxt "#49244"
 msgid "New Episodes airing Today"
+msgstr ""
+
+msgctxt "#49245"
+msgid "Show Weather Fanart"
+msgstr ""
+
+msgctxt "#49246"
+msgid "Path to Weather Fanart"
+msgstr ""
+
+msgctxt "#49247"
+msgid "Path to Music Art (Music Directory)"
 msgstr ""
 

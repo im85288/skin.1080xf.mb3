@@ -245,11 +245,30 @@
 						<enable>Skin.HasSetting(StartupPlaylist)</enable>
 						<animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(1009)">Conditional</animation>
 					</control>
+					<control type="radiobutton" id="1014">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(ShowWeatherFanart)</selected>
+						<onclick>Skin.ToggleSetting(ShowWeatherFanart)</onclick>
+						<onclick condition="Skin.HasSetting(ShowWeatherFanart)">Skin.SetBool(ShowDailyWeatherFanart)</onclick>
+						<onclick condition="!Skin.HasSetting(ShowWeatherFanart)">Skin.Reset(ShowDailyWeatherFanart)</onclick>
+						<onclick>ReloadSkin</onclick>
+						<label>$LOCALIZE[49245]</label>
+					</control>
+					<control type="button" id="1015">
+						<width>1210</width>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick>Skin.SetPath(WeatherFanartDir)</onclick>
+						<enable>Skin.HasSetting(ShowWeatherFanart)</enable>
+						<label>$LOCALIZE[49246]</label>
+						<label2>[COLOR=SelectedBlue]$INFO[Skin.String(WeatherFanartDir)][/COLOR]</label2>
+						<animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(1015)">Conditional</animation>
+					</control>
 					<control type="button" id="1013">
 						<width>1210</width>
 						<include>SettingsCategoryDefaultButtonVars</include>
 						<onclick>Skin.SetPath(cdartlocation)</onclick>
-						<label>Path to Music Art</label>
+						<label>$LOCALIZE[49247]</label>
 						<label2>[COLOR=SelectedBlue]$INFO[Skin.String(cdartlocation)][/COLOR]</label2>
 						<animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(1013)">Conditional</animation>
 					</control>

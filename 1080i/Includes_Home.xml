@@ -2384,7 +2384,7 @@
 									<posy>19</posy>
 									<width>293</width>
 									<height>293</height>
-									<texture border="7">windows/home/tile-blue.png</texture>
+									<texture colordiffuse="tileblue" border="7">special://skin/extras/icons/tile-white.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -2479,7 +2479,7 @@
 										<posy>19</posy>
 										<width>293</width>
 										<height>293</height>
-										<texture border="7">windows/home/tile-blue.png</texture>
+										<texture colordiffuse="tileblue" border="7">special://skin/extras/icons/tile-white.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -2616,7 +2616,7 @@
 									<posy>19</posy>
 									<width>293</width>
 									<height>293</height>
-									<texture border="7">windows/home/tile-blue.png</texture>
+									<texture colordiffuse="tileblue" border="7">special://skin/extras/icons/tile-white.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -2707,7 +2707,7 @@
 										<posy>19</posy>
 										<width>293</width>
 										<height>293</height>
-										<texture border="7">windows/home/tile-blue.png</texture>
+										<texture colordiffuse="tileblue" border="7">special://skin/extras/icons/tile-white.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -3177,7 +3177,7 @@
 									<posy>19</posy>
 									<width>293</width>
 									<height>293</height>
-									<texture border="7">windows/home/tile-green.png</texture>
+									<texture colordiffuse="tilegreen" border="7">special://skin/extras/icons/tile-white.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -3272,7 +3272,7 @@
 										<posy>19</posy>
 										<width>293</width>
 										<height>293</height>
-										<texture border="7">windows/home/tile-green.png</texture>
+										<texture colordiffuse="tilegreen" border="7">special://skin/extras/icons/tile-white.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -3408,7 +3408,7 @@
 									<posy>19</posy>
 									<width>293</width>
 									<height>293</height>
-									<texture border="7">windows/home/tile-green.png</texture>
+									<texture colordiffuse="tilegreen" border="7">special://skin/extras/icons/tile-white.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -3499,7 +3499,7 @@
 										<posy>19</posy>
 										<width>293</width>
 										<height>293</height>
-										<texture border="7">windows/home/tile-green.png</texture>
+										<texture colordiffuse="tilegreen" border="7">special://skin/extras/icons/tile-white.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -3919,7 +3919,7 @@
 									<posy>19</posy>
 									<width>293</width>
 									<height>293</height>
-									<texture colordiffuse="yellow" border="7">special://skin/extras/icons/tile-white.png</texture>
+									<texture colordiffuse="tileyellow" border="7">special://skin/extras/icons/tile-white.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -4014,7 +4014,7 @@
 										<posy>19</posy>
 										<width>293</width>
 										<height>293</height>
-										<texture colordiffuse="yellow" border="7">special://skin/extras/icons/tile-white.png</texture>
+										<texture colordiffuse="tileyellow" border="7">special://skin/extras/icons/tile-white.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -4148,7 +4148,7 @@
 									<posy>19</posy>
 									<width>293</width>
 									<height>293</height>
-									<texture colordiffuse="yellow" border="7">special://skin/extras/icons/tile-white.png</texture>
+									<texture colordiffuse="tileyellow" border="7">special://skin/extras/icons/tile-white.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -4239,7 +4239,7 @@
 										<posy>19</posy>
 										<width>293</width>
 										<height>293</height>
-										<texture colordiffuse="yellow" border="7">special://skin/extras/icons/tile-white.png</texture>
+										<texture colordiffuse="tileyellow" border="7">special://skin/extras/icons/tile-white.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -4550,35 +4550,45 @@
 								<scroll>false</scroll>
 							</control>
 						</control>
-						<control type="button">
-							<description>Title label</description>
-							<posx>20</posx>
-							<posy>490</posy>
-							<width>980</width>
-							<height>42</height>
-							<label>[B]$INFO[Container(4022).ListItem.Label][/B]</label>
-							<font>Font-Condensed-S32</font>
-							<disabledcolor>aawhite</disabledcolor>
-							<align>left</align>
-							<aligny>center</aligny>
-							<enable>false</enable>
-							<visible>Control.IsVisible(4022)</visible>
-							<include>visiblehidefadeinfodelayvisible</include>
-						</control>
-						<control type="button">
-							<description>Title label</description>
-							<posx>20</posx>
-							<posy>537</posy>
-							<width>980</width>
-							<height>30</height>
-							<label>$INFO[Container(4022).ListItem.Label2]</label>
-							<font>Font-Condensed-S29</font>
-							<disabledcolor>aawhite</disabledcolor>
-							<align>left</align>
-							<aligny>top</aligny>
-							<enable>false</enable>
-							<visible>Control.IsVisible(4022)</visible>
-							<include>visiblehidefadeinfodelayvisible</include>
+						<control type="group">
+							<control type="image">
+								<description>Logo</description>
+								<posx>810</posx>
+								<posy>480</posy>
+								<width>206</width>
+								<height>80</height>
+								<aligny>bottom</aligny>
+								<align>left</align>
+								<aspectratio>keep</aspectratio>
+								<texture>$INFO[Skin.String(cdartlocation)]$INFO[Container(4022).ListItem.Label2,,/logo.png]</texture>
+								<visible>!isEmpty(Container(4022).ListItem.Label2)</visible>
+							</control>
+							<control type="textbox">
+								<posx>10</posx>
+								<posy>490</posy>
+								<width>800</width>
+								<height>42</height>
+								<label>$INFO[Container(4022).ListItem.Label]$INFO[Container(4022).ListItem.Property(Title2), ,]</label>
+								<font>Font-Condensed-S32</font>
+								<textcolor>aawhite</textcolor>
+								<align>left</align>
+								<aligny>top</aligny>
+								<scroll>false</scroll>
+								<autoscroll>false</autoscroll>
+								<visible>Control.IsVisible(4022)</visible>
+								<animation effect="fade" time="800" start="0" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+								<animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+							</control>
+							<control type="label">
+								<posx>10</posx>
+								<posy>537</posy>
+								<width>800</width>
+								<font>Font-Condensed-S32</font>
+								<label>$INFO[Container(4022).ListItem.Label2]</label>
+								<textcolor>aawhite</textcolor>
+								<scroll>false</scroll>
+								<visible>!IsEmpty(Container(4022).ListItem.Label2) + !substring(Container(4022).ListItem.Label2,None)</visible>
+							</control>
 						</control>
 						<control type="label">
 							<posx>0</posx>
@@ -4662,7 +4672,7 @@
 									<posy>19</posy>
 									<width>293</width>
 									<height>293</height>
-									<texture colordiffuse="pinkyred" border="7">special://skin/extras/icons/tile-white.png</texture>
+									<texture colordiffuse="tilepinkyred" border="7">special://skin/extras/icons/tile-white.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -4757,7 +4767,7 @@
 										<posy>19</posy>
 										<width>293</width>
 										<height>293</height>
-										<texture colordiffuse="pinkyred" border="7">special://skin/extras/icons/tile-white.png</texture>
+										<texture colordiffuse="tilepinkyred" border="7">special://skin/extras/icons/tile-white.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -4918,7 +4928,7 @@
 								<posy>19</posy>
 								<width>293</width>
 								<height>293</height>
-								<texture colordiffuse="pinkyred" border="7">special://skin/extras/icons/tile-white.png</texture>
+								<texture colordiffuse="tilepinkyred" border="7">special://skin/extras/icons/tile-white.png</texture>
 								<animation effect="fade" end="90" time="0" condition="true">Conditional</animation>
 							</control>
 							<control type="group">
@@ -5005,7 +5015,7 @@
 									<posy>19</posy>
 									<width>293</width>
 									<height>293</height>
-									<texture colordiffuse="pinkyred" border="7">special://skin/extras/icons/tile-white.png</texture>
+									<texture colordiffuse="tilepinkyred" border="7">special://skin/extras/icons/tile-white.png</texture>
 									<animation type="Focus">
 										<effect type="fade" start="90" end="100" time="200" tween="sine" easing="in" />
 									</animation>

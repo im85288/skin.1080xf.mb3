@@ -217,7 +217,7 @@
 						<width>90</width>
 						<height>60</height>
 						<texture>flags/other/set-list.png</texture>
-						<visible>substring(ListItem.Path,videodb://movies/sets,left)</visible>
+						<visible>stringcompare(ListItem.Property(ItemType),BoxSet)</visible>
 						<colordiffuse>$VAR[Colordiffuse.Color]</colordiffuse>
 					</control>
 					<control type="label">
@@ -253,11 +253,11 @@
 					</control>
 					<control type="label">
 						<description>Label</description>
-						<posx>790</posx>
+						<posx>1040</posx>
 						<posy>0</posy>
-						<width>600</width>
+						<width>354</width>
 						<height>62</height>
-						<font>Font-Condensed-S34-B</font>
+						<font>Font-Condensed-S30-B</font>
 						<align>right</align>
 						<label>$INFO[ListItem.Label]</label>
 						<textcolor>aawhite</textcolor>
@@ -265,9 +265,9 @@
 					</control>
 					<control type="label">
 						<description>Year / Duration</description>
-						<posx>790</posx>
+						<posx>1040</posx>
 						<posy>43</posy>
-						<width>600</width>
+						<width>354</width>
 						<height>54</height>
 						<font>Font-Condensed-S28</font>
 						<align>right</align>
@@ -666,7 +666,7 @@
 							<width>90</width>
 							<height>60</height>
 							<texture>flags/other/set-list.png</texture>
-							<visible>substring(ListItem.Path,videodb://movies/sets,left)</visible>
+							<visible>stringcompare(ListItem.Property(ItemType),BoxSet)</visible>
 							<colordiffuse>D4FFFFFF</colordiffuse>
 						</control>
 						<control type="image">
@@ -727,25 +727,26 @@
 						<animation effect="fade" start="100" end="71.5" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(50)">Conditional</animation>
 						<control type="label">
 							<description>Label</description>
-							<posx>790</posx>
+							<posx>1040</posx>
 							<posy>0</posy>
-							<width>600</width>
+							<width>354</width>
 							<height>62</height>
-							<font>Font-Condensed-S34-B</font>
+							<font>Font-Condensed-S30-B</font>
 							<align>right</align>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>eewhite</textcolor>
+							<textcolor>aawhite</textcolor>
+							<scroll>false</scroll>
 						</control>
 						<control type="label">
 							<description>Year / Duration</description>
-							<posx>790</posx>
+							<posx>1040</posx>
 							<posy>43</posy>
-							<width>600</width>
+							<width>354</width>
 							<height>54</height>
 							<font>Font-Condensed-S28</font>
 							<align>right</align>
 							<label>$INFO[ListItem.Genre]</label>
-							<textcolor>D4FFFFFF</textcolor>
+							<textcolor>99FFFFFF</textcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
@@ -1124,10 +1125,10 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>576</width>
-						<height>600</height>
-						<texture background="true">$VAR[ListFanart]</texture>
+						<height>324</height>
+						<texture background="true">$VAR[SmallListFanart]</texture>
 						<fadetime>500</fadetime>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>keep</aspectratio>
 						<visible>!Container.Content(Episodes)</visible>
 					</control>
 					<control type="image">
@@ -1410,10 +1411,10 @@
 							<visible>ListItem.IsPlaying</visible>
 						</control>
 						<control type="label">
-							<posx>130</posx>
+							<posx>100</posx>
 							<posy>0</posy>
 							<height>60</height>
-							<width>560</width>
+							<width>590</width>
 							<font>Font-Condensed-S29-B</font>
 							<label>$INFO[ListItem.Label]</label>
 							<selectedcolor>SelectedGreen</selectedcolor>
@@ -1422,10 +1423,10 @@
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
-							<posx>130</posx>
+							<posx>100</posx>
 							<posy>0</posy>
 							<height>58</height>
-							<width>560</width>
+							<width>590</width>
 							<font>Font-Condensed-S31</font>
 							<label>$VAR[ListItem.Label2]</label>
 							<selectedcolor>SelectedGreen</selectedcolor>
@@ -1435,7 +1436,7 @@
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
-							<posx>15</posx>
+							<posx>-15</posx>
 							<width>100</width>
 							<height>58</height>
 							<font>Font-Condensed-S31</font>
@@ -1445,7 +1446,7 @@
 							<textcolor>77white</textcolor>
 							<shadowcolor>22000000</shadowcolor>
 							<scroll>false</scroll>
-							<visible>!substring(ListItem.Path,videodb://movies/sets,left) + !IsEmpty(ListItem.Year)</visible>
+							<visible>!stringcompare(ListItem.Property(ItemType),BoxSet) + !IsEmpty(ListItem.Year)</visible>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -1457,12 +1458,12 @@
 							<colordiffuse>$VAR[Colordiffuse.Color.3]</colordiffuse>
 						</control>
 						<control type="image">
-							<posx>41</posx>
+							<posx>11</posx>
 							<posy>0</posy>
 							<width>90</width>
 							<height>60</height>
 							<texture>flags/other/set-list.png</texture>
-							<visible>substring(ListItem.Path,videodb://movies/sets,left)</visible>
+							<visible>stringcompare(ListItem.Property(ItemType),BoxSet)</visible>
 							<colordiffuse>$VAR[Colordiffuse.Color.2]</colordiffuse>
 						</control>
 					</itemlayout>
@@ -1496,7 +1497,7 @@
 							<textcolor>77white</textcolor>
 							<shadowcolor>22000000</shadowcolor>
 							<scroll>false</scroll>
-							<visible>!substring(ListItem.Path,videodb://movies/sets,left) + !IsEmpty(ListItem.Year)</visible>
+							<visible>!stringcompare(ListItem.Property(ItemType),BoxSet) + !IsEmpty(ListItem.Year)</visible>
 						</control>
 						<control type="label">
 							<posx>169</posx>
@@ -1597,7 +1598,7 @@
 							<texture border="90,3,90,3">views/list/other/separator.png</texture>
 						</control>
 						<control type="label">
-							<posx>60</posx>
+							<posx>30</posx>
 							<posy>0</posy>
 							<height>58</height>
 							<width>70</width>
@@ -1610,11 +1611,11 @@
 							<visible>!IsEmpty(ListItem.Season) + !IsEmpty(ListItem.Episode)</visible>
 						</control>
 						<control type="label">
-							<posx>145</posx>
+							<posx>115</posx>
 							<posy>0</posy>
 							<height>60</height>
-							<width>545</width>
-							<font>Font-Condensed-S29-B</font>
+							<width>575</width>
+							<font>Font-Condensed-S30-B</font>
 							<label>$VAR[ListItem.Title]</label>
 							<selectedcolor>SelectedGreen</selectedcolor>
 							<textcolor>77white</textcolor>
@@ -1622,10 +1623,10 @@
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
-							<posx>145</posx>
+							<posx>115</posx>
 							<posy>0</posy>
 							<height>58</height>
-							<width>545</width>
+							<width>575</width>
 							<font>Font-Condensed-S31</font>
 							<label>$VAR[ListItem.Label2]</label>
 							<selectedcolor>SelectedGreen</selectedcolor>
@@ -1743,10 +1744,10 @@
 							</animation>
 							<animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(52) + !Container(52).ListItem.IsPlaying">Conditional</animation>
 							<control type="label">
-								<posx>130</posx>
+								<posx>100</posx>
 								<posy>0</posy>
 								<height>60</height>
-								<width>560</width>
+								<width>590</width>
 								<font>Font-Condensed-S29-B</font>
 								<label>$INFO[ListItem.Label]</label>
 								<selectedcolor>SelectedGreen</selectedcolor>
@@ -1755,10 +1756,10 @@
 								<visible>!Container.Content(Episodes)</visible>
 							</control>
 							<control type="label">
-								<posx>130</posx>
+								<posx>100</posx>
 								<posy>0</posy>
 								<height>58</height>
-								<width>560</width>
+								<width>590</width>
 								<font>Font-Condensed-S31</font>
 								<label>$VAR[ListItem.Label2.Focus]</label>
 								<selectedcolor>SelectedGreen</selectedcolor>
@@ -1768,7 +1769,7 @@
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
-								<posx>15</posx>
+								<posx>-15</posx>
 								<width>100</width>
 								<height>58</height>
 								<font>Font-Condensed-S31</font>
@@ -1778,7 +1779,7 @@
 								<textcolor>eewhite</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
-								<visible>!substring(ListItem.Path,videodb://movies/sets,left) + !Container.Content(Episodes) + !IsEmpty(ListItem.Year)</visible>
+								<visible>!stringcompare(ListItem.Property(ItemType),BoxSet) + !Container.Content(Episodes) + !IsEmpty(ListItem.Year)</visible>
 							</control>
 							<control type="image">
 								<posx>0</posx>
@@ -1789,12 +1790,12 @@
 								<visible>!IsEmpty(ListItem.Overlay)</visible>
 							</control>
 							<control type="image">
-								<posx>41</posx>
+								<posx>11</posx>
 								<posy>0</posy>
 								<width>90</width>
 								<height>60</height>
 								<texture>flags/other/set-list.png</texture>
-								<visible>substring(ListItem.Path,videodb://movies/sets,left)</visible>
+								<visible>stringcompare(ListItem.Property(ItemType),BoxSet)</visible>
 								<colordiffuse>D4FFFFFF</colordiffuse>
 							</control>
 						</control>
@@ -1976,7 +1977,7 @@
 							</animation>
 							<animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(52) + !Container(52).ListItem.IsPlaying">Conditional</animation>
 							<control type="label">
-								<posx>60</posx>
+								<posx>30</posx>
 								<posy>0</posy>
 								<height>58</height>
 								<width>70</width>
@@ -1989,21 +1990,21 @@
 								<visible>!IsEmpty(ListItem.Season) + !IsEmpty(ListItem.Episode)</visible>
 							</control>
 							<control type="label">
-								<posx>145</posx>
+								<posx>115</posx>
 								<posy>0</posy>
 								<height>60</height>
-								<width>545</width>
-								<font>Font-Condensed-S29-B</font>
+								<width>575</width>
+								<font>Font-Condensed-S30-B</font>
 								<label>$VAR[ListItem.Title.Focus]</label>
 								<selectedcolor>SelectedGreen</selectedcolor>
 								<textcolor>eewhite</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 							</control>
 							<control type="label">
-								<posx>145</posx>
+								<posx>115</posx>
 								<posy>0</posy>
 								<height>58</height>
-								<width>545</width>
+								<width>575</width>
 								<font>Font-Condensed-S31</font>
 								<label>$VAR[ListItem.Label2.Focus]</label>
 								<selectedcolor>SelectedGreen</selectedcolor>
@@ -2103,14 +2104,13 @@
 					<effect type="zoom" start="100" end="125" center="960,600" tween="sine" easing="out" time="350" />
 					<effect type="fade" start="100" end="0" tween="cubic" easing="out" time="250" />
 				</animation>
-				<animation effect="slide" end="210" time="400" tween="cubic" easing="inout" condition="[!IntegerGreaterThan(Container(53).NumItems,3) + !System.GetBool(filelists.showparentdiritems)] | [!IntegerGreaterThan(Container(53).NumItems,2) + System.GetBool(filelists.showparentdiritems)]">Conditional</animation>
-				<animation effect="slide" end="140" time="400" tween="cubic" easing="inout" condition="[IntegerGreaterThan(Container(53).NumItems,3) + !IntegerGreaterThan(Container(53).NumItems,6) + !System.GetBool(filelists.showparentdiritems)] | [IntegerGreaterThan(Container(53).NumItems,2) + !IntegerGreaterThan(Container(53).NumItems,5) + System.GetBool(filelists.showparentdiritems)]">Conditional</animation>
-				<animation effect="slide" end="70" time="400" tween="cubic" easing="inout" condition="[IntegerGreaterThan(Container(53).NumItems,6) + !IntegerGreaterThan(Container(53).NumItems,9) + !System.GetBool(filelists.showparentdiritems)] | [IntegerGreaterThan(Container(53).NumItems,5) + !IntegerGreaterThan(Container(53).NumItems,8) + System.GetBool(filelists.showparentdiritems)]">Conditional</animation>
+				<animation effect="slide" end="70" time="400" tween="cubic" easing="inout" condition="[!IntegerGreaterThan(Container(53).NumItems,3) + !System.GetBool(filelists.showparentdiritems)] | [!IntegerGreaterThan(Container(53).NumItems,2) + System.GetBool(filelists.showparentdiritems)]">Conditional</animation>
+				<animation effect="slide" end="70" time="400" tween="cubic" easing="inout" condition="[IntegerGreaterThan(Container(53).NumItems,3) + !IntegerGreaterThan(Container(53).NumItems,6) + !System.GetBool(filelists.showparentdiritems)] | [IntegerGreaterThan(Container(53).NumItems,2) + !IntegerGreaterThan(Container(53).NumItems,5) + System.GetBool(filelists.showparentdiritems)]">Conditional</animation>
 				<control type="panel" id="53">
 					<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Sets)</visible>
-					<posx>500</posx>
+					<posx>410</posx>
 					<posy>265</posy>
-					<width>572</width>
+					<width>432</width>
 					<height>624</height>
 					<pagecontrol>70</pagecontrol>
 					<onleft>53</onleft>
@@ -2235,9 +2235,8 @@
 					<effect type="zoom" start="100" end="125" center="960,600" tween="sine" easing="out" time="350" />
 					<effect type="fade" start="100" end="0" tween="cubic" easing="out" time="250" />
 				</animation>
-				<animation effect="slide" end="210" time="400" tween="cubic" easing="inout" condition="[!IntegerGreaterThan(Container(53).NumItems,3) + !System.GetBool(filelists.showparentdiritems)] | [!IntegerGreaterThan(Container(53).NumItems,2) + System.GetBool(filelists.showparentdiritems)]">Conditional</animation>
-				<animation effect="slide" end="140" time="400" tween="cubic" easing="inout" condition="[IntegerGreaterThan(Container(53).NumItems,3) + !IntegerGreaterThan(Container(53).NumItems,6) + !System.GetBool(filelists.showparentdiritems)] | [IntegerGreaterThan(Container(53).NumItems,2) + !IntegerGreaterThan(Container(53).NumItems,5) + System.GetBool(filelists.showparentdiritems)]">Conditional</animation>
-				<animation effect="slide" end="70" time="400" tween="cubic" easing="inout" condition="[IntegerGreaterThan(Container(53).NumItems,6) + !IntegerGreaterThan(Container(53).NumItems,9) + !System.GetBool(filelists.showparentdiritems)] | [IntegerGreaterThan(Container(53).NumItems,5) + !IntegerGreaterThan(Container(53).NumItems,8) + System.GetBool(filelists.showparentdiritems)]">Conditional</animation>
+				<animation effect="slide" end="70" time="400" tween="cubic" easing="inout" condition="[!IntegerGreaterThan(Container(53).NumItems,3) + !System.GetBool(filelists.showparentdiritems)] | [!IntegerGreaterThan(Container(53).NumItems,2) + System.GetBool(filelists.showparentdiritems)]">Conditional</animation>
+				<animation effect="slide" end="70" time="400" tween="cubic" easing="inout" condition="[IntegerGreaterThan(Container(53).NumItems,3) + !IntegerGreaterThan(Container(53).NumItems,6) + !System.GetBool(filelists.showparentdiritems)] | [IntegerGreaterThan(Container(53).NumItems,2) + !IntegerGreaterThan(Container(53).NumItems,5) + System.GetBool(filelists.showparentdiritems)]">Conditional</animation>
 				<control type="image">
 					<description>Shadow</description>
 					<posx>0</posx>
@@ -2251,7 +2250,7 @@
 				</control>
 				<control type="image">
 					<description>Poster</description>
-					<posx>95</posx>
+					<posx>5</posx>
 					<posy>277</posy>
 					<width>405</width>
 					<height>600</height>
@@ -2282,16 +2281,15 @@
 					<effect type="fade" start="100" end="0" tween="cubic" easing="out" time="250" />
 				</animation>
 				<animation effect="slide" end="-210" time="400" tween="cubic" easing="inout" condition="[!IntegerGreaterThan(Container(53).NumItems,3) + !System.GetBool(filelists.showparentdiritems)] | [!IntegerGreaterThan(Container(53).NumItems,2) + System.GetBool(filelists.showparentdiritems)]">Conditional</animation>
-				<animation effect="slide" end="-140" time="400" tween="cubic" easing="inout" condition="[IntegerGreaterThan(Container(53).NumItems,3) + !IntegerGreaterThan(Container(53).NumItems,6) + !System.GetBool(filelists.showparentdiritems)] | [IntegerGreaterThan(Container(53).NumItems,2) + !IntegerGreaterThan(Container(53).NumItems,5) + System.GetBool(filelists.showparentdiritems)]">Conditional</animation>
-				<animation effect="slide" end="-70" time="400" tween="cubic" easing="inout" condition="[IntegerGreaterThan(Container(53).NumItems,6) + !IntegerGreaterThan(Container(53).NumItems,9) + !System.GetBool(filelists.showparentdiritems)] | [IntegerGreaterThan(Container(53).NumItems,5) + !IntegerGreaterThan(Container(53).NumItems,8) + System.GetBool(filelists.showparentdiritems)]">Conditional</animation>
+				<animation effect="slide" end="-70" time="400" tween="cubic" easing="inout" condition="[IntegerGreaterThan(Container(53).NumItems,3) + !IntegerGreaterThan(Container(53).NumItems,6) + !System.GetBool(filelists.showparentdiritems)] | [IntegerGreaterThan(Container(53).NumItems,2) + !IntegerGreaterThan(Container(53).NumItems,5) + System.GetBool(filelists.showparentdiritems)]">Conditional</animation>
 				<control type="group">
 					<description>Fanart + Info</description>
-					<posx>1072</posx>
+					<posx>842</posx>
 					<posy>277</posy>
 					<control type="image">
 						<posx>-2</posx>
 						<posy>-3</posy>
-						<width>742</width>
+						<width>1074</width>
 						<height>604</height>
 						<texture>views/list/panel/panel.png</texture>
 						<visible>IsEmpty(Container(53).ListItem.Art(fanart)) + IsEmpty(Container(53).ListItem.Art(season.fanart))</visible>
@@ -2300,11 +2298,11 @@
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>738</width>
+						<width>1070</width>
 						<height>600</height>
 						<texture background="true">$VAR[ListFanart]</texture>
 						<fadetime>500</fadetime>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="group">
 						<visible>!Skin.HasSetting(InfoPanelHideInfo)</visible>
@@ -2315,8 +2313,8 @@
 							<control type="image">
 								<posx>0</posx>
 								<posy>0</posy>
-								<width>738</width>
-								<height>600</height>
+								<width>1070</width>
+								<height>610</height>
 								<texture>windows/common/grey.png</texture>
 								<colordiffuse>DF222222</colordiffuse>
 								<visible>!IsEmpty(Container(53).ListItem.Art(fanart)) | !IsEmpty(Container(53).ListItem.Art(season.fanart))</visible>
@@ -2350,9 +2348,9 @@
 						<control type="image">
 							<posx>0</posx>
 							<posy>-100</posy>
-							<width>738</width>
+							<width>1070</width>
 							<height>700</height>
-							<texture>views/list/other/fanart-overlay.png</texture>
+							<texture background="true">views/list/other/fanart-overlay.png</texture>
 						</control>
 						<control type="label">
 							<posx>30</posx>
@@ -3150,7 +3148,7 @@
 								<width>214</width>
 								<height>120</height>
 								<texture>flags/other/set-landscape.png</texture>
-								<visible>substring(ListItem.Path,videodb://movies/sets,left)</visible>
+								<visible>stringcompare(ListItem.Property(ItemType),BoxSet)</visible>
 							</control>
 						</control>
 						<control type="image">
@@ -3270,7 +3268,7 @@
 								<width>214</width>
 								<height>120</height>
 								<texture>flags/other/set-landscape.png</texture>
-								<visible>substring(ListItem.Path,videodb://movies/sets,left)</visible>
+								<visible>stringcompare(ListItem.Property(ItemType),BoxSet)</visible>
 							</control>
 						</control>
 						<control type="group">
@@ -5071,7 +5069,7 @@
 						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout height="428" condition="Container.Content(Movies) | [Container.Content(TVShows) + Skin.HasSetting(posterstv)] | Container.Content(Sets)">
+				<focusedlayout height="428" condition="[Container.Content(TVShows) + Skin.HasSetting(posterstv)] | Container.Content(Sets)">
 					<control type="group">
 						<posx>330</posx>
 						<animation effect="slide" start="0,64" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(60).OnPrevious">Focus</animation>
@@ -5151,7 +5149,7 @@
 								<width>44</width>
 								<height>28</height>
 								<texture>flags/other/set-banner.png</texture>
-								<visible>substring(ListItem.Path,videodb://movies/sets,left)</visible>
+								<visible>stringcompare(ListItem.Property(ItemType),BoxSet)</visible>
 							</control>
 							<control type="label">
 								<posx>0</posx>
@@ -5217,6 +5215,185 @@
 						</control>
 					</control>
 				</focusedlayout>
+				<focusedlayout height="428" condition="Container.Content(Movies)">
+					<control type="group">
+						<posx>330</posx>
+						<animation effect="slide" start="0,64" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(60).OnPrevious">Focus</animation>
+						<animation effect="slide" start="0,-64" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(60).OnNext">Focus</animation>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1260</width>
+							<height>428</height>
+							<texture border="60">views/banner/other/panel.png</texture>
+						</control>
+						<control type="image">
+							<posx>35</posx>
+							<posy>33</posy>
+							<width>1190</width>
+							<height>220</height>
+							<texture diffuse="views/banner/diffuse/banner.png" background="true">$VAR[DefaultBanner]</texture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<visible>!IsEmpty(ListItem.Art(banner))</visible>
+						</control>
+						<control type="image">
+							<posx>35</posx>
+							<posy>33</posy>
+							<width>1190</width>
+							<height>220</height>
+							<texture diffuse="views/banner/diffuse/banner.png" background="true">$VAR[DefaultBanner]</texture>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<visible>!IsEmpty(ListItem.Property(medium_landscape))</visible>
+						</control>
+						<control type="image">
+							<posx>33</posx>
+							<posy>35</posy>
+							<width>239</width>
+							<height>358</height>
+							<fadetime>300</fadetime>
+							<texture diffuse="views/banner/diffuse/poster.png" background="true">$VAR[PosterViewPoster]</texture>
+							<aspectratio scalediffuse="false">keep</aspectratio>
+							<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Property(medium_landscape))</visible>
+						</control>
+						<control type="image">
+							<posx>35</posx>
+							<posy>71</posy>
+							<width>1190</width>
+							<height>183</height>
+							<texture>views/banner/other/banner-overlay.png</texture>
+						</control>
+						<control type="group">
+							<visible>!IsEmpty(ListItem.Art(banner)) | !IsEmpty(ListItem.Property(medium_landscape))</visible>
+							<posx>266</posx>
+							<posy>219</posy>
+							<control type="image">
+								<posx>-180</posx>
+								<posy>44</posy>
+								<width>161</width>
+								<aspectratio align="center" aligny="center">center</aspectratio>
+								<height>120</height>
+								<texture background="true">$INFO[ListItem.Studio,special://skin/extras/studioflags/,.png]</texture>
+								<colordiffuse>FF383838</colordiffuse>
+								<visible>!IsEmpty(ListItem.Studio)</visible>
+							</control>
+							<control type="label">
+								<posx>0</posx>
+								<posy>69</posy>
+								<width>100</width>
+								<label>$INFO[ListItem.Year]</label>
+								<font>Font-Condensed-S36</font>
+								<textcolor>FF484848</textcolor>
+								<scroll>false</scroll>
+								<align>left</align>
+							</control>
+							<control type="label">
+								<posx>85</posx>
+								<posy>70</posy>
+								<width>710</width>
+								<label>$INFO[ListItem.MPAA,, ][B]$INFO[ListItem.Label][/B]</label>
+								<font>Font-Condensed-S34</font>
+								<textcolor>FF333333</textcolor>
+								<scroll>false</scroll>
+								<align>left</align>
+							</control>
+							<control type="label">
+								<posx>4</posx>
+								<posy>112</posy>
+								<width>220</width>
+								<label>$INFO[ListItem.Rating,★ ,]$INFO[ListItem.Duration, [COLOR=77484848]/[/COLOR] , $LOCALIZE[12391]]</label>
+								<font>Font-Condensed-S28</font>
+								<textcolor>FF484848</textcolor>
+								<scroll>false</scroll>
+								<align>left</align>
+							</control>
+							<control type="label">
+								<posx>215</posx>
+								<posy>112</posy>
+								<width>645</width>
+								<label>$INFO[ListItem.Genre]</label>
+								<font>Font-Condensed-S28-B</font>
+								<textcolor>FF333333</textcolor>
+								<scroll>false</scroll>
+								<align>left</align>
+							</control>
+						</control>
+						<control type="group">
+							<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Property(medium_landscape))</visible>
+							<posx>300</posx>
+							<control type="image">
+								<posx>10</posx>
+								<posy>123</posy>
+								<width>43</width>
+								<height>28</height>
+								<texture>$VAR[BannerListHDSDFlag]</texture>
+								<colordiffuse>eewhite</colordiffuse>
+								<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+							</control>
+							<control type="image">
+								<description>Set icon</description>
+								<posx>10</posx>
+								<posy>104</posy>
+								<width>44</width>
+								<height>28</height>
+								<texture>flags/other/set-banner.png</texture>
+								<visible>stringcompare(ListItem.Property(ItemType),BoxSet)</visible>
+							</control>
+							<control type="label">
+								<posx>0</posx>
+								<posy>59</posy>
+								<width>100</width>
+								<label>$INFO[ListItem.Year]</label>
+								<font>Font-Condensed-S36</font>
+								<textcolor>FF484848</textcolor>
+								<scroll>false</scroll>
+								<align>left</align>
+							</control>
+							<control type="label">
+								<posx>85</posx>
+								<posy>60</posy>
+								<width>710</width>
+								<label>$INFO[ListItem.Label]</label>
+								<font>Font-Condensed-S34-B</font>
+								<textcolor>FF333333</textcolor>
+								<scroll>false</scroll>
+								<align>left</align>
+							</control>
+							<control type="label">
+								<description>Rating / Duration Label</description>
+								<posx>85</posx>
+								<posy>103</posy>
+								<width>815</width>
+								<font>Font-Condensed-S28</font>
+								<label>$INFO[ListItem.Rating,★ ,]$INFO[ListItem.Duration, [COLOR=77484848]/[/COLOR] , $LOCALIZE[12391]]</label>
+								<textcolor>FF484848</textcolor>
+								<align>left</align>
+								<scroll>false</scroll>
+							</control>
+							<control type="label">
+								<posx>85</posx>
+								<posy>140</posy>
+								<width>815</width>
+								<label>$INFO[ListItem.Genre]</label>
+								<font>Font-Condensed-S28</font>
+								<textcolor>FF484848</textcolor>
+								<scroll>false</scroll>
+								<align>left</align>
+							</control>
+							<control type="textbox">
+								<description>Plot</description>
+								<posx>0</posx>
+								<posy>177</posy>
+								<width>900</width>
+								<height>200</height>
+								<info>ListItem.Plot</info>
+								<align>justify</align>
+								<textcolor>FF484848</textcolor>
+								<autoscroll delay="13000" time="3000" repeat="13000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
+								<font>Font-Condensed-S29</font>
+							</control>
+						</control>
+					</control>
+				</focusedlayout>
 				<focusedlayout height="428" condition="Container.Content(TVShows) + !Skin.HasSetting(posterstv)">
 					<control type="group">
 						<posx>330</posx>
@@ -5256,29 +5433,6 @@
 								<texture background="true">$INFO[ListItem.Studio,special://skin/extras/studioflags/,.png]</texture>
 								<colordiffuse>FF383838</colordiffuse>
 								<visible>!IsEmpty(ListItem.Studio)</visible>
-							</control>
-							<control type="group">
-								<visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)</visible>
-								<posx>841</posx>
-								<posy>84</posy>
-								<control type="image">
-									<posx>0</posx>
-									<posy>1</posy>
-									<width>64</width>
-									<height>40</height>
-									<texture>views/banner/other/unwatched.png</texture>
-								</control>
-								<control type="label">
-									<posx>0</posx>
-									<posy>0</posy>
-									<width>64</width>
-									<height>42</height>
-									<label>$INFO[ListItem.Property(unWatchedEpisodes)]</label>
-									<font>Font-Condensed-S30-B</font>
-									<textcolor>FF27D0FA</textcolor>
-									<scroll>no</scroll>
-									<align>center</align>
-								</control>
 							</control>
 							<control type="label">
 								<posx>0</posx>

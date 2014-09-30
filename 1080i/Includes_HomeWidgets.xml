@@ -3493,6 +3493,7 @@
 			<label2>$INFO[Window.Property(RandomAlbum.1.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RandomAlbum.1.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.1.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RandomAlbum.1.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.1.Play))</visible>
 		</item>
 		<item id="2">
@@ -3502,6 +3503,7 @@
 			<label2>$INFO[Window.Property(RandomAlbum.2.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RandomAlbum.2.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.2.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RandomAlbum.2.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.2.Play))</visible>
 		</item>
 		<item id="3">
@@ -3511,6 +3513,7 @@
 			<label2>$INFO[Window.Property(RandomAlbum.3.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RandomAlbum.3.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.3.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RandomAlbum.3.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.3.Play))</visible>
 		</item>
 		<item id="4">
@@ -3520,6 +3523,7 @@
 			<label2>$INFO[Window.Property(RandomAlbum.4.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RandomAlbum.4.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.4.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RandomAlbum.4.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.4.Play))</visible>
 		</item>
 		<item id="5">
@@ -3529,6 +3533,7 @@
 			<label2>$INFO[Window.Property(RandomAlbum.5.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RandomAlbum.5.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.5.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RandomAlbum.5.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.5.Play))</visible>
 		</item>
 		<item id="6">
@@ -3538,6 +3543,7 @@
 			<label2>$INFO[Window.Property(RandomAlbum.6.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RandomAlbum.6.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.6.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RandomAlbum.6.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.6.Play))</visible>
 		</item>
 		<item id="7">
@@ -3547,6 +3553,7 @@
 			<label2>$INFO[Window.Property(RandomAlbum.7.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RandomAlbum.7.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.7.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RandomAlbum.7.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.7.Play))</visible>
 		</item>
 		<item id="8">
@@ -3556,6 +3563,7 @@
 			<label2>$INFO[Window.Property(RandomAlbum.8.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RandomAlbum.8.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.8.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RandomAlbum.8.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.8.Play))</visible>
 		</item>
 		<item id="9">
@@ -3565,6 +3573,7 @@
 			<label2>$INFO[Window.Property(RandomAlbum.9.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RandomAlbum.9.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.9.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RandomAlbum.9.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.9.Play))</visible>
 		</item>
 		<item id="10">
@@ -3574,6 +3583,7 @@
 			<label2>$INFO[Window.Property(RandomAlbum.10.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RandomAlbum.10.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.10.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RandomAlbum.10.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.10.Play))</visible>
 		</item>
 	</include>
@@ -3585,6 +3595,7 @@
 			<label2>$INFO[Window.Property(RecentAlbum.1.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecentAlbum.1.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecentAlbum.1.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RecentAlbum.1.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RecentAlbum.1.Play))</visible>
 		</item>
 		<item id="2">
@@ -3594,6 +3605,7 @@
 			<label2>$INFO[Window.Property(RecentAlbum.2.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecentAlbum.2.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecentAlbum.2.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RecentAlbum.2.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RecentAlbum.2.Play))</visible>
 		</item>
 		<item id="3">
@@ -3603,6 +3615,7 @@
 			<label2>$INFO[Window.Property(RecentAlbum.3.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecentAlbum.3.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecentAlbum.3.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RecentAlbum.3.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RecentAlbum.3.Play))</visible>
 		</item>
 		<item id="4">
@@ -3612,6 +3625,7 @@
 			<label2>$INFO[Window.Property(RecentAlbum.4.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecentAlbum.4.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecentAlbum.4.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RecentAlbum.4.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RecentAlbum.4.Play))</visible>
 		</item>
 		<item id="5">
@@ -3621,6 +3635,7 @@
 			<label2>$INFO[Window.Property(RecentAlbum.5.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecentAlbum.5.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecentAlbum.5.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RecentAlbum.5.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RecentAlbum.5.Play))</visible>
 		</item>
 		<item id="6">
@@ -3630,6 +3645,7 @@
 			<label2>$INFO[Window.Property(RecentAlbum.6.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecentAlbum.6.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecentAlbum.6.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RecentAlbum.6.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RecentAlbum.6.Play))</visible>
 		</item>
 		<item id="7">
@@ -3639,6 +3655,7 @@
 			<label2>$INFO[Window.Property(RecentAlbum.7.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecentAlbum.7.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecentAlbum.7.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RecentAlbum.7.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RecentAlbum.7.Play))</visible>
 		</item>
 		<item id="8">
@@ -3648,6 +3665,7 @@
 			<label2>$INFO[Window.Property(RecentAlbum.8.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecentAlbum.8.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecentAlbum.8.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RecentAlbum.8.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RecentAlbum.8.Play))</visible>
 		</item>
 		<item id="9">
@@ -3657,6 +3675,7 @@
 			<label2>$INFO[Window.Property(RecentAlbum.9.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecentAlbum.9.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecentAlbum.9.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RecentAlbum.9.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RecentAlbum.9.Play))</visible>
 		</item>
 		<item id="10">
@@ -3666,6 +3685,7 @@
 			<label2>$INFO[Window.Property(RecentAlbum.10.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecentAlbum.10.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecentAlbum.10.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RecentAlbum.10.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RecentAlbum.10.Play))</visible>
 		</item>
 	</include>
@@ -3677,6 +3697,7 @@
 			<label2>$INFO[Window.Property(RecommendedAlbum.1.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecommendedAlbum.1.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecommendedAlbum.1.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.1.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RecommendedAlbum.1.Play))</visible>
 		</item>
 		<item id="2">
@@ -3686,6 +3707,7 @@
 			<label2>$INFO[Window.Property(RecommendedAlbum.2.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecommendedAlbum.2.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecommendedAlbum.2.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.2.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RecommendedAlbum.2.Play))</visible>
 		</item>
 		<item id="3">
@@ -3695,6 +3717,7 @@
 			<label2>$INFO[Window.Property(RecommendedAlbum.3.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecommendedAlbum.3.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecommendedAlbum.3.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.3.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RecommendedAlbum.3.Play))</visible>
 		</item>
 		<item id="4">
@@ -3704,6 +3727,7 @@
 			<label2>$INFO[Window.Property(RecommendedAlbum.4.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecommendedAlbum.4.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecommendedAlbum.4.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.4.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RecommendedAlbum.4.Play))</visible>
 		</item>
 		<item id="5">
@@ -3713,6 +3737,7 @@
 			<label2>$INFO[Window.Property(RecommendedAlbum.5.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecommendedAlbum.5.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecommendedAlbum.5.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.5.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RecommendedAlbum.5.Play))</visible>
 		</item>
 		<item id="6">
@@ -3722,6 +3747,7 @@
 			<label2>$INFO[Window.Property(RecommendedAlbum.6.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecommendedAlbum.6.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecommendedAlbum.6.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.6.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RecommendedAlbum.6.Play))</visible>
 		</item>
 		<item id="7">
@@ -3731,6 +3757,7 @@
 			<label2>$INFO[Window.Property(RecommendedAlbum.7.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecommendedAlbum.7.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecommendedAlbum.7.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.7.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RecommendedAlbum.7.Play))</visible>
 		</item>
 		<item id="8">
@@ -3740,6 +3767,7 @@
 			<label2>$INFO[Window.Property(RecommendedAlbum.8.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecommendedAlbum.8.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecommendedAlbum.8.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.8.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RecommendedAlbum.8.Play))</visible>
 		</item>
 		<item id="9">
@@ -3749,6 +3777,7 @@
 			<label2>$INFO[Window.Property(RecommendedAlbum.9.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecommendedAlbum.9.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecommendedAlbum.9.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.9.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RecommendedAlbum.9.Play))</visible>
 		</item>
 		<item id="10">
@@ -3758,6 +3787,7 @@
 			<label2>$INFO[Window.Property(RecommendedAlbum.10.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecommendedAlbum.10.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecommendedAlbum.10.Play)]</property>
+			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.10.Description)]</property>
 			<visible>!IsEmpty(Window.Property(RecommendedAlbum.10.Play))</visible>
 		</item>
 	</include>

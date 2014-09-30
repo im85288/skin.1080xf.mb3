@@ -14,12 +14,14 @@
                 <control type="image">
                     <description>Small weather</description>
                     <posx>150r</posx>
-                    <posy>980</posy>
+                    <posy>950</posy>
                     <width>100</width>
                     <height>100</height>
                     <texture>weather/small/$INFO[Weather.FanartCode].png</texture>
                     <visible>Weather.IsFetched + ![stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]</visible>
                     <include>visiblehidefadeinfo</include>
+                    <aspectratio aligny="bottom">keep</aspectratio>
+					
                 </control>
                 <control type="label">
                     <description>Temperature Label</description>
@@ -32,6 +34,8 @@
                     <textcolor>eewhite</textcolor>
                     <shadowcolor>22000000</shadowcolor>
                     <align>right</align>
+                          <aligny>top</aligny>
+               
                     <scroll>false</scroll>
                     <animation effect="slide" end="60" time="300" tween="sine" easing="inout" condition="!Weather.IsFetched | [stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]">Conditional</animation>
                 </control>
@@ -46,6 +50,8 @@
                     <textcolor>eewhite</textcolor>
                     <shadowcolor>22000000</shadowcolor>
                     <align>right</align>
+                          <aligny>top</aligny>
+               
                     <scroll>false</scroll>
                     <animation effect="slide" end="60" time="300" tween="sine" easing="inout" condition="!Weather.IsFetched | [stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]">Conditional</animation>
                 </control>

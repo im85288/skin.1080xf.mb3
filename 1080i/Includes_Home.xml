@@ -6,7 +6,7 @@
 			<control type="button" id="21">
 				<description>Shutdown Button</description>
 				<posx>72</posx>
-				<posy>980</posy>
+				<posy>950</posy>
 				<width>100</width>
 				<height>100</height>
 				<onup condition="Container(20).HasFocus(1)">101</onup>
@@ -41,7 +41,7 @@
 			<control type="label">
 				<description>Shutdown Label</description>
 				<posx>157</posx>
-				<posy>980</posy>
+				<posy>950</posy>
 				<width>180</width>
 				<height>100</height>
 				<label>$LOCALIZE[41507]</label>
@@ -54,7 +54,7 @@
 			<control type="button" id="22">
 				<description>Favourites Button</description>
 				<posx>277</posx>
-				<posy>980</posy>
+				<posy>950</posy>
 				<width>100</width>
 				<height>100</height>
 				<onup condition="Container(20).HasFocus(1)">101</onup>
@@ -92,7 +92,7 @@
 			<control type="label">
 				<description>Favourites Label</description>
 				<posx>362</posx>
-				<posy>980</posy>
+				<posy>950</posy>
 				<width>180</width>
 				<height>100</height>
 				<label>$LOCALIZE[1036]</label>
@@ -151,6 +151,10 @@
 			<effect type="slide" start="0,0" end="0,-55" time="500" tween="cubic" easing="inout" />
 		</animation>
 	</include>
+	<variable name="NewEpisodesLabel">
+		<value condition="IntegerGreaterThan(Window(Home).Property(MB3NextAiredTotalToday),0)">$INFO[Window(Home).Property(MB3NextAiredTotalToday),, $LOCALIZE[49244]]</value>
+		<value>No $LOCALIZE[49244]</value>
+	</variable>
 	<variable name="HomePictureImageSingle">
 		<value condition="IsEmpty(Skin.String(HomePicturesSingleImage))">$INFO[Skin.String(GlobalBackdropSingle)]</value>
 		<value>$INFO[Skin.String(HomePicturesSingleImage)]</value>
@@ -242,7 +246,7 @@
 					<label>[B]$INFO[Window(Home).Property(MB3UserName)][/B]</label>
 					<label>$INFO[Window(Home).Property(MB3TotalMovies),, $LOCALIZE[342]]</label>
 					<label>$INFO[Window(Home).Property(MB3TotalTvShows),, $LOCALIZE[20343]]</label>
-					<label>$INFO[Window(Home).Property(MB3NextAiredTotalToday),, $LOCALIZE[49244]]</label>
+					<label>$VAR[NewEpisodesLabel]</label>
 					<label>$INFO[Window.Property(Music.SongsCount),, $LOCALIZE[134]]</label>
 					<label>$INFO[Window.Property(MB3TotalChannels),, $LOCALIZE[19019]]</label>
 					<scroll>false</scroll>
@@ -263,7 +267,7 @@
 					<posy>80</posy>
 					<include>HomeProfileInfoLabel</include>
 					<label>$INFO[Window(Home).Property(MB3TotalTvShows),, $LOCALIZE[20343]]</label>
-					<label>$INFO[Window(Home).Property(MB3NextAiredTotalToday),, $LOCALIZE[49244]]</label>
+					<label>$VAR[NewEpisodesLabel]</label>
 					<scroll>false</scroll>
 					<pauseatend>6000</pauseatend>
 					<scrollout>false</scrollout>
@@ -1175,7 +1179,7 @@
 			<control type="group" id="500">
 				<description>Home</description>
 				<width>2320</width>
-				<height>780</height>
+				<height>1080</height>
 				<control type="button" id="525">
 					<onleft condition="System.HasAddon(script.globalsearch) | System.GetBool(pvrmanager.enabled)">CancelAlarm(HomeTileMove,true)</onleft>
 					<onleft condition="System.HasAddon(script.globalsearch) | System.GetBool(pvrmanager.enabled)">CancelAlarm(HomeTileMoveTwo,true)</onleft>
@@ -1356,6 +1360,7 @@
 						</control>
 						<!-- <control type="button"> <description>Title label</description> <posx>20</posx> <posy>508</posy> <width>732</width> <height>64</height> <label>$INFO[Container(5022).ListItem.Label]</label> <label2>$INFO[Container(5022).ListItem.Label2, ★ ,]</label2> <font>Font-Condensed-S29-B</font> <disabledcolor>aawhite</disabledcolor> <align>left</align> <aligny>center</aligny> <enable>false</enable> <visible>Control.IsVisible(5022)</visible> <include>visiblehidefadeinfodelayvisible</include> </control> -->
 						<control type="group">
+							<visible>!ControlGroup(502).HasFocus</visible>
 							<control type="image">
 								<description>Logo</description>
 								<posx>810</posx>
@@ -1481,6 +1486,106 @@
 								<scroll>false</scroll>
 								<visible>Control.IsVisible(5022)</visible>
 								<visible>IsEmpty(Container(5022).ListItem.Property(CriticRating)) | substring(Container(5022).ListItem.Property(CriticRating),None)</visible>
+								<visible>!IsEmpty(Container(5022).ListItem.Property(SuggestedMovieTitle)) + !substring(Container(5022).ListItem.Property(SuggestedMovieTitle),None)</visible>
+							</control>
+						</control>
+						<control type="group">
+							<visible>ControlGroup(502).HasFocus</visible>
+							<control type="image">
+								<description>Logo</description>
+								<posx>330</posx>
+								<posy>580</posy>
+								<width>248</width>
+								<height>90</height>
+								<aspectratio align="center" aligny="top">keep</aspectratio>
+								<texture border="1">$INFO[Container(5022).ListItem.Property(clearlogohome)]</texture>
+								<visible>!isEmpty(Container(5022).ListItem.Property(clearlogohome))</visible>
+							</control>
+							<control type="image">
+								<description>Logo</description>
+								<posx>330</posx>
+								<posy>580</posy>
+								<width>248</width>
+								<height>90</height>
+								<aspectratio align="center" aligny="top">keep</aspectratio>
+								<texture border="1">$INFO[Container(5022).ListItem.Property(clearlogo)]</texture>
+								<visible>!isEmpty(Container(5022).ListItem.Property(clearlogo))</visible>
+							</control>
+							<control type="textbox">
+								<posx>10</posx>
+								<posy>487</posy>
+								<width>1006</width>
+								<height>79</height>
+								<label>$INFO[Container(5022).ListItem.Label]$INFO[Container(5022).ListItem.Property(Title2), ,]$INFO[Container(5022).ListItem.Property(Plot),[CR],]</label>
+								<font>Font-Condensed-S29</font>
+								<textcolor>aawhite</textcolor>
+								<align>left</align>
+								<aligny>top</aligny>
+								<autoscroll delay="6000" time="2900" repeat="5000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
+								<visible>Control.IsVisible(5022)</visible>
+								<animation effect="fade" time="800" start="0" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+								<animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+							</control>
+							<control type="image">
+								<posx>110</posx>
+								<posy>580</posy>
+								<width>30</width>
+								<height>30</height>
+								<aspect>stretch</aspect>
+								<texture>special://skin/extras/icons/imdb.png</texture>
+								<visible>!IsEmpty(Container(5022).ListItem.Label2) + !substring(Container(5022).ListItem.Label2,None)</visible>
+								<visible>Control.IsVisible(5022)</visible>
+							</control>
+							<control type="label">
+								<posx>150</posx>
+								<posy>580</posy>
+								<width>90</width>
+								<font>Font-Condensed-S32</font>
+								<label>$INFO[Container(5022).ListItem.Label2]</label>
+								<textcolor>aawhite</textcolor>
+								<scroll>false</scroll>
+								<visible>!IsEmpty(Container(5022).ListItem.Label2) + !substring(Container(5022).ListItem.Label2,None)</visible>
+							</control>
+							<control type="image">
+								<posx>200</posx>
+								<posy>580</posy>
+								<width>30</width>
+								<height>30</height>
+								<aspect>stretch</aspect>
+								<texture>$VAR[RottenTomatoesHomeMovies]</texture>
+								<visible>Control.IsVisible(5022)</visible>
+								<visible>!IsEmpty(Container(5022).ListItem.Property(CriticRating)) + !substring(Container(5022).ListItem.Property(CriticRating),None)</visible>
+							</control>
+							<control type="label">
+								<posx>240</posx>
+								<posy>580</posy>
+								<width>90</width>
+								<font>Font-Condensed-S32</font>
+								<label>$INFO[Container(5022).ListItem.Property(CriticRating),,%]</label>
+								<textcolor>aawhite</textcolor>
+								<scroll>false</scroll>
+								<visible>Control.IsVisible(5022)</visible>
+								<visible>!IsEmpty(Container(5022).ListItem.Property(CriticRating)) + !substring(Container(5022).ListItem.Property(CriticRating),None)</visible>
+							</control>
+							<control type="image">
+								<posx>590</posx>
+								<posy>580</posy>
+								<width>30</width>
+								<height>30</height>
+								<aspect>stretch</aspect>
+								<texture>special://skin/extras/icons/suggestions.png</texture>
+								<visible>Control.IsVisible(5022)</visible>
+								<visible>!IsEmpty(Container(5022).ListItem.Property(SuggestedMovieTitle)) + !substring(Container(5022).ListItem.Property(SuggestedMovieTitle),None)</visible>
+							</control>
+							<control type="label">
+								<posx>625</posx>
+								<posy>580</posy>
+								<width>675</width>
+								<font>Font-Condensed-S26</font>
+								<label>$INFO[Container(5022).ListItem.Property(SuggestedMovieTitle),- ,]</label>
+								<textcolor>eewhite</textcolor>
+								<scroll>false</scroll>
+								<visible>Control.IsVisible(5022)</visible>
 								<visible>!IsEmpty(Container(5022).ListItem.Property(SuggestedMovieTitle)) + !substring(Container(5022).ListItem.Property(SuggestedMovieTitle),None)</visible>
 							</control>
 						</control>
@@ -2229,6 +2334,7 @@
 						</control>
 						<!-- <control type="button"> <description>Title label</description> <posx>20</posx> <posy>508</posy> <width>732</width> <height>64</height> <label>$INFO[Container(2022).ListItem.Label]</label> <label2>$INFO[Container(2022).ListItem.Label2, ★ ,]</label2> <font>Font-Condensed-S29-B</font> <disabledcolor>aawhite</disabledcolor> <align>left</align> <aligny>center</aligny> <enable>false</enable> <visible>Control.IsVisible(2022)</visible> <include>visiblehidefadeinfodelayvisible</include> </control> -->
 						<control type="group">
+							<visible>!ControlGroup(202).HasFocus</visible>
 							<control type="image">
 								<description>Logo</description>
 								<posx>810</posx>
@@ -2297,6 +2403,106 @@
 								<scroll>false</scroll>
 								<visible>Control.IsVisible(2022)</visible>
 								<visible>!IsEmpty(Container(2022).ListItem.Property(CriticRating)) + !substring(Container(2022).ListItem.Property(CriticRating),None)</visible>
+							</control>
+						</control>
+						<control type="group">
+							<visible>ControlGroup(202).HasFocus</visible>
+							<control type="image">
+								<description>Logo</description>
+								<posx>330</posx>
+								<posy>580</posy>
+								<width>248</width>
+								<height>90</height>
+								<aspectratio align="center" aligny="top">keep</aspectratio>
+								<texture border="1">$INFO[Container(2022).ListItem.Property(clearlogohome)]</texture>
+								<visible>!isEmpty(Container(2022).ListItem.Property(clearlogohome))</visible>
+							</control>
+							<control type="image">
+								<description>Logo</description>
+								<posx>330</posx>
+								<posy>580</posy>
+								<width>248</width>
+								<height>90</height>
+								<aspectratio align="center" aligny="top">keep</aspectratio>
+								<texture border="1">$INFO[Container(2022).ListItem.Property(clearlogo)]</texture>
+								<visible>!isEmpty(Container(2022).ListItem.Property(clearlogo))</visible>
+							</control>
+							<control type="textbox">
+								<posx>10</posx>
+								<posy>487</posy>
+								<width>1006</width>
+								<height>79</height>
+								<label>$INFO[Container(2022).ListItem.Label]$INFO[Container(2022).ListItem.Property(Title2), ,]$INFO[Container(2022).ListItem.Property(Plot),[CR],]</label>
+								<font>Font-Condensed-S29</font>
+								<textcolor>aawhite</textcolor>
+								<align>left</align>
+								<aligny>top</aligny>
+								<autoscroll delay="6000" time="2900" repeat="5000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
+								<visible>Control.IsVisible(2022)</visible>
+								<animation effect="fade" time="800" start="0" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+								<animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+							</control>
+							<control type="image">
+								<posx>130</posx>
+								<posy>580</posy>
+								<width>30</width>
+								<height>30</height>
+								<aspect>stretch</aspect>
+								<texture>special://skin/extras/icons/imdb.png</texture>
+								<visible>!IsEmpty(Container(2022).ListItem.Label2) + !substring(Container(2022).ListItem.Label2,None)</visible>
+								<visible>Control.IsVisible(2022)</visible>
+							</control>
+							<control type="label">
+								<posx>170</posx>
+								<posy>580</posy>
+								<width>90</width>
+								<font>Font-Condensed-S32</font>
+								<label>$INFO[Container(2022).ListItem.Label2]</label>
+								<textcolor>aawhite</textcolor>
+								<scroll>false</scroll>
+								<visible>!IsEmpty(Container(2022).ListItem.Label2) + !substring(Container(2022).ListItem.Label2,None)</visible>
+							</control>
+							<control type="image">
+								<posx>220</posx>
+								<posy>580</posy>
+								<width>30</width>
+								<height>30</height>
+								<aspect>stretch</aspect>
+								<texture>$VAR[RottenTomatoesHomeMovies]</texture>
+								<visible>Control.IsVisible(2022)</visible>
+								<visible>!IsEmpty(Container(2022).ListItem.Property(CriticRating)) + !substring(Container(2022).ListItem.Property(CriticRating),None)</visible>
+							</control>
+							<control type="label">
+								<posx>260</posx>
+								<posy>580</posy>
+								<width>90</width>
+								<font>Font-Condensed-S32</font>
+								<label>$INFO[Container(2022).ListItem.Property(CriticRating),,%]</label>
+								<textcolor>aawhite</textcolor>
+								<scroll>false</scroll>
+								<visible>Control.IsVisible(2022)</visible>
+								<visible>!IsEmpty(Container(2022).ListItem.Property(CriticRating)) + !substring(Container(2022).ListItem.Property(CriticRating),None)</visible>
+							</control>
+							<control type="image">
+								<posx>590</posx>
+								<posy>580</posy>
+								<width>30</width>
+								<height>30</height>
+								<aspect>stretch</aspect>
+								<texture>special://skin/extras/icons/suggestions.png</texture>
+								<visible>Control.IsVisible(2022)</visible>
+								<visible>!IsEmpty(Container(2022).ListItem.Property(SuggestedMovieTitle)) + !substring(Container(2022).ListItem.Property(SuggestedMovieTitle),None)</visible>
+							</control>
+							<control type="label">
+								<posx>625</posx>
+								<posy>580</posy>
+								<width>675</width>
+								<font>Font-Condensed-S26</font>
+								<label>$INFO[Container(2022).ListItem.Property(SuggestedMovieTitle),- ,]</label>
+								<textcolor>eewhite</textcolor>
+								<scroll>false</scroll>
+								<visible>Control.IsVisible(2022)</visible>
+								<visible>!IsEmpty(Container(2022).ListItem.Property(SuggestedMovieTitle)) + !substring(Container(2022).ListItem.Property(SuggestedMovieTitle),None)</visible>
 							</control>
 						</control>
 						<control type="label">
@@ -3020,6 +3226,7 @@
 						</control>
 						<!-- <control type="button"> <description>Title label</description> <posx>20</posx> <posy>508</posy> <width>731</width> <height>64</height> <label>$INFO[Container(3022).ListItem.Label]</label> <label2>$INFO[Container(3022).ListItem.Label2, ★ ,]</label2> <font>Font-Condensed-S29-B</font> <disabledcolor>aawhite</disabledcolor> <align>left</align> <aligny>center</aligny> <enable>false</enable> <visible>Control.IsVisible(3022)</visible> <include>visiblehidefadeinfodelayvisible</include> </control> -->
 						<control type="group">
+							<visible>!ControlGroup(302).HasFocus</visible>
 							<control type="image">
 								<description>Logo</description>
 								<posx>810</posx>
@@ -3088,6 +3295,106 @@
 								<scroll>false</scroll>
 								<visible>Control.IsVisible(3022)</visible>
 								<visible>!IsEmpty(Container(3022).ListItem.Property(CriticRating)) + !substring(Container(3022).ListItem.Property(CriticRating),None)</visible>
+							</control>
+						</control>
+						<control type="group">
+							<visible>ControlGroup(302).HasFocus</visible>
+							<control type="image">
+								<description>Logo</description>
+								<posx>330</posx>
+								<posy>580</posy>
+								<width>248</width>
+								<height>90</height>
+								<aspectratio align="center" aligny="top">keep</aspectratio>
+								<texture border="1">$INFO[Container(3022).ListItem.Property(clearlogohome)]</texture>
+								<visible>!isEmpty(Container(3022).ListItem.Property(clearlogohome))</visible>
+							</control>
+							<control type="image">
+								<description>Logo</description>
+								<posx>330</posx>
+								<posy>580</posy>
+								<width>248</width>
+								<height>90</height>
+								<aspectratio align="center" aligny="top">keep</aspectratio>
+								<texture border="1">$INFO[Container(3022).ListItem.Property(clearlogo)]</texture>
+								<visible>!isEmpty(Container(3022).ListItem.Property(clearlogo))</visible>
+							</control>
+							<control type="textbox">
+								<posx>10</posx>
+								<posy>487</posy>
+								<width>1006</width>
+								<height>79</height>
+								<label>$INFO[Container(3022).ListItem.Label]$INFO[Container(3022).ListItem.Property(Title2), ,]$INFO[Container(3022).ListItem.Property(Plot),[CR],]</label>
+								<font>Font-Condensed-S29</font>
+								<textcolor>aawhite</textcolor>
+								<align>left</align>
+								<aligny>top</aligny>
+								<autoscroll delay="6000" time="2900" repeat="5000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
+								<visible>Control.IsVisible(3022)</visible>
+								<animation effect="fade" time="800" start="0" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+								<animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+							</control>
+							<control type="image">
+								<posx>160</posx>
+								<posy>580</posy>
+								<width>30</width>
+								<height>30</height>
+								<aspect>stretch</aspect>
+								<texture>special://skin/extras/icons/imdb.png</texture>
+								<visible>!IsEmpty(Container(3022).ListItem.Label2) + !substring(Container(3022).ListItem.Label2,None)</visible>
+								<visible>Control.IsVisible(3022)</visible>
+							</control>
+							<control type="label">
+								<posx>210</posx>
+								<posy>580</posy>
+								<width>90</width>
+								<font>Font-Condensed-S32</font>
+								<label>$INFO[Container(3022).ListItem.Label2]</label>
+								<textcolor>aawhite</textcolor>
+								<scroll>false</scroll>
+								<visible>!IsEmpty(Container(3022).ListItem.Label2) + !substring(Container(3022).ListItem.Label2,None)</visible>
+							</control>
+							<control type="image">
+								<posx>200</posx>
+								<posy>580</posy>
+								<width>30</width>
+								<height>30</height>
+								<aspect>stretch</aspect>
+								<texture>$VAR[RottenTomatoesHomeMovies]</texture>
+								<visible>Control.IsVisible(3022)</visible>
+								<visible>!IsEmpty(Container(3022).ListItem.Property(CriticRating)) + !substring(Container(3022).ListItem.Property(CriticRating),None)</visible>
+							</control>
+							<control type="label">
+								<posx>240</posx>
+								<posy>580</posy>
+								<width>90</width>
+								<font>Font-Condensed-S32</font>
+								<label>$INFO[Container(3022).ListItem.Property(CriticRating),,%]</label>
+								<textcolor>aawhite</textcolor>
+								<scroll>false</scroll>
+								<visible>Control.IsVisible(3022)</visible>
+								<visible>!IsEmpty(Container(3022).ListItem.Property(CriticRating)) + !substring(Container(3022).ListItem.Property(CriticRating),None)</visible>
+							</control>
+							<control type="image">
+								<posx>590</posx>
+								<posy>580</posy>
+								<width>30</width>
+								<height>30</height>
+								<aspect>stretch</aspect>
+								<texture>special://skin/extras/icons/suggestions.png</texture>
+								<visible>Control.IsVisible(3022)</visible>
+								<visible>!IsEmpty(Container(3022).ListItem.Property(SuggestedMovieTitle)) + !substring(Container(3022).ListItem.Property(SuggestedMovieTitle),None)</visible>
+							</control>
+							<control type="label">
+								<posx>625</posx>
+								<posy>580</posy>
+								<width>675</width>
+								<font>Font-Condensed-S26</font>
+								<label>$INFO[Container(3022).ListItem.Property(SuggestedMovieTitle),- ,]</label>
+								<textcolor>eewhite</textcolor>
+								<scroll>false</scroll>
+								<visible>Control.IsVisible(3022)</visible>
+								<visible>!IsEmpty(Container(3022).ListItem.Property(SuggestedMovieTitle)) + !substring(Container(3022).ListItem.Property(SuggestedMovieTitle),None)</visible>
 							</control>
 						</control>
 						<control type="label">
@@ -4551,6 +4858,7 @@
 							</control>
 						</control>
 						<control type="group">
+							<visible>!ControlGroup(402).HasFocus</visible>
 							<control type="image">
 								<description>Logo</description>
 								<posx>810</posx>
@@ -4588,6 +4896,34 @@
 								<textcolor>aawhite</textcolor>
 								<scroll>false</scroll>
 								<visible>!IsEmpty(Container(4022).ListItem.Label2) + !substring(Container(4022).ListItem.Label2,None)</visible>
+							</control>
+						</control>
+						<control type="group">
+							<visible>ControlGroup(402).HasFocus</visible>
+							<control type="image">
+								<description>Logo</description>
+								<posx>330</posx>
+								<posy>580</posy>
+								<width>248</width>
+								<height>90</height>
+								<aspectratio align="center" aligny="top">keep</aspectratio>
+								<texture>$INFO[Skin.String(cdartlocation)]$INFO[Container(4022).ListItem.Label2,,/logo.png]</texture>
+								<visible>!isEmpty(Container(4022).ListItem.Label2)</visible>
+							</control>
+							<control type="textbox">
+								<posx>10</posx>
+								<posy>487</posy>
+								<width>1006</width>
+								<height>79</height>
+								<label>$INFO[Container(4022).ListItem.Label]$INFO[Container(4022).ListItem.Property(Title2), ,]$INFO[Container(4022).ListItem.Property(Plot),[CR],]</label>
+								<font>Font-Condensed-S29</font>
+								<textcolor>aawhite</textcolor>
+								<align>left</align>
+								<aligny>top</aligny>
+								<autoscroll delay="6000" time="2900" repeat="5000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
+								<visible>Control.IsVisible(4022)</visible>
+								<animation effect="fade" time="800" start="0" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+								<animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
 							</control>
 						</control>
 						<control type="label">

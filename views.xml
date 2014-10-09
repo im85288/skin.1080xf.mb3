@@ -9,5 +9,6 @@
     <view id="ThumbnailVideo" value="501" />
     <view id="Love Film" value="566" />
     <view id="Video Wall" value="582" />
-    <view id="Reel" value="577" />   
+    <view id="Reel" value="577" />
+    <view id="Banner Fanart" value="553" />   
 </views>

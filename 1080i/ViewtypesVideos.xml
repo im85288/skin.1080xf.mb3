@@ -13,7 +13,7 @@
 				<width>560</width>
 				<height>30</height>
 				<font>Font-Condensed-S29-B</font>
-				<textcolor>77white</textcolor>
+				<textcolor>SecondaryT</textcolor>
 				<shadowcolor>22000000</shadowcolor>
 				<label>$INFO[Control.GetLabel(3)]</label>
 				<animation effect="slide" end="-10" time="0" condition="Container.Content(Movies)">Conditional</animation>
@@ -26,7 +26,7 @@
 				<posy>187</posy>
 				<height>704</height>
 				<width>1424</width>
-				<texture border="4">views/list/panel/panel.png</texture>
+				<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 			</control>
 			<control type="image">
 				<description>Shadow</description>
@@ -78,7 +78,7 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>aawhite</textcolor>
+						<textcolor>PrimaryT</textcolor>
 						<selectedcolor>SelectedGreen</selectedcolor>
 						<scroll>false</scroll>
 					</control>
@@ -91,8 +91,8 @@
 						<font>Font-Condensed-S36</font>
 						<align>right</align>
 						<label>$INFO[ListItem.Label2, ,]</label>
-						<textcolor>99FFFFFF</textcolor>
-						<selectedcolor>D4FFFFFF</selectedcolor>
+						<textcolor>SecondaryT</textcolor>
+						<selectedcolor>SecondaryT</selectedcolor>
 						<scroll>false</scroll>
 					</control>
 					<control type="image">
@@ -168,8 +168,10 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>left</align>
 						<label>$VAR[ListItem.Label.Offset]</label>
-						<selectedcolor>SelectedGreen</selectedcolor>
-						<textcolor>aawhite</textcolor>
+						<textcolor>PrimaryT</textcolor>
+						<focusedcolor>PrimaryT</focusedcolor>
+						<disabledcolor>TertiaryT</disabledcolor>
+						<selectedcolor>$VAR[FocusModHomeColourVAR]</selectedcolor>
 						<scroll>false</scroll>
 						<visible>IsEmpty(ListItem.Genre)</visible>
 					</control>
@@ -182,8 +184,10 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>left</align>
 						<label>$VAR[ListItem.Label.Offset]</label>
-						<selectedcolor>SelectedGreen</selectedcolor>
-						<textcolor>aawhite</textcolor>
+						<textcolor>PrimaryT</textcolor>
+						<focusedcolor>PrimaryT</focusedcolor>
+						<disabledcolor>TertiaryT</disabledcolor>
+						<selectedcolor>$VAR[FocusModHomeColourVAR]</selectedcolor>
 						<scroll>false</scroll>
 						<visible>!IsEmpty(ListItem.Genre)</visible>
 					</control>
@@ -196,8 +200,10 @@
 						<font>Font-Condensed-S28</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Genre]</label>
-						<selectedcolor>D4FFFFFF</selectedcolor>
-						<textcolor>99FFFFFF</textcolor>
+						<textcolor>SecondaryT</textcolor>
+						<focusedcolor>SecondaryT</focusedcolor>
+						<disabledcolor>TertiaryT</disabledcolor>
+						<selectedcolor>$VAR[FocusModHomeColourVAR]</selectedcolor>
 						<scroll>false</scroll>
 					</control>
 					<control type="image">
@@ -207,7 +213,7 @@
 						<width>90</width>
 						<height>60</height>
 						<texture>$VAR[ListHDSDFlagSmall]</texture>
-						<colordiffuse>$VAR[Colordiffuse.Color]</colordiffuse>
+						<colordiffuse>PrimaryT</colordiffuse>
 						<visible>!IsEmpty(ListItem.VideoResolution)</visible>
 					</control>
 					<control type="image">
@@ -218,7 +224,7 @@
 						<height>60</height>
 						<texture>flags/other/set-list.png</texture>
 						<visible>stringcompare(ListItem.Property(ItemType),BoxSet)</visible>
-						<colordiffuse>$VAR[Colordiffuse.Color]</colordiffuse>
+						<colordiffuse>PrimaryT</colordiffuse>
 					</control>
 					<control type="label">
 						<posx>246</posx>
@@ -228,8 +234,10 @@
 						<font>Font-Condensed-S36</font>
 						<align>right</align>
 						<label>$VAR[ListItem.Label2.Year]</label>
-						<selectedcolor>D4FFFFFF</selectedcolor>
-						<textcolor>99FFFFFF</textcolor>
+						<textcolor>SecondaryT</textcolor>
+						<focusedcolor>SecondaryT</focusedcolor>
+						<disabledcolor>TertiaryT</disabledcolor>
+						<selectedcolor>$VAR[FocusModHomeColourVAR]</selectedcolor>
 						<scroll>false</scroll>
 					</control>
 				</itemlayout>
@@ -244,71 +252,48 @@
 					</control>
 					<control type="image">
 						<description>Thumbnail</description>
-						<posx>124</posx>
-						<posy>9</posy>
-						<width>956</width>
-						<height>82</height>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>530</width>
+						<height>98</height>
 						<texture>$VAR[DefaultListBanner]</texture>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label">
 						<description>Label</description>
-						<posx>1040</posx>
+						<posx>560</posx>
 						<posy>0</posy>
-						<width>354</width>
+						<width>854</width>
 						<height>62</height>
 						<font>Font-Condensed-S30-B</font>
-						<align>right</align>
+						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>aawhite</textcolor>
+						<textcolor>PrimaryT</textcolor>
 						<scroll>false</scroll>
 					</control>
 					<control type="label">
 						<description>Year / Duration</description>
-						<posx>1040</posx>
+						<posx>560</posx>
 						<posy>43</posy>
-						<width>354</width>
+						<width>854</width>
 						<height>54</height>
 						<font>Font-Condensed-S28</font>
-						<align>right</align>
+						<align>left</align>
 						<label>$INFO[ListItem.Genre]</label>
-						<textcolor>99FFFFFF</textcolor>
+						<textcolor>SecondaryT</textcolor>
 						<scroll>false</scroll>
 					</control>
 					<control type="label">
-						<posx>490</posx>
+						<posx>510</posx>
 						<posy>0</posy>
 						<width>900</width>
 						<height>98</height>
 						<font>Font-Condensed-S36</font>
-						<align>right</align>
+						<align>left</align>
 						<label>$VAR[ListItem.Label2.Year]</label>
-						<textcolor>99FFFFFF</textcolor>
+						<textcolor>SecondaryT</textcolor>
 						<scroll>false</scroll>
 						<visible>!IsEmpty(ListItem.Title)</visible>
-					</control>
-					<control type="group">
-						<visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)</visible>
-						<posx>30</posx>
-						<control type="image">
-							<posx>0</posx>
-							<posy>29</posy>
-							<width>64</width>
-							<height>41</height>
-							<texture>views/list/other/unwatched.png</texture>
-							<colordiffuse>D4FFFFFF</colordiffuse>
-						</control>
-						<control type="label">
-							<posx>0</posx>
-							<posy>28</posy>
-							<width>64</width>
-							<height>42</height>
-							<label>$INFO[ListItem.Property(unWatchedEpisodes)]</label>
-							<font>Font-Condensed-S30-B</font>
-							<textcolor>FF27D0FA</textcolor>
-							<scroll>false</scroll>
-							<align>center</align>
-						</control>
 					</control>
 				</itemlayout>
 				<itemlayout height="100" condition="Container.Content(seasons)">
@@ -338,7 +323,7 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>aawhite</textcolor>
+						<textcolor>PrimaryT</textcolor>
 						<scroll>false</scroll>
 					</control>
 					<control type="label">
@@ -350,7 +335,7 @@
 						<font>Font-Condensed-S28</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Studio]</label>
-						<textcolor>99FFFFFF</textcolor>
+						<textcolor>SecondaryT</textcolor>
 						<scroll>false</scroll>
 					</control>
 					<control type="label">
@@ -361,7 +346,7 @@
 						<font>Font-Condensed-S36</font>
 						<align>right</align>
 						<label>$VAR[ListItem.Property(NumEpisodes)]</label>
-						<textcolor>99FFFFFF</textcolor>
+						<textcolor>SecondaryT</textcolor>
 						<scroll>false</scroll>
 						<visible>!IsEmpty(ListItem.Property(NumEpisodes))</visible>
 					</control>
@@ -374,7 +359,7 @@
 							<width>64</width>
 							<height>41</height>
 							<texture>views/list/other/unwatched.png</texture>
-							<colordiffuse>D4FFFFFF</colordiffuse>
+							<colordiffuse>SecondaryT</colordiffuse>
 						</control>
 						<control type="label">
 							<posx>0</posx>
@@ -436,7 +421,7 @@
 						<align>left</align>
 						<label>$VAR[ListItem.Season]$VAR[ListItem.Episode]</label>
 						<selectedcolor>SelectedGreen</selectedcolor>
-						<textcolor>aawhite</textcolor>
+						<textcolor>PrimaryT</textcolor>
 						<scroll>false</scroll>
 						<visible>!IsEmpty(ListItem.Season) + !IsEmpty(ListItem.Episode)</visible>
 					</control>
@@ -450,7 +435,7 @@
 						<align>left</align>
 						<label>$VAR[ListItem.Title]</label>
 						<selectedcolor>SelectedGreen</selectedcolor>
-						<textcolor>aawhite</textcolor>
+						<textcolor>PrimaryT</textcolor>
 						<scroll>false</scroll>
 					</control>
 					<control type="label">
@@ -462,8 +447,8 @@
 						<font>Font-Condensed-S28</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Premiered]</label>
-						<selectedcolor>D4FFFFFF</selectedcolor>
-						<textcolor>99FFFFFF</textcolor>
+						<selectedcolor>SecondaryT</selectedcolor>
+						<textcolor>SecondaryT</textcolor>
 						<scroll>false</scroll>
 					</control>
 					<control type="label">
@@ -474,8 +459,8 @@
 						<font>Font-Condensed-S36</font>
 						<align>right</align>
 						<label>$VAR[ListItem.Label2]</label>
-						<selectedcolor>D4FFFFFF</selectedcolor>
-						<textcolor>99FFFFFF</textcolor>
+						<selectedcolor>SecondaryT</selectedcolor>
+						<textcolor>SecondaryT</textcolor>
 						<scroll>false</scroll>
 					</control>
 				</itemlayout>
@@ -503,10 +488,17 @@
 						<posy>0</posy>
 						<width>1420</width>
 						<height>99</height>
-						<texture border="150,1,150,1">views/other/focus.png</texture>
 						<include>defaultfocusanim</include>
 						<include>visiblehidefadeinfo</include>
 						<visible>Control.HasFocus(50)</visible>
+						<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+					</control>
+					<control type="image"> <!--focused background left edge -->
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>5</width>
+						<height>99</height>
+						<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
 					</control>
 					<control type="image">
 						<posx>76</posx>
@@ -539,7 +531,7 @@
 							<font>Font-Condensed-S34-B</font>
 							<align>left</align>
 							<label>$VAR[ListItem.Label]</label>
-							<textcolor>eewhite</textcolor>
+							<textcolor>PrimaryT</textcolor>
 							<selectedcolor>SelectedGreen</selectedcolor>
 						</control>
 						<control type="label">
@@ -551,8 +543,8 @@
 							<font>Font-Condensed-S36</font>
 							<align>right</align>
 							<label>$INFO[ListItem.Label2, ,]</label>
-							<textcolor>D4FFFFFF</textcolor>
-							<selectedcolor>D4FFFFFF</selectedcolor>
+							<textcolor>SecondaryT</textcolor>
+							<selectedcolor>SecondaryT</selectedcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="image">
@@ -561,7 +553,7 @@
 							<posy>0</posy>
 							<width>100</width>
 							<height>100</height>
-							<colordiffuse>D4FFFFFF</colordiffuse>
+							<colordiffuse>SecondaryT</colordiffuse>
 							<texture>$VAR[DefaultListOverlay]</texture>
 							<visible>!IsEmpty(ListItem.Overlay)</visible>
 						</control>
@@ -591,10 +583,17 @@
 						<posy>0</posy>
 						<width>1420</width>
 						<height>99</height>
-						<texture border="150,1,150,1">views/other/focus.png</texture>
 						<include>defaultfocusanim</include>
 						<include>visiblehidefadeinfo</include>
 						<visible>Control.HasFocus(50)</visible>
+						<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+					</control>
+					<control type="image"> <!--focused background left edge -->
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>5</width>
+						<height>99</height>
+						<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
 					</control>
 					<control type="image">
 						<description>Thumbnail</description>
@@ -618,9 +617,12 @@
 							<height>100</height>
 							<font>Font-Condensed-S34-B</font>
 							<align>left</align>
-							<label>$VAR[ListItem.Label.Offset.Focus]</label>
-							<selectedcolor>SelectedGreen</selectedcolor>
-							<textcolor>eewhite</textcolor>
+							<label>$VAR[ListItem.Label.Offset]</label>
+							<textcolor>PrimaryT</textcolor>
+							<focusedcolor>PrimaryT</focusedcolor>
+							<disabledcolor>TertiaryT</disabledcolor>
+							<selectedcolor>$VAR[FocusModHomeColourVAR]</selectedcolor>
+							<scroll>false</scroll>
 							<visible>IsEmpty(ListItem.Genre)</visible>
 						</control>
 						<control type="label">
@@ -631,9 +633,12 @@
 							<height>62</height>
 							<font>Font-Condensed-S34-B</font>
 							<align>left</align>
-							<label>$VAR[ListItem.Label.Offset.Focus]</label>
-							<selectedcolor>SelectedGreen</selectedcolor>
-							<textcolor>eewhite</textcolor>
+							<label>$VAR[ListItem.Label.Offset]</label>
+							<textcolor>PrimaryT</textcolor>
+							<focusedcolor>PrimaryT</focusedcolor>
+							<disabledcolor>TertiaryT</disabledcolor>
+							<selectedcolor>$VAR[FocusModHomeColourVAR]</selectedcolor>
+							<scroll>false</scroll>
 							<visible>!IsEmpty(ListItem.Genre)</visible>
 						</control>
 						<control type="label">
@@ -645,8 +650,10 @@
 							<font>Font-Condensed-S28</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Genre]</label>
-							<selectedcolor>D4FFFFFF</selectedcolor>
-							<textcolor>D4FFFFFF</textcolor>
+							<textcolor>SecondaryT</textcolor>
+							<focusedcolor>SecondaryT</focusedcolor>
+							<disabledcolor>TertiaryT</disabledcolor>
+							<selectedcolor>$VAR[FocusModHomeColourVAR]</selectedcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="image">
@@ -656,7 +663,7 @@
 							<width>90</width>
 							<height>60</height>
 							<texture>$VAR[ListHDSDFlagSmall]</texture>
-							<colordiffuse>D4FFFFFF</colordiffuse>
+							<colordiffuse>PrimaryT</colordiffuse>
 							<visible>!IsEmpty(ListItem.VideoResolution)</visible>
 						</control>
 						<control type="image">
@@ -667,27 +674,20 @@
 							<height>60</height>
 							<texture>flags/other/set-list.png</texture>
 							<visible>stringcompare(ListItem.Property(ItemType),BoxSet)</visible>
-							<colordiffuse>D4FFFFFF</colordiffuse>
-						</control>
-						<control type="image">
-							<description>Watched/unwatched overlay</description>
-							<posx>-8</posx>
-							<posy>0</posy>
-							<width>100</width>
-							<height>100</height>
-							<colordiffuse>D4FFFFFF</colordiffuse>
-							<texture>$VAR[DefaultListOverlay]</texture>
+							<colordiffuse>PrimaryT</colordiffuse>
 						</control>
 						<control type="label">
-							<posx>164</posx>
+							<posx>246</posx>
 							<posy>0</posy>
-							<width>1226</width>
+							<width>1144</width>
 							<height>98</height>
 							<font>Font-Condensed-S36</font>
 							<align>right</align>
 							<label>$VAR[ListItem.Label2.Year]</label>
-							<selectedcolor>D4FFFFFF</selectedcolor>
-							<textcolor>D4FFFFFF</textcolor>
+							<textcolor>SecondaryT</textcolor>
+							<focusedcolor>SecondaryT</focusedcolor>
+							<disabledcolor>TertiaryT</disabledcolor>
+							<selectedcolor>$VAR[FocusModHomeColourVAR]</selectedcolor>
 							<scroll>false</scroll>
 						</control>
 					</control>
@@ -706,17 +706,24 @@
 						<posy>0</posy>
 						<width>1420</width>
 						<height>99</height>
-						<texture border="150,1,150,1">views/other/focus.png</texture>
 						<include>defaultfocusanim</include>
 						<include>visiblehidefadeinfo</include>
 						<visible>Control.HasFocus(50)</visible>
+						<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+					</control>
+					<control type="image"> <!--focused background left edge -->
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>5</width>
+						<height>99</height>
+						<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
 					</control>
 					<control type="image">
 						<description>Thumbnail</description>
-						<posx>124</posx>
-						<posy>9</posy>
-						<width>956</width>
-						<height>82</height>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>530</width>
+						<height>98</height>
 						<texture>$VAR[DefaultListBanner]</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
@@ -727,62 +734,39 @@
 						<animation effect="fade" start="100" end="71.5" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(50)">Conditional</animation>
 						<control type="label">
 							<description>Label</description>
-							<posx>1040</posx>
+							<posx>560</posx>
 							<posy>0</posy>
-							<width>354</width>
+							<width>854</width>
 							<height>62</height>
 							<font>Font-Condensed-S30-B</font>
-							<align>right</align>
+							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>aawhite</textcolor>
+							<textcolor>PrimaryT</textcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
 							<description>Year / Duration</description>
-							<posx>1040</posx>
+							<posx>560</posx>
 							<posy>43</posy>
-							<width>354</width>
+							<width>854</width>
 							<height>54</height>
 							<font>Font-Condensed-S28</font>
-							<align>right</align>
+							<align>left</align>
 							<label>$INFO[ListItem.Genre]</label>
-							<textcolor>99FFFFFF</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
-							<posx>490</posx>
+							<posx>510</posx>
 							<posy>0</posy>
 							<width>900</width>
 							<height>98</height>
 							<font>Font-Condensed-S36</font>
-							<align>right</align>
+							<align>left</align>
 							<label>$VAR[ListItem.Label2.Year]</label>
-							<textcolor>D4FFFFFF</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<scroll>false</scroll>
-						</control>
-					</control>
-					<control type="group">
-						<visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)</visible>
-						<posx>30</posx>
-						<control type="image">
-							<posx>0</posx>
-							<posy>29</posy>
-							<width>64</width>
-							<height>41</height>
-							<texture>views/list/other/unwatched.png</texture>
-							<colordiffuse>D4FFFFFF</colordiffuse>
-						</control>
-						<control type="label">
-							<posx>0</posx>
-							<posy>28</posy>
-							<width>64</width>
-							<height>42</height>
-							<label>$INFO[ListItem.Property(unWatchedEpisodes)]</label>
-							<font>Font-Condensed-S30-B</font>
-							<textcolor>FF27D0FA</textcolor>
-							<scroll>no</scroll>
-							<align>center</align>
-							<visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)</visible>
+							<visible>!IsEmpty(ListItem.Title)</visible>
 						</control>
 					</control>
 				</focusedlayout>
@@ -800,10 +784,17 @@
 						<posy>0</posy>
 						<width>1420</width>
 						<height>99</height>
-						<texture border="150,1,150,1">views/other/focus.png</texture>
 						<include>defaultfocusanim</include>
 						<include>visiblehidefadeinfo</include>
 						<visible>Control.HasFocus(50)</visible>
+						<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+					</control>
+					<control type="image"> <!--focused background left edge -->
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>5</width>
+						<height>99</height>
+						<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
 					</control>
 					<control type="image">
 						<description>Thumbnail</description>
@@ -828,7 +819,7 @@
 							<font>Font-Condensed-S34-B</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>eewhite</textcolor>
+							<textcolor>PrimaryT</textcolor>
 						</control>
 						<control type="label">
 							<description>Year / Duration</description>
@@ -839,7 +830,7 @@
 							<font>Font-Condensed-S28</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Studio]</label>
-							<textcolor>D4FFFFFF</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
@@ -850,7 +841,7 @@
 							<font>Font-Condensed-S36</font>
 							<align>right</align>
 							<label>$VAR[ListItem.Property(NumEpisodes)]</label>
-							<textcolor>D4FFFFFF</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<scroll>false</scroll>
 							<visible>!IsEmpty(ListItem.Property(NumEpisodes))</visible>
 						</control>
@@ -864,7 +855,7 @@
 							<width>64</width>
 							<height>41</height>
 							<texture>views/list/other/unwatched.png</texture>
-							<colordiffuse>D4FFFFFF</colordiffuse>
+							<colordiffuse>SecondaryT</colordiffuse>
 						</control>
 						<control type="label">
 							<posx>0</posx>
@@ -903,10 +894,17 @@
 						<posy>0</posy>
 						<width>1420</width>
 						<height>99</height>
-						<texture border="150,1,150,1">views/other/focus.png</texture>
 						<include>defaultfocusanim</include>
 						<include>visiblehidefadeinfo</include>
 						<visible>Control.HasFocus(50)</visible>
+						<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+					</control>
+					<control type="image"> <!--focused background left edge -->
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>5</width>
+						<height>99</height>
+						<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
 					</control>
 					<control type="image">
 						<description>Thumbnail</description>
@@ -932,7 +930,7 @@
 							<align>left</align>
 							<label>$VAR[ListItem.Season]$VAR[ListItem.Episode]</label>
 							<selectedcolor>SelectedGreen</selectedcolor>
-							<textcolor>eewhite</textcolor>
+							<textcolor>PrimaryT</textcolor>
 							<scroll>false</scroll>
 							<visible>!IsEmpty(ListItem.Season) + !IsEmpty(ListItem.Episode)</visible>
 						</control>
@@ -946,7 +944,7 @@
 							<align>left</align>
 							<label>$VAR[ListItem.Title.Focus]</label>
 							<selectedcolor>SelectedGreen</selectedcolor>
-							<textcolor>eewhite</textcolor>
+							<textcolor>PrimaryT</textcolor>
 						</control>
 						<control type="label">
 							<description>Premiered / Duration</description>
@@ -957,8 +955,8 @@
 							<font>Font-Condensed-S28</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Premiered]</label>
-							<selectedcolor>D4FFFFFF</selectedcolor>
-							<textcolor>D4FFFFFF</textcolor>
+							<selectedcolor>SecondaryT</selectedcolor>
+							<textcolor>SecondaryT</textcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="image">
@@ -967,7 +965,7 @@
 							<posy>0</posy>
 							<width>100</width>
 							<height>100</height>
-							<colordiffuse>D4FFFFFF</colordiffuse>
+							<colordiffuse>SecondaryT</colordiffuse>
 							<texture>$VAR[DefaultListOverlay]</texture>
 						</control>
 						<control type="label">
@@ -978,8 +976,8 @@
 							<font>Font-Condensed-S36</font>
 							<align>right</align>
 							<label>$VAR[ListItem.Label2]</label>
-							<selectedcolor>D4FFFFFF</selectedcolor>
-							<textcolor>D4FFFFFF</textcolor>
+							<selectedcolor>SecondaryT</selectedcolor>
+							<textcolor>SecondaryT</textcolor>
 							<scroll>false</scroll>
 						</control>
 					</control>
@@ -1117,7 +1115,7 @@
 						<posy>-3</posy>
 						<width>580</width>
 						<height>604</height>
-						<texture background="true">views/list/panel/panel.png</texture>
+						<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 						<visible>[IsEmpty(Container(52).ListItem.Art(fanart)) + IsEmpty(Container(52).ListItem.Art(season.fanart))] | Container.Content(Episodes)</visible>
 						<include>visiblehidefadeinfo</include>
 					</control>
@@ -1152,8 +1150,7 @@
 								<posy>0</posy>
 								<width>576</width>
 								<height>600</height>
-								<texture>windows/common/grey.png</texture>
-								<colordiffuse>DF222222</colordiffuse>
+								<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 								<visible>!IsEmpty(Container(52).ListItem.Art(fanart)) | !IsEmpty(Container(52).ListItem.Art(season.fanart))</visible>
 								<include>visiblehidefadeinfo</include>
 							</control>
@@ -1163,7 +1160,7 @@
 								<width>516</width>
 								<font>Font-Condensed-S60</font>
 								<label>$LOCALIZE[207]</label>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
 							</control>
@@ -1175,7 +1172,7 @@
 								<height>375</height>
 								<info>Container(52).ListItem.Plot</info>
 								<align>justify</align>
-								<textcolor>CCFFFFFF</textcolor>
+								<textcolor>SecondaryT</textcolor>
 								<shadowcolor>33000000</shadowcolor>
 								<pagecontrol>71</pagecontrol>
 								<autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71) + !Skin.HasSetting(AutoScroll.Disable)</autoscroll>
@@ -1190,8 +1187,7 @@
 								<posy>325</posy>
 								<width>576</width>
 								<height>204</height>
-								<colordiffuse>77white</colordiffuse>
-								<texture border="3">views/extended/overlay.png</texture>
+								<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 							</control>
 							<control type="textbox">
 								<description>Plot</description>
@@ -1201,19 +1197,11 @@
 								<height>182</height>
 								<info>Container(52).ListItem.Plot</info>
 								<align>justify</align>
-								<textcolor>CCFFFFFF</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<shadowcolor>33000000</shadowcolor>
 								<pagecontrol>71</pagecontrol>
 								<autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71) + !Skin.HasSetting(AutoScroll.Disable)</autoscroll>
 								<font>Font-Condensed-S32</font>
-							</control>
-							<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>576</width>
-								<height>528</height>
-								<texture>views/list/other/fanart-overlay.png</texture>
-								<colordiffuse>aawhite</colordiffuse>
 							</control>
 							<control type="image">
 								<posx>0</posx>
@@ -1225,10 +1213,10 @@
 						</control>
 						<control type="image">
 							<posx>0</posx>
-							<posy>0</posy>
+							<posy>324</posy>
 							<width>576</width>
-							<height>600</height>
-							<texture>views/list/other/fanart-overlay.png</texture>
+							<height>276</height>
+							<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 							<include>visiblehidefadeinfo</include>
 							<visible>!Container.Content(Episodes)</visible>
 						</control>
@@ -1238,7 +1226,7 @@
 							<width>516</width>
 							<font>Font-Condensed-S60</font>
 							<label>$VAR[InfoListInfo]</label>
-							<textcolor>aawhite</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<shadowcolor>22000000</shadowcolor>
 							<scroll>false</scroll>
 							<visible>!Container.Content(Episodes)</visible>
@@ -1251,7 +1239,7 @@
 								<width>516</width>
 								<font>Font-Condensed-S30</font>
 								<label>$VAR[InfoListSubInfo]</label>
-								<textcolor>aawhite</textcolor>
+								<textcolor>SecondaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
 								<visible>IsEmpty(ListItem.VideoResolution)</visible>
@@ -1262,7 +1250,7 @@
 								<width>456</width>
 								<font>Font-Condensed-S30</font>
 								<label>$VAR[InfoListSubInfo]</label>
-								<textcolor>aawhite</textcolor>
+								<textcolor>SecondaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
 								<visible>!IsEmpty(ListItem.VideoResolution)</visible>
@@ -1274,7 +1262,7 @@
 								<height>60</height>
 								<texture>$VAR[ListHDSDFlagSmall]</texture>
 								<visible>!IsEmpty(ListItem.VideoResolution)</visible>
-								<colordiffuse>aawhite</colordiffuse>
+								<colordiffuse>PrimaryT</colordiffuse>
 							</control>
 						</control>
 					</control>
@@ -1308,7 +1296,7 @@
 					<width>560</width>
 					<height>30</height>
 					<font>Font-Condensed-S29-B</font>
-					<textcolor>77white</textcolor>
+					<textcolor>SecondaryT</textcolor>
 					<shadowcolor>22000000</shadowcolor>
 					<label>$INFO[Control.GetLabel(3)]</label>
 					<animation effect="slide" end="39" time="0" condition="Container.Content(Seasons)">Conditional</animation>
@@ -1322,7 +1310,7 @@
 					<posy>274</posy>
 					<width>714</width>
 					<height>604</height>
-					<texture>views/list/panel/panel.png</texture>
+					<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 				</control>
 				<control type="list" id="52">
 					<visible>[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets)] | [substring(Container.FolderPath,plugin,left) + Container.HasFiles]</visible>
@@ -1366,7 +1354,7 @@
 							<font>Font-Condensed-S29-B</font>
 							<label>$INFO[ListItem.Label]</label>
 							<selectedcolor>SelectedGreen</selectedcolor>
-							<textcolor>77white</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<shadowcolor>22000000</shadowcolor>
 							<scroll>false</scroll>
 						</control>
@@ -1377,7 +1365,7 @@
 							<font>Font-Condensed-S31</font>
 							<label>$VAR[ListItem.Label2]</label>
 							<selectedcolor>eewhite</selectedcolor>
-							<textcolor>77white</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<shadowcolor>22000000</shadowcolor>
 							<scroll>false</scroll>
 							<align>right</align>
@@ -1418,7 +1406,7 @@
 							<font>Font-Condensed-S29-B</font>
 							<label>$INFO[ListItem.Label]</label>
 							<selectedcolor>SelectedGreen</selectedcolor>
-							<textcolor>77white</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<shadowcolor>22000000</shadowcolor>
 							<scroll>false</scroll>
 						</control>
@@ -1431,7 +1419,7 @@
 							<label>$VAR[ListItem.Label2]</label>
 							<selectedcolor>SelectedGreen</selectedcolor>
 							<align>right</align>
-							<textcolor>77white</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<shadowcolor>22000000</shadowcolor>
 							<scroll>false</scroll>
 						</control>
@@ -1443,7 +1431,7 @@
 							<label fallback="[COLOR=28FFFFFF]0000[/COLOR]">$INFO[ListItem.Year]</label>
 							<align>right</align>
 							<selectedcolor>SelectedGreen</selectedcolor>
-							<textcolor>77white</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<shadowcolor>22000000</shadowcolor>
 							<scroll>false</scroll>
 							<visible>!stringcompare(ListItem.Property(ItemType),BoxSet) + !IsEmpty(ListItem.Year)</visible>
@@ -1462,7 +1450,7 @@
 							<posy>0</posy>
 							<width>90</width>
 							<height>60</height>
-							<texture>flags/other/set-list.png</texture>
+							<texture colordiffuse="PrimaryT">flags/other/set-list.png</texture>
 							<visible>stringcompare(ListItem.Property(ItemType),BoxSet)</visible>
 							<colordiffuse>$VAR[Colordiffuse.Color.2]</colordiffuse>
 						</control>
@@ -1482,7 +1470,7 @@
 							<width>521</width>
 							<font>Font-Condensed-S29-B</font>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>77white</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<shadowcolor>22000000</shadowcolor>
 							<scroll>false</scroll>
 						</control>
@@ -1494,7 +1482,7 @@
 							<label fallback="[COLOR=28FFFFFF]0000[/COLOR]">$INFO[ListItem.Year]</label>
 							<align>right</align>
 							<selectedcolor>SelectedGreen</selectedcolor>
-							<textcolor>77white</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<shadowcolor>22000000</shadowcolor>
 							<scroll>false</scroll>
 							<visible>!stringcompare(ListItem.Property(ItemType),BoxSet) + !IsEmpty(ListItem.Year)</visible>
@@ -1508,7 +1496,7 @@
 							<label>$VAR[ListItem.Label2]</label>
 							<selectedcolor>SelectedGreen</selectedcolor>
 							<align>right</align>
-							<textcolor>77white</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<shadowcolor>22000000</shadowcolor>
 							<scroll>false</scroll>
 						</control>
@@ -1549,7 +1537,7 @@
 							<width>591</width>
 							<font>Font-Condensed-S29-B</font>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>77white</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<shadowcolor>22000000</shadowcolor>
 							<scroll>false</scroll>
 						</control>
@@ -1562,7 +1550,7 @@
 							<label>$VAR[ListItem.Property(NumEpisodes)]</label>
 							<selectedcolor>SelectedGreen</selectedcolor>
 							<align>right</align>
-							<textcolor>77white</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<shadowcolor>22000000</shadowcolor>
 							<scroll>false</scroll>
 							<visible>!IsEmpty(ListItem.Property(NumEpisodes))</visible>
@@ -1605,7 +1593,7 @@
 							<font>Font-Condensed-S31</font>
 							<label>$VAR[ListItem.Season]$VAR[ListItem.Episode]</label>
 							<selectedcolor>SelectedGreen</selectedcolor>
-							<textcolor>77white</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<shadowcolor>22000000</shadowcolor>
 							<scroll>false</scroll>
 							<visible>!IsEmpty(ListItem.Season) + !IsEmpty(ListItem.Episode)</visible>
@@ -1618,7 +1606,7 @@
 							<font>Font-Condensed-S30-B</font>
 							<label>$VAR[ListItem.Title]</label>
 							<selectedcolor>SelectedGreen</selectedcolor>
-							<textcolor>77white</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<shadowcolor>22000000</shadowcolor>
 							<scroll>false</scroll>
 						</control>
@@ -1631,7 +1619,7 @@
 							<label>$VAR[ListItem.Label2]</label>
 							<selectedcolor>SelectedGreen</selectedcolor>
 							<align>right</align>
-							<textcolor>77white</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<shadowcolor>22000000</shadowcolor>
 							<scroll>false</scroll>
 						</control>
@@ -1668,9 +1656,17 @@
 							<posy>0</posy>
 							<width>710</width>
 							<height>59</height>
-							<texture border="150,1,150,1">views/other/focus.png</texture>
+							<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
 							<include>listfocusanim</include>
 							<include>visiblehidefadeinfo</include>
+							<visible>Control.HasFocus(52)</visible>
+						</control>
+						<control type="image"> <!--focused background left edge -->
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>5</width>
+							<height>59</height>
+							<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
 							<visible>Control.HasFocus(52)</visible>
 						</control>
 						<control type="group">
@@ -1685,7 +1681,7 @@
 								<width>630</width>
 								<font>Font-Condensed-S29-B</font>
 								<label>$VAR[ListItem.Label]</label>
-								<textcolor>eewhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 							</control>
 							<control type="label">
@@ -1694,7 +1690,7 @@
 								<height>58</height>
 								<font>Font-Condensed-S31</font>
 								<label>$VAR[ListItem.Label2.Focus]</label>
-								<textcolor>eewhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
 								<align>right</align>
@@ -1705,7 +1701,7 @@
 								<width>60</width>
 								<height>60</height>
 								<texture>$VAR[InfoListOverlay]</texture>
-								<colordiffuse>D4FFFFFF</colordiffuse>
+								<colordiffuse>SecondaryT</colordiffuse>
 								<visible>!IsEmpty(ListItem.Overlay)</visible>
 							</control>
 						</control>
@@ -1733,9 +1729,17 @@
 							<posy>0</posy>
 							<width>710</width>
 							<height>59</height>
-							<texture border="150,1,150,1">views/other/focus.png</texture>
+							<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
 							<include>listfocusanim</include>
 							<include>visiblehidefadeinfo</include>
+							<visible>Control.HasFocus(52)</visible>
+						</control>
+						<control type="image"> <!--focused background left edge -->
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>5</width>
+							<height>59</height>
+							<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
 							<visible>Control.HasFocus(52)</visible>
 						</control>
 						<control type="group">
@@ -1751,7 +1755,7 @@
 								<font>Font-Condensed-S29-B</font>
 								<label>$INFO[ListItem.Label]</label>
 								<selectedcolor>SelectedGreen</selectedcolor>
-								<textcolor>eewhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<visible>!Container.Content(Episodes)</visible>
 							</control>
@@ -1763,7 +1767,7 @@
 								<font>Font-Condensed-S31</font>
 								<label>$VAR[ListItem.Label2.Focus]</label>
 								<selectedcolor>SelectedGreen</selectedcolor>
-								<textcolor>eewhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<align>right</align>
 								<scroll>false</scroll>
@@ -1776,7 +1780,7 @@
 								<label fallback="[COLOR=50FFFFFF]0000[/COLOR]">$VAR[ListItem.Year]</label>
 								<align>right</align>
 								<selectedcolor>SelectedGreen</selectedcolor>
-								<textcolor>eewhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
 								<visible>!stringcompare(ListItem.Property(ItemType),BoxSet) + !Container.Content(Episodes) + !IsEmpty(ListItem.Year)</visible>
@@ -1796,7 +1800,7 @@
 								<height>60</height>
 								<texture>flags/other/set-list.png</texture>
 								<visible>stringcompare(ListItem.Property(ItemType),BoxSet)</visible>
-								<colordiffuse>D4FFFFFF</colordiffuse>
+								<colordiffuse>SecondaryT</colordiffuse>
 							</control>
 						</control>
 					</focusedlayout>
@@ -1813,9 +1817,17 @@
 							<posy>0</posy>
 							<width>710</width>
 							<height>59</height>
-							<texture border="150,1,150,1">views/other/focus.png</texture>
+							<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
 							<include>listfocusanim</include>
 							<include>visiblehidefadeinfo</include>
+							<visible>Control.HasFocus(52)</visible>
+						</control>
+						<control type="image"> <!--focused background left edge -->
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>5</width>
+							<height>59</height>
+							<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
 							<visible>Control.HasFocus(52)</visible>
 						</control>
 						<control type="group">
@@ -1831,7 +1843,7 @@
 								<label fallback="[COLOR=50FFFFFF]0000[/COLOR]">$VAR[ListItem.Year]</label>
 								<align>right</align>
 								<selectedcolor>SelectedGreen</selectedcolor>
-								<textcolor>eewhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
 								<visible>!IsEmpty(ListItem.Year)</visible>
@@ -1844,7 +1856,7 @@
 								<font>Font-Condensed-S29-B</font>
 								<label>$INFO[ListItem.Label]</label>
 								<selectedcolor>SelectedGreen</selectedcolor>
-								<textcolor>eewhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 							</control>
 							<control type="label">
@@ -1855,7 +1867,7 @@
 								<font>Font-Condensed-S31</font>
 								<label>$VAR[ListItem.Label2]</label>
 								<selectedcolor>SelectedGreen</selectedcolor>
-								<textcolor>eewhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<align>right</align>
 								<scroll>false</scroll>
@@ -1896,9 +1908,17 @@
 							<posy>0</posy>
 							<width>710</width>
 							<height>59</height>
-							<texture border="150,1,150,1">views/other/focus.png</texture>
+							<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
 							<include>listfocusanim</include>
 							<include>visiblehidefadeinfo</include>
+							<visible>Control.HasFocus(52)</visible>
+						</control>
+						<control type="image"> <!--focused background left edge -->
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>5</width>
+							<height>59</height>
+							<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
 							<visible>Control.HasFocus(52)</visible>
 						</control>
 						<control type="group">
@@ -1913,7 +1933,7 @@
 								<width>591</width>
 								<font>Font-Condensed-S29-B</font>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>eewhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 							</control>
 							<control type="label">
@@ -1924,7 +1944,7 @@
 								<font>Font-Condensed-S31</font>
 								<label>$VAR[ListItem.Property(NumEpisodes)]</label>
 								<selectedcolor>SelectedGreen</selectedcolor>
-								<textcolor>eewhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<align>right</align>
 								<scroll>false</scroll>
@@ -1966,9 +1986,17 @@
 							<posy>0</posy>
 							<width>710</width>
 							<height>59</height>
-							<texture border="150,1,150,1">views/other/focus.png</texture>
+							<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
 							<include>listfocusanim</include>
 							<include>visiblehidefadeinfo</include>
+							<visible>Control.HasFocus(52)</visible>
+						</control>
+						<control type="image"> <!--focused background left edge -->
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>5</width>
+							<height>59</height>
+							<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
 							<visible>Control.HasFocus(52)</visible>
 						</control>
 						<control type="group">
@@ -1984,7 +2012,7 @@
 								<font>Font-Condensed-S31</font>
 								<label>$VAR[ListItem.Season]$VAR[ListItem.Episode]</label>
 								<selectedcolor>SelectedGreen</selectedcolor>
-								<textcolor>eewhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
 								<visible>!IsEmpty(ListItem.Season) + !IsEmpty(ListItem.Episode)</visible>
@@ -1997,7 +2025,7 @@
 								<font>Font-Condensed-S30-B</font>
 								<label>$VAR[ListItem.Title.Focus]</label>
 								<selectedcolor>SelectedGreen</selectedcolor>
-								<textcolor>eewhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 							</control>
 							<control type="label">
@@ -2008,7 +2036,7 @@
 								<font>Font-Condensed-S31</font>
 								<label>$VAR[ListItem.Label2.Focus]</label>
 								<selectedcolor>SelectedGreen</selectedcolor>
-								<textcolor>eewhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<align>right</align>
 								<scroll>false</scroll>
@@ -2034,8 +2062,8 @@
 					<onright condition="Control.IsVisible(71) | [Skin.HasSetting(InfoListShowPlotOnFocus) + !IsEmpty(Container(52).ListItem.Plot)]">71</onright>
 					<onright condition="!Control.IsVisible(71) + !Skin.HasSetting(KioskMode)">9010</onright>
 					<onright condition="!Control.IsVisible(71) + Skin.HasSetting(KioskMode)">52</onright>
-					<texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
-					<texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+					<texturesliderbar colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texturesliderbar>
+					<texturesliderbarfocus colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
 					<orientation>vertical</orientation>
 					<showonepage>false</showonepage>
 					<animation effect="fade" start="35" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772) + !Control.HasFocus(70)">Conditional</animation>
@@ -2050,8 +2078,8 @@
 					<onleft>52</onleft>
 					<onright condition="!Skin.HasSetting(KioskMode)">9010</onright>
 					<onright condition="Skin.HasSetting(KioskMode)">52</onright>
-					<texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
-					<texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+					<texturesliderbar colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texturesliderbar>
+					<texturesliderbarfocus colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
 					<orientation>vertical</orientation>
 					<showonepage>false</showonepage>
 					<animation effect="fade" start="35" end="0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(71)">Conditional</animation>
@@ -2066,8 +2094,8 @@
 					<onleft>52</onleft>
 					<onright condition="!Skin.HasSetting(KioskMode)">9010</onright>
 					<onright condition="Skin.HasSetting(KioskMode)">52</onright>
-					<texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
-					<texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+					<texturesliderbar colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texturesliderbar>
+					<texturesliderbarfocus colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
 					<orientation>vertical</orientation>
 					<showonepage>false</showonepage>
 					<animation effect="fade" start="35" end="0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(71)">Conditional</animation>
@@ -2388,6 +2416,180 @@
 			</control>
 		</control>
 	</include>
+	<!-- ========== -->
+	<!-- Banner Fanart (553) -->
+	<!-- ========== -->
+	<include name="Viewtype-BannerFanart">
+		<control type="group">
+			<include>FullscreenDimensions</include>
+			<include>OptionsShutdownAnimation</include>
+			<control type="group">
+				<visible>Control.IsVisible(553) + !Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + !Window.IsActive(favourites)</visible>
+				<animation type="WindowOpen">
+					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="645" delay="105" />
+					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
+					<effect type="zoom" start="80" end="100" center="786,438" tween="cubic" easing="out" time="400" delay="105" />
+				</animation>
+				<animation type="Visible" condition="IsEmpty(Window(home).property(NoAnimation)) + !Window.Next(visualisation)" reversible="false">
+					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="645" delay="405" />
+					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="405" />
+					<effect type="zoom" start="80" end="100" center="786,438" tween="cubic" easing="out" time="400" delay="405" />
+				</animation>
+				<include>GuideNoAnimation</include>
+				<animation type="WindowClose">
+					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+					<effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+				</animation>
+				<animation type="Hidden" reversible="false">
+					<effect type="zoom" start="100" end="125" center="960,600" tween="sine" easing="out" time="350" />
+					<effect type="fade" start="100" end="0" tween="cubic" easing="out" time="250" />
+				</animation>
+				<animation effect="slide" end="70" time="400" tween="cubic" easing="inout" condition="[!IntegerGreaterThan(Container(553).NumItems,3) + !System.GetBool(filelists.showparentdiritems)] | [!IntegerGreaterThan(Container(553).NumItems,2) + System.GetBool(filelists.showparentdiritems)]">Conditional</animation>
+				<animation effect="slide" end="70" time="400" tween="cubic" easing="inout" condition="[IntegerGreaterThan(Container(553).NumItems,3) + !IntegerGreaterThan(Container(553).NumItems,6) + !System.GetBool(filelists.showparentdiritems)] | [IntegerGreaterThan(Container(553).NumItems,2) + !IntegerGreaterThan(Container(553).NumItems,5) + System.GetBool(filelists.showparentdiritems)]">Conditional</animation>
+				<control type="fixedlist" id="553">
+					<visible>Container.Content(Movies) | Container.Content(TVShows)</visible>
+					<posx>0</posx>
+					<posy>760</posy>
+					<width>2520</width>
+					<height>185</height>
+					<pagecontrol>70</pagecontrol>
+					<onleft>553</onleft>
+					<onright>553</onright>
+					<onup condition="!Skin.HasSetting(KioskMode)">9010</onup>
+					<onup condition="Skin.HasSetting(KioskMode)">553</onup>
+					<ondown>70</ondown>
+					<viewtype label="42235">list</viewtype>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<itemlayout width="1000" height="185">
+						<control type="image">
+							<posx>-500</posx>
+							<posy>0</posy>
+							<width>1000</width>
+							<height>185</height>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<texture colordiffuse="FF777777" scalediffuse="false">$VAR[DefaultBannerFallbackPoster]</texture>
+						</control>
+					</itemlayout>
+					<focusedlayout width="1000" height="185">
+						<control type="group">
+							<animation type="Unfocus">
+								<effect type="fade" start="100" end="93.36" time="200" tween="sine" easing="out" />
+							</animation>
+							<control type="image">
+								<posx>-500</posx>
+								<posy>0</posy>
+								<width>1000</width>
+								<height>185</height>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+								<texture colordiffuse="FFFFFFFF" scalediffuse="false">$VAR[DefaultBannerFallbackPoster]</texture>
+							</control>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Control.IsVisible(553) + !Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + !Window.IsActive(favourites)</visible>
+				<control type="group">
+					<description>Fanart + Info</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<!-- <control type="image"> <width>1920</width> <height>620</height> <posy>150</posy> <texture background="true">$VAR[ViewFanart]</texture> <fadetime>500</fadetime> <aspectratio>stretch</aspectratio> </control> -->
+					<control type="image">
+						<posy>0</posy>
+						<width>1920</width>
+						<height>1080</height>
+						<texture>views/list/other/fanart-overlay.png</texture>
+					</control>
+					<control type="image">
+						<posy>-100</posy>
+						<width>1920</width>
+						<height>1080</height>
+						<texture flipy="true">views/list/other/fanart-overlay.png</texture>
+					</control>
+					<control type="group">
+						<visible>!Skin.HasSetting(InfoPanelHideInfo)</visible>
+						<include>visiblehidefadeinfo</include>
+						<control type="group">
+							<visible>!IsEmpty(Container(553).ListItem.Plot) + Skin.HasSetting(InfoPanelPlot)</visible>
+							<include>visiblehidefadeinfo</include>
+							<control type="label">
+								<posx>30</posx>
+								<posy>30</posy>
+								<width>678</width>
+								<font>Font-Condensed-S60</font>
+								<label>$LOCALIZE[207]</label>
+								<textcolor>PrimaryT</textcolor>
+								<shadowcolor>22000000</shadowcolor>
+								<scroll>false</scroll>
+							</control>
+							<control type="textbox">
+								<description>Plot</description>
+								<posx>30</posx>
+								<posy>90</posy>
+								<width>678</width>
+								<height>330</height>
+								<info>Container(553).ListItem.Plot</info>
+								<align>justify</align>
+								<textcolor>PrimaryT</textcolor>
+								<shadowcolor>33000000</shadowcolor>
+								<pagecontrol>71</pagecontrol>
+								<autoscroll delay="13000" time="3000" repeat="13000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
+								<font>Font-Condensed-S34</font>
+							</control>
+						</control>
+						<control type="image">
+							<posy>0</posy>
+							<width>1920</width>
+							<height>770</height>
+							<texture>views/list/other/fanart-overlay.png</texture>
+						</control>
+						<control type="image">
+							<posx>1440</posx>
+							<posy>515</posy>
+							<width>450</width>
+							<height>253</height>
+							<texture background="true">$VAR[ClearArt]</texture>
+							<colordiffuse>bbwhite</colordiffuse>
+							<aspectratio align="right" aligny="bottom" scalediffuse="false">keep</aspectratio>
+						</control>
+						<control type="label">
+							<posx>30</posx>
+							<posy>645</posy>
+							<width>678</width>
+							<font>Font-Condensed-S45</font>
+							<label>$INFO[Container(553).ListItem.Label]</label>
+							<textcolor>ffffffff</textcolor>
+							<shadowcolor>77000000</shadowcolor>
+							<scroll>false</scroll>
+							<animation effect="slide" end="0,40" time="0" condition="IsEmpty(Container(553).ListItem.Genre)">Conditional</animation>
+						</control>
+						<control type="label">
+							<posx>30</posx>
+							<posy>693</posy>
+							<width>678</width>
+							<font>Font-Condensed-S30</font>
+							<label>$INFO[Container(553).ListItem.Genre]</label>
+							<textcolor>ddwhite</textcolor>
+							<shadowcolor>22000000</shadowcolor>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<posx>30</posx>
+							<posy>733</posy>
+							<width>678</width>
+							<font>Font-Condensed-S30</font>
+							<label>$VAR[VideoPanelThumbInfo]</label>
+							<textcolor>ddwhite</textcolor>
+							<shadowcolor>22000000</shadowcolor>
+							<scroll>false</scroll>
+						</control>
+					</control>
+				</control>
+			</control>
+		</control>
+	</include>
 	<!-- ============== -->
 	<!-- Landscape (54) -->
 	<!-- ============== -->
@@ -2445,8 +2647,7 @@
 								<posy>265</posy>
 								<width>490</width>
 								<height>360</height>
-								<texture border="7">windows/home/tile-grey.png</texture>
-								<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+								<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
 							</control>
 							<control type="image">
 								<posx>0</posx>
@@ -2461,7 +2662,7 @@
 								<width>440</width>
 								<label>$INFO[Container(54).ListItem(-1).Label]</label>
 								<font>Font-Condensed-S34-B</font>
-								<textcolor>ddwhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
 								<align>left</align>
@@ -2472,7 +2673,7 @@
 								<width>440</width>
 								<label>$INFO[Container(54).ListItem(-1).Rating,★ , [COLOR=44FFFFFF]/[/COLOR] ]$INFO[Container(54).ListItem(-1).Year]$INFO[Container(54).ListItem(-1).Duration, [COLOR=44FFFFFF]/[/COLOR] , $LOCALIZE[12391]]$VAR[LandscapeHDSD3DLabel-1]</label>
 								<font>Font-Condensed-S32</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>SecondaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
 								<align>left</align>
@@ -2485,7 +2686,7 @@
 								<height>230</height>
 								<info>Container(54).ListItem(-1).Plot</info>
 								<align>justify</align>
-								<textcolor>99FFFFFF</textcolor>
+								<textcolor>TertiaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<autoscroll>false</autoscroll>
 								<font>Font-Condensed-S28</font>
@@ -2591,7 +2792,7 @@
 								<width>440</width>
 								<label>$INFO[Container(54).ListItem(3).Label]</label>
 								<font>Font-Condensed-S34-B</font>
-								<textcolor>ddwhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
 								<align>left</align>
@@ -2602,7 +2803,7 @@
 								<width>440</width>
 								<label>$INFO[Container(54).ListItem(3).Rating,★ , [COLOR=44FFFFFF]/[/COLOR] ]$INFO[Container(54).ListItem(3).Year]$INFO[Container(54).ListItem(3).Duration, [COLOR=44FFFFFF]/[/COLOR] , $LOCALIZE[12391]]$VAR[LandscapeHDSD3DLabel3]</label>
 								<font>Font-Condensed-S32</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>SecondaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
 								<align>left</align>
@@ -2615,7 +2816,7 @@
 								<height>230</height>
 								<info>Container(54).ListItem(3).Plot</info>
 								<align>justify</align>
-								<textcolor>99FFFFFF</textcolor>
+								<textcolor>TertiaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<autoscroll>false</autoscroll>
 								<font>Font-Condensed-S28</font>
@@ -2721,7 +2922,7 @@
 								<width>440</width>
 								<label>$INFO[Container(54).ListItem(2).Label]</label>
 								<font>Font-Condensed-S34-B</font>
-								<textcolor>ddwhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
 								<align>left</align>
@@ -2732,7 +2933,7 @@
 								<width>440</width>
 								<label>$INFO[Container(54).ListItem(2).Rating,★ , [COLOR=44FFFFFF]/[/COLOR] ]$INFO[Container(54).ListItem(2).Year]$INFO[Container(54).ListItem(2).Duration, [COLOR=44FFFFFF]/[/COLOR] , $LOCALIZE[12391]]$VAR[LandscapeHDSD3DLabel2]</label>
 								<font>Font-Condensed-S32</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>SecondaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
 								<align>left</align>
@@ -2745,7 +2946,7 @@
 								<height>230</height>
 								<info>Container(54).ListItem(2).Plot</info>
 								<align>justify</align>
-								<textcolor>99FFFFFF</textcolor>
+								<textcolor>TertiaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<autoscroll>false</autoscroll>
 								<font>Font-Condensed-S28</font>
@@ -2851,7 +3052,7 @@
 								<width>440</width>
 								<label>$INFO[Container(54).ListItem(1).Label]</label>
 								<font>Font-Condensed-S34-B</font>
-								<textcolor>ddwhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
 								<align>left</align>
@@ -2862,7 +3063,7 @@
 								<width>440</width>
 								<label>$INFO[Container(54).ListItem(1).Rating,★ , [COLOR=44FFFFFF]/[/COLOR] ]$INFO[Container(54).ListItem(1).Year]$INFO[Container(54).ListItem(1).Duration, [COLOR=44FFFFFF]/[/COLOR] , $LOCALIZE[12391]]$VAR[LandscapeHDSD3DLabel1]</label>
 								<font>Font-Condensed-S32</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>SecondaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
 								<align>left</align>
@@ -2875,7 +3076,7 @@
 								<height>230</height>
 								<info>Container(54).ListItem(1).Plot</info>
 								<align>justify</align>
-								<textcolor>99FFFFFF</textcolor>
+								<textcolor>TertiaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<autoscroll>false</autoscroll>
 								<font>Font-Condensed-S28</font>
@@ -2978,7 +3179,7 @@
 						<width>440</width>
 						<label>$INFO[Container(54).ListItem(0).Label]</label>
 						<font>Font-Condensed-S34-B</font>
-						<textcolor>ddwhite</textcolor>
+						<textcolor>PrimaryT</textcolor>
 						<shadowcolor>22000000</shadowcolor>
 						<scroll>false</scroll>
 						<align>left</align>
@@ -2989,7 +3190,7 @@
 						<width>440</width>
 						<label>$INFO[Container(54).ListItem(0).Rating,★ , [COLOR=44FFFFFF]/[/COLOR] ]$INFO[Container(54).ListItem(0).Year]$INFO[Container(54).ListItem(0).Duration, [COLOR=44FFFFFF]/[/COLOR] , $LOCALIZE[12391]]$VAR[LandscapeHDSD3DLabel0]</label>
 						<font>Font-Condensed-S32</font>
-						<textcolor>aawhite</textcolor>
+						<textcolor>SecondaryT</textcolor>
 						<shadowcolor>22000000</shadowcolor>
 						<scroll>false</scroll>
 						<align>left</align>
@@ -3002,7 +3203,7 @@
 						<height>230</height>
 						<info>Container(54).ListItem(0).Plot</info>
 						<align>justify</align>
-						<textcolor>99FFFFFF</textcolor>
+						<textcolor>TertiaryT</textcolor>
 						<shadowcolor>22000000</shadowcolor>
 						<autoscroll>false</autoscroll>
 						<font>Font-Condensed-S28</font>
@@ -3096,15 +3297,14 @@
 								<posy>265</posy>
 								<width>490</width>
 								<height>360</height>
-								<texture border="7">windows/home/tile-grey.png</texture>
-								<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+								<texture colordiffuse="SecondaryM">windows/common/white.png</texture>
 							</control>
 							<control type="image">
 								<posx>0</posx>
 								<posy>270</posy>
 								<width>480</width>
 								<height>104</height>
-								<texture border="2">views/extended/overlay.png</texture>
+								<texture colordiffuse="SecondaryM">windows/common/white.png</texture>
 							</control>
 							<control type="label">
 								<posx>20</posx>
@@ -3112,7 +3312,7 @@
 								<width>440</width>
 								<label>$INFO[ListItem.Label]</label>
 								<font>Font-Condensed-S34-B</font>
-								<textcolor>ddwhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
 								<align>left</align>
@@ -3123,7 +3323,7 @@
 								<width>440</width>
 								<label>$INFO[ListItem.Rating,★ , [COLOR=44FFFFFF]/[/COLOR] ]$INFO[ListItem.Year]$INFO[ListItem.Duration, [COLOR=44FFFFFF]/[/COLOR] , $LOCALIZE[12391]]$VAR[LandscapeHDSD3DLabel]</label>
 								<font>Font-Condensed-S32</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>SecondaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
 								<align>left</align>
@@ -3136,19 +3336,10 @@
 								<height>230</height>
 								<info>ListItem.Plot</info>
 								<align>justify</align>
-								<textcolor>99FFFFFF</textcolor>
+								<textcolor>TertiaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<autoscroll>false</autoscroll>
 								<font>Font-Condensed-S28</font>
-							</control>
-							<control type="image">
-								<description>Set icon</description>
-								<posx>133</posx>
-								<posy>435</posy>
-								<width>214</width>
-								<height>120</height>
-								<texture>flags/other/set-landscape.png</texture>
-								<visible>stringcompare(ListItem.Property(ItemType),BoxSet)</visible>
 							</control>
 						</control>
 						<control type="image">
@@ -3216,7 +3407,7 @@
 									<posy>265</posy>
 									<width>490</width>
 									<height>360</height>
-									<texture border="7">windows/home/tile-grey.png</texture>
+									<texture colordiffuse="SecondaryM">windows/common/white.png</texture>
 								</control>
 							</control>
 							<control type="image">
@@ -3224,7 +3415,7 @@
 								<posy>270</posy>
 								<width>480</width>
 								<height>104</height>
-								<texture border="2">views/extended/overlay.png</texture>
+								<texture colordiffuse="SecondaryM">windows/common/white.png</texture>
 							</control>
 							<control type="label">
 								<posx>20</posx>
@@ -3232,7 +3423,7 @@
 								<width>440</width>
 								<label>$INFO[ListItem.Label]</label>
 								<font>Font-Condensed-S34-B</font>
-								<textcolor>ddwhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
 								<align>left</align>
@@ -3243,7 +3434,7 @@
 								<width>440</width>
 								<label>$INFO[ListItem.Rating,★ , [COLOR=44FFFFFF]/[/COLOR] ]$INFO[ListItem.Year]$INFO[ListItem.Duration, [COLOR=44FFFFFF]/[/COLOR] , $LOCALIZE[12391]]$VAR[LandscapeHDSD3DLabel]</label>
 								<font>Font-Condensed-S32</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>SecondaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
 								<align>left</align>
@@ -3256,7 +3447,7 @@
 								<height>230</height>
 								<info>ListItem.Plot</info>
 								<align>justify</align>
-								<textcolor>99FFFFFF</textcolor>
+								<textcolor>TertiaryT</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<autoscroll delay="13000" time="3000" repeat="13000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
 								<font>Font-Condensed-S28</font>
@@ -3867,9 +4058,11 @@
 								<posy>588</posy>
 								<width>380</width>
 								<height>570</height>
-								<colordiffuse>77white</colordiffuse>
-								<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPoster]</texture>
+								<colordiffuse>FFFFFFFF</colordiffuse>
+								<texture background="true" flipy="true" diffuse="special://skin/extras/diffuse-ref.png">$VAR[PosterViewPoster]</texture>
 								<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+								<animation effect="fade" start="0" end="100" time="200" tween="sine" easing="in" condition="Container(55).OnNext | Container(55).OnPrevious">Focus</animation>
+								<animation effect="fade" start="100" end="0" time="200" tween="sine" easing="out" condition="Container(55).OnNext | Container(55).OnPrevious">UnFocus</animation>
 							</control>
 							<control type="image">
 								<description>Shadow Bottom</description>
@@ -3885,7 +4078,7 @@
 								<posy>16</posy>
 								<width>380</width>
 								<height>570</height>
-								<colordiffuse>ddwhite</colordiffuse>
+								<colordiffuse>SecondaryT</colordiffuse>
 								<texture background="true">$VAR[PosterViewPoster]</texture>
 								<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 							</control>
@@ -3906,16 +4099,6 @@
 							<animation type="Unfocus" condition="Container(55).OnNext | Container(55).OnPrevious">
 								<effect type="zoom" start="100" end="94.7368421" time="250" tween="sine" easing="out" center="186,301" />
 							</animation>
-							<control type="image">
-								<description>Reflection</description>
-								<posx>-4</posx>
-								<posy>588</posy>
-								<width>380</width>
-								<height>570</height>
-								<colordiffuse>77white</colordiffuse>
-								<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPoster]</texture>
-								<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-							</control>
 							<control type="image">
 								<posx>-16</posx>
 								<posy>576</posy>
@@ -3953,7 +4136,6 @@
 								<aspectratio align="center">keep</aspectratio>
 								<animation effect="slide" start="0" end="0,-250" time="600" delay="450">Focus</animation>
 								<animation effect="slide" end="0" start="0,-250" time="600" delay="0">UnFocus</animation>
-								<animation effect="rotate" center="auto" start="360" end="0" time="2500" loop="true" condition="Container(55).OnNext | Container(55).OnPrevious">Focus</animation>
 								<visible>Skin.HasSetting(CDArt.Enabled)</visible>
 								<visible>!IsEmpty(ListItem.Art(discart))</visible>
 							</control>
@@ -4030,7 +4212,7 @@
 								<width>1730</width>
 								<label>$INFO[Container(55).ListItem.Label]</label>
 								<font>Font-Condensed-S45-B</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<scroll>false</scroll>
 								<align>left</align>
 								<animation effect="slide" end="-73" time="0" condition="IsEmpty(Container(55).ListItem.VideoResolution)">Conditional</animation>
@@ -4041,7 +4223,7 @@
 								<width>140</width>
 								<height>100</height>
 								<texture>$VAR[ListHDSDFlag]</texture>
-								<colordiffuse>aawhite</colordiffuse>
+								<colordiffuse>PrimaryT</colordiffuse>
 								<visible>!Skin.HasSetting(nohdflag) + !IsEmpty(Container(55).ListItem.VideoResolution)</visible>
 							</control>
 							<control type="label">
@@ -4050,7 +4232,7 @@
 								<width>1730</width>
 								<label>$INFO[Container(55).ListItem.Rating,★ , [COLOR=44FFFFFF]/[/COLOR] ]$INFO[Container(55).ListItem.Year,,]$INFO[Container(55).ListItem.Duration, [COLOR=44FFFFFF]/[/COLOR] , $LOCALIZE[12391]]</label>
 								<font>Font-Condensed-S36</font>
-								<textcolor>77white</textcolor>
+								<textcolor>SecondaryT</textcolor>
 								<scroll>false</scroll>
 								<align>left</align>
 							</control>
@@ -4063,7 +4245,7 @@
 								<width>1685</width>
 								<label>$INFO[Container(55).ListItem.Label]$INFO[Container(55).ListItem.Year, (,)]</label>
 								<font>Font-Condensed-S45-B</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<scroll>false</scroll>
 								<align>left</align>
 								<animation effect="slide" end="-116" time="0" condition="IsEmpty(ListItem.MPAA)">Conditional</animation>
@@ -4079,7 +4261,7 @@
 								<width>1730</width>
 								<label>$INFO[ListItem.Property(UnWatchedEpisodes),$LOCALIZE[41311],]</label>
 								<font>Font-Condensed-S36</font>
-								<textcolor>77white</textcolor>
+								<textcolor>SecondaryT</textcolor>
 								<scroll>false</scroll>
 								<align>left</align>
 							</control>
@@ -4092,7 +4274,7 @@
 								<width>1800</width>
 								<label>$INFO[Container(55).ListItem.Label]</label>
 								<font>Font-Condensed-S45-B</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<scroll>false</scroll>
 								<align>left</align>
 							</control>
@@ -4106,7 +4288,7 @@
 					<posy>125r</posy>
 					<width>1712</width>
 					<height>6</height>
-					<texture border="6,0,6,0">views/other/scrollbar-sq.png</texture>
+					<texture colordiffuse="PrimaryT" border="6,0,6,0">views/other/scrollbar-sq.png</texture>
 					<visible>Control.HasFocus(70)</visible>
 					<animation effect="fade" start="0" end="25" time="300" tween="sine" easing="inout">Visible</animation>
 					<animation effect="fade" start="25" end="0" time="300" tween="sine" easing="inout">Hidden</animation>
@@ -4118,8 +4300,8 @@
 					<width>1712</width>
 					<height>6</height>
 					<orientation>horizontal</orientation>
-					<texturesliderbar border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
-					<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
+					<texturesliderbar colordiffuse="PrimaryT" border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
+					<texturesliderbarfocus colordiffuse="PrimaryT" border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<onup>55</onup>
 					<ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
@@ -4190,8 +4372,7 @@
 							<posy>12</posy>
 							<width>332</width>
 							<height>332</height>
-							<texture border="1">windows/common/black.png</texture>
-							<colordiffuse>eewhite</colordiffuse>
+							<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 						</control>
 						<control type="image">
 							<description>Poster</description>
@@ -4208,8 +4389,7 @@
 							<posy>272</posy>
 							<width>332</width>
 							<height>72</height>
-							<texture border="1">windows/common/black.png</texture>
-							<colordiffuse>DFFFFFFF</colordiffuse>
+							<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 						</control>
 						<control type="label">
 							<posx>27</posx>
@@ -4218,7 +4398,7 @@
 							<height>66</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>Font-Condensed-S32</font>
-							<textcolor>99FFFFFF</textcolor>
+							<textcolor>PrimaryT</textcolor>
 							<shadowcolor>22000000</shadowcolor>
 							<scroll>false</scroll>
 							<align>left</align>
@@ -4229,7 +4409,7 @@
 							<posy>258</posy>
 							<width>100</width>
 							<height>100</height>
-							<colordiffuse>eewhite</colordiffuse>
+							<colordiffuse>PrimaryT</colordiffuse>
 							<texture>$VAR[DefaultListOverlay]</texture>
 							<visible>!IsEmpty(ListItem.Overlay)</visible>
 						</control>
@@ -4241,8 +4421,7 @@
 							<posy>12</posy>
 							<width>217</width>
 							<height>217</height>
-							<texture border="1">windows/common/black.png</texture>
-							<colordiffuse>eewhite</colordiffuse>
+							<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 						</control>
 						<control type="image">
 							<description>Poster</description>
@@ -4259,8 +4438,7 @@
 							<posy>179</posy>
 							<width>217</width>
 							<height>50</height>
-							<texture border="1">windows/common/black.png</texture>
-							<colordiffuse>DFFFFFFF</colordiffuse>
+							<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 						</control>
 						<control type="label">
 							<posx>27</posx>
@@ -4269,7 +4447,7 @@
 							<height>50</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>Font-Condensed-S25</font>
-							<textcolor>99FFFFFF</textcolor>
+							<textcolor>PrimaryT</textcolor>
 							<shadowcolor>22000000</shadowcolor>
 							<scroll>false</scroll>
 							<align>left</align>
@@ -4280,7 +4458,7 @@
 							<width>60</width>
 							<height>60</height>
 							<texture>$VAR[InfoListOverlay]</texture>
-							<colordiffuse>eewhite</colordiffuse>
+							<colordiffuse>PrimaryT</colordiffuse>
 							<visible>!IsEmpty(ListItem.Overlay)</visible>
 						</control>
 					</itemlayout>
@@ -4298,7 +4476,7 @@
 								<posy>12</posy>
 								<width>332</width>
 								<height>332</height>
-								<texture border="1">windows/common/black.png</texture>
+								<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 							</control>
 							<control type="image">
 								<posx>12</posx>
@@ -4320,8 +4498,7 @@
 									<posy>272</posy>
 									<width>332</width>
 									<height>72</height>
-									<texture border="1">windows/common/black.png</texture>
-									<colordiffuse>DFFFFFFF</colordiffuse>
+									<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 								</control>
 								<control type="label">
 									<posx>27</posx>
@@ -4330,7 +4507,7 @@
 									<height>66</height>
 									<label>$INFO[ListItem.Label]</label>
 									<font>Font-Condensed-S32</font>
-									<textcolor>99FFFFFF</textcolor>
+									<textcolor>PrimaryT</textcolor>
 									<shadowcolor>22000000</shadowcolor>
 									<scroll>false</scroll>
 									<align>left</align>
@@ -4341,7 +4518,7 @@
 									<posy>258</posy>
 									<width>100</width>
 									<height>100</height>
-									<colordiffuse>eewhite</colordiffuse>
+									<colordiffuse>PrimaryT</colordiffuse>
 									<texture>$VAR[DefaultListOverlay]</texture>
 									<visible>!IsEmpty(ListItem.Overlay)</visible>
 								</control>
@@ -4395,7 +4572,7 @@
 								<posy>12</posy>
 								<width>217</width>
 								<height>217</height>
-								<texture border="1">windows/common/black.png</texture>
+								<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 							</control>
 							<control type="image">
 								<posx>12</posx>
@@ -4417,8 +4594,7 @@
 									<posy>179</posy>
 									<width>217</width>
 									<height>50</height>
-									<texture border="1">windows/common/black.png</texture>
-									<colordiffuse>F0FFFFFF</colordiffuse>
+									<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 								</control>
 								<control type="label">
 									<posx>27</posx>
@@ -4427,7 +4603,7 @@
 									<height>50</height>
 									<label>$INFO[ListItem.Label]</label>
 									<font>Font-Condensed-S25</font>
-									<textcolor>99FFFFFF</textcolor>
+									<textcolor>PrimaryT</textcolor>
 									<shadowcolor>22000000</shadowcolor>
 									<scroll>false</scroll>
 									<align>left</align>
@@ -4438,7 +4614,7 @@
 									<width>60</width>
 									<height>60</height>
 									<texture>$VAR[InfoListOverlay]</texture>
-									<colordiffuse>eewhite</colordiffuse>
+									<colordiffuse>PrimaryT</colordiffuse>
 									<visible>!IsEmpty(ListItem.Overlay)</visible>
 								</control>
 							</control>
@@ -4468,7 +4644,7 @@
 					<label>[B]$INFO[ListItem.Label][/B]</label>
 					<label2>$VAR[ThumbnailViewDetailInfo]</label2>
 					<font>Font-Condensed-S45</font>
-					<textcolor>99FFFFFF</textcolor>
+					<textcolor>PrimaryT</textcolor>
 					<shadowcolor>22000000</shadowcolor>
 					<align>left</align>
 					<visible>!Skin.HasSetting(ThumbnailSmall)</visible>
@@ -4481,7 +4657,7 @@
 					<label>[B]$INFO[ListItem.Label][/B]</label>
 					<label2>$VAR[ThumbnailViewDetailInfo]</label2>
 					<font>Font-Condensed-S45</font>
-					<textcolor>99FFFFFF</textcolor>
+					<textcolor>PrimaryT</textcolor>
 					<shadowcolor>22000000</shadowcolor>
 					<align>left</align>
 					<visible>Skin.HasSetting(ThumbnailSmall)</visible>
@@ -4492,7 +4668,7 @@
 					<posy>852</posy>
 					<width>100</width>
 					<height>100</height>
-					<colordiffuse>eewhite</colordiffuse>
+					<colordiffuse>PrimaryT</colordiffuse>
 					<texture>$VAR[DefaultListOverlay]</texture>
 					<visible>!IsEmpty(ListItem.Overlay)</visible>
 					<animation effect="slide" end="-59" time="0" condition="Skin.HasSetting(ThumbnailSmall)">Conditional</animation>
@@ -4505,7 +4681,7 @@
 						<posy>186</posy>
 						<width>6</width>
 						<height>676</height>
-						<texture border="1">views/other/scrollbar-sq.png</texture>
+						<texture colordiffuse="PrimaryBG" border="1">views/other/scrollbar-sq.png</texture>
 						<visible>Control.IsVisible(500) + Control.HasFocus(70)</visible>
 						<animation effect="fade" start="0" end="25" time="300" tween="sine" easing="inout">Visible</animation>
 						<animation effect="fade" start="25" end="0" time="300" tween="sine" easing="inout">Hidden</animation>
@@ -4519,8 +4695,8 @@
 						<onright>500</onright>
 						<onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
 						<onleft condition="Skin.HasSetting(KioskMode)">500</onleft>
-						<texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
-						<texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+						<texturesliderbar colordiffuse="PrimaryBG" border="1">views/other/scrollbar-sq.png</texturesliderbar>
+						<texturesliderbarfocus colordiffuse="PrimaryBG" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
 						<orientation>vertical</orientation>
 						<showonepage>false</showonepage>
 						<animation effect="fade" start="50" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772) + !Control.HasFocus(70)">Conditional</animation>
@@ -4944,7 +5120,7 @@
 							<width>157</width>
 							<height>27</height>
 							<texture>$INFO[ListItem.StarRating,views/banner/other/,]</texture>
-							<colordiffuse>77white</colordiffuse>
+							<colordiffuse>SecondaryT</colordiffuse>
 							<visible>!Container.Content(Seasons)</visible>
 							<animation effect="slide" end="34" time="0" condition="Container.Content(TVShows) + !Skin.HasSetting(posterstv)">Conditional</animation>
 						</control>
@@ -4956,7 +5132,7 @@
 							<label fallback="[COLOR=33FFFFFF]0000[/COLOR]">$VAR[ListItem.Year]</label>
 							<font>Font-Condensed-S36</font>
 							<selectedcolor>SelectedGreen</selectedcolor>
-							<textcolor>77white</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
 							<visible>!IsEmpty(ListItem.Title) + !Container.Content(Seasons)</visible>
@@ -4968,7 +5144,7 @@
 							<height>62</height>
 							<label>$VAR[ListItem.Property(NumEpisodes)]</label>
 							<font>Font-Condensed-S36</font>
-							<textcolor>44FFFFFF</textcolor>
+							<textcolor>TertiaryT</textcolor>
 							<scroll>false</scroll>
 							<align>right</align>
 							<visible>Container.Content(Seasons)</visible>
@@ -4981,7 +5157,7 @@
 							<label>$VAR[ListItem.Label]</label>
 							<font>Font-Condensed-S34-B</font>
 							<selectedcolor>SelectedGreen</selectedcolor>
-							<textcolor>C0FFFFFF</textcolor>
+							<textcolor>PrimaryT</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
 						</control>
@@ -5015,7 +5191,7 @@
 								<height>42</height>
 								<label>$INFO[ListItem.Property(unWatchedEpisodes)]</label>
 								<font>Font-Condensed-S30-B</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>SecondaryT</textcolor>
 								<scroll>no</scroll>
 								<align>center</align>
 							</control>
@@ -5039,7 +5215,7 @@
 							<width>157</width>
 							<height>27</height>
 							<texture>$INFO[ListItem.StarRating,views/banner/other/,]</texture>
-							<colordiffuse>77white</colordiffuse>
+							<colordiffuse>SecondaryT</colordiffuse>
 							<visible>!Container.Content(Seasons)</visible>
 							<animation effect="slide" end="34" time="0" condition="Container.Content(TVShows) + !Skin.HasSetting(posterstv)">Conditional</animation>
 						</control>
@@ -5051,7 +5227,7 @@
 							<label>$VAR[ListItem.Season]$VAR[ListItem.Episode]</label>
 							<font>Font-Condensed-S36</font>
 							<selectedcolor>SelectedGreen</selectedcolor>
-							<textcolor>77white</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
 							<visible>!IsEmpty(ListItem.Season) + !IsEmpty(ListItem.Episode)</visible>
@@ -5063,7 +5239,7 @@
 							<height>64</height>
 							<label>$VAR[ListItem.Title]</label>
 							<font>Font-Condensed-S34-B</font>
-							<textcolor>C0FFFFFF</textcolor>
+							<textcolor>PrimaryT</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
 						</control>
@@ -5710,14 +5886,14 @@
 				<posy>0</posy>
 				<width>1810</width>
 				<height>734</height>
-				<texture border="50">views/list/panel/panel.png</texture>
+				<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 			</control>
 			<control type="image">
 				<posx>75</posx>
 				<posy>25</posy>
 				<width>1760</width>
 				<height>684</height>
-				<texture border="24">views/list/panel/panel.png</texture>
+				<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 			</control>
 			<control type="image">
 				<description>Landscape</description>
@@ -5741,27 +5917,13 @@
 				<fadetime>200</fadetime>
 				<visible>Container.Content(albums)</visible>
 			</control>
-			<control type="group">
-				<posx>1755</posx>
-				<posy>639</posy>
-				<control type="image">
-					<description>Panel</description>
-					<posx>0</posx>
-					<posy>-10</posy>
-					<width>80</width>
-					<height>80</height>
-					<texture>$VAR[arctic.watched.bottom]</texture>
-					<aspectratio aligny="bottom" align="right">keep</aspectratio>
-					<visible>!Container.Content(artists) + !Container.Content(albums)</visible>
-				</control>
-			</control>
 			<control type="textbox">
 				<posx>100</posx>
 				<posy>46</posy>
 				<width>509</width>
 				<height>100</height>
 				<label>$INFO[ListItem.Label]</label>
-				<textcolor>mod-infotags-alt</textcolor>
+				<textcolor>PrimaryT</textcolor>
 				<font>Font-Condensed-S40</font>
 				<align>left</align>
 				<aligny>top</aligny>
@@ -5773,7 +5935,7 @@
 				<width>495</width>
 				<height>470</height>
 				<label>$INFO[ListItem.Plot]</label>
-				<textcolor>mod-infotags-alt</textcolor>
+				<textcolor>SecondaryT</textcolor>
 				<font>Font-Condensed-S28</font>
 				<align>justify</align>
 				<scroll>false</scroll>
@@ -5785,7 +5947,7 @@
 				<width>495</width>
 				<height>470</height>
 				<label>$VAR[MusicPlotBox]</label>
-				<textcolor>mod-infotags-alt</textcolor>
+				<textcolor>SecondaryT</textcolor>
 				<font>Font-Condensed-S28</font>
 				<align>justify</align>
 				<scroll>false</scroll>
@@ -5797,7 +5959,7 @@
 				<width>1022</width>
 				<height>470</height>
 				<label>$VAR[MusicPlotBox]</label>
-				<textcolor>mod-infotags-alt</textcolor>
+				<textcolor>SecondaryT</textcolor>
 				<font>Font-Condensed-S28</font>
 				<align>justify</align>
 				<scroll>false</scroll>
@@ -5816,21 +5978,21 @@
 				<visible>Control.IsVisible(566)</visible>
 				<control type="image">
 					<description>Left</description>
-					<posx>-8</posx>
+					<posx>-26</posx>
 					<width>100</width>
 					<height>100</height>
-					<texture>buttons/options-left.png</texture>
+					<texture>special://skin/extras/buttons/options-left.png</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>Mod_Tags_Dark</colordiffuse>
+					<colordiffuse>PrimaryT</colordiffuse>
 				</control>
 				<control type="image">
 					<description>Left</description>
-					<posx>1828</posx>
+					<posx>1834</posx>
 					<width>100</width>
 					<height>100</height>
-					<texture>buttons/options-right.png</texture>
+					<texture>special://skin/extras/buttons/options-right.png</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>Mod_Tags_Dark</colordiffuse>
+					<colordiffuse>PrimaryT</colordiffuse>
 				</control>
 			</control>
 			<control type="wraplist" id="566">
@@ -5864,8 +6026,8 @@
 			<height>26</height>
 			<posy>26r</posy>
 			<orientation>horizontal</orientation>
-			<textureslidernib>views/other/scrollbar-sq.png</textureslidernib>
-			<textureslidernibfocus>views/other/scrollbar-sq.png</textureslidernibfocus>
+			<textureslidernib colordiffuse="PrimaryT">views/other/scrollbar-sq.png</textureslidernib>
+			<textureslidernibfocus colordiffuse="PrimaryT">views/other/scrollbar-sq.png</textureslidernibfocus>
 			<showonepage>true</showonepage>
 			<onup>566</onup>
 			<ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
@@ -5886,9 +6048,7 @@
 				<include>CommonViewAnimations</include>
 				<control type="image">
 					<include>FullscreenDimensions</include>
-					<texture>windows/common/black.png</texture>
-					<animation effect="fade" time="300" start="0" end="100" tween="sine" easing="out">WindowOpen</animation>
-					<animation effect="fade" time="300" start="100" end="0" tween="sine" easing="in">WindowClose</animation>
+					<texture colordiffuse="QuaternaryBG">windows/common/white.png</texture>
 				</control>
 				<control type="panel" id="582">
 					<include>OptionsShutdownAnimation</include>
@@ -5912,7 +6072,7 @@
 							<width>226</width>
 							<height>340</height>
 							<texture background="true">$VAR[WallPoster]</texture>
-							<colordiffuse>ee555555</colordiffuse>
+							<colordiffuse>FF444444</colordiffuse>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="image">
@@ -5922,7 +6082,7 @@
 							<height>75</height>
 							<aspect>keepaspect</aspect>
 							<texture>$VAR[WallOverlay]</texture>
-							<colordiffuse>ee555555</colordiffuse>
+							<colordiffuse>FF444444</colordiffuse>
 							<visible>!IsEmpty(ListItem.Overlay)</visible>
 						</control>
 					</itemlayout>
@@ -5988,7 +6148,7 @@
 								<width>1730</width>
 								<label>$INFO[Container(582).ListItem.Label]</label>
 								<font>Font-Condensed-S45-B</font>
-								<textcolor>eewhite</textcolor>
+								<textcolor>FFFFFFFF</textcolor>
 								<scroll>false</scroll>
 								<align>left</align>
 								<animation effect="slide" end="-73" time="0" condition="IsEmpty(Container(582).ListItem.VideoResolution)">Conditional</animation>
@@ -5999,7 +6159,7 @@
 								<posy>-20</posy>
 								<width>140</width>
 								<height>100</height>
-								<texture>$VAR[ListHDSDFlag]</texture>
+								<texture colordiffuse="FFFFFFFF">$VAR[ListHDSDFlag]</texture>
 								<visible>!IsEmpty(Container(582).ListItem.VideoResolution)</visible>
 							</control>
 							<control type="group">
@@ -6014,7 +6174,7 @@
 								<width>1730</width>
 								<label>$INFO[Container(582).ListItem.Year,,]$INFO[Container(582).ListItem.Studio, • ,]$INFO[Container(582).ListItem.Duration, • , $LOCALIZE[12391]]$INFO[Container(582).ListItem.Rating, • ,]</label>
 								<font>Font-Condensed-S36</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>FFFFFFFF</textcolor>
 								<scroll>false</scroll>
 								<align>left</align>
 							</control>
@@ -6027,7 +6187,7 @@
 								<width>1685</width>
 								<label>$INFO[Container(582).ListItem.Label]</label>
 								<font>Font-Condensed-S45-B</font>
-								<textcolor>eewhite</textcolor>
+								<textcolor>FFFFFFFF</textcolor>
 								<scroll>false</scroll>
 								<align>left</align>
 								<animation effect="slide" end="-116" time="0" condition="IsEmpty(ListItem.MPAA)">Conditional</animation>
@@ -6043,7 +6203,7 @@
 								<width>1730</width>
 								<label>$INFO[Container(582).ListItem.Year,,]$INFO[Container(582).ListItem.Studio, • ,]$INFO[Container(582).ListItem.Rating, • ,]$INFO[ListItem.Property(TotalEpisodes), (, $LOCALIZE[20360]]$INFO[ListItem.Property(UnWatchedEpisodes), • , Unwatched)]</label>
 								<font>Font-Condensed-S36</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>FFAAAAAA</textcolor>
 								<scroll>false</scroll>
 								<align>left</align>
 								<visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + !StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
@@ -6054,7 +6214,7 @@
 								<width>1730</width>
 								<label>$INFO[Container(582).ListItem.Year,,]$INFO[Container(582).ListItem.Studio, • ,]$INFO[Container(582).ListItem.Rating, • ,]$INFO[ListItem.Property(TotalEpisodes), (, $LOCALIZE[20360])]</label>
 								<font>Font-Condensed-S36</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>FFAAAAAA</textcolor>
 								<scroll>false</scroll>
 								<align>left</align>
 								<visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
@@ -6068,7 +6228,7 @@
 								<width>1800</width>
 								<label>$INFO[Container(582).ListItem.Label]</label>
 								<font>Font-Condensed-S45-B</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>FFAAAAAA</textcolor>
 								<scroll>false</scroll>
 								<align>left</align>
 							</control>
@@ -6082,7 +6242,7 @@
 						<posy>0</posy>
 						<width>6</width>
 						<height>1080</height>
-						<texture border="1">views/other/scrollbar-sq.png</texture>
+						<texture colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texture>
 						<visible>Control.IsVisible(582) + Control.HasFocus(70)</visible>
 						<animation effect="fade" start="0" end="50" time="300" tween="sine" easing="inout">Visible</animation>
 						<animation effect="fade" start="50" end="0" time="300" tween="sine" easing="inout">Hidden</animation>
@@ -6096,8 +6256,8 @@
 						<onright>582</onright>
 						<onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
 						<onleft condition="Skin.HasSetting(KioskMode)">582</onleft>
-						<texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
-						<texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+						<texturesliderbar colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texturesliderbar>
+						<texturesliderbarfocus colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
 						<orientation>vertical</orientation>
 						<showonepage>false</showonepage>
 						<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772) + !Control.HasFocus(70)">Conditional</animation>
@@ -6112,7 +6272,7 @@
 	<!-- ========== -->
 	<include name="Viewtype-Reel">
 		<control type="group">
-			<visible>Control.IsVisible(577) + !Window.IsActive(movieinformation)</visible>
+			<visible>Control.IsVisible(577) + !Window.IsActive(movieinformation) + !Window.IsActive(musicinformation) </visible>
 			<include>CommonViewAnimations</include>
 			<include>OptionsShutdownAnimation</include>
 			<posy>230</posy>
@@ -6132,7 +6292,7 @@
 				<onup condition="Skin.HasSetting(KioskMode)">577</onup>
 				<onleft>577</onleft>
 				<onright>577</onright>
-				<focusposition>1</focusposition>
+				<focusposition>2</focusposition>
 				<itemlayout width="434" height="714">
 					<control type="group">
 						<posy>180</posy>
@@ -6230,7 +6390,7 @@
 								<width>790</width>
 								<label>$INFO[ListItem.Label]</label>
 								<font>Font-Condensed-S32</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<scroll>false</scroll>
 								<align>left</align>
 							</control>
@@ -6241,7 +6401,7 @@
 								<height>175</height>
 								<label>$INFO[ListItem.Plot]</label>
 								<font>Font-Condensed-S26</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>SecondaryT</textcolor>
 								<align>justify</align>
 								<autoscroll delay="13000" time="3000" repeat="13000" />
 								<visible>!Container.Content(artists)</visible>
@@ -6253,7 +6413,7 @@
 								<height>175</height>
 								<label>$VAR[MusicPlotBox]</label>
 								<font>Font-Condensed-S26</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>SecondaryT</textcolor>
 								<align>justify</align>
 								<autoscroll delay="13000" time="3000" repeat="13000" />
 								<visible>Container.Content(artists)</visible>
@@ -6270,8 +6430,8 @@
 			<height>26</height>
 			<posy>26r</posy>
 			<orientation>horizontal</orientation>
-			<textureslidernib>views/other/scrollbar-sq.png</textureslidernib>
-			<textureslidernibfocus>views/other/scrollbar-sq.png</textureslidernibfocus>
+			<textureslidernib colordiffuse="PrimaryT">views/other/scrollbar-sq.png</textureslidernib>
+			<textureslidernibfocus colordiffuse="PrimaryT">views/other/scrollbar-sq.png</textureslidernibfocus>
 			<showonepage>true</showonepage>
 			<onup>577</onup>
 			<ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>

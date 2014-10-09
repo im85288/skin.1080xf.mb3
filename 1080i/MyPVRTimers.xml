@@ -58,7 +58,7 @@
                         <posy>215</posy>
                         <width>1324</width>
                         <height>676</height>
-                        <texture border="4">views/list/panel/panel.png</texture>
+                        <texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
                     </control>
                     <control type="list" id="50">
                         <posx>300</posx>
@@ -91,7 +91,7 @@
                                 <font>Font-Condensed-S34-B</font>
                                 <align>left</align>
                                 <label>$INFO[ListItem.StartDate]</label>
-                                <textcolor>99FFFFFF</textcolor>
+                                <textcolor>SecondaryT</textcolor>
                                 <selectedcolor>SelectedGreen</selectedcolor>
                                 <scroll>false</scroll>
                             </control>
@@ -104,7 +104,7 @@
                                 <font>Font-Condensed-S34-B</font>
                                 <align>left</align>
                                 <label>$INFO[ListItem.Label]</label>
-                                <textcolor>99FFFFFF</textcolor>
+                                <textcolor>SecondaryT</textcolor>
                                 <selectedcolor>SelectedGreen</selectedcolor>
                                 <scroll>false</scroll>
                                 <animation effect="slide" end="0,19" time="0" condition="IsEmpty(ListItem.ChannelName)">Conditional</animation>
@@ -118,8 +118,8 @@
                                 <font>Font-Condensed-S28</font>
                                 <align>left</align>
                                 <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, → ,]</label>
-                                <textcolor>77white</textcolor>
-                                <selectedcolor>D4FFFFFF</selectedcolor>
+                                <textcolor>SecondaryT</textcolor>
+                                <selectedcolor>SecondaryT</selectedcolor>
                                 <scroll>false</scroll>
                             </control>
                             <control type="label">
@@ -131,8 +131,8 @@
                                 <font>Font-Condensed-S28</font>
                                 <align>left</align>
                                 <label>$INFO[ListItem.ChannelName]</label>
-                                <textcolor>77white</textcolor>
-                                <selectedcolor>D4FFFFFF</selectedcolor>
+                                <textcolor>SecondaryT</textcolor>
+                                <selectedcolor>SecondaryT</selectedcolor>
                                 <scroll>false</scroll>
                             </control>
                             <control type="image">
@@ -156,12 +156,20 @@
                                 <posy>0</posy>
                                 <width>1320</width>
                                 <height>95</height>
-                                <texture border="150,1,150,1">views/other/focus.png</texture>
+                                <texture colordiffuse="TertiaryM">windows/common/white.png</texture>
                                 <animation effect="slide" start="0,96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(50).OnPrevious">focus</animation>
                                 <animation effect="slide" start="0,-96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(50).OnNext">focus</animation>
                                 <include>visiblehidefadeinfo</include>
                                 <visible>Control.HasFocus(50)</visible>
                             </control>
+                            <control type="image"> <!--focused background left edge -->
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>5</width>
+								<height>95</height>
+								<visible>Control.HasFocus(50)</visible>
+								<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+							</control>
                             <control type="group">
                                 <animation type="Focus" condition="Container(50).OnNext | Container(50).OnPrevious" reversible="false">
                                     <effect type="fade" start="64" end="100" time="500" tween="sine" easing="inout" />
@@ -176,7 +184,7 @@
                                     <font>Font-Condensed-S34-B</font>
                                     <align>left</align>
                                     <label>$INFO[ListItem.StartDate]</label>
-                                    <textcolor>eewhite</textcolor>
+                                    <textcolor>PrimaryT</textcolor>
                                     <selectedcolor>SelectedGreen</selectedcolor>
                                     <scroll>false</scroll>
                                 </control>
@@ -189,7 +197,7 @@
                                     <font>Font-Condensed-S34-B</font>
                                     <align>left</align>
                                     <label>$INFO[ListItem.Label]</label>
-                                    <textcolor>eewhite</textcolor>
+                                    <textcolor>PrimaryT</textcolor>
                                     <selectedcolor>SelectedGreen</selectedcolor>
                                     <scroll>false</scroll>
                                     <animation effect="slide" end="0,19" time="0" condition="IsEmpty(ListItem.ChannelName)">Conditional</animation>
@@ -203,8 +211,8 @@
                                     <font>Font-Condensed-S28</font>
                                     <align>left</align>
                                     <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, → ,]</label>
-                                    <textcolor>D4FFFFFF</textcolor>
-                                    <selectedcolor>D4FFFFFF</selectedcolor>
+                                    <textcolor>SecondaryT</textcolor>
+                                    <selectedcolor>SecondaryT</selectedcolor>
                                     <scroll>false</scroll>
                                 </control>
                                 <control type="label">
@@ -216,8 +224,8 @@
                                     <font>Font-Condensed-S28</font>
                                     <align>left</align>
                                     <label>$INFO[ListItem.ChannelName]</label>
-                                    <textcolor>D4FFFFFF</textcolor>
-                                    <selectedcolor>D4FFFFFF</selectedcolor>
+                                    <textcolor>SecondaryT</textcolor>
+                                    <selectedcolor>SecondaryT</selectedcolor>
                                     <scroll>false</scroll>
                                 </control>
                             </control>
@@ -238,8 +246,8 @@
                         <height>675</height>
                         <onleft>50</onleft>
                         <onright>50</onright>
-                        <texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
-                        <texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+                        <texturesliderbar colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texturesliderbar>
+                        <texturesliderbarfocus colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
                         <orientation>vertical</orientation>
                         <showonepage>false</showonepage>
                         <animation effect="fade" start="35" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772) + !Control.HasFocus(70)">Conditional</animation>

@@ -1,0 +1,54 @@
+<colors>	
+	<!-- Default Tile Colours -->
+	<color name="tilesearch">FFAAAAAA</color>
+	<color name="tilehome">FFAAAAAA</color>
+	<color name="tilelivetv">FFAAAAAA</color>
+	<color name="tiletv">FFAAAAAA</color>
+	<color name="tilemovies">FFAAAAAA</color>
+	<color name="tilemusic">FFAAAAAA</color>
+	<color name="tilechannels">FFAAAAAA</color>
+	<color name="tileapplications">FFAAAAAA</color>
+	<color name="tileweather">FFAAAAAA</color>
+	<color name="tilesettings">FFAAAAAA</color>
+	
+	<!--background colours-->
+	<color name="PrimaryBG">CCCCCCCC</color>
+	<color name="SecondaryBG">FFFFFFFF</color>
+	<color name="TertiaryBG">FFFFFFFF</color>
+	<color name="QuaternaryBG">01000000</color>
+	<color name="HomeBG">BBFFFFFF</color>
+	<color name="HomeTileOverlay">99FFFFFF</color>
+	<color name="HomeMenuOverlay">BB999999</color>
+	
+	
+	<!--main colours-->
+	<color name="PrimaryM">FF999999</color>
+	<color name="PriSecondaryM">FFcccccc</color>
+	<color name="SecondaryM">FFebebeb</color>
+	<color name="SecondaryMT">70FFFFFF</color>
+	<color name="TertiaryM">FFDDDDDD</color>
+	<color name="TertiaryMT">CCf3f3f3</color>
+	<color name="QuaternaryM">FFeeeeee</color>
+	
+	<!--text colours-->
+	<color name="PrimaryT">FF000000</color>
+	<color name="SecondaryT">FF111111</color>
+	<color name="TertiaryT">FF666666</color>
+	<color name="QuaternaryT">35555555</color>
+	
+	<!--osd colours-->
+	<color name="PrimaryOSD">FF000000</color>
+	<color name="SecondaryOSD">90FFFFFF</color>
+	<color name="TertiaryOSD">30FFFFFF</color>
+	
+	<!--others-->
+	<color name="Black">FF000000</color>
+	<color name="Black95">95000000</color>
+	<color name="Blue">FFff0000</color>
+	<color name="Red">FF006cff</color>
+	<color name="White">FFFFFFFF</color>
+	
+	<color name="SelectedRed">FFE10101</color>
+	<color name="SelectedGreen">FF057300</color>
+	<color name="SelectedBlue">FF31D0FF</color>
+</colors>

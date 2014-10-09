@@ -1,7 +1,35 @@
 <colors>	
-	<!-- Tile Colours -->
-	<color name="tilegreen">FFFF00FF</color>
-	<color name="tileblue">FF00FFFF</color>
-	<color name="tileyellow">FFFFFF00</color>
-	<color name="tilepinkyred">FF000000</color>
+	<!-- Default Tile Colours -->
+	<color name="tilesearch">FF383B38</color>
+	<color name="tilehome">FF383B38</color>
+	<color name="tilelivetv">FF383B38</color>
+	<color name="tiletv">FFFF00FF</color>
+	<color name="tilemovies">FF00FFFF</color>
+	<color name="tilemusic">FF000000</color>
+	<color name="tilechannels">FFFFFF00</color>
+	<color name="tileapplications">FF383B38</color>
+	<color name="tileweather">FF383B38</color>
+	<color name="tilesettings">FF383B38</color>
+	
+	<color name="PrimaryT">FFFF00FF</color>
+	<color name="SecondaryT">FF00FFFF</color>
+	<color name="TertiaryT">FFFFFF00</color>
+	
+	<!--background colours-->
+	<color name="PrimaryBG">FF000000</color>
+	<color name="SecondaryBG">FF333333</color>
+	<color name="TertiaryBG">FF444444</color>
+	<color name="QuaternaryBG">01000000</color>
+	<color name="HomeBG">DD000000</color>
+	<color name="HomeTileOverlay">FF000000</color>
+	
+	
+	<!--main colours-->
+	<color name="PrimaryM">FFFFFFFF</color>
+	<color name="PriSecondaryM">FF999999</color>
+	<color name="SecondaryM">FF666666</color>
+	<color name="SecondaryMT">CC5d5d5d</color>
+	<color name="TertiaryM">FFffff00</color>
+	<color name="TertiaryMT">CC333333</color>
+	<color name="QuaternaryM">FF494949</color>
 </colors>

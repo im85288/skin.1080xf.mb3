@@ -40,7 +40,7 @@
                     <align>right</align>
                     <font>Font-Condensed-S25-B</font>
                     <label>$LOCALIZE[42130]</label>
-                    <textcolor>aawhite</textcolor>
+                    <textcolor>SecondaryT</textcolor>
                 </control>
 
                 <!-- Panel -->
@@ -49,7 +49,7 @@
                     <posy>278</posy>
                     <height>613</height>
                     <width>342</width>
-                    <texture border="4">views/list/panel/panel.png</texture>
+                    <texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
                 </control>
 
                 <!-- Side Buttons -->
@@ -81,7 +81,7 @@
                     <posy>251</posy>
                     <height>18</height>
                     <width>16</width>
-                    <colordiffuse>aawhite</colordiffuse>
+                    <colordiffuse>SecondaryT</colordiffuse>
                     <texture>windows/settings/images/level-icon.png</texture>
                 </control>
 
@@ -94,7 +94,7 @@
                     <align>left</align>
                     <font>Font-Condensed-S25-B</font>
                     <label>$INFO[Control.GetLabel(20)]</label>
-                    <textcolor>aawhite</textcolor>
+                    <textcolor>SecondaryT</textcolor>
                 </control>
 
                 <!-- Panel -->
@@ -103,7 +103,7 @@
                     <posy>278</posy>
                     <height>613</height>
                     <width>1214</width>
-                    <texture border="4">views/list/panel/panel.png</texture>
+                    <texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
                 </control>
                 <control type="image">
                     <description>Shadow</description>
@@ -137,7 +137,7 @@
                         <width>10</width>
                         <height>18</height>
                         <texture>windows/settings/images/arrow.png</texture>
-                        <colordiffuse>aawhite</colordiffuse>
+                        <colordiffuse>SecondaryT</colordiffuse>
                         <include>visiblehidefadeinfo</include>
                         <visible>!Control.HasFocus(71)</visible>
                     </control>
@@ -150,7 +150,7 @@
                         <align>right</align>
                         <font>Font-Condensed-S25-B</font>
                         <label>$LOCALIZE[21821]</label>
-                        <textcolor>aawhite</textcolor>
+                        <textcolor>SecondaryT</textcolor>
                     </control>
                 </control>
             </control>
@@ -170,7 +170,7 @@
                     <posy>278</posy>
                     <height>613</height>
                     <width>498</width>
-                    <texture border="4">views/list/panel/panel.png</texture>
+                    <texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
                 </control>
                 <control type="textbox" id="6">
                     <description>Plot</description>
@@ -179,7 +179,7 @@
                     <width>428</width>
                     <height>573</height>
                     <align>left</align>
-                    <textcolor>aawhite</textcolor>
+                    <textcolor>SecondaryT</textcolor>
                     <shadowcolor>33000000</shadowcolor>
                     <pagecontrol>71</pagecontrol>
                     <autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71) + !Skin.HasSetting(AutoScroll.Disable)</autoscroll>
@@ -191,8 +191,8 @@
                     <width>6</width>
                     <height>608</height>
                     <texturesliderbackground>-</texturesliderbackground>
-                    <texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
-                    <texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+                    <texturesliderbar colordiffuse="TertiaryM" border="1">views/other/scrollbar-sq.png</texturesliderbar>
+                    <texturesliderbarfocus colordiffuse="TertiaryM"border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
                     <textureslidernib>-</textureslidernib>
                     <textureslidernibfocus>-</textureslidernibfocus>
                     <onleft>5</onleft>
@@ -219,11 +219,11 @@
             <height>77</height>
             <align>left</align>
             <aligny>center</aligny>
-            <texturefocus border="150,3,150,3">windows/settings/images/right-focus.png</texturefocus>
-            <texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
-            <textcolor>96FFFFFF</textcolor>
+            <texturefocus colordiffuse="TertiaryM" border="150,3,150,3">windows/common/white.png</texturefocus>
+            <texturenofocus colordiffuse="TertiaryM" border="90,3,90,3">views/list/other/separator.png</texturenofocus>
+            <textcolor>SecondaryT</textcolor>
             <focusedcolor>$VAR[FocusModColourVar]</focusedcolor>
-            <disabledcolor>40FFFFFF</disabledcolor>
+            <disabledcolor>SecondaryT</disabledcolor>
             <font>Font-Condensed-S30-B</font>
             <textoffsetx>35</textoffsetx>
         </control>
@@ -233,11 +233,11 @@
             <radioposx>1087</radioposx>
             <align>left</align>
             <aligny>center</aligny>
-            <texturefocus border="150,3,150,3">windows/settings/images/right-focus.png</texturefocus>
-            <texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
-            <textcolor>96FFFFFF</textcolor>
+            <texturefocus colordiffuse="TertiaryM" border="150,3,150,3">windows/common/white.png</texturefocus>
+            <texturenofocus colordiffuse="TertiaryM" border="90,3,90,3">views/list/other/separator.png</texturenofocus>
+            <textcolor>SecondaryT</textcolor>
             <focusedcolor>$VAR[FocusModColourVar]</focusedcolor>
-            <disabledcolor>40FFFFFF</disabledcolor>
+            <disabledcolor>SecondaryT</disabledcolor>
             <font>Font-Condensed-S30-B</font>
             <textoffsetx>35</textoffsetx>
         </control>
@@ -247,11 +247,11 @@
             <spinposx>33</spinposx>
             <align>left</align>
             <aligny>center</aligny>
-            <texturefocus border="150,3,150,3">windows/settings/images/right-focus.png</texturefocus>
-            <texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
-            <textcolor>96FFFFFF</textcolor>
+            <texturefocus colordiffuse="TertiaryM" border="150,3,150,3">windows/common/white.png</texturefocus>
+            <texturenofocus colordiffuse="TertiaryM" border="90,3,90,3">views/list/other/separator.png</texturenofocus>
+            <textcolor>SecondaryT</textcolor>
             <focusedcolor>$VAR[FocusModColourVar]</focusedcolor>
-            <disabledcolor>40FFFFFF</disabledcolor>
+            <disabledcolor>SecondaryT</disabledcolor>
             <font>Font-Condensed-S30-B</font>
             <textoffsetx>35</textoffsetx>
         </control>
@@ -260,13 +260,13 @@
             <posx>0</posx>
             <posy>0</posy>
             <height>60</height>
-            <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
-            <texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
+            <texturefocus colordiffuse="TertiaryM" border="2">dialogs/default/highlight.png</texturefocus>
+            <texturenofocus colordiffuse="TertiaryM" >dialogs/default/separator-btn.png</texturenofocus>
             <sliderwidth>150</sliderwidth>
             <sliderheight>28</sliderheight>
-            <texturesliderbar>dialogs/mediasource/slider-back.png</texturesliderbar>
-            <textureslidernib>dialogs/mediasource/slider-nib-nf.png</textureslidernib>
-            <textureslidernibfocus>dialogs/mediasource/slider-nib-fo.png</textureslidernibfocus>
+            <texturesliderbar colordiffuse="TertiaryM">dialogs/mediasource/slider-back.png</texturesliderbar>
+            <textureslidernib colordiffuse="TertiaryM">dialogs/mediasource/slider-nib-nf.png</textureslidernib>
+            <textureslidernibfocus colordiffuse="TertiaryM">dialogs/mediasource/slider-nib-fo.png</textureslidernibfocus>
             <textcolor>FF585858</textcolor>
             <focusedcolor>$VAR[FocusModColourVar]</focusedcolor>
             <disabledcolor>77585858</disabledcolor>
@@ -325,16 +325,16 @@
                     <include>optionsbuttonsdimensions</include>
                     <label>$LOCALIZE[10037]</label>
                     <onclick>SettingsLevelChange</onclick>
-                    <texturefocus border="70,2,2,2">dialogs/options/buttons/level-fo.png</texturefocus>
-                    <texturenofocus border="70,2,2,2">dialogs/options/buttons/level-nf.png</texturenofocus>
+                    <texturefocus colordiffuse="TertiaryM" border="70,2,2,2">dialogs/options/buttons/level-fo.png</texturefocus>
+                    <texturenofocus colordiffuse="TertiaryM" border="70,2,2,2">dialogs/options/buttons/level-nf.png</texturenofocus>
                 </control>
                 <control type="button" id="21">
                     <description>Reset button</description>
                     <include>optionsbuttonsdimensions</include>
                     <label>$LOCALIZE[10035]</label>
                     <onclick>SettingsReset</onclick>
-                    <texturefocus border="70,2,2,2">dialogs/options/buttons/reset-fo.png</texturefocus>
-                    <texturenofocus border="70,2,2,2">dialogs/options/buttons/reset-nf.png</texturenofocus>
+                    <texturefocus colordiffuse="TertiaryM"  border="70,2,2,2">dialogs/options/buttons/reset-fo.png</texturefocus>
+                    <texturenofocus  colordiffuse="TertiaryM" border="70,2,2,2">dialogs/options/buttons/reset-nf.png</texturenofocus>
                 </control>
             </control>
 
@@ -345,7 +345,7 @@
                     <posy>433</posy>
                     <width>100</width>
                     <height>100</height>
-                    <texture>buttons/options_nofo.png</texture>
+                    <texture colordiffuse="TertiaryM">buttons/options_nofo.png</texture>
                 </control>
                 <control type="label">
                     <posx>94</posx>
@@ -354,7 +354,7 @@
                     <height>100</height>
                     <label>$LOCALIZE[41600]</label>
                     <font>Font-Condensed-S34-B</font>
-                    <textcolor>eewhite</textcolor>
+                    <textcolor>PrimaryT</textcolor>
                     <shadowcolor>22000000</shadowcolor>
                 </control>
             </control>

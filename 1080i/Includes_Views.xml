@@ -17,6 +17,7 @@
 		<include>Viewtype-LoveFilm</include>
 		<include>Viewtype-VideoWall</include>
 		<include>Viewtype-Reel</include>
+		<include>Viewtype-BannerFanart</include>
 		<include condition="Skin.HasSetting(NextAired.Enabled)">NextAiredInfo</include>
 	</include>
 	<include name="MusicViews">
@@ -83,6 +84,7 @@
 	<include name="CommonClearLogoDetails">
 		<control type="group">
 			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+			<visible>!Control.IsVisible(553) | [Control.IsVisible(553) + Window.IsActive(movieinformation)]</visible>
 			<animation type="Visible" reversible="false">
 				<effect type="fade" start="0" end="100" time="450" delay="0" tween="sine" easing="in" />
 			</animation>
@@ -118,7 +120,7 @@
 					<height>72</height>
 					<label>$VAR[BottomClearLogoText]</label>
 					<font>Font-Condensed-S38</font>
-					<textcolor>Mod_Tags</textcolor>
+					<textcolor>PrimaryT</textcolor>
 					<scroll>false</scroll>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -177,7 +179,7 @@
 						<height>52</height>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<texture>$VAR[AeonFlagVideoCodec]</texture>
-						<colordiffuse>Mod_Tags</colordiffuse>
+						<colordiffuse>PrimaryT</colordiffuse>
 						<visible>!substring(ListItem.Path,videodb://movies/sets,left)</visible>
 					</control>
 					<control type="image">
@@ -325,7 +327,7 @@
 					<height>72</height>
 					<label>$VAR[MusicBottomClearLogoText]</label>
 					<font>Font-Condensed-S38</font>
-					<textcolor>aawhite</textcolor>
+					<textcolor>PrimaryT</textcolor>
 					<scroll>false</scroll>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -483,6 +485,13 @@
 		<value condition="!IsEmpty(ListItem.Property(medium_landscape))">$INFO[ListItem.Property(medium_landscape)]</value>
 		<value>$INFO[ListItem.ActualIcon,views/fallbacks/,/banner.png]</value>
 	</variable>
+	<variable name="DefaultBannerFallbackPoster">
+		<value condition="!IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
+		<value condition="!IsEmpty(ListItem.Property(medium_landscape))">$INFO[ListItem.Property(medium_landscape)]</value>
+		<value condition="!IsEmpty(ListItem.Property(medium_poster))">$INFO[ListItem.Property(medium_poster)]</value>
+		<value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
+		<value>$INFO[ListItem.ActualIcon,views/fallbacks/,/banner.png]</value>
+	</variable>
 	<variable name="ListFanart">
 		<value condition="[Container.Content(Seasons) | Container.Content(Episodes)] + !IsEmpty(ListItem.Art(season.fanart))">$INFO[ListItem.Art(season.fanart)]</value>
 		<value condition="!IsEmpty(ListItem.Property(medium_fanartimage))">$INFO[ListItem.Property(medium_fanartimage)]</value>
@@ -602,6 +611,9 @@
 	<variable name="ExtendedViewLogo">
 		<value condition="[!IsEmpty(ListItem.Art(clearlogo)) + [[Container.Content(TVShows) + Skin.HasSetting(ExtendedUseClearLogo)] | [Container.Content(Movies) + Skin.HasSetting(ExtendedUseClearMovieLogo)]]] | [IsEmpty(ListItem.Art(clearart)) + [[Container.Content(TVShows) + Skin.HasSetting(ExtendedUseClearArt)] | [Container.Content(Movies) + Skin.HasSetting(ExtendedUseClearMovieArt)]]]">$INFO[ListItem.Art(clearlogo)]</value>
 		<value>$INFO[ListItem.Art(clearart)]</value>
+	</variable>
+	<variable name="ClearArt">
+	      <value>$INFO[ListItem.Art(clearart)]</value>
 	</variable>
 	<variable name="ExtendedViewLogo0">
 		<value condition="[!IsEmpty(Container(54).ListItem(0).Art(clearlogo)) + [[Container.Content(TVShows) + Skin.HasSetting(ExtendedUseClearLogo)] | [Container.Content(Movies) + Skin.HasSetting(ExtendedUseClearMovieLogo)]]] | [IsEmpty(Container(54).ListItem(0).Art(clearart)) + [[Container.Content(TVShows) + Skin.HasSetting(ExtendedUseClearArt)] | [Container.Content(Movies) + Skin.HasSetting(ExtendedUseClearMovieArt)]]]">$INFO[Container(54).ListItem(0).Art(clearlogo)]</value>
@@ -880,8 +892,8 @@
 		<value>$INFO[ListItem.Artist]</value>
 	</variable>
 	<variable name="VideoPanelThumbInfo">
-		<value condition="Container.Content(movies)">$INFO[ListItem.Rating,★ , [COLOR=44FFFFFF]/[/COLOR] ]$INFO[ListItem.Year]$INFO[ListItem.Duration, [COLOR=44FFFFFF]/[/COLOR] , $LOCALIZE[12391]]$VAR[LandscapeHDSD3DLabel]</value>
-		<value>$INFO[ListItem.Property(UnWatchedEpisodes),$LOCALIZE[41311],]</value>
+		<value>$INFO[ListItem.Rating,★ , [COLOR=44FFFFFF]/[/COLOR] ]$INFO[ListItem.Year]$INFO[ListItem.Duration, [COLOR=44FFFFFF]/[/COLOR] , $LOCALIZE[12391]]$VAR[LandscapeHDSD3DLabel]</value>
+		
 	</variable>
 	<variable name="ThumbnailViewDetailInfo">
 		<value condition="Container.Content(episodes) + !IsEmpty(ListItem.Overlay)">$INFO[ListItem.Premiered]$INFO[ListItem.Rating, ★ ,]</value>

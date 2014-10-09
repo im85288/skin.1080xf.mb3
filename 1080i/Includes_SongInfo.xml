@@ -31,6 +31,8 @@
                     <control type="button" id="10">
                         <description>Select</description>
                         <label>$LOCALIZE[42000]</label>
+                        <textcolor>PrimaryT</textcolor>
+                        <focusedcolor>PrimaryT</focusedcolor>
                         <include>DialogButtonDimensions</include>
                         <texturefocus>buttons/select-fo.png</texturefocus>
                         <texturenofocus>buttons/select-nf.png</texturenofocus>
@@ -44,6 +46,8 @@
                         <description>Cancel</description>
                         <posx>200</posx>
                         <label>$LOCALIZE[42001]</label>
+                         <textcolor>PrimaryT</textcolor>
+                       <focusedcolor>PrimaryT</focusedcolor>
                         <include>DialogButtonDimensions</include>
                         <texturefocus>buttons/cancel-fo.png</texturefocus>
                         <texturenofocus>buttons/cancel-nf.png</texturenofocus>
@@ -57,6 +61,9 @@
                         <description>Album Info button</description>
                         <posx>400</posx>
                         <label>$LOCALIZE[10523]</label>
+                         <textcolor>PrimaryT</textcolor>
+                       <focusedcolor>PrimaryT</focusedcolor>
+        
                         <include>DialogButtonDimensions</include>
                         <texturefocus>buttons/albuminfo-fo.png</texturefocus>
                         <texturenofocus>buttons/albuminfo-nf.png</texturenofocus>
@@ -70,6 +77,8 @@
                         <description>Get Thumb button</description>
                         <posx>600</posx>
                         <label>$LOCALIZE[13405]</label>
+                         <textcolor>PrimaryT</textcolor>
+                       <focusedcolor>PrimaryT</focusedcolor>
                         <include>DialogButtonDimensions</include>
                         <texturefocus>buttons/get-fo.png</texturefocus>
                         <texturenofocus>buttons/get-nf.png</texturenofocus>
@@ -83,6 +92,8 @@
                         <description>Decrease rating button</description>
                         <posx>820</posx>
                         <label>$LOCALIZE[563]</label>
+                         <textcolor>PrimaryT</textcolor>
+                       <focusedcolor>PrimaryT</focusedcolor>
                         <include>DialogButtonDimensionsRightAlign</include>
                         <texturefocus>buttons/down-fo.png</texturefocus>
                         <texturenofocus>buttons/down-nf.png</texturenofocus>
@@ -120,9 +131,10 @@
                         <height>100</height>
                         <font>Font-Condensed-S34-B</font>
                         <align>right</align>
-                        <label fallback="[COLOR=47FFFFFF]0.0[/COLOR]">$INFO[ListItem.Rating,,.0]</label>
-                        <textcolor>eewhite</textcolor>
-                        <selectedcolor>eewhite</selectedcolor>
+                        <label fallback="[COLOR=PrimaryT]0.0[/COLOR]">$INFO[ListItem.Rating,,.0]</label>
+                        <textcolor>PrimaryT</textcolor>
+                        <selectedcolor>PrimaryT</selectedcolor>
+                        <focusedcolor>PrimaryT</focusedcolor>
                         <scroll>false</scroll>
                     </control>
                 </control>
@@ -158,7 +170,7 @@
                     <font>Font-Condensed-S29-B</font>
                     <label>$LOCALIZE[556]</label>
                     <label2>$INFO[ListItem.Title]</label2>
-                    <textcolor>77white</textcolor>
+                    <textcolor>SecondaryT</textcolor>
                     <shadowcolor>22000000</shadowcolor>
                 </control>
                 <control type="button">
@@ -170,7 +182,7 @@
                     <font>Font-Condensed-S29-B</font>
                     <label>$LOCALIZE[180]</label>
                     <label2>$INFO[ListItem.Duration]</label2>
-                    <textcolor>77white</textcolor>
+                    <textcolor>SecondaryT</textcolor>
                     <shadowcolor>22000000</shadowcolor>
                 </control>
                 <control type="button">
@@ -182,7 +194,7 @@
                     <font>Font-Condensed-S29-B</font>
                     <label>$LOCALIZE[562]</label>
                     <label2>$INFO[ListItem.Year]</label2>
-                    <textcolor>77white</textcolor>
+                    <textcolor>SecondaryT</textcolor>
                     <shadowcolor>22000000</shadowcolor>
                 </control>
                 <control type="image">
@@ -190,7 +202,7 @@
                     <posy>180</posy>
                     <width>630</width>
                     <height>59</height>
-                    <texture border="150,1,150,1">views/other/focus.png</texture>
+                    <texture colordiffuse="TertiaryM">windows/common/white.png</texture>
                     <animation effect="slide" end="0,60" time="0" condition="Control.HasFocus(12)">Conditional</animation>
                     <animation effect="slide" end="0,120" time="0" condition="Control.HasFocus(13)">Conditional</animation>
                     <animation effect="slide" end="0,180" time="0" condition="Control.HasFocus(10)">Conditional</animation>
@@ -204,7 +216,7 @@
                     <width>250</width>
                     <font>Font-Condensed-S29-B</font>
                     <label>$LOCALIZE[563]</label>
-                    <textcolor>eewhite</textcolor>
+                    <textcolor>PrimaryT</textcolor>
                     <shadowcolor>22000000</shadowcolor>
                     <scroll>false</scroll>
                     <animation effect="fade" start="100" end="50" time="0" condition="!ControlGroup(8000).HasFocus">Conditional</animation>
@@ -214,7 +226,7 @@
                     <posy>198</posy>
                     <width>129</width>
                     <height>23</height>
-                    <texture>$INFO[ListItem.StarRating,dialogs/music-info/fo-,]</texture>
+                    <texture colordiffuse="PrimaryT">$INFO[ListItem.StarRating,dialogs/music-info/fo-,]</texture>
                     <animation effect="fade" start="100" end="50" time="0" condition="!ControlGroup(8000).HasFocus">Conditional</animation>
                 </control>
                 <control type="grouplist" id="8000">
@@ -232,15 +244,15 @@
                     <control type="button" id="15">
                         <width>43</width>
                         <height>60</height>
-                        <texturefocus>buttons/spinctrl/arrow-down-fo.png</texturefocus>
-                        <texturenofocus>buttons/spinctrl/arrow-down-nf.png</texturenofocus>
+                        <texturefocus colordiffuse="PrimaryT">buttons/spinctrl/arrow-down-fo.png</texturefocus>
+                        <texturenofocus colordiffuse="PrimaryT">buttons/spinctrl/arrow-down-nf.png</texturenofocus>
                         <onclick>DecreaseRating</onclick>
                     </control>
                     <control type="button" id="16">
                         <width>43</width>
                         <height>60</height>
-                        <texturefocus>buttons/spinctrl/arrow-up-fo.png</texturefocus>
-                        <texturenofocus>buttons/spinctrl/arrow-up-nf.png</texturenofocus>
+                        <texturefocus colordiffuse="PrimaryT">buttons/spinctrl/arrow-up-fo.png</texturefocus>
+                        <texturenofocus colordiffuse="PrimaryT">buttons/spinctrl/arrow-up-nf.png</texturenofocus>
                         <onclick>IncreaseRating</onclick>
                     </control>
                 </control>                
@@ -253,8 +265,8 @@
                         <height>60</height>
                         <align>left</align>
                         <font>Font-Condensed-S29-B</font>
-                        <textcolor>77white</textcolor>
-                        <focusedcolor>eewhite</focusedcolor>
+                        <textcolor>SecondaryT</textcolor>
+                        <focusedcolor>PrimaryT</focusedcolor>
                         <shadowcolor>22000000</shadowcolor>
                         <label>$LOCALIZE[10523]</label>
                         <onleft>DecreaseRating</onleft>
@@ -270,8 +282,8 @@
                         <height>60</height>
                         <align>left</align>
                         <font>Font-Condensed-S29-B</font>
-                        <textcolor>77white</textcolor>
-                        <focusedcolor>eewhite</focusedcolor>
+                        <textcolor>SecondaryT</textcolor>
+                        <focusedcolor>PrimaryT</focusedcolor>
                         <label>$LOCALIZE[13405]</label>
                         <onleft>DecreaseRating</onleft>
                         <onright>IncreaseRating</onright>
@@ -286,8 +298,8 @@
                         <height>60</height>
                         <align>left</align>
                         <font>Font-Condensed-S29-B</font>
-                        <textcolor>77white</textcolor>
-                        <focusedcolor>eewhite</focusedcolor>
+                        <textcolor>SecondaryT</textcolor>
+                        <focusedcolor>PrimaryT</focusedcolor>
                         <label>$LOCALIZE[42000]</label>
                         <onleft>DecreaseRating</onleft>
                         <onright>IncreaseRating</onright>
@@ -302,8 +314,8 @@
                         <height>60</height>
                         <align>left</align>
                         <font>Font-Condensed-S29-B</font>
-                        <textcolor>77white</textcolor>
-                        <focusedcolor>eewhite</focusedcolor>
+                        <textcolor>SecondaryT</textcolor>
+                        <focusedcolor>PrimaryT</focusedcolor>
                         <label>$LOCALIZE[42001]</label>
                         <onleft>DecreaseRating</onleft>
                         <onright>IncreaseRating</onright>
@@ -352,6 +364,8 @@
                     <control type="button" id="10">
                         <description>Select</description>
                         <label>$LOCALIZE[42000]</label>
+                          <textcolor>PrimaryT</textcolor>
+                       <focusedcolor>PrimaryT</focusedcolor>
                         <include>DialogButtonDimensions</include>
                         <texturefocus>buttons/select-fo.png</texturefocus>
                         <texturenofocus>buttons/select-nf.png</texturenofocus>
@@ -365,6 +379,8 @@
                         <description>Cancel</description>
                         <posx>225</posx>
                         <label>$LOCALIZE[42001]</label>
+                          <textcolor>PrimaryT</textcolor>
+                       <focusedcolor>PrimaryT</focusedcolor>
                         <include>DialogButtonDimensions</include>
                         <texturefocus>buttons/cancel-fo.png</texturefocus>
                         <texturenofocus>buttons/cancel-nf.png</texturenofocus>
@@ -378,6 +394,8 @@
                         <description>Album Info button</description>
                         <posx>450</posx>
                         <label>$LOCALIZE[10523]</label>
+                          <textcolor>PrimaryT</textcolor>
+                       <focusedcolor>PrimaryT</focusedcolor>
                         <include>DialogButtonDimensions</include>
                         <texturefocus>buttons/albuminfo-fo.png</texturefocus>
                         <texturenofocus>buttons/albuminfo-nf.png</texturenofocus>
@@ -391,6 +409,8 @@
                         <description>Get Thumb button</description>
                         <posx>675</posx>
                         <label>$LOCALIZE[13405]</label>
+                          <textcolor>PrimaryT</textcolor>
+                       <focusedcolor>PrimaryT</focusedcolor>
                         <include>DialogButtonDimensions</include>
                         <texturefocus>buttons/get-fo.png</texturefocus>
                         <texturenofocus>buttons/get-nf.png</texturenofocus>

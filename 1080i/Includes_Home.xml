@@ -32,7 +32,7 @@
 				<onleft>22</onleft>
 				<onright>22</onright>
 				<texturefocus>buttons/shutdown_fo.png</texturefocus>
-				<texturenofocus>buttons/shutdown_nofo.png</texturenofocus>
+				<texturenofocus colordiffuse="PrimaryT">buttons/shutdown_nofo.png</texturenofocus>
 				<onclick>ActivateWindow(ShutdownMenu)</onclick>
 				<include>Animation_ShutdownButton</include>
 				<include>homebuttonsanim</include>
@@ -44,9 +44,10 @@
 				<posy>950</posy>
 				<width>180</width>
 				<height>100</height>
+				<aligny>center</aligny>
 				<label>$LOCALIZE[41507]</label>
 				<font>Font-Condensed-S34-B</font>
-				<textcolor>eewhite</textcolor>
+				<textcolor>PrimaryT</textcolor>
 				<shadowcolor>22000000</shadowcolor>
 				<include>Animation_ShutdownButton</include>
 				<include>homebuttonsanim2</include>
@@ -80,7 +81,7 @@
 				<onleft>21</onleft>
 				<onright>21</onright>
 				<texturefocus>buttons/favourites_fo.png</texturefocus>
-				<texturenofocus>buttons/favourites_nofo.png</texturenofocus>
+				<texturenofocus colordiffuse="PrimaryT">buttons/favourites_nofo.png</texturenofocus>
 				<onclick>CancelAlarm(HomeTileMove,true)</onclick>
 				<onclick>CancelAlarm(HomeTileMoveTwo,true)</onclick>
 				<onclick>CancelAlarm(HomeTileMoveThree,true)</onclick>
@@ -95,9 +96,10 @@
 				<posy>950</posy>
 				<width>180</width>
 				<height>100</height>
+				<aligny>center</aligny>
 				<label>$LOCALIZE[1036]</label>
 				<font>Font-Condensed-S34-B</font>
-				<textcolor>eewhite</textcolor>
+				<textcolor>PrimaryT</textcolor>
 				<shadowcolor>22000000</shadowcolor>
 				<include>Animation_FavButton</include>
 				<include>homebuttonsanim4</include>
@@ -107,18 +109,58 @@
 	</include>
 	<variable name="FocusModHomeColourVar">
 		<value condition="Skin.HasSetting(ColourFocus)">$INFO[Skin.String(focuscolor.name)]</value>
-		<value condition="!Skin.HasSetting(ColourFocus)">bbwhite</value>
+		<value condition="!Skin.HasSetting(ColourFocus)">PrimaryOSD</value>
 	</variable>
 	<variable name="FocusModColourVar">
 		<value condition="Skin.HasSetting(ColourFocus)">$INFO[Skin.String(focuscolor.name)]</value>
-		<value condition="!Skin.HasSetting(ColourFocus)">white</value>
+		<value condition="!Skin.HasSetting(ColourFocus)">PrimaryT</value>
+	</variable>
+	<variable name="HomeTileSearchColourVar">
+		<value condition="Skin.HasSetting(ColourTiles)">$INFO[Skin.String(tilesearchcolor.name)]</value>
+		<value condition="!Skin.HasSetting(ColourTiles)">tilesearch</value>
+	</variable>
+	<variable name="HomeTileHomeColourVar">
+		<value condition="Skin.HasSetting(ColourTiles)">$INFO[Skin.String(tilehomecolor.name)]</value>
+		<value condition="!Skin.HasSetting(ColourTiles)">tilehome</value>
+	</variable>
+	<variable name="HomeTileLiveTVColourVar">
+		<value condition="Skin.HasSetting(ColourTiles)">$INFO[Skin.String(tilelivetvcolor.name)]</value>
+		<value condition="!Skin.HasSetting(ColourTiles)">tilelivetv</value>
+	</variable>
+	<variable name="HomeTileMoviesColourVar">
+		<value condition="Skin.HasSetting(ColourTiles)">$INFO[Skin.String(tilemoviescolor.name)]</value>
+		<value condition="!Skin.HasSetting(ColourTiles)">tilemovies</value>
+	</variable>
+	<variable name="HomeTileTVColourVar">
+		<value condition="Skin.HasSetting(ColourTiles)">$INFO[Skin.String(tiletvcolor.name)]</value>
+		<value condition="!Skin.HasSetting(ColourTiles)">tiletv</value>
+	</variable>
+	<variable name="HomeTileChannelsColourVar">
+		<value condition="Skin.HasSetting(ColourTiles)">$INFO[Skin.String(tilechannelscolor.name)]</value>
+		<value condition="!Skin.HasSetting(ColourTiles)">tilechannels</value>
+	</variable>
+	<variable name="HomeTileMusicColourVar">
+		<value condition="Skin.HasSetting(ColourTiles)">$INFO[Skin.String(tilemusiccolor.name)]</value>
+		<value condition="!Skin.HasSetting(ColourTiles)">tilemusic</value>
+	</variable>
+	<variable name="HomeTileApplicationsColourVar">
+		<value condition="Skin.HasSetting(ColourTiles)">$INFO[Skin.String(tileapplicationscolor.name)]</value>
+		<value condition="!Skin.HasSetting(ColourTiles)">tileapplications</value>
+	</variable>
+	<variable name="HomeTileWeatherColourVar">
+		<value condition="Skin.HasSetting(ColourTiles)">$INFO[Skin.String(tileweathercolor.name)]</value>
+		<value condition="!Skin.HasSetting(ColourTiles)">tileweather</value>
+	</variable>
+	<variable name="HomeTileSettingsColourVar">
+		<value condition="Skin.HasSetting(ColourTiles)">$INFO[Skin.String(tilesettingscolor.name)]</value>
+		<value condition="!Skin.HasSetting(ColourTiles)">tilesettings</value>
 	</variable>
 	<include name="HomeLabel">
 		<width min="0" max="500">auto</width>
 		<height>100</height>
 		<font>Font-Condensed-S49</font>
-		<textcolor>bbwhite</textcolor>
-		<focusedcolor>bbwhite</focusedcolor>
+		<textcolor>PrimaryT</textcolor>
+		<focusedcolor>PrimaryT</focusedcolor>
 		<shadowcolor>77000000</shadowcolor>
 		<align>left</align>
 		<aligny>top</aligny>
@@ -136,10 +178,10 @@
 	<include name="HomeProfileInfoLabel">
 		<posx>110</posx>
 		<posy>46</posy>
-		<width>600</width>
+		<width>800</width>
 		<height>60</height>
 		<font>Font-Condensed-S36</font>
-		<textcolor>C0FFFFFF</textcolor>
+		<textcolor>PrimaryOSD</textcolor>
 		<scroll>false</scroll>
 		<align>left</align>
 		<animation type="Visible">
@@ -152,8 +194,8 @@
 		</animation>
 	</include>
 	<variable name="NewEpisodesLabel">
-		<value condition="IntegerGreaterThan(Window(Home).Property(MB3NextAiredTotalToday),0)">$INFO[Window(Home).Property(MB3NextAiredTotalToday),, $LOCALIZE[49244]]</value>
-		<value>No $LOCALIZE[49244]</value>
+		<value condition="IntegerGreaterThan(Window(Home).Property(MB3NextAiredTotalToday),0)">[COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window(Home).Property(MB3NextAiredTotalToday)][/COLOR] $LOCALIZE[49244]</value>
+		<value>[COLOR=$VAR[FocusModHomeColourVar]]No[/COLOR] $LOCALIZE[49244]</value>
 	</variable>
 	<variable name="HomePictureImageSingle">
 		<value condition="IsEmpty(Skin.String(HomePicturesSingleImage))">$INFO[Skin.String(GlobalBackdropSingle)]</value>
@@ -231,6 +273,15 @@
 					<width>341</width>
 					<height>100</height>
 					<texture>special://skin/extras/icons/mblogotextwhite.png</texture>
+					<visible>!StringCompare(Skin.CurrentColourTheme,Snow)</visible>
+				</control>
+				<control type="image">
+					<posx>68</posx>
+					<posy>14</posy>
+					<width>341</width>
+					<height>100</height>
+					<texture>special://skin/extras/icons/mblogotextblack.png</texture>
+					<visible>StringCompare(Skin.CurrentColourTheme,Snow)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -243,30 +294,33 @@
 					<posx>0</posx>
 					<posy>80</posy>
 					<include>HomeProfileInfoLabel</include>
-					<label>[B]$INFO[Window(Home).Property(MB3UserName)][/B]</label>
-					<label>$INFO[Window(Home).Property(MB3TotalMovies),, $LOCALIZE[342]]</label>
-					<label>$INFO[Window(Home).Property(MB3TotalTvShows),, $LOCALIZE[20343]]</label>
+					<label>[COLOR=$VAR[FocusModHomeColourVar]][B]$INFO[Window(Home).Property(MB3UserName)][/B][/COLOR]</label>
+					<label>[COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window(Home).Property(MB3TotalMovies)][/COLOR] $LOCALIZE[342]</label>
+					<label>[COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window(Home).Property(MB3TotalTvShows)][/COLOR] $LOCALIZE[20343]</label>
 					<label>$VAR[NewEpisodesLabel]</label>
-					<label>$INFO[Window.Property(Music.SongsCount),, $LOCALIZE[134]]</label>
-					<label>$INFO[Window.Property(MB3TotalChannels),, $LOCALIZE[19019]]</label>
+					<label>[COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window.Property(Music.SongsCount)][/COLOR] $LOCALIZE[134]</label>
+					<label>[COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window.Property(MB3TotalChannels)][/COLOR] $LOCALIZE[19019]</label>
+					<label>[COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window.Property(RandomAddon.Count)][/COLOR] $LOCALIZE[20161] $LOCALIZE[24001]</label>
+					<label>$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19157] [B][COLOR=$VAR[FocusModHomeColourVar]], [/COLOR][/B]$LOCALIZE[19126] - • ]$INFO[PVR.NextRecordingTitle, [B][COLOR=$VAR[FocusModHomeColourVar]],[/COLOR][/B]]$INFO[PVR.NextRecordingChannel, - [B][COLOR=$VAR[FocusModHomeColourVar]],[/COLOR][/B]]</label>
+					<label>$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19158] [B][COLOR=$VAR[FocusModHomeColourVar]], [/COLOR][/B]$LOCALIZE[19126] - ]$INFO[PVR.NowRecordingTitle, • [B][COLOR=FF48D1CC],[/COLOR][/B] ]$INFO[PVR.NowRecordingChannel,[B][COLOR=$VAR[FocusModHomeColourVar]]( ,)[/COLOR][/B]]</label>
 					<scroll>false</scroll>
 					<pauseatend>6000</pauseatend>
 					<scrollout>false</scrollout>
 					<scrollspeed>80</scrollspeed>
-					<visible>!Container(20).HasFocus(3) + !Container(20).HasFocus(4) + !Container(20).HasFocus(5) + !Container(20).HasFocus(11)</visible>
+					<visible>!Container(20).HasFocus(3) + !Container(20).HasFocus(4) + !Container(20).HasFocus(5) + !Container(20).HasFocus(11) + !Container(20).HasFocus(7) + !Container(20).HasFocus(8) + !Container(20).HasFocus(9)</visible>
 				</control>
 				<control type="label">
 					<posx>0</posx>
 					<posy>80</posy>
 					<include>HomeProfileInfoLabel</include>
-					<label>$INFO[Window(Home).Property(MB3TotalMovies),, $LOCALIZE[342]]</label>
+					<label>[COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window(Home).Property(MB3TotalMovies)][/COLOR] $LOCALIZE[342] • [COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window(Home).Property(MB3TotalWatchedMovies)][/COLOR] $LOCALIZE[16102] • [COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window(Home).Property(MB3TotalUnWatchedMovies)][/COLOR] $LOCALIZE[16101]</label>
 					<visible>Container(20).HasFocus(3)</visible>
 				</control>
 				<control type="fadelabel">
 					<posx>0</posx>
 					<posy>80</posy>
 					<include>HomeProfileInfoLabel</include>
-					<label>$INFO[Window(Home).Property(MB3TotalTvShows),, $LOCALIZE[20343]]</label>
+					<label>[COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window(Home).Property(MB3TotalTvShows)][/COLOR] $LOCALIZE[20343] • [COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window(Home).Property(MB3TotalRunningTvShows)][/COLOR] $LOCALIZE[49253]</label>
 					<label>$VAR[NewEpisodesLabel]</label>
 					<scroll>false</scroll>
 					<pauseatend>6000</pauseatend>
@@ -278,15 +332,56 @@
 					<posy>80</posy>
 					<posx>0</posx>
 					<include>HomeProfileInfoLabel</include>
-					<label>$INFO[Window.Property(Music.SongsCount),, $LOCALIZE[134]]</label>
+					<label>[COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window(Home).Property(Music.AlbumsCount)][/COLOR] $LOCALIZE[132] • [COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window.Property(Music.SongsCount)][/COLOR] $LOCALIZE[134] • [COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window.Property(Music.ArtistsCount)][/COLOR] $LOCALIZE[133]</label>
 					<visible>Container(20).HasFocus(5)</visible>
 				</control>
 				<control type="label">
 					<posy>80</posy>
 					<posx>0</posx>
 					<include>HomeProfileInfoLabel</include>
-					<label>$INFO[Window.Property(MB3TotalChannels),, $LOCALIZE[19019]]</label>
+					<label>[COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window.Property(MB3TotalChannels)][/COLOR] $LOCALIZE[19019]</label>
 					<visible>Container(20).HasFocus(11)</visible>
+				</control>
+				<control type="fadelabel">
+					<posx>0</posx>
+					<posy>80</posy>
+					<include>HomeProfileInfoLabel</include>
+					<label>$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19157] [B][COLOR=$VAR[FocusModHomeColourVar]], [/COLOR][/B]$LOCALIZE[19126] - • ]$INFO[PVR.NextRecordingTitle, [B][COLOR=$VAR[FocusModHomeColourVar]],[/COLOR][/B]]$INFO[PVR.NextRecordingChannel, - [B][COLOR=$VAR[FocusModHomeColourVar]],[/COLOR][/B]]</label>
+					<label>$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19158] [B][COLOR=$VAR[FocusModHomeColourVar]], [/COLOR][/B]$LOCALIZE[19126] - ]$INFO[PVR.NowRecordingTitle, • [B][COLOR=FF48D1CC],[/COLOR][/B] ]$INFO[PVR.NowRecordingChannel,[B][COLOR=$VAR[FocusModHomeColourVar]]( ,)[/COLOR][/B]]</label>
+					<label>[COLOR=$VAR[FocusModHomeColourVar]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</label>
+					<label>[COLOR=$VAR[FocusModHomeColourVar]]$INFO[Pvr.BackendName][/COLOR] $LOCALIZE[19012] • [COLOR=$VAR[FocusModHomeColourVar]]$INFO[Pvr.BackendRecordings][/COLOR] $LOCALIZE[19017]</label>
+					<label>$LOCALIZE[19114] [COLOR=$VAR[FocusModHomeColourVar]]$INFO[Pvr.BackendVersion][/COLOR]</label>
+					<label>$LOCALIZE[20089] [COLOR=$VAR[FocusModHomeColourVar]]$INFO[Pvr.BackendDiskSpace][/COLOR]</label>
+					<scroll>false</scroll>
+					<pauseatend>6000</pauseatend>
+					<scrollout>false</scrollout>
+					<scrollspeed>80</scrollspeed>
+					<visible>Container(20).HasFocus(9)</visible>
+				</control>
+				<control type="fadelabel">
+					<posx>0</posx>
+					<posy>80</posy>
+					<include>HomeProfileInfoLabel</include>
+					<label>[COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window(Weather).Property(Location)][/COLOR]</label>
+					<label>$LOCALIZE[402] [COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window(weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][/COLOR]</label>
+					<label>$LOCALIZE[406] [COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window(weather).Property(Current.Humidity)][/COLOR]</label>
+					<scroll>false</scroll>
+					<pauseatend>6000</pauseatend>
+					<scrollout>false</scrollout>
+					<scrollspeed>80</scrollspeed>
+					<visible>Container(20).HasFocus(7)</visible>
+				</control>
+				<control type="fadelabel">
+					<posy>80</posy>
+					<posx>0</posx>
+					<include>HomeProfileInfoLabel</include>
+					<label>$LOCALIZE[49254] [COLOR=$VAR[FocusModHomeColourVar]]$INFO[System.memory(used.percent)][/COLOR]</label>
+					<label>$LOCALIZE[144] [COLOR=$VAR[FocusModHomeColourVar]]$INFO[System.BuildVersion][/COLOR] • $LOCALIZE[552]: [COLOR=$VAR[FocusModHomeColourVar]]$INFO[System.BuildDate][/COLOR]</label>
+					<scroll>false</scroll>
+					<pauseatend>6000</pauseatend>
+					<scrollout>false</scrollout>
+					<scrollspeed>80</scrollspeed>
+					<visible>Container(20).HasFocus(8)</visible>
 				</control>
 				<control type="wraplist" id="30">
 					<posx>0</posx>
@@ -344,7 +439,7 @@
 					<height>120</height>
 					<label>$INFO[System.DVDLabel]</label>
 					<font>Font-Condensed-S36-B</font>
-					<textcolor>C0FFFFFF</textcolor>
+					<textcolor>PrimaryT</textcolor>
 					<scroll>false</scroll>
 					<align>left</align>
 					<animation effect="slide" end="0,14" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(2)">Conditional</animation>
@@ -356,7 +451,7 @@
 					<height>120</height>
 					<label>$LOCALIZE[41505]</label>
 					<font>Font-Condensed-S28</font>
-					<textcolor>80FFFFFF</textcolor>
+					<textcolor>PrimaryOSD</textcolor>
 					<scroll>false</scroll>
 					<align>left</align>
 					<visible>Container(20).HasFocus(2)</visible>
@@ -373,6 +468,15 @@
 		</control>
 	</include>
 	<include name="HomeControlListLabels">
+		<control type="image">
+			<posx>-20</posx>
+			<posy>150</posy>
+			<width>1980</width>
+			<height>110</height>
+			<colordiffuse>HomeMenuOverlay</colordiffuse>
+			<texture border="7">special://skin/extras/icons/tile-white.png</texture>
+			<visible>Skin.HasSetting(ShowBackgroundHomeMenu)</visible>
+		</control>
 		<control type="GroupList">
 			<description>Button labels</description>
 			<animation type="WindowOpen">
@@ -414,7 +518,7 @@
 				<posy>12</posy>
 				<width>38</width>
 				<height>38</height>
-				<texture>windows/home/search.png</texture>
+				<texture colordiffuse="PrimaryT">windows/home/search.png</texture>
 				<animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(1)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="19,50" condition="!Control.HasFocus(125)">Conditional</animation>
 				<visible>![Container(20).HasFocus(1) + Control.HasFocus(125)]</visible>
@@ -477,7 +581,7 @@
 					<posy>13</posy>
 					<width>19</width>
 					<height>38</height>
-					<texture>windows/home/submenu-arrow.png</texture>
+					<texture colordiffuse="PrimaryT">windows/home/submenu-arrow.png</texture>
 					<include>visiblehidefadeinfo</include>
 					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(225) + Container(20).HasFocus(3)]">Conditional</animation>
 					<visible>![Control.HasFocus(225) + Container(20).HasFocus(3)]</visible>
@@ -524,7 +628,7 @@
 					<posy>13</posy>
 					<width>19</width>
 					<height>38</height>
-					<texture>windows/home/submenu-arrow.png</texture>
+					<texture colordiffuse="PrimaryT">windows/home/submenu-arrow.png</texture>
 					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(325) + Container(20).HasFocus(4)]">Conditional</animation>
 					<visible>![Control.HasFocus(325) + Container(20).HasFocus(4)]</visible>
 				</control>
@@ -587,7 +691,7 @@
 					<posy>13</posy>
 					<width>19</width>
 					<height>38</height>
-					<texture>windows/home/submenu-arrow.png</texture>
+					<texture colordiffuse="PrimaryT">windows/home/submenu-arrow.png</texture>
 					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(425) + Container(20).HasFocus(5)]">Conditional</animation>
 					<visible>![Control.HasFocus(425) + Container(20).HasFocus(5)]</visible>
 				</control>
@@ -662,7 +766,7 @@
 				<posy>12</posy>
 				<width>38</width>
 				<height>38</height>
-				<texture>windows/home/settings.png</texture>
+				<texture colordiffuse="PrimaryT">windows/home/settings.png</texture>
 				<animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(8)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="19,50" condition="!Control.HasFocus(825)">Conditional</animation>
 				<visible>![Control.HasFocus(825) + Container(20).HasFocus(8)]</visible>
@@ -888,7 +992,8 @@
 								<posy>218</posy>
 								<width>1259</width>
 								<height>136</height>
-								<texture border="7">windows/home/tile.png</texture>
+								<colordiffuse>$VAR[HomeTileSearchColourVar]</colordiffuse>
+								<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 							</control>
 							<control type="image">
 								<posx>1115</posx>
@@ -1027,15 +1132,15 @@
 									<posy>19</posy>
 									<width>293</width>
 									<height>293</height>
-									<texture border="7">windows/home/tile.png</texture>
+									<colordiffuse>$VAR[HomeTileLiveTVColourVar]</colordiffuse>
+									<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
 									<posy>241</posy>
 									<width>283</width>
 									<height>66</height>
-									<texture border="1">windows/home/tile-overlay.png</texture>
-									<colordiffuse>99FFFFFF</colordiffuse>
+									<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -1051,7 +1156,7 @@
 									<height>66</height>
 									<label>$INFO[ListItem.Label]</label>
 									<font>Font-Condensed-S33</font>
-									<textcolor>aawhite</textcolor>
+									<textcolor>PrimaryOSD</textcolor>
 									<align>left</align>
 									<aligny>center</aligny>
 									<textoffsetx>20</textoffsetx>
@@ -1105,15 +1210,15 @@
 										<posy>19</posy>
 										<width>293</width>
 										<height>293</height>
-										<texture border="7">windows/home/tile.png</texture>
+										<colordiffuse>$VAR[HomeTileLiveTVColourVar]</colordiffuse>
+										<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
 										<posy>241</posy>
 										<width>283</width>
 										<height>66</height>
-										<texture border="1">windows/home/tile-overlay.png</texture>
-										<colordiffuse>99FFFFFF</colordiffuse>
+										<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -1133,7 +1238,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label]</label>
 										<font>Font-Condensed-S33</font>
-										<textcolor>aawhite</textcolor>
+										<textcolor>PrimaryOSD</textcolor>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -1321,8 +1426,7 @@
 							<posy>492</posy>
 							<width>1020</width>
 							<height>80</height>
-							<colordiffuse>99000000</colordiffuse>
-							<texture border="1">windows/common/black.png</texture>
+							<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 						</control>
 						<control type="group" id="5023">
 							<visible>!Control.IsVisible(5022) + [[stringcompare(Skin.String(HomeWidget.1.Type),service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running))] | [stringcompare(Skin.String(HomeWidget.1.Type),script.randomandlastitems) + IsEmpty(Window(Home).Property(HomeWidget1.Loaded))] | [!stringcompare(Skin.String(HomeWidget.1.Type),service.skin.widgets) + !stringcompare(Skin.String(HomeWidget.1.Type),script.randomandlastitems) + !IsEmpty(Window(Home).Property(extendedinfo_running))]]</visible>
@@ -1392,7 +1496,7 @@
 								<height>42</height>
 								<label>$INFO[Container(5022).ListItem.Label]$INFO[Container(5022).ListItem.Property(Title2), ,]</label>
 								<font>Font-Condensed-S32</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryOSD</textcolor>
 								<align>left</align>
 								<aligny>top</aligny>
 								<scroll>false</scroll>
@@ -1417,7 +1521,7 @@
 								<width>90</width>
 								<font>Font-Condensed-S32</font>
 								<label>$INFO[Container(5022).ListItem.Label2]</label>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryOSD</textcolor>
 								<scroll>false</scroll>
 								<visible>!IsEmpty(Container(5022).ListItem.Label2) + !substring(Container(5022).ListItem.Label2,None)</visible>
 							</control>
@@ -1437,7 +1541,7 @@
 								<width>90</width>
 								<font>Font-Condensed-S32</font>
 								<label>$INFO[Container(5022).ListItem.Property(CriticRating),,%]</label>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryOSD</textcolor>
 								<scroll>false</scroll>
 								<visible>Control.IsVisible(5022)</visible>
 								<visible>!IsEmpty(Container(5022).ListItem.Property(CriticRating)) + !substring(Container(5022).ListItem.Property(CriticRating),None)</visible>
@@ -1469,8 +1573,8 @@
 								<posy>537</posy>
 								<width>570</width>
 								<font>Font-Condensed-S26</font>
-								<label>$INFO[Container(5022).ListItem.Property(SuggestedMovieTitle),[COLOR=bbwhite]because you watched - [/COLOR],]</label>
-								<textcolor>ddwhite</textcolor>
+								<label>$INFO[Container(5022).ListItem.Property(SuggestedMovieTitle),[COLOR=PrimaryT]because you watched - [/COLOR],]</label>
+								<textcolor>PrimaryT</textcolor>
 								<scroll>false</scroll>
 								<visible>Control.IsVisible(5022)</visible>
 								<visible>!IsEmpty(Container(5022).ListItem.Property(CriticRating)) + !substring(Container(5022).ListItem.Property(CriticRating),None)</visible>
@@ -1481,8 +1585,8 @@
 								<posy>537</posy>
 								<width>675</width>
 								<font>Font-Condensed-S26</font>
-								<label>$INFO[Container(5022).ListItem.Property(SuggestedMovieTitle),[COLOR=bbwhite]because you watched - [/COLOR],]</label>
-								<textcolor>eewhite</textcolor>
+								<label>$INFO[Container(5022).ListItem.Property(SuggestedMovieTitle),[COLOR=PrimaryT]because you watched - [/COLOR],]</label>
+								<textcolor>PrimaryT</textcolor>
 								<scroll>false</scroll>
 								<visible>Control.IsVisible(5022)</visible>
 								<visible>IsEmpty(Container(5022).ListItem.Property(CriticRating)) | substring(Container(5022).ListItem.Property(CriticRating),None)</visible>
@@ -1518,7 +1622,7 @@
 								<height>79</height>
 								<label>$INFO[Container(5022).ListItem.Label]$INFO[Container(5022).ListItem.Property(Title2), ,]$INFO[Container(5022).ListItem.Property(Plot),[CR],]</label>
 								<font>Font-Condensed-S29</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryOSD</textcolor>
 								<align>left</align>
 								<aligny>top</aligny>
 								<autoscroll delay="6000" time="2900" repeat="5000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
@@ -1533,7 +1637,7 @@
 								<height>30</height>
 								<aspect>stretch</aspect>
 								<texture>special://skin/extras/icons/imdb.png</texture>
-								<visible>!IsEmpty(Container(5022).ListItem.Label2) + !substring(Container(5022).ListItem.Label2,None)</visible>
+								<visible>!IsEmpty(Container(5022).ListItem.Label2) + !substring(Container(5022).ListItem.Label2,None) + !IsEmpty(Container(5022).ListItem.Property(CriticRating))</visible>
 								<visible>Control.IsVisible(5022)</visible>
 							</control>
 							<control type="label">
@@ -1542,9 +1646,29 @@
 								<width>90</width>
 								<font>Font-Condensed-S32</font>
 								<label>$INFO[Container(5022).ListItem.Label2]</label>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryOSD</textcolor>
 								<scroll>false</scroll>
-								<visible>!IsEmpty(Container(5022).ListItem.Label2) + !substring(Container(5022).ListItem.Label2,None)</visible>
+								<visible>!IsEmpty(Container(5022).ListItem.Label2) + !substring(Container(5022).ListItem.Label2,None) + !IsEmpty(Container(5022).ListItem.Property(CriticRating))</visible>
+							</control>
+							<control type="image">
+								<posx>200</posx>
+								<posy>580</posy>
+								<width>30</width>
+								<height>30</height>
+								<aspect>stretch</aspect>
+								<texture>special://skin/extras/icons/imdb.png</texture>
+								<visible>!IsEmpty(Container(5022).ListItem.Label2) + !substring(Container(5022).ListItem.Label2,None) + IsEmpty(Container(5022).ListItem.Property(CriticRating))</visible>
+								<visible>Control.IsVisible(5022)</visible>
+							</control>
+							<control type="label">
+								<posx>240</posx>
+								<posy>580</posy>
+								<width>90</width>
+								<font>Font-Condensed-S32</font>
+								<label>$INFO[Container(5022).ListItem.Label2]</label>
+								<textcolor>PrimaryOSD</textcolor>
+								<scroll>false</scroll>
+								<visible>!IsEmpty(Container(5022).ListItem.Label2) + !substring(Container(5022).ListItem.Label2,None) + IsEmpty(Container(5022).ListItem.Property(CriticRating))</visible>
 							</control>
 							<control type="image">
 								<posx>200</posx>
@@ -1562,7 +1686,7 @@
 								<width>90</width>
 								<font>Font-Condensed-S32</font>
 								<label>$INFO[Container(5022).ListItem.Property(CriticRating),,%]</label>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryOSD</textcolor>
 								<scroll>false</scroll>
 								<visible>Control.IsVisible(5022)</visible>
 								<visible>!IsEmpty(Container(5022).ListItem.Property(CriticRating)) + !substring(Container(5022).ListItem.Property(CriticRating),None)</visible>
@@ -1583,7 +1707,7 @@
 								<width>675</width>
 								<font>Font-Condensed-S26</font>
 								<label>$INFO[Container(5022).ListItem.Property(SuggestedMovieTitle),- ,]</label>
-								<textcolor>eewhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<scroll>false</scroll>
 								<visible>Control.IsVisible(5022)</visible>
 								<visible>!IsEmpty(Container(5022).ListItem.Property(SuggestedMovieTitle)) + !substring(Container(5022).ListItem.Property(SuggestedMovieTitle),None)</visible>
@@ -1596,7 +1720,7 @@
 							<height>25</height>
 							<font>Font-Condensed-S20-B</font>
 							<shadowcolor>11000000</shadowcolor>
-							<textcolor>77white</textcolor>
+							<textcolor>PrimaryOSD</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
@@ -1612,7 +1736,7 @@
 								<width>96</width>
 								<height>6</height>
 								<texture border="1">views/other/scrollbar-sq.png</texture>
-								<colordiffuse>55FFFFFF</colordiffuse>
+								<colordiffuse>PrimaryT</colordiffuse>
 							</control>
 							<control type="scrollbar" id="5024">
 								<description>Scrollbar</description>
@@ -1653,7 +1777,7 @@
 					</control>
 					<control type="group" id="503">
 						<description>Ongoing tv shows</description>
-						<posx>1315</posx>
+						<posx>1313</posx>
 						<control type="button" id="5031">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -1733,8 +1857,7 @@
 							<posy>492</posy>
 							<width>382</width>
 							<height>80</height>
-							<colordiffuse>99000000</colordiffuse>
-							<texture border="1">windows/common/black.png</texture>
+							<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 						</control>
 						<control type="group" id="5033">
 							<visible>!Control.IsVisible(5032) + [[stringcompare(Skin.String(HomeWidget.2.Type),service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running))] | [stringcompare(Skin.String(HomeWidget.2.Type),script.randomandlastitems) + IsEmpty(Window(Home).Property(HomeWidget2.Loaded))] | [!stringcompare(Skin.String(HomeWidget.2.Type),service.skin.widgets) + !stringcompare(Skin.String(HomeWidget.2.Type),script.randomandlastitems) + !IsEmpty(Window(Home).Property(extendedinfo_running))]]</visible>
@@ -1764,7 +1887,7 @@
 								<height>80</height>
 								<label>$LOCALIZE[41564] "$VAR[OngoingTVShowsLabelVAR]"...</label>
 								<font>Font-Condensed-S29-B</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryOSD</textcolor>
 								<align>left</align>
 								<aligny>center</aligny>
 								<scroll>false</scroll>
@@ -1779,7 +1902,7 @@
 								<height>42</height>
 								<label>$INFO[Container(5032).ListItem.Label]</label>
 								<font>Font-Condensed-S32</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryOSD</textcolor>
 								<align>left</align>
 								<aligny>top</aligny>
 								<scroll>false</scroll>
@@ -1804,7 +1927,7 @@
 								<width>90</width>
 								<font>Font-Condensed-S32</font>
 								<label>$INFO[Container(5032).ListItem.Label2]</label>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryOSD</textcolor>
 								<scroll>false</scroll>
 								<visible>!IsEmpty(Container(5032).ListItem.Label2) + !substring(Container(5032).ListItem.Label2,None)</visible>
 								<visible>!IsEmpty(Container(5032).ListItem.Label2)</visible>
@@ -1825,7 +1948,7 @@
 								<width>90</width>
 								<font>Font-Condensed-S32</font>
 								<label>$INFO[Container(5032).ListItem.Property(CriticRating),,%]</label>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryOSD</textcolor>
 								<scroll>false</scroll>
 								<visible>Control.IsVisible(5032)</visible>
 								<visible>!IsEmpty(Container(5032).ListItem.Property(CriticRating)) + !substring(Container(5032).ListItem.Property(CriticRating),None)</visible>
@@ -1838,7 +1961,7 @@
 							<height>25</height>
 							<font>Font-Condensed-S20-B</font>
 							<shadowcolor>11000000</shadowcolor>
-							<textcolor>77white</textcolor>
+							<textcolor>PrimaryOSD</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
@@ -1854,7 +1977,7 @@
 								<width>96</width>
 								<height>6</height>
 								<texture border="1">views/other/scrollbar-sq.png</texture>
-								<colordiffuse>55FFFFFF</colordiffuse>
+								<colordiffuse>PrimaryT</colordiffuse>
 							</control>
 							<control type="scrollbar" id="5034">
 								<description>Scrollbar</description>
@@ -1919,7 +2042,8 @@
 									<posy>19</posy>
 									<width>293</width>
 									<height>293</height>
-									<texture border="7">windows/home/tile.png</texture>
+									<colordiffuse>$VAR[HomeTileHomeColourVar]</colordiffuse>
+									<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -1936,8 +2060,7 @@
 										<posy>241</posy>
 										<width>283</width>
 										<height>66</height>
-										<texture border="1">windows/home/tile-overlay.png</texture>
-										<colordiffuse>99FFFFFF</colordiffuse>
+										<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 									</control>
 									<control type="label">
 										<posx>24</posx>
@@ -1946,7 +2069,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label]</label>
 										<font>Font-Condensed-S33</font>
-										<textcolor>aawhite</textcolor>
+										<textcolor>PrimaryOSD</textcolor>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -2001,7 +2124,8 @@
 										<posy>19</posy>
 										<width>293</width>
 										<height>293</height>
-										<texture border="7">windows/home/tile.png</texture>
+										<colordiffuse>$VAR[HomeTileHomeColourVar]</colordiffuse>
+										<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -2022,8 +2146,7 @@
 											<posy>241</posy>
 											<width>283</width>
 											<height>66</height>
-											<texture border="1">windows/home/tile-overlay.png</texture>
-											<colordiffuse>99FFFFFF</colordiffuse>
+											<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 										</control>
 										<control type="label">
 											<posx>24</posx>
@@ -2032,7 +2155,7 @@
 											<height>66</height>
 											<label>$INFO[ListItem.Label]</label>
 											<font>Font-Condensed-S33</font>
-											<textcolor>aawhite</textcolor>
+											<textcolor>PrimaryOSD</textcolor>
 											<align>left</align>
 											<aligny>center</aligny>
 											<textoffsetx>20</textoffsetx>
@@ -2138,9 +2261,9 @@
 						<visible>ControlGroup(503).HasFocus + !Skin.HasSetting(ColourFocus)</visible>
 					</control>
 					<control type="image">
-						<posx>1286</posx>
+						<posx>1295</posx>
 						<posy>-21</posy>
-						<width>424</width>
+						<width>419</width>
 						<height>614</height>
 						<texture border="40">windows/home/tile-fo.png</texture>
 						<animation type="Visible">
@@ -2295,8 +2418,7 @@
 							<posy>492</posy>
 							<width>1020</width>
 							<height>80</height>
-							<colordiffuse>99000000</colordiffuse>
-							<texture border="1">windows/common/black.png</texture>
+							<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 						</control>
 						<control type="group" id="2023">
 							<visible>!Control.IsVisible(2022) + [[stringcompare(Skin.String(HomeWidget.3.Type),service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running))] | [stringcompare(Skin.String(HomeWidget.3.Type),script.randomandlastitems) + IsEmpty(Window(Home).Property(HomeWidget3.Loaded))] | [!stringcompare(Skin.String(HomeWidget.3.Type),service.skin.widgets) + !stringcompare(Skin.String(HomeWidget.3.Type),script.randomandlastitems) + !IsEmpty(Window(Home).Property(extendedinfo_running))]]</visible>
@@ -2354,7 +2476,7 @@
 								<height>42</height>
 								<label>$INFO[Container(2022).ListItem.Label]$INFO[Container(2022).ListItem.Property(Title2), ,]</label>
 								<font>Font-Condensed-S32</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryOSD</textcolor>
 								<align>left</align>
 								<aligny>top</aligny>
 								<scroll>false</scroll>
@@ -2379,7 +2501,7 @@
 								<width>90</width>
 								<font>Font-Condensed-S32</font>
 								<label>$INFO[Container(2022).ListItem.Label2]</label>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryOSD</textcolor>
 								<scroll>false</scroll>
 								<visible>!IsEmpty(Container(2022).ListItem.Label2) + !substring(Container(2022).ListItem.Label2,None)</visible>
 							</control>
@@ -2399,7 +2521,7 @@
 								<width>90</width>
 								<font>Font-Condensed-S32</font>
 								<label>$INFO[Container(2022).ListItem.Property(CriticRating),,%]</label>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryOSD</textcolor>
 								<scroll>false</scroll>
 								<visible>Control.IsVisible(2022)</visible>
 								<visible>!IsEmpty(Container(2022).ListItem.Property(CriticRating)) + !substring(Container(2022).ListItem.Property(CriticRating),None)</visible>
@@ -2407,16 +2529,6 @@
 						</control>
 						<control type="group">
 							<visible>ControlGroup(202).HasFocus</visible>
-							<control type="image">
-								<description>Logo</description>
-								<posx>330</posx>
-								<posy>580</posy>
-								<width>248</width>
-								<height>90</height>
-								<aspectratio align="center" aligny="top">keep</aspectratio>
-								<texture border="1">$INFO[Container(2022).ListItem.Property(clearlogohome)]</texture>
-								<visible>!isEmpty(Container(2022).ListItem.Property(clearlogohome))</visible>
-							</control>
 							<control type="image">
 								<description>Logo</description>
 								<posx>330</posx>
@@ -2434,7 +2546,7 @@
 								<height>79</height>
 								<label>$INFO[Container(2022).ListItem.Label]$INFO[Container(2022).ListItem.Property(Title2), ,]$INFO[Container(2022).ListItem.Property(Plot),[CR],]</label>
 								<font>Font-Condensed-S29</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryOSD</textcolor>
 								<align>left</align>
 								<aligny>top</aligny>
 								<autoscroll delay="6000" time="2900" repeat="5000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
@@ -2449,7 +2561,7 @@
 								<height>30</height>
 								<aspect>stretch</aspect>
 								<texture>special://skin/extras/icons/imdb.png</texture>
-								<visible>!IsEmpty(Container(2022).ListItem.Label2) + !substring(Container(2022).ListItem.Label2,None)</visible>
+								<visible>!IsEmpty(Container(2022).ListItem.Label2) + !substring(Container(2022).ListItem.Label2,None) + !IsEmpty(Container(2022).ListItem.Property(CriticRating))</visible>
 								<visible>Control.IsVisible(2022)</visible>
 							</control>
 							<control type="label">
@@ -2458,9 +2570,9 @@
 								<width>90</width>
 								<font>Font-Condensed-S32</font>
 								<label>$INFO[Container(2022).ListItem.Label2]</label>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryOSD</textcolor>
 								<scroll>false</scroll>
-								<visible>!IsEmpty(Container(2022).ListItem.Label2) + !substring(Container(2022).ListItem.Label2,None)</visible>
+								<visible>!IsEmpty(Container(2022).ListItem.Label2) + !substring(Container(2022).ListItem.Label2,None) + !IsEmpty(Container(2022).ListItem.Property(CriticRating))</visible>
 							</control>
 							<control type="image">
 								<posx>220</posx>
@@ -2468,7 +2580,27 @@
 								<width>30</width>
 								<height>30</height>
 								<aspect>stretch</aspect>
-								<texture>$VAR[RottenTomatoesHomeMovies]</texture>
+								<texture>special://skin/extras/icons/imdb.png</texture>
+								<visible>!IsEmpty(Container(2022).ListItem.Label2) + !substring(Container(2022).ListItem.Label2,None) + IsEmpty(Container(2022).ListItem.Property(CriticRating))</visible>
+								<visible>Control.IsVisible(2022)</visible>
+							</control>
+							<control type="label">
+								<posx>260</posx>
+								<posy>580</posy>
+								<width>90</width>
+								<font>Font-Condensed-S32</font>
+								<label>$INFO[Container(2022).ListItem.Label2]</label>
+								<textcolor>PrimaryOSD</textcolor>
+								<scroll>false</scroll>
+								<visible>!IsEmpty(Container(2022).ListItem.Label2) + !substring(Container(2022).ListItem.Label2,None) + IsEmpty(Container(2022).ListItem.Property(CriticRating))</visible>
+							</control>
+							<control type="image">
+								<posx>220</posx>
+								<posy>580</posy>
+								<width>30</width>
+								<height>30</height>
+								<aspect>stretch</aspect>
+								<texture>$VAR[RottenTomatoesMovies]</texture>
 								<visible>Control.IsVisible(2022)</visible>
 								<visible>!IsEmpty(Container(2022).ListItem.Property(CriticRating)) + !substring(Container(2022).ListItem.Property(CriticRating),None)</visible>
 							</control>
@@ -2478,7 +2610,7 @@
 								<width>90</width>
 								<font>Font-Condensed-S32</font>
 								<label>$INFO[Container(2022).ListItem.Property(CriticRating),,%]</label>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryOSD</textcolor>
 								<scroll>false</scroll>
 								<visible>Control.IsVisible(2022)</visible>
 								<visible>!IsEmpty(Container(2022).ListItem.Property(CriticRating)) + !substring(Container(2022).ListItem.Property(CriticRating),None)</visible>
@@ -2499,7 +2631,7 @@
 								<width>675</width>
 								<font>Font-Condensed-S26</font>
 								<label>$INFO[Container(2022).ListItem.Property(SuggestedMovieTitle),- ,]</label>
-								<textcolor>eewhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<scroll>false</scroll>
 								<visible>Control.IsVisible(2022)</visible>
 								<visible>!IsEmpty(Container(2022).ListItem.Property(SuggestedMovieTitle)) + !substring(Container(2022).ListItem.Property(SuggestedMovieTitle),None)</visible>
@@ -2512,7 +2644,7 @@
 							<height>25</height>
 							<font>Font-Condensed-S20-B</font>
 							<shadowcolor>11000000</shadowcolor>
-							<textcolor>77white</textcolor>
+							<textcolor>PrimaryOSD</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
@@ -2528,7 +2660,7 @@
 								<width>96</width>
 								<height>6</height>
 								<texture border="1">views/other/scrollbar-sq.png</texture>
-								<colordiffuse>55FFFFFF</colordiffuse>
+								<colordiffuse>PrimaryT</colordiffuse>
 							</control>
 							<control type="scrollbar" id="2024">
 								<description>Scrollbar</description>
@@ -2590,7 +2722,8 @@
 									<posy>19</posy>
 									<width>293</width>
 									<height>293</height>
-									<texture colordiffuse="tileblue" border="7">special://skin/extras/icons/tile-white.png</texture>
+									<colordiffuse>$VAR[HomeTileMoviesColourVar]</colordiffuse>
+									<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -2607,8 +2740,7 @@
 										<posy>241</posy>
 										<width>283</width>
 										<height>66</height>
-										<texture border="1">windows/home/tile-overlay.png</texture>
-										<colordiffuse>99FFFFFF</colordiffuse>
+										<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 									</control>
 									<control type="label">
 										<posx>24</posx>
@@ -2617,7 +2749,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label]</label>
 										<font>Font-Condensed-S33</font>
-										<textcolor>aawhite</textcolor>
+										<textcolor>PrimaryOSD</textcolor>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -2629,7 +2761,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label2]</label>
 										<font>Font-Condensed-S31-B</font>
-										<textcolor>77white</textcolor>
+										<textcolor>PrimaryOSD</textcolor>
 										<align>right</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -2685,7 +2817,8 @@
 										<posy>19</posy>
 										<width>293</width>
 										<height>293</height>
-										<texture colordiffuse="tileblue" border="7">special://skin/extras/icons/tile-white.png</texture>
+										<colordiffuse>$VAR[HomeTileMoviesColourVar]</colordiffuse>
+										<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -2706,8 +2839,7 @@
 											<posy>241</posy>
 											<width>283</width>
 											<height>66</height>
-											<texture border="1">windows/home/tile-overlay.png</texture>
-											<colordiffuse>99FFFFFF</colordiffuse>
+											<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 										</control>
 										<control type="label">
 											<posx>24</posx>
@@ -2716,7 +2848,7 @@
 											<height>66</height>
 											<label>$INFO[ListItem.Label]</label>
 											<font>Font-Condensed-S33</font>
-											<textcolor>aawhite</textcolor>
+											<textcolor>PrimaryOSD</textcolor>
 											<align>left</align>
 											<aligny>center</aligny>
 											<textoffsetx>20</textoffsetx>
@@ -2728,7 +2860,7 @@
 											<height>66</height>
 											<label>$INFO[ListItem.Label2]</label>
 											<font>Font-Condensed-S31-B</font>
-											<textcolor>77white</textcolor>
+											<textcolor>PrimaryOSD</textcolor>
 											<align>right</align>
 											<aligny>center</aligny>
 											<textoffsetx>20</textoffsetx>
@@ -2793,7 +2925,7 @@
 						</content>
 					</control>
 					<control type="panel" id="203">
-						<posx>1283</posx>
+						<posx>1290</posx>
 						<posy>-24</posy>
 						<width>331</width>
 						<height>620</height>
@@ -2822,7 +2954,8 @@
 									<posy>19</posy>
 									<width>293</width>
 									<height>293</height>
-									<texture colordiffuse="tileblue" border="7">special://skin/extras/icons/tile-white.png</texture>
+									<colordiffuse>$VAR[HomeTileMoviesColourVar]</colordiffuse>
+									<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -2848,8 +2981,7 @@
 										<posy>241</posy>
 										<width>283</width>
 										<height>66</height>
-										<texture border="1">windows/home/tile-overlay.png</texture>
-										<colordiffuse>99FFFFFF</colordiffuse>
+										<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 									</control>
 									<control type="label">
 										<posx>24</posx>
@@ -2858,7 +2990,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label]</label>
 										<font>Font-Condensed-S33</font>
-										<textcolor>aawhite</textcolor>
+										<textcolor>PrimaryOSD</textcolor>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -2913,7 +3045,8 @@
 										<posy>19</posy>
 										<width>293</width>
 										<height>293</height>
-										<texture colordiffuse="tileblue" border="7">special://skin/extras/icons/tile-white.png</texture>
+										<colordiffuse>$VAR[HomeTileMoviesColourVar]</colordiffuse>
+										<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -2947,8 +3080,7 @@
 											<posy>241</posy>
 											<width>283</width>
 											<height>66</height>
-											<texture border="1">windows/home/tile-overlay.png</texture>
-											<colordiffuse>99FFFFFF</colordiffuse>
+											<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 										</control>
 										<control type="label">
 											<posx>24</posx>
@@ -2957,7 +3089,7 @@
 											<height>66</height>
 											<label>$INFO[ListItem.Label]</label>
 											<font>Font-Condensed-S33</font>
-											<textcolor>aawhite</textcolor>
+											<textcolor>PrimaryOSD</textcolor>
 											<align>left</align>
 											<aligny>center</aligny>
 											<textoffsetx>20</textoffsetx>
@@ -3187,8 +3319,7 @@
 							<posy>492</posy>
 							<width>1020</width>
 							<height>80</height>
-							<colordiffuse>99000000</colordiffuse>
-							<texture border="1">windows/common/black.png</texture>
+							<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 						</control>
 						<control type="group" id="3023">
 							<visible>!Control.IsVisible(3022) + [[stringcompare(Skin.String(HomeWidget.4.Type),service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running))] | [stringcompare(Skin.String(HomeWidget.4.Type),script.randomandlastitems) + IsEmpty(Window(Home).Property(HomeWidget4.Loaded))] | [!stringcompare(Skin.String(HomeWidget.4.Type),service.skin.widgets) + !stringcompare(Skin.String(HomeWidget.4.Type),script.randomandlastitems) + !IsEmpty(Window(Home).Property(extendedinfo_running))]]</visible>
@@ -3246,7 +3377,7 @@
 								<height>42</height>
 								<label>$INFO[Container(3022).ListItem.Label]$INFO[Container(3022).ListItem.Property(Title2), ,]</label>
 								<font>Font-Condensed-S32</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryOSD</textcolor>
 								<align>left</align>
 								<aligny>top</aligny>
 								<scroll>false</scroll>
@@ -3271,7 +3402,7 @@
 								<width>90</width>
 								<font>Font-Condensed-S32</font>
 								<label>$INFO[Container(3022).ListItem.Label2]</label>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryOSD</textcolor>
 								<scroll>false</scroll>
 								<visible>!IsEmpty(Container(3022).ListItem.Label2) + !substring(Container(3022).ListItem.Label2,None)</visible>
 							</control>
@@ -3291,7 +3422,7 @@
 								<width>90</width>
 								<font>Font-Condensed-S32</font>
 								<label>$INFO[Container(3022).ListItem.Property(CriticRating),,%]</label>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryOSD</textcolor>
 								<scroll>false</scroll>
 								<visible>Control.IsVisible(3022)</visible>
 								<visible>!IsEmpty(Container(3022).ListItem.Property(CriticRating)) + !substring(Container(3022).ListItem.Property(CriticRating),None)</visible>
@@ -3309,16 +3440,6 @@
 								<texture border="1">$INFO[Container(3022).ListItem.Property(clearlogohome)]</texture>
 								<visible>!isEmpty(Container(3022).ListItem.Property(clearlogohome))</visible>
 							</control>
-							<control type="image">
-								<description>Logo</description>
-								<posx>330</posx>
-								<posy>580</posy>
-								<width>248</width>
-								<height>90</height>
-								<aspectratio align="center" aligny="top">keep</aspectratio>
-								<texture border="1">$INFO[Container(3022).ListItem.Property(clearlogo)]</texture>
-								<visible>!isEmpty(Container(3022).ListItem.Property(clearlogo))</visible>
-							</control>
 							<control type="textbox">
 								<posx>10</posx>
 								<posy>487</posy>
@@ -3326,7 +3447,7 @@
 								<height>79</height>
 								<label>$INFO[Container(3022).ListItem.Label]$INFO[Container(3022).ListItem.Property(Title2), ,]$INFO[Container(3022).ListItem.Property(Plot),[CR],]</label>
 								<font>Font-Condensed-S29</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryOSD</textcolor>
 								<align>left</align>
 								<aligny>top</aligny>
 								<autoscroll delay="6000" time="2900" repeat="5000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
@@ -3350,7 +3471,7 @@
 								<width>90</width>
 								<font>Font-Condensed-S32</font>
 								<label>$INFO[Container(3022).ListItem.Label2]</label>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryOSD</textcolor>
 								<scroll>false</scroll>
 								<visible>!IsEmpty(Container(3022).ListItem.Label2) + !substring(Container(3022).ListItem.Label2,None)</visible>
 							</control>
@@ -3360,7 +3481,7 @@
 								<width>30</width>
 								<height>30</height>
 								<aspect>stretch</aspect>
-								<texture>$VAR[RottenTomatoesHomeMovies]</texture>
+								<texture>$VAR[RottenTomatoesTV]</texture>
 								<visible>Control.IsVisible(3022)</visible>
 								<visible>!IsEmpty(Container(3022).ListItem.Property(CriticRating)) + !substring(Container(3022).ListItem.Property(CriticRating),None)</visible>
 							</control>
@@ -3370,7 +3491,7 @@
 								<width>90</width>
 								<font>Font-Condensed-S32</font>
 								<label>$INFO[Container(3022).ListItem.Property(CriticRating),,%]</label>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryOSD</textcolor>
 								<scroll>false</scroll>
 								<visible>Control.IsVisible(3022)</visible>
 								<visible>!IsEmpty(Container(3022).ListItem.Property(CriticRating)) + !substring(Container(3022).ListItem.Property(CriticRating),None)</visible>
@@ -3391,7 +3512,7 @@
 								<width>675</width>
 								<font>Font-Condensed-S26</font>
 								<label>$INFO[Container(3022).ListItem.Property(SuggestedMovieTitle),- ,]</label>
-								<textcolor>eewhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<scroll>false</scroll>
 								<visible>Control.IsVisible(3022)</visible>
 								<visible>!IsEmpty(Container(3022).ListItem.Property(SuggestedMovieTitle)) + !substring(Container(3022).ListItem.Property(SuggestedMovieTitle),None)</visible>
@@ -3404,7 +3525,7 @@
 							<height>25</height>
 							<font>Font-Condensed-S20-B</font>
 							<shadowcolor>11000000</shadowcolor>
-							<textcolor>77white</textcolor>
+							<textcolor>PrimaryOSD</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
@@ -3420,7 +3541,7 @@
 								<width>96</width>
 								<height>6</height>
 								<texture border="1">views/other/scrollbar-sq.png</texture>
-								<colordiffuse>55FFFFFF</colordiffuse>
+								<colordiffuse>PrimaryT</colordiffuse>
 							</control>
 							<control type="scrollbar" id="3024">
 								<description>Scrollbar</description>
@@ -3484,7 +3605,8 @@
 									<posy>19</posy>
 									<width>293</width>
 									<height>293</height>
-									<texture colordiffuse="tilegreen" border="7">special://skin/extras/icons/tile-white.png</texture>
+									<colordiffuse>$VAR[HomeTileTVColourVar]</colordiffuse>
+									<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -3501,8 +3623,7 @@
 										<posy>241</posy>
 										<width>283</width>
 										<height>66</height>
-										<texture border="1">windows/home/tile-overlay.png</texture>
-										<colordiffuse>99FFFFFF</colordiffuse>
+										<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 									</control>
 									<control type="label">
 										<posx>24</posx>
@@ -3511,7 +3632,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label]</label>
 										<font>Font-Condensed-S33</font>
-										<textcolor>aawhite</textcolor>
+										<textcolor>PrimaryOSD</textcolor>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -3523,7 +3644,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label2]</label>
 										<font>Font-Condensed-S31-B</font>
-										<textcolor>77white</textcolor>
+										<textcolor>PrimaryOSD</textcolor>
 										<align>right</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -3579,7 +3700,8 @@
 										<posy>19</posy>
 										<width>293</width>
 										<height>293</height>
-										<texture colordiffuse="tilegreen" border="7">special://skin/extras/icons/tile-white.png</texture>
+										<colordiffuse>$VAR[HomeTileTVColourVar]</colordiffuse>
+										<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -3600,8 +3722,7 @@
 											<posy>241</posy>
 											<width>283</width>
 											<height>66</height>
-											<texture border="1">windows/home/tile-overlay.png</texture>
-											<colordiffuse>99FFFFFF</colordiffuse>
+											<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 										</control>
 										<control type="label">
 											<posx>24</posx>
@@ -3610,7 +3731,7 @@
 											<height>66</height>
 											<label>$INFO[ListItem.Label]</label>
 											<font>Font-Condensed-S33</font>
-											<textcolor>aawhite</textcolor>
+											<textcolor>PrimaryOSD</textcolor>
 											<align>left</align>
 											<aligny>center</aligny>
 											<textoffsetx>20</textoffsetx>
@@ -3622,7 +3743,7 @@
 											<height>66</height>
 											<label>$INFO[ListItem.Label2]</label>
 											<font>Font-Condensed-S31-B</font>
-											<textcolor>77white</textcolor>
+											<textcolor>PrimaryOSD</textcolor>
 											<align>right</align>
 											<aligny>center</aligny>
 											<textoffsetx>20</textoffsetx>
@@ -3688,7 +3809,7 @@
 						</content>
 					</control>
 					<control type="panel" id="303">
-						<posx>1282</posx>
+						<posx>1290</posx>
 						<posy>-24</posy>
 						<width>331</width>
 						<height>620</height>
@@ -3715,7 +3836,8 @@
 									<posy>19</posy>
 									<width>293</width>
 									<height>293</height>
-									<texture colordiffuse="tilegreen" border="7">special://skin/extras/icons/tile-white.png</texture>
+									<colordiffuse>$VAR[HomeTileTVColourVar]</colordiffuse>
+									<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -3741,8 +3863,7 @@
 										<posy>241</posy>
 										<width>283</width>
 										<height>66</height>
-										<texture border="1">windows/home/tile-overlay.png</texture>
-										<colordiffuse>99FFFFFF</colordiffuse>
+										<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 									</control>
 									<control type="label">
 										<posx>24</posx>
@@ -3751,7 +3872,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label]</label>
 										<font>Font-Condensed-S33</font>
-										<textcolor>aawhite</textcolor>
+										<textcolor>PrimaryOSD</textcolor>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -3806,7 +3927,8 @@
 										<posy>19</posy>
 										<width>293</width>
 										<height>293</height>
-										<texture colordiffuse="tilegreen" border="7">special://skin/extras/icons/tile-white.png</texture>
+										<colordiffuse>$VAR[HomeTileTVColourVar]</colordiffuse>
+										<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -3840,8 +3962,7 @@
 											<posy>241</posy>
 											<width>283</width>
 											<height>66</height>
-											<texture border="1">windows/home/tile-overlay.png</texture>
-											<colordiffuse>99FFFFFF</colordiffuse>
+											<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 										</control>
 										<control type="label">
 											<posx>24</posx>
@@ -3850,7 +3971,7 @@
 											<height>66</height>
 											<label>$INFO[ListItem.Label]</label>
 											<font>Font-Condensed-S33</font>
-											<textcolor>aawhite</textcolor>
+											<textcolor>PrimaryOSD</textcolor>
 											<align>left</align>
 											<aligny>center</aligny>
 											<textoffsetx>20</textoffsetx>
@@ -4069,8 +4190,7 @@
 							<posy>492</posy>
 							<width>1020</width>
 							<height>80</height>
-							<colordiffuse>99000000</colordiffuse>
-							<texture border="1">windows/common/black.png</texture>
+							<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 						</control>
 						<control type="group" id="11023">
 							<visible>!Control.IsVisible(11022)</visible>
@@ -4116,7 +4236,7 @@
 							<height>42</height>
 							<label>[B]$INFO[Container(11022).ListItem.Label][/B]</label>
 							<font>Font-Condensed-S32</font>
-							<disabledcolor>aawhite</disabledcolor>
+							<disabledcolor>PrimaryOSD</disabledcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<enable>false</enable>
@@ -4131,7 +4251,7 @@
 							<height>30</height>
 							<label>$INFO[Container(11022).ListItem.Label2]</label>
 							<font>Font-Condensed-S29</font>
-							<disabledcolor>aawhite</disabledcolor>
+							<disabledcolor>PrimaryOSD</disabledcolor>
 							<align>left</align>
 							<aligny>top</aligny>
 							<enable>false</enable>
@@ -4145,11 +4265,11 @@
 							<height>25</height>
 							<font>Font-Condensed-S20-B</font>
 							<shadowcolor>11000000</shadowcolor>
-							<textcolor>77white</textcolor>
+							<textcolor>PrimaryOSD</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
-							<label>$VAR[ChannelsLabelVAR]</label>
+							<label>[UPPERCASE]$VAR[ChannelsLabelVAR][/UPPERCASE]</label>
 						</control>
 						<control type="group">
 							<visible>Control.IsVisible(11022)</visible>
@@ -4161,7 +4281,7 @@
 								<width>96</width>
 								<height>6</height>
 								<texture border="1">views/other/scrollbar-sq.png</texture>
-								<colordiffuse>55FFFFFF</colordiffuse>
+								<colordiffuse>PrimaryT</colordiffuse>
 							</control>
 							<control type="scrollbar" id="11024">
 								<description>Scrollbar</description>
@@ -4226,7 +4346,8 @@
 									<posy>19</posy>
 									<width>293</width>
 									<height>293</height>
-									<texture colordiffuse="tileyellow" border="7">special://skin/extras/icons/tile-white.png</texture>
+									<colordiffuse>$VAR[HomeTileChannelsColourVar]</colordiffuse>
+									<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -4243,8 +4364,7 @@
 										<posy>241</posy>
 										<width>283</width>
 										<height>66</height>
-										<texture border="1">windows/home/tile-overlay.png</texture>
-										<colordiffuse>99FFFFFF</colordiffuse>
+										<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 									</control>
 									<control type="label">
 										<posx>24</posx>
@@ -4253,7 +4373,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label]</label>
 										<font>Font-Condensed-S33</font>
-										<textcolor>aawhite</textcolor>
+										<textcolor>PrimaryOSD</textcolor>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -4265,7 +4385,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label2]</label>
 										<font>Font-Condensed-S31-B</font>
-										<textcolor>77white</textcolor>
+										<textcolor>PrimaryOSD</textcolor>
 										<align>right</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -4321,7 +4441,8 @@
 										<posy>19</posy>
 										<width>293</width>
 										<height>293</height>
-										<texture colordiffuse="tileyellow" border="7">special://skin/extras/icons/tile-white.png</texture>
+										<colordiffuse>$VAR[HomeTileChannelsColourVar]</colordiffuse>
+										<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -4342,8 +4463,7 @@
 											<posy>241</posy>
 											<width>283</width>
 											<height>66</height>
-											<texture border="1">windows/home/tile-overlay.png</texture>
-											<colordiffuse>99FFFFFF</colordiffuse>
+											<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 										</control>
 										<control type="label">
 											<posx>24</posx>
@@ -4352,7 +4472,7 @@
 											<height>66</height>
 											<label>$INFO[ListItem.Label]</label>
 											<font>Font-Condensed-S33</font>
-											<textcolor>aawhite</textcolor>
+											<textcolor>PrimaryOSD</textcolor>
 											<align>left</align>
 											<aligny>center</aligny>
 											<textoffsetx>20</textoffsetx>
@@ -4364,7 +4484,7 @@
 											<height>66</height>
 											<label>$INFO[ListItem.Label2]</label>
 											<font>Font-Condensed-S31-B</font>
-											<textcolor>77white</textcolor>
+											<textcolor>PrimaryOSD</textcolor>
 											<align>right</align>
 											<aligny>center</aligny>
 											<textoffsetx>20</textoffsetx>
@@ -4432,7 +4552,7 @@
 						</content>
 					</control>
 					<control type="panel" id="1103">
-						<posx>1282</posx>
+						<posx>1290</posx>
 						<posy>-24</posy>
 						<width>331</width>
 						<height>620</height>
@@ -4455,7 +4575,8 @@
 									<posy>19</posy>
 									<width>293</width>
 									<height>293</height>
-									<texture colordiffuse="tileyellow" border="7">special://skin/extras/icons/tile-white.png</texture>
+									<colordiffuse>$VAR[HomeTileChannelsColourVar]</colordiffuse>
+									<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -4481,8 +4602,7 @@
 										<posy>241</posy>
 										<width>283</width>
 										<height>66</height>
-										<texture border="1">windows/home/tile-overlay.png</texture>
-										<colordiffuse>99FFFFFF</colordiffuse>
+										<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 									</control>
 									<control type="label">
 										<posx>24</posx>
@@ -4491,7 +4611,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label]</label>
 										<font>Font-Condensed-S33</font>
-										<textcolor>aawhite</textcolor>
+										<textcolor>PrimaryOSD</textcolor>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -4546,7 +4666,8 @@
 										<posy>19</posy>
 										<width>293</width>
 										<height>293</height>
-										<texture colordiffuse="tileyellow" border="7">special://skin/extras/icons/tile-white.png</texture>
+										<colordiffuse>$VAR[HomeTileChannelsColourVar]</colordiffuse>
+										<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -4580,8 +4701,7 @@
 											<posy>241</posy>
 											<width>283</width>
 											<height>66</height>
-											<texture border="1">windows/home/tile-overlay.png</texture>
-											<colordiffuse>99FFFFFF</colordiffuse>
+											<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 										</control>
 										<control type="label">
 											<posx>24</posx>
@@ -4590,7 +4710,7 @@
 											<height>66</height>
 											<label>$INFO[ListItem.Label]</label>
 											<font>Font-Condensed-S33</font>
-											<textcolor>aawhite</textcolor>
+											<textcolor>PrimaryOSD</textcolor>
 											<align>left</align>
 											<aligny>center</aligny>
 											<textoffsetx>20</textoffsetx>
@@ -4820,8 +4940,7 @@
 							<posy>492</posy>
 							<width>1020</width>
 							<height>80</height>
-							<colordiffuse>99000000</colordiffuse>
-							<texture border="1">windows/common/black.png</texture>
+							<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 						</control>
 						<control type="group" id="4023">
 							<visible>!Control.IsVisible(4022) + [[stringcompare(Skin.String(HomeWidget.5.Type),service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running))] | [stringcompare(Skin.String(HomeWidget.5.Type),script.randomandlastitems) + IsEmpty(Window(Home).Property(HomeWidget5.Loaded))] | [!stringcompare(Skin.String(HomeWidget.5.Type),service.skin.widgets) + !stringcompare(Skin.String(HomeWidget.5.Type),script.randomandlastitems) + !IsEmpty(Window(Home).Property(extendedinfo_running))]]</visible>
@@ -4878,7 +4997,7 @@
 								<height>42</height>
 								<label>$INFO[Container(4022).ListItem.Label]$INFO[Container(4022).ListItem.Property(Title2), ,]</label>
 								<font>Font-Condensed-S32</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryOSD</textcolor>
 								<align>left</align>
 								<aligny>top</aligny>
 								<scroll>false</scroll>
@@ -4893,7 +5012,7 @@
 								<width>800</width>
 								<font>Font-Condensed-S32</font>
 								<label>$INFO[Container(4022).ListItem.Label2]</label>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryOSD</textcolor>
 								<scroll>false</scroll>
 								<visible>!IsEmpty(Container(4022).ListItem.Label2) + !substring(Container(4022).ListItem.Label2,None)</visible>
 							</control>
@@ -4917,7 +5036,7 @@
 								<height>79</height>
 								<label>$INFO[Container(4022).ListItem.Label]$INFO[Container(4022).ListItem.Property(Title2), ,]$INFO[Container(4022).ListItem.Property(Plot),[CR],]</label>
 								<font>Font-Condensed-S29</font>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryOSD</textcolor>
 								<align>left</align>
 								<aligny>top</aligny>
 								<autoscroll delay="6000" time="2900" repeat="5000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
@@ -4933,7 +5052,7 @@
 							<height>25</height>
 							<font>Font-Condensed-S20-B</font>
 							<shadowcolor>11000000</shadowcolor>
-							<textcolor>77white</textcolor>
+							<textcolor>PrimaryOSD</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
@@ -4949,7 +5068,7 @@
 								<width>96</width>
 								<height>6</height>
 								<texture border="1">views/other/scrollbar-sq.png</texture>
-								<colordiffuse>55FFFFFF</colordiffuse>
+								<colordiffuse>PrimaryT</colordiffuse>
 							</control>
 							<control type="scrollbar" id="4024">
 								<description>Scrollbar</description>
@@ -5008,7 +5127,8 @@
 									<posy>19</posy>
 									<width>293</width>
 									<height>293</height>
-									<texture colordiffuse="tilepinkyred" border="7">special://skin/extras/icons/tile-white.png</texture>
+									<colordiffuse>$VAR[HomeTileMusicColourVar]</colordiffuse>
+									<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -5025,8 +5145,7 @@
 										<posy>241</posy>
 										<width>283</width>
 										<height>66</height>
-										<texture border="1">windows/home/tile-overlay.png</texture>
-										<colordiffuse>99FFFFFF</colordiffuse>
+										<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 									</control>
 									<control type="label">
 										<posx>24</posx>
@@ -5035,7 +5154,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label]</label>
 										<font>Font-Condensed-S33</font>
-										<textcolor>aawhite</textcolor>
+										<textcolor>PrimaryOSD</textcolor>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -5047,7 +5166,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label2]</label>
 										<font>Font-Condensed-S31-B</font>
-										<textcolor>77white</textcolor>
+										<textcolor>PrimaryOSD</textcolor>
 										<align>right</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -5103,7 +5222,8 @@
 										<posy>19</posy>
 										<width>293</width>
 										<height>293</height>
-										<texture colordiffuse="tilepinkyred" border="7">special://skin/extras/icons/tile-white.png</texture>
+										<colordiffuse>$VAR[HomeTileMusicColourVar]</colordiffuse>
+										<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -5124,8 +5244,7 @@
 											<posy>241</posy>
 											<width>283</width>
 											<height>66</height>
-											<texture border="1">windows/home/tile-overlay.png</texture>
-											<colordiffuse>99FFFFFF</colordiffuse>
+											<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 										</control>
 										<control type="label">
 											<posx>24</posx>
@@ -5134,7 +5253,7 @@
 											<height>66</height>
 											<label>$INFO[ListItem.Label]</label>
 											<font>Font-Condensed-S33</font>
-											<textcolor>aawhite</textcolor>
+											<textcolor>PrimaryOSD</textcolor>
 											<align>left</align>
 											<aligny>center</aligny>
 											<textoffsetx>20</textoffsetx>
@@ -5146,7 +5265,7 @@
 											<height>66</height>
 											<label>$INFO[ListItem.Label2]</label>
 											<font>Font-Condensed-S31-B</font>
-											<textcolor>77white</textcolor>
+											<textcolor>PrimaryOSD</textcolor>
 											<align>right</align>
 											<aligny>center</aligny>
 											<textoffsetx>20</textoffsetx>
@@ -5243,7 +5362,7 @@
 						</content>
 					</control>
 					<control type="panel" id="403">
-						<posx>1333</posx>
+						<posx>1340</posx>
 						<posy>-24</posy>
 						<width>331</width>
 						<height>620</height>
@@ -5264,7 +5383,8 @@
 								<posy>19</posy>
 								<width>293</width>
 								<height>293</height>
-								<texture colordiffuse="tilepinkyred" border="7">special://skin/extras/icons/tile-white.png</texture>
+								<colordiffuse>$VAR[HomeTileMusicColourVar]</colordiffuse>
+								<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 								<animation effect="fade" end="90" time="0" condition="true">Conditional</animation>
 							</control>
 							<control type="group">
@@ -5293,8 +5413,7 @@
 										<posy>241</posy>
 										<width>283</width>
 										<height>66</height>
-										<texture border="1">windows/home/tile-overlay.png</texture>
-										<colordiffuse>99FFFFFF</colordiffuse>
+										<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 									</control>
 									<control type="label">
 										<posx>24</posx>
@@ -5303,7 +5422,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label]</label>
 										<font>Font-Condensed-S33</font>
-										<textcolor>aawhite</textcolor>
+										<textcolor>PrimaryOSD</textcolor>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -5351,7 +5470,8 @@
 									<posy>19</posy>
 									<width>293</width>
 									<height>293</height>
-									<texture colordiffuse="tilepinkyred" border="7">special://skin/extras/icons/tile-white.png</texture>
+									<colordiffuse>$VAR[HomeTileMusicColourVar]</colordiffuse>
+									<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 									<animation type="Focus">
 										<effect type="fade" start="90" end="100" time="200" tween="sine" easing="in" />
 									</animation>
@@ -5398,8 +5518,7 @@
 											<posy>241</posy>
 											<width>283</width>
 											<height>66</height>
-											<texture border="1">windows/home/tile-overlay.png</texture>
-											<colordiffuse>99FFFFFF</colordiffuse>
+											<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 										</control>
 										<control type="label">
 											<posx>24</posx>
@@ -5408,7 +5527,7 @@
 											<height>66</height>
 											<label>$INFO[ListItem.Label]</label>
 											<font>Font-Condensed-S33</font>
-											<textcolor>aawhite</textcolor>
+											<textcolor>PrimaryOSD</textcolor>
 											<align>left</align>
 											<aligny>center</aligny>
 											<textoffsetx>20</textoffsetx>
@@ -5604,7 +5723,8 @@
 									<posy>19</posy>
 									<width>293</width>
 									<height>293</height>
-									<texture border="7">windows/home/tile.png</texture>
+									<colordiffuse>$VAR[HomeTileApplicationsColourVar]</colordiffuse>
+									<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -5629,8 +5749,7 @@
 										<posy>241</posy>
 										<width>283</width>
 										<height>66</height>
-										<texture border="1">windows/home/tile-overlay.png</texture>
-										<colordiffuse>99FFFFFF</colordiffuse>
+										<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 									</control>
 									<control type="label">
 										<posx>24</posx>
@@ -5639,7 +5758,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label]</label>
 										<font>Font-Condensed-S33</font>
-										<textcolor>aawhite</textcolor>
+										<textcolor>PrimaryOSD</textcolor>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -5694,7 +5813,8 @@
 										<posy>19</posy>
 										<width>293</width>
 										<height>293</height>
-										<texture border="7">windows/home/tile.png</texture>
+										<colordiffuse>$VAR[HomeTileApplicationsColourVar]</colordiffuse>
+										<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -5723,8 +5843,7 @@
 											<posy>241</posy>
 											<width>283</width>
 											<height>66</height>
-											<texture border="1">windows/home/tile-overlay.png</texture>
-											<colordiffuse>99FFFFFF</colordiffuse>
+											<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 										</control>
 										<control type="label">
 											<posx>24</posx>
@@ -5733,7 +5852,7 @@
 											<height>66</height>
 											<label>$INFO[ListItem.Label]</label>
 											<font>Font-Condensed-S33</font>
-											<textcolor>aawhite</textcolor>
+											<textcolor>PrimaryOSD</textcolor>
 											<align>left</align>
 											<aligny>center</aligny>
 											<textoffsetx>20</textoffsetx>
@@ -6031,7 +6150,7 @@
 							<height>25</height>
 							<font>Font-Condensed-S20</font>
 							<shadowcolor>11000000</shadowcolor>
-							<textcolor>77white</textcolor>
+							<textcolor>PrimaryOSD</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
@@ -6063,8 +6182,7 @@
 								<posy>508</posy>
 								<width>1020</width>
 								<height>64</height>
-								<colordiffuse>99000000</colordiffuse>
-								<texture border="1">windows/common/black.png</texture>
+								<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 							</control>
 							<control type="label">
 								<posx>20</posx>
@@ -6074,7 +6192,7 @@
 								<font>Font-Condensed-S31-B</font>
 								<align>left</align>
 								<aligny>center</aligny>
-								<textcolor>bbwhite</textcolor>
+								<textcolor>PrimaryOSD</textcolor>
 								<label>$LOCALIZE[41562]</label>
 								<scroll>false</scroll>
 							</control>
@@ -6101,8 +6219,7 @@
 								<posy>385</posy>
 								<width>1020</width>
 								<height>187</height>
-								<colordiffuse>99000000</colordiffuse>
-								<texture border="1">windows/common/black.png</texture>
+								<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 							</control>
 							<control type="group">
 								<posx>30</posx>
@@ -6115,7 +6232,7 @@
 									<height>30</height>
 									<font>Font-Condensed-S100</font>
 									<label>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
-									<textcolor>ddwhite</textcolor>
+									<textcolor>PrimaryT</textcolor>
 								</control>
 								<control type="label">
 									<description>current conditionslabel</description>
@@ -6125,7 +6242,7 @@
 									<height>30</height>
 									<font>Font-Condensed-S45</font>
 									<label>$INFO[Window(Weather).Property(Current.Condition)]</label>
-									<textcolor>ddwhite</textcolor>
+									<textcolor>PrimaryT</textcolor>
 								</control>
 								<control type="group">
 									<posx>960</posx>
@@ -6138,7 +6255,7 @@
 										<align>right</align>
 										<font>Font-Condensed-S33</font>
 										<label>$LOCALIZE[402]</label>
-										<textcolor>80FFFFFF</textcolor>
+										<textcolor>PrimaryT</textcolor>
 									</control>
 									<control type="label">
 										<description>current feels like value</description>
@@ -6149,7 +6266,7 @@
 										<align>right</align>
 										<font>Font-Condensed-S33</font>
 										<label>$INFO[Window(Weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits]</label>
-										<textcolor>ddwhite</textcolor>
+										<textcolor>PrimaryT</textcolor>
 									</control>
 									<control type="label">
 										<description>current humidity label</description>
@@ -6160,7 +6277,7 @@
 										<align>right</align>
 										<font>Font-Condensed-S33</font>
 										<label>$LOCALIZE[406]</label>
-										<textcolor>80FFFFFF</textcolor>
+										<textcolor>PrimaryT</textcolor>
 									</control>
 									<control type="label">
 										<description>current humidity value</description>
@@ -6171,7 +6288,7 @@
 										<align>right</align>
 										<font>Font-Condensed-S33</font>
 										<label>$INFO[Window(Weather).Property(Current.Humidity)]</label>
-										<textcolor>ddwhite</textcolor>
+										<textcolor>PrimaryT</textcolor>
 									</control>
 								</control>
 							</control>
@@ -6199,7 +6316,7 @@
 									<font>Font-Condensed-S33-B</font>
 									<align>left</align>
 									<aligny>center</aligny>
-									<textcolor>eewhite</textcolor>
+									<textcolor>PrimaryT</textcolor>
 									<label fallback="41563">$INFO[Window(Weather).Property(Location)]</label>
 									<scroll>false</scroll>
 								</control>
@@ -6213,7 +6330,7 @@
 									<align>left</align>
 									<aligny>center</aligny>
 									<label>$LOCALIZE[33006]$INFO[Window(Weather).Property(Day0.LowTemp), (, - ]$INFO[Window(Weather).Property(Day0.HighTemp)]$INFO[System.TemperatureUnits,,)]</label>
-									<textcolor>ddC6C6C8</textcolor>
+									<textcolor>PrimaryOSD</textcolor>
 								</control>
 								<control type="label">
 									<description>Weather provider</description>
@@ -6225,7 +6342,7 @@
 									<align>left</align>
 									<aligny>center</aligny>
 									<label>$INFO[Window(Weather).Property(Day0.Outlook)]</label>
-									<textcolor>ddC6C6C8</textcolor>
+									<textcolor>PrimaryOSD</textcolor>
 								</control>
 							</control>
 							<control type="list">
@@ -6243,7 +6360,7 @@
 										<aligny>center</aligny>
 										<label>$INFO[ListItem.Label]</label>
 										<font>Font-Condensed-S33</font>
-										<textcolor>99FFFFFF</textcolor>
+										<textcolor>PrimaryOSD</textcolor>
 										<scroll>false</scroll>
 									</control>
 									<control type="label">
@@ -6255,7 +6372,7 @@
 										<aligny>center</aligny>
 										<label>[B]$INFO[ListItem.Label2][/B]</label>
 										<font>Font-Condensed-S32</font>
-										<textcolor>bbwhite</textcolor>
+										<textcolor>PrimaryOSD</textcolor>
 										<scroll>false</scroll>
 									</control>
 									<control type="image">
@@ -6277,7 +6394,7 @@
 										<aligny>center</aligny>
 										<label>$INFO[ListItem.Label]</label>
 										<font>Font-Condensed-S33</font>
-										<textcolor>99FFFFFF</textcolor>
+										<textcolor>PrimaryOSD</textcolor>
 										<scroll>false</scroll>
 									</control>
 									<control type="label">
@@ -6289,7 +6406,7 @@
 										<aligny>center</aligny>
 										<label>[B]$INFO[ListItem.Label2][/B]</label>
 										<font>Font-Condensed-S32</font>
-										<textcolor>bbwhite</textcolor>
+										<textcolor>PrimaryOSD</textcolor>
 										<scroll>false</scroll>
 									</control>
 									<control type="image">
@@ -6349,7 +6466,8 @@
 								<posy>-5</posy>
 								<width>392</width>
 								<height>197</height>
-								<texture border="7">windows/home/tile.png</texture>
+								<colordiffuse>$VAR[HomeTileWeatherColourVar]</colordiffuse>
+								<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 							</control>
 							<control type="group">
 								<visible>Weather.IsFetched</visible>
@@ -6446,7 +6564,8 @@
 								<posy>-5</posy>
 								<width>392</width>
 								<height>197</height>
-								<texture border="7">windows/home/tile.png</texture>
+								<colordiffuse>$VAR[HomeTileWeatherColourVar]</colordiffuse>
+								<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 							</control>
 							<control type="group">
 								<visible>Weather.IsFetched</visible>
@@ -6543,7 +6662,8 @@
 								<posy>-5</posy>
 								<width>392</width>
 								<height>197</height>
-								<texture border="7">windows/home/tile.png</texture>
+								<colordiffuse>$VAR[HomeTileWeatherColourVar]</colordiffuse>
+								<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 							</control>
 							<control type="group">
 								<visible>Weather.IsFetched</visible>
@@ -6664,15 +6784,15 @@
 									<posy>19</posy>
 									<width>293</width>
 									<height>293</height>
-									<texture border="7">windows/home/tile.png</texture>
+									<colordiffuse>$VAR[HomeTileWeatherColourVar]</colordiffuse>
+									<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
 									<posy>241</posy>
 									<width>283</width>
 									<height>66</height>
-									<texture border="1">windows/home/tile-overlay.png</texture>
-									<colordiffuse>99FFFFFF</colordiffuse>
+									<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -6688,7 +6808,7 @@
 									<height>66</height>
 									<label>$INFO[ListItem.Label]</label>
 									<font>Font-Condensed-S33</font>
-									<textcolor>aawhite</textcolor>
+									<textcolor>PrimaryOSD</textcolor>
 									<align>left</align>
 									<aligny>center</aligny>
 									<textoffsetx>20</textoffsetx>
@@ -6742,15 +6862,15 @@
 										<posy>19</posy>
 										<width>293</width>
 										<height>293</height>
-										<texture border="7">windows/home/tile.png</texture>
+										<colordiffuse>$VAR[HomeTileWeatherColourVar]</colordiffuse>
+										<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
 										<posy>241</posy>
 										<width>283</width>
 										<height>66</height>
-										<texture border="1">windows/home/tile-overlay.png</texture>
-										<colordiffuse>99FFFFFF</colordiffuse>
+										<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -6770,7 +6890,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label]</label>
 										<font>Font-Condensed-S33</font>
-										<textcolor>aawhite</textcolor>
+										<textcolor>PrimaryOSD</textcolor>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -6871,15 +6991,15 @@
 									<posy>19</posy>
 									<width>256</width>
 									<height>293</height>
-									<texture border="7">windows/home/tile.png</texture>
+									<colordiffuse>$VAR[HomeTileSettingsColourVar]</colordiffuse>
+									<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
 									<posy>241</posy>
 									<width>246</width>
 									<height>66</height>
-									<texture border="1">windows/home/tile-overlay.png</texture>
-									<colordiffuse>99FFFFFF</colordiffuse>
+									<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 								</control>
 								<control type="image">
 									<posx>5</posx>
@@ -6895,7 +7015,7 @@
 									<height>66</height>
 									<label>$INFO[ListItem.Label]</label>
 									<font>Font-Condensed-S33</font>
-									<textcolor>aawhite</textcolor>
+									<textcolor>PrimaryOSD</textcolor>
 									<align>left</align>
 									<aligny>center</aligny>
 									<textoffsetx>20</textoffsetx>
@@ -6949,15 +7069,15 @@
 										<posy>19</posy>
 										<width>256</width>
 										<height>293</height>
-										<texture border="7">windows/home/tile.png</texture>
+										<colordiffuse>$VAR[HomeTileSettingsColourVar]</colordiffuse>
+										<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
 										<posy>241</posy>
 										<width>246</width>
 										<height>66</height>
-										<texture border="1">windows/home/tile-overlay.png</texture>
-										<colordiffuse>99FFFFFF</colordiffuse>
+										<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 									</control>
 									<control type="image">
 										<posx>5</posx>
@@ -6977,7 +7097,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label]</label>
 										<font>Font-Condensed-S33</font>
-										<textcolor>aawhite</textcolor>
+										<textcolor>PrimaryOSD</textcolor>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>

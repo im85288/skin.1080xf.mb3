@@ -20,7 +20,7 @@
                     <posy>25</posy>
                     <width>100</width>
                     <height>100</height>
-                    <texture>dialogs/extendedprogress/loading-back-dl.png</texture>
+                    <texture colordiffuse="PrimaryT">dialogs/extendedprogress/loading-back-dl.png</texture>
                 </control>
                 <control type="image">
                     <description>Loading indicator</description>
@@ -46,7 +46,7 @@
                         <width min="0" max="680">auto</width>
                         <height>120</height>
                         <font>Font-Condensed-S36-B</font>
-                        <textcolor>C0FFFFFF</textcolor>
+                        <textcolor>PrimaryT</textcolor>
                         <label>$INFO[Control.GetLabel(30)]</label>
                         <scroll>false</scroll>
                         <align>left</align>
@@ -58,7 +58,7 @@
                         <width min="0" max="120">auto</width>
                         <height>120</height>
                         <font>Font-Condensed-S36-B</font>
-                        <textcolor>C0FFFFFF</textcolor>
+                        <textcolor>PrimaryT</textcolor>
                         <label>$INFO[Control.GetLabel(32),: ,%]</label>
                         <scroll>false</scroll>
                         <align>left</align>
@@ -75,7 +75,7 @@
                     <width>750</width>
                     <height>120</height>
                     <font>Font-Condensed-S28</font>
-                    <textcolor>80FFFFFF</textcolor>
+                    <textcolor>SecondaryT</textcolor>
                     <scroll>false</scroll>
                     <align>right</align>
                 </control>

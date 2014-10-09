@@ -55,7 +55,7 @@
 						<width min="0" max="1360">auto</width>
 						<label>$INFO[ListItem.Title]</label>
 						<font>Font-Condensed-S75</font>
-						<textcolor>aawhite</textcolor>
+						<textcolor>PrimaryT</textcolor>
 						<align>left</align>
 						<scroll>false</scroll>
 					</control>
@@ -69,7 +69,7 @@
 					<height>100</height>
 					<label>$INFO[ListItem.Title]</label>
 					<font>Font-Condensed-S75</font>
-					<textcolor>aawhite</textcolor>
+					<textcolor>PrimaryT</textcolor>
 					<align>left</align>
 					<scroll>false</scroll>
 					<visible>!Container.Content(episodes) + ![Container.Content(tvshows) + !IsEmpty(listitem.mpaa)]</visible>
@@ -83,7 +83,7 @@
 					<height>100</height>
 					<label>$INFO[ListItem.TVShowTitle]</label>
 					<font>Font-Condensed-S75</font>
-					<textcolor>aawhite</textcolor>
+					<textcolor>PrimaryT</textcolor>
 					<align>left</align>
 					<scroll>false</scroll>
 					<visible>Container.Content(episodes)</visible>
@@ -116,7 +116,7 @@
 						<width min="0" max="702">auto</width>
 						<label>$INFO[ListItem.Title]</label>
 						<font>Font-Condensed-S75</font>
-						<textcolor>aawhite</textcolor>
+						<textcolor>PrimaryT</textcolor>
 						<align>left</align>
 						<scroll>false</scroll>
 					</control>
@@ -130,7 +130,7 @@
 					<height>100</height>
 					<label>$INFO[ListItem.Title]</label>
 					<font>Font-Condensed-S75</font>
-					<textcolor>aawhite</textcolor>
+					<textcolor>PrimaryT</textcolor>
 					<align>left</align>
 					<scroll>false</scroll>
 					<visible>!Container.Content(episodes) + ![Container.Content(tvshows) + !IsEmpty(listitem.mpaa)]</visible>
@@ -144,7 +144,7 @@
 					<height>100</height>
 					<label>$INFO[ListItem.TVShowTitle]</label>
 					<font>Font-Condensed-S75</font>
-					<textcolor>aawhite</textcolor>
+					<textcolor>PrimaryT</textcolor>
 					<align>left</align>
 					<scroll>false</scroll>
 					<visible>Container.Content(episodes)</visible>
@@ -164,7 +164,7 @@
 					<aspectratio align="right" aligny="center">center</aspectratio>
 					<height>120</height>
 					<texture background="true" fallback=".">$INFO[ListItem.Studio,special://skin/extras/studioflags/,.png]</texture>
-					<colordiffuse>aawhite</colordiffuse>
+					<colordiffuse>PrimaryT</colordiffuse>
 					<visible>!IsEmpty(ListItem.Studio)</visible>
 				</control>
 				<control type="label">
@@ -175,7 +175,7 @@
 					<height>100</height>
 					<label>$INFO[ListItem.Rating,, ★]</label>
 					<font>Font-Condensed-S75</font>
-					<textcolor>aawhite</textcolor>
+					<textcolor>PrimaryT</textcolor>
 					<align>right</align>
 					<scroll>false</scroll>
 					<visible>stringcompare(Control.GetLabel(9340),.)</visible>
@@ -206,7 +206,7 @@
 					<height>60</height>
 					<label>←</label>
 					<font>Font-Condensed-S45</font>
-					<textcolor>eewhite</textcolor>
+					<textcolor>PrimaryT</textcolor>
 					<align>left</align>
 					<scroll>false</scroll>
 					<include>visiblehidefadeinfo</include>
@@ -220,7 +220,7 @@
 					<height>60</height>
 					<label>$LOCALIZE[41319]</label>
 					<font>Font-Condensed-S45</font>
-					<textcolor>eewhite</textcolor>
+					<textcolor>PrimaryT</textcolor>
 					<align>left</align>
 					<scroll>false</scroll>
 					<animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Control.HasFocus(9334) | Control.HasFocus(50) | Control.HasFocus(1110) | Window.IsActive(script-Actors-DialogInfo.xml) | Window.IsActive(3004) | [!IsEmpty(Window(3004).Property(ChooseArt)) + [Window.IsActive(filebrowser) | Window.IsActive(selectdialog) | Window.IsActive(DialogSelect.xml)]]">Conditional</animation>
@@ -233,7 +233,7 @@
 					<height>60</height>
 					<label>$VAR[CastLabel]</label>
 					<font>Font-Condensed-S45</font>
-					<textcolor>eewhite</textcolor>
+					<textcolor>PrimaryT</textcolor>
 					<align>left</align>
 					<scroll>false</scroll>
 					<animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Control.HasFocus(9333) | Control.HasFocus(9335) | Control.HasFocus(1101) | Control.HasFocus(1104) | Control.HasFocus(1105) | Control.HasFocus(1110) | Control.HasFocus(70) | Control.HasFocus(71) | Window.IsActive(script-Actors-DialogInfo.xml) | [!IsEmpty(Window(3004).Property(ChooseArt)) + [Window.IsActive(filebrowser) | Window.IsActive(selectdialog) | Window.IsActive(DialogSelect.xml)]]">Conditional</animation>
@@ -247,7 +247,7 @@
 					<height>60</height>
 					<label>→</label>
 					<font>Font-Condensed-S45</font>
-					<textcolor>eewhite</textcolor>
+					<textcolor>PrimaryT</textcolor>
 					<align>left</align>
 					<scroll>false</scroll>
 					<include>visiblehidefadeinfo</include>
@@ -289,7 +289,7 @@
 					<posy>573</posy>
 					<width>638</width>
 					<height>335</height>
-					<texture border="3">views/list/panel/panel.png</texture>
+					<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 				</control>
 				<!-- Fanart / Thumb / Overlay -->
 				<control type="group">
@@ -437,7 +437,7 @@
 							<height>82</height>
 							<font>Font-Condensed-S40</font>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>eewhite</textcolor>
+							<textcolor>PrimaryT</textcolor>
 							<shadowcolor>33000000</shadowcolor>
 							<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
 						</control>
@@ -455,11 +455,18 @@
 							<posy>0</posy>
 							<width>634</width>
 							<height>82</height>
-							<texture border="150,1,150,1">views/other/focus.png</texture>
+							<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
 							<animation effect="slide" start="0,83" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(9333).OnPrevious">Focus</animation>
 							<animation effect="slide" start="0,-83" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(9333).OnNext">Focus</animation>
 							<include>visiblehidefadeinfo</include>
 							<visible>Control.HasFocus(9333)</visible>
+						</control>
+						<control type="image"> <!--focused background left edge -->
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>5</width>
+							<height>82</height>
+							<texture condition="Control.HasFocus(9333)" colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
 						</control>
 						<control type="label">
 							<posx>30</posx>
@@ -468,7 +475,7 @@
 							<height>82</height>
 							<font>Font-Condensed-S40</font>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>eewhite</textcolor>
+							<textcolor>PrimaryT</textcolor>
 							<shadowcolor>33000000</shadowcolor>
 							<animation effect="fade" start="50" end="100" time="300" tween="sine" easing="inout" reversible="false" condition="Container(9333).OnNext | Container(9333).OnPrevious">Focus</animation>
 							<animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(9333)">Conditional</animation>
@@ -585,7 +592,7 @@
 							<font>Font-Condensed-S45</font>
 							<align>left</align>
 							<label>$VAR[VideoInfoTitleLabel]</label>
-							<textcolor>eewhite</textcolor>
+							<textcolor>PrimaryT</textcolor>
 							<scroll>false</scroll>
 							<visible>!Container.Content(episodes)</visible>
 						</control>
@@ -595,7 +602,7 @@
 							<font>Font-Condensed-S45</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode,,. ]$INFO[ListItem.Title]</label>
-							<textcolor>eewhite</textcolor>
+							<textcolor>PrimaryT</textcolor>
 							<scroll>false</scroll>
 							<visible>Container.Content(episodes)</visible>
 						</control>
@@ -613,7 +620,7 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Year,, • ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]$INFO[ListItem.RatingAndVotes, • ★ ,]</label>
-							<textcolor>aawhite</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<scroll>false</scroll>
 						</control>
 					</control>
@@ -630,7 +637,7 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Premiered,$LOCALIZE[41314],]</label>
-							<textcolor>aawhite</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<scroll>false</scroll>
 						</control>
 					</control>
@@ -647,7 +654,7 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Artist]</label>
-							<textcolor>aawhite</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<scroll>false</scroll>
 						</control>
 					</control>
@@ -664,7 +671,7 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Album]</label>
-							<textcolor>aawhite</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<scroll>false</scroll>
 						</control>
 					</control>
@@ -679,6 +686,7 @@
 							<width>49</width>
 							<height>49</height>
 							<texture>views/other/genre-icon.png</texture>
+							<colordiffuse>PrimaryT</colordiffuse>
 						</control>
 						<control type="label">
 							<posx>50</posx>
@@ -688,7 +696,7 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Genre]</label>
-							<textcolor>aawhite</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<scroll>false</scroll>
 						</control>
 					</control>
@@ -705,7 +713,7 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Genre]</label>
-							<textcolor>aawhite</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<scroll>false</scroll>
 						</control>
 					</control>
@@ -722,7 +730,7 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label>$INFO[Window(Home).Property(NextAired.Status)]</label>
-							<textcolor>aawhite</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<scroll>false</scroll>
 						</control>
 					</control>
@@ -739,7 +747,7 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label>$INFO[Window(Home).Property(NextAired.NextNumber),→ ,]$INFO[Window(Home).Property(NextAired.NextTitle), ,]$INFO[Window(Home).Property(NextAired.NextDate), (,)]</label>
-							<textcolor>ddwhite</textcolor>
+							<textcolor>PrimaryT</textcolor>
 							<scroll>false</scroll>
 						</control>
 					</control>
@@ -753,7 +761,7 @@
 							<posy>-6</posy>
 							<width>49</width>
 							<height>49</height>
-							<texture>views/other/director-icon.png</texture>
+							<texture colordiffuse="PrimaryT">views/other/director-icon.png</texture>
 						</control>
 						<control type="button" id="71">
 							<posx>50</posx>
@@ -763,8 +771,8 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Director]</label>
-							<textcolor>eewhite</textcolor>
-							<focusedcolor>eewhite</focusedcolor>
+							<textcolor>PrimaryT</textcolor>
+							<focusedcolor>PrimaryT</focusedcolor>
 							<onup>70</onup>
 							<ondown>70</ondown>
 							<onleft>9333</onleft>
@@ -786,7 +794,7 @@
 							<posy>-5</posy>
 							<width>49</width>
 							<height>49</height>
-							<texture>views/other/writer-icon.png</texture>
+							<texture colordiffuse="PrimaryT">views/other/writer-icon.png</texture>
 						</control>
 						<control type="label">
 							<posx>50</posx>
@@ -796,7 +804,7 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Writer]</label>
-							<textcolor>aawhite</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<scroll>false</scroll>
 						</control>
 					</control>
@@ -816,7 +824,7 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Property(TotalSeasons),$LOCALIZE[33054]: , • ]</label>
-							<textcolor>aawhite</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
@@ -827,7 +835,7 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Property(TotalEpisodes),$LOCALIZE[41813]: ,]</label>
-							<textcolor>aawhite</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
@@ -838,7 +846,7 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Property(TotalEpisodes), • $LOCALIZE[41311],]</label>
-							<textcolor>aawhite</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<scroll>false</scroll>
 							<visible>IntegerGreaterThan(ListItem.Property(unWatchedepisodes),0)</visible>
 						</control>
@@ -893,7 +901,7 @@
 						<width>1045</width>
 						<height>270</height>
 						<label>$INFO[Window(Home).Property(MB3.Plot)]</label>
-						<textcolor>bbwhite</textcolor>
+						<textcolor>SecondaryT</textcolor>
 						<align>justify</align>
 						<font>Font-Condensed-S40</font>
 						<autoscroll time="2000" delay="10000" repeat="10000">Window.IsActive(movieinformation) + !Control.HasFocus(70) + [Control.HasFocus(9333) | Control.HasFocus(71) | ControlGroup(9336).HasFocus] + !Window.IsActive(3004)</autoscroll>
@@ -906,7 +914,7 @@
 						<posy>15</posy>
 						<width>6</width>
 						<height>244</height>
-						<texture border="1">views/other/scrollbar-sq.png</texture>
+						<texture colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texture>
 						<visible>Control.IsVisible(70)</visible>
 						<animation effect="fade" start="25" end="10" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(70)">Conditional</animation>
 					</control>
@@ -922,8 +930,8 @@
 						<onright condition="!IntegerGreaterThan(Container(50).NumItems,0)">SetProperty(BounceRight,1,Home)</onright>
 						<onright condition="IntegerGreaterThan(Container(50).NumItems,0)">SendClick(2003,5)</onright>
 						<onright condition="IntegerGreaterThan(Container(50).NumItems,0)">SetFocus(9334)</onright>
-						<texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
-						<texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+						<texturesliderbar colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texturesliderbar>
+						<texturesliderbarfocus colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
 						<orientation>vertical</orientation>
 						<showonepage>false</showonepage>
 						<animation effect="fade" start="80" end="35" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(70)">Conditional</animation>
@@ -966,27 +974,44 @@
 						<viewtype label="actor list">list</viewtype>
 						<itemlayout height="60">
 							<control type="label">
-								<posx>0</posx>
+								<posx>10</posx>
 								<posy>0</posy>
-								<width>1190</width>
+								<width>1180</width>
 								<height>60</height>
 								<label>$INFO[ListItem.label]</label>
 								<font>Font-Condensed-S40</font>
-								<textcolor>aawhite</textcolor>
-								<selectedcolor>white</selectedcolor>
+								<textcolor>SecondaryT</textcolor>
+								<selectedcolor>SecondaryT</selectedcolor>
 								<align>left</align>
 								<aligny>center</aligny>
 								<scroll>false</scroll>
 							</control>
 						</itemlayout>
 						<focusedlayout height="60">
-							<control type="label">
+							<control type="image">
 								<posx>0</posx>
 								<posy>0</posy>
 								<width>1190</width>
 								<height>60</height>
+								<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+								<animation effect="slide" start="0,83" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(9333).OnPrevious">Focus</animation>
+								<animation effect="slide" start="0,-83" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(9333).OnNext">Focus</animation>
+								<include>visiblehidefadeinfo</include>
+							</control>
+							<control type="image"> <!--focused background left edge -->
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>5</width>
+								<height>60</height>
+								<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+							</control>
+							<control type="label">
+								<posx>10</posx>
+								<posy>0</posy>
+								<width>1180</width>
+								<height>60</height>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>eewhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<font>Font-Condensed-S40</font>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -1000,7 +1025,7 @@
 						<posy>220</posy>
 						<width>6</width>
 						<height>687</height>
-						<texture border="1">views/other/scrollbar-sq.png</texture>
+						<texture colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texture>
 						<visible>Control.IsVisible(151)</visible>
 						<animation effect="fade" start="25" end="10" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(151)">Conditional</animation>
 					</control>
@@ -1010,8 +1035,8 @@
 						<posy>220</posy>
 						<width>6</width>
 						<height>687</height>
-						<texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
-						<texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+						<texturesliderbar colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texturesliderbar>
+						<texturesliderbarfocus colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
 						<orientation>vertical</orientation>
 						<showonepage>false</showonepage>
 						<animation effect="fade" start="80" end="35" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(151)">Conditional</animation>
@@ -1054,7 +1079,7 @@
 					<height>60</height>
 					<label>$LOCALIZE[21371]</label>
 					<font>Font-Condensed-S45</font>
-					<textcolor>eewhite</textcolor>
+					<textcolor>PrimaryT</textcolor>
 					<align>left</align>
 					<scroll>false</scroll>
 				</control>
@@ -1064,9 +1089,9 @@
 					<posy>220</posy>
 					<width>458</width>
 					<height>687</height>
-					<texture background="true">$VAR[VideoInfoThumb]</texture>
+					<texture background="true">$VAR[InfoListPoster]</texture>
 					<include>listEndAnimation</include>
-					<aspectratio>scale</aspectratio>
+					<aspectratio>keep</aspectratio>
 				</control>
 				<control type="image">
 					<description>Shadow</description>

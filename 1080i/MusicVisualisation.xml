@@ -37,10 +37,10 @@
 				<animation effect="slide" start="0,0" end="0,-70" time="300" tween="cubic" easing="inout" condition="Window.IsActive(musicosd) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
 				<control type="image">
 					<posx>0</posx>
-					<posy>600</posy>
+					<posy>1000</posy>
 					<width>1920</width>
-					<height>740</height>
-					<texture border="1,401,1,45">osd/fullscreen/osd-back-info.png</texture>
+					<height>300</height>
+					<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 				</control>
 				<control type="group">
 					<animation effect="slide" start="0,0" end="0,213" time="300" tween="cubic" easing="inout" condition="[Player.ShowInfo | Player.Paused] + !Window.IsActive(musicosd)">Conditional</animation>
@@ -64,7 +64,7 @@
 						<width>360</width>
 						<height>25</height>
 						<label>$INFO[Player.Time(hh:mm:ss)]$INFO[Player.Duration(hh:mm:ss), / ,]</label>
-						<textcolor>aawhite</textcolor>
+						<textcolor>SecondaryT</textcolor>
 						<font>Font-Condensed-S34</font>
 						<align>left</align>
 					</control>
@@ -76,7 +76,7 @@
 						<height>25</height>
 						<label>$INFO[Player.SeekOffset,$LOCALIZE[773] ,]</label>
 						<scroll>false</scroll>
-						<textcolor>aawhite</textcolor>
+						<textcolor>SecondaryT</textcolor>
 						<font>Font-Condensed-S34</font>
 						<align>right</align>
 						<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding</visible>
@@ -99,7 +99,7 @@
 							<posy>885</posy>
 							<width>140</width>
 							<height>100</height>
-							<colordiffuse>bbwhite</colordiffuse>
+							<colordiffuse>PrimaryT</colordiffuse>
 							<texture fallback="flags/audioosd/na.png">$INFO[MusicPlayer.Codec,flags/audioosd/,.png]</texture>
 						</control>
 						<control type="label">
@@ -108,7 +108,7 @@
 							<width>1360</width>
 							<height>56</height>
 							<label>[UPPERCASE]$LOCALIZE[13350][/UPPERCASE]</label>
-							<textcolor>99FFFFFF</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<font>Font-Condensed-S50</font>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -121,7 +121,7 @@
 							<width>1360</width>
 							<height>56</height>
 							<label>[UPPERCASE]$LOCALIZE[112][/UPPERCASE]</label>
-							<textcolor>99FFFFFF</textcolor>
+							<textcolor>SecondaryT</textcolor>
 							<font>Font-Condensed-S50</font>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -143,7 +143,7 @@
 								<width min="0" max="400">auto</width>
 								<height>100</height>
 								<label>[B]$INFO[MusicPlayer.ChannelNumber][/B]</label>
-								<textcolor>99FFFFFF</textcolor>
+								<textcolor>SecondaryT</textcolor>
 								<font>Font-Condensed-S100</font>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -155,7 +155,7 @@
 								<width>900</width>
 								<height>100</height>
 								<label>[UPPERCASE]$INFO[MusicPlayer.ChannelName, ,][/UPPERCASE]</label>
-								<textcolor>99FFFFFF</textcolor>
+								<textcolor>SecondaryT</textcolor>
 								<font>Font-Condensed-S50</font>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -167,27 +167,27 @@
 							<control type="group">
 								<visible>Skin.HasSetting(CDArt.Enabled)</visible>
 								<control type="image">
-									<posx>100</posx>
-									<posy>-10</posy>
-									<width>236</width>
-									<height>236</height>
+									<posx>30</posx>
+									<posy>-20</posy>
+									<width>280</width>
+									<height>280</height>
 									<texture>osd/fullscreen/cd.png</texture>
 									<animation effect="rotate" center="auto" start="360" end="0" time="2500" loop="true" condition="!Player.Paused">Conditional</animation>
 								</control>
 								<control type="image">
-									<posx>108</posx>
-									<posy>-2</posy>
-									<width>220</width>
-									<height>220</height>
+									<posx>38</posx>
+									<posy>-12</posy>
+									<width>270</width>
+									<height>270</height>
 									<texture diffuse="osd/fullscreen/cd-diffuse.png" background="true">$INFO[Player.FolderPath,,cdart.png]</texture>
 									<animation effect="rotate" center="auto" start="360" end="0" time="2500" loop="true" condition="!Player.Paused">Conditional</animation>
 								</control>
 							</control>
 							<control type="image">
-								<posx>80</posx>
-								<posy>67</posy>
-								<width>276</width>
-								<height>276</height>
+								<posx>10</posx>
+								<posy>57</posy>
+								<width>320</width>
+								<height>320</height>
 								<texture background="true" fallback="views/fallbacks/DefaultAudio.png/square-small.png">$INFO[Player.Art(thumb)]</texture>
 								<bordertexture border="30">osd/fullscreen/cover-shadow.png</bordertexture>
 								<bordersize>20</bordersize>
@@ -200,7 +200,7 @@
 								<height>56</height>
 								<label>$INFO[MusicPlayer.PlaylistPosition,,. ]$INFO[MusicPlayer.Title]</label>
 								<label2>$INFO[MusicPlayer.Rating,★ ,.0]</label2>
-								<disabledcolor>bbwhite</disabledcolor>
+								<disabledcolor>PrimaryT</disabledcolor>
 								<font>Font-Condensed-S50-B</font>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -212,7 +212,7 @@
 								<width>1460</width>
 								<height>44</height>
 								<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, • ,]$INFO[MusicPlayer.Year, • ,]</label>
-								<textcolor>aawhite</textcolor>
+								<textcolor>PrimaryT</textcolor>
 								<font>Font-Condensed-S36-B</font>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -224,7 +224,7 @@
 								<width>1460</width>
 								<height>44</height>
 								<label>$INFO[MusicPlayer.Genre]</label>
-								<textcolor>88FFFFFF</textcolor>
+								<textcolor>SecondaryT</textcolor>
 								<font>Font-Condensed-S36</font>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -236,7 +236,7 @@
 								<width>1460</width>
 								<height>44</height>
 								<label>$INFO[MusicPlayer.Offset(1).Artist,$LOCALIZE[19031]: ,]$INFO[MusicPlayer.Offset(1).Title, - ,]</label>
-								<textcolor>88FFFFFF</textcolor>
+								<textcolor>SecondaryT</textcolor>
 								<font>Font-Condensed-S36</font>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -314,7 +314,7 @@
 				<texture background="true">special://skin/extras/fade/vignette.png</texture>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<visible>!Skin.HasSetting(musicvis.hidetext) + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
-			    <visible> ![Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(musicosd)]</visible>
+				<visible> ![Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(musicosd)]</visible>
 			</control>
 		</control>
 		<!-- end -->

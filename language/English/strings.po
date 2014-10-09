@@ -578,11 +578,11 @@ msgstr ""
 #empty string with id 41449
 
 msgctxt "#41450"
-msgid "New movies"
+msgid "New Movies"
 msgstr ""
 
 msgctxt "#41451"
-msgid "New shows"
+msgid "New Shows"
 msgstr ""
 
 msgctxt "#41452"
@@ -1058,6 +1058,10 @@ msgctxt "#42234"
 msgid "Thumbnail list"
 msgstr ""
 
+msgctxt "#42235"
+msgid "Banner Fanart"
+msgstr ""
+
 #empty strings from id 42235 to 42249
 #Media types
 #From 42250 to 42260
@@ -1151,3 +1155,26 @@ msgctxt "#49247"
 msgid "Path to Music Art (Music Directory)"
 msgstr ""
 
+msgctxt "#49248"
+msgid "Highlight/Focus colour"
+msgstr 
+
+msgctxt "#49249"
+msgid "Set the Focus Colour"
+msgstr 
+
+msgctxt "#49250"
+msgid "Tile Colours"
+msgstr ""
+
+msgctxt "#49251"
+msgid "Show background on menu"
+msgstr ""
+
+msgctxt "#49253"
+msgid "Continuing"
+msgstr ""
+
+msgctxt "#49254"
+msgid "Memory Used:"
+msgstr ""

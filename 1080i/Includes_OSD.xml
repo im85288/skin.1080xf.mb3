@@ -68,15 +68,15 @@
             <include>BannerListInfoAnimation</include>
             <visible>[Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(fullscreenvideo)] + !Player.ShowCodec + !Window.IsActive(script-XBMC_Lyrics-main.xml) + !IsEmpty(Player.Chapter) + IntegerGreaterThan(Player.ChapterCount,0)</visible>
             <control type="button">
-                <posx>45</posx>
-                <posy>0</posy>
-                <width>355</width>
-                <height>194</height>
+                <posx>105</posx>
+                <posy>60</posy>
+                <width>235</width>
+                <height>76</height>
                 <label>$INFO[Player.Chapter,$LOCALIZE[21396] , / ]$INFO[Player.ChapterCount]</label>
                 <font>Font-Condensed-S34</font>
-                <disabledcolor>aawhite</disabledcolor>
+                <disabledcolor>PrimaryT</disabledcolor>
                 <texturefocus>-</texturefocus>
-                <texturenofocus border="150,90,150,90">overlays/volume/back-vf.png</texturenofocus>
+                <texturenofocus colordiffuse="PrimaryBG">windows/common/white.png</texturenofocus>
                 <align>center</align>
                 <enable>false</enable>
             </control>
@@ -96,11 +96,11 @@
                 <effect type="zoom" start="100" end="50" center="1569,97" tween="sine" easing="inout" time="300" />
             </animation>
             <control type="image">
-                <posx>1218</posx>
-                <posy>0</posy>
-                <width>702</width>
-                <height>194</height>
-                <texture>osd/fullscreen/osd-back-weatherclock.png</texture>
+                <posx>1318</posx>
+                <posy>60</posy>
+                <width>515</width>
+                <height>76</height>
+                <texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
                 <aspectratio>stretch</aspectratio>
             </control>
             <control type="group">
@@ -112,7 +112,7 @@
                     <posy>47</posy>
                     <width>100</width>
                     <height>100</height>
-                    <colordiffuse>aawhite</colordiffuse>
+                    <colordiffuse>PrimaryT</colordiffuse>
                     <texture>$INFO[Weather.FanartCode,weather/small/,.png]</texture>
                 </control>
                 <control type="label">
@@ -123,7 +123,7 @@
                     <height>34</height>
                     <label>$INFO[Weather.Temperature]</label>
                     <font>Font-Condensed-S34</font>
-                    <textcolor>aawhite</textcolor>
+                    <textcolor>PrimaryT</textcolor>
                     <align>right</align>
                     <scroll>false</scroll>
                     <visible>Weather.IsFetched</visible>
@@ -138,7 +138,7 @@
                     <posy>47</posy>
                     <width>100</width>
                     <height>100</height>
-                    <texture>osd/fullscreen/weather-loading-back.png</texture>
+                    <texture colordiffuse="PrimaryT">osd/fullscreen/weather-loading-back.png</texture>
                 </control>
                 <control type="image">
                     <description>Weather loading indicator</description>
@@ -146,7 +146,7 @@
                     <posy>47</posy>
                     <width>100</width>
                     <height>100</height>
-                    <texture>osd/fullscreen/weather-loading.png</texture>
+                    <texture colordiffuse="PrimaryT">osd/fullscreen/weather-loading.png</texture>
                     <animation effect="rotate" center="auto" start="360" end="0" time="1000" loop="true" condition="stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)">Conditional</animation>
                 </control>
             </control>
@@ -176,7 +176,7 @@
                 <height>34</height>
                 <label>$INFO[System.Time(hh)]:$INFO[System.Time(mm)]</label>
                 <font>Font-Condensed-S34</font>
-                <textcolor>aawhite</textcolor>
+                <textcolor>PrimaryT</textcolor>
                 <align>right</align>
                 <scroll>false</scroll>
             </control>
@@ -199,7 +199,7 @@
                     <height>34</height>
                     <label>$INFO[Player.FinishTime(hh:mm)]</label>
                     <font>Font-Condensed-S34</font>
-                    <textcolor>aawhite</textcolor>
+                    <textcolor>PrimaryT</textcolor>
                     <align>right</align>
                     <scroll>false</scroll>
                 </control>

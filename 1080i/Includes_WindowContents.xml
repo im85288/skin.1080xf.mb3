@@ -11,6 +11,7 @@
         <height>1080</height>
         <aspectratio>stretch</aspectratio>
     </include>
+    
 
 <!-- ================================================== -->
 <!-- Common Items: Shutdown, Options, Clock etc. -->
@@ -23,7 +24,8 @@
         </control>
         <control type="image">
             <include>FullscreenDimensions</include>
-            <texture background="true">special://skin/extras/fade/overlay.png</texture>
+            <texture colordiffuse="HomeBG">special://skin/extras/backgrounds/white.png</texture>
+            <visible>!Control.IsVisible(553) | [Control.IsVisible(553) + Window.IsActive(movieinformation)]</visible>
         </control>
     </include>
 
@@ -366,8 +368,8 @@
         <font>Font-Condensed-S40</font>
         <textoffsetx>110</textoffsetx>
         <textwidth>318</textwidth>
-        <textcolor>99FFFFFF</textcolor>
-        <focusedcolor>eewhite</focusedcolor>
+        <textcolor>SecondaryT</textcolor>
+        <focusedcolor>PrimaryT</focusedcolor>
         <align>left</align>
         <animation effect="fade" start="64.435" end="100" time="300" tween="sine" easing="inout" reversible="false">Focus</animation>
     </include>

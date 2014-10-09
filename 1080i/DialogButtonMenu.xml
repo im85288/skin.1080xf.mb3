@@ -244,7 +244,7 @@
                     <posy>433</posy>
                     <width>100</width>
                     <height>100</height>
-                    <texture>buttons/shutdown_nofo.png</texture>
+                    <texture colordiffuse="PrimaryT">buttons/shutdown_nofo.png</texture>
                 </control>
                 <control type="label">
                     <posx>157</posx>
@@ -253,7 +253,7 @@
                     <height>100</height>
                     <label>$LOCALIZE[41507]</label>
                     <font>Font-Condensed-S34-B</font>
-                    <textcolor>eewhite</textcolor>
+                    <textcolor>PrimaryT</textcolor>
                     <shadowcolor>22000000</shadowcolor>
                 </control>
             </control>          

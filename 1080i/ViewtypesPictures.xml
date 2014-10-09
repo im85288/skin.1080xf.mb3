@@ -16,7 +16,7 @@
             	<width>560</width>
             	<height>30</height>
             	<font>Font-Condensed-S29-B</font>
-            	<textcolor>77white</textcolor>
+            	<textcolor>SecondaryT</textcolor>
             	<shadowcolor>22000000</shadowcolor>
             	<label>$INFO[Control.GetLabel(3)]</label>
             </control>
@@ -26,7 +26,7 @@
                 <posy>187</posy>
                 <height>704</height>
                 <width>1424</width>
-                <texture border="4">views/list/panel/panel.png</texture>
+                <texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
             </control>
             <control type="image">
                 <description>Shadow</description>
@@ -69,8 +69,8 @@
                         <font>Font-Condensed-S34-B</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Label]</label>
-                        <textcolor>aawhite</textcolor>
-                        <selectedcolor>aawhite</selectedcolor>
+                        <textcolor>PrimaryT</textcolor>
+                        <selectedcolor>PrimaryT</selectedcolor>
                         <scroll>false</scroll>
                         <visible>IsEmpty(ListItem.PictureResolution) + IsEmpty(ListItem.PictureDateTime)</visible>
                     </control>
@@ -83,8 +83,8 @@
                         <font>Font-Condensed-S34-B</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Label]</label>
-                        <textcolor>aawhite</textcolor>
-                        <selectedcolor>aawhite</selectedcolor>
+                        <textcolor>PrimaryT</textcolor>
+                        <selectedcolor>PrimaryT</selectedcolor>
                         <scroll>false</scroll>
                         <visible>![IsEmpty(ListItem.PictureResolution) + IsEmpty(ListItem.PictureDateTime)]</visible>
                     </control>
@@ -97,8 +97,8 @@
                         <font>Font-Condensed-S28</font>
                         <align>left</align>
                         <label>$INFO[ListItem.PictureResolution]$INFO[ListItem.PictureDateTime, [COLOR=44FFFFFF]/[/COLOR] ,]</label>
-                        <textcolor>99FFFFFF</textcolor>
-                        <selectedcolor>99FFFFFF</selectedcolor>
+                        <textcolor>SecondaryT</textcolor>
+                        <selectedcolor>SecondaryT</selectedcolor>
                         <scroll>false</scroll>
                         <visible>![IsEmpty(ListItem.PictureResolution) + IsEmpty(ListItem.PictureDateTime)]</visible>
                     </control>
@@ -111,8 +111,8 @@
                         <font>Font-Condensed-S36</font>
                         <align>right</align>
                         <label>$INFO[ListItem.Label2, ,]</label>
-                        <textcolor>99FFFFFF</textcolor>
-                        <selectedcolor>99FFFFFF</selectedcolor>
+                        <textcolor>SecondaryT</textcolor>
+                        <selectedcolor>SecondaryT</selectedcolor>
                         <scroll>false</scroll>
                     </control>
                     <control type="image">
@@ -138,11 +138,19 @@
                         <posy>0</posy>
                         <width>1420</width>
                         <height>99</height>
-                        <texture border="150,1,150,1">views/other/focus.png</texture>
+                        <texture colordiffuse="TertiaryM">windows/common/white.png</texture>
                         <include>defaultfocusanim</include>
                         <include>visiblehidefadeinfo</include>
                         <visible>Control.HasFocus(50)</visible>
                     </control>
+                    <control type="image"> <!--focused background left edge -->
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>5</width>
+						<height>99</height>
+						<visible>Control.HasFocus(50)</visible>
+						<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+					</control>
                     <control type="image">
                         <posx>30</posx>
                         <posy>8</posy>
@@ -165,8 +173,8 @@
                             <font>Font-Condensed-S34-B</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Label]</label>
-                            <textcolor>eewhite</textcolor>
-                            <selectedcolor>eewhite</selectedcolor>
+                            <textcolor>PrimaryT</textcolor>
+                            <selectedcolor>PrimaryT</selectedcolor>
                             <visible>IsEmpty(ListItem.PictureResolution) + IsEmpty(ListItem.PictureDateTime)</visible>
                         </control>
                         <control type="label">
@@ -178,8 +186,8 @@
                             <font>Font-Condensed-S34-B</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Label]</label>
-                            <textcolor>eewhite</textcolor>
-                            <selectedcolor>eewhite</selectedcolor>
+                            <textcolor>PrimaryT</textcolor>
+                            <selectedcolor>PrimaryT</selectedcolor>
                             <visible>![IsEmpty(ListItem.PictureResolution) + IsEmpty(ListItem.PictureDateTime)]</visible>
                         </control>
                         <control type="label">
@@ -191,8 +199,8 @@
                             <font>Font-Condensed-S28</font>
                             <align>left</align>
                             <label>$INFO[ListItem.PictureResolution]$INFO[ListItem.PictureDateTime, [COLOR=61FFFFFF]/[/COLOR] ,]</label>
-                            <textcolor>D4FFFFFF</textcolor>
-                            <selectedcolor>D4FFFFFF</selectedcolor>
+                            <textcolor>SecondaryT</textcolor>
+                            <selectedcolor>SecondaryT</selectedcolor>
                             <scroll>false</scroll>
                             <visible>![IsEmpty(ListItem.PictureResolution) + IsEmpty(ListItem.PictureDateTime)]</visible>
                         </control>
@@ -205,8 +213,8 @@
                             <font>Font-Condensed-S36</font>
                             <align>right</align>
                             <label>$INFO[ListItem.Label2, ,]</label>
-                            <textcolor>D4FFFFFF</textcolor>
-                            <selectedcolor>D4FFFFFF</selectedcolor>
+                            <textcolor>SecondaryT</textcolor>
+                            <selectedcolor>SecondaryT</selectedcolor>
                             <scroll>false</scroll>
                         </control>
                     </control>
@@ -225,8 +233,8 @@
                 <onright condition="Skin.HasSetting(KioskMode)">50</onright>
                 <ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
                 <ondown condition="Skin.HasSetting(KioskMode)">50</ondown>
-                <texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
-                <texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+                <texturesliderbar colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texturesliderbar>
+                <texturesliderbarfocus colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
                 <orientation>vertical</orientation>
                 <showonepage>false</showonepage>
                 <animation effect="fade" start="45" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>

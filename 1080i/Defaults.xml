@@ -7,9 +7,9 @@
         <align>left</align>
         <aligny>center</aligny>
         <font>Font-Condensed-S32</font>
-        <textcolor>white</textcolor>
-        <focusedcolor>white</focusedcolor>
-        <selectedcolor>white</selectedcolor>
+        <textcolor>PrimaryT</textcolor>
+        <focusedcolor>PrimaryT</focusedcolor>
+        <selectedcolor>PrimaryT</selectedcolor>
         <disabledcolor>black</disabledcolor>
         <scroll>true</scroll>
     </default>
@@ -69,8 +69,8 @@
         <textcolor>grey</textcolor>
         <focusedcolor>blue</focusedcolor>
         <disabledcolor>black</disabledcolor>
-        <textureradiofocus>buttons/radio/radio-button-fo.png</textureradiofocus>
-        <textureradionofocus>buttons/radio/radio-button-nf.png</textureradionofocus>
+        <textureradiofocus>special://skin/extras/icons/radio-light-fo.png</textureradiofocus>
+        <textureradionofocus>special://skin/extras/icons/radio-light-nf.png</textureradionofocus>
         <textoffsetx>5</textoffsetx>
         <pulseonselect>false</pulseonselect>
     </default>
@@ -81,10 +81,10 @@
         <height>60</height>
         <label>-</label>
         <font>Font-Condensed-S32</font>
-        <textureup>buttons/spinctrl/arrow-up-nf.png</textureup>
-        <texturedown>buttons/spinctrl/arrow-down-nf.png</texturedown>
-        <textureupfocus>buttons/spinctrl/arrow-up-fo.png</textureupfocus>
-        <texturedownfocus>buttons/spinctrl/arrow-down-fo.png</texturedownfocus>
+        <textureup colordiffuse="PrimaryT">buttons/spinctrl/arrow-up-nf.png</textureup>
+        <texturedown colordiffuse="PrimaryT">buttons/spinctrl/arrow-down-nf.png</texturedown>
+        <textureupfocus colordiffuse="PrimaryT">buttons/spinctrl/arrow-up-fo.png</textureupfocus>
+        <texturedownfocus colordiffuse="PrimaryT">buttons/spinctrl/arrow-down-fo.png</texturedownfocus>
         <spinwidth>32</spinwidth>
         <spinheight>60</spinheight>
         <textcolor>grey</textcolor>
@@ -102,10 +102,10 @@
         <posy>0</posy>
         <width>64</width>
         <height>60</height>
-        <textureup>buttons/spinctrl/arrow-up-nf.png</textureup>
-        <texturedown>buttons/spinctrl/arrow-down-nf.png</texturedown>
-        <textureupfocus>buttons/spinctrl/arrow-up-fo.png</textureupfocus>
-        <texturedownfocus>buttons/spinctrl/arrow-down-fo.png</texturedownfocus>
+        <textureup colordiffuse="PrimaryT">buttons/spinctrl/arrow-up-nf.png</textureup>
+        <texturedown colordiffuse="PrimaryT">buttons/spinctrl/arrow-down-nf.png</texturedown>
+        <textureupfocus colordiffuse="PrimaryT">buttons/spinctrl/arrow-up-fo.png</textureupfocus>
+        <texturedownfocus colordiffuse="PrimaryT">buttons/spinctrl/arrow-down-fo.png</texturedownfocus>
         <spinwidth>32</spinwidth>
         <spinheight>60</spinheight>
         <font>Font-Condensed-S32</font>

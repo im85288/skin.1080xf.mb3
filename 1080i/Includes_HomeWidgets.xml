@@ -97,7 +97,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(InProgressMovieMB3.1.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(InProgressMovieMB3.1.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(InProgressMovieMB3.1.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(InProgressMovieMB3.1.Plot)]$INFO[Window(Home).Property(InProgressMovieMB3.1.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(InProgressMovieMB3.1.ShortPlot)]$INFO[Window(Home).Property(InProgressMovieMB3.1.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(InProgressMovieMB3.1.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(InProgressMovieMB3.1.Year),, ]$INFO[Window(Home).Property(InProgressMovieMB3.1.Runtime),,min]$INFO[Window(Home).Property(InProgressMovieMB3.1.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(InProgressMovieMB3.1.Art(poster))]</property>
@@ -113,7 +113,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(InProgressMovieMB3.2.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(InProgressMovieMB3.2.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(InProgressMovieMB3.2.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(InProgressMovieMB3.2.Plot)]$INFO[Window(Home).Property(InProgressMovieMB3.2.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(InProgressMovieMB3.2.ShortPlot)]$INFO[Window(Home).Property(InProgressMovieMB3.2.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(InProgressMovieMB3.2.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(InProgressMovieMB3.2.Year),, ]$INFO[Window(Home).Property(InProgressMovieMB3.2.Runtime),,min]$INFO[Window(Home).Property(InProgressMovieMB3.2.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(InProgressMovieMB3.2.Art(poster))]</property>
@@ -129,7 +129,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(InProgressMovieMB3.3.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(InProgressMovieMB3.3.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(InProgressMovieMB3.3.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(InProgressMovieMB3.3.Plot)]$INFO[Window(Home).Property(InProgressMovieMB3.3.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(InProgressMovieMB3.3.ShortPlot)]$INFO[Window(Home).Property(InProgressMovieMB3.3.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(InProgressMovieMB3.3.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(InProgressMovieMB3.3.Year),, ]$INFO[Window(Home).Property(InProgressMovieMB3.3.Runtime),,min]$INFO[Window(Home).Property(InProgressMovieMB3.3.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(InProgressMovieMB3.3.Art(poster))]</property>
@@ -145,7 +145,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(InProgressMovieMB3.4.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(InProgressMovieMB3.4.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(InProgressMovieMB3.4.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(InProgressMovieMB3.4.Plot)]$INFO[Window(Home).Property(InProgressMovieMB3.4.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(InProgressMovieMB3.4.ShortPlot)]$INFO[Window(Home).Property(InProgressMovieMB3.4.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(InProgressMovieMB3.4.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(InProgressMovieMB3.4.Year),, ]$INFO[Window(Home).Property(InProgressMovieMB3.4.Runtime),,min]$INFO[Window(Home).Property(InProgressMovieMB3.4.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(InProgressMovieMB3.4.Art(poster))]</property>
@@ -161,7 +161,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(InProgressMovieMB3.5.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(InProgressMovieMB3.5.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(InProgressMovieMB3.5.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(InProgressMovieMB3.5.Plot)]$INFO[Window(Home).Property(InProgressMovieMB3.5.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(InProgressMovieMB3.5.ShortPlot)]$INFO[Window(Home).Property(InProgressMovieMB3.5.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(InProgressMovieMB3.5.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(InProgressMovieMB3.5.Year),, ]$INFO[Window(Home).Property(InProgressMovieMB3.5.Runtime),,min]$INFO[Window(Home).Property(InProgressMovieMB3.5.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(InProgressMovieMB3.5.Art(poster))]</property>
@@ -177,7 +177,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(InProgressMovieMB3.6.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(InProgressMovieMB3.6.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(InProgressMovieMB3.6.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(InProgressMovieMB3.6.Plot)]$INFO[Window(Home).Property(InProgressMovieMB3.6.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(InProgressMovieMB3.6.ShortPlot)]$INFO[Window(Home).Property(InProgressMovieMB3.6.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(InProgressMovieMB3.6.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(InProgressMovieMB3.6.Year),, ]$INFO[Window(Home).Property(InProgressMovieMB3.6.Runtime),,min]$INFO[Window(Home).Property(InProgressMovieMB3.6.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(InProgressMovieMB3.6.Art(poster))]</property>
@@ -193,7 +193,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(InProgressMovieMB3.7.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(InProgressMovieMB3.7.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(InProgressMovieMB3.7.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(InProgressMovieMB3.7.Plot)]$INFO[Window(Home).Property(InProgressMovieMB3.7.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(InProgressMovieMB3.7.ShortPlot)]$INFO[Window(Home).Property(InProgressMovieMB3.7.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(InProgressMovieMB3.7.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(InProgressMovieMB3.7.Year),, ]$INFO[Window(Home).Property(InProgressMovieMB3.7.Runtime),,min]$INFO[Window(Home).Property(InProgressMovieMB3.7.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(InProgressMovieMB3.7.Art(poster))]</property>
@@ -209,7 +209,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(InProgressMovieMB3.8.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(InProgressMovieMB3.8.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(InProgressMovieMB3.8.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(InProgressMovieMB3.8.Plot)]$INFO[Window(Home).Property(InProgressMovieMB3.8.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(InProgressMovieMB3.8.ShortPlot)]$INFO[Window(Home).Property(InProgressMovieMB3.8.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(InProgressMovieMB3.8.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(InProgressMovieMB3.8.Year),, ]$INFO[Window(Home).Property(InProgressMovieMB3.8.Runtime),,min]$INFO[Window(Home).Property(InProgressMovieMB3.8.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(InProgressMovieMB3.8.Art(poster))]</property>
@@ -225,7 +225,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(InProgressMovieMB3.9.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(InProgressMovieMB3.9.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(InProgressMovieMB3.9.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(InProgressMovieMB3.9.Plot)]$INFO[Window(Home).Property(InProgressMovieMB3.9.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(InProgressMovieMB3.9.ShortPlot)]$INFO[Window(Home).Property(InProgressMovieMB3.9.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(InProgressMovieMB3.9.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(InProgressMovieMB3.9.Year),, ]$INFO[Window(Home).Property(InProgressMovieMB3.9.Runtime),,min]$INFO[Window(Home).Property(InProgressMovieMB3.9.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(InProgressMovieMB3.9.Art(poster))]</property>
@@ -241,7 +241,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(InProgressMovieMB3.10.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(InProgressMovieMB3.10.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(InProgressMovieMB3.10.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(InProgressMovieMB3.10.Plot)]$INFO[Window(Home).Property(InProgressMovieMB3.10.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(InProgressMovieMB3.10.ShortPlot)]$INFO[Window(Home).Property(InProgressMovieMB3.10.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(InProgressMovieMB3.10.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(InProgressMovieMB3.10.Year),, ]$INFO[Window(Home).Property(InProgressMovieMB3.10.Runtime),,min]$INFO[Window(Home).Property(InProgressMovieMB3.10.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(InProgressMovieMB3.10.Art(poster))]</property>
@@ -257,7 +257,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(SuggestedMovieMB3.1.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(SuggestedMovieMB3.1.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(SuggestedMovieMB3.1.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(SuggestedMovieMB3.1.Plot)]$INFO[Window(Home).Property(SuggestedMovieMB3.1.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(SuggestedMovieMB3.1.ShortPlot)]$INFO[Window(Home).Property(SuggestedMovieMB3.1.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(SuggestedMovieMB3.1.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(SuggestedMovieMB3.1.Year),, ]$INFO[Window(Home).Property(SuggestedMovieMB3.1.Runtime),,min]$INFO[Window(Home).Property(SuggestedMovieMB3.1.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(SuggestedMovieMB3.1.Art(poster))]</property>
@@ -274,7 +274,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(SuggestedMovieMB3.2.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(SuggestedMovieMB3.2.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(SuggestedMovieMB3.2.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(SuggestedMovieMB3.2.Plot)]$INFO[Window(Home).Property(SuggestedMovieMB3.2.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(SuggestedMovieMB3.2.ShortPlot)]$INFO[Window(Home).Property(SuggestedMovieMB3.2.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(SuggestedMovieMB3.2.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(SuggestedMovieMB3.2.Year),, ]$INFO[Window(Home).Property(SuggestedMovieMB3.2.Runtime),,min]$INFO[Window(Home).Property(SuggestedMovieMB3.2.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(SuggestedMovieMB3.2.Art(poster))]</property>
@@ -291,7 +291,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(SuggestedMovieMB3.3.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(SuggestedMovieMB3.3.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(SuggestedMovieMB3.3.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(SuggestedMovieMB3.3.Plot)]$INFO[Window(Home).Property(SuggestedMovieMB3.3.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(SuggestedMovieMB3.3.ShortPlot)]$INFO[Window(Home).Property(SuggestedMovieMB3.3.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(SuggestedMovieMB3.3.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(SuggestedMovieMB3.3.Year),, ]$INFO[Window(Home).Property(SuggestedMovieMB3.3.Runtime),,min]$INFO[Window(Home).Property(SuggestedMovieMB3.3.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(SuggestedMovieMB3.3.Art(poster))]</property>
@@ -308,7 +308,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(SuggestedMovieMB3.4.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(SuggestedMovieMB3.4.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(SuggestedMovieMB3.4.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(SuggestedMovieMB3.4.Plot)]$INFO[Window(Home).Property(SuggestedMovieMB3.4.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(SuggestedMovieMB3.4.ShortPlot)]$INFO[Window(Home).Property(SuggestedMovieMB3.4.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(SuggestedMovieMB3.4.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(SuggestedMovieMB3.4.Year),, ]$INFO[Window(Home).Property(SuggestedMovieMB3.4.Runtime),,min]$INFO[Window(Home).Property(SuggestedMovieMB3.4.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(SuggestedMovieMB3.4.Art(poster))]</property>
@@ -325,7 +325,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(SuggestedMovieMB3.5.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(SuggestedMovieMB3.5.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(SuggestedMovieMB3.5.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(SuggestedMovieMB3.5.Plot)]$INFO[Window(Home).Property(SuggestedMovieMB3.5.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(SuggestedMovieMB3.5.ShortPlot)]$INFO[Window(Home).Property(SuggestedMovieMB3.5.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(SuggestedMovieMB3.5.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(SuggestedMovieMB3.5.Year),, ]$INFO[Window(Home).Property(SuggestedMovieMB3.5.Runtime),,min]$INFO[Window(Home).Property(SuggestedMovieMB3.5.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(SuggestedMovieMB3.5.Art(poster))]</property>
@@ -342,7 +342,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(RandomMovieMB3.1.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(RandomMovieMB3.1.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(RandomMovieMB3.1.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(RandomMovieMB3.1.Plot)]$INFO[Window(Home).Property(RandomMovieMB3.1.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(RandomMovieMB3.1.ShortPlot)]$INFO[Window(Home).Property(RandomMovieMB3.1.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(RandomMovieMB3.1.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(RandomMovieMB3.1.Year),, ]$INFO[Window(Home).Property(RandomMovieMB3.1.Runtime),,min]$INFO[Window(Home).Property(RandomMovieMB3.1.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(RandomMovieMB3.1.Art(poster))]</property>
@@ -359,7 +359,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(RandomEpisodeMB3.1.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(RandomEpisodeMB3.1.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(RandomEpisodeMB3.1.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(RandomEpisodeMB3.1.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(RandomEpisodeMB3.1.ShortPlot)]</property>
 			<property name="Title2">[B]$INFO[Window(Home).Property(RandomEpisodeMB3.1.ShowTitle)][/B]</property>
 			<property name="Title">$INFO[Window(Home).Property(RandomEpisodeMB3.1.EpisodeTitle),, • ]$INFO[Window(Home).Property(RandomEpisodeMB3.1.SeasonNo),S,]$INFO[Window(Home).Property(RandomEpisodeMB3.1.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(RandomEpisodeMB3.1.Art(tvshow.poster))]</property>
@@ -373,7 +373,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(RandomMovieMB3.2.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(RandomMovieMB3.2.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(RandomMovieMB3.2.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(RandomMovieMB3.2.Plot)]$INFO[Window(Home).Property(RandomMovieMB3.2.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(RandomMovieMB3.2.ShortPlot)]$INFO[Window(Home).Property(RandomMovieMB3.2.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(RandomMovieMB3.2.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(RandomMovieMB3.2.Year),, ]$INFO[Window(Home).Property(RandomMovieMB3.2.Runtime),,min]$INFO[Window(Home).Property(RandomMovieMB3.2.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(RandomMovieMB3.2.Art(poster))]</property>
@@ -390,7 +390,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(RandomEpisodeMB3.2.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(RandomEpisodeMB3.2.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(RandomEpisodeMB3.2.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(RandomEpisodeMB3.2.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(RandomEpisodeMB3.2.ShortPlot)]</property>
 			<property name="Title2">[B]$INFO[Window(Home).Property(RandomEpisodeMB3.2.ShowTitle)][/B]</property>
 			<property name="Title">$INFO[Window(Home).Property(RandomEpisodeMB3.2.EpisodeTitle),, • ]$INFO[Window(Home).Property(RandomEpisodeMB3.2.SeasonNo),S,]$INFO[Window(Home).Property(RandomEpisodeMB3.2.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(RandomEpisodeMB3.2.Art(tvshow.poster))]</property>
@@ -404,7 +404,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(RandomMovieMB3.3.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(RandomMovieMB3.3.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(RandomMovieMB3.3.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(RandomMovieMB3.3.Plot)]$INFO[Window(Home).Property(RandomMovieMB3.3.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(RandomMovieMB3.3.ShortPlot)]$INFO[Window(Home).Property(RandomMovieMB3.3.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(RandomMovieMB3.3.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(RandomMovieMB3.3.Year),, ]$INFO[Window(Home).Property(RandomMovieMB3.3.Runtime),,min]$INFO[Window(Home).Property(RandomMovieMB3.3.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(RandomMovieMB3.3.Art(poster))]</property>
@@ -421,7 +421,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(RandomEpisodeMB3.3.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(RandomEpisodeMB3.3.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(RandomEpisodeMB3.3.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(RandomEpisodeMB3.3.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(RandomEpisodeMB3.3.ShortPlot)]</property>
 			<property name="Title2">[B]$INFO[Window(Home).Property(RandomEpisodeMB3.3.ShowTitle)][/B]</property>
 			<property name="Title">$INFO[Window(Home).Property(RandomEpisodeMB3.3.EpisodeTitle),, • ]$INFO[Window(Home).Property(RandomEpisodeMB3.3.SeasonNo),S,]$INFO[Window(Home).Property(RandomEpisodeMB3.3.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(RandomEpisodeMB3.3.Art(tvshow.poster))]</property>
@@ -435,7 +435,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(RandomMovieMB3.4.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(RandomMovieMB3.4.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(RandomMovieMB3.4.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(RandomMovieMB3.4.Plot)]$INFO[Window(Home).Property(RandomMovieMB3.4.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(RandomMovieMB3.4.ShortPlot)]$INFO[Window(Home).Property(RandomMovieMB3.4.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(RandomMovieMB3.4.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(RandomMovieMB3.4.Year),, ]$INFO[Window(Home).Property(RandomMovieMB3.4.Runtime),,min]$INFO[Window(Home).Property(RandomMovieMB3.4.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(RandomMovieMB3.4.Art(poster))]</property>
@@ -452,7 +452,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(RandomEpisodeMB3.4.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(RandomEpisodeMB3.4.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(RandomEpisodeMB3.4.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(RandomEpisodeMB3.4.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(RandomEpisodeMB3.4.ShortPlot)]</property>
 			<property name="Title2">[B]$INFO[Window(Home).Property(RandomEpisodeMB3.4.ShowTitle)][/B]</property>
 			<property name="Title">$INFO[Window(Home).Property(RandomEpisodeMB3.4.EpisodeTitle),, • ]$INFO[Window(Home).Property(RandomEpisodeMB3.4.SeasonNo),S,]$INFO[Window(Home).Property(RandomEpisodeMB3.4.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(RandomEpisodeMB3.4.Art(tvshow.poster))]</property>
@@ -466,7 +466,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(RandomMovieMB3.5.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(RandomMovieMB3.5.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(RandomMovieMB3.5.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(RandomMovieMB3.5.Plot)]$INFO[Window(Home).Property(RandomMovieMB3.5.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(RandomMovieMB3.5.ShortPlot)]$INFO[Window(Home).Property(RandomMovieMB3.5.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(RandomMovieMB3.5.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(RandomMovieMB3.5.Year),, ]$INFO[Window(Home).Property(RandomMovieMB3.5.Runtime),,min]$INFO[Window(Home).Property(RandomMovieMB3.5.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(RandomMovieMB3.5.Art(poster))]</property>
@@ -483,7 +483,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(RandomEpisodeMB3.5.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(RandomEpisodeMB3.5.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(RandomEpisodeMB3.5.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(RandomEpisodeMB3.5.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(RandomEpisodeMB3.5.ShortPlot)]</property>
 			<property name="Title2">[B]$INFO[Window(Home).Property(RandomEpisodeMB3.5.ShowTitle)][/B]</property>
 			<property name="Title">$INFO[Window(Home).Property(RandomEpisodeMB3.5.EpisodeTitle),, • ]$INFO[Window(Home).Property(RandomEpisodeMB3.5.SeasonNo),S,]$INFO[Window(Home).Property(RandomEpisodeMB3.5.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(RandomEpisodeMB3.5.Art(tvshow.poster))]</property>
@@ -497,7 +497,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(RandomMovieMB3.6.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(RandomMovieMB3.6.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(RandomMovieMB3.6.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(RandomMovieMB3.6.Plot)]$INFO[Window(Home).Property(RandomMovieMB3.6.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(RandomMovieMB3.6.ShortPlot)]$INFO[Window(Home).Property(RandomMovieMB3.6.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(RandomMovieMB3.6.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(RandomMovieMB3.6.Year),, ]$INFO[Window(Home).Property(RandomMovieMB3.6.Runtime),,min]$INFO[Window(Home).Property(RandomMovieMB3.6.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(RandomMovieMB3.6.Art(poster))]</property>
@@ -514,7 +514,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(RandomEpisodeMB3.6.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(RandomEpisodeMB3.6.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(RandomEpisodeMB3.6.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(RandomEpisodeMB3.6.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(RandomEpisodeMB3.6.ShortPlot)]</property>
 			<property name="Title2">[B]$INFO[Window(Home).Property(RandomEpisodeMB3.6.ShowTitle)][/B]</property>
 			<property name="Title">$INFO[Window(Home).Property(RandomEpisodeMB3.6.EpisodeTitle),, • ]$INFO[Window(Home).Property(RandomEpisodeMB3.6.SeasonNo),S,]$INFO[Window(Home).Property(RandomEpisodeMB3.6.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(RandomEpisodeMB3.6.Art(tvshow.poster))]</property>
@@ -528,7 +528,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(RandomMovieMB3.7.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(RandomMovieMB3.7.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(RandomMovieMB3.7.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(RandomMovieMB3.7.Plot)]$INFO[Window(Home).Property(RandomMovieMB3.7.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(RandomMovieMB3.7.ShortPlot)]$INFO[Window(Home).Property(RandomMovieMB3.7.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(RandomMovieMB3.7.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(RandomMovieMB3.7.Year),, ]$INFO[Window(Home).Property(RandomMovieMB3.7.Runtime),,min]$INFO[Window(Home).Property(RandomMovieMB3.7.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(RandomMovieMB3.7.Art(poster))]</property>
@@ -545,7 +545,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(RandomEpisodeMB3.7.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(RandomEpisodeMB3.7.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(RandomEpisodeMB3.7.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(RandomEpisodeMB3.7.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(RandomEpisodeMB3.7.ShortPlot)]</property>
 			<property name="Title2">[B]$INFO[Window(Home).Property(RandomEpisodeMB3.7.ShowTitle)][/B]</property>
 			<property name="Title">$INFO[Window(Home).Property(RandomEpisodeMB3.7.EpisodeTitle),, • ]$INFO[Window(Home).Property(RandomEpisodeMB3.7.SeasonNo),S,]$INFO[Window(Home).Property(RandomEpisodeMB3.7.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(RandomEpisodeMB3.7.Art(tvshow.poster))]</property>
@@ -559,7 +559,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(RandomMovieMB3.8.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(RandomMovieMB3.8.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(RandomMovieMB3.8.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(RandomMovieMB3.8.Plot)]$INFO[Window(Home).Property(RandomMovieMB3.8.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(RandomMovieMB3.8.ShortPlot)]$INFO[Window(Home).Property(RandomMovieMB3.8.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(RandomMovieMB3.8.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(RandomMovieMB3.8.Year),, ]$INFO[Window(Home).Property(RandomMovieMB3.8.Runtime),,min]$INFO[Window(Home).Property(RandomMovieMB3.8.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(RandomMovieMB3.8.Art(poster))]</property>
@@ -576,7 +576,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(RandomEpisodeMB3.8.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(RandomEpisodeMB3.8.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(RandomEpisodeMB3.8.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(RandomEpisodeMB3.8.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(RandomEpisodeMB3.8.ShortPlot)]</property>
 			<property name="Title2">[B]$INFO[Window(Home).Property(RandomEpisodeMB3.8.ShowTitle)][/B]</property>
 			<property name="Title">$INFO[Window(Home).Property(RandomEpisodeMB3.8.EpisodeTitle),, • ]$INFO[Window(Home).Property(RandomEpisodeMB3.8.SeasonNo),S,]$INFO[Window(Home).Property(RandomEpisodeMB3.8.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(RandomEpisodeMB3.8.Art(tvshow.poster))]</property>
@@ -590,7 +590,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(RandomMovieMB3.9.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(RandomMovieMB3.9.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(RandomMovieMB3.9.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(RandomMovieMB3.9.Plot)]$INFO[Window(Home).Property(RandomMovieMB3.9.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(RandomMovieMB3.9.ShortPlot)]$INFO[Window(Home).Property(RandomMovieMB3.9.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(RandomMovieMB3.9.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(RandomMovieMB3.9.Year),, ]$INFO[Window(Home).Property(RandomMovieMB3.9.Runtime),,min]$INFO[Window(Home).Property(RandomMovieMB3.9.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(RandomMovieMB3.9.Art(poster))]</property>
@@ -607,7 +607,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(RandomEpisodeMB3.9.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(RandomEpisodeMB3.9.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(RandomEpisodeMB3.9.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(RandomEpisodeMB3.9.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(RandomEpisodeMB3.9.ShortPlot)]</property>
 			<property name="Title2">[B]$INFO[Window(Home).Property(RandomEpisodeMB3.9.ShowTitle)][/B]</property>
 			<property name="Title">$INFO[Window(Home).Property(RandomEpisodeMB3.9.EpisodeTitle),, • ]$INFO[Window(Home).Property(RandomEpisodeMB3.9.SeasonNo),S,]$INFO[Window(Home).Property(RandomEpisodeMB3.9.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(RandomEpisodeMB3.9.Art(tvshow.poster))]</property>
@@ -621,7 +621,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(RandomMovieMB3.10.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(RandomMovieMB3.10.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(RandomMovieMB3.10.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(RandomMovieMB3.10.Plot)]$INFO[Window(Home).Property(RandomMovieMB3.10.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(RandomMovieMB3.10.ShortPlot)]$INFO[Window(Home).Property(RandomMovieMB3.10.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(RandomMovieMB3.10.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(RandomMovieMB3.10.Year),, ]$INFO[Window(Home).Property(RandomMovieMB3.10.Runtime),,min]$INFO[Window(Home).Property(RandomMovieMB3.10.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(RandomMovieMB3.10.Art(poster))]</property>
@@ -638,7 +638,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(RandomEpisodeMB3.10.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(RandomEpisodeMB3.10.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(RandomEpisodeMB3.10.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(RandomEpisodeMB3.10.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(RandomEpisodeMB3.10.ShortPlot)]</property>
 			<property name="Title2">[B]$INFO[Window(Home).Property(RandomEpisodeMB3.10.ShowTitle)][/B]</property>
 			<property name="Title">$INFO[Window(Home).Property(RandomEpisodeMB3.10.EpisodeTitle),, • ]$INFO[Window(Home).Property(RandomEpisodeMB3.10.SeasonNo),S,]$INFO[Window(Home).Property(RandomEpisodeMB3.10.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(RandomEpisodeMB3.10.Art(tvshow.poster))]</property>
@@ -1235,7 +1235,7 @@
 			<icon>$INFO[Window.Property(HomeWidget1.TrendingMovies.1.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget1.TrendingMovies.1.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget1.TrendingMovies.1.Rating)]$INFO[Window.Property(HomeWidget1.TrendingMovies.1.Year), • ,]</label2>
-			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.1.Trailer])</property>
+			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.1.Trailer]))</property>
 			<visible>!IsEmpty(Window.Property(HomeWidget1.TrendingMovies.1.Art(fanart)))</visible>
 		</item>
 		<item id="2">
@@ -1243,7 +1243,7 @@
 			<icon>$INFO[Window.Property(HomeWidget1.TrendingMovies.2.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget1.TrendingMovies.2.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget1.TrendingMovies.2.Rating)]$INFO[Window.Property(HomeWidget1.TrendingMovies.2.Year), • ,]</label2>
-			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.2.Trailer])</property>
+			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.2.Trailer]))</property>
 			<visible>!IsEmpty(Window.Property(HomeWidget1.TrendingMovies.2.Art(fanart)))</visible>
 		</item>
 		<item id="3">
@@ -1251,7 +1251,7 @@
 			<icon>$INFO[Window.Property(HomeWidget1.TrendingMovies.3.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget1.TrendingMovies.3.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget1.TrendingMovies.3.Rating)]$INFO[Window.Property(HomeWidget1.TrendingMovies.3.Year), • ,]</label2>
-			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.3.Trailer])</property>
+			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.3.Trailer]))</property>
 			<visible>!IsEmpty(Window.Property(HomeWidget1.TrendingMovies.3.Art(fanart)))</visible>
 		</item>
 		<item id="4">
@@ -1259,7 +1259,7 @@
 			<icon>$INFO[Window.Property(HomeWidget1.TrendingMovies.4.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget1.TrendingMovies.4.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget1.TrendingMovies.4.Rating)]$INFO[Window.Property(HomeWidget1.TrendingMovies.4.Year), • ,]</label2>
-			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.4.Trailer])</property>
+			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.4.Trailer]))</property>
 			<visible>!IsEmpty(Window.Property(HomeWidget1.TrendingMovies.4.Art(fanart)))</visible>
 		</item>
 		<item id="5">
@@ -1267,7 +1267,7 @@
 			<icon>$INFO[Window.Property(HomeWidget1.TrendingMovies.5.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget1.TrendingMovies.5.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget1.TrendingMovies.5.Rating)]$INFO[Window.Property(HomeWidget1.TrendingMovies.5.Year), • ,]</label2>
-			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.5.Trailer])</property>
+			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.5.Trailer]))</property>
 			<visible>!IsEmpty(Window.Property(HomeWidget1.TrendingMovies.5.Art(fanart)))</visible>
 		</item>
 		<item id="6">
@@ -1275,7 +1275,7 @@
 			<icon>$INFO[Window.Property(HomeWidget1.TrendingMovies.6.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget1.TrendingMovies.6.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget1.TrendingMovies.6.Rating)]$INFO[Window.Property(HomeWidget1.TrendingMovies.6.Year), • ,]</label2>
-			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.6.Trailer])</property>
+			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.6.Trailer]))</property>
 			<visible>!IsEmpty(Window.Property(HomeWidget1.TrendingMovies.6.Art(fanart)))</visible>
 		</item>
 		<item id="7">
@@ -1283,7 +1283,7 @@
 			<icon>$INFO[Window.Property(HomeWidget1.TrendingMovies.7.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget1.TrendingMovies.7.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget1.TrendingMovies.7.Rating)]$INFO[Window.Property(HomeWidget1.TrendingMovies.7.Year), • ,]</label2>
-			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.7.Trailer])</property>
+			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.7.Trailer]))</property>
 			<visible>!IsEmpty(Window.Property(HomeWidget1.TrendingMovies.7.Art(fanart)))</visible>
 		</item>
 		<item id="8">
@@ -1291,7 +1291,7 @@
 			<icon>$INFO[Window.Property(HomeWidget1.TrendingMovies.8.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget1.TrendingMovies.8.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget1.TrendingMovies.8.Rating)]$INFO[Window.Property(HomeWidget1.TrendingMovies.8.Year), • ,]</label2>
-			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.8.Trailer])</property>
+			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.8.Trailer]))</property>
 			<visible>!IsEmpty(Window.Property(HomeWidget1.TrendingMovies.8.Art(fanart)))</visible>
 		</item>
 		<item id="9">
@@ -1299,7 +1299,7 @@
 			<icon>$INFO[Window.Property(HomeWidget1.TrendingMovies.9.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget1.TrendingMovies.9.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget1.TrendingMovies.9.Rating)]$INFO[Window.Property(HomeWidget1.TrendingMovies.9.Year), • ,]</label2>
-			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.9.Trailer])</property>
+			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.9.Trailer]))</property>
 			<visible>!IsEmpty(Window.Property(HomeWidget1.TrendingMovies.9.Art(fanart)))</visible>
 		</item>
 		<item id="10">
@@ -1307,7 +1307,7 @@
 			<icon>$INFO[Window.Property(HomeWidget1.TrendingMovies.10.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget1.TrendingMovies.10.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget1.TrendingMovies.10.Rating)]$INFO[Window.Property(HomeWidget1.TrendingMovies.10.Year), • ,]</label2>
-			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.10.Trailer])</property>
+			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.10.Trailer]))</property>
 			<visible>!IsEmpty(Window.Property(HomeWidget1.TrendingMovies.10.Art(fanart)))</visible>
 		</item>
 	</include>
@@ -1406,7 +1406,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.1.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.1.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.1.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.1.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.1.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.1.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.1.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.1.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.1.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.1.Art(tvshow.fanart))]</property>
@@ -1421,7 +1421,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.2.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.2.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.2.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.2.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.2.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.2.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.2.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.2.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.2.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.2.Art(tvshow.fanart))]</property>
@@ -1436,7 +1436,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.3.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.3.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.3.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.3.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.3.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.3.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.3.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.3.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.3.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.3.Art(tvshow.fanart))]</property>
@@ -1451,7 +1451,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.4.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.4.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.4.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.4.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.4.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.4.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.4.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.4.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.4.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.4.Art(tvshow.fanart))]</property>
@@ -1466,7 +1466,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.5.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.5.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.5.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.5.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.5.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.5.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.5.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.5.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.5.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.5.Art(tvshow.fanart))]</property>
@@ -1481,7 +1481,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.6.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.6.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.6.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.6.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.6.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.6.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.6.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.6.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.6.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.6.Art(tvshow.fanart))]</property>
@@ -1496,7 +1496,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.7.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.7.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.7.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.7.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.7.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.7.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.7.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.7.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.7.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.7.Art(tvshow.fanart))]</property>
@@ -1511,7 +1511,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.8.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.8.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.8.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.8.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.8.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.8.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.8.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.8.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.8.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.8.Art(tvshow.fanart))]</property>
@@ -1526,7 +1526,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.9.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.9.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.9.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.9.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.9.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.9.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.9.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.9.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.9.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.9.Art(tvshow.fanart))]</property>
@@ -1541,7 +1541,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.10.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.10.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.10.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.10.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.10.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.10.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.10.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.10.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.10.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.10.Art(tvshow.fanart))]</property>
@@ -1556,7 +1556,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.11.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.11.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.11.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.11.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.11.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.11.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.11.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.11.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.11.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.11.Art(tvshow.fanart))]</property>
@@ -1571,7 +1571,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.12.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.12.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.12.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.12.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.12.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.12.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.12.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.12.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.12.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.12.Art(tvshow.fanart))]</property>
@@ -1586,7 +1586,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.13.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.13.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.13.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.13.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.13.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.13.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.13.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.13.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.13.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.13.Art(tvshow.fanart))]</property>
@@ -1601,7 +1601,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.14.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.14.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.14.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.14.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.14.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.14.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.14.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.14.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.14.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.14.Art(tvshow.fanart))]</property>
@@ -1616,7 +1616,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.15.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.15.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.15.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.15.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.15.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.15.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.15.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.15.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.15.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.15.Art(tvshow.fanart))]</property>
@@ -1631,7 +1631,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.16.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.16.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.16.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.16.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.16.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.16.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.16.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.16.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.16.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.16.Art(tvshow.fanart))]</property>
@@ -1647,7 +1647,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.17.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.17.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.17.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.17.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.17.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.17.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.17.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.17.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.17.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.17.Art(tvshow.fanart))]</property>
@@ -1662,7 +1662,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.18.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.18.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.18.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.18.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.18.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.18.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.18.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.18.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.18.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.18.Art(tvshow.fanart))]</property>
@@ -1677,7 +1677,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.19.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.19.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.19.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.19.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.19.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.19.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.19.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.19.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.19.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.19.Art(tvshow.fanart))]</property>
@@ -1692,7 +1692,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.20.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.20.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.20.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.20.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.20.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.20.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.20.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.20.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.20.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.20.Art(tvshow.fanart))]</property>
@@ -1707,7 +1707,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.21.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.21.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.21.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.21.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.21.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.21.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.21.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.21.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.21.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.21.Art(tvshow.fanart))]</property>
@@ -1722,7 +1722,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.22.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.22.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.22.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.22.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.22.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.22.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.22.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.22.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.22.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.22.Art(tvshow.fanart))]</property>
@@ -1737,7 +1737,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.23.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.23.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.23.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.23.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.23.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.23.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.23.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.23.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.23.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.23.Art(tvshow.fanart))]</property>
@@ -1752,7 +1752,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.24.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.24.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.24.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.24.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.24.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.24.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.24.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.24.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.24.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.24.Art(tvshow.fanart))]</property>
@@ -1767,7 +1767,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.25.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.25.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.25.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.25.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.25.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.25.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.25.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.25.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.25.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.25.Art(tvshow.fanart))]</property>
@@ -1782,7 +1782,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.26.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.26.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.26.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.26.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.26.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.26.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.26.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.26.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.26.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.26.Art(tvshow.fanart))]</property>
@@ -1798,7 +1798,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.27.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.27.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.27.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.27.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.27.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.27.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.27.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.27.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.27.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.27.Art(tvshow.fanart))]</property>
@@ -1813,7 +1813,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.28.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.28.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.28.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.28.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.28.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.28.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.28.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.28.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.28.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.28.Art(tvshow.fanart))]</property>
@@ -1828,7 +1828,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.29.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.29.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.29.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.29.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.29.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.29.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.29.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.29.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.29.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.29.Art(tvshow.fanart))]</property>
@@ -1843,7 +1843,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(NextUpEpisodeMB3.30.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(NextUpEpisodeMB3.30.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(NextUpEpisodeMB3.30.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.30.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(NextUpEpisodeMB3.30.ShortPlot)]</property>
 			<property name="Title">$INFO[Window(Home).Property(NextUpEpisodeMB3.30.ShowTitle)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(NextUpEpisodeMB3.30.EpisodeTitle),, • ]$INFO[Window(Home).Property(NextUpEpisodeMB3.30.SeasonNo),S,]$INFO[Window(Home).Property(NextUpEpisodeMB3.30.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(NextUpEpisodeMB3.30.Art(tvshow.fanart))]</property>
@@ -2518,7 +2518,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.1.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(LatestUnplayedMovieMB3.1.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.1.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.1.Plot)]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.1.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.1.ShortPlot)]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.1.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.1.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.1.Year),, ]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.1.Runtime),,min]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.1.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.1.Art(poster))]</property>
@@ -2534,7 +2534,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.2.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(LatestUnplayedMovieMB3.2.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.2.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.2.Plot)]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.2.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.2.ShortPlot)]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.2.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.2.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.2.Year),, ]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.2.Runtime),,min]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.2.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.2.Art(poster))]</property>
@@ -2550,7 +2550,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.3.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(LatestUnplayedMovieMB3.3.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.3.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.3.Plot)]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.3.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.3.ShortPlot)]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.3.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.3.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.3.Year),, ]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.3.Runtime),,min]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.3.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.3.Art(poster))]</property>
@@ -2566,7 +2566,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.4.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(LatestUnplayedMovieMB3.4.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.4.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.4.Plot)]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.4.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.4.ShortPlot)]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.4.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.4.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.4.Year),, ]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.4.Runtime),,min]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.4.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.4.Art(poster))]</property>
@@ -2582,7 +2582,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.5.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(LatestUnplayedMovieMB3.5.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.5.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.5.Plot)]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.5.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.5.ShortPlot)]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.5.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.5.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.5.Year),, ]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.5.Runtime),,min]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.5.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.5.Art(poster))]</property>
@@ -2598,7 +2598,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.6.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(LatestUnplayedMovieMB3.6.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.6.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.6.Plot)]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.6.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.6.ShortPlot)]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.6.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.6.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.6.Year),, ]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.6.Runtime),,min]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.6.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.6.Art(poster))]</property>
@@ -2614,7 +2614,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.7.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(LatestUnplayedMovieMB3.7.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.7.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.7.Plot)]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.7.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.7.ShortPlot)]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.7.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.7.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.7.Year),, ]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.7.Runtime),,min]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.7.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.7.Art(poster))]</property>
@@ -2630,7 +2630,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.8.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(LatestUnplayedMovieMB3.8.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.8.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.8.Plot)]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.8.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.8.ShortPlot)]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.8.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.8.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.8.Year),, ]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.8.Runtime),,min]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.8.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.8.Art(poster))]</property>
@@ -2646,7 +2646,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.9.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(LatestUnplayedMovieMB3.9.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.9.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.9.Plot)]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.9.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.9.ShortPlot)]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.9.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.9.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.9.Year),, ]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.9.Runtime),,min]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.9.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.9.Art(poster))]</property>
@@ -2662,7 +2662,7 @@
 			<property name="Resume">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.10.Resume)]</property>
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(LatestUnplayedMovieMB3.10.Path)])</property>
 			<property name="clearlogo">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.10.Art(clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.10.Plot)]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.10.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
+			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.10.ShortPlot)]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.10.CriticRatingSummary), [CR][CR][I]Critic Review: [/I],]</property>
 			<property name="Title">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.10.Title)]</property>
 			<property name="Title2">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.10.Year),, ]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.10.Runtime),,min]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.10.Mpaa), ,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(LatestUnplayedMovieMB3.10.Art(poster))]</property>
@@ -2674,7 +2674,7 @@
 	<include name="HomeWidget.3.Playlist.Movie">
 		<item id="1">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.1.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.1.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.1.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.1.Rating)]</label2>
 			<property name="Play">$INFO[Window.Property(HomeWidget3.1.Play)]</property>
@@ -2682,7 +2682,7 @@
 		</item>
 		<item id="2">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.2.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.2.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.2.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.2.Rating)]</label2>
 			<property name="Play">$INFO[Window.Property(HomeWidget3.2.Play)]</property>
@@ -2690,7 +2690,7 @@
 		</item>
 		<item id="3">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.3.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.3.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.3.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.3.Rating)]</label2>
 			<property name="Play">$INFO[Window.Property(HomeWidget3.3.Play)]</property>
@@ -2698,7 +2698,7 @@
 		</item>
 		<item id="4">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.4.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.4.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.4.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.4.Rating)]</label2>
 			<property name="Play">$INFO[Window.Property(HomeWidget3.4.Play)]</property>
@@ -2706,7 +2706,7 @@
 		</item>
 		<item id="5">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.5.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.5.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.5.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.5.Rating)]</label2>
 			<property name="Play">$INFO[Window.Property(HomeWidget3.5.Play)]</property>
@@ -2714,7 +2714,7 @@
 		</item>
 		<item id="6">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.6.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.6.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.6.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.6.Rating)]</label2>
 			<property name="Play">$INFO[Window.Property(HomeWidget3.6.Play)]</property>
@@ -2722,7 +2722,7 @@
 		</item>
 		<item id="7">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.7.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.7.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.7.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.7.Rating)]</label2>
 			<property name="Play">$INFO[Window.Property(HomeWidget3.7.Play)]</property>
@@ -2730,7 +2730,7 @@
 		</item>
 		<item id="8">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.8.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.8.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.8.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.8.Rating)]</label2>
 			<property name="Play">$INFO[Window.Property(HomeWidget3.8.Play)]</property>
@@ -2738,7 +2738,7 @@
 		</item>
 		<item id="9">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.9.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.9.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.9.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.9.Rating)]</label2>
 			<property name="Play">$INFO[Window.Property(HomeWidget3.9.Play)]</property>
@@ -2746,7 +2746,7 @@
 		</item>
 		<item id="10">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.10.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.10.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.10.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.10.Rating)]</label2>
 			<property name="Play">$INFO[Window.Property(HomeWidget3.10.Play)]</property>
@@ -2756,411 +2756,411 @@
 	<include name="HomeWidget.3.Upcoming">
 		<item id="1">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.UpcomingMovies.1.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.UpcomingMovies.1.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.UpcomingMovies.1.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.UpcomingMovies.1.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.UpcomingMovies.1.Title),plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.UpcomingMovies.1.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.UpcomingMovies.1.Art(fanart)))</visible>
 		</item>
 		<item id="2">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.UpcomingMovies.2.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.UpcomingMovies.2.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.UpcomingMovies.2.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.UpcomingMovies.2.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.UpcomingMovies.2.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.UpcomingMovies.2.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.UpcomingMovies.2.Art(fanart)))</visible>
 		</item>
 		<item id="3">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.UpcomingMovies.3.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.UpcomingMovies.3.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.UpcomingMovies.3.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.UpcomingMovies.3.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.UpcomingMovies.3.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.UpcomingMovies.3.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.UpcomingMovies.3.Art(fanart)))</visible>
 		</item>
 		<item id="4">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.UpcomingMovies.4.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.UpcomingMovies.4.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.UpcomingMovies.4.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.UpcomingMovies.4.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.UpcomingMovies.4.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.UpcomingMovies.4.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.UpcomingMovies.4.Art(fanart)))</visible>
 		</item>
 		<item id="5">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.UpcomingMovies.5.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.UpcomingMovies.5.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.UpcomingMovies.5.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.UpcomingMovies.5.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.UpcomingMovies.5.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.UpcomingMovies.5.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.UpcomingMovies.5.Art(fanart)))</visible>
 		</item>
 		<item id="6">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.UpcomingMovies.6.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.UpcomingMovies.6.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.UpcomingMovies.6.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.UpcomingMovies.6.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.UpcomingMovies.6.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.UpcomingMovies.6.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.UpcomingMovies.6.Art(fanart)))</visible>
 		</item>
 		<item id="7">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.UpcomingMovies.7.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.UpcomingMovies.7.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.UpcomingMovies.7.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.UpcomingMovies.7.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.UpcomingMovies.7.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.UpcomingMovies.7.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.UpcomingMovies.7.Art(fanart)))</visible>
 		</item>
 		<item id="8">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.UpcomingMovies.8.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.UpcomingMovies.8.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.UpcomingMovies.8.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.UpcomingMovies.8.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.UpcomingMovies.8.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.UpcomingMovies.8.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.UpcomingMovies.8.Art(fanart)))</visible>
 		</item>
 		<item id="9">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.UpcomingMovies.9.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.UpcomingMovies.9.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.UpcomingMovies.9.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.UpcomingMovies.9.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.UpcomingMovies.9.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.UpcomingMovies.9.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.UpcomingMovies.9.Art(fanart)))</visible>
 		</item>
 		<item id="10">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.UpcomingMovies.10.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.UpcomingMovies.10.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.UpcomingMovies.10.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.UpcomingMovies.10.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.UpcomingMovies.10.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.UpcomingMovies.10.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.UpcomingMovies.10.Art(fanart)))</visible>
 		</item>
 	</include>
 	<include name="HomeWidget.3.InCinema">
 		<item id="1">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.InCinemaMovies.1.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.InCinemaMovies.1.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.InCinemaMovies.1.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.InCinemaMovies.1.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InCinemaMovies.1.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemaMovies.1.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemaMovies.1.Art(fanart)))</visible>
 		</item>
 		<item id="2">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.InCinemaMovies.2.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.InCinemaMovies.2.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.InCinemaMovies.2.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.InCinemaMovies.2.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InCinemaMovies.2.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemaMovies.2.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemaMovies.2.Art(fanart)))</visible>
 		</item>
 		<item id="3">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.InCinemaMovies.3.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.InCinemaMovies.3.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.InCinemaMovies.3.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.InCinemaMovies.3.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InCinemaMovies.3.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemaMovies.3.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemaMovies.3.Art(fanart)))</visible>
 		</item>
 		<item id="4">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.InCinemaMovies.4.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.InCinemaMovies.4.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.InCinemaMovies.4.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.InCinemaMovies.4.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InCinemaMovies.4.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemaMovies.4.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemaMovies.4.Art(fanart)))</visible>
 		</item>
 		<item id="5">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.InCinemaMovies.5.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.InCinemaMovies.5.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.InCinemaMovies.5.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.InCinemaMovies.5.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InCinemaMovies.5.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemaMovies.5.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemaMovies.5.Art(fanart)))</visible>
 		</item>
 		<item id="6">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.InCinemaMovies.6.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.InCinemaMovies.6.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.InCinemaMovies.6.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.InCinemaMovies.6.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InCinemaMovies.6.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemaMovies.6.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemaMovies.6.Art(fanart)))</visible>
 		</item>
 		<item id="7">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.InCinemaMovies.7.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.InCinemaMovies.7.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.InCinemaMovies.7.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.InCinemaMovies.7.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InCinemaMovies.7.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemaMovies.7.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemaMovies.7.Art(fanart)))</visible>
 		</item>
 		<item id="8">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.InCinemaMovies.8.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.InCinemaMovies.8.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.InCinemaMovies.8.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.InCinemaMovies.8.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InCinemaMovies.8.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemaMovies.8.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemaMovies.8.Art(fanart)))</visible>
 		</item>
 		<item id="9">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.InCinemaMovies.9.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.InCinemaMovies.9.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.InCinemaMovies.9.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.InCinemaMovies.9.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InCinemaMovies.9.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemaMovies.9.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemaMovies.9.Art(fanart)))</visible>
 		</item>
 		<item id="10">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.InCinemaMovies.10.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.InCinemaMovies.10.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.InCinemaMovies.10.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.InCinemaMovies.10.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InCinemaMovies.10.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemaMovies.10.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemaMovies.10.Art(fanart)))</visible>
 		</item>
 	</include>
 	<include name="HomeWidget.3.Popular">
 		<item id="1">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.PopularMovies.1.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.PopularMovies.1.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.PopularMovies.1.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.PopularMovies.1.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.PopularMovies.1.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.PopularMovies.1.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.PopularMovies.1.Art(fanart)))</visible>
 		</item>
 		<item id="2">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.PopularMovies.2.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.PopularMovies.2.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.PopularMovies.2.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.PopularMovies.2.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.PopularMovies.2.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.PopularMovies.2.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.PopularMovies.2.Art(fanart)))</visible>
 		</item>
 		<item id="3">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.PopularMovies.3.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.PopularMovies.3.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.PopularMovies.3.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.PopularMovies.3.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.PopularMovies.3.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.PopularMovies.3.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.PopularMovies.3.Art(fanart)))</visible>
 		</item>
 		<item id="4">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.PopularMovies.4.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.PopularMovies.4.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.PopularMovies.4.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.PopularMovies.4.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.PopularMovies.4.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.PopularMovies.4.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.PopularMovies.4.Art(fanart)))</visible>
 		</item>
 		<item id="5">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.PopularMovies.5.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.PopularMovies.5.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.PopularMovies.5.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.PopularMovies.5.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.PopularMovies.5.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.PopularMovies.5.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.PopularMovies.5.Art(fanart)))</visible>
 		</item>
 		<item id="6">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.PopularMovies.6.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.PopularMovies.6.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.PopularMovies.6.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.PopularMovies.6.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.PopularMovies.6.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.PopularMovies.6.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.PopularMovies.6.Art(fanart)))</visible>
 		</item>
 		<item id="7">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.PopularMovies.7.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.PopularMovies.7.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.PopularMovies.7.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.PopularMovies.7.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.PopularMovies.7.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.PopularMovies.7.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.PopularMovies.7.Art(fanart)))</visible>
 		</item>
 		<item id="8">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.PopularMovies.8.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.PopularMovies.8.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.PopularMovies.8.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.PopularMovies.8.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.PopularMovies.8.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.PopularMovies.8.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.PopularMovies.8.Art(fanart)))</visible>
 		</item>
 		<item id="9">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.PopularMovies.9.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.PopularMovies.9.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.PopularMovies.9.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.PopularMovies.9.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.PopularMovies.9.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.PopularMovies.9.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.PopularMovies.9.Art(fanart)))</visible>
 		</item>
 		<item id="10">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.PopularMovies.10.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.PopularMovies.10.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.PopularMovies.10.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.PopularMovies.10.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.PopularMovies.10.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.PopularMovies.10.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.PopularMovies.10.Art(fanart)))</visible>
 		</item>
 	</include>
 	<include name="HomeWidget.3.TopRated">
 		<item id="1">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.TopRatedMovies.1.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.TopRatedMovies.1.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.TopRatedMovies.1.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.TopRatedMovies.1.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.TopRatedMovies.1.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.TopRatedMovies.1.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.TopRatedMovies.1.Art(fanart)))</visible>
 		</item>
 		<item id="2">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.TopRatedMovies.2.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.TopRatedMovies.2.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.TopRatedMovies.2.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.TopRatedMovies.2.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.TopRatedMovies.2.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.TopRatedMovies.2.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.TopRatedMovies.2.Art(fanart)))</visible>
 		</item>
 		<item id="3">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.TopRatedMovies.3.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.TopRatedMovies.3.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.TopRatedMovies.3.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.TopRatedMovies.3.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.TopRatedMovies.3.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.TopRatedMovies.3.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.TopRatedMovies.3.Art(fanart)))</visible>
 		</item>
 		<item id="4">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.TopRatedMovies.4.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.TopRatedMovies.4.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.TopRatedMovies.4.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.TopRatedMovies.4.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.TopRatedMovies.4.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.TopRatedMovies.4.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.TopRatedMovies.4.Art(fanart)))</visible>
 		</item>
 		<item id="5">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.TopRatedMovies.5.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.TopRatedMovies.5.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.TopRatedMovies.5.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.TopRatedMovies.5.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.TopRatedMovies.5.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.TopRatedMovies.5.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.TopRatedMovies.5.Art(fanart)))</visible>
 		</item>
 		<item id="6">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.TopRatedMovies.6.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.TopRatedMovies.6.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.TopRatedMovies.6.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.TopRatedMovies.6.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.TopRatedMovies.6.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.TopRatedMovies.6.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.TopRatedMovies.6.Art(fanart)))</visible>
 		</item>
 		<item id="7">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.TopRatedMovies.7.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.TopRatedMovies.7.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.TopRatedMovies.7.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.TopRatedMovies.7.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.TopRatedMovies.7.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.TopRatedMovies.7.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.TopRatedMovies.7.Art(fanart)))</visible>
 		</item>
 		<item id="8">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.TopRatedMovies.8.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.TopRatedMovies.8.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.TopRatedMovies.8.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.TopRatedMovies.8.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.TopRatedMovies.8.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.TopRatedMovies.8.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.TopRatedMovies.8.Art(fanart)))</visible>
 		</item>
 		<item id="9">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.TopRatedMovies.9.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.TopRatedMovies.9.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.TopRatedMovies.9.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.TopRatedMovies.9.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.TopRatedMovies.9.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.TopRatedMovies.9.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.TopRatedMovies.9.Art(fanart)))</visible>
 		</item>
 		<item id="10">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.TopRatedMovies.10.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.TopRatedMovies.10.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.TopRatedMovies.10.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.TopRatedMovies.10.Rating)]</label2>
 			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.TopRatedMovies.10.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.TopRatedMovies.10.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.TopRatedMovies.10.Art(fanart)))</visible>
 		</item>
 	</include>
 	<include name="HomeWidget.3.TrendingMovies">
 		<item id="1">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.TrendingMovies.1.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.TrendingMovies.1.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.TrendingMovies.1.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.TrendingMovies.1.Rating)]$INFO[Window.Property(HomeWidget3.TrendingMovies.1.Year), • ,]</label2>
 			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget3.TrendingMovies.1.Trailer])</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.TrendingMovies.1.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.TrendingMovies.1.Art(fanart)))</visible>
 		</item>
 		<item id="2">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.TrendingMovies.2.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.TrendingMovies.2.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.TrendingMovies.2.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.TrendingMovies.2.Rating)]$INFO[Window.Property(HomeWidget3.TrendingMovies.2.Year), • ,]</label2>
 			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget3.TrendingMovies.2.Trailer])</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.TrendingMovies.2.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.TrendingMovies.2.Art(fanart)))</visible>
 		</item>
 		<item id="3">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.TrendingMovies.3.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.TrendingMovies.3.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.TrendingMovies.3.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.TrendingMovies.3.Rating)]$INFO[Window.Property(HomeWidget3.TrendingMovies.3.Year), • ,]</label2>
 			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget3.TrendingMovies.3.Trailer])</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.TrendingMovies.3.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.TrendingMovies.3.Art(fanart)))</visible>
 		</item>
 		<item id="4">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.TrendingMovies.4.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.TrendingMovies.4.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.TrendingMovies.4.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.TrendingMovies.4.Rating)]$INFO[Window.Property(HomeWidget3.TrendingMovies.4.Year), • ,]</label2>
 			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget3.TrendingMovies.4.Trailer])</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.TrendingMovies.4.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.TrendingMovies.4.Art(fanart)))</visible>
 		</item>
 		<item id="5">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.TrendingMovies.5.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.TrendingMovies.5.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.TrendingMovies.5.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.TrendingMovies.5.Rating)]$INFO[Window.Property(HomeWidget3.TrendingMovies.5.Year), • ,]</label2>
 			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget3.TrendingMovies.5.Trailer])</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.TrendingMovies.5.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.TrendingMovies.5.Art(fanart)))</visible>
 		</item>
 		<item id="6">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.TrendingMovies.6.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.TrendingMovies.6.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.TrendingMovies.6.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.TrendingMovies.6.Rating)]$INFO[Window.Property(HomeWidget3.TrendingMovies.6.Year), • ,]</label2>
 			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget3.TrendingMovies.6.Trailer])</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.TrendingMovies.6.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.TrendingMovies.6.Art(fanart)))</visible>
 		</item>
 		<item id="7">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.TrendingMovies.7.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.TrendingMovies.7.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.TrendingMovies.7.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.TrendingMovies.7.Rating)]$INFO[Window.Property(HomeWidget3.TrendingMovies.7.Year), • ,]</label2>
 			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget3.TrendingMovies.7.Trailer])</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.TrendingMovies.7.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.TrendingMovies.7.Art(fanart)))</visible>
 		</item>
 		<item id="8">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.TrendingMovies.8.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.TrendingMovies.8.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.TrendingMovies.8.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.TrendingMovies.8.Rating)]$INFO[Window.Property(HomeWidget3.TrendingMovies.8.Year), • ,]</label2>
 			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget3.TrendingMovies.8.Trailer])</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.TrendingMovies.8.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.TrendingMovies.8.Art(fanart)))</visible>
 		</item>
 		<item id="9">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.TrendingMovies.9.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.TrendingMovies.9.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.TrendingMovies.9.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.TrendingMovies.9.Rating)]$INFO[Window.Property(HomeWidget3.TrendingMovies.9.Year), • ,]</label2>
 			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget3.TrendingMovies.9.Trailer])</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.TrendingMovies.9.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.TrendingMovies.9.Art(fanart)))</visible>
 		</item>
 		<item id="10">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.TrendingMovies.10.Art(poster))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget3.TrendingMovies.10.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget3.TrendingMovies.10.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget3.TrendingMovies.10.Rating)]$INFO[Window.Property(HomeWidget3.TrendingMovies.10.Year), • ,]</label2>
 			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget3.TrendingMovies.10.Trailer])</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.TrendingMovies.10.Art(poster)))</visible>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.TrendingMovies.10.Art(fanart)))</visible>
 		</item>
 	</include>
 	<!-- =================== -->
@@ -3176,7 +3176,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(LatestUnplayedEpisodeMB3.1.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.1.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.1.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.1.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.1.ShortPlot)]</property>
 			<property name="Title2">[B]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.1.ShowTitle)][/B]</property>
 			<property name="Title">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.1.EpisodeTitle),, • ]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.1.SeasonNo),S,]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.1.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.1.Art(tvshow.poster))]</property>
@@ -3191,7 +3191,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(LatestUnplayedEpisodeMB3.2.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.2.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.2.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.2.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.2.ShortPlot)]</property>
 			<property name="Title2">[B]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.2.ShowTitle)][/B]</property>
 			<property name="Title">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.2.EpisodeTitle),, • ]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.2.SeasonNo),S,]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.2.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.2.Art(tvshow.poster))]</property>
@@ -3206,7 +3206,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(LatestUnplayedEpisodeMB3.3.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.3.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.3.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.3.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.3.ShortPlot)]</property>
 			<property name="Title2">[B]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.3.ShowTitle)][/B]</property>
 			<property name="Title">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.3.EpisodeTitle),, • ]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.3.SeasonNo),S,]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.3.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.3.Art(tvshow.poster))]</property>
@@ -3221,7 +3221,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(LatestUnplayedEpisodeMB3.4.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.4.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.4.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.4.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.4.ShortPlot)]</property>
 			<property name="Title2">[B]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.4.ShowTitle)][/B]</property>
 			<property name="Title">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.4.EpisodeTitle),, • ]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.4.SeasonNo),S,]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.4.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.4.Art(tvshow.poster))]</property>
@@ -3236,7 +3236,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(LatestUnplayedEpisodeMB3.5.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.5.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.5.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.5.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.5.ShortPlot)]</property>
 			<property name="Title2">[B]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.5.ShowTitle)][/B]</property>
 			<property name="Title">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.5.EpisodeTitle),, • ]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.5.SeasonNo),S,]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.5.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.5.Art(tvshow.poster))]</property>
@@ -3251,7 +3251,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(LatestUnplayedEpisodeMB3.6.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.6.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.6.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.6.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.6.ShortPlot)]</property>
 			<property name="Title2">[B]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.6.ShowTitle)][/B]</property>
 			<property name="Title">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.6.EpisodeTitle),, • ]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.6.SeasonNo),S,]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.6.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.6.Art(tvshow.poster))]</property>
@@ -3266,7 +3266,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(LatestUnplayedEpisodeMB3.7.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.7.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.7.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.7.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.7.ShortPlot)]</property>
 			<property name="Title2">[B]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.7.ShowTitle)][/B]</property>
 			<property name="Title">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.7.EpisodeTitle),, • ]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.7.SeasonNo),S,]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.7.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.7.Art(tvshow.poster))]</property>
@@ -3281,7 +3281,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(LatestUnplayedEpisodeMB3.8.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.8.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.8.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.8.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.8.ShortPlot)]</property>
 			<property name="Title2">[B]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.8.ShowTitle)][/B]</property>
 			<property name="Title">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.8.EpisodeTitle),, • ]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.8.SeasonNo),S,]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.8.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.8.Art(tvshow.poster))]</property>
@@ -3296,7 +3296,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(LatestUnplayedEpisodeMB3.9.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.9.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.9.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.9.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.9.ShortPlot)]</property>
 			<property name="Title2">[B]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.9.ShowTitle)][/B]</property>
 			<property name="Title">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.9.EpisodeTitle),, • ]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.9.SeasonNo),S,]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.9.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.9.Art(tvshow.poster))]</property>
@@ -3311,7 +3311,7 @@
 			<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(LatestUnplayedEpisodeMB3.10.Path)])</property>
 			<property name="banner">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.10.Art(tvshow.banner))]</property>
 			<property name="clearlogohome">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.10.Art(tvshow.clearlogo))]</property>
-			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.10.Plot)]</property>
+			<property name="Plot">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.10.ShortPlot)]</property>
 			<property name="Title2">[B]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.10.ShowTitle)][/B]</property>
 			<property name="Title">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.10.EpisodeTitle),, • ]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.10.SeasonNo),S,]$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.10.EpisodeNo),E,]</property>
 			<property name="Poster">$INFO[Window(Home).Property(LatestUnplayedEpisodeMB3.10.Art(tvshow.poster))]</property>
@@ -3794,7 +3794,7 @@
 	<include name="HomeWidget.5.Playlist.Music">
 		<item id="1">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget5.1.Art(thumb))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget5.1.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget5.1.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget5.1.Artist)]</label2>
 			<property name="Play">$INFO[Window.Property(HomeWidget5.1.Play)]</property>
@@ -3802,7 +3802,7 @@
 		</item>
 		<item id="2">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget5.2.Art(thumb))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget5.2.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget5.2.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget5.2.Artist)]</label2>
 			<property name="Play">$INFO[Window.Property(HomeWidget5.2.Play)]</property>
@@ -3810,7 +3810,7 @@
 		</item>
 		<item id="3">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget5.3.Art(thumb))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget5.3.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget5.3.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget5.3.Artist)]</label2>
 			<property name="Play">$INFO[Window.Property(HomeWidget5.3.Play)]</property>
@@ -3818,7 +3818,7 @@
 		</item>
 		<item id="4">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget5.4.Art(thumb))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget5.4.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget5.4.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget5.4.Artist)]</label2>
 			<property name="Play">$INFO[Window.Property(HomeWidget5.4.Play)]</property>
@@ -3826,7 +3826,7 @@
 		</item>
 		<item id="5">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget5.5.Art(thumb))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget5.5.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget5.5.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget5.5.Artist)]</label2>
 			<property name="Play">$INFO[Window.Property(HomeWidget5.5.Play)]</property>
@@ -3834,7 +3834,7 @@
 		</item>
 		<item id="6">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget5.6.Art(thumb))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget5.6.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget5.6.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget5.6.Artist)]</label2>
 			<property name="Play">$INFO[Window.Property(HomeWidget5.6.Play)]</property>
@@ -3842,7 +3842,7 @@
 		</item>
 		<item id="7">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget5.7.Art(thumb))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget5.7.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget5.7.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget5.7.Artist)]</label2>
 			<property name="Play">$INFO[Window.Property(HomeWidget5.7.Play)]</property>
@@ -3850,7 +3850,7 @@
 		</item>
 		<item id="8">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget5.8.Art(thumb))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget5.8.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget5.8.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget5.8.Artist)]</label2>
 			<property name="Play">$INFO[Window.Property(HomeWidget5.8.Play)]</property>
@@ -3858,7 +3858,7 @@
 		</item>
 		<item id="9">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget5.9.Art(thumb))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget5.9.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget5.9.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget5.9.Artist)]</label2>
 			<property name="Play">$INFO[Window.Property(HomeWidget5.9.Play)]</property>
@@ -3866,7 +3866,7 @@
 		</item>
 		<item id="10">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget5.10.Art(thumb))]</icon>
+			<icon>$INFO[Window.Property(HomeWidget5.10.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget5.10.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget5.10.Artist)]</label2>
 			<property name="Play">$INFO[Window.Property(HomeWidget5.10.Play)]</property>

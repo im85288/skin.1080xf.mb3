@@ -312,7 +312,8 @@
 					<posy>48</posy>
 					<width>48</width>
 					<height>33</height>
-					<texture>$INFO[Window(Home).Property(MB3UserImage)] + !Skin.HasSetting(UseKodiLibrary)</texture>
+					<texture>$INFO[Window(Home).Property(MB3UserImage)]</texture>
+					<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
 				</control>
 				<control type="fadelabel">
 					<posx>0</posx>

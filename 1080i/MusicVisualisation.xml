@@ -142,7 +142,7 @@
 								<posy>0</posy>
 								<width min="0" max="400">auto</width>
 								<height>100</height>
-								<label>[B]$INFO[MusicPlayer.ChannelNumber][/B]</label>
+								<label>[B]$INFO[MusicPlayer.ChannelNumberLabel][/B]</label>
 								<textcolor>SecondaryT</textcolor>
 								<font>Font-Condensed-S100</font>
 								<align>left</align>

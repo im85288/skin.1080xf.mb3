@@ -228,7 +228,7 @@
 	                            <posy>0</posy>
 	                            <width>310</width>
 	                            <height>60</height>
-	                            <label>$INFO[ListItem.ChannelNumber,(,) ]$INFO[ListItem.ChannelName]</label>
+	                            <label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
 	                            <textcolor>FF585858</textcolor>
 	                            <selectedcolor>FF585858</selectedcolor>
 	                            <scroll>false</scroll>
@@ -250,7 +250,7 @@
 	                                <posy>0</posy>
 	                                <width>260</width>
 	                                <height>60</height>
-	                                <label>$INFO[ListItem.ChannelNumber,(,) ]$INFO[ListItem.ChannelName]</label>
+	                                <label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
 	                                <textcolor>FF585858</textcolor>
 	                                <selectedcolor>FF585858</selectedcolor>
 	                                <scroll>false</scroll>
@@ -278,7 +278,7 @@
 	                                <posy>0</posy>
 	                                <width>310</width>
 	                                <height>60</height>
-	                                <label>$INFO[ListItem.ChannelNumber,(,) ]$INFO[ListItem.ChannelName]</label>
+	                                <label>$INFO[ListItem.ChannelNumberLabel(,) ]$INFO[ListItem.ChannelName]</label>
 	                                <textcolor>eewhite</textcolor>
 	                                <selectedcolor>eewhite</selectedcolor>
 	                            </control>
@@ -380,7 +380,7 @@
 	                            <posy>0</posy>
 	                            <width>310</width>
 	                            <height>60</height>
-	                            <label>$INFO[ListItem.ChannelNumber,(,) ]$INFO[ListItem.ChannelName]</label>
+	                            <label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
 	                            <textcolor>FF585858</textcolor>
 	                            <selectedcolor>FF585858</selectedcolor>
 	                            <scroll>false</scroll>
@@ -402,7 +402,7 @@
 	                                <posy>0</posy>
 	                                <width>260</width>
 	                                <height>60</height>
-	                                <label>$INFO[ListItem.ChannelNumber,(,) ]$INFO[ListItem.ChannelName]</label>
+	                                <label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
 	                                <textcolor>FF585858</textcolor>
 	                                <selectedcolor>FF585858</selectedcolor>
 	                                <scroll>false</scroll>
@@ -430,7 +430,7 @@
 	                                <posy>0</posy>
 	                                <width>310</width>
 	                                <height>60</height>
-	                                <label>$INFO[ListItem.ChannelNumber,(,) ]$INFO[ListItem.ChannelName]</label>
+	                                <label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
 	                                <textcolor>eewhite</textcolor>
 	                                <selectedcolor>eewhite</selectedcolor>
 	                            </control>

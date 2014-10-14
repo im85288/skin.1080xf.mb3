@@ -114,7 +114,7 @@
 							<height>80</height>
 							<font>Font-Condensed-S49</font>
 							<align>right</align>
-							<label>$INFO[ListItem.ChannelNumber]</label>
+							<label>$INFO[ListItem.ChannelNumberLabel]</label>
 							<textcolor>PrimaryT</textcolor>
 							<selectedcolor>PrimaryT</selectedcolor>
 							<scroll>false</scroll>
@@ -177,7 +177,7 @@
 							<height>80</height>
 							<font>Font-Condensed-S49</font>
 							<align>right</align>
-							<label>$INFO[ListItem.ChannelNumber]</label>
+							<label>$INFO[ListItem.ChannelNumberLabel]</label>
 							<textcolor>SecondaryT</textcolor>
 							<selectedcolor>SecondaryT</selectedcolor>
 							<scroll>false</scroll>
@@ -257,7 +257,7 @@
 							<posy>0</posy>
 							<width>66</width>
 							<height>80</height>
-							<texture>windows/pvr/epg-timer.png</texture>
+							<texture colordiffuse="PrimaryT">windows/pvr/epg-timer.png</texture>
 							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 						</control>
 					</itemlayout>
@@ -335,7 +335,7 @@
 							<posy>0</posy>
 							<width>66</width>
 							<height>80</height>
-							<texture>windows/pvr/epg-timer.png</texture>
+							<texture colordiffuse="PrimaryT">windows/pvr/epg-timer.png</texture>
 							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 						</control>
 					</focusedlayout>

@@ -78,11 +78,10 @@
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item22)">$INFO[Skin.String(HomeProgramTile6.TypeName)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item23)">$INFO[Skin.String(HomeProgramTile7.TypeName)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item24)">$INFO[Skin.String(HomeProgramTile8.TypeName)]</value>
-	    <value condition="stringcompare(Window(3003).Property(SingleDialog),item35)">$INFO[Skin.String(HomeChannelsTile1.TypeName)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item35)">$INFO[Skin.String(HomeChannelsTile1.TypeName)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item36)">$INFO[Skin.String(HomeChannelsTile2.TypeName)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item37)">$INFO[Skin.String(HomeChannelsTile3.TypeName)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item38)">$INFO[Skin.String(HomeChannelsTile4.TypeName)]</value>
-	
 	</variable>
 	<variable name="HomeTileEditPath">
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item1)">$INFO[Skin.String(HomeVideoTile1.Path)]</value>
@@ -107,11 +106,10 @@
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item22)">$INFO[Skin.String(HomeProgramTile6.Path)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item23)">$INFO[Skin.String(HomeProgramTile7.Path)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item24)">$INFO[Skin.String(HomeProgramTile8.Path)]</value>
-	    <value condition="stringcompare(Window(3003).Property(SingleDialog),item35)">$INFO[Skin.String(HomeChannelsTile1.Path)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item35)">$INFO[Skin.String(HomeChannelsTile1.Path)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item36)">$INFO[Skin.String(HomeChannelsTile2.Path)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item37)">$INFO[Skin.String(HomeChannelsTile3.Path)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item38)">$INFO[Skin.String(HomeChannelsTile4.Path)]</value>
-	
 	</variable>
 	<include name="PanelDialogHomeTile">
 		<control type="grouplist" id="4">
@@ -1049,6 +1047,8 @@
 						<onfocus>Skin.SetString(HomeWidget.1.TypeName,$LOCALIZE[41550])</onfocus>
 						<onfocus>Skin.SetString(HomeWidget.1.SubType,Movie)</onfocus>
 						<onfocus>Skin.SetString(HomeWidget.1.SubTypeName,$LOCALIZE[342])</onfocus>
+						<onfocus>Skin.SetString(HomeWidget.1.MB3PlaylistSubType,Playlist1)</onfocus>
+						<onfocus>Skin.SetString(HomeWidget.1.MB3PlaylistSubTypeName,$INFO[Window(Home).Property(PlaylistMB3.1.Title)])</onfocus>
 						<onfocus>Skin.SetString(HomeWidget.1.Method,Playlist)</onfocus>
 						<onfocus>Skin.SetString(HomeWidget.1.UnWatched,False)</onfocus>
 						<onfocus>Skin.SetString(HomeWidget.1.Resume,False)</onfocus>

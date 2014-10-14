@@ -25,7 +25,7 @@
 					<align>left</align>
 					<aligny>top</aligny>
 					<scroll>false</scroll>
-					<animation effect="slide" end="60" time="300" tween="sine" easing="inout" condition="!Weather.IsFetched | [stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]">Conditional</animation>
+					<animation effect="slide" end="103" time="300" tween="sine" easing="inout" condition="!Weather.IsFetched | [stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]">Conditional</animation>
 				</control>
 					<control type="image">
 					<description>Small weather</description>
@@ -45,14 +45,14 @@
 					<posy>968</posy>
 					<width>180</width>
 					<height>100</height>
-					<label>[B]$INFO[System.Time][/B]</label>
+					<label>[B]$INFO[System.Time(hh:mm)][/B]</label>
 					<font>Font-Condensed-S50-B</font>
 					<textcolor>PrimaryT</textcolor>
 					<shadowcolor>22000000</shadowcolor>
 					<align>right</align>
 					<aligny>top</aligny>
 					<scroll>false</scroll>
-					<animation effect="slide" end="60" time="300" tween="sine" easing="inout" condition="!Weather.IsFetched | [stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]">Conditional</animation>
+					<animation effect="slide" end="28" time="300" tween="sine" easing="inout" condition="!Weather.IsFetched | [stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]">Conditional</animation>
 				</control>
 				<control type="label">
 					<description>Date label</description>
@@ -106,7 +106,7 @@
 					<posy>968</posy>
 					<width>180</width>
 					<height>100</height>
-					<label>[B]$INFO[System.Time][/B]</label>
+					<label>[B]$INFO[System.Time(hh:mm)][/B]</label>
 					<font>Font-Condensed-S50-B</font>
 					<textcolor>FFFFFFFF</textcolor>
 					<shadowcolor>22000000</shadowcolor>
@@ -136,14 +136,14 @@
 				<animation effect="slide" end="-60" time="300" tween="sine" easing="inout" condition="Window.IsActive(mutebug)">Conditional</animation>
 				<include>visiblehidefadeinfo</include>
 				<control type="image">
-					<posx>174r</posx>
+					<posx>110r</posx>
 					<posy>950</posy>
 					<width>100</width>
 					<height>100</height>
-					<texture>windows/pvr/recording-info.png</texture>
+					<texture colordiffuse="PrimaryT">windows/pvr/recording-info.png</texture>
 				</control>
 				<control type="image">
-					<posx>174r</posx>
+					<posx>110r</posx>
 					<posy>950</posy>
 					<width>100</width>
 					<height>100</height>
@@ -152,18 +152,18 @@
 				</control>
 			</control>
 			<control type="image">
-				<posx>174r</posx>
+				<posx>110r</posx>
 				<posy>950</posy>
 				<width>100</width>
 				<height>100</height>
-				<texture>windows/pvr/timer.png</texture>
+				<texture colordiffuse="PrimaryT">windows/pvr/timer.png</texture>
 				<animation effect="slide" end="-60" time="300" tween="sine" easing="inout" condition="Window.IsActive(mutebug)">Conditional</animation>
 				<include>visiblehidefadeinfo</include>
 				<visible>!PVR.IsRecording + PVR.HasTimer</visible>
 			</control>
 			<control type="image">
 				<description>Mute</description>
-				<posx>174r</posx>
+				<posx>110r</posx>
 				<posy>950</posy>
 				<width>100</width>
 				<height>100</height>

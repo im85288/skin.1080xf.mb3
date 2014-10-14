@@ -19,15 +19,15 @@
 			<posy>0</posy>
 			<width>256</width>
 			<height>293</height>
-			<texture border="7">windows/home/tile.png</texture>
+			<colordiffuse>$VAR[HomeTileHomeColourVar]</colordiffuse>
+			<texture border="7">special://skin/extras/icons/tile-white.png</texture>
 		</control>
 		<control type="image">
 			<posx>19</posx>
 			<posy>222</posy>
 			<width>246</width>
 			<height>66</height>
-			<texture border="1">windows/home/tile-overlay.png</texture>
-			<colordiffuse>99FFFFFF</colordiffuse>
+			<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 		</control>
 	</include>
 	<include name="SettingsLabelVars">
@@ -56,6 +56,22 @@
 			<effect type="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="auto" />
 			<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
 		</animation>
+	</include>
+	<include name="SettingsColourFocusImageVars">
+		<posx>-2</posx>
+		<posy>-16</posy>
+		<width>288</width>
+		<height>325</height>
+		<texture border="40">windows/home/tile-fo.png</texture>
+		<animation type="Visible">
+			<effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
+			<effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+		</animation>
+		<animation type="Hidden">
+			<effect type="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="auto" />
+			<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+		</animation>
+		<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
 	</include>
 	<include name="SettingsSystemInfoLabel">
 		<width>1210</width>

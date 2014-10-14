@@ -1,132 +1,132 @@
 <window type="dialog" id="3021">
-    <defaultcontrol always="true">3</defaultcontrol>
-    <onunload>ClearProperty(Close,3021)</onunload>
-    <visible>Window.IsActive(3021) + Window.IsActive(Home)</visible>
-    <controls>
-        <control type="GroupList">
-            <description>Button labels</description>
-            <animation type="WindowOpen">
-                <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="200" />
-                <effect type="zoom" start="0,229,1920,1" end="0,170,1920,70" tween="sine" easing="out" time="200" />
-            </animation>
-            <animation type="WindowClose" condition="!IsEmpty(Window(3021).Property(Close))">
-                <effect type="fade" start="100" end="0" tween="sine" easing="inout" time="200" />
-                <effect type="zoom" start="0,170,1920,70" end="0,229,1920,1" tween="sine" easing="out" time="200" />
-            </animation>
-            <animation type="WindowClose" condition="IsEmpty(Window(3021).Property(Close))">
-                <effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
-                <effect type="slide" start="0,0" end="0,-75" time="300" tween="sine" easing="out" />
-            </animation>
-            <animation type="Conditional" condition="Window.IsActive(7030) | Window.IsActive(7031) | Window.IsActive(7032)">
+	<defaultcontrol always="true">3</defaultcontrol>
+	<onunload>ClearProperty(Close,3021)</onunload>
+	<visible>Window.IsActive(3021) + Window.IsActive(Home)</visible>
+	<controls>
+		<control type="GroupList">
+			<description>Button labels</description>
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="200" />
+				<effect type="zoom" start="0,229,1920,1" end="0,170,1920,70" tween="sine" easing="out" time="200" />
+			</animation>
+			<animation type="WindowClose" condition="!IsEmpty(Window(3021).Property(Close))">
+				<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="200" />
+				<effect type="zoom" start="0,170,1920,70" end="0,229,1920,1" tween="sine" easing="out" time="200" />
+			</animation>
+			<animation type="WindowClose" condition="IsEmpty(Window(3021).Property(Close))">
+				<effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
+				<effect type="slide" start="0,0" end="0,-75" time="300" tween="sine" easing="out" />
+			</animation>
+			<animation type="Conditional" condition="Window.IsActive(7030) | Window.IsActive(7031) | Window.IsActive(7032)">
 				<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="200" />
 				<effect type="zoom" start="100,170,1720,70" end="100,229,1720,1" tween="sine" easing="out" time="200" />
 			</animation>
-            <posx>0</posx>
-            <posy>170</posy>
-            <width>1920</width>
-            <height>70</height>
-            <align>center</align>
-            <orientation>horizontal</orientation>
-            <usecontrolcoords>true</usecontrolcoords>
-            <itemgap>45</itemgap>
-            <control type="label">
-                <description>Unwatched</description>
-                <include>HomeLabel</include>
-                <label>$LOCALIZE[49238]</label>
-                <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(1)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(1)">Conditional</animation>
-                <visible>!Container(3).HasFocus(1)</visible>
-             </control>
-             <control type="label">
-                <description>Unwatched</description>
-                <include>HomeLabelColour</include>
-                <label>$LOCALIZE[49238]</label>
-                <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(1)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(1)">Conditional</animation>
-                <visible>Container(3).HasFocus(1)</visible>
-                <colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
-            </control>
-            <control type="label">
-                <description>New</description>
-                <include>HomeLabel</include>
-                <label>$LOCALIZE[49239]</label>
-                <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(2)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(2)">Conditional</animation>
-                <visible>!Container(3).HasFocus(2)</visible>
-            </control>
-            <control type="label">
-                <description>New</description>
-                <include>HomeLabelColour</include>
-                <label>$LOCALIZE[49239]</label>
-                <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(2)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(2)">Conditional</animation>
-                <visible>Container(3).HasFocus(2)</visible>
-            </control>
-            <control type="label">
-                <description>TV guide</description>
-                <include>HomeLabel</include>
-                <label>$LOCALIZE[42160]</label>
-                <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(3)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(3)">Conditional</animation>
-                <visible>!Container(3).HasFocus(3)</visible>
-            </control>
-            <control type="label">
-                <description>TV guide</description>
-                <include>HomeLabelColour</include>
-                <label>$LOCALIZE[42160]</label>
-                <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(3)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(3)">Conditional</animation>
-                <visible>Container(3).HasFocus(3)</visible>
-            </control>
-            <control type="label">
-                <description>Favourite Shows</description>
-                <include>HomeLabel</include>
-                <label>$LOCALIZE[41153]</label>
-                <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(4)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(4)">Conditional</animation>
-                <visible>!Container(3).HasFocus(4)</visible>
-            </control>
-             <control type="label">
-                <description>Favourite Shows</description>
-                <include>HomeLabelColour</include>
-                <label>$LOCALIZE[41153]</label>
-                <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(4)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(4)">Conditional</animation>
-                <visible>Container(3).HasFocus(4)</visible>
-            </control>
-           <control type="label">
-                <description>Genres</description>
-                <include>HomeLabel</include>
-                <label>$LOCALIZE[135]</label>
-                <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(5)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(5)">Conditional</animation>
-                <visible>!Container(3).HasFocus(5)</visible>
-            </control>
-            <control type="label">
-                <description>Genres</description>
-                <include>HomeLabelColour</include>
-                <label>$LOCALIZE[135]</label>
-                <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(5)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(5)">Conditional</animation>
-                <visible>Container(3).HasFocus(5)</visible>
-            </control>   
-            <control type="label">
-                <description>Studios</description>
-                <include>HomeLabel</include>
-                <label>$LOCALIZE[20388]</label>
-                <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(6)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="150" tween="sine" easing="inout" center="auto" condition="!Container(3).HasFocus(6)">Conditional</animation>
-                <visible>!Container(3).HasFocus(6)</visible>
-            </control>
-             <control type="label">
-                <description>Studios</description>
-                <include>HomeLabelColour</include>
-                <label>$LOCALIZE[20388]</label>
-                <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(6)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="150" tween="sine" easing="inout" center="auto" condition="!Container(3).HasFocus(6)">Conditional</animation>
-                <visible>Container(3).HasFocus(6)</visible>
-            </control>
-            <control type="group">
+			<posx>0</posx>
+			<posy>170</posy>
+			<width>1920</width>
+			<height>70</height>
+			<align>center</align>
+			<orientation>horizontal</orientation>
+			<usecontrolcoords>true</usecontrolcoords>
+			<itemgap>45</itemgap>
+			<control type="label">
+				<description>Unwatched</description>
+				<include>HomeLabel</include>
+				<label>$LOCALIZE[49238]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(1)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(1)">Conditional</animation>
+				<visible>!Container(3).HasFocus(1)</visible>
+			</control>
+			<control type="label">
+				<description>Unwatched</description>
+				<include>HomeLabelColour</include>
+				<label>$LOCALIZE[49238]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(1)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(1)">Conditional</animation>
+				<visible>Container(3).HasFocus(1)</visible>
+				<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
+			</control>
+			<control type="label">
+				<description>New</description>
+				<include>HomeLabel</include>
+				<label>$LOCALIZE[49239]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(2)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(2)">Conditional</animation>
+				<visible>!Container(3).HasFocus(2)</visible>
+			</control>
+			<control type="label">
+				<description>New</description>
+				<include>HomeLabelColour</include>
+				<label>$LOCALIZE[49239]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(2)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(2)">Conditional</animation>
+				<visible>Container(3).HasFocus(2)</visible>
+			</control>
+			<control type="label">
+				<description>TV guide</description>
+				<include>HomeLabel</include>
+				<label>$LOCALIZE[42160]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(3)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(3)">Conditional</animation>
+				<visible>!Container(3).HasFocus(3)</visible>
+			</control>
+			<control type="label">
+				<description>TV guide</description>
+				<include>HomeLabelColour</include>
+				<label>$LOCALIZE[42160]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(3)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(3)">Conditional</animation>
+				<visible>Container(3).HasFocus(3)</visible>
+			</control>
+			<control type="label">
+				<description>Favourite Shows</description>
+				<include>HomeLabel</include>
+				<label>$LOCALIZE[41153]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<visible>!Container(3).HasFocus(4)</visible>
+			</control>
+			<control type="label">
+				<description>Favourite Shows</description>
+				<include>HomeLabelColour</include>
+				<label>$LOCALIZE[41153]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<visible>Container(3).HasFocus(4)</visible>
+			</control>
+			<control type="label">
+				<description>Genres</description>
+				<include>HomeLabel</include>
+				<label>$LOCALIZE[135]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<visible>!Container(3).HasFocus(5)</visible>
+			</control>
+			<control type="label">
+				<description>Genres</description>
+				<include>HomeLabelColour</include>
+				<label>$LOCALIZE[135]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<visible>Container(3).HasFocus(5)</visible>
+			</control>
+			<control type="label">
+				<description>Studios</description>
+				<include>HomeLabel</include>
+				<label>$LOCALIZE[20388]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(6)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="150" tween="sine" easing="inout" center="auto" condition="!Container(3).HasFocus(6)">Conditional</animation>
+				<visible>!Container(3).HasFocus(6)</visible>
+			</control>
+			<control type="label">
+				<description>Studios</description>
+				<include>HomeLabelColour</include>
+				<label>$LOCALIZE[20388]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(6)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="150" tween="sine" easing="inout" center="auto" condition="!Container(3).HasFocus(6)">Conditional</animation>
+				<visible>Container(3).HasFocus(6)</visible>
+			</control>
+			<control type="group">
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>-50</width>
@@ -153,25 +153,25 @@
 					<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
 				</control>
 			</control>
-            <control type="label">
-                <description>User 1</description>
-                <include>HomeLabel</include>
-                <label>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.0.title)]</label>
-                <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(7)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(7)">Conditional</animation>
-                <visible>!Container(3).HasFocus(7)</visible>
-                <visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.tvshows.0.title))</visible>
-            </control>
-            <control type="label">
-                <description>User 1</description>
-                <include>HomeLabelColour</include>
-                <label>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.0.title)]</label>
-                <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(7)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(7)">Conditional</animation>
-                <visible>Container(3).HasFocus(7)</visible>
-                <visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.tvshows.0.title))</visible>
-            </control>
-            <control type="group">
+			<control type="label">
+				<description>User 1</description>
+				<include>HomeLabel</include>
+				<label>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.0.title)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(7)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(7)">Conditional</animation>
+				<visible>!Container(3).HasFocus(7)</visible>
+				<visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.tvshows.0.title))</visible>
+			</control>
+			<control type="label">
+				<description>User 1</description>
+				<include>HomeLabelColour</include>
+				<label>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.0.title)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(7)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(7)">Conditional</animation>
+				<visible>Container(3).HasFocus(7)</visible>
+				<visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.tvshows.0.title))</visible>
+			</control>
+			<control type="group">
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>-50</width>
@@ -198,25 +198,25 @@
 					<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
 				</control>
 			</control>
-           <control type="label">
-                <description>User 2</description>
-                <include>HomeLabel</include>
-                <label>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.1.title)]</label>
-                <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(8)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(8)">Conditional</animation>
-                <visible>!Container(3).HasFocus(8)</visible>
-                <visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.tvshows.1.title))</visible>
-            </control>
-            <control type="label">
-                <description>User 2</description>
-                <include>HomeLabelColour</include>
-                <label>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.1.title)]</label>
-                <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(8)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(8)">Conditional</animation>
-                <visible>Container(3).HasFocus(8)</visible>
-                <visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.tvshows.1.title))</visible>
-            </control>
-            <control type="group">
+			<control type="label">
+				<description>User 2</description>
+				<include>HomeLabel</include>
+				<label>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.1.title)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(8)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(8)">Conditional</animation>
+				<visible>!Container(3).HasFocus(8)</visible>
+				<visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.tvshows.1.title))</visible>
+			</control>
+			<control type="label">
+				<description>User 2</description>
+				<include>HomeLabelColour</include>
+				<label>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.1.title)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(8)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(8)">Conditional</animation>
+				<visible>Container(3).HasFocus(8)</visible>
+				<visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.tvshows.1.title))</visible>
+			</control>
+			<control type="group">
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>-50</width>
@@ -243,90 +243,95 @@
 					<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
 				</control>
 			</control>
-            <control type="label">
-                <description>User 3</description>
-                <include>HomeLabel</include>
-                <label>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.2.title)]</label>
-                <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(9)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(9)">Conditional</animation>
-                <visible>!Container(3).HasFocus(9)</visible>
-                <visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.tvshows.2.title))</visible>
-            </control>
-            <control type="label">
-                <description>User 3</description>
-                <include>HomeLabelColour</include>
-                <label>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.2.title)]</label>
-                <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(9)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(9)">Conditional</animation>
-                <visible>Container(3).HasFocus(9)</visible>
-                <visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.tvshows.2.title))</visible>
-            </control>
-        </control>
-        
-        <control type="wraplist" id="3">
-            <description>Control list</description>
-            <posx>0</posx>
-            <posy>0</posy>
-            <height>2</height>
-            <width>2</width>
-            <onleft>3</onleft>
-            <onright>3</onright>
-            <onup>SetProperty(Close,1)</onup>
-            <onup condition="Container(3).HasFocus(7)">ActivateWindow(7030)</onup>
+			<control type="label">
+				<description>User 3</description>
+				<include>HomeLabel</include>
+				<label>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.2.title)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(9)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(9)">Conditional</animation>
+				<visible>!Container(3).HasFocus(9)</visible>
+				<visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.tvshows.2.title))</visible>
+			</control>
+			<control type="label">
+				<description>User 3</description>
+				<include>HomeLabelColour</include>
+				<label>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.2.title)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(9)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(9)">Conditional</animation>
+				<visible>Container(3).HasFocus(9)</visible>
+				<visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.tvshows.2.title))</visible>
+			</control>
+		</control>
+		<control type="wraplist" id="3">
+			<description>Control list</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>2</height>
+			<width>2</width>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<onup>SetProperty(Close,1)</onup>
+			<onup condition="Container(3).HasFocus(7)">ActivateWindow(7030)</onup>
 			<onup condition="Container(3).HasFocus(8)">ActivateWindow(7031)</onup>
 			<onup condition="Container(3).HasFocus(9)">ActivateWindow(7032)</onup>
-            <ondown>SetProperty(Close,1)</ondown>
-            <ondown>PreviousMenu</ondown>
-            <orientation>horizontal</orientation>
-            <scrolltime>0</scrolltime>
-            <viewtype>list</viewtype>
-            <itemlayout width="2" height="2"/>
-            <focusedlayout width="2" height="2"/>
-            <content>
-                <item id="1">
-                    <label>-</label>
-                    <onclick>PreviousMenu</onclick>
-                    <onclick>$INFO[Window(Home).Property(xbmb3c.std.tvshows.7.path)]</onclick>
-                </item>
-                <item id="2">
-                    <label>-</label>
-                    <onclick>PreviousMenu</onclick>
-                    <onclick>$INFO[Window(Home).Property(xbmb3c.std.tvshows.1.path)]</onclick>
-                </item>
-                <item id="3">
-                    <label>-</label>
-                    <onclick>PreviousMenu</onclick>
-                    <onclick>$INFO[Window(Home).Property(xbmb3c.std.tvshows.6.path)]</onclick>
-                </item>
-                <item id="4">               
-                    <label>-</label>
-                    <onclick>PreviousMenu</onclick>
-                    <onclick>$INFO[Window(Home).Property(xbmb3c.std.tvshows.4.path)]</onclick>
-                </item>
-                <item id="5">               
-                    <label>-</label>
-                    <onclick>PreviousMenu</onclick>
-                    <onclick>$INFO[Window(Home).Property(xbmb3c.std.tvshows.8.path)]</onclick>
-                </item>
-                <item id="6">                   
-                    <label>-</label>
-                    <onclick>PreviousMenu</onclick>
-                    <onclick>$INFO[Window(Home).Property(xbmb3c.std.tvshows.9.path)]</onclick>
-                </item>
-                <item id="7">               
-                    <label>-</label>
-                    <onclick>PreviousMenu</onclick>
-                    <onclick>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.0.path)]</onclick>
-                </item>
-                <item id="8">           
-                    <onclick>PreviousMenu</onclick>
-                    <onclick>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.1.path)]</onclick>
-                </item>
-                 <item id="9">           
-                    <onclick>PreviousMenu</onclick>
-                    <onclick>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.2.path)]</onclick>
-                </item>
-            </content>
-        </control>        
-    </controls>
+			<ondown>SetProperty(Close,1)</ondown>
+			<ondown>PreviousMenu</ondown>
+			<orientation>horizontal</orientation>
+			<scrolltime>0</scrolltime>
+			<viewtype>list</viewtype>
+			<itemlayout width="2" height="2" />
+			<focusedlayout width="2" height="2" />
+			<content>
+				<item id="1">
+					<label>-</label>
+					<onclick>PreviousMenu</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.tvshows.7.path)]</onclick>
+					<onclick condition="Skin.HasSetting(UseKodiLibrary)">XBMC.ActivateWindow(10025,special://skin/playlists/unwatched episodes.xsp,return)</onclick>
+				</item>
+				<item id="2">
+					<label>-</label>
+					<onclick>PreviousMenu</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.tvshows.1.path)]</onclick>
+					<onclick condition="Skin.HasSetting(UseKodiLibrary)">ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,return)</onclick>
+				</item>
+				<item id="3">
+					<label>-</label>
+					<onclick>PreviousMenu</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.tvshows.6.path)]</onclick>
+					<onclick condition="Skin.HasSetting(UseKodiLibrary)">XBMC.RunScript(script.tv.show.next.aired)</onclick>
+				</item>
+				<item id="4">
+					<label>-</label>
+					<onclick>PreviousMenu</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.tvshows.4.path)]</onclick>
+					<onclick condition="Skin.HasSetting(UseKodiLibrary)">XBMC.ActivateWindow(10025,special://skin/playlists/Top Rated TV Shows.xsp,return)</onclick>
+				</item>
+				<item id="5">
+					<label>-</label>
+					<onclick>PreviousMenu</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.tvshows.8.path)]</onclick>
+					<onclick condition="Skin.HasSetting(UseKodiLibrary)">ActivateWindow(VideoLibrary,TVShowGenres,return)</onclick>
+				</item>
+				<item id="6">
+					<label>-</label>
+					<onclick>PreviousMenu</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.tvshows.9.path)]</onclick>
+					<onclick condition="Skin.HasSetting(UseKodiLibrary)">ActivateWindow(VideoLibrary,TVShowStudios,return)</onclick>
+				</item>
+				<item id="7">
+					<label>-</label>
+					<onclick>PreviousMenu</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.usr.tvshows.0.path)]</onclick>
+				</item>
+				<item id="8">
+					<onclick>PreviousMenu</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.usr.tvshows.1.path)]</onclick>
+				</item>
+				<item id="9">
+					<onclick>PreviousMenu</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.usr.tvshows.2.path)]</onclick>
+				</item>
+			</content>
+		</control>
+	</controls>
 </window>

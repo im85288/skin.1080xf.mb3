@@ -1,7 +1,7 @@
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>50,52,53,54,55,500,501,60,566,582,577,553</views>
+	<views>50,52,53,54,55,500,501,60,566,582,577,553,780</views>
 	<backgroundcolor>0</backgroundcolor>
 	<onload condition="System.HasAddon(script.tvtunes) + Library.HasContent(TVShows) + !Player.HasMedia + Skin.HasSetting(TVTunes.Enabled)">RunScript(script.tvtunes,backend=True&amp;loop=False)</onload>
 	<onload condition="System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows) + Skin.HasSetting(NextAired.Enabled)">RunScript(script.tv.show.next.aired,backend=True)</onload>
@@ -615,6 +615,18 @@
 						<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
 						<radioposx>-19</radioposx>
 						<visible>Container.Content(Movies) | Container.Content(TVShows)</visible>
+					</control>
+					<control type="radiobutton" id="214">
+						<description>Coverflow</description>
+						<include>optionsbuttonsdimensions</include>
+						<label>$LOCALIZE[42259]</label>
+						<texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
+						<onclick>Container.SetViewMode(780)</onclick>
+						<selected>Control.IsVisible(780)</selected>
+						<textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
+						<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
+						<radioposx>-19</radioposx>
+						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(musicvideos)</visible>
 					</control>
 				</control>
 				<control type="group">

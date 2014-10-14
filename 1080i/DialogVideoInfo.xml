@@ -484,7 +484,8 @@
 					<content>
 						<item id="1">
 							<label>$LOCALIZE[41315]</label>
-							<onclick>$INFO[Window(home).Property("MB3.Action")]</onclick>
+							<onclick condition="Skin.HasSetting(UseKodiLibrary)">SendClick(2003,8)</onclick>
+							<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(home).Property("MB3.Action")]</onclick>
 							<onclick>Dialog.Close(MovieInformation)</onclick>
 							<visible>!Container.Content(movies) | [Container.Content(movies) + !System.HasAddon(script.cinema.experience)] | [Container.Content(movies) + SubString(Container.FolderPath,plugin)]</visible>
 						</item>
@@ -497,15 +498,26 @@
 						</item>
 						<item id="2">
 							<label>$LOCALIZE[20410]</label>
+							<onclick condition="!Skin.HasSetting(PlayTrailer.Minimized)">PreviousMenu</onclick>
+							<onclick condition="!Skin.HasSetting(PlayTrailer.Minimized)">PlayMedia($INFO[ListItem.Trailer])</onclick>
+							<onclick condition="Skin.HasSetting(PlayTrailer.Minimized)">PlayMedia($INFO[ListItem.Trailer],false,1)</onclick>
+							<onclick>Dialog.Close(movieinformation)</onclick>
+							<visible>Skin.HasSetting(UseKodiLibrary)</visible>
+							<visible>!IsEmpty(ListItem.Trailer)</visible>
+						</item>
+						<item id="2">
+							<label>$LOCALIZE[20410]</label>
 							<!-- <onclick condition="!Skin.HasSetting(PlayTrailer.Minimized)">PreviousMenu</onclick> <onclick condition="!Skin.HasSetting(PlayTrailer.Minimized)">PlayMedia($INFO[ListItem.Trailer])</onclick> <onclick condition="Skin.HasSetting(PlayTrailer.Minimized)">PlayMedia($INFO[ListItem.Trailer],false,1)</onclick> -->
 							<onclick>Dialog.Close(movieinformation)</onclick>
 							<onclick>$INFO[Window(home).Property("MB3.TrailerAction")]</onclick>
+							<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
 							<visible>!IsEmpty(Window(home).Property("MB3.TrailerAction")) + stringcompare(ListItem.Property(ItemType),Movie)</visible>
 						</item>
 						<item id="2">
 							<description>Youtube Search</description>
 							<label>$LOCALIZE[20410] YouTube</label>
 							<onclick>Dialog.Close(movieinformation)</onclick>
+							<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
 							<onclick>ActivateWindow(music,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[ListItem.TVShowTitle] $INFO[ListItem.Label],return)</onclick>
 							<visible>IsEmpty(Window(home).Property("MB3.TrailerAction")) + stringcompare(ListItem.Property(ItemType),Movie)</visible>
 						</item>
@@ -513,6 +525,7 @@
 							<description>Youtube Search</description>
 							<label>YouTube</label>
 							<onclick>Dialog.Close(movieinformation)</onclick>
+							<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
 							<onclick>ActivateWindow(music,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[ListItem.Title],return)</onclick>
 							<visible>!stringcompare(ListItem.Property(ItemType),Movie)</visible>
 						</item>
@@ -862,9 +875,7 @@
 					<visible>Skin.HasSetting(CDArt.Enabled)</visible>
 					<visible>!IsEmpty(ListItem.Art(discart))</visible>
 					<animation type="WindowOpen" reversible="false">
-						<effect type="slide" start="-1610,0" end="0" delay="1200" time="1420" tween="quadratic" easing="out" />
-						<effect type="rotate" start="0" center="1760,810" end="-720" delay="800" time="1420" tween="quadratic" easing="out" />
-						<effect type="zoom" start="104" center="1760,810" end="100" delay="2120" time="140" tween="quadratic" easing="out" />
+						<effect type="slide" start="2200,0" end="0" delay="200" time="1420" tween="quadratic" easing="out" />
 					</animation>
 					<animation type="WindowClose" reversible="false">
 						<effect type="slide" start="0,0" end="4600" time="700" tween="quadratic" easing="out" />
@@ -900,7 +911,7 @@
 						<posy>0</posy>
 						<width>1045</width>
 						<height>270</height>
-						<label>$INFO[Window(Home).Property(MB3.Plot)]</label>
+						<label>$VAR[PlotBox]</label>
 						<textcolor>SecondaryT</textcolor>
 						<align>justify</align>
 						<font>Font-Condensed-S40</font>
@@ -935,7 +946,6 @@
 						<orientation>vertical</orientation>
 						<showonepage>false</showonepage>
 						<animation effect="fade" start="80" end="35" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(70)">Conditional</animation>
-						<visible>!IsEmpty(Window(Home).Property(MB3.Plot))</visible>
 					</control>
 				</control>
 			</control>
@@ -957,6 +967,7 @@
 						<onleft>50</onleft>
 					</control>
 					<control type="list" id="50">
+						<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
 						<posx>118</posx>
 						<posy>234</posy>
 						<width>1180</width>
@@ -1018,6 +1029,69 @@
 							</control>
 						</focusedlayout>
 						<content target="video">$INFO[ListItem.Property(CastPluginLink)]</content>
+					</control>
+					<control type="list" id="50">
+						<visible>Skin.HasSetting(UseKodiLibrary)</visible>
+						<posx>118</posx>
+						<posy>234</posy>
+						<width>1180</width>
+						<height>660</height>
+						<onleft>SetFocus(9335)</onleft>
+						<onright condition="[!System.HasAddon(script.metadata.actors) | !IsEmpty(Window(Home).Property(script.metadata.actors.isactive)) | Container.Content(musicvideos)] + !Window.IsVisible(3009)">SetProperty(BounceRight,1,Home)</onright>
+						<onright condition="System.HasAddon(script.metadata.actors) + IsEmpty(Window(Home).Property(script.metadata.actors.isactive)) + !Container.Content(musicvideos)">SetProperty(script.metadata.actors.push,1,home)</onright>
+						<onright condition="System.HasAddon(script.metadata.actors) + IsEmpty(Window(Home).Property(script.metadata.actors.isactive)) + !Container.Content(musicvideos)">RunScript(script.metadata.actors,$INFO[Container(50).ListItem.Label])</onright>
+						<onup>50</onup>
+						<ondown>50</ondown>
+						<pagecontrol>151</pagecontrol>
+						<scrolltime tween="cubic" easing="out">500</scrolltime>
+						<orientation>vertical</orientation>
+						<focusposition>0</focusposition>
+						<viewtype label="actor list">list</viewtype>
+						<itemlayout height="60">
+							<control type="label">
+								<posx>10</posx>
+								<posy>0</posy>
+								<width>1180</width>
+								<height>60</height>
+								<label>$INFO[ListItem.label]</label>
+								<font>Font-Condensed-S40</font>
+								<textcolor>SecondaryT</textcolor>
+								<selectedcolor>SecondaryT</selectedcolor>
+								<align>left</align>
+								<aligny>center</aligny>
+								<scroll>false</scroll>
+							</control>
+						</itemlayout>
+						<focusedlayout height="60">
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1190</width>
+								<height>60</height>
+								<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+								<animation effect="slide" start="0,83" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(9333).OnPrevious">Focus</animation>
+								<animation effect="slide" start="0,-83" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(9333).OnNext">Focus</animation>
+								<include>visiblehidefadeinfo</include>
+							</control>
+							<control type="image"> <!--focused background left edge -->
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>5</width>
+								<height>60</height>
+								<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+							</control>
+							<control type="label">
+								<posx>10</posx>
+								<posy>0</posy>
+								<width>1180</width>
+								<height>60</height>
+								<label>$INFO[ListItem.Label]</label>
+								<textcolor>PrimaryT</textcolor>
+								<font>Font-Condensed-S40</font>
+								<align>left</align>
+								<aligny>center</aligny>
+							</control>
+						</focusedlayout>
 					</control>
 					<control type="image">
 						<description>Scrollbar background</description>
@@ -1112,7 +1186,7 @@
 		<control type="button" id="8">
 			<description>Play</description>
 			<visible>false</visible>
-			<onclick>$INFO[Window(home).Property("MB3.Action")]</onclick>
+			<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(home).Property("MB3.Action")]</onclick>
 			<onclick>Dialog.Close(MovieInformation)</onclick>
 		</control>
 		<control type="button" id="10">

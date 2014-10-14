@@ -1102,6 +1102,10 @@ msgctxt "#42258"
 msgid "Reel"
 msgstr ""
 
+msgctxt "#42259"
+msgid "Coverflow"
+msgstr ""
+
 #MB3 strings from id 49235 
 msgctxt "#49235"
 msgid "search MediaBrowser for"
@@ -1177,4 +1181,12 @@ msgstr ""
 
 msgctxt "#49254"
 msgid "Memory Used:"
+msgstr ""
+
+msgctxt "#49255"
+msgid "Video Library Mode"
+msgstr ""
+
+msgctxt "#49256"
+msgid "Use Native Kodi Library"
 msgstr ""

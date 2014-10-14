@@ -210,6 +210,7 @@
 		<value>$LOCALIZE[41524]</value>
 	</variable>
 	<variable name="SpotlightLabelVAR">
+		<value condition="stringcompare(Skin.String(HomeWidget.1.Type),mb3playlists) + !IsEmpty(Skin.String(HomeWidget.1.MB3PlaylistSubTypeName))">$INFO[Skin.String(HomeWidget.1.MB3PlaylistSubTypeName)]</value>
 		<value condition="stringcompare(Skin.String(HomeWidget.1.Type),script.randomandlastitems) + !IsEmpty(Window.Property(HomeWidget1.Name))">$INFO[Window.Property(HomeWidget1.Name)]</value>
 		<value condition="!IsEmpty(Skin.String(HomeWidget.1.TypeName))">$INFO[Skin.String(HomeWidget.1.TypeName)]</value>
 		<value>$LOCALIZE[41550]</value>
@@ -255,6 +256,29 @@
 		<value condition="IntegerGreaterThan(Container(3022).ListItem.Property(CriticRating),59)">special://skin/extras/icons/rottentomatoes.png</value>
 		<value condition="!IntegerGreaterThan(Container(3022).ListItem.Property(CriticRating),59)">special://skin/extras/icons/rottentomatoesrotten.png</value>
 	</variable>
+	<variable name="TotalMovies">
+		<value condition="Skin.HasSetting(UseKodiLibrary)">$INFO[Window.Property(Movies.Count)]</value>
+		<value>$INFO[Window(Home).Property(MB3TotalMovies)]</value>
+	</variable>
+	<variable name="TotalMoviesWatched">
+		<value condition="Skin.HasSetting(UseKodiLibrary)">$INFO[Window.Property(Movies.Watched)]</value>
+		<value>$INFO[Window(Home).Property(MB3TotalWatchedMovies)]</value>
+	</variable>
+	<variable name="TotalMoviesUnWatched">
+		<value condition="Skin.HasSetting(UseKodiLibrary)">$INFO[Window.Property(Movies.UnWatched)]</value>
+		<value>$INFO[Window(Home).Property(MB3TotalUnWatchedMovies)]</value>
+	</variable>
+	<variable name="TotalTV">
+		<value condition="Skin.HasSetting(UseKodiLibrary)">$INFO[Window.Property(TVShows.Count)]</value>
+		<value>$INFO[Window(Home).Property(MB3TotalTvShows)]</value>
+	</variable>
+	<variable name="TotalTVRunning">
+		<value>$INFO[Window(Home).Property(MB3TotalRunningTvShows)]</value>
+	</variable>
+	<variable name="NextAiredTotal">
+		<value condition="Skin.HasSetting(UseKodiLibrary)">$INFO[Window.Property(NextAired.TodayTotal)]</value>
+		<value>$INFO[Window(Home).Property(MB3NextAiredTotalToday)]</value>
+	</variable>
 	<include name="HomeProfileInfo">
 		<control type="group">
 			<visible>!Window.IsActive(favourites) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-globalsearch-infodialog.xml) + !Window.IsActive(script-globalsearch-contextmenu.xml) + ![Window.IsVisible(virtualkeyboard) + !IsEmpty(Window.Property(HomeSearch))]</visible>
@@ -273,7 +297,7 @@
 					<width>341</width>
 					<height>100</height>
 					<texture>special://skin/extras/icons/mblogotextwhite.png</texture>
-					<visible>!StringCompare(Skin.CurrentColourTheme,Snow)</visible>
+					<visible>!StringCompare(Skin.CurrentColourTheme,Snow) + !Skin.HasSetting(UseKodiLibrary)</visible>
 				</control>
 				<control type="image">
 					<posx>68</posx>
@@ -281,22 +305,22 @@
 					<width>341</width>
 					<height>100</height>
 					<texture>special://skin/extras/icons/mblogotextblack.png</texture>
-					<visible>StringCompare(Skin.CurrentColourTheme,Snow)</visible>
+					<visible>StringCompare(Skin.CurrentColourTheme,Snow) + !Skin.HasSetting(UseKodiLibrary)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
 					<posy>48</posy>
 					<width>48</width>
 					<height>33</height>
-					<texture>$INFO[Window(Home).Property(MB3UserImage)]</texture>
+					<texture>$INFO[Window(Home).Property(MB3UserImage)] + !Skin.HasSetting(UseKodiLibrary)</texture>
 				</control>
 				<control type="fadelabel">
 					<posx>0</posx>
 					<posy>80</posy>
 					<include>HomeProfileInfoLabel</include>
 					<label>[COLOR=$VAR[FocusModHomeColourVar]][B]$INFO[Window(Home).Property(MB3UserName)][/B][/COLOR]</label>
-					<label>[COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window(Home).Property(MB3TotalMovies)][/COLOR] $LOCALIZE[342]</label>
-					<label>[COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window(Home).Property(MB3TotalTvShows)][/COLOR] $LOCALIZE[20343]</label>
+					<label>[COLOR=$VAR[FocusModHomeColourVar]]$VAR[TotalMovies][/COLOR] $LOCALIZE[342]</label>
+					<label>[COLOR=$VAR[FocusModHomeColourVar]]$VAR[TotalTV][/COLOR] $LOCALIZE[20343]</label>
 					<label>$VAR[NewEpisodesLabel]</label>
 					<label>[COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window.Property(Music.SongsCount)][/COLOR] $LOCALIZE[134]</label>
 					<label>[COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window.Property(MB3TotalChannels)][/COLOR] $LOCALIZE[19019]</label>
@@ -313,14 +337,14 @@
 					<posx>0</posx>
 					<posy>80</posy>
 					<include>HomeProfileInfoLabel</include>
-					<label>[COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window(Home).Property(MB3TotalMovies)][/COLOR] $LOCALIZE[342] • [COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window(Home).Property(MB3TotalWatchedMovies)][/COLOR] $LOCALIZE[16102] • [COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window(Home).Property(MB3TotalUnWatchedMovies)][/COLOR] $LOCALIZE[16101]</label>
+					<label>[COLOR=$VAR[FocusModHomeColourVar]]$VAR[TotalMovies][/COLOR] $LOCALIZE[342] • [COLOR=$VAR[FocusModHomeColourVar]]$VAR[TotalMoviesWatched][/COLOR] $LOCALIZE[16102] • [COLOR=$VAR[FocusModHomeColourVar]]$VAR[TotalMoviesUnWatched][/COLOR] $LOCALIZE[16101]</label>
 					<visible>Container(20).HasFocus(3)</visible>
 				</control>
 				<control type="fadelabel">
 					<posx>0</posx>
 					<posy>80</posy>
 					<include>HomeProfileInfoLabel</include>
-					<label>[COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window(Home).Property(MB3TotalTvShows)][/COLOR] $LOCALIZE[20343] • [COLOR=$VAR[FocusModHomeColourVar]]$INFO[Window(Home).Property(MB3TotalRunningTvShows)][/COLOR] $LOCALIZE[49253]</label>
+					<label>[COLOR=$VAR[FocusModHomeColourVar]]$VAR[TotalTV][/COLOR] $LOCALIZE[20343] • [COLOR=$VAR[FocusModHomeColourVar]]$VAR[TotalTVRunning][/COLOR] $LOCALIZE[49253]</label>
 					<label>$VAR[NewEpisodesLabel]</label>
 					<scroll>false</scroll>
 					<pauseatend>6000</pauseatend>
@@ -346,8 +370,8 @@
 					<posx>0</posx>
 					<posy>80</posy>
 					<include>HomeProfileInfoLabel</include>
-					<label>$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19157] [B][COLOR=$VAR[FocusModHomeColourVar]], [/COLOR][/B]$LOCALIZE[19126] - • ]$INFO[PVR.NextRecordingTitle, [B][COLOR=$VAR[FocusModHomeColourVar]],[/COLOR][/B]]$INFO[PVR.NextRecordingChannel, - [B][COLOR=$VAR[FocusModHomeColourVar]],[/COLOR][/B]]</label>
-					<label>$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19158] [B][COLOR=$VAR[FocusModHomeColourVar]], [/COLOR][/B]$LOCALIZE[19126] - ]$INFO[PVR.NowRecordingTitle, • [B][COLOR=FF48D1CC],[/COLOR][/B] ]$INFO[PVR.NowRecordingChannel,[B][COLOR=$VAR[FocusModHomeColourVar]]( ,)[/COLOR][/B]]</label>
+					<label>$INFO[PVR.NextRecordingTitle,$LOCALIZE[19157] - ,]</label>
+					<label>$INFO[PVR.NowRecordingTitle,$LOCALIZE[19158] - ,]</label>
 					<label>[COLOR=$VAR[FocusModHomeColourVar]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</label>
 					<label>[COLOR=$VAR[FocusModHomeColourVar]]$INFO[Pvr.BackendName][/COLOR] $LOCALIZE[19012] • [COLOR=$VAR[FocusModHomeColourVar]]$INFO[Pvr.BackendRecordings][/COLOR] $LOCALIZE[19017]</label>
 					<label>$LOCALIZE[19114] [COLOR=$VAR[FocusModHomeColourVar]]$INFO[Pvr.BackendVersion][/COLOR]</label>
@@ -914,7 +938,8 @@
 					<onright condition="System.GetBool(pvrmanager.enabled)">925</onright>
 					<onright condition="!System.GetBool(pvrmanager.enabled)">525</onright>
 					<onclick>SetProperty(HomeSearch,1)</onclick>
-					<onclick>$INFO[Window(Home).Property(xbmb3c.std.search.0.path)])</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.search.0.path)])</onclick>
+					<onclick condition="Skin.HasSetting(UseKodiLibrary)">RunScript(script.globalsearch)</onclick>
 					<onup>80</onup>
 					<ondown>101</ondown>
 				</control>
@@ -1047,7 +1072,8 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<onclick>SetProperty(HomeSearch,1)</onclick>
-							<onclick>$INFO[Window(Home).Property(xbmb3c.std.search.0.path)])</onclick>
+							<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.search.0.path)])</onclick>
+							<onclick condition="Skin.HasSetting(UseKodiLibrary)">RunScript(script.globalsearch)</onclick>
 						</control>
 					</control>
 				</control>
@@ -1639,6 +1665,7 @@
 								<texture>special://skin/extras/icons/imdb.png</texture>
 								<visible>!IsEmpty(Container(5022).ListItem.Label2) + !substring(Container(5022).ListItem.Label2,None) + !IsEmpty(Container(5022).ListItem.Property(CriticRating))</visible>
 								<visible>Control.IsVisible(5022)</visible>
+								<visible>!stringcompare(Skin.String(HomeWidget.1.Type),mb3playlists)</visible>
 							</control>
 							<control type="label">
 								<posx>150</posx>
@@ -1648,6 +1675,7 @@
 								<label>$INFO[Container(5022).ListItem.Label2]</label>
 								<textcolor>PrimaryOSD</textcolor>
 								<scroll>false</scroll>
+								<visible>!stringcompare(Skin.String(HomeWidget.1.Type),mb3playlists)</visible>
 								<visible>!IsEmpty(Container(5022).ListItem.Label2) + !substring(Container(5022).ListItem.Label2,None) + !IsEmpty(Container(5022).ListItem.Property(CriticRating))</visible>
 							</control>
 							<control type="image">
@@ -1657,6 +1685,7 @@
 								<height>30</height>
 								<aspect>stretch</aspect>
 								<texture>special://skin/extras/icons/imdb.png</texture>
+								<visible>!stringcompare(Skin.String(HomeWidget.1.Type),mb3playlists)</visible>
 								<visible>!IsEmpty(Container(5022).ListItem.Label2) + !substring(Container(5022).ListItem.Label2,None) + IsEmpty(Container(5022).ListItem.Property(CriticRating))</visible>
 								<visible>Control.IsVisible(5022)</visible>
 							</control>
@@ -1668,6 +1697,7 @@
 								<label>$INFO[Container(5022).ListItem.Label2]</label>
 								<textcolor>PrimaryOSD</textcolor>
 								<scroll>false</scroll>
+								<visible>!stringcompare(Skin.String(HomeWidget.1.Type),mb3playlists)</visible>
 								<visible>!IsEmpty(Container(5022).ListItem.Label2) + !substring(Container(5022).ListItem.Label2,None) + IsEmpty(Container(5022).ListItem.Property(CriticRating))</visible>
 							</control>
 							<control type="image">
@@ -1678,6 +1708,7 @@
 								<aspect>stretch</aspect>
 								<texture>$VAR[RottenTomatoesHomeMovies]</texture>
 								<visible>Control.IsVisible(5022)</visible>
+								<visible>!stringcompare(Skin.String(HomeWidget.1.Type),mb3playlists)</visible>
 								<visible>!IsEmpty(Container(5022).ListItem.Property(CriticRating)) + !substring(Container(5022).ListItem.Property(CriticRating),None)</visible>
 							</control>
 							<control type="label">
@@ -1689,6 +1720,7 @@
 								<textcolor>PrimaryOSD</textcolor>
 								<scroll>false</scroll>
 								<visible>Control.IsVisible(5022)</visible>
+								<visible>!stringcompare(Skin.String(HomeWidget.1.Type),mb3playlists)</visible>
 								<visible>!IsEmpty(Container(5022).ListItem.Property(CriticRating)) + !substring(Container(5022).ListItem.Property(CriticRating),None)</visible>
 							</control>
 							<control type="image">
@@ -1711,6 +1743,51 @@
 								<scroll>false</scroll>
 								<visible>Control.IsVisible(5022)</visible>
 								<visible>!IsEmpty(Container(5022).ListItem.Property(SuggestedMovieTitle)) + !substring(Container(5022).ListItem.Property(SuggestedMovieTitle),None)</visible>
+							</control>
+							<control type="image">
+								<posx>590</posx>
+								<posy>580</posy>
+								<width>30</width>
+								<height>30</height>
+								<aspect>stretch</aspect>
+								<texture>special://skin/extras/icons/imdb.png</texture>
+								<visible>!IsEmpty(Container(5022).ListItem.Label2) + !substring(Container(5022).ListItem.Label2,None) + !IsEmpty(Container(5022).ListItem.Property(CriticRating))</visible>
+								<visible>Control.IsVisible(5022)</visible>
+								<visible>stringcompare(Skin.String(HomeWidget.1.Type),mb3playlists)</visible>
+							</control>
+							<control type="label">
+								<posx>630</posx>
+								<posy>580</posy>
+								<width>90</width>
+								<font>Font-Condensed-S32</font>
+								<label>$INFO[Container(5022).ListItem.Label2]</label>
+								<textcolor>PrimaryOSD</textcolor>
+								<scroll>false</scroll>
+								<visible>stringcompare(Skin.String(HomeWidget.1.Type),mb3playlists)</visible>
+								<visible>!IsEmpty(Container(5022).ListItem.Label2) + !substring(Container(5022).ListItem.Label2,None) + !IsEmpty(Container(5022).ListItem.Property(CriticRating))</visible>
+							</control>
+							<control type="image">
+								<posx>680</posx>
+								<posy>580</posy>
+								<width>30</width>
+								<height>30</height>
+								<aspect>stretch</aspect>
+								<texture>$VAR[RottenTomatoesHomeMovies]</texture>
+								<visible>Control.IsVisible(5022)</visible>
+								<visible>stringcompare(Skin.String(HomeWidget.1.Type),mb3playlists)</visible>
+								<visible>!IsEmpty(Container(5022).ListItem.Property(CriticRating)) + !substring(Container(5022).ListItem.Property(CriticRating),None)</visible>
+							</control>
+							<control type="label">
+								<posx>720</posx>
+								<posy>580</posy>
+								<width>90</width>
+								<font>Font-Condensed-S32</font>
+								<label>$INFO[Container(5022).ListItem.Property(CriticRating),,%]</label>
+								<textcolor>PrimaryOSD</textcolor>
+								<scroll>false</scroll>
+								<visible>Control.IsVisible(5022)</visible>
+								<visible>stringcompare(Skin.String(HomeWidget.1.Type),mb3playlists)</visible>
+								<visible>!IsEmpty(Container(5022).ListItem.Property(CriticRating)) + !substring(Container(5022).ListItem.Property(CriticRating),None)</visible>
 							</control>
 						</control>
 						<control type="label">
@@ -2171,7 +2248,9 @@
 								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeHomeTile1) + stringcompare(Skin.String(HomeHomeTile1.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeHomeTile1.Path)],return)</onclick>
 								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeHomeTile1) + stringcompare(Skin.String(HomeHomeTile1.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeHomeTile1.Path)],return)</onclick>
 								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeHomeTile1) + [stringcompare(Skin.String(HomeHomeTile1.Type),6) | stringcompare(Skin.String(HomeHomeTile1.Type),7)]">$INFO[Skin.String(HomeHomeTile1.Path)]</onclick>
-								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeHomeTile1)">$INFO[Window(Home).Property(xbmb3c.std.movies.1.path)]</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeHomeTile1) + !Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.movies.1.path)]</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeHomeTile1) + Library.HasContent(movies) + Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,RecentlyAddedMovies,return)</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeHomeTile1) + !Library.HasContent(movies) + Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,files,return)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeHomeTile1)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile)) + IsEmpty(Skin.String(HomeHomeTile1.Type))">Skin.SetString(HomeHomeTile1.Type,0)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile)) + IsEmpty(Skin.String(HomeHomeTile1.TypeName))">Skin.SetString(HomeHomeTile1.TypeName,$LOCALIZE[41145])</onclick>
@@ -2196,7 +2275,9 @@
 								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeHomeTile2) + stringcompare(Skin.String(HomeHomeTile2.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeHomeTile2.Path)],return)</onclick>
 								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeHomeTile2) + stringcompare(Skin.String(HomeHomeTile2.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeHomeTile2.Path)],return)</onclick>
 								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeHomeTile2) + [stringcompare(Skin.String(HomeHomeTile2.Type),6) | stringcompare(Skin.String(HomeHomeTile2.Type),7)]">$INFO[Skin.String(HomeHomeTile2.Path)]</onclick>
-								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeHomeTile2)">$INFO[Window(Home).Property(xbmb3c.std.tvshows.1.path)]</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeHomeTile2) + !Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.tvshows.1.path)]</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeHomeTile2) + Library.HasContent(tvshows) + Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,RecentlyAddedEpisodes,return)</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeHomeTile2) + !Library.HasContent(tvshows) + Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,files,return)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeHomeTile2)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile)) + IsEmpty(Skin.String(HomeHomeTile2.Type))">Skin.SetString(HomeHomeTile2.Type,0)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile)) + IsEmpty(Skin.String(HomeHomeTile2.TypeName))">Skin.SetString(HomeHomeTile2.TypeName,$LOCALIZE[41145])</onclick>
@@ -2303,7 +2384,9 @@
 					<onright condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePrograms)">625</onright>
 					<onright condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeWeather)">725</onright>
 					<onright condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeWeather)">825</onright>
-					<onclick>$INFO[Window(Home).Property(xbmb3c.std.movies.0.path)]</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.movies.0.path)]</onclick>
+					<onclick condition="!Library.HasContent(movies) + Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,files,return)</onclick>
+					<onclick condition="Library.HasContent(movies) + Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,movietitles,return)</onclick>
 					<onup>ActivateWindow(3020)</onup>
 					<ondown>201</ondown>
 				</control>
@@ -2873,12 +2956,14 @@
 						<content>
 							<item id="1">
 								<label fallback="342">$INFO[Skin.String(HomeVideoTile5.Label)]</label>
-								<label2>$INFO[Window(Home).Property(MB3TotalMovies)]</label2>
+								<label2>$VAR[TotalMovies]</label2>
 								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeVideoTile5) + !stringcompare(Skin.String(HomeVideoTile5.Type),4) + !stringcompare(Skin.String(HomeVideoTile5.Type),5) + !stringcompare(Skin.String(HomeVideoTile5.Type),6) + !stringcompare(Skin.String(HomeVideoTile5.Type),7)">RunAddon($INFO[Skin.String(HomeVideoTile5.Path)])</onclick>
 								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeVideoTile5) + stringcompare(Skin.String(HomeVideoTile5.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeVideoTile5.Path)],return)</onclick>
 								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeVideoTile5) + stringcompare(Skin.String(HomeVideoTile5.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeVideoTile5.Path)],return)</onclick>
 								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeVideoTile5) + [stringcompare(Skin.String(HomeVideoTile5.Type),6) | stringcompare(Skin.String(HomeVideoTile5.Type),7)]">$INFO[Skin.String(HomeVideoTile5.Path)]</onclick>
-								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeVideoTile5)">$INFO[Window(Home).Property(xbmb3c.std.movies.0.path)]</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeVideoTile5) + !Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.movies.0.path)]</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeVideoTile5) + Library.HasContent(movies) + Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,movietitles,return)</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeVideoTile5) + !Library.HasContent(movies) + Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,files,return)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeVideoTile5)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile)) + IsEmpty(Skin.String(HomeVideoTile5.Type))">Skin.SetString(HomeVideoTile5.Type,0)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile)) + IsEmpty(Skin.String(HomeVideoTile5.TypeName))">Skin.SetString(HomeVideoTile5.TypeName,$LOCALIZE[41145])</onclick>
@@ -3204,7 +3289,9 @@
 					<onright condition="Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePrograms)">625</onright>
 					<onright condition="Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomePrograms)">725</onright>
 					<onright condition="Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomePrograms)">825</onright>
-					<onclick>$INFO[Window(Home).Property(xbmb3c.std.tvshows.0.path)]</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.tvshows.0.path)]</onclick>
+					<onclick condition="!Library.HasContent(tvshows) + Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,files,return)</onclick>
+					<onclick condition="Library.HasContent(tvshows) + Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,tvshowtitles,return)</onclick>
 					<onup>ActivateWindow(3021)</onup>
 					<ondown>301</ondown>
 				</control>
@@ -3756,12 +3843,14 @@
 						<content>
 							<item id="1">
 								<label fallback="20343">$INFO[Skin.String(HomeTVShowTile3.Label)]</label>
-								<label2>$INFO[Window(Home).Property(MB3TotalTvShows)]</label2>
+								<label2>$VAR[TotalTV]</label2>
 								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeTVShowTile3) + !stringcompare(Skin.String(HomeTVShowTile3.Type),4) + !stringcompare(Skin.String(HomeTVShowTile3.Type),5) + !stringcompare(Skin.String(HomeTVShowTile3.Type),6) + !stringcompare(Skin.String(HomeTVShowTile3.Type),7)">RunAddon($INFO[Skin.String(HomeTVShowTile3.Path)])</onclick>
 								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeTVShowTile3) + stringcompare(Skin.String(HomeTVShowTile3.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeTVShowTile3.Path)],return)</onclick>
 								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeTVShowTile3) + stringcompare(Skin.String(HomeTVShowTile3.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeTVShowTile3.Path)],return)</onclick>
 								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeTVShowTile3) + [stringcompare(Skin.String(HomeTVShowTile3.Type),6) | stringcompare(Skin.String(HomeTVShowTile3.Type),7)]">$INFO[Skin.String(HomeTVShowTile3.Path)]</onclick>
-								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeTVShowTile3)">$INFO[Window(Home).Property(xbmb3c.std.tvshows.0.path)]</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeTVShowTile3) + !Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.tvshows.0.path)]</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeTVShowTile3) + Library.HasContent(tvshows) + Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,tvshowtitles,return)</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeTVShowTile3) + !Library.HasContent(tvshows) + Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,files,return)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeTVShowTile3)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile)) + IsEmpty(Skin.String(HomeTVShowTile3.Type))">Skin.SetString(HomeTVShowTile3.Type,0)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile)) + IsEmpty(Skin.String(HomeTVShowTile3.TypeName))">Skin.SetString(HomeTVShowTile3.TypeName,$LOCALIZE[41145])</onclick>
@@ -3782,12 +3871,13 @@
 							</item>
 							<item id="2">
 								<label fallback="42160">$INFO[Skin.String(HomeTVShowTile4.Label)]</label>
-								<label2>$INFO[Window(Home).Property(MB3NextAiredTotalToday)]</label2>
+								<label2>$VAR[NextAiredTotal]</label2>
 								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeTVShowTile4) + !stringcompare(Skin.String(HomeTVShowTile4.Type),4) + !stringcompare(Skin.String(HomeTVShowTile4.Type),5) + !stringcompare(Skin.String(HomeTVShowTile4.Type),6) + !stringcompare(Skin.String(HomeTVShowTile4.Type),7)">RunAddon($INFO[Skin.String(HomeTVShowTile4.Path)])</onclick>
 								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeTVShowTile4) + stringcompare(Skin.String(HomeTVShowTile4.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeTVShowTile4.Path)],return)</onclick>
 								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeTVShowTile4) + stringcompare(Skin.String(HomeTVShowTile4.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeTVShowTile4.Path)],return)</onclick>
 								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeTVShowTile4) + [stringcompare(Skin.String(HomeTVShowTile4.Type),6) | stringcompare(Skin.String(HomeTVShowTile4.Type),7)]">$INFO[Skin.String(HomeTVShowTile4.Path)]</onclick>
-								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeTVShowTile4)">$INFO[Window(Home).Property(xbmb3c.std.tvshows.6.path)]</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeTVShowTile4) + !Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.tvshows.6.path)]</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeTVShowTile4) + Skin.HasSetting(UseKodiLibrary)">RunAddon(script.tv.show.next.aired)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeTVShowTile4)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile)) + IsEmpty(Skin.String(HomeTVShowTile4.Type))">Skin.SetString(HomeTVShowTile4.Type,0)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile)) + IsEmpty(Skin.String(HomeTVShowTile4.TypeName))">Skin.SetString(HomeTVShowTile4.TypeName,$LOCALIZE[41145])</onclick>

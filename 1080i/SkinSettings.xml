@@ -160,6 +160,11 @@
 							<label>$LOCALIZE[49236]</label>
 							<onclick>noop</onclick>
 						</item>
+						<item id="57">
+							<description>Alternate Video Library Settings</description>
+							<label>$LOCALIZE[49255]</label>
+							<onclick>noop</onclick>
+						</item>
 					</content>
 				</control>
 			</control>
@@ -1160,6 +1165,24 @@
 						<label>$LOCALIZE[41221]</label>
 					</control>
 				</control>
+				
+				<!-- ================ -->
+				<!-- Alternate librarys -->
+				<!-- ================ -->
+				<control type="grouplist" id="5">
+					<onleft>30</onleft>
+					<include>SettingsCategoryGrouplistVars</include>
+					<visible>Container(30).HasFocus(57)</visible>
+					<control type="radiobutton" id="11001">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(UseKodiLibrary)</selected>
+						<onclick>Skin.ToggleSetting(UseKodiLibrary)</onclick>
+						<onclick>XBMC.ReloadSkin()</onclick>
+						<label>$LOCALIZE[49256]</label>
+					</control>
+				</control>	
+				
 				<!-- =============== -->
 				<!-- Add-on Settings -->
 				<!-- =============== -->

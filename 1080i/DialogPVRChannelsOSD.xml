@@ -74,7 +74,7 @@
 							<height>58</height>
 							<font>Font-Condensed-S34-B</font>
 							<align>right</align>
-							<label>$INFO[ListItem.ChannelNumber]</label>
+							<label>$INFO[ListItem.ChannelNumberLabel]</label>
 							<textcolor>SecondaryT</textcolor>
 							<selectedcolor>SelectedGreen</selectedcolor>
 							<scroll>false</scroll>
@@ -88,7 +88,7 @@
 							<height>96</height>
 							<font>Font-Condensed-S34-B</font>
 							<align>right</align>
-							<label>$INFO[ListItem.ChannelNumber]</label>
+							<label>$INFO[ListItem.ChannelNumberLabel]</label>
 							<textcolor>SecondaryT</textcolor>
 							<selectedcolor>SelectedGreen</selectedcolor>
 							<scroll>false</scroll>
@@ -271,7 +271,7 @@
 							<height>58</height>
 							<font>Font-Condensed-S34-B</font>
 							<align>right</align>
-							<label>$INFO[ListItem.ChannelNumber]</label>
+							<label>$INFO[ListItem.ChannelNumberLabel]</label>
 							<textcolor>PrimaryT</textcolor>
 							<selectedcolor>SelectedGreen</selectedcolor>
 							<scroll>false</scroll>
@@ -331,7 +331,7 @@
 							<height>96</height>
 							<font>Font-Condensed-S34-B</font>
 							<align>right</align>
-							<label>$INFO[ListItem.ChannelNumber]</label>
+							<label>$INFO[ListItem.ChannelNumberLabel]</label>
 							<textcolor>PrimaryT</textcolor>
 							<selectedcolor>SelectedGreen</selectedcolor>
 							<scroll>false</scroll>

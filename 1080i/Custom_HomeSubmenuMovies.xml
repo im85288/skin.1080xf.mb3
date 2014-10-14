@@ -301,52 +301,58 @@
 				<item id="1">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>$INFO[Window(Home).Property(xbmb3c.std.movies.6.path)]</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.movies.5.path)]</onclick>
+					<onclick condition="Skin.HasSetting(UseKodiLibrary)">XBMC.ActivateWindow(10025,special://skin/playlists/Unwatched Movies.xsp,return)</onclick>
 				</item>
 				<item id="2">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>$INFO[Window(Home).Property(xbmb3c.std.movies.2.path)]</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.movies.2.path)]</onclick>
+					<onclick condition="Skin.HasSetting(UseKodiLibrary)">XBMC.ActivateWindow(10025,special://skin/playlists/Movies In Progress.xsp,return)</onclick>
 				</item>
 				<item id="3">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>$INFO[Window(Home).Property(xbmb3c.std.movies.1.path)]</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.movies.1.path)]</onclick>
+					<onclick condition="Skin.HasSetting(UseKodiLibrary)">XBMC.ActivateWindow(10025,special://skin/playlists/New Movies.xsp,return)</onclick>
 				</item>
 				<item id="4">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>$INFO[Window(Home).Property(xbmb3c.std.movies.4.path)]</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.movies.4.path)]</onclick>
+					<onclick condition="Skin.HasSetting(UseKodiLibrary)">ActivateWindow(Videos,MovieSets,return)</onclick>
 				</item>
 				<item id="5">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>$INFO[Window(Home).Property(xbmb3c.std.playlists.0.path)]</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.playlists.0.path)]</onclick>
 				</item>
 				<item id="6">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>$INFO[Window(Home).Property(xbmb3c.std.movies.7.path)]</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.movies.6.path)]</onclick>
+					<onclick condition="Skin.HasSetting(UseKodiLibrary)">ActivateWindow(VideoLibrary,MovieGenres,return)</onclick>
 				</item>
 				<item id="7">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>$INFO[Window(Home).Property(xbmb3c.std.movies.8.path)]</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.movies.7.path)]</onclick>
+					<onclick condition="Skin.HasSetting(UseKodiLibrary)">ActivateWindow(VideoLibrary,MoviesStudios,return)</onclick>
 				</item>
 				<item id="8">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>$INFO[Window(Home).Property(xbmb3c.usr.movies.0.path)]</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.usr.movies.0.path)]</onclick>
 				</item>
 				<item id="9">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>$INFO[Window(Home).Property(xbmb3c.usr.movies.1.path)]</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.usr.movies.1.path)]</onclick>
 				</item>
 				<item id="10">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>$INFO[Window(Home).Property(xbmb3c.usr.movies.2.path)]</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.usr.movies.2.path)]</onclick>
 				</item>
 			</content>
 		</control>

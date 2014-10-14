@@ -232,7 +232,7 @@
 								<height>96</height>
 								<font>Font-Condensed-S75</font>
 								<align>right</align>
-								<label>$VAR[ListItem.ChannelNumber]</label>
+								<label>$VAR[ListItem.ChannelNumberLabel]</label>
 								<textcolor>SecondaryT</textcolor>
 								<scroll>false</scroll>
 							</control>
@@ -389,7 +389,7 @@
 									<height>96</height>
 									<font>Font-Condensed-S75</font>
 									<align>right</align>
-									<label>$VAR[ListItem.ChannelNumber]</label>
+									<label>$VAR[ListItem.ChannelNumberLabel]</label>
 									<textcolor>PrimaryT</textcolor>
 									<scroll>false</scroll>
 								</control>

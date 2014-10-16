@@ -672,7 +672,7 @@
 			<property name="clearlogo">$INFO[Window.Property(RandomMovie.1.Art(clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RandomMovie.1.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RandomMovie.1.Title)]</property>
-			<property name="Title2">$INFO[Window.Property(RandomMovie.1.Year),, • ]$INFO[Window.Property(RandomMovie.1.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovie.1.Rating), ● ,]</property>
+			<property name="Title2">$INFO[Window.Property(RandomMovie.1.Year),, • ]$INFO[Window.Property(RandomMovie.1.Runtime),, $LOCALIZE[12391]]</property>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.1.Art(poster))]</property>
 			<visible>!IsEmpty(Window.Property(RandomMovie.1.File))</visible>
 		</item>
@@ -688,7 +688,6 @@
 			<visible>!IsEmpty(Window.Property(RandomEpisode.1.File))</visible>
 			<property name="Plot">$INFO[Window.Property(RandomEpisode.1.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RandomEpisode.1.TVshowTitle)]</property>
-			<property name="Title2">$INFO[Window.Property(RandomEpisode.1.Title),, • ]$INFO[Window.Property(RandomEpisode.1.Season),S,]$INFO[Window.Property(RandomEpisode.1.Episode),E,]</property>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.1.Art(tvshow.poster))]</property>
 		</item>
 		<item id="3">
@@ -701,7 +700,7 @@
 			<property name="clearlogo">$INFO[Window.Property(RandomMovie.2.Art(clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RandomMovie.2.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RandomMovie.2.Title)]</property>
-			<property name="Title2">$INFO[Window.Property(RandomMovie.2.Year),, • ]$INFO[Window.Property(RandomMovie.2.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovie.2.Rating), ● ,]</property>
+			<property name="Title2">$INFO[Window.Property(RandomMovie.2.Year),, • ]$INFO[Window.Property(RandomMovie.2.Runtime),, $LOCALIZE[12391]]</property>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.2.Art(poster))]</property>
 			<visible>!IsEmpty(Window.Property(RandomMovie.2.File))</visible>
 		</item>
@@ -716,7 +715,6 @@
 			<property name="clearlogohome">$INFO[Window.Property(RandomEpisode.2.Art(tvshow.clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RandomEpisode.2.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RandomEpisode.2.TVshowTitle)]</property>
-			<property name="Title2">$INFO[Window.Property(RandomEpisode.2.Title),, • ]$INFO[Window.Property(RandomEpisode.2.Season),S,]$INFO[Window.Property(RandomEpisode.2.Episode),E,]</property>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.2.Art(tvshow.poster))]</property>
 			<visible>!IsEmpty(Window.Property(RandomEpisode.2.File))</visible>
 		</item>
@@ -730,7 +728,7 @@
 			<property name="clearlogo">$INFO[Window.Property(RandomMovie.3.Art(clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RandomMovie.3.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RandomMovie.3.Title)]</property>
-			<property name="Title2">$INFO[Window.Property(RandomMovie.3.Year),, • ]$INFO[Window.Property(RandomMovie.3.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovie.3.Rating), ● ,]</property>
+			<property name="Title2">$INFO[Window.Property(RandomMovie.3.Year),, • ]$INFO[Window.Property(RandomMovie.3.Runtime),, $LOCALIZE[12391]]</property>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.3.Art(poster))]</property>
 			<visible>!IsEmpty(Window.Property(RandomMovie.3.File))</visible>
 		</item>
@@ -745,7 +743,6 @@
 			<property name="clearlogohome">$INFO[Window.Property(RandomEpisode.3.Art(tvshow.clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RandomEpisode.3.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RandomEpisode.3.TVshowTitle)]</property>
-			<property name="Title2">$INFO[Window.Property(RandomEpisode.3.Title),, • ]$INFO[Window.Property(RandomEpisode.3.Season),S,]$INFO[Window.Property(RandomEpisode.3.Episode),E,]</property>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.3.Art(tvshow.poster))]</property>
 			<visible>!IsEmpty(Window.Property(RandomEpisode.3.File))</visible>
 		</item>
@@ -759,7 +756,7 @@
 			<property name="clearlogo">$INFO[Window.Property(RandomMovie.4.Art(clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RandomMovie.4.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RandomMovie.4.Title)]</property>
-			<property name="Title2">$INFO[Window.Property(RandomMovie.4.Year),, • ]$INFO[Window.Property(RandomMovie.4.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovie.4.Rating), ● ,]</property>
+			<property name="Title2">$INFO[Window.Property(RandomMovie.4.Year),, • ]$INFO[Window.Property(RandomMovie.4.Runtime),, $LOCALIZE[12391]]</property>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.4.Art(poster))]</property>
 			<visible>!IsEmpty(Window.Property(RandomMovie.4.File))</visible>
 		</item>
@@ -774,7 +771,6 @@
 			<property name="clearlogohome">$INFO[Window.Property(RandomEpisode.4.Art(tvshow.clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RandomEpisode.4.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RandomEpisode.4.TVshowTitle)]</property>
-			<property name="Title2">$INFO[Window.Property(RandomEpisode.4.Title),, • ]$INFO[Window.Property(RandomEpisode.4.Season),S,]$INFO[Window.Property(RandomEpisode.4.Episode),E,]</property>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.4.Art(tvshow.poster))]</property>
 			<visible>!IsEmpty(Window.Property(RandomEpisode.4.File))</visible>
 		</item>
@@ -788,7 +784,7 @@
 			<property name="clearlogo">$INFO[Window.Property(RandomMovie.5.Art(clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RandomMovie.5.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RandomMovie.5.Title)]</property>
-			<property name="Title2">$INFO[Window.Property(RandomMovie.5.Year),, • ]$INFO[Window.Property(RandomMovie.5.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovie.5.Rating), ● ,]</property>
+			<property name="Title2">$INFO[Window.Property(RandomMovie.5.Year),, • ]$INFO[Window.Property(RandomMovie.5.Runtime),, $LOCALIZE[12391]]</property>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.5.Art(poster))]</property>
 			<visible>!IsEmpty(Window.Property(RandomMovie.5.File))</visible>
 		</item>
@@ -803,7 +799,6 @@
 			<property name="clearlogohome">$INFO[Window.Property(RandomEpisode.5.Art(tvshow.clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RandomEpisode.5.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RandomEpisode.5.TVshowTitle)]</property>
-			<property name="Title2">$INFO[Window.Property(RandomEpisode.5.Title),, • ]$INFO[Window.Property(RandomEpisode.5.Season),S,]$INFO[Window.Property(RandomEpisode.5.Episode),E,]</property>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.5.Art(tvshow.poster))]</property>
 			<visible>!IsEmpty(Window.Property(RandomEpisode.5.File))</visible>
 		</item>
@@ -817,7 +812,7 @@
 			<property name="clearlogo">$INFO[Window.Property(RandomMovie.6.Art(clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RandomMovie.6.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RandomMovie.6.Title)]</property>
-			<property name="Title2">$INFO[Window.Property(RandomMovie.6.Year),, • ]$INFO[Window.Property(RandomMovie.6.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovie.6.Rating), ● ,]</property>
+			<property name="Title2">$INFO[Window.Property(RandomMovie.6.Year),, • ]$INFO[Window.Property(RandomMovie.6.Runtime),, $LOCALIZE[12391]]</property>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.6.Art(poster))]</property>
 			<visible>!IsEmpty(Window.Property(RandomMovie.6.File))</visible>
 		</item>
@@ -832,7 +827,6 @@
 			<property name="clearlogohome">$INFO[Window.Property(RandomEpisode.6.Art(tvshow.clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RandomEpisode.6.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RandomEpisode.6.TVshowTitle)]</property>
-			<property name="Title2">$INFO[Window.Property(RandomEpisode.6.Title),, • ]$INFO[Window.Property(RandomEpisode.6.Season),S,]$INFO[Window.Property(RandomEpisode.6.Episode),E,]</property>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.6.Art(tvshow.poster))]</property>
 			<visible>!IsEmpty(Window.Property(RandomEpisode.6.File))</visible>
 		</item>
@@ -846,7 +840,7 @@
 			<property name="clearlogo">$INFO[Window.Property(RandomMovie.7.Art(clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RandomMovie.7.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RandomMovie.7.Title)]</property>
-			<property name="Title2">$INFO[Window.Property(RandomMovie.7.Year),, • ]$INFO[Window.Property(RandomMovie.7.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovie.7.Rating), ● ,]</property>
+			<property name="Title2">$INFO[Window.Property(RandomMovie.7.Year),, • ]$INFO[Window.Property(RandomMovie.7.Runtime),, $LOCALIZE[12391]]</property>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.7.Art(poster))]</property>
 			<visible>!IsEmpty(Window.Property(RandomMovie.7.File))</visible>
 		</item>
@@ -861,7 +855,6 @@
 			<property name="clearlogohome">$INFO[Window.Property(RandomEpisode.7.Art(tvshow.clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RandomEpisode.7.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RandomEpisode.7.TVshowTitle)]</property>
-			<property name="Title2">$INFO[Window.Property(RandomEpisode.7.Title),, • ]$INFO[Window.Property(RandomEpisode.7.Season),S,]$INFO[Window.Property(RandomEpisode.7.Episode),E,]</property>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.7.Art(tvshow.poster))]</property>
 			<visible>!IsEmpty(Window.Property(RandomEpisode.7.File))</visible>
 		</item>
@@ -875,7 +868,7 @@
 			<property name="clearlogo">$INFO[Window.Property(RandomMovie.8.Art(clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RandomMovie.8.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RandomMovie.8.Title)]</property>
-			<property name="Title2">$INFO[Window.Property(RandomMovie.8.Year),, • ]$INFO[Window.Property(RandomMovie.8.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovie.8.Rating), ● ,]</property>
+			<property name="Title2">$INFO[Window.Property(RandomMovie.8.Year),, • ]$INFO[Window.Property(RandomMovie.8.Runtime),, $LOCALIZE[12391]]</property>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.8.Art(poster))]</property>
 			<visible>!IsEmpty(Window.Property(RandomMovie.8.File))</visible>
 		</item>
@@ -890,7 +883,6 @@
 			<property name="clearlogohome">$INFO[Window.Property(RandomEpisode.8.Art(tvshow.clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RandomEpisode.8.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RandomEpisode.8.TVshowTitle)]</property>
-			<property name="Title2">$INFO[Window.Property(RandomEpisode.8.Title),, • ]$INFO[Window.Property(RandomEpisode.8.Season),S,]$INFO[Window.Property(RandomEpisode.8.Episode),E,]</property>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.8.Art(tvshow.poster))]</property>
 			<visible>!IsEmpty(Window.Property(RandomEpisode.8.File))</visible>
 		</item>
@@ -904,7 +896,7 @@
 			<property name="clearlogo">$INFO[Window.Property(RandomMovie.9.Art(clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RandomMovie.9.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RandomMovie.9.Title)]</property>
-			<property name="Title2">$INFO[Window.Property(RandomMovie.9.Year),, • ]$INFO[Window.Property(RandomMovie.9.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovie.9.Rating), ● ,]</property>
+			<property name="Title2">$INFO[Window.Property(RandomMovie.9.Year),, • ]$INFO[Window.Property(RandomMovie.9.Runtime),, $LOCALIZE[12391]]</property>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.9.Art(poster))]</property>
 			<visible>!IsEmpty(Window.Property(RandomMovie.9.File))</visible>
 		</item>
@@ -919,7 +911,6 @@
 			<property name="clearlogohome">$INFO[Window.Property(RandomEpisode.9.Art(tvshow.clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RandomEpisode.9.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RandomEpisode.9.TVshowTitle)]</property>
-			<property name="Title2">$INFO[Window.Property(RandomEpisode.9.Title),, • ]$INFO[Window.Property(RandomEpisode.9.Season),S,]$INFO[Window.Property(RandomEpisode.9.Episode),E,]</property>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.9.Art(tvshow.poster))]</property>
 			<visible>!IsEmpty(Window.Property(RandomEpisode.9.File))</visible>
 		</item>
@@ -933,7 +924,7 @@
 			<property name="clearlogo">$INFO[Window.Property(RandomMovie.10.Art(clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RandomMovie.10.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RandomMovie.10.Title)]</property>
-			<property name="Title2">$INFO[Window.Property(RandomMovie.10.Year),, • ]$INFO[Window.Property(RandomMovie.10.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovie.10.Rating), ● ,]</property>
+			<property name="Title2">$INFO[Window.Property(RandomMovie.10.Year),, • ]$INFO[Window.Property(RandomMovie.10.Runtime),, $LOCALIZE[12391]]</property>
 			<property name="Poster">$INFO[Window.Property(RandomMovie.10.Art(poster))]</property>
 			<visible>!IsEmpty(Window.Property(RandomMovie.10.File))</visible>
 		</item>
@@ -948,7 +939,6 @@
 			<property name="clearlogohome">$INFO[Window.Property(RandomEpisode.10.Art(tvshow.clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RandomEpisode.10.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RandomEpisode.10.TVshowTitle)]</property>
-			<property name="Title2">$INFO[Window.Property(RandomEpisode.10.Title),, • ]$INFO[Window.Property(RandomEpisode.10.Season),S,]$INFO[Window.Property(RandomEpisode.10.Episode),E,]</property>
 			<property name="Poster">$INFO[Window.Property(RandomEpisode.10.Art(tvshow.poster))]</property>
 			<visible>!IsEmpty(Window.Property(RandomEpisode.10.File))</visible>
 		</item>
@@ -6392,7 +6382,7 @@
 			<property name="clearlogo">$INFO[Window.Property(RecentMovie.1.Art(clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RecentMovie.1.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RecentMovie.1.Title)]</property>
-			<property name="Title2">$INFO[Window.Property(RecentMovie.1.Year),, • ]$INFO[Window.Property(RecentMovie.1.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RecentMovie.1.Rating), ● ,]</property>
+			<property name="Title2">$INFO[Window.Property(RecentMovie.1.Year),, • ]$INFO[Window.Property(RecentMovie.1.Runtime),, $LOCALIZE[12391]]</property>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.1.Art(poster))]</property>
 			<property name="Fanart">$INFO[Window.Property(RecentMovie.1.Art(fanart))]</property>
 			<visible>!IsEmpty(Window.Property(RecentMovie.1.File))</visible>
@@ -6407,7 +6397,7 @@
 			<property name="clearlogo">$INFO[Window.Property(RecentMovie.2.Art(clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RecentMovie.2.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RecentMovie.2.Title)]</property>
-			<property name="Title2">$INFO[Window.Property(RecentMovie.2.Year),, • ]$INFO[Window.Property(RecentMovie.2.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RecentMovie.2.Rating), ● ,]</property>
+			<property name="Title2">$INFO[Window.Property(RecentMovie.2.Year),, • ]$INFO[Window.Property(RecentMovie.2.Runtime),, $LOCALIZE[12391]]</property>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.2.Art(poster))]</property>
 			<property name="Fanart">$INFO[Window.Property(RecentMovie.2.Art(fanart))]</property>
 			<visible>!IsEmpty(Window.Property(RecentMovie.2.File))</visible>
@@ -6422,7 +6412,7 @@
 			<property name="clearlogo">$INFO[Window.Property(RecentMovie.3.Art(clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RecentMovie.3.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RecentMovie.3.Title)]</property>
-			<property name="Title2">$INFO[Window.Property(RecentMovie.3.Year),, • ]$INFO[Window.Property(RecentMovie.3.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RecentMovie.3.Rating), ● ,]</property>
+			<property name="Title2">$INFO[Window.Property(RecentMovie.3.Year),, • ]$INFO[Window.Property(RecentMovie.3.Runtime),, $LOCALIZE[12391]]</property>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.3.Art(poster))]</property>
 			<property name="Fanart">$INFO[Window.Property(RecentMovie.3.Art(fanart))]</property>
 			<visible>!IsEmpty(Window.Property(RecentMovie.3.File))</visible>
@@ -6437,7 +6427,7 @@
 			<property name="clearlogo">$INFO[Window.Property(RecentMovie.4.Art(clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RecentMovie.4.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RecentMovie.4.Title)]</property>
-			<property name="Title2">$INFO[Window.Property(RecentMovie.4.Year),, • ]$INFO[Window.Property(RecentMovie.4.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RecentMovie.4.Rating), ● ,]</property>
+			<property name="Title2">$INFO[Window.Property(RecentMovie.4.Year),, • ]$INFO[Window.Property(RecentMovie.4.Runtime),, $LOCALIZE[12391]]</property>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.4.Art(poster))]</property>
 			<property name="Fanart">$INFO[Window.Property(RecentMovie.4.Art(fanart))]</property>
 			<visible>!IsEmpty(Window.Property(RecentMovie.4.File))</visible>
@@ -6452,7 +6442,7 @@
 			<property name="clearlogo">$INFO[Window.Property(RecentMovie.5.Art(clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RecentMovie.5.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RecentMovie.5.Title)]</property>
-			<property name="Title2">$INFO[Window.Property(RecentMovie.5.Year),, • ]$INFO[Window.Property(RecentMovie.5.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RecentMovie.5.Rating), ● ,]</property>
+			<property name="Title2">$INFO[Window.Property(RecentMovie.5.Year),, • ]$INFO[Window.Property(RecentMovie.5.Runtime),, $LOCALIZE[12391]]</property>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.5.Art(poster))]</property>
 			<property name="Fanart">$INFO[Window.Property(RecentMovie.5.Art(fanart))]</property>
 			<visible>!IsEmpty(Window.Property(RecentMovie.5.File))</visible>
@@ -6467,7 +6457,7 @@
 			<property name="clearlogo">$INFO[Window.Property(RecentMovie.6.Art(clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RecentMovie.6.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RecentMovie.6.Title)]</property>
-			<property name="Title2">$INFO[Window.Property(RecentMovie.6.Year),, • ]$INFO[Window.Property(RecentMovie.6.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RecentMovie.6.Rating), ● ,]</property>
+			<property name="Title2">$INFO[Window.Property(RecentMovie.6.Year),, • ]$INFO[Window.Property(RecentMovie.6.Runtime),, $LOCALIZE[12391]]</property>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.6.Art(poster))]</property>
 			<property name="Fanart">$INFO[Window.Property(RecentMovie.6.Art(fanart))]</property>
 			<visible>!IsEmpty(Window.Property(RecentMovie.6.File))</visible>
@@ -6482,7 +6472,7 @@
 			<property name="clearlogo">$INFO[Window.Property(RecentMovie.7.Art(clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RecentMovie.7.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RecentMovie.7.Title)]</property>
-			<property name="Title2">$INFO[Window.Property(RecentMovie.7.Year),, • ]$INFO[Window.Property(RecentMovie.7.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RecentMovie.7.Rating), ● ,]</property>
+			<property name="Title2">$INFO[Window.Property(RecentMovie.7.Year),, • ]$INFO[Window.Property(RecentMovie.7.Runtime),, $LOCALIZE[12391]]</property>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.7.Art(poster))]</property>
 			<property name="Fanart">$INFO[Window.Property(RecentMovie.7.Art(fanart))]</property>
 			<visible>!IsEmpty(Window.Property(RecentMovie.7.File))</visible>
@@ -6497,7 +6487,7 @@
 			<property name="clearlogo">$INFO[Window.Property(RecentMovie.8.Art(clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RecentMovie.8.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RecentMovie.8.Title)]</property>
-			<property name="Title2">$INFO[Window.Property(RecentMovie.8.Year),, • ]$INFO[Window.Property(RecentMovie.8.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RecentMovie.8.Rating), ● ,]</property>
+			<property name="Title2">$INFO[Window.Property(RecentMovie.8.Year),, • ]$INFO[Window.Property(RecentMovie.8.Runtime),, $LOCALIZE[12391]]</property>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.8.Art(poster))]</property>
 			<property name="Fanart">$INFO[Window.Property(RecentMovie.8.Art(fanart))]</property>
 			<visible>!IsEmpty(Window.Property(RecentMovie.8.File))</visible>
@@ -6512,7 +6502,7 @@
 			<property name="clearlogo">$INFO[Window.Property(RecentMovie.9.Art(clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RecentMovie.9.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RecentMovie.9.Title)]</property>
-			<property name="Title2">$INFO[Window.Property(RecentMovie.9.Year),, • ]$INFO[Window.Property(RecentMovie.9.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RecentMovie.9.Rating), ● ,]</property>
+			<property name="Title2">$INFO[Window.Property(RecentMovie.9.Year),, • ]$INFO[Window.Property(RecentMovie.9.Runtime),, $LOCALIZE[12391]]</property>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.9.Art(poster))]</property>
 			<property name="Fanart">$INFO[Window.Property(RecentMovie.9.Art(fanart))]</property>
 			<visible>!IsEmpty(Window.Property(RecentMovie.9.File))</visible>
@@ -6527,7 +6517,7 @@
 			<property name="clearlogo">$INFO[Window.Property(RecentMovie.10.Art(clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RecentMovie.10.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RecentMovie.10.Title)]</property>
-			<property name="Title2">$INFO[Window.Property(RecentMovie.10.Year),, • ]$INFO[Window.Property(RecentMovie.10.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RecentMovie.10.Rating), ● ,]</property>
+			<property name="Title2">$INFO[Window.Property(RecentMovie.10.Year),, • ]$INFO[Window.Property(RecentMovie.10.Runtime),, $LOCALIZE[12391]]</property>
 			<property name="Poster">$INFO[Window.Property(RecentMovie.10.Art(poster))]</property>
 			<property name="Fanart">$INFO[Window.Property(RecentMovie.10.Art(fanart))]</property>
 			<visible>!IsEmpty(Window.Property(RecentMovie.10.File))</visible>
@@ -7191,7 +7181,6 @@
 			<property name="clearlogohome">$INFO[Window.Property(RecentEpisode.1.Art(tvshow.clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RecentEpisode.1.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RecentEpisode.1.TVshowTitle)]</property>
-			<property name="Title2">$INFO[Window.Property(RecentEpisode.1.Title),, • ]$INFO[Window.Property(RecentEpisode.1.Season),S,]$INFO[Window.Property(RecentEpisode.1.Episode),E,]</property>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.1.Art(tvshow.poster))]</property>
 			<visible>!IsEmpty(Window.Property(RecentEpisode.1.File))</visible>
 		</item>
@@ -7205,7 +7194,6 @@
 			<property name="clearlogohome">$INFO[Window.Property(RecentEpisode.2.Art(tvshow.clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RecentEpisode.2.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RecentEpisode.2.TVshowTitle)]</property>
-			<property name="Title2">$INFO[Window.Property(RecentEpisode.2.Title),, • ]$INFO[Window.Property(RecentEpisode.2.Season),S,]$INFO[Window.Property(RecentEpisode.2.Episode),E,]</property>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.2.Art(tvshow.poster))]</property>
 			<visible>!IsEmpty(Window.Property(RecentEpisode.2.File))</visible>
 		</item>
@@ -7219,7 +7207,6 @@
 			<property name="clearlogohome">$INFO[Window.Property(RecentEpisode.3.Art(tvshow.clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RecentEpisode.3.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RecentEpisode.3.TVshowTitle)]</property>
-			<property name="Title2">$INFO[Window.Property(RecentEpisode.3.Title),, • ]$INFO[Window.Property(RecentEpisode.3.Season),S,]$INFO[Window.Property(RecentEpisode.3.Episode),E,]</property>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.3.Art(tvshow.poster))]</property>
 			<visible>!IsEmpty(Window.Property(RecentEpisode.3.File))</visible>
 		</item>
@@ -7233,7 +7220,6 @@
 			<property name="clearlogohome">$INFO[Window.Property(RecentEpisode.4.Art(tvshow.clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RecentEpisode.4.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RecentEpisode.4.TVshowTitle)]</property>
-			<property name="Title2">$INFO[Window.Property(RecentEpisode.4.Title),, • ]$INFO[Window.Property(RecentEpisode.4.Season),S,]$INFO[Window.Property(RecentEpisode.4.Episode),E,]</property>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.4.Art(tvshow.poster))]</property>
 			<visible>!IsEmpty(Window.Property(RecentEpisode.4.File))</visible>
 		</item>
@@ -7247,7 +7233,6 @@
 			<property name="clearlogohome">$INFO[Window.Property(RecentEpisode.5.Art(tvshow.clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RecentEpisode.5.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RecentEpisode.5.TVshowTitle)]</property>
-			<property name="Title2">$INFO[Window.Property(RecentEpisode.5.Title),, • ]$INFO[Window.Property(RecentEpisode.5.Season),S,]$INFO[Window.Property(RecentEpisode.5.Episode),E,]</property>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.5.Art(tvshow.poster))]</property>
 			<visible>!IsEmpty(Window.Property(RecentEpisode.5.File))</visible>
 		</item>
@@ -7261,7 +7246,6 @@
 			<property name="clearlogohome">$INFO[Window.Property(RecentEpisode.6.Art(tvshow.clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RecentEpisode.6.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RecentEpisode.6.TVshowTitle)]</property>
-			<property name="Title2">$INFO[Window.Property(RecentEpisode.6.Title),, • ]$INFO[Window.Property(RecentEpisode.6.Season),S,]$INFO[Window.Property(RecentEpisode.6.Episode),E,]</property>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.6.Art(tvshow.poster))]</property>
 			<visible>!IsEmpty(Window.Property(RecentEpisode.6.File))</visible>
 		</item>
@@ -7275,7 +7259,6 @@
 			<property name="clearlogohome">$INFO[Window.Property(RecentEpisode.7.Art(tvshow.clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RecentEpisode.7.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RecentEpisode.7.TVshowTitle)]</property>
-			<property name="Title2">$INFO[Window.Property(RecentEpisode.7.Title),, • ]$INFO[Window.Property(RecentEpisode.7.Season),S,]$INFO[Window.Property(RecentEpisode.7.Episode),E,]</property>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.7.Art(tvshow.poster))]</property>
 			<visible>!IsEmpty(Window.Property(RecentEpisode.7.File))</visible>
 		</item>
@@ -7289,7 +7272,6 @@
 			<property name="clearlogohome">$INFO[Window.Property(RecentEpisode.8.Art(tvshow.clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RecentEpisode.8.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RecentEpisode.8.TVshowTitle)]</property>
-			<property name="Title2">$INFO[Window.Property(RecentEpisode.8.Title),, • ]$INFO[Window.Property(RecentEpisode.8.Season),S,]$INFO[Window.Property(RecentEpisode.8.Episode),E,]</property>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.8.Art(tvshow.poster))]</property>
 			<visible>!IsEmpty(Window.Property(RecentEpisode.8.File))</visible>
 		</item>
@@ -7303,7 +7285,6 @@
 			<property name="clearlogohome">$INFO[Window.Property(RecentEpisode.9.Art(tvshow.clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RecentEpisode.9.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RecentEpisode.9.TVshowTitle)]</property>
-			<property name="Title2">$INFO[Window.Property(RecentEpisode.9.Title),, • ]$INFO[Window.Property(RecentEpisode.9.Season),S,]$INFO[Window.Property(RecentEpisode.9.Episode),E,]</property>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.9.Art(tvshow.poster))]</property>
 			<visible>!IsEmpty(Window.Property(RecentEpisode.9.File))</visible>
 		</item>
@@ -7317,7 +7298,6 @@
 			<property name="clearlogohome">$INFO[Window.Property(RecentEpisode.10.Art(tvshow.clearlogo))]</property>
 			<property name="Plot">$INFO[Window.Property(RecentEpisode.10.Plot)]</property>
 			<property name="Title">$INFO[Window.Property(RecentEpisode.10.TVshowTitle)]</property>
-			<property name="Title2">$INFO[Window.Property(RecentEpisode.10.Title),, • ]$INFO[Window.Property(RecentEpisode.10.Season),S,]$INFO[Window.Property(RecentEpisode.10.Episode),E,]</property>
 			<property name="Poster">$INFO[Window.Property(RecentEpisode.10.Art(tvshow.poster))]</property>
 			<visible>!IsEmpty(Window.Property(RecentEpisode.10.File))</visible>
 		</item>

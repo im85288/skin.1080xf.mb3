@@ -284,8 +284,8 @@
 						<scroll>false</scroll>
 					</control>
 					<control type="label">
-						<posx>510</posx>
-						<posy>0</posy>
+						<posx>1150</posx>
+						<posy>-25</posy>
 						<width>900</width>
 						<height>98</height>
 						<font>Font-Condensed-S36</font>
@@ -757,8 +757,8 @@
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
-							<posx>510</posx>
-							<posy>0</posy>
+							<posx>1150</posx>
+							<posy>-25</posy>
 							<width>900</width>
 							<height>98</height>
 							<font>Font-Condensed-S36</font>

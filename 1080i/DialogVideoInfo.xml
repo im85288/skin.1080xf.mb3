@@ -529,7 +529,33 @@
 							<onclick>ActivateWindow(music,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[ListItem.Title],return)</onclick>
 							<visible>!stringcompare(ListItem.Property(ItemType),Movie)</visible>
 						</item>
-						<!-- <item id="3"> <description>Get Artwork</description> <label>$LOCALIZE[13511]</label> <onclick>ActivateWindow(3004)</onclick> <visible>[Container.Content(movies) | Container.Content(tvshows)] + !Container.Content(musicvideos)</visible> </item> <item id="3"> <description>Get Artwork</description> <label>$LOCALIZE[13511]</label> <onclick>SetProperty(ChooseArt,1,3004)</onclick> <onclick>SendClick(2003,10)</onclick> <visible>Container.Content(musicvideos)</visible> </item> <item id="4"> <description>Get theme</description> <label>$LOCALIZE[41333]</label> <onclick>RunScript(script.tvtunes,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])</onclick> <visible>[Container.Content(TVShows) | Container.Content(Seasons)] + System.HasAddon(script.tvtunes)</visible> </item> <item id="5"> <label>$LOCALIZE[41307]</label> <onclick>SendClick(2003,6)</onclick> </item> -->
+						<item id="3">
+							<description>Get Artwork</description>
+							<label>$LOCALIZE[13511]</label>
+							<onclick>ActivateWindow(3004)</onclick>
+							<visible>Skin.HasSetting(UseKodiLibrary)</visible>
+							<visible>[Container.Content(movies) | Container.Content(tvshows)] + !Container.Content(musicvideos)</visible>
+						</item>
+						<item id="3">
+							<description>Get Artwork</description>
+							<label>$LOCALIZE[13511]</label>
+							<onclick>SetProperty(ChooseArt,1,3004)</onclick>
+							<onclick>SendClick(2003,10)</onclick>
+							<visible>Skin.HasSetting(UseKodiLibrary)</visible>
+							<visible>Container.Content(musicvideos)</visible>
+						</item>
+						<item id="4">
+							<description>Get theme</description>
+							<label>$LOCALIZE[41333]</label>
+							<onclick>RunScript(script.tvtunes,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])</onclick>
+							<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + System.HasAddon(script.tvtunes)</visible>
+							<visible>Skin.HasSetting(UseKodiLibrary)</visible>
+						</item>
+						<item id="5">
+							<label>$LOCALIZE[41307]</label>
+							<onclick>SendClick(2003,6)</onclick>
+							<visible>Skin.HasSetting(UseKodiLibrary)</visible>
+						</item>
 					</content>
 				</control>
 				<!-- Language flags -->

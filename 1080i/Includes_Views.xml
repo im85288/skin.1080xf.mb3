@@ -105,6 +105,7 @@
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<texture>$VAR[ClearLogosVar]</texture>
 					<colordiffuse>cc000000</colordiffuse>
+					<visible>Skin.HasSetting(Logo.Enabled)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -113,6 +114,7 @@
 					<height>100</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<texture>$VAR[ClearLogosVar]</texture>
+					<visible>Skin.HasSetting(Logo.Enabled)</visible>
 				</control>
 				<control type="label">
 					<posx>45</posx>
@@ -126,7 +128,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<wrapmultiline>true</wrapmultiline>
-					<visible>IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+					<visible>IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo)) | [!Skin.HasSetting(Logo.Enabled)]</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -312,6 +314,7 @@
 					<aspectratio align="center" aligny="bottom">keep</aspectratio>
 					<texture fallback="blank.png">$INFO[Skin.String(cdartlocation)]$INFO[ListItem.Artist,,/logo.png]</texture>
 					<colordiffuse>ee000000</colordiffuse>
+					<visible>Skin.HasSetting(Logo.Enabled)</visible>
 				</control>
 				<control type="image" id="89456">
 					<posx>90</posx>
@@ -319,6 +322,7 @@
 					<width>280</width>
 					<height>92</height>
 					<aspectratio align="center" aligny="bottom">keep</aspectratio>
+					<visible>Skin.HasSetting(Logo.Enabled)</visible>
 					<texture fallback="blank.png">$INFO[Skin.String(cdartlocation)]$INFO[ListItem.Artist,,/logo.png]</texture>
 				</control>
 				<control type="label">
@@ -333,7 +337,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<wrapmultiline>true</wrapmultiline>
-					<visible>StringCompare(Control.GetLabel(89456),blank.png)</visible>
+					<visible>StringCompare(Control.GetLabel(89456),blank.png) | !Skin.HasSetting(Logo.Enabled)</visible>
 				</control>
 			</control>
 			<!-- LEFT SIDE -->
@@ -976,13 +980,6 @@
 		<value condition="Container.Content(Songs)">$INFO[ListItem.Artist]</value>
 		<value condition="Container.Content(Albums)">$INFO[ListItem.Artist]</value>
 		<value condition="Container.Content(Artists)">$INFO[ListItem.Artist]</value>
-	</variable>
-	<variable name="AeonFlagHDSD">
-		<value condition="IntegerGreaterThan(ListItem.VideoResolution,1079)">flags/res/1080.png</value>
-		<value condition="IntegerGreaterThan(ListItem.VideoResolution,719)">flags/res/720.png</value>
-		<value condition="IntegerGreaterThan(ListItem.VideoResolution,575)">flags/res/576.png</value>
-		<value condition="IntegerGreaterThan(ListItem.VideoResolution,539)">flags/res/540.png</value>
-		<value>flags/res/480.png</value>
 	</variable>
 	<variable name="AeonFlagStudio">
 		<value condition="!IsEmpty(ListItem.Studio)">$INFO[ListItem.Studio,special://skin/extras/studioflags/,.png]</value>

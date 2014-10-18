@@ -2483,6 +2483,7 @@
 							<texture background="true">$VAR[ClearArt]</texture>
 							<colordiffuse>bbwhite</colordiffuse>
 							<aspectratio align="right" aligny="bottom" scalediffuse="false">keep</aspectratio>
+						    <visible>Skin.HasSetting(ViewsClearArt.Enabled)</visible>
 						</control>
 						<control type="label">
 							<posx>30</posx>

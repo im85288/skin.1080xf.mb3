@@ -11,14 +11,31 @@
 	<include name="FullScreenInfoBarLiveTV">
 		<animation effect="slide" time="400" start="0,200" easing="out" tween="back">WindowOpen</animation>
 		<animation effect="slide" time="400" end="0,200" delay="300" easing="in" tween="back">WindowClose</animation>
-		<!-- Main background -->
-		<control type="image" id="1">
-			<posy>785</posy>
-			<posx>40</posx>
-			<width>1840</width>
-			<height>280</height>
-			<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
-			<animation effect="fade" end="90" condition="true">Conditional</animation>
+		<control type="group">
+			<top>778</top>
+			<left>17</left>
+			<!-- Main background -->
+			<control type="image" id="1">
+			    <left>15</left>
+				<width>1845</width>
+				<height>280</height>
+				<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+				<animation effect="fade" end="90" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<top>106</top>
+				<left>365</left>
+				<width>1480</width>
+				<height>2</height>
+				<texture border="0" colordiffuse="PrimaryT">special://skin/new_pvr/osd_line_white.png</texture>
+			</control>
+			<control type="image">
+				<top>236</top>
+				<left>40</left>
+				<width>1805</width>
+				<height>2</height>
+				<texture border="0" colordiffuse="PrimaryT">special://skin/new_pvr/osd_line_white.png</texture>
+			</control>
 		</control>
 		<!-- Channel logo -->
 		<control type="group" id="1">
@@ -36,35 +53,35 @@
 		<!-- Top Info (ChannelNr, Name, Date, Time & Back-end info) -->
 		<control type="group" id="1">
 			<control type="label" id="1">
-				<posx>380</posx>
-				<posy>803</posy>
+				<posx>378</posx>
+				<posy>800</posy>
 				<width>350</width>
 				<height>68</height>
 				<align>left</align>
-				<font>Font-Condensed-S50</font>
-				<textcolor>TertiaryT</textcolor>
+				<font>Font-Condensed-S60</font>
+				<textcolor>SelectedGreen</textcolor>
 				<label>$INFO[VideoPlayer.ChannelNumber]</label>
 				<scroll>true</scroll>
 			</control>
 			<control type="label" id="1">
-				<posx>490</posx>
-				<posy>803</posy>
-				<width>790</width>
+				<left>535</left>
+				<posy>800</posy>
+				<width>950</width>
 				<height>68</height>
 				<align>left</align>
-				<font>Font-Condensed-S50</font>
-				<textcolor>TertiaryT</textcolor>
+				<font>Font-Condensed-S60</font>
+				<textcolor>SelectedGreen</textcolor>
 				<label>$INFO[VideoPlayer.ChannelName]</label>
 				<scroll>true</scroll>
 			</control>
 			<control type="label" id="1">
-				<posx>1630</posx>
-				<posy>803</posy>
+				<posx>1660</posx>
+				<posy>800</posy>
 				<width>240</width>
 				<height>68</height>
 				<align>center</align>
-				<font>Font-Condensed-S50</font>
-				<textcolor>TertiaryT</textcolor>
+				<font>Font-Condensed-S72</font>
+				<textcolor>SecondaryT</textcolor>
 				<label>$INFO[System.Time(hh:mm xx)]</label>
 			</control>
 			<control type="label" id="1">
@@ -73,8 +90,8 @@
 				<width>250</width>
 				<height>68</height>
 				<align>right</align>
-				<font>Font-Condensed-S26</font>
-				<textcolor>TertiaryT</textcolor>
+				<font>Font-Condensed-S32</font>
+				<textcolor>SecondaryT</textcolor>
 				<label>$INFO[System.Date(DDD)]</label>
 			</control>
 			<control type="label" id="1">
@@ -83,12 +100,13 @@
 				<width>250</width>
 				<height>68</height>
 				<align>right</align>
-				<font>Font-Condensed-S26</font>
-				<textcolor>TertiaryT</textcolor>
+				<font>Font-Condensed-S32</font>
+				<textcolor>SecondaryT</textcolor>
 				<label>$INFO[System.Date(dd.mm)]</label>
 			</control>
 			<!-- Active backend info (DVBS\DVBS2\IPTV) -->
 			<control type="group">
+				<visible>false</visible>
 				<control type="label" id="1">
 					<posx>380</posx>
 					<posy>855</posy>
@@ -133,7 +151,7 @@
 				<posy>895</posy>
 				<width>150</width>
 				<height>38</height>
-				<font>Font-Condensed-S37</font>
+				<font>Font-Condensed-S37-B</font>
 				<align>left</align>
 				<textcolor>PrimaryT</textcolor>
 				<label>$INFO[VideoPlayer.StartTime]</label>
@@ -144,7 +162,7 @@
 				<posy>895</posy>
 				<width>865</width>
 				<height>38</height>
-				<font>Font-Condensed-S37</font>
+				<font>Font-Condensed-S37-B</font>
 				<align>left</align>
 				<scroll>true</scroll>
 				<textcolor>PrimaryT</textcolor>
@@ -167,7 +185,7 @@
 					<posy>895</posy>
 					<width>865</width>
 					<height>38</height>
-					<font>Font-Condensed-S37</font>
+					<font>Font-Condensed-S37-B</font>
 					<align>left</align>
 					<textcolor>PrimaryT</textcolor>
 					<scroll>true</scroll>
@@ -180,7 +198,7 @@
 				<posy>895</posy>
 				<width>250</width>
 				<height>38</height>
-				<font>Font-Condensed-S37</font>
+				<font>Font-Condensed-S37-B</font>
 				<align>right</align>
 				<textcolor>PrimaryT</textcolor>
 				<!--<label>$INFO[Window(Home).Property(PVR_MinutesToEnd)]</label> -->
@@ -264,9 +282,10 @@
 		<control type="group" id="1">
 			<control type="group">
 				<visible>!substring(PVR.ActStreamStatus,TIMESHIFT)</visible>
+				<left>1330</left>
+				<top>1017</top>
+				<width>250</width>
 				<control type="label" id="1">
-					<posx>1570</posx>
-					<posy>1017</posy>
 					<width>250</width>
 					<height>38</height>
 					<font>Font-Condensed-S25</font>
@@ -275,8 +294,7 @@
 					<label>SNR: $INFO[PVR.ActStreamSNR]</label>
 				</control>
 				<control type="label" id="1">
-					<posx>1720</posx>
-					<posy>1017</posy>
+					<left>130</left>
 					<width>250</width>
 					<height>38</height>
 					<font>Font-Condensed-S25</font>
@@ -286,16 +304,111 @@
 				</control>
 			</control>
 			<control type="group">
+				<left>1660</left>
+				<top>1017</top>
 				<visible>substring(PVR.ActStreamStatus,TIMESHIFT)</visible>
 				<control type="label" id="1">
-					<posx>1660</posx>
-					<posy>1017</posy>
 					<width>250</width>
 					<height>38</height>
 					<font>Font-Condensed-S25</font>
 					<align>left</align>
 					<textcolor>PrimaryT</textcolor>
 					<label>TIMESHIFT</label>
+				</control>
+			</control>
+			<!-- Tuner info -->
+			<control type="group">
+				<left>1460</left>
+				<top>1017</top>
+				<width>300</width>
+				<control type="label" id="1">
+					<left>200</left>
+					<width>150</width>
+					<height>38</height>
+					<font>Font-Condensed-S25</font>
+					<align>left</align>
+					<textcolor>SecondaryT</textcolor>
+					<label>Tuner:</label>
+				</control>
+				<control type="label" id="1">
+					<left>295</left>
+					<width>50</width>
+					<height>38</height>
+					<font>Font-Condensed-S25</font>
+					<align>left</align>
+					<textcolor>SecondaryT</textcolor>
+					<label>A</label>
+					<visible>!substring(PVR.ActStreamDevice,#1)</visible>
+				</control>
+				<control type="label" id="1">
+					<left>295</left>
+					<width>50</width>
+					<height>38</height>
+					<font>Font-Condensed-S25</font>
+					<align>left</align>
+					<textcolor>SelectedGreen</textcolor>
+					<label>A</label>
+					<visible>substring(PVR.ActStreamDevice,#1)</visible>
+				</control>
+				<control type="label" id="1">
+					<left>320</left>
+					<width>50</width>
+					<height>38</height>
+					<font>Font-Condensed-S25</font>
+					<align>left</align>
+					<textcolor>SecondaryT</textcolor>
+					<label>B</label>
+					<visible>!substring(PVR.ActStreamDevice,#2)</visible>
+				</control>
+				<control type="label" id="1">
+					<left>320</left>
+					<width>50</width>
+					<height>38</height>
+					<font>Font-Condensed-S25</font>
+					<align>left</align>
+					<textcolor>green</textcolor>
+					<label>B</label>
+					<visible>substring(PVR.ActStreamDevice,#2)</visible>
+				</control>
+				<control type="label" id="1">
+					<left>345</left>
+					<width>50</width>
+					<height>38</height>
+					<font>Font-Condensed-S25</font>
+					<align>left</align>
+					<textcolor>SecondaryT</textcolor>
+					<label>C</label>
+					<visible>!substring(PVR.ActStreamDevice,#3)</visible>
+				</control>
+				<control type="label" id="1">
+					<left>345</left>
+					<width>50</width>
+					<height>38</height>
+					<font>Font-Condensed-S25</font>
+					<align>left</align>
+					<textcolor>SelectedGreen</textcolor>
+					<label>C</label>
+					<visible>substring(PVR.ActStreamDevice,#3)</visible>
+				</control>
+				<control type="label" id="1">
+					<left>370</left>
+					<width>50</width>
+					<height>38</height>
+					<font>Font-Condensed-S25</font>
+					<align>left</align>
+					<textcolor>SecondaryT</textcolor>
+					<label>D</label>
+					<visible>!substring(PVR.ActStreamDevice,#4)</visible>
+				</control>
+				<control type="label" id="1">
+					<left>370</left>
+					<width>50</width>
+					<height>38</height>
+					<font>Font-Condensed-S25</font>
+					<align>left</align>
+					<textcolor>SelectedGreen</textcolor>
+					<label>D</label>
+					<visible>substring(PVR.ActStreamDevice,#4)</visible>
 				</control>
 			</control>
 		</control>
@@ -365,7 +478,7 @@
 				<height>38</height>
 				<font>Font-Condensed-S25</font>
 				<align>left</align>
-				<textcolor>Green</textcolor>
+				<textcolor>SelectedGreen</textcolor>
 				<label>S</label>
 			</control>
 			<control type="label" id="1">
@@ -385,7 +498,7 @@
 				<height>38</height>
 				<font>Font-Condensed-S25</font>
 				<align>left</align>
-				<textcolor>Green</textcolor>
+				<textcolor>SelectedGreen</textcolor>
 				<label>V</label>
 			</control>
 			<control type="label" id="1">
@@ -405,7 +518,7 @@
 				<height>38</height>
 				<font>Font-Condensed-S25</font>
 				<align>left</align>
-				<textcolor>Green</textcolor>
+				<textcolor>SelectedGreen</textcolor>
 				<label>I</label>
 			</control>
 			<control type="label" id="1">
@@ -425,7 +538,7 @@
 				<height>38</height>
 				<font>Font-Condensed-S25</font>
 				<align>left</align>
-				<textcolor>Green</textcolor>
+				<textcolor>SelectedGreen</textcolor>
 				<label>ND</label>
 			</control>
 			<control type="label" id="1">
@@ -445,7 +558,7 @@
 				<height>38</height>
 				<font>Font-Condensed-S25</font>
 				<align>left</align>
-				<textcolor>Green</textcolor>
+				<textcolor>SelectedGreen</textcolor>
 				<label>CO</label>
 			</control>
 			<control type="label" id="1">
@@ -465,7 +578,7 @@
 				<height>38</height>
 				<font>Font-Condensed-S25</font>
 				<align>left</align>
-				<textcolor>Green</textcolor>
+				<textcolor>SelectedGreen</textcolor>
 				<label>CW</label>
 			</control>
 			<control type="label" id="1">
@@ -485,7 +598,7 @@
 				<height>38</height>
 				<font>Font-Condensed-S25</font>
 				<align>left</align>
-				<textcolor>Green</textcolor>
+				<textcolor>SelectedGreen</textcolor>
 				<label>B</label>
 			</control>
 			<control type="label" id="1">
@@ -505,7 +618,7 @@
 				<height>38</height>
 				<font>Font-Condensed-S25</font>
 				<align>left</align>
-				<textcolor>Green</textcolor>
+				<textcolor>SelectedGreen</textcolor>
 				<label>N</label>
 			</control>
 			<control type="label" id="1">
@@ -524,101 +637,9 @@
 				<height>38</height>
 				<font>Font-Condensed-S25</font>
 				<align>left</align>
-				<textcolor>Green</textcolor>
+				<textcolor>SelectedGreen</textcolor>
 				<label>FTA</label>
 				<visible>substring(PVR.ActStreamEncryptionName,(0000)) + !substring(Window(Home).Property(PVR_ECM_caid),0x)</visible>
-			</control>
-			<control type="group"> <!-- Tuner info -->
-				<posx>1094</posx>
-				<control type="label" id="1">
-					<posx>200</posx>
-					<width>150</width>
-					<height>38</height>
-					<font>Font-Condensed-S25</font>
-					<align>left</align>
-					<textcolor>SecondaryT</textcolor>
-					<label>Tuner:</label>
-				</control>
-				<control type="label" id="1">
-					<posx>295</posx>
-					<width>50</width>
-					<height>38</height>
-					<font>Font-Condensed-S25</font>
-					<align>left</align>
-					<textcolor>SecondaryT</textcolor>
-					<label>A</label>
-					<visible>!substring(PVR.ActStreamDevice,#1)</visible>
-				</control>
-				<control type="label" id="1">
-					<posx>295</posx>
-					<width>50</width>
-					<height>38</height>
-					<font>Font-Condensed-S25</font>
-					<align>left</align>
-					<textcolor>Green</textcolor>
-					<label>A</label>
-					<visible>substring(PVR.ActStreamDevice,#1)</visible>
-				</control>
-				<control type="label" id="1">
-					<posx>320</posx>
-					<width>50</width>
-					<height>38</height>
-					<font>Font-Condensed-S25</font>
-					<align>left</align>
-					<textcolor>SecondaryT</textcolor>
-					<label>B</label>
-					<visible>!substring(PVR.ActStreamDevice,#2)</visible>
-				</control>
-				<control type="label" id="1">
-					<posx>320</posx>
-					<width>50</width>
-					<height>38</height>
-					<font>Font-Condensed-S25</font>
-					<align>left</align>
-					<textcolor>Green</textcolor>
-					<label>B</label>
-					<visible>substring(PVR.ActStreamDevice,#2)</visible>
-				</control>
-				<control type="label" id="1">
-					<posx>345</posx>
-					<width>50</width>
-					<height>38</height>
-					<font>Font-Condensed-S25</font>
-					<align>left</align>
-					<textcolor>SecondaryT</textcolor>
-					<label>C</label>
-					<visible>!substring(PVR.ActStreamDevice,#3)</visible>
-				</control>
-				<control type="label" id="1">
-					<posx>345</posx>
-					<width>50</width>
-					<height>38</height>
-					<font>Font-Condensed-S25</font>
-					<align>left</align>
-					<textcolor>Green</textcolor>
-					<label>C</label>
-					<visible>substring(PVR.ActStreamDevice,#3)</visible>
-				</control>
-				<control type="label" id="1">
-					<posx>370</posx>
-					<width>50</width>
-					<height>38</height>
-					<font>Font-Condensed-S25</font>
-					<align>left</align>
-					<textcolor>SecondaryT</textcolor>
-					<label>D</label>
-					<visible>!substring(PVR.ActStreamDevice,#4)</visible>
-				</control>
-				<control type="label" id="1">
-					<posx>370</posx>
-					<width>50</width>
-					<height>38</height>
-					<font>Font-Condensed-S25</font>
-					<align>left</align>
-					<textcolor>Green</textcolor>
-					<label>D</label>
-					<visible>substring(PVR.ActStreamDevice,#4)</visible>
-				</control>
 			</control>
 		</control>
 	</include>

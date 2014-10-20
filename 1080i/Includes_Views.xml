@@ -96,7 +96,7 @@
 				<effect type="fade" end="0" start="100" time="200" delay="0" tween="sine" easing="in" />
 			</animation>
 			<control type="group">
-				<posx>760</posx>
+				<posx>831</posx>
 				<control type="image">
 					<posx>1</posx>
 					<posy>950</posy>

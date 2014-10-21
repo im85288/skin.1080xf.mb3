@@ -155,7 +155,7 @@
 								<width>324</width>
 								<height>80</height>
 								<colordiffuse>$VAR[HomeTileOverlay]</colordiffuse>
-								<texture border="7">special://skin/extras/icons/tile-white.png</texture>
+								<texture border="7">$VAR[HomeTiles]</texture>
 							</control>
 							<control type="label">
 								<posx>20</posx>
@@ -178,7 +178,7 @@
 								<width>330</width>
 								<height>490</height>
 								<bordersize>5</bordersize>
-								<bordertexture colordiffuse="$VAR[HomeTileHomeColourVar]" border="7">special://skin/extras/icons/tile-white.png</bordertexture>
+								<bordertexture colordiffuse="$VAR[HomeTileHomeColourVar]" border="7">$VAR[HomeTiles]</bordertexture>
 								<aspectratio scalediffuse="false" align="left" aligny="bottom">keep</aspectratio>
 								<texture background="true" fallback="dialogs/favourites/nothumb.png">$INFO[ListItem.Thumb]</texture>
 							</control>
@@ -245,7 +245,7 @@
 									<width>330</width>
 									<height>490</height>
 									<bordersize>5</bordersize>
-									<bordertexture colordiffuse="$VAR[HomeTileHomeColourVar]" border="7">special://skin/extras/icons/tile-white.png</bordertexture>
+									<bordertexture colordiffuse="$VAR[HomeTileHomeColourVar]" border="7">$VAR[HomeTiles]</bordertexture>
 									<aspectratio scalediffuse="false" align="left" aligny="bottom">keep</aspectratio>
 									<texture background="true" fallback="dialogs/favourites/nothumb.png">$INFO[ListItem.Thumb]</texture>
 								</control>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="600">
-	<defaultcontrol always="true">52</defaultcontrol>
+	<defaultcontrol always="true">53</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<views>50,52,53,544,555</views>
 	<controls>
@@ -511,7 +511,7 @@
 								<width>516</width>
 								<font>Font-Condensed-S38-B</font>
 								<label>$INFO[Container(52).ListItem.Title]</label>
-								<textcolor>SelectedBlue</textcolor>
+								<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
 							</control>
@@ -1040,7 +1040,7 @@
 									<width>350</width>
 									<height>30</height>
 									<font>Font-Condensed-S28</font>
-									<textcolor>SecondaryT</textcolor>
+									<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
 									<selectedcolor>SelectedGreen</selectedcolor>
 									<align>left</align>
 									<label>$INFO[ListItem.Title]</label>
@@ -1076,11 +1076,11 @@
 									<top>42</top>
 									<width>350</width>
 									<height>30</height>
-									<font>Font-Condensed-S20</font>
+									<font>Font-Condensed-S22</font>
 									<align>left</align>
 									<textcolor>TertiaryT</textcolor>
 									<selectedcolor>SecondaryT</selectedcolor>
-									<label>$LOCALIZE[19031]: $INFO[ListItem.NextTitle]</label>
+									<label>$LOCALIZE[19031]: [B]$INFO[ListItem.NextTitle][/B]</label>
 									<visible>true</visible>
 								</control>
 							</control>
@@ -1151,6 +1151,7 @@
 										<height>30</height>
 										<font>Font-Condensed-S28</font>
 										<selectedcolor>SelectedGreen</selectedcolor>
+										<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
 										<align>left</align>
 										<label>$INFO[ListItem.Title]</label>
 									</control>
@@ -1185,11 +1186,11 @@
 										<top>42</top>
 										<width>350</width>
 										<height>30</height>
-										<font>Font-Condensed-S20</font>
+										<font>Font-Condensed-S22</font>
 										<align>left</align>
 										<textcolor>SecondaryT</textcolor>
 										<selectedcolor>PrimaryT</selectedcolor>
-										<label>$LOCALIZE[19031]: $INFO[ListItem.NextTitle]</label>
+										<label>$LOCALIZE[19031]: [B]$INFO[ListItem.NextTitle][/B]</label>
 									</control>
 								</control>
 							</control>
@@ -1393,7 +1394,7 @@
 								<posx>0</posx>
 								<posy>51</posy>
 								<width>690</width>
-								<label>$INFO[ListItem.Genre]</label>
+								<label>$INFO[ListItem.Title]</label>
 								<font>Font-Condensed-S28</font>
 								<textcolor>TertiaryT</textcolor>
 								<scroll>false</scroll>
@@ -1446,7 +1447,7 @@
 									<posx>0</posx>
 									<posy>42</posy>
 									<width>690</width>
-									<label>$INFO[ListItem.Label]</label>
+									<label>$INFO[ListItem.ChannelNumberLabel,, - ]$INFO[ListItem.Label]</label>
 									<font>Font-Condensed-S34-B</font>
 									<textcolor>FF333333</textcolor>
 									<selectedcolor>SelectedGreen</selectedcolor>
@@ -1455,12 +1456,12 @@
 								</control>
 								<control type="label">
 									<posx>0</posx>
-									<posy>82</posy>
+									<posy>86</posy>
 									<width>690</width>
-									<label>$INFO[ListItem.ChannelNumberLabel,, • ]$INFO[ListItem.Genre]</label>
-									<font>Font-Condensed-S28</font>
-									<textcolor>FF484848</textcolor>
-									<selectedcolor>SelectedGreen</selectedcolor>
+									<label>[B]$INFO[ListItem.Title][/B]</label>
+									<font>Font-Condensed-S29</font>
+									<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
+									<selectedcolor>$VAR[FocusModHomeColourVar]</selectedcolor>
 									<scroll>false</scroll>
 									<align>left</align>
 								</control>
@@ -1469,12 +1470,61 @@
 									<posx>0</posx>
 									<posy>130</posy>
 									<width>690</width>
-									<height>146</height>
+									<height>120</height>
 									<info>ListItem.Plot</info>
 									<align>justify</align>
 									<textcolor>FF484848</textcolor>
-									<autoscroll delay="13000" time="3000" repeat="13000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
+									<autoscroll delay="8000" time="3000" repeat="8000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
+									<font>Font-Condensed-S27</font>
+								</control>
+								<control type="label">
+									<posx>0</posx>
+									<top>246</top>
+									<width>680</width>
+									<label>$INFO[ListItem.StartTime]</label>
+									<label2>$INFO[ListItem.EndTime]</label2>
 									<font>Font-Condensed-S25</font>
+									<textcolor>FF555555</textcolor>
+									<selectedcolor>FF555555</selectedcolor>
+									<scroll>false</scroll>
+									<align>left</align>
+								</control>
+								<control type="label">
+									<posx>0</posx>
+									<top>246</top>
+									<width>680</width>
+									<label>$INFO[ListItem.EndTime]</label>
+									<font>Font-Condensed-S25</font>
+									<textcolor>FF555555</textcolor>
+									<selectedcolor>FF555555</selectedcolor>
+									<scroll>false</scroll>
+									<align>right</align>
+								</control>
+								<control type="progress">
+									<left>0</left>
+									<top>274</top>
+									<width>690</width>
+									<height>15</height>
+									<texturebg>windows/pvr/progress-back-wide.png</texturebg>
+									<lefttexture>windows/pvr/progress-leftright.png</lefttexture>
+									<midtexture>windows/pvr/progress-mid-wide.png</midtexture>
+									<righttexture>windows/pvr/progress-leftright.png</righttexture>
+									<info>ListItem.Progress</info>
+									<colordiffuse>FF000000</colordiffuse>
+									<visible>!ListItem.IsPlaying</visible>
+								</control>
+								<control type="progress">
+									<left>0</left>
+									<top>274</top>
+									<width>690</width>
+									<height>15</height>
+									<texturebg colordiffuse="FF000000">windows/pvr/progress-back-wide.png</texturebg>
+									<lefttexture>windows/pvr/progress-leftright.png</lefttexture>
+									<midtexture>windows/pvr/progress-mid-wide.png</midtexture>
+									<righttexture>windows/pvr/progress-leftright.png</righttexture>
+									<info>ListItem.Progress</info>
+									<colordiffuse>SelectedGreen</colordiffuse>
+									<visible>ListItem.IsPlaying</visible>
 								</control>
 							</control>
 							<control type="group">

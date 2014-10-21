@@ -97,7 +97,7 @@
 					</control>
 					<control type="image">
 						<description>Watched/unwatched overlay</description>
-						<posx>-8</posx>
+						<posx>1150</posx>
 						<posy>0</posy>
 						<width>100</width>
 						<height>100</height>
@@ -295,6 +295,22 @@
 						<scroll>false</scroll>
 						<visible>!IsEmpty(ListItem.Title)</visible>
 					</control>
+					<control type="group">
+						<visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)</visible>
+						<posx>30</posx>
+						<control type="label">
+							<posx>1300</posx>
+							<posy>28</posy>
+							<width>64</width>
+							<height>42</height>
+							<label>$INFO[ListItem.Property(unWatchedEpisodes)]</label>
+							<font>Font-Condensed-S30-B</font>
+							<textcolor>FF27D0FA</textcolor>
+							<scroll>false</scroll>
+							<align>center</align>
+						</control>
+						<visible>Skin.HasSetting(UseKodiLibrary)</visible>	
+					</control>
 				</itemlayout>
 				<itemlayout height="100" condition="Container.Content(seasons)">
 					<control type="image">
@@ -353,14 +369,6 @@
 					<control type="group">
 						<visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)</visible>
 						<posx>30</posx>
-						<control type="image">
-							<posx>0</posx>
-							<posy>29</posy>
-							<width>64</width>
-							<height>41</height>
-							<texture>views/list/other/unwatched.png</texture>
-							<colordiffuse>SecondaryT</colordiffuse>
-						</control>
 						<control type="label">
 							<posx>0</posx>
 							<posy>28</posy>
@@ -372,6 +380,7 @@
 							<scroll>false</scroll>
 							<align>center</align>
 						</control>
+						<visible>Skin.HasSetting(UseKodiLibrary)</visible>	
 					</control>
 				</itemlayout>
 				<itemlayout height="100" condition="Container.Content(episodes)">
@@ -404,7 +413,7 @@
 					</control>
 					<control type="image">
 						<description>Watched/unwatched overlay</description>
-						<posx>-8</posx>
+						<posx>1150</posx>
 						<posy>0</posy>
 						<width>100</width>
 						<height>100</height>
@@ -768,6 +777,22 @@
 							<scroll>false</scroll>
 							<visible>!IsEmpty(ListItem.Title)</visible>
 						</control>
+					</control>	
+					<control type="group">
+						<visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)</visible>
+						<posx>30</posx>
+						<control type="label">
+							<posx>1300</posx>
+							<posy>28</posy>
+							<width>64</width>
+							<height>42</height>
+							<label>$INFO[ListItem.Property(unWatchedEpisodes)]</label>
+							<font>Font-Condensed-S30-B</font>
+							<textcolor>FF27D0FA</textcolor>
+							<scroll>false</scroll>
+							<align>center</align>
+						</control>
+						<visible>Skin.HasSetting(UseKodiLibrary)</visible>
 					</control>
 				</focusedlayout>
 				<focusedlayout height="100" condition="Container.Content(seasons)">
@@ -844,19 +869,11 @@
 							<textcolor>SecondaryT</textcolor>
 							<scroll>false</scroll>
 							<visible>!IsEmpty(ListItem.Property(NumEpisodes))</visible>
-						</control>
+						</control>						
 					</control>
 					<control type="group">
 						<visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)</visible>
 						<posx>30</posx>
-						<control type="image">
-							<posx>0</posx>
-							<posy>29</posy>
-							<width>64</width>
-							<height>41</height>
-							<texture>views/list/other/unwatched.png</texture>
-							<colordiffuse>SecondaryT</colordiffuse>
-						</control>
 						<control type="label">
 							<posx>0</posx>
 							<posy>28</posy>
@@ -868,6 +885,7 @@
 							<scroll>false</scroll>
 							<align>center</align>
 						</control>
+						<visible>Skin.HasSetting(UseKodiLibrary)</visible>						
 					</control>
 				</focusedlayout>
 				<focusedlayout height="100" condition="Container.Content(episodes)">

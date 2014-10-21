@@ -413,6 +413,7 @@
 	<!-- Variables -->
 	<!-- ========= -->
 	<!-- HD/SD flag -->
+
 	<variable name="ListHDSDFlag">
 		<value condition="SubString(ListItem.FileNameAndPath,.3D.) | SubString(ListItem.FileNameAndPath,-3D.)">flags/other/3d-default.png</value>
 		<value condition="IntegerGreaterThan(ListItem.VideoResolution,719)">flags/defs/hd.png</value>
@@ -459,11 +460,79 @@
 		<value condition="!IsEmpty(Container(54).ListItem(-1).VideoResolution)"> [COLOR=44FFFFFF]/[/COLOR] SD</value>
 	</variable>
 	<!-- Overlays -->
-	<!-- <variable name="InfoListOverlay"> <value condition="ListItem.IsResumable">$INFO[ListItem.Overlay,overlays/,/list-p.png]</value> <value condition="!IntegerGreaterThan(ListItem.PlayCount,0)">$INFO[ListItem.Overlay,overlays/,/list-w.png]</value> </variable> <variable name="InfoPanelOverlay"> <value condition="ListItem.IsResumable">$INFO[ListItem.Overlay,overlays/,/panel-p.png]</value> <value condition="!IntegerGreaterThan(ListItem.PlayCount,0)">$INFO[ListItem.Overlay,overlays/,/panel-w.png]</value> </variable> <variable name="DefaultListOverlay"> <value condition="Container.ListItem.IsResumable">$INFO[ListItem.Overlay,overlays/,/default-p.png]</value> <value condition="!IntegerGreaterThan(ListItem.PlayCount,0)">$INFO[ListItem.Overlay,overlays/,/default-w.png]</value> </variable> <variable name="ExtendedOverlay"> <value condition="Container.ListItem.IsResumable">$INFO[ListItem.Overlay,overlays/,/extended-p.png]</value> <value condition="!IntegerGreaterThan(ListItem.PlayCount,0)">$INFO[ListItem.Overlay,overlays/,/extended-w.png]</value> 
-		</variable> <variable name="ExtendedOverlay0"> <value condition="Container.ListItem(0).IsResumable">$INFO[Container.ListItem(0).Overlay,overlays/,/extended-p.png]</value> <value condition="!IntegerGreaterThan(Container.ListItem(0).PlayCount,0)">$INFO[Container.ListItem(0).Overlay,overlays/,/extended-w.png]</value> </variable> <variable name="ExtendedOverlay1"> <value condition="Container.ListItem(1).IsResumable">$INFO[Container.ListItem(1).Overlay,overlays/,/extended-p.png]</value> <value condition="!IntegerGreaterThan(Container.ListItem(1).PlayCount,0)">$INFO[Container.ListItem(1).Overlay,overlays/,/extended-w.png]</value> </variable> <variable name="ExtendedOverlay2"> <value condition="Container.ListItem(2).IsResumable">$INFO[Container.ListItem(2).Overlay,overlays/,/extended-p.png]</value> <value condition="!IntegerGreaterThan(Container.ListItem(2).PlayCount,0)">$INFO[Container.ListItem(2).Overlay,overlays/,/extended-w.png]</value> </variable> <variable name="ExtendedOverlay3"> <value 
-		condition="Container.ListItem(3).IsResumable">$INFO[Container.ListItem(3).Overlay,overlays/,/extended-p.png]</value> <value condition="!IntegerGreaterThan(Container.ListItem(3).PlayCount,0)">$INFO[Container.ListItem(3).Overlay,overlays/,/extended-w.png]</value> </variable> <variable name="ExtendedOverlay4"> <value condition="Container.ListItem(4).IsResumable">$INFO[Container.ListItem(4).Overlay,overlays/,/extended-p.png]</value> <value condition="!IntegerGreaterThan(Container.ListItem(4).PlayCount,0)">$INFO[Container.ListItem(4).Overlay,overlays/,/extended-w.png]</value> </variable> <variable name="ExtendedOverlay-1"> <value condition="Container.ListItem(-1).IsResumable">$INFO[Container.ListItem(-1).Overlay,overlays/,/extended-p.png]</value> <value condition="!IntegerGreaterThan(Container.ListItem(-1).PlayCount,0)">$INFO[Container.ListItem(-1).Overlay,overlays/,/extended-w.png]</value> </variable> <variable name="VideoInfoOverlay"> <value condition="IntegerGreaterThan(ListItem.PercentPlayed,0) 
-		+ !IntegerGreaterThan(ListItem.PercentPlayed,99)">$INFO[ListItem.Overlay,overlays/,/extended-p.png]</value> <value condition="!IntegerGreaterThan(ListItem.PlayCount,0)">$INFO[ListItem.Overlay,overlays/,/extended-w.png]</value> </variable> <variable name="ActorsVideoInfoOverlay"> <value condition="!IsEmpty(ListItem.Property(isResumable))">$INFO[ListItem.Overlay,overlays/,/extended-p.png]</value> <value condition="!IntegerGreaterThan(ListItem.PlayCount,0)">$INFO[ListItem.Overlay,overlays/,/extended-w.png]</value> </variable> <variable name="BannerOverlayFo"> <value condition="ListItem.IsPlaying">views/banner/other/playing-top.png</value> <value condition="ListItem.IsResumable">$INFO[ListItem.Overlay,overlays/,/banner-p-fo.png]</value> <value condition="!IntegerGreaterThan(ListItem.PlayCount,0)">$INFO[ListItem.Overlay,overlays/,/banner-w-fo.png]</value> </variable> <variable name="BannerOverlayNF"> <value condition="Container.ListItem.IsResumable">$INFO[ListItem.Overlay,overlays/,/banner-p-nf.png]</value> 
-		<value condition="!IntegerGreaterThan(ListItem.PlayCount,0)">$INFO[ListItem.Overlay,overlays/,/banner-w-nf.png]</value> </variable> -->
+
+	<variable name="InfoListOverlay">
+        <value condition="ListItem.IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/list-p.png]</value>
+        <value condition="!IntegerGreaterThan(ListItem.PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/list-w.png]</value>
+    </variable>
+    
+    <variable name="InfoPanelOverlay">
+        <value condition="ListItem.IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/panel-p.png]</value>
+        <value condition="!IntegerGreaterThan(ListItem.PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/panel-w.png]</value>
+    </variable>
+    
+    <variable name="DefaultListOverlay">
+        <value condition="Container.ListItem.IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/default-p.png]</value>
+        <value condition="!IntegerGreaterThan(ListItem.PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/default-w.png]</value>
+    </variable>
+    
+    <variable name="ExtendedOverlay">
+        <value condition="Container.ListItem.IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/extended-p.png]</value>
+        <value condition="!IntegerGreaterThan(ListItem.PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/extended-w.png]</value>
+    </variable>
+    
+    <variable name="ExtendedOverlay0">
+        <value condition="Container.ListItem(0).IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[Container.ListItem(0).Overlay,overlays/,/extended-p.png]</value>
+        <value condition="!IntegerGreaterThan(Container.ListItem(0).PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[Container.ListItem(0).Overlay,overlays/,/extended-w.png]</value>
+    </variable>
+    
+    <variable name="ExtendedOverlay1">
+        <value condition="Container.ListItem(1).IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[Container.ListItem(1).Overlay,overlays/,/extended-p.png]</value>
+        <value condition="!IntegerGreaterThan(Container.ListItem(1).PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[Container.ListItem(1).Overlay,overlays/,/extended-w.png]</value>
+    </variable>
+    
+    <variable name="ExtendedOverlay2">
+        <value condition="Container.ListItem(2).IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[Container.ListItem(2).Overlay,overlays/,/extended-p.png]</value>
+        <value condition="!IntegerGreaterThan(Container.ListItem(2).PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[Container.ListItem(2).Overlay,overlays/,/extended-w.png]</value>
+    </variable>
+    
+    <variable name="ExtendedOverlay3">
+        <value condition="Container.ListItem(3).IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[Container.ListItem(3).Overlay,overlays/,/extended-p.png]</value>
+        <value condition="!IntegerGreaterThan(Container.ListItem(3).PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[Container.ListItem(3).Overlay,overlays/,/extended-w.png]</value>
+    </variable>
+    
+    <variable name="ExtendedOverlay4">
+        <value condition="Container.ListItem(4).IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[Container.ListItem(4).Overlay,overlays/,/extended-p.png]</value>
+        <value condition="!IntegerGreaterThan(Container.ListItem(4).PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[Container.ListItem(4).Overlay,overlays/,/extended-w.png]</value>
+    </variable>
+    
+    <variable name="ExtendedOverlay-1">
+        <value condition="Container.ListItem(-1).IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[Container.ListItem(-1).Overlay,overlays/,/extended-p.png]</value>
+        <value condition="!IntegerGreaterThan(Container.ListItem(-1).PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[Container.ListItem(-1).Overlay,overlays/,/extended-w.png]</value>
+    </variable>
+    
+    <variable name="VideoInfoOverlay">
+        <value condition="IntegerGreaterThan(ListItem.PercentPlayed,0) + !IntegerGreaterThan(ListItem.PercentPlayed,99) + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/extended-p.png]</value>
+        <value condition="!IntegerGreaterThan(ListItem.PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/extended-w.png]</value>
+    </variable>
+    
+    <variable name="ActorsVideoInfoOverlay">
+        <value condition="!IsEmpty(ListItem.Property(isResumable)) + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/extended-p.png]</value>
+        <value condition="!IntegerGreaterThan(ListItem.PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/extended-w.png]</value>
+    </variable>
+    
+    <variable name="BannerOverlayFo">
+        <value condition="ListItem.IsPlaying + Skin.HasSetting(UseKodiLibrary)">views/banner/other/playing-top.png</value>
+        <value condition="ListItem.IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/banner-p-fo.png]</value>
+        <value condition="!IntegerGreaterThan(ListItem.PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/banner-w-fo.png]</value>
+    </variable>
+    
+    <variable name="BannerOverlayNF">
+        <value condition="Container.ListItem.IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/banner-p-nf.png]</value>
+        <value condition="!IntegerGreaterThan(ListItem.PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/banner-w-nf.png]</value>
+    </variable>
+
+	
 	<variable name="AddonOverlay">
 		<value condition="stringcompare(ListItem.Label2,$LOCALIZE[24098])">overlays/addons/broken.png</value>
 		<value condition="stringcompare(ListItem.Label2,$LOCALIZE[305])">overlays/addons/enabled.png</value>

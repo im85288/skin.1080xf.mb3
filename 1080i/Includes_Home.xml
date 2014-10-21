@@ -850,7 +850,7 @@
 					<onclick>noop</onclick>
 					<property name="single">$INFO[Skin.String(HomeHomeSingleImage)]</property>
 					<property name="multi">$INFO[Skin.String(HomeHomeMultiImage)]</property>
-					<property name="multi">$VAR[HomeMoviesMultiPath]</property>
+					<property name="multi">$VAR[HomeFanartPath]</property>
 					<property name="home">1</property>
 				</item>
 				<item id="3">
@@ -6178,8 +6178,8 @@
 					<onleft condition="Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeMusic)">425</onleft>
 					<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomeChannels)">1125</onleft>
 					<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels) + !Skin.HasSetting(HomeTVShows)">325</onleft>
-					<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">225</onleft>
-					<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">525</onleft>
+					<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">225</onleft>
+					<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">525</onleft>
 					<onright>CancelAlarm(HomeTileMove,true)</onright>
 					<onright>CancelAlarm(HomeTileMoveTwo,true)</onright>
 					<onright>CancelAlarm(HomeTileMoveThree,true)</onright>
@@ -7031,8 +7031,8 @@
 					<onleft condition="Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeMusic)">425</onleft>
 					<onleft condition="Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomeChannels)">1125</onleft>
 					<onleft condition="Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels) + !Skin.HasSetting(HomeTVShows)">325</onleft>
-					<onleft condition="Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">225</onleft>
-					<onleft condition="Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">525</onleft>
+					<onleft condition="Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">225</onleft>
+					<onleft condition="Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">525</onleft>
 					<onright condition="!Window.IsVisible(3009)">SetProperty(BounceRight,1,Home)</onright>
 					<onclick>ActivateWindow(4)</onclick>
 					<onup>80</onup>
@@ -7041,11 +7041,11 @@
 				<control type="group" id="850">
 					<posy>100</posy>
 					<posx>535</posx>
-					<animation type="WindowOpen" condition="Container(20).HasFocus(7) | [Container(20).HasFocus(6) + Skin.HasSetting(HomeWeather)] | [Container(20).HasFocus(5) + Skin.HasSetting(HomePrograms)] | [Container(20).HasFocus(11) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic)] | [Container(20).HasFocus(4) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels)] | [Container(20).HasFocus(3) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeTVShows)] | [Container(20).HasFocus(2) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)]" reversible="true">
+					<animation type="WindowOpen" condition="Container(20).HasFocus(7) | [Container(20).HasFocus(6) + Skin.HasSetting(HomeWeather)] | [Container(20).HasFocus(5) + Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms)] | [Container(20).HasFocus(11) + Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic)] | [Container(20).HasFocus(4) + Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels)] | [Container(20).HasFocus(3) + Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeTVShows)] | [Container(20).HasFocus(2) + Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)]" reversible="true">
 						<effect type="slide" start="1500" end="0" tween="cubic" easing="out" time="700" />
 						<effect type="fade" start="25" end="100" tween="sine" easing="in" time="350" delay="250" />
 					</animation>
-					<animation type="WindowClose" condition="Container(20).HasFocus(7) | [Container(20).HasFocus(6) + Skin.HasSetting(HomeWeather)] | [Container(20).HasFocus(5) + Skin.HasSetting(HomePrograms)] | [Container(20).HasFocus(11) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic)] | [Container(20).HasFocus(4) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels)] | [Container(20).HasFocus(3) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeTVShows)] | [Container(20).HasFocus(2) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)]" reversible="true">
+					<animation type="WindowClose" condition="Container(20).HasFocus(7) | [Container(20).HasFocus(6) + Skin.HasSetting(HomeWeather)] | [Container(20).HasFocus(5) + Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms)] | [Container(20).HasFocus(11) + Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic)] | [Container(20).HasFocus(4) + Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels)] | [Container(20).HasFocus(3) + Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeTVShows)] | [Container(20).HasFocus(2) + Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)]" reversible="true">
 						<effect type="slide" start="0" end="500" tween="sine" delay="250" easing="out" time="350" />
 						<effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="350" time="250" />
 					</animation>
@@ -7075,7 +7075,13 @@
 						<width>1302</width>
 						<height>620</height>
 						<onleft>Control.Move(20,-1)</onleft>
-						<onleft>701</onleft>
+						<onleft condition="!Skin.HasSetting(HomeWeather)">701</onleft>
+						<onleft condition="Skin.HasSetting(HomeWeather) + !Skin.HasSetting(HomePrograms)">601</onleft>
+						<onleft condition="Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeMusic)">403</onleft>
+						<onleft condition="Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomeChannels)">1103</onleft>
+						<onleft condition="Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels) + !Skin.HasSetting(HomeTVShows)">303</onleft>
+						<onleft condition="Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">203</onleft>
+						<onleft condition="Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">503</onleft>
 						<onright>801</onright>
 						<onup>825</onup>
 						<ondown>80</ondown>

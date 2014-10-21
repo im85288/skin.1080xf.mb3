@@ -1195,10 +1195,18 @@
 					<control type="radiobutton" id="10002">
 						<width>1210</width>
 						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(ShowEpgProgress)</selected>
+						<onclick>Skin.ToggleSetting(ShowEpgProgress)</onclick>
+						<label>Show progress in EPG</label>
+					</control>
+					<control type="radiobutton" id="10003">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
 						<selected>Skin.HasSetting(alternatelivetvosd)</selected>
 						<onclick>Skin.ToggleSetting(alternatelivetvosd)</onclick>
 						<label>$LOCALIZE[49257]</label>
 					</control>
+					
 				</control>
 				<!-- ================ -->
 				<!-- Alternate librarys -->

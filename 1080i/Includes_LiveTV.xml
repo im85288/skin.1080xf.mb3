@@ -7,6 +7,11 @@
 		<value condition="IntegerGreaterThan(VideoPlayer.VideoResolution,539)">special://skin/new_pvr/flags/resolution/540.png</value>
 		<value>special://skin/new_pvr/flags/resolution/720.png</value>
 	</variable>
+
+	<include name="EpgProgressVar">
+		<progresstexture border="0,48,18,14">special://skin/new_pvr/epg-progress-indicator.png</progresstexture>
+	</include>
+	
 	<!-- Main LiveTV Infobar -->
 	<include name="FullScreenInfoBarLiveTV">
 		<animation effect="slide" time="400" start="0,200" easing="out" tween="back">WindowOpen</animation>
@@ -41,13 +46,13 @@
 		<control type="group" id="1">
 			<posx>0</posx>
 			<control type="image" id="1">
-				<posx>67</posx>
+				<posx>57</posx>
 				<posy>805</posy>
-				<width>290</width>
+				<width>310</width>
 				<height>200</height>
 				<align>center</align>
 				<texture>$INFO[VideoPlayer.Cover]</texture>
-				<aspectratio>keep</aspectratio>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		</control>
 		<!-- Top Info (ChannelNr, Name, Date, Time & Back-end info) -->
@@ -59,7 +64,7 @@
 				<height>68</height>
 				<align>left</align>
 				<font>Font-Condensed-S60</font>
-				<textcolor>SelectedGreen</textcolor>
+				<textcolor>PrimaryT</textcolor>
 				<label>$INFO[VideoPlayer.ChannelNumber]</label>
 				<scroll>true</scroll>
 			</control>
@@ -70,7 +75,7 @@
 				<height>68</height>
 				<align>left</align>
 				<font>Font-Condensed-S60</font>
-				<textcolor>SelectedGreen</textcolor>
+				<textcolor>PrimaryT</textcolor>
 				<label>$INFO[VideoPlayer.ChannelName]</label>
 				<scroll>true</scroll>
 			</control>
@@ -165,7 +170,7 @@
 				<font>Font-Condensed-S37-B</font>
 				<align>left</align>
 				<scroll>true</scroll>
-				<textcolor>PrimaryT</textcolor>
+				<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
 				<label>$INFO[VideoPlayer.Title]</label>
 				<visible>!IsEmpty(VideoPlayer.Title)</visible>
 				<visible>![VideoPlayer.Content(LiveTV) + Player.Recording]</visible>

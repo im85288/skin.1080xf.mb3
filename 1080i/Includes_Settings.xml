@@ -314,6 +314,7 @@
 				<onclick>Skin.ToggleSetting(GlobalImageFanart)</onclick>
 				<label>Use Fanart</label>
 				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2104)">Conditional</animation>
+				<visible>[System.HasAddon(script.grab.fanart) + Skin.HasSetting(UseKodiLibrary)] | !Skin.HasSetting(UseKodiLibrary)</visible>
 			</control>
 		</control>
 		<control type="button" id="4">
@@ -403,39 +404,39 @@
 		<control type="multiimage">
 			<include>SettingsBackgroundDialogMultiImageVars</include>
 			<imagepath background="true">$INFO[Skin.String(GlobalBackdropMulti)]</imagepath>
-			<visible>!IsEmpty(Skin.String(GlobalBackdropMulti)) + IsEmpty(Skin.String(HomeMoviesSingleImage)) + IsEmpty(Skin.String(HomeMoviesMultiImage)) + !Skin.HasSetting(HomeMovieImageFanart)</visible>
+			<visible>!IsEmpty(Skin.String(GlobalBackdropMulti)) + IsEmpty(Skin.String(HomeMoviesSingleImage)) + IsEmpty(Skin.String(HomeMoviesMultiImage)) + !Skin.HasSetting(HomeMoviesImageFanart)</visible>
 		</control>
 		<control type="image">
 			<include>SettingsBackgroundDialogImageVars</include>
 			<texture background="true">$INFO[Skin.String(HomeMoviesSingleImage)]</texture>
-			<visible>!IsEmpty(Skin.String(HomeMoviesSingleImage)) + !Skin.HasSetting(HomeMovieImageFanart)</visible>
+			<visible>!IsEmpty(Skin.String(HomeMoviesSingleImage)) + !Skin.HasSetting(HomeMoviesImageFanart)</visible>
 		</control>
 		<control type="multiimage">
 			<include>SettingsBackgroundDialogMultiImageVars</include>
 			<imagepath background="true">$INFO[Skin.String(HomeMoviesMultiImage)]</imagepath>
-			<visible>!IsEmpty(Skin.String(HomeMoviesMultiImage)) + !Skin.HasSetting(HomeMovieImageFanart)</visible>
+			<visible>!IsEmpty(Skin.String(HomeMoviesMultiImage)) + !Skin.HasSetting(HomeMoviesImageFanart)</visible>
 		</control>
 		<control type="multiimage">
 			<include>SettingsBackgroundDialogMultiImageVars</include>
 			<imagepath background="true">$INFO[Window(Home).Property(MB3.Background.Movie.FanArt)]</imagepath>
-			<visible>Skin.HasSetting(HomeMovieImageFanart)</visible>
+			<visible>Skin.HasSetting(HomeMoviesImageFanart)</visible>
 		</control>
 		<control type="grouplist" id="3">
 			<include>SettingsBackgroundDialogGroupListVars</include>
 			<control type="radiobutton" id="2101">
 				<include>SettingsBackgroundDialogRadioButtonVars</include>
 				<label>$LOCALIZE[41251]</label>
-				<selected>IsEmpty(Skin.String(HomeMoviesSingleImage)) + IsEmpty(Skin.String(HomeMoviesMultiImage)) + !Skin.HasSetting(HomeMovieImageFanart)</selected>
+				<selected>IsEmpty(Skin.String(HomeMoviesSingleImage)) + IsEmpty(Skin.String(HomeMoviesMultiImage)) + !Skin.HasSetting(HomeMoviesImageFanart)</selected>
 				<onclick>Skin.Reset(HomeMoviesSingleImage)</onclick>
 				<onclick>Skin.Reset(HomeMoviesMultiImage)</onclick>
-				<onclick>Skin.Reset(HomeMovieImageFanart)</onclick>
+				<onclick>Skin.Reset(HomeMoviesImageFanart)</onclick>
 				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2101)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2102">
 				<include>SettingsBackgroundDialogRadioButtonVars</include>
 				<selected>!IsEmpty(Skin.String(HomeMoviesSingleImage))</selected>
 				<onclick>Skin.Reset(HomeMoviesMultiImage)</onclick>
-				<onclick>Skin.Reset(HomeMovieImageFanart)</onclick>
+				<onclick>Skin.Reset(HomeMoviesImageFanart)</onclick>
 				<onclick>Skin.SetString(HomeMoviesSingleImage,special://skin/extras/backgrounds/01.jpg)</onclick>
 				<label>$LOCALIZE[41252]</label>
 				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2102)">Conditional</animation>
@@ -444,19 +445,20 @@
 				<include>SettingsBackgroundDialogRadioButtonVars</include>
 				<selected>!IsEmpty(Skin.String(HomeMoviesMultiImage))</selected>
 				<onclick>Skin.Reset(HomeMoviesSingleImage)</onclick>
-				<onclick>Skin.Reset(HomeMovieImageFanart)</onclick>
+				<onclick>Skin.Reset(HomeMoviesImageFanart)</onclick>
 				<onclick>Skin.SetString(HomeMoviesMultiImage,special://skin/extras/backgrounds/)</onclick>
 				<label>$LOCALIZE[41253]</label>
 				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2103)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2104">
 				<include>SettingsBackgroundDialogRadioButtonVars</include>
-				<selected>Skin.HasSetting(HomeMovieImageFanart)</selected>
+				<selected>Skin.HasSetting(HomeMoviesImageFanart)</selected>
 				<onclick>Skin.Reset(HomeMoviesSingleImage)</onclick>
 				<onclick>Skin.Reset(HomeMoviesMultiImage)</onclick>
-				<onclick>Skin.ToggleSetting(HomeMovieImageFanart)</onclick>
+				<onclick>Skin.ToggleSetting(HomeMoviesImageFanart)</onclick>
 				<label>Use Fanart</label>
 				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2104)">Conditional</animation>
+				<visible>[System.HasAddon(script.grab.fanart) + Skin.HasSetting(UseKodiLibrary)] | !Skin.HasSetting(UseKodiLibrary)</visible>
 			</control>
 		</control>
 		<control type="button" id="4">
@@ -537,6 +539,7 @@
 				<onclick>Skin.ToggleSetting(HomeTvImageFanart)</onclick>
 				<label>Use Fanart</label>
 				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2104)">Conditional</animation>
+				<visible>[System.HasAddon(script.grab.fanart) + Skin.HasSetting(UseKodiLibrary)] | !Skin.HasSetting(UseKodiLibrary)</visible>
 			</control>
 		</control>
 		<control type="button" id="4">
@@ -612,11 +615,12 @@
 			<control type="radiobutton" id="2104">
 				<include>SettingsBackgroundDialogRadioButtonVars</include>
 				<selected>Skin.HasSetting(HomeMusicImageFanart)</selected>
-				<onclick>Skin.Reset(HomeTVShowsSingleImage)</onclick>
-				<onclick>Skin.Reset(HomeTVShowsMultiImage)</onclick>
+				<onclick>Skin.Reset(HomeMusicSingleImage)</onclick>
+				<onclick>Skin.Reset(HomeMusicMultiImage)</onclick>
 				<onclick>Skin.ToggleSetting(HomeMusicImageFanart)</onclick>
 				<label>Use Fanart</label>
 				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2104)">Conditional</animation>
+				<visible>[System.HasAddon(script.grab.fanart) + Skin.HasSetting(UseKodiLibrary)] | !Skin.HasSetting(UseKodiLibrary)</visible>
 			</control>
 		</control>
 		<control type="button" id="4">

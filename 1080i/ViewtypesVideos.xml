@@ -275,7 +275,7 @@
 						<description>Year / Duration</description>
 						<posx>560</posx>
 						<posy>43</posy>
-						<width>854</width>
+						<width>750</width>
 						<height>54</height>
 						<font>Font-Condensed-S28</font>
 						<align>left</align>
@@ -298,6 +298,14 @@
 					<control type="group">
 						<visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)</visible>
 						<posx>30</posx>
+							<control type="image">		
+							<posx>1300</posx>		
+							<posy>29</posy>		
+							<width>64</width>		
+							<height>41</height>		
+							<texture>views/list/other/unwatched.png</texture>		
+							<colordiffuse>SecondaryT</colordiffuse>		
+						</control>						
 						<control type="label">
 							<posx>1300</posx>
 							<posy>28</posy>
@@ -369,6 +377,14 @@
 					<control type="group">
 						<visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)</visible>
 						<posx>30</posx>
+							<control type="image">		
+							<posx>0</posx>		
+							<posy>29</posy>		
+							<width>64</width>		
+							<height>41</height>		
+							<texture>views/list/other/unwatched.png</texture>		
+							<colordiffuse>SecondaryT</colordiffuse>		
+						</control>						
 						<control type="label">
 							<posx>0</posx>
 							<posy>28</posy>
@@ -766,7 +782,7 @@
 							<description>Year / Duration</description>
 							<posx>560</posx>
 							<posy>43</posy>
-							<width>854</width>
+							<width>750</width>
 							<height>54</height>
 							<font>Font-Condensed-S28</font>
 							<align>left</align>
@@ -790,6 +806,14 @@
 					<control type="group">
 						<visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)</visible>
 						<posx>30</posx>
+							<control type="image">		
+							<posx>1300</posx>		
+							<posy>29</posy>		
+							<width>64</width>		
+							<height>41</height>		
+							<texture>views/list/other/unwatched.png</texture>		
+							<colordiffuse>SecondaryT</colordiffuse>		
+						</control>						
 						<control type="label">
 							<posx>1300</posx>
 							<posy>28</posy>
@@ -883,6 +907,14 @@
 					<control type="group">
 						<visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)</visible>
 						<posx>30</posx>
+							<control type="image">		
+							<posx>0</posx>		
+							<posy>29</posy>		
+							<width>64</width>		
+							<height>41</height>		
+							<texture>views/list/other/unwatched.png</texture>		
+							<colordiffuse>SecondaryT</colordiffuse>		
+						</control>
 						<control type="label">
 							<posx>0</posx>
 							<posy>28</posy>

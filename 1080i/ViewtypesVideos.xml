@@ -295,6 +295,22 @@
 						<scroll>false</scroll>
 						<visible>!IsEmpty(ListItem.Title)</visible>
 					</control>
+					<control type="group">
+						<visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)</visible>
+						<posx>30</posx>
+						<control type="label">
+							<posx>1300</posx>
+							<posy>28</posy>
+							<width>64</width>
+							<height>42</height>
+							<label>$INFO[ListItem.Property(unWatchedEpisodes)]</label>
+							<font>Font-Condensed-S30-B</font>
+							<textcolor>FF27D0FA</textcolor>
+							<scroll>false</scroll>
+							<align>center</align>
+						</control>
+						<visible>Skin.HasSetting(UseKodiLibrary)</visible>	
+					</control>
 				</itemlayout>
 				<itemlayout height="100" condition="Container.Content(seasons)">
 					<control type="image">
@@ -353,14 +369,6 @@
 					<control type="group">
 						<visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)</visible>
 						<posx>30</posx>
-						<control type="image">
-							<posx>0</posx>
-							<posy>29</posy>
-							<width>64</width>
-							<height>41</height>
-							<texture>views/list/other/unwatched.png</texture>
-							<colordiffuse>SecondaryT</colordiffuse>
-						</control>
 						<control type="label">
 							<posx>0</posx>
 							<posy>28</posy>
@@ -372,6 +380,7 @@
 							<scroll>false</scroll>
 							<align>center</align>
 						</control>
+						<visible>Skin.HasSetting(UseKodiLibrary)</visible>	
 					</control>
 				</itemlayout>
 				<itemlayout height="100" condition="Container.Content(episodes)">
@@ -641,6 +650,15 @@
 							<scroll>false</scroll>
 							<visible>!IsEmpty(ListItem.Genre)</visible>
 						</control>
+						<control type="image">
+							<description>Watched/unwatched overlay</description>
+							<posx>-8</posx>
+							<posy>0</posy>
+							<width>100</width>
+							<height>100</height>
+							<colordiffuse>$VAR[Colordiffuse.Color]</colordiffuse>
+						<texture>$VAR[DefaultListOverlay]</texture>
+						</control>
 						<control type="label">
 							<description>Year / Genre</description>
 							<posx>224</posx>
@@ -768,6 +786,22 @@
 							<scroll>false</scroll>
 							<visible>!IsEmpty(ListItem.Title)</visible>
 						</control>
+					</control>	
+					<control type="group">
+						<visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)</visible>
+						<posx>30</posx>
+						<control type="label">
+							<posx>1300</posx>
+							<posy>28</posy>
+							<width>64</width>
+							<height>42</height>
+							<label>$INFO[ListItem.Property(unWatchedEpisodes)]</label>
+							<font>Font-Condensed-S30-B</font>
+							<textcolor>FF27D0FA</textcolor>
+							<scroll>false</scroll>
+							<align>center</align>
+						</control>
+						<visible>Skin.HasSetting(UseKodiLibrary)</visible>
 					</control>
 				</focusedlayout>
 				<focusedlayout height="100" condition="Container.Content(seasons)">
@@ -844,19 +878,11 @@
 							<textcolor>SecondaryT</textcolor>
 							<scroll>false</scroll>
 							<visible>!IsEmpty(ListItem.Property(NumEpisodes))</visible>
-						</control>
+						</control>						
 					</control>
 					<control type="group">
 						<visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)</visible>
 						<posx>30</posx>
-						<control type="image">
-							<posx>0</posx>
-							<posy>29</posy>
-							<width>64</width>
-							<height>41</height>
-							<texture>views/list/other/unwatched.png</texture>
-							<colordiffuse>SecondaryT</colordiffuse>
-						</control>
 						<control type="label">
 							<posx>0</posx>
 							<posy>28</posy>
@@ -868,6 +894,7 @@
 							<scroll>false</scroll>
 							<align>center</align>
 						</control>
+						<visible>Skin.HasSetting(UseKodiLibrary)</visible>						
 					</control>
 				</focusedlayout>
 				<focusedlayout height="100" condition="Container.Content(episodes)">
@@ -1385,7 +1412,7 @@
 							<visible>ListItem.IsPlaying</visible>
 						</control>
 						<control type="label">
-							<posx>100</posx>
+							<posx>130</posx>
 							<posy>0</posy>
 							<height>60</height>
 							<width>590</width>
@@ -1410,7 +1437,7 @@
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
-							<posx>-15</posx>
+							<posx>15</posx>
 							<width>100</width>
 							<height>58</height>
 							<font>Font-Condensed-S31</font>
@@ -1699,7 +1726,7 @@
 							</animation>
 							<animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(52) + !Container(52).ListItem.IsPlaying">Conditional</animation>
 							<control type="label">
-								<posx>100</posx>
+								<posx>130</posx>
 								<posy>0</posy>
 								<height>60</height>
 								<width>590</width>
@@ -1724,7 +1751,7 @@
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
-								<posx>-15</posx>
+								<posx>15</posx>
 								<width>100</width>
 								<height>58</height>
 								<font>Font-Condensed-S31</font>

@@ -287,7 +287,7 @@
 		<control type="group" id="1">
 			<control type="group">
 				<visible>!substring(PVR.ActStreamStatus,TIMESHIFT)</visible>
-				<left>1330</left>
+				<right>30</right>
 				<top>1017</top>
 				<width>250</width>
 				<control type="label" id="1">
@@ -306,114 +306,6 @@
 					<align>left</align>
 					<textcolor>PrimaryT</textcolor>
 					<label>AGC: $INFO[PVR.ActStreamSignal]</label>
-				</control>
-			</control>
-			<control type="group">
-				<left>1660</left>
-				<top>1017</top>
-				<visible>substring(PVR.ActStreamStatus,TIMESHIFT)</visible>
-				<control type="label" id="1">
-					<width>250</width>
-					<height>38</height>
-					<font>Font-Condensed-S25</font>
-					<align>left</align>
-					<textcolor>PrimaryT</textcolor>
-					<label>TIMESHIFT</label>
-				</control>
-			</control>
-			<!-- Tuner info -->
-			<control type="group">
-				<left>1460</left>
-				<top>1017</top>
-				<width>300</width>
-				<control type="label" id="1">
-					<left>200</left>
-					<width>150</width>
-					<height>38</height>
-					<font>Font-Condensed-S25</font>
-					<align>left</align>
-					<textcolor>SecondaryT</textcolor>
-					<label>Tuner:</label>
-				</control>
-				<control type="label" id="1">
-					<left>295</left>
-					<width>50</width>
-					<height>38</height>
-					<font>Font-Condensed-S25</font>
-					<align>left</align>
-					<textcolor>SecondaryT</textcolor>
-					<label>A</label>
-					<visible>!substring(PVR.ActStreamDevice,#1)</visible>
-				</control>
-				<control type="label" id="1">
-					<left>295</left>
-					<width>50</width>
-					<height>38</height>
-					<font>Font-Condensed-S25</font>
-					<align>left</align>
-					<textcolor>SelectedGreen</textcolor>
-					<label>A</label>
-					<visible>substring(PVR.ActStreamDevice,#1)</visible>
-				</control>
-				<control type="label" id="1">
-					<left>320</left>
-					<width>50</width>
-					<height>38</height>
-					<font>Font-Condensed-S25</font>
-					<align>left</align>
-					<textcolor>SecondaryT</textcolor>
-					<label>B</label>
-					<visible>!substring(PVR.ActStreamDevice,#2)</visible>
-				</control>
-				<control type="label" id="1">
-					<left>320</left>
-					<width>50</width>
-					<height>38</height>
-					<font>Font-Condensed-S25</font>
-					<align>left</align>
-					<textcolor>green</textcolor>
-					<label>B</label>
-					<visible>substring(PVR.ActStreamDevice,#2)</visible>
-				</control>
-				<control type="label" id="1">
-					<left>345</left>
-					<width>50</width>
-					<height>38</height>
-					<font>Font-Condensed-S25</font>
-					<align>left</align>
-					<textcolor>SecondaryT</textcolor>
-					<label>C</label>
-					<visible>!substring(PVR.ActStreamDevice,#3)</visible>
-				</control>
-				<control type="label" id="1">
-					<left>345</left>
-					<width>50</width>
-					<height>38</height>
-					<font>Font-Condensed-S25</font>
-					<align>left</align>
-					<textcolor>SelectedGreen</textcolor>
-					<label>C</label>
-					<visible>substring(PVR.ActStreamDevice,#3)</visible>
-				</control>
-				<control type="label" id="1">
-					<left>370</left>
-					<width>50</width>
-					<height>38</height>
-					<font>Font-Condensed-S25</font>
-					<align>left</align>
-					<textcolor>SecondaryT</textcolor>
-					<label>D</label>
-					<visible>!substring(PVR.ActStreamDevice,#4)</visible>
-				</control>
-				<control type="label" id="1">
-					<left>370</left>
-					<width>50</width>
-					<height>38</height>
-					<font>Font-Condensed-S25</font>
-					<align>left</align>
-					<textcolor>SelectedGreen</textcolor>
-					<label>D</label>
-					<visible>substring(PVR.ActStreamDevice,#4)</visible>
 				</control>
 			</control>
 		</control>
@@ -625,26 +517,6 @@
 				<align>left</align>
 				<textcolor>SelectedGreen</textcolor>
 				<label>N</label>
-			</control>
-			<control type="label" id="1">
-				<posx>320</posx>
-				<width>1000</width>
-				<height>38</height>
-				<font>Font-Condensed-S25</font>
-				<align>left</align>
-				<textcolor>PrimaryT</textcolor>
-				<label>Caid: $INFO[Window(Home).Property(PVR_ECM_caid)] Source: $INFO[Window(Home).Property(PVR_ECM_from)] Hops: $INFO[Window(Home).Property(PVR_ECM_hops)] Time: $INFO[Window(Home).Property(PVR_ECM_time)] ms</label>
-				<visible>substring(Window(Home).Property(PVR_ECM_caid),0x)</visible>
-			</control>
-			<control type="label" id="1">
-				<posx>320</posx>
-				<width>1000</width>
-				<height>38</height>
-				<font>Font-Condensed-S25</font>
-				<align>left</align>
-				<textcolor>SelectedGreen</textcolor>
-				<label>FTA</label>
-				<visible>substring(PVR.ActStreamEncryptionName,(0000)) + !substring(Window(Home).Property(PVR_ECM_caid),0x)</visible>
 			</control>
 		</control>
 	</include>

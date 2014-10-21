@@ -465,6 +465,13 @@
 						<onclick>Skin.ToggleSetting(ShowBackgroundHomeMenu)</onclick>
 						<label>$LOCALIZE[49251]</label>
 					</control>
+					<control type="radiobutton" id="2006">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(HomeLogo.Enabled)</selected>
+						<onclick>Skin.ToggleSetting(HomeLogo.Enabled)</onclick>
+						<label>$LOCALIZE[49258]</label>
+					</control>
 					<control type="group" id="2007">
 						<description>Fake spin control</description>
 						<width>1210</width>
@@ -492,7 +499,7 @@
 							<height>60</height>
 							<onleft>20072</onleft>
 							<onright>20072</onright>
-							<onup>2004</onup>
+							<onup>2006</onup>
 							<ondown>4001</ondown>
 							<texturefocus colordiffuse="PrimaryT">buttons/spinctrl/arrow-down-fo.png</texturefocus>
 							<texturenofocus colordiffuse="PrimaryT">buttons/spinctrl/arrow-down-nf.png</texturenofocus>
@@ -653,10 +660,31 @@
 						<label2 fallback="US">[COLOR=SelectedBlue]$VAR[MovieMPAALangLabel][/COLOR]</label2>
 						<onclick>ActivateWindow(3006)</onclick>
 					</control>
+					<control type="radiobutton" id="3007">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(CDArt.Enabled)</selected>
+						<onclick>Skin.ToggleSetting(CDArt.Enabled)</onclick>
+						<label>$LOCALIZE[49260]</label>
+					</control>
+					<control type="radiobutton" id="3008">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(Logo.Enabled)</selected>
+						<onclick>Skin.ToggleSetting(Logo.Enabled)</onclick>
+						<label>$LOCALIZE[49258]</label>
+					</control>
+					<control type="radiobutton" id="3009">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(ViewsClearArt.Enabled)</selected>
+						<onclick>Skin.ToggleSetting(ViewsClearArt.Enabled)</onclick>
+						<label>$LOCALIZE[49259]</label>
+					</control>
 					<control type="button" id="3006">
 						<width>1210</width>
 						<include>SettingsCategoryDefaultButtonVars</include>
-						<label>Set Default Views</label>
+						<label>Set Default Views (eg Movies, Tv)</label>
 						<onclick>RunAddon(plugin.video.xbmb3c,"?mode=3&url=http%3a%2f%2fSETVIEWSSETVIEWS")</onclick>
 					</control>
 				</control>
@@ -916,13 +944,6 @@
 						<visible>Skin.HasSetting(OSDVisualisation.Enabled)</visible>
 						<label>- $LOCALIZE[41106]</label>
 					</control>
-					<control type="radiobutton" id="8005">
-						<width>1210</width>
-						<include>SettingsCategoryRadioButtonVars</include>
-						<selected>Skin.HasSetting(CDArt.Enabled)</selected>
-						<onclick>Skin.ToggleSetting(CDArt.Enabled)</onclick>
-						<label>$LOCALIZE[41107]</label>
-					</control>
 					<control type="radiobutton" id="8003">
 						<width>1210</width>
 						<include>SettingsCategoryRadioButtonVars</include>
@@ -940,6 +961,13 @@
 						<onclick>Skin.ToggleSetting(ArtistSlideShow.Animate)</onclick>
 						<visible>Skin.HasSetting(ArtistSlideShow.Enabled)</visible>
 						<label>- $LOCALIZE[41105]</label>
+					</control>
+					<control type="radiobutton" id="8005">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(ClearArt.Enabled)</selected>
+						<onclick>Skin.ToggleSetting(ClearArt.Enabled)</onclick>
+						<label>$LOCALIZE[49259]</label>
 					</control>
 					<control type="radiobutton" id="8006">
 						<width>1210</width>
@@ -1164,8 +1192,14 @@
 						<onclick>Skin.ToggleSetting(EPGGenreColors.Enabled)</onclick>
 						<label>$LOCALIZE[41221]</label>
 					</control>
+					<control type="radiobutton" id="10002">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(alternatelivetvosd)</selected>
+						<onclick>Skin.ToggleSetting(alternatelivetvosd)</onclick>
+						<label>$LOCALIZE[49257]</label>
+					</control>
 				</control>
-				
 				<!-- ================ -->
 				<!-- Alternate librarys -->
 				<!-- ================ -->
@@ -1181,8 +1215,7 @@
 						<onclick>XBMC.ReloadSkin()</onclick>
 						<label>$LOCALIZE[49256]</label>
 					</control>
-				</control>	
-				
+				</control>
 				<!-- =============== -->
 				<!-- Add-on Settings -->
 				<!-- =============== -->

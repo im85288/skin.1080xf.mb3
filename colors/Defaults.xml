@@ -87,7 +87,7 @@
 	
 	
 	<!--background colours-->
-	<color name="PrimaryBG">CC333333</color>
+	<color name="PrimaryBG">DD333333</color>
 	<color name="SecondaryBG">FF555555</color>
 	<color name="TertiaryBG">FF444444</color>
 	<color name="QuaternaryBG">01000000</color>
@@ -125,4 +125,5 @@
 	<color name="Blue">FFff0000</color>
 	<color name="Red">FF006cff</color>
 	<color name="White">FFFFFFFF</color>
+	
 </colors>

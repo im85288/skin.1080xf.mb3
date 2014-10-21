@@ -1,0 +1,10 @@
+<colors>
+	<!--background colours -->
+	<color name="PrimaryBG">ff181818</color>
+	<color name="SecondaryBG">FF555555</color>
+	<color name="TertiaryBG">FF444444</color>
+	<color name="QuaternaryBG">01000000</color>
+	<color name="HomeBG">DD111111</color>
+	<color name="HomeTileOverlay">AA222222</color>
+	<color name="HomeMenuOverlay">CC222222</color>
+</colors>

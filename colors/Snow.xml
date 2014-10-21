@@ -12,7 +12,7 @@
 	<color name="tilesettings">FFAAAAAA</color>
 	
 	<!--background colours-->
-	<color name="PrimaryBG">CCCCCCCC</color>
+	<color name="PrimaryBG">EECCCCCC</color>
 	<color name="SecondaryBG">FFFFFFFF</color>
 	<color name="TertiaryBG">FFFFFFFF</color>
 	<color name="QuaternaryBG">01000000</color>

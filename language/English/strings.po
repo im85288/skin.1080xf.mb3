@@ -47,7 +47,7 @@ msgid "Show fanart above visualisation"
 msgstr ""
 
 msgctxt "#41107"
-msgid "Enable CDArt"
+msgid "Show Disc Artwork"
 msgstr ""
 
 msgctxt "#41108"
@@ -1189,4 +1189,20 @@ msgstr ""
 
 msgctxt "#49256"
 msgid "Use Native Kodi Library"
+msgstr ""
+
+msgctxt "#49257"
+msgid "Use alternate osd for live tv"
+msgstr ""
+
+msgctxt "#49258"
+msgid "Show Logos"
+msgstr ""
+
+msgctxt "#49259"
+msgid "Show ClearArt"
+msgstr ""
+
+msgctxt "#49260"
+msgid "Show Disc Artwork"
 msgstr ""

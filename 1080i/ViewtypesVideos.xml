@@ -97,7 +97,7 @@
 					</control>
 					<control type="image">
 						<description>Watched/unwatched overlay</description>
-						<posx>1150</posx>
+						<posx>-8</posx>
 						<posy>0</posy>
 						<width>100</width>
 						<height>100</height>

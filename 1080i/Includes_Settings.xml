@@ -20,7 +20,7 @@
 			<width>256</width>
 			<height>293</height>
 			<colordiffuse>$VAR[HomeTileHomeColourVar]</colordiffuse>
-			<texture border="7">special://skin/extras/icons/tile-white.png</texture>
+			<texture border="7">$VAR[HomeTiles]</texture>
 		</control>
 		<control type="image">
 			<posx>19</posx>

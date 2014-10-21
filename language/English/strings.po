@@ -1168,7 +1168,7 @@ msgid "Set the Focus Colour"
 msgstr 
 
 msgctxt "#49250"
-msgid "Tile Colours"
+msgid "Home Tiles"
 msgstr ""
 
 msgctxt "#49251"
@@ -1205,4 +1205,16 @@ msgstr ""
 
 msgctxt "#49260"
 msgid "Show Disc Artwork"
+msgstr ""
+
+msgctxt "#49261"
+msgid "Use plain tile background"
+msgstr ""
+
+msgctxt "#49262"
+msgid "Use colour tiles"
+msgstr ""
+
+msgctxt "#49263"
+msgid "Home Tiles"
 msgstr ""

@@ -1610,7 +1610,7 @@
 					</itemlayout>
 					<itemlayout height="60" condition="Container.Content(Episodes)">
 						<control type="label">
-							<posx>30</posx>
+							<posx>45</posx>
 							<posy>0</posy>
 							<height>58</height>
 							<width>70</width>
@@ -1623,7 +1623,7 @@
 							<visible>!IsEmpty(ListItem.Season) + !IsEmpty(ListItem.Episode)</visible>
 						</control>
 						<control type="label">
-							<posx>115</posx>
+							<posx>140</posx>
 							<posy>0</posy>
 							<height>60</height>
 							<width>575</width>
@@ -1994,7 +1994,7 @@
 							</animation>
 							<animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(52) + !Container(52).ListItem.IsPlaying">Conditional</animation>
 							<control type="label">
-								<posx>30</posx>
+								<posx>45</posx>
 								<posy>0</posy>
 								<height>58</height>
 								<width>70</width>
@@ -2007,7 +2007,7 @@
 								<visible>!IsEmpty(ListItem.Season) + !IsEmpty(ListItem.Episode)</visible>
 							</control>
 							<control type="label">
-								<posx>115</posx>
+								<posx>140</posx>
 								<posy>0</posy>
 								<height>60</height>
 								<width>575</width>

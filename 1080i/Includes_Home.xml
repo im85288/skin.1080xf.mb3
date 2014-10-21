@@ -1633,7 +1633,7 @@
 							<visible>ControlGroup(502).HasFocus</visible>
 							<control type="image">
 								<description>Logo</description>
-								<posx>330</posx>
+								<posx>386</posx>
 								<posy>580</posy>
 								<width>248</width>
 								<height>90</height>
@@ -1643,7 +1643,7 @@
 							</control>
 							<control type="image">
 								<description>Logo</description>
-								<posx>330</posx>
+								<posx>386</posx>
 								<posy>580</posy>
 								<width>248</width>
 								<height>90</height>
@@ -1734,7 +1734,7 @@
 								<visible>!IsEmpty(Container(5022).ListItem.Property(CriticRating)) + !substring(Container(5022).ListItem.Property(CriticRating),None)</visible>
 							</control>
 							<control type="image">
-								<posx>590</posx>
+								<posx>650</posx>
 								<posy>580</posy>
 								<width>30</width>
 								<height>30</height>
@@ -1744,7 +1744,7 @@
 								<visible>!IsEmpty(Container(5022).ListItem.Property(SuggestedMovieTitle)) + !substring(Container(5022).ListItem.Property(SuggestedMovieTitle),None)</visible>
 							</control>
 							<control type="label">
-								<posx>625</posx>
+								<posx>685</posx>
 								<posy>580</posy>
 								<width>675</width>
 								<font>Font-Condensed-S26</font>
@@ -1755,7 +1755,7 @@
 								<visible>!IsEmpty(Container(5022).ListItem.Property(SuggestedMovieTitle)) + !substring(Container(5022).ListItem.Property(SuggestedMovieTitle),None)</visible>
 							</control>
 							<control type="image">
-								<posx>590</posx>
+								<posx>650</posx>
 								<posy>580</posy>
 								<width>30</width>
 								<height>30</height>
@@ -1766,7 +1766,7 @@
 								<visible>stringcompare(Skin.String(HomeWidget.1.Type),mb3playlists)</visible>
 							</control>
 							<control type="label">
-								<posx>630</posx>
+								<posx>685</posx>
 								<posy>580</posy>
 								<width>90</width>
 								<font>Font-Condensed-S32</font>
@@ -1777,7 +1777,7 @@
 								<visible>!IsEmpty(Container(5022).ListItem.Label2) + !substring(Container(5022).ListItem.Label2,None) + !IsEmpty(Container(5022).ListItem.Property(CriticRating))</visible>
 							</control>
 							<control type="image">
-								<posx>680</posx>
+								<posx>720</posx>
 								<posy>580</posy>
 								<width>30</width>
 								<height>30</height>
@@ -1788,7 +1788,7 @@
 								<visible>!IsEmpty(Container(5022).ListItem.Property(CriticRating)) + !substring(Container(5022).ListItem.Property(CriticRating),None)</visible>
 							</control>
 							<control type="label">
-								<posx>720</posx>
+								<posx>760</posx>
 								<posy>580</posy>
 								<width>90</width>
 								<font>Font-Condensed-S32</font>
@@ -2625,7 +2625,7 @@
 							<visible>ControlGroup(202).HasFocus</visible>
 							<control type="image">
 								<description>Logo</description>
-								<posx>330</posx>
+								<posx>386</posx>
 								<posy>580</posy>
 								<width>248</width>
 								<height>90</height>
@@ -2710,7 +2710,7 @@
 								<visible>!IsEmpty(Container(2022).ListItem.Property(CriticRating)) + !substring(Container(2022).ListItem.Property(CriticRating),None)</visible>
 							</control>
 							<control type="image">
-								<posx>590</posx>
+								<posx>650</posx>
 								<posy>580</posy>
 								<width>30</width>
 								<height>30</height>
@@ -2720,7 +2720,7 @@
 								<visible>!IsEmpty(Container(2022).ListItem.Property(SuggestedMovieTitle)) + !substring(Container(2022).ListItem.Property(SuggestedMovieTitle),None)</visible>
 							</control>
 							<control type="label">
-								<posx>625</posx>
+								<posx>685</posx>
 								<posy>580</posy>
 								<width>675</width>
 								<font>Font-Condensed-S26</font>
@@ -3530,7 +3530,7 @@
 							<visible>ControlGroup(302).HasFocus</visible>
 							<control type="image">
 								<description>Logo</description>
-								<posx>330</posx>
+								<posx>386</posx>
 								<posy>580</posy>
 								<width>248</width>
 								<height>90</height>
@@ -3595,7 +3595,7 @@
 								<visible>!IsEmpty(Container(3022).ListItem.Property(CriticRating)) + !substring(Container(3022).ListItem.Property(CriticRating),None)</visible>
 							</control>
 							<control type="image">
-								<posx>590</posx>
+								<posx>650</posx>
 								<posy>580</posy>
 								<width>30</width>
 								<height>30</height>
@@ -3605,7 +3605,7 @@
 								<visible>!IsEmpty(Container(3022).ListItem.Property(SuggestedMovieTitle)) + !substring(Container(3022).ListItem.Property(SuggestedMovieTitle),None)</visible>
 							</control>
 							<control type="label">
-								<posx>625</posx>
+								<posx>685</posx>
 								<posy>580</posy>
 								<width>675</width>
 								<font>Font-Condensed-S26</font>
@@ -5122,7 +5122,7 @@
 							<visible>ControlGroup(402).HasFocus</visible>
 							<control type="image">
 								<description>Logo</description>
-								<posx>330</posx>
+								<posx>386</posx>
 								<posy>580</posy>
 								<width>248</width>
 								<height>90</height>

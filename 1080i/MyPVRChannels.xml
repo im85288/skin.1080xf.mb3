@@ -1460,8 +1460,8 @@
 									<width>690</width>
 									<label>[B]$INFO[ListItem.Title][/B]</label>
 									<font>Font-Condensed-S29</font>
-									<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
-									<selectedcolor>$VAR[FocusModHomeColourVar]</selectedcolor>
+									<textcolor>$VAR[LiveTVColourVar]</textcolor>
+									<selectedcolor>$VAR[LiveTVColourVar]</selectedcolor>
 									<scroll>false</scroll>
 									<align>left</align>
 								</control>

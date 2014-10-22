@@ -7,11 +7,13 @@
 		<value condition="IntegerGreaterThan(VideoPlayer.VideoResolution,539)">special://skin/new_pvr/flags/resolution/540.png</value>
 		<value>special://skin/new_pvr/flags/resolution/720.png</value>
 	</variable>
-
 	<include name="EpgProgressVar">
 		<progresstexture border="0,48,18,14">special://skin/new_pvr/epg-progress-indicator.png</progresstexture>
 	</include>
-	
+	<variable name="LiveTVColourVar">
+		<value condition="Skin.HasSetting(ColourFocus)">$INFO[Skin.String(focuscolor.name)]</value>
+		<value condition="!Skin.HasSetting(ColourFocus)">FF333333</value>
+	</variable>
 	<!-- Main LiveTV Infobar -->
 	<include name="FullScreenInfoBarLiveTV">
 		<animation effect="slide" time="400" start="0,200" easing="out" tween="back">WindowOpen</animation>
@@ -21,7 +23,7 @@
 			<left>17</left>
 			<!-- Main background -->
 			<control type="image" id="1">
-			    <left>15</left>
+				<left>15</left>
 				<width>1845</width>
 				<height>280</height>
 				<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
@@ -58,9 +60,9 @@
 		<!-- Top Info (ChannelNr, Name, Date, Time & Back-end info) -->
 		<control type="group" id="1">
 			<control type="label" id="1">
-				<posx>378</posx>
+				<posx>380</posx>
 				<posy>800</posy>
-				<width>350</width>
+				<width>130</width>
 				<height>68</height>
 				<align>left</align>
 				<font>Font-Condensed-S60</font>
@@ -69,9 +71,9 @@
 				<scroll>true</scroll>
 			</control>
 			<control type="label" id="1">
-				<left>535</left>
+				<left>515</left>
 				<posy>800</posy>
-				<width>950</width>
+				<width>970</width>
 				<height>68</height>
 				<align>left</align>
 				<font>Font-Condensed-S60</font>
@@ -100,14 +102,14 @@
 				<label>$INFO[System.Date(DDD)]</label>
 			</control>
 			<control type="label" id="1">
-				<posx>1620</posx>
+				<posx>1595</posx>
 				<posy>818</posy>
 				<width>250</width>
 				<height>68</height>
 				<align>right</align>
 				<font>Font-Condensed-S32</font>
 				<textcolor>SecondaryT</textcolor>
-				<label>$INFO[System.Date(dd.mm)]</label>
+				<label>$INFO[System.Date(dd mmm)]</label>
 			</control>
 			<!-- Active backend info (DVBS\DVBS2\IPTV) -->
 			<control type="group">
@@ -154,18 +156,18 @@
 			<control type="label" id="1">
 				<posx>380</posx>
 				<posy>895</posy>
-				<width>150</width>
+				<width>130</width>
 				<height>38</height>
 				<font>Font-Condensed-S37-B</font>
 				<align>left</align>
 				<textcolor>PrimaryT</textcolor>
-				<label>$INFO[VideoPlayer.StartTime]</label>
+				<label>$INFO[VideoPlayer.StartTime(hh:mm)]</label>
 				<visible>!IsEmpty(VideoPlayer.Title)</visible>
 			</control>
 			<control type="label" id="1">
-				<posx>535</posx>
+				<posx>515</posx>
 				<posy>895</posy>
-				<width>865</width>
+				<width>885</width>
 				<height>38</height>
 				<font>Font-Condensed-S37-B</font>
 				<align>left</align>
@@ -178,21 +180,21 @@
 			<control type="group"> <!-- Recording logo and labels -->
 				<visible>VideoPlayer.Content(LiveTV) + Player.Recording</visible>
 				<control type="image">
-					<posx>499</posx>
-					<posy>896</posy>
+					<posx>478</posx>
+					<posy>894</posy>
 					<width>40</width>
 					<height>40</height>
 					<texture>special://skin/new_pvr/PVR-IsRecording.png</texture>
 					<animation effect="fade" start="100" end="40" time="960" pulse="true" condition="true">conditional</animation>
 				</control>
 				<control type="label" id="1">
-					<posx>535</posx>
+					<posx>515</posx>
 					<posy>895</posy>
 					<width>865</width>
 					<height>38</height>
 					<font>Font-Condensed-S37-B</font>
 					<align>left</align>
-					<textcolor>PrimaryT</textcolor>
+					<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
 					<scroll>true</scroll>
 					<label>$INFO[VideoPlayer.Title]</label>
 					<visible>!IsEmpty(VideoPlayer.Title)</visible>
@@ -206,25 +208,24 @@
 				<font>Font-Condensed-S37-B</font>
 				<align>right</align>
 				<textcolor>PrimaryT</textcolor>
-				<!--<label>$INFO[Window(Home).Property(PVR_MinutesToEnd)]</label> -->
 				<label>$INFO[VideoPlayer.TimeRemaining(hh:mm)]</label>
 				<visible>!IsEmpty(VideoPlayer.Title)</visible>
 			</control>
 			<control type="label">
 				<posx>380</posx>
 				<posy>965</posy>
-				<width>150</width>
+				<width>130</width>
 				<height>38</height>
 				<font>Font-Condensed-S34</font>
 				<align>left</align>
 				<textcolor>SecondaryT</textcolor>
-				<label>$INFO[VideoPlayer.NextStartTime]</label>
+				<label>$INFO[VideoPlayer.NextStartTime(hh:mm)]</label>
 				<visible>!IsEmpty(VideoPlayer.NextTitle)</visible>
 			</control>
 			<control type="label" id="1">
-				<posx>535</posx>
+				<posx>515</posx>
 				<posy>965</posy>
-				<width>880</width>
+				<width>900</width>
 				<height>38</height>
 				<font>Font-Condensed-S34</font>
 				<align>left</align>
@@ -241,7 +242,7 @@
 				<font>Font-Condensed-S34</font>
 				<align>right</align>
 				<textcolor>PrimaryT</textcolor>
-				<label>$INFO[Window(Home).Property(PVR_NextMinutes)]</label>
+				<label>$INFO[VideoPlayer.NextEndTime(hh:mm)]</label>
 				<visible>!IsEmpty(VideoPlayer.NextTitle)</visible>
 			</control>
 			<control type="progress">

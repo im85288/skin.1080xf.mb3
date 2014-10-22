@@ -58,7 +58,7 @@
 					<description>Date label</description>
 					<posx>1685</posx>
 					<posy>1019</posy>
-					<width>180</width>
+					<width>230</width>
 					<height>100</height>
 					<label>$INFO[System.Date]</label>
 					<font>Font-Condensed-S26</font>

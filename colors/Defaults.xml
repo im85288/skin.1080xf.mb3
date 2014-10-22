@@ -73,27 +73,26 @@
 	<color name="Magenta Focus">ffff00ff</color>
 	<color name="Imdb Focus">fff3ce13</color>
 	
-	<!-- Default Tile Colours -->
-	<color name="tilesearch">FF383B38</color>
-	<color name="tilehome">FF383B38</color>
-	<color name="tilelivetv">FF383B38</color>
-	<color name="tiletv">FF109909</color>
-	<color name="tilemovies">FF2D89C2</color>
-	<color name="tilemusic">FFFFD95C</color>
-	<color name="tilechannels">FFFF6666</color>
-	<color name="tileapplications">FF383B38</color>
-	<color name="tileweather">FF383B38</color>
-	<color name="tilesettings">FF383B38</color>
-	
-	
-	<!--background colours-->
-	<color name="PrimaryBG">DD333333</color>
+	<!--background colours -->
+	<color name="PrimaryBG">ff181818</color>
 	<color name="SecondaryBG">FF555555</color>
 	<color name="TertiaryBG">FF444444</color>
 	<color name="QuaternaryBG">01000000</color>
 	<color name="HomeBG">DD111111</color>
-	<color name="HomeTileOverlay">99222222</color>
-	<color name="HomeMenuOverlay">BB222222</color>
+	<color name="HomeTileOverlay">AA222222</color>
+	<color name="HomeMenuOverlay">CC222222</color>
+	
+	<!-- Default Tile Colours -->
+	<color name="tilesearch">FF111111</color>
+	<color name="tilehome">FF111111</color>
+	<color name="tilelivetv">FF111111</color>
+	<color name="tiletv">FF109909</color>
+	<color name="tilemovies">FF2D89C2</color>
+	<color name="tilemusic">FFFFD95C</color>
+	<color name="tilechannels">FFFF6666</color>
+	<color name="tileapplications">FF111111</color>
+	<color name="tileweather">FF111111</color>
+	<color name="tilesettings">FF111111</color>
 	
 	
 	<!--main colours-->

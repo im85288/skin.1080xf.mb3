@@ -1,0 +1,23 @@
+<colors>	
+	<!-- Default Tile Colours -->
+	<color name="tilesearch">FF383B38</color>
+	<color name="tilehome">FF383B38</color>
+	<color name="tilelivetv">FF383B38</color>
+	<color name="tiletv">FF109909</color>
+	<color name="tilemovies">FF2D89C2</color>
+	<color name="tilemusic">FFFFD95C</color>
+	<color name="tilechannels">FFFF6666</color>
+	<color name="tileapplications">FF383B38</color>
+	<color name="tileweather">FF383B38</color>
+	<color name="tilesettings">FF383B38</color>
+	
+	
+	<!--background colours-->
+	<color name="PrimaryBG">DD333333</color>
+	<color name="SecondaryBG">FF555555</color>
+	<color name="TertiaryBG">FF444444</color>
+	<color name="QuaternaryBG">01000000</color>
+	<color name="HomeBG">DD111111</color>
+	<color name="HomeTileOverlay">99222222</color>
+	<color name="HomeMenuOverlay">BB222222</color>
+</colors>

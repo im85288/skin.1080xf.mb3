@@ -306,7 +306,7 @@
                     <control type="label">
                         <width>100</width>
                         <height>60</height>
-                        <label fallback=" 0">$INFO[Window(Home).Property(MB3TotalMovies)]</label>
+                        <label fallback=" 0">$VAR[TotalMovies]</label>
                         <textcolor>eewhite</textcolor>
                         <font>Font-Condensed-S41</font>
                         <align>right</align>
@@ -329,7 +329,7 @@
                     <control type="label">
                         <width>100</width>
                         <height>60</height>
-                        <label fallback=" 0">$INFO[Window(Home).Property(MB3TotalTvShows)]</label>
+                        <label fallback=" 0">$VAR[TotalTV]</label>
                         <textcolor>eewhite</textcolor>
                         <font>Font-Condensed-S41</font>
                         <align>right</align>

@@ -226,12 +226,16 @@
 			<item id="0">
 				<label>$LOCALIZE[41445]</label>
 				<include>GuideDialogClose</include>
-				<onclick>$INFO[Window(Home).Property(xbmb3c.std.movies.0.path)]</onclick>
+				<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.movies.0.path)]</onclick>
+				<onclick condition="!Library.HasContent(movies) + Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,files,return)</onclick>
+				<onclick condition="Library.HasContent(movies) + Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,movietitles,return)</onclick>
 			</item>
 			<item id="1">
 				<label>$LOCALIZE[41446]</label>
 				<include>GuideDialogClose</include>
-				<onclick>$INFO[Window(Home).Property(xbmb3c.std.tvshows.0.path)]</onclick>
+				<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.tvshows.0.path)]</onclick>
+				<onclick condition="!Library.HasContent(tvshows) + Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,files,return)</onclick>
+				<onclick condition="Library.HasContent(tvshows) + Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,tvshowtitles,return)</onclick>
 			</item>
 			<item id="2">
 				<label>$LOCALIZE[41447]</label>
@@ -272,7 +276,8 @@
 			<item id="7">
 				<label>$LOCALIZE[41450]</label>
 				<include>GuideDialogClose</include>
-				<onclick>$INFO[Window(Home).Property(xbmb3c.std.movies.1.path)]</onclick>
+				<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.movies.1.path)]</onclick>
+				<onclick condition="Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,RecentlyAddedMovies,return)</onclick>
 				<visible>!Skin.HasSetting(Guide.Custom3) + IsEmpty(Skin.String(Guide.Custom3.Path))</visible>
 			</item>
 			<item id="8">
@@ -287,7 +292,8 @@
 			<item id="9">
 				<label>$LOCALIZE[41451]</label>
 				<include>GuideDialogClose</include>
-				<onclick>$INFO[Window(Home).Property(xbmb3c.std.tvshows.1.path)]</onclick>
+				<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.tvshows.1.path)]</onclick>
+				<onclick condition="Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,RecentlyAddedEpisodes,return)</onclick>
 				<visible>!Skin.HasSetting(Guide.Custom4) + IsEmpty(Skin.String(Guide.Custom4.Path))</visible>
 			</item>
 			<item id="10">
@@ -684,12 +690,73 @@
 		<content>
 			<item id="1">
 				<onclick>PreviousMenu</onclick>
+				<onclick>PlayMedia($INFO[Window(home).Property(LatestMovie.1.Path)])</onclick>
+				<thumb>$INFO[Window(home).property(LatestMovie.1.Thumb)]</thumb>
+				<label>$INFO[Window(home).Property(LatestMovie.1.Title)]</label>
+				<label2>$INFO[Window(home).Property(LatestMovie.1.Year),, • ]$INFO[Window(home).Property(LatestMovie.1.RunningTime),, $LOCALIZE[12391]]</label2>
+				<property name="rating">$INFO[Window(home).Property(LatestMovie.1.Rating)]</property>
+				<visible>!IsEmpty(Window(home).Property(LatestMovie.1.Title)) + !ControlGroup(9120).HasFocus(91202) + !ControlGroup(9120).HasFocus(91203) + !ControlGroup(9120).HasFocus(91204)</visible>
+				<visible>Skin.HasSetting(UseKodiLibrary)</visible>
+			</item>
+			<item id="2">
+				<onclick>PreviousMenu</onclick>
+				<onclick>PlayMedia($INFO[Window(home).Property(LatestMovie.2.Path)])</onclick>
+				<thumb>$INFO[Window(home).Property(LatestMovie.2.Thumb)]</thumb>
+				<label>$INFO[Window(home).Property(LatestMovie.2.Title)]</label>
+				<label2>$INFO[Window(home).Property(LatestMovie.2.Year),, • ]$INFO[Window(home).Property(LatestMovie.2.RunningTime),, $LOCALIZE[12391]]</label2>
+				<property name="rating">$INFO[Window(home).Property(LatestMovie.2.Rating)]</property>
+				<visible>!IsEmpty(Window(home).Property(LatestMovie.2.Title)) + !ControlGroup(9120).HasFocus(91202) + !ControlGroup(9120).HasFocus(91203) + !ControlGroup(9120).HasFocus(91204)</visible>
+				<visible>Skin.HasSetting(UseKodiLibrary)</visible>
+			</item>
+			<item id="3">
+				<onclick>PreviousMenu</onclick>
+				<onclick>PlayMedia($INFO[Window(home).Property(LatestMovie.3.Path)])</onclick>
+				<thumb>$INFO[Window(home).Property(LatestMovie.3.Thumb)]</thumb>
+				<label>$INFO[Window(home).Property(LatestMovie.3.Title)]</label>
+				<label2>$INFO[Window(home).Property(LatestMovie.3.Year),, • ]$INFO[Window(home).Property(LatestMovie.3.RunningTime),, $LOCALIZE[12391]]</label2>
+				<property name="rating">$INFO[Window(home).Property(LatestMovie.3.Rating)]</property>
+				<visible>!IsEmpty(Window(home).Property(LatestMovie.3.Title)) + !ControlGroup(9120).HasFocus(91202) + !ControlGroup(9120).HasFocus(91203) + !ControlGroup(9120).HasFocus(91204)</visible>
+				<visible>Skin.HasSetting(UseKodiLibrary)</visible>
+			</item>
+			<item id="4">
+				<onclick>PreviousMenu</onclick>
+				<onclick>PlayMedia($INFO[Window(home).Property(LatestMovie.4.Path)])</onclick>
+				<thumb>$INFO[Window(home).Property(LatestMovie.4.Thumb)]</thumb>
+				<label>$INFO[Window(home).Property(LatestMovie.4.Title)]</label>
+				<label2>$INFO[Window(home).Property(LatestMovie.4.Year),, • ]$INFO[Window(home).Property(LatestMovie.4.RunningTime),, $LOCALIZE[12391]]</label2>
+				<property name="rating">$INFO[Window(home).Property(LatestMovie.4.Rating)]</property>
+				<visible>!IsEmpty(Window(home).Property(LatestMovie.4.Title)) + !ControlGroup(9120).HasFocus(91202) + !ControlGroup(9120).HasFocus(91203) + !ControlGroup(9120).HasFocus(91204)</visible>
+				<visible>Skin.HasSetting(UseKodiLibrary)</visible>
+			</item>
+			<item id="5">
+				<onclick>PreviousMenu</onclick>
+				<onclick>PlayMedia($INFO[Window(home).Property(LatestMovie.5.Path)])</onclick>
+				<thumb>$INFO[Window(home).Property(LatestMovie.5.Thumb)]</thumb>
+				<label>$INFO[Window(home).Property(LatestMovie.5.Title)]</label>
+				<label2>$INFO[Window(home).Property(LatestMovie.5.Year),, • ]$INFO[Window(home).Property(LatestMovie.5.RunningTime),, $LOCALIZE[12391]]</label2>
+				<property name="rating">$INFO[Window(home).Property(LatestMovie.5.Rating)]</property>
+				<visible>!IsEmpty(Window(home).Property(LatestMovie.5.Title)) + !ControlGroup(9120).HasFocus(91202) + !ControlGroup(9120).HasFocus(91203) + !ControlGroup(9120).HasFocus(91204)</visible>
+				<visible>Skin.HasSetting(UseKodiLibrary)</visible>
+			</item>
+			<item id="6">
+				<onclick>PreviousMenu</onclick>
+				<onclick>PlayMedia($INFO[Window(home).Property(LatestMovie.6.Path)])</onclick>
+				<thumb>$INFO[Window(home).Property(LatestMovie.6.Thumb)]</thumb>
+				<label>$INFO[Window(home).Property(LatestMovie.6.Title)]</label>
+				<label2>$INFO[Window(home).Property(LatestMovie.6.Year),, • ]$INFO[Window(home).Property(LatestMovie.6.RunningTime),, $LOCALIZE[12391]]</label2>
+				<property name="rating">$INFO[Window(home).Property(LatestMovie.6.Rating)]</property>
+				<visible>!IsEmpty(Window(home).Property(LatestMovie.6.Title)) + !ControlGroup(9120).HasFocus(91202) + !ControlGroup(9120).HasFocus(91203) + !ControlGroup(9120).HasFocus(91204)</visible>
+				<visible>Skin.HasSetting(UseKodiLibrary)</visible>
+			</item>
+			<item id="1">
+				<onclick>PreviousMenu</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(home).Property(LatestUnplayedMovieMB3.1.Path)])</onclick>
 				<thumb>$INFO[Window(home).property(LatestUnplayedMovieMB3.1.Art(poster))]</thumb>
 				<label>$INFO[Window(home).Property(LatestUnplayedMovieMB3.1.Title)]</label>
 				<label2>$INFO[Window(Home).Property(LatestUnplayedMovieMB3.1.Year),, ]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.1.Runtime),,min]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.1.Mpaa), ,]</label2>
 				<property name="rating">$INFO[Window(home).Property(LatestUnplayedMovieMB3.1.Rating)]</property>
 				<visible>!IsEmpty(Window(Home).Property(LatestUnplayedMovieMB3.1.Path)) + !ControlGroup(9120).HasFocus(91202) + !ControlGroup(9120).HasFocus(91203) + !ControlGroup(9120).HasFocus(91204)</visible>
+				<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
 			</item>
 			<item id="2">
 				<onclick>PreviousMenu</onclick>
@@ -699,6 +766,7 @@
 				<label2>$INFO[Window(Home).Property(LatestUnplayedMovieMB3.2.Year),, ]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.2.Runtime),,min]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.2.Mpaa), ,]</label2>
 				<property name="rating">$INFO[Window(home).Property(LatestUnplayedMovieMB3.2.Rating)]</property>
 				<visible>!IsEmpty(Window(Home).Property(LatestUnplayedMovieMB3.2.Path)) + !ControlGroup(9120).HasFocus(91202) + !ControlGroup(9120).HasFocus(91203) + !ControlGroup(9120).HasFocus(91204)</visible>
+				<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
 			</item>
 			<item id="3">
 				<onclick>PreviousMenu</onclick>
@@ -708,6 +776,7 @@
 				<label2>$INFO[Window(Home).Property(LatestUnplayedMovieMB3.3.Year),, ]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.3.Runtime),,min]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.3.Mpaa), ,]</label2>
 				<property name="rating">$INFO[Window(home).Property(LatestUnplayedMovieMB3.3.Rating)]</property>
 				<visible>!IsEmpty(Window(Home).Property(LatestUnplayedMovieMB3.3.Path)) + !ControlGroup(9120).HasFocus(91202) + !ControlGroup(9120).HasFocus(91203) + !ControlGroup(9120).HasFocus(91204)</visible>
+				<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
 			</item>
 			<item id="4">
 				<onclick>PreviousMenu</onclick>
@@ -717,6 +786,7 @@
 				<label2>$INFO[Window(Home).Property(LatestUnplayedMovieMB3.4.Year),, ]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.4.Runtime),,min]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.4.Mpaa), ,]</label2>
 				<property name="rating">$INFO[Window(home).Property(LatestUnplayedMovieMB3.4.Rating)]</property>
 				<visible>!IsEmpty(Window(Home).Property(LatestUnplayedMovieMB3.4.Path)) + !ControlGroup(9120).HasFocus(91202) + !ControlGroup(9120).HasFocus(91203) + !ControlGroup(9120).HasFocus(91204)</visible>
+				<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
 			</item>
 			<item id="5">
 				<onclick>PreviousMenu</onclick>
@@ -726,6 +796,7 @@
 				<label2>$INFO[Window(Home).Property(LatestUnplayedMovieMB3.5.Year),, ]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.5.Runtime),,min]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.5.Mpaa), ,]</label2>
 				<property name="rating">$INFO[Window(home).Property(LatestUnplayedMovieMB3.5.Rating)]</property>
 				<visible>!IsEmpty(Window(Home).Property(LatestUnplayedMovieMB3.5.Path)) + !ControlGroup(9120).HasFocus(91202) + !ControlGroup(9120).HasFocus(91203) + !ControlGroup(9120).HasFocus(91204)</visible>
+				<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
 			</item>
 			<item id="6">
 				<onclick>PreviousMenu</onclick>
@@ -735,6 +806,67 @@
 				<label2>$INFO[Window(Home).Property(LatestUnplayedMovieMB3.6.Year),, ]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.6.Runtime),,min]$INFO[Window(Home).Property(LatestUnplayedMovieMB3.6.Mpaa), ,]</label2>
 				<property name="rating">$INFO[Window(home).Property(LatestUnplayedMovieMB3.6.Rating)]</property>
 				<visible>!IsEmpty(Window(Home).Property(LatestUnplayedMovieMB3.6.Path)) + !ControlGroup(9120).HasFocus(91202) + !ControlGroup(9120).HasFocus(91203) + !ControlGroup(9120).HasFocus(91204)</visible>
+				<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
+			</item>
+			<item id="7">
+				<onclick>PreviousMenu</onclick>
+				<onclick>PlayMedia($INFO[Window(home).Property(LatestEpisode.1.Path)])</onclick>
+				<thumb>$INFO[Window(home).Property(LatestEpisode.1.Thumb)]</thumb>
+				<label>$INFO[Window(home).Property(LatestEpisode.1.EpisodeSeason),,x]$INFO[Window(home).Property(LatestEpisode.1.EpisodeNumber)] $INFO[Window(home).Property(LatestEpisode.1.EpisodeTitle)]</label>
+				<label2>$INFO[Window(home).Property(LatestEpisode.1.ShowTitle)]</label2>
+				<property name="rating">$INFO[Window(home).Property(LatestEpisode.1.Rating)]</property>
+				<visible>!IsEmpty(Window(home).Property(LatestEpisode.1.ShowTitle)) + ControlGroup(9120).HasFocus(91202)</visible>
+				<visible>Skin.HasSetting(UseKodiLibrary)</visible>
+			</item>
+			<item id="8">
+				<onclick>PreviousMenu</onclick>
+				<onclick>PlayMedia($INFO[Window(home).Property(LatestEpisode.2.Path)])</onclick>
+				<thumb>$INFO[Window(home).Property(LatestEpisode.2.Thumb)]</thumb>
+				<label>$INFO[Window(home).Property(LatestEpisode.2.EpisodeSeason),,x]$INFO[Window(home).Property(LatestEpisode.2.EpisodeNumber)] $INFO[Window(home).Property(LatestEpisode.2.EpisodeTitle)]</label>
+				<label2>$INFO[Window(home).Property(LatestEpisode.2.ShowTitle)]</label2>
+				<property name="rating">$INFO[Window(home).Property(LatestEpisode.2.Rating)]</property>
+				<visible>!IsEmpty(Window(home).Property(LatestEpisode.2.ShowTitle)) + ControlGroup(9120).HasFocus(91202)</visible>
+				<visible>Skin.HasSetting(UseKodiLibrary)</visible>
+			</item>
+			<item id="9">
+				<onclick>PreviousMenu</onclick>
+				<onclick>PlayMedia($INFO[Window(home).Property(LatestEpisode.3.Path)])</onclick>
+				<thumb>$INFO[Window(home).Property(LatestEpisode.3.Thumb)]</thumb>
+				<label>$INFO[Window(home).Property(LatestEpisode.3.EpisodeSeason),,x]$INFO[Window(home).Property(LatestEpisode.3.EpisodeNumber)] $INFO[Window(home).Property(LatestEpisode.3.EpisodeTitle)]</label>
+				<label2>$INFO[Window(home).Property(LatestEpisode.3.ShowTitle)]</label2>
+				<property name="rating">$INFO[Window(home).Property(LatestEpisode.3.Rating)]</property>
+				<visible>!IsEmpty(Window(home).Property(LatestEpisode.3.ShowTitle)) + ControlGroup(9120).HasFocus(91202)</visible>
+				<visible>Skin.HasSetting(UseKodiLibrary)</visible>
+			</item>
+			<item id="10">
+				<onclick>PreviousMenu</onclick>
+				<onclick>PlayMedia($INFO[Window(home).Property(LatestEpisode.4.Path)])</onclick>
+				<thumb>$INFO[Window(home).Property(LatestEpisode.4.Thumb)]</thumb>
+				<label>$INFO[Window(home).Property(LatestEpisode.4.EpisodeSeason),,x]$INFO[Window(home).Property(LatestEpisode.4.EpisodeNumber)] $INFO[Window(home).Property(LatestEpisode.4.EpisodeTitle)]</label>
+				<label2>$INFO[Window(home).Property(LatestEpisode.4.ShowTitle)]</label2>
+				<property name="rating">$INFO[Window(home).Property(LatestEpisode.4.Rating)]</property>
+				<visible>!IsEmpty(Window(home).Property(LatestEpisode.4.ShowTitle)) + ControlGroup(9120).HasFocus(91202)</visible>
+				<visible>Skin.HasSetting(UseKodiLibrary)</visible>
+			</item>
+			<item id="11">
+				<onclick>PreviousMenu</onclick>
+				<onclick>PlayMedia($INFO[Window(home).Property(LatestEpisode.5.Path)])</onclick>
+				<thumb>$INFO[Window(home).Property(LatestEpisode.5.Thumb)]</thumb>
+				<label>$INFO[Window(home).Property(LatestEpisode.5.EpisodeSeason),,x]$INFO[Window(home).Property(LatestEpisode.5.EpisodeNumber)] $INFO[Window(home).Property(LatestEpisode.5.EpisodeTitle)]</label>
+				<label2>$INFO[Window(home).Property(LatestEpisode.5.ShowTitle)]</label2>
+				<property name="rating">$INFO[Window(home).Property(LatestEpisode.5.Rating)]</property>
+				<visible>!IsEmpty(Window(home).Property(LatestEpisode.5.ShowTitle)) + ControlGroup(9120).HasFocus(91202)</visible>
+				<visible>Skin.HasSetting(UseKodiLibrary)</visible>
+			</item>
+			<item id="12">
+				<onclick>PreviousMenu</onclick>
+				<onclick>PlayMedia($INFO[Window(home).Property(LatestEpisode.6.Path)])</onclick>
+				<thumb>$INFO[Window(home).Property(LatestEpisode.6.Thumb)]</thumb>
+				<label>$INFO[Window(home).Property(LatestEpisode.6.EpisodeSeason),,x]$INFO[Window(home).Property(LatestEpisode.6.EpisodeNumber)] $INFO[Window(home).Property(LatestEpisode.6.EpisodeTitle)]</label>
+				<label2>$INFO[Window(home).Property(LatestEpisode.6.ShowTitle)]</label2>
+				<property name="rating">$INFO[Window(home).Property(LatestEpisode.6.Rating)]</property>
+				<visible>!IsEmpty(Window(home).Property(LatestEpisode.6.ShowTitle)) + ControlGroup(9120).HasFocus(91202)</visible>
+				<visible>Skin.HasSetting(UseKodiLibrary)</visible>
 			</item>
 			<item id="7">
 				<onclick>PreviousMenu</onclick>
@@ -744,6 +876,7 @@
 				<label2>$INFO[Window(home).Property(LatestUnplayedEpisodeMB3.1.ShowTitle)]</label2>
 				<property name="rating">$INFO[Window(home).Property(LatestUnplayedEpisodeMB3.1.Rating)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestUnplayedEpisodeMB3.1.Path)) + ControlGroup(9120).HasFocus(91202)</visible>
+				<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
 			</item>
 			<item id="8">
 				<onclick>PreviousMenu</onclick>
@@ -753,6 +886,7 @@
 				<label2>$INFO[Window(home).Property(LatestUnplayedEpisodeMB3.2.ShowTitle)]</label2>
 				<property name="rating">$INFO[Window(home).Property(LatestUnplayedEpisodeMB3.2.Rating)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestUnplayedEpisodeMB3.2.Path)) + ControlGroup(9120).HasFocus(91202)</visible>
+				<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
 			</item>
 			<item id="9">
 				<onclick>PreviousMenu</onclick>
@@ -762,6 +896,7 @@
 				<label2>$INFO[Window(home).Property(LatestUnplayedEpisodeMB3.3.ShowTitle)]</label2>
 				<property name="rating">$INFO[Window(home).Property(LatestUnplayedEpisodeMB3.3.Rating)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestUnplayedEpisodeMB3.3.Path)) + ControlGroup(9120).HasFocus(91202)</visible>
+				<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
 			</item>
 			<item id="10">
 				<onclick>PreviousMenu</onclick>
@@ -771,6 +906,7 @@
 				<label2>$INFO[Window(home).Property(LatestUnplayedEpisodeMB3.4.ShowTitle)]</label2>
 				<property name="rating">$INFO[Window(home).Property(LatestUnplayedEpisodeMB3.4.Rating)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestUnplayedEpisodeMB3.4.Path)) + ControlGroup(9120).HasFocus(91202)</visible>
+				<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
 			</item>
 			<item id="11">
 				<onclick>PreviousMenu</onclick>
@@ -780,6 +916,7 @@
 				<label2>$INFO[Window(home).Property(LatestUnplayedEpisodeMB3.5.ShowTitle)]</label2>
 				<property name="rating">$INFO[Window(home).Property(LatestUnplayedEpisodeMB3.5.Rating)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestUnplayedEpisodeMB3.5.Path)) + ControlGroup(9120).HasFocus(91202)</visible>
+				<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
 			</item>
 			<item id="12">
 				<onclick>PreviousMenu</onclick>
@@ -789,6 +926,7 @@
 				<label2>$INFO[Window(home).Property(LatestUnplayedEpisodeMB3.6.ShowTitle)]</label2>
 				<property name="rating">$INFO[Window(home).Property(LatestUnplayedEpisodeMB3.6.Rating)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestUnplayedEpisodeMB3.6.Path)) + ControlGroup(9120).HasFocus(91202)</visible>
+				<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
 			</item>
 			<item id="13">
 				<onclick>PlayList.Clear</onclick>

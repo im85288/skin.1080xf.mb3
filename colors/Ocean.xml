@@ -21,6 +21,8 @@
 	<color name="QuaternaryBG">01000000</color>
 	<color name="HomeBG">DD4bb4f6</color>
 	<color name="HomeTileOverlay">994bb4f6</color>
+	<color name="HomeTitleOverlay">DD4bb4f6</color>
+	
 	
 	<!--main colours-->
 	<color name="PrimaryM">FFFFFFFF</color>

@@ -79,8 +79,9 @@
 	<color name="TertiaryBG">FF444444</color>
 	<color name="QuaternaryBG">01000000</color>
 	<color name="HomeBG">DD111111</color>
-	<color name="HomeTileOverlay">AA222222</color>
-	<color name="HomeMenuOverlay">CC222222</color>
+	<color name="HomeTileOverlay">88333333</color>
+	<color name="HomeMenuOverlay">99333333</color>
+	<color name="HomeTitleOverlay">AA222222</color>
 	
 	<!-- Default Tile Colours -->
 	<color name="tilesearch">FF111111</color>

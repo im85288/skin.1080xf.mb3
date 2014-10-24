@@ -20,4 +20,6 @@
 	<color name="HomeBG">DD111111</color>
 	<color name="HomeTileOverlay">99222222</color>
 	<color name="HomeMenuOverlay">BB222222</color>
+	<color name="HomeTitleOverlay">DD333333</color>
+	
 </colors>

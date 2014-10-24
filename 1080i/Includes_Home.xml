@@ -156,8 +156,8 @@
 		<value condition="!Skin.HasSetting(ColourTiles)">tilesettings</value>
 	</variable>
 	<variable name="HomeTiles">
-	   <value condition="Skin.HasSetting(PlainTiles)">special://skin/extras/icons/tile-white.png</value>
-	   <value condition="!Skin.HasSetting(PlainTiles)">special://skin/extras/icons/tile-white-texture.png</value>
+		<value condition="Skin.HasSetting(PlainTiles)">special://skin/extras/icons/tile-white.png</value>
+		<value condition="!Skin.HasSetting(PlainTiles)">special://skin/extras/icons/tile-white-texture.png</value>
 	</variable>
 	<include name="HomeLabel">
 		<width min="0" max="500">auto</width>
@@ -1175,7 +1175,7 @@
 									<posy>241</posy>
 									<width>283</width>
 									<height>66</height>
-									<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+									<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -1253,7 +1253,7 @@
 										<posy>241</posy>
 										<width>283</width>
 										<height>66</height>
-										<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+										<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -1462,7 +1462,7 @@
 							<posy>492</posy>
 							<width>1020</width>
 							<height>80</height>
-							<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
+							<texture colordiffuse="HomeTitleOverlay">windows/common/white.png</texture>
 						</control>
 						<control type="group" id="5023">
 							<visible>!Control.IsVisible(5022) + [[stringcompare(Skin.String(HomeWidget.1.Type),service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running))] | [stringcompare(Skin.String(HomeWidget.1.Type),script.randomandlastitems) + IsEmpty(Window(Home).Property(HomeWidget1.Loaded))] | [!stringcompare(Skin.String(HomeWidget.1.Type),service.skin.widgets) + !stringcompare(Skin.String(HomeWidget.1.Type),script.randomandlastitems) + !IsEmpty(Window(Home).Property(extendedinfo_running))]]</visible>
@@ -1944,7 +1944,7 @@
 							<posy>492</posy>
 							<width>382</width>
 							<height>80</height>
-							<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
+							<texture colordiffuse="HomeTitleOverlay">windows/common/white.png</texture>
 						</control>
 						<control type="group" id="5033">
 							<visible>!Control.IsVisible(5032) + [[stringcompare(Skin.String(HomeWidget.2.Type),service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running))] | [stringcompare(Skin.String(HomeWidget.2.Type),script.randomandlastitems) + IsEmpty(Window(Home).Property(HomeWidget2.Loaded))] | [!stringcompare(Skin.String(HomeWidget.2.Type),service.skin.widgets) + !stringcompare(Skin.String(HomeWidget.2.Type),script.randomandlastitems) + !IsEmpty(Window(Home).Property(extendedinfo_running))]]</visible>
@@ -2148,7 +2148,7 @@
 										<posy>241</posy>
 										<width>283</width>
 										<height>66</height>
-										<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+										<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 									</control>
 									<control type="label">
 										<posx>24</posx>
@@ -2234,7 +2234,7 @@
 											<posy>241</posy>
 											<width>283</width>
 											<height>66</height>
-											<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+											<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 										</control>
 										<control type="label">
 											<posx>24</posx>
@@ -2512,7 +2512,7 @@
 							<posy>492</posy>
 							<width>1020</width>
 							<height>80</height>
-							<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
+							<texture colordiffuse="HomeTitleOverlay">windows/common/white.png</texture>
 						</control>
 						<control type="group" id="2023">
 							<visible>!Control.IsVisible(2022) + [[stringcompare(Skin.String(HomeWidget.3.Type),service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running))] | [stringcompare(Skin.String(HomeWidget.3.Type),script.randomandlastitems) + IsEmpty(Window(Home).Property(HomeWidget3.Loaded))] | [!stringcompare(Skin.String(HomeWidget.3.Type),service.skin.widgets) + !stringcompare(Skin.String(HomeWidget.3.Type),script.randomandlastitems) + !IsEmpty(Window(Home).Property(extendedinfo_running))]]</visible>
@@ -2834,7 +2834,7 @@
 										<posy>241</posy>
 										<width>283</width>
 										<height>66</height>
-										<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+										<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 									</control>
 									<control type="label">
 										<posx>24</posx>
@@ -2933,7 +2933,7 @@
 											<posy>241</posy>
 											<width>283</width>
 											<height>66</height>
-											<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+											<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 										</control>
 										<control type="label">
 											<posx>24</posx>
@@ -3077,7 +3077,7 @@
 										<posy>241</posy>
 										<width>283</width>
 										<height>66</height>
-										<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+										<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 									</control>
 									<control type="label">
 										<posx>24</posx>
@@ -3176,7 +3176,7 @@
 											<posy>241</posy>
 											<width>283</width>
 											<height>66</height>
-											<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+											<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 										</control>
 										<control type="label">
 											<posx>24</posx>
@@ -3417,7 +3417,7 @@
 							<posy>492</posy>
 							<width>1020</width>
 							<height>80</height>
-							<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
+							<texture colordiffuse="HomeTitleOverlay">windows/common/white.png</texture>
 						</control>
 						<control type="group" id="3023">
 							<visible>!Control.IsVisible(3022) + [[stringcompare(Skin.String(HomeWidget.4.Type),service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running))] | [stringcompare(Skin.String(HomeWidget.4.Type),script.randomandlastitems) + IsEmpty(Window(Home).Property(HomeWidget4.Loaded))] | [!stringcompare(Skin.String(HomeWidget.4.Type),service.skin.widgets) + !stringcompare(Skin.String(HomeWidget.4.Type),script.randomandlastitems) + !IsEmpty(Window(Home).Property(extendedinfo_running))]]</visible>
@@ -3721,7 +3721,7 @@
 										<posy>241</posy>
 										<width>283</width>
 										<height>66</height>
-										<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+										<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 									</control>
 									<control type="label">
 										<posx>24</posx>
@@ -3820,7 +3820,7 @@
 											<posy>241</posy>
 											<width>283</width>
 											<height>66</height>
-											<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+											<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 										</control>
 										<control type="label">
 											<posx>24</posx>
@@ -3964,7 +3964,7 @@
 										<posy>241</posy>
 										<width>283</width>
 										<height>66</height>
-										<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+										<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 									</control>
 									<control type="label">
 										<posx>24</posx>
@@ -4063,7 +4063,7 @@
 											<posy>241</posy>
 											<width>283</width>
 											<height>66</height>
-											<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+											<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 										</control>
 										<control type="label">
 											<posx>24</posx>
@@ -4291,7 +4291,7 @@
 							<posy>492</posy>
 							<width>1020</width>
 							<height>80</height>
-							<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
+							<texture colordiffuse="HomeTitleOverlay">windows/common/white.png</texture>
 						</control>
 						<control type="group" id="11023">
 							<visible>!Control.IsVisible(11022)</visible>
@@ -4465,7 +4465,7 @@
 										<posy>241</posy>
 										<width>283</width>
 										<height>66</height>
-										<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+										<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 									</control>
 									<control type="label">
 										<posx>24</posx>
@@ -4564,7 +4564,7 @@
 											<posy>241</posy>
 											<width>283</width>
 											<height>66</height>
-											<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+											<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 										</control>
 										<control type="label">
 											<posx>24</posx>
@@ -4703,7 +4703,7 @@
 										<posy>241</posy>
 										<width>283</width>
 										<height>66</height>
-										<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+										<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 									</control>
 									<control type="label">
 										<posx>24</posx>
@@ -4802,7 +4802,7 @@
 											<posy>241</posy>
 											<width>283</width>
 											<height>66</height>
-											<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+											<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 										</control>
 										<control type="label">
 											<posx>24</posx>
@@ -5041,7 +5041,7 @@
 							<posy>492</posy>
 							<width>1020</width>
 							<height>80</height>
-							<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
+							<texture colordiffuse="HomeTitleOverlay">windows/common/white.png</texture>
 						</control>
 						<control type="group" id="4023">
 							<visible>!Control.IsVisible(4022) + [[stringcompare(Skin.String(HomeWidget.5.Type),service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running))] | [stringcompare(Skin.String(HomeWidget.5.Type),script.randomandlastitems) + IsEmpty(Window(Home).Property(HomeWidget5.Loaded))] | [!stringcompare(Skin.String(HomeWidget.5.Type),service.skin.widgets) + !stringcompare(Skin.String(HomeWidget.5.Type),script.randomandlastitems) + !IsEmpty(Window(Home).Property(extendedinfo_running))]]</visible>
@@ -5246,7 +5246,7 @@
 										<posy>241</posy>
 										<width>283</width>
 										<height>66</height>
-										<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+										<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 									</control>
 									<control type="label">
 										<posx>24</posx>
@@ -5345,7 +5345,7 @@
 											<posy>241</posy>
 											<width>283</width>
 											<height>66</height>
-											<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+											<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 										</control>
 										<control type="label">
 											<posx>24</posx>
@@ -5514,7 +5514,7 @@
 										<posy>241</posy>
 										<width>283</width>
 										<height>66</height>
-										<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+										<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 									</control>
 									<control type="label">
 										<posx>24</posx>
@@ -5619,7 +5619,7 @@
 											<posy>241</posy>
 											<width>283</width>
 											<height>66</height>
-											<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+											<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 										</control>
 										<control type="label">
 											<posx>24</posx>
@@ -5850,7 +5850,7 @@
 										<posy>241</posy>
 										<width>283</width>
 										<height>66</height>
-										<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+										<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 									</control>
 									<control type="label">
 										<posx>24</posx>
@@ -5944,7 +5944,7 @@
 											<posy>241</posy>
 											<width>283</width>
 											<height>66</height>
-											<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+											<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 										</control>
 										<control type="label">
 											<posx>24</posx>
@@ -6244,6 +6244,16 @@
 							<height>582</height>
 							<texture border="7">windows/home/tile.png</texture>
 						</control>
+						<control type="image">
+							<posx>332</posx>
+							<posy>574</posy>
+							<width>360</width>
+							<height>50</height>
+							<aspectratio align="center" aligny="top">keep</aspectratio>
+							<texture>$INFO[Window(Weather).Property(WeatherProviderLogo)]</texture>
+							<visible>Weather.IsFetched + Skin.HasSetting(HomeLogo.Enabled)</visible>
+						    <visible>[Container(701).HasFocus(0) | Container(701).HasFocus(1)] + ![Control.HasFocus(725) + Container(20).HasFocus(7)]</visible>
+						</control>
 						<control type="label">
 							<posx>0</posx>
 							<posy>574</posy>
@@ -6255,7 +6265,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
-							<label>[UPPERCASE][B]$INFO[Window(Weather).Property(WeatherProvider),$LOCALIZE[21870]: ,][/B]$INFO[Window(Weather).Property(Updated), (,)][/UPPERCASE]</label>
+							<label>[UPPERCASE][B]$INFO[Window(Weather).Property(WeatherProvider),$LOCALIZE[21870]: ,][/UPPERCASE][/B]</label>
 						</control>
 						<control type="group" id="7023">
 							<visible>!Weather.IsFetched</visible>
@@ -6283,7 +6293,7 @@
 								<posy>508</posy>
 								<width>1020</width>
 								<height>64</height>
-								<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+								<texture colordiffuse="HomeTitleOverlay">windows/common/white.png</texture>
 							</control>
 							<control type="label">
 								<posx>20</posx>
@@ -6320,7 +6330,7 @@
 								<posy>385</posy>
 								<width>1020</width>
 								<height>187</height>
-								<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
+								<texture colordiffuse="HomeTitleOverlay">windows/common/white.png</texture>
 							</control>
 							<control type="group">
 								<posx>30</posx>
@@ -6893,7 +6903,7 @@
 									<posy>241</posy>
 									<width>283</width>
 									<height>66</height>
-									<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+									<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -6971,7 +6981,7 @@
 										<posy>241</posy>
 										<width>283</width>
 										<height>66</height>
-										<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+										<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -7106,7 +7116,7 @@
 									<posy>241</posy>
 									<width>246</width>
 									<height>66</height>
-									<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+									<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 								</control>
 								<control type="image">
 									<posx>5</posx>
@@ -7184,7 +7194,7 @@
 										<posy>241</posy>
 										<width>246</width>
 										<height>66</height>
-										<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
+										<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
 									</control>
 									<control type="image">
 										<posx>5</posx>

@@ -710,39 +710,39 @@
 	<!-- Direct compare to the $ADDON[...] strings doesn't work -->
 	<include name="MoonPhaseDummyLabels">
 		<control type="label" id="32501">
-			<label>$ADDON[weather.wunderground 32501]</label>
+			<label>New Moon</label>
 			<visible>false</visible>
 		</control>
 		<control type="label" id="32502">
-			<label>$ADDON[weather.wunderground 32502]</label>
+			<label>Waxing Crescent</label>
 			<visible>false</visible>
 		</control>
 		<control type="label" id="32503">
-			<label>$ADDON[weather.wunderground 32503]</label>
+			<label>First Quarter</label>
 			<visible>false</visible>
 		</control>
 		<control type="label" id="32504">
-			<label>$ADDON[weather.wunderground 32504]</label>
+			<label>Waxing Gibbous</label>
 			<visible>false</visible>
 		</control>
 		<control type="label" id="32505">
-			<label>$ADDON[weather.wunderground 32505]</label>
+			<label>Full Moon</label>
 			<visible>false</visible>
 		</control>
 		<control type="label" id="32506">
-			<label>$ADDON[weather.wunderground 32506]</label>
+			<label>Waning Gibbous</label>
 			<visible>false</visible>
 		</control>
 		<control type="label" id="32507">
-			<label>$ADDON[weather.wunderground 32507]</label>
+			<label>Last Quarter</label>
 			<visible>false</visible>
 		</control>
 		<control type="label" id="32508">
-			<label>$ADDON[weather.wunderground 32508]</label>
+			<label>Waning Crescent</label>
 			<visible>false</visible>
 		</control>
 	</include>
-	<include name="WeatherWunderground">
+	<include name="WeatherFanart">
 		<control type="group">
 			<posx>1745</posx>
 			<posy>26</posy>

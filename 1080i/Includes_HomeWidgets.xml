@@ -101,6 +101,9 @@
 		<include condition="stringcompare(Skin.String(HomeWidget.5.Type),service.skin.widgets.recommended)">HomeWidget.5.Widgets.Recommended</include>
 		<include condition="stringcompare(Skin.String(HomeWidget.5.Type),script.randomandlastitems) + stringcompare(Skin.String(HomeWidget.5.SubType),Music)">HomeWidget.5.Playlist.Music</include>
 	</include>
+	<include name="HomeWidget.6">
+		<include condition="!IsEmpty(Window(weather).Property(Map.IsFetched))">HomeWidget.6.Maps</include>
+	</include>
 	<!-- =============== -->
 	<!-- Widget 1 (Home) -->
 	<!-- =============== -->
@@ -7855,6 +7858,48 @@
 			<label2>$INFO[Window.Property(HomeWidget5.10.Artist)]</label2>
 			<property name="Play">$INFO[Window.Property(HomeWidget5.10.Play)]</property>
 			<visible>!IsEmpty(Window.Property(HomeWidget5.10.Title))</visible>
+		</item>
+	</include>
+	<include name="HomeWidget.6.Maps">
+		<item id="1">
+			<label>$INFO[Window(weather).Property(Map.1.Heading)]</label>
+			<label2>$INFO[Window(weather).Property(Map.1.Legend)]</label2>
+			<icon>$INFO[Window(weather).Property(Map.1.Area)]</icon>
+			<property name="Layer">$INFO[Window(weather).Property(Map.1.Layer)]</property>
+			<onclick>noop</onclick>
+			<visible>Weather.IsFetched + !IsEmpty(Window(weather).Property(Map.1.Area)) + !IsEmpty(Window(weather).Property(Map.IsFetched))</visible>
+		</item>
+		<item id="2">
+			<label>$INFO[Window(weather).Property(Map.2.Heading)]</label>
+			<label2>$INFO[Window(weather).Property(Map.2.Legend)]</label2>
+			<icon>$INFO[Window(weather).Property(Map.2.Area)]</icon>
+			<property name="Layer">$INFO[Window(weather).Property(Map.2.Layer)]</property>
+			<onclick>noop</onclick>
+			<visible>Weather.IsFetched + !IsEmpty(Window(weather).Property(Map.2.Area)) + !IsEmpty(Window(weather).Property(Map.IsFetched))</visible>
+		</item>
+		<item id="3">
+			<label>$INFO[Window(weather).Property(Map.3.Heading)]</label>
+			<label2>$INFO[Window(weather).Property(Map.3.Legend)]</label2>
+			<icon>$INFO[Window(weather).Property(Map.3.Area)]</icon>
+			<property name="Layer">$INFO[Window(weather).Property(Map.3.Layer)]</property>
+			<onclick>noop</onclick>
+			<visible>Weather.IsFetched + !IsEmpty(Window(weather).Property(Map.3.Area)) + !IsEmpty(Window(weather).Property(Map.IsFetched))</visible>
+		</item>
+		<item id="4">
+			<label>$INFO[Window(weather).Property(Map.4.Heading)]</label>
+			<label2>$INFO[Window(weather).Property(Map.4.Legend)]</label2>
+			<icon>$INFO[Window(weather).Property(Map.4.Area)]</icon>
+			<property name="Layer">$INFO[Window(weather).Property(Map.4.Layer)]</property>
+			<onclick>noop</onclick>
+			<visible>Weather.IsFetched + !IsEmpty(Window(weather).Property(Map.4.Area)) + !IsEmpty(Window(weather).Property(Map.IsFetched))</visible>
+		</item>
+		<item id="5">
+			<label>$INFO[Window(weather).Property(Map.5.Heading)]</label>
+			<label2>$INFO[Window(weather).Property(Map.5.Legend)]</label2>
+			<icon>$INFO[Window(weather).Property(Map.5.Area)]</icon>
+			<property name="Layer">$INFO[Window(weather).Property(Map.5.Layer)]</property>
+			<onclick>noop</onclick>
+			<visible>Weather.IsFetched + !IsEmpty(Window(weather).Property(Map.5.Area)) + !IsEmpty(Window(weather).Property(Map.IsFetched))</visible>
 		</item>
 	</include>
 </includes>

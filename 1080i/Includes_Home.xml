@@ -524,11 +524,11 @@
 				<effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
 				<effect type="slide" start="0,0" end="0,-75" time="300" tween="sine" easing="out" />
 			</animation>
-			<animation type="Conditional" condition="!Window.IsActive(3020) + !Window.IsActive(3021) + !Window.IsActive(3022) + !Window.IsActive(7020) + !Window.IsActive(7021) + !Window.IsActive(7022)">
+			<animation type="Conditional" condition="!Window.IsActive(3020) + !Window.IsActive(3021) + !Window.IsActive(3022) + !Window.IsActive(3026) + !Window.IsActive(7020) + !Window.IsActive(7021) + !Window.IsActive(7022)">
 				<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="200" />
 				<effect type="zoom" start="100,229,1720,1" end="100,170,1720,70" tween="sine" easing="out" time="200" />
 			</animation>
-			<animation type="Conditional" condition="Window.IsActive(3020) | Window.IsActive(3021) | Window.IsActive(3022) | Window.IsActive(7020) | Window.IsActive(7021) | Window.IsActive(7022)">
+			<animation type="Conditional" condition="Window.IsActive(3020) | Window.IsActive(3021) | Window.IsActive(3022) | Window.IsActive(3026) | Window.IsActive(7020) | Window.IsActive(7021) | Window.IsActive(7022)">
 				<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="200" />
 				<effect type="zoom" start="100,170,1720,70" end="100,229,1720,1" tween="sine" easing="out" time="200" />
 			</animation>
@@ -788,6 +788,34 @@
 				<animation effect="zoom" start="100" end="80" time="150" tween="sine" easing="inout" center="auto" condition="!Control.HasFocus(725)">Conditional</animation>
 				<visible>!Skin.HasSetting(HomeWeather)</visible>
 				<visible>[Control.HasFocus(725) + Container(20).HasFocus(7)]</visible>
+			</control>
+			<control type="group">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>-50</width>
+				<height>100</height>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="65,50" condition="!Control.HasFocus(825)">Conditional</animation>
+				<visible>System.HasAddon(service.openelec.settings) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture colordiffuse="PrimaryT">windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(825) + Container(20).HasFocus(8)]">Conditional</animation>
+					<colordiffuse>Mod_Tags</colordiffuse>
+					<visible>![Control.HasFocus(825) + Container(20).HasFocus(8)]</visible>
+				</control>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(825) + Container(20).HasFocus(8)]">Conditional</animation>
+					<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
+					<visible>[Control.HasFocus(825) + Container(20).HasFocus(8)]</visible>
+				</control>
 			</control>
 			<control type="image">
 				<description>Settings</description>
@@ -1886,6 +1914,8 @@
 							<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMusic)">401</onright>
 							<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePrograms)">601</onright>
 							<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeWeather)">701</onright>
+							<onright condition="IsEmpty(Window(weather).Property(Map.IsFetched))">ClearProperty(ShowMaps)</onright>
+							<onright condition="!IsEmpty(Window(weather).Property(Map.IsFetched))">SetProperty(ShowMaps,Yes)</onright>
 							<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeWeather)">801</onright>
 							<onright>Control.Move(20,1)</onright>
 							<onclick condition="System.HasAddon(service.skin.widgets)">$INFO[Container(5032).ListItem.Property(Play)]</onclick>
@@ -3036,6 +3066,8 @@
 						<onright condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeChannels) + !Skin.HasSetting(HomeMusic)">401</onright>
 						<onright condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePrograms)">601</onright>
 						<onright condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeWeather)">701</onright>
+						<onright condition="IsEmpty(Window(weather).Property(Map.IsFetched))">ClearProperty(ShowMaps)</onright>
+						<onright condition="!IsEmpty(Window(weather).Property(Map.IsFetched))">SetProperty(ShowMaps,Yes)</onright>
 						<onright condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeWeather)">801</onright>
 						<onup>225</onup>
 						<ondown>80</ondown>
@@ -3923,6 +3955,8 @@
 						<onright condition="Skin.HasSetting(HomeChannels) + !Skin.HasSetting(HomeMusic)">401</onright>
 						<onright condition="Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePrograms)">601</onright>
 						<onright condition="Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeWeather)">701</onright>
+						<onright condition="IsEmpty(Window(weather).Property(Map.IsFetched))">ClearProperty(ShowMaps)</onright>
+						<onright condition="!IsEmpty(Window(weather).Property(Map.IsFetched))">SetProperty(ShowMaps,Yes)</onright>
 						<onright condition="Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeWeather)">801</onright>
 						<onup>325</onup>
 						<ondown>80</ondown>
@@ -4664,6 +4698,8 @@
 						<onright condition="!Skin.HasSetting(HomeMusic)">401</onright>
 						<onright condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePrograms)">601</onright>
 						<onright condition="Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeWeather)">701</onright>
+						<onright condition="IsEmpty(Window(weather).Property(Map.IsFetched))">ClearProperty(ShowMaps)</onright>
+						<onright condition="!IsEmpty(Window(weather).Property(Map.IsFetched))">SetProperty(ShowMaps,Yes)</onright>
 						<onright condition="Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeWeather)">801</onright>
 						<onup>1125</onup>
 						<ondown>80</ondown>
@@ -5472,6 +5508,8 @@
 						<onright>Control.Move(20,1)</onright>
 						<onright condition="!Skin.HasSetting(HomePrograms)">601</onright>
 						<onright condition="Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeWeather)">701</onright>
+						<onright condition="IsEmpty(Window(weather).Property(Map.IsFetched))">ClearProperty(ShowMaps)</onright>
+						<onright condition="!IsEmpty(Window(weather).Property(Map.IsFetched))">SetProperty(ShowMaps,Yes)</onright>
 						<onright condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeWeather)">801</onright>
 						<onup>425</onup>
 						<ondown>80</ondown>
@@ -5810,6 +5848,8 @@
 						<onright>CancelAlarm(HomeTileMove,true)</onright>
 						<onright>Control.Move(20,1)</onright>
 						<onright condition="!Skin.HasSetting(HomeWeather)">701</onright>
+						<onright condition="IsEmpty(Window(weather).Property(Map.IsFetched))">ClearProperty(ShowMaps)</onright>
+						<onright condition="!IsEmpty(Window(weather).Property(Map.IsFetched))">SetProperty(ShowMaps,Yes)</onright>
 						<onright condition="Skin.HasSetting(HomeWeather)">801</onright>
 						<onup>625</onup>
 						<ondown>80</ondown>
@@ -6192,6 +6232,8 @@
 					<onclick condition="!IsEmpty(Weather.Plugin)">ActivateWindow(weather)</onclick>
 					<onclick condition="IsEmpty(Weather.Plugin)">ActivateWindow(weathersettings)</onclick>
 					<onup>80</onup>
+					<ondown condition="IsEmpty(Window(weather).Property(Map.IsFetched))">ClearProperty(ShowMaps)</ondown>
+					<ondown condition="!IsEmpty(Window(weather).Property(Map.IsFetched))">SetProperty(ShowMaps,Yes)</ondown>
 					<ondown>701</ondown>
 				</control>
 				<control type="group" id="750">
@@ -6243,16 +6285,6 @@
 							<width>1030</width>
 							<height>582</height>
 							<texture border="7">windows/home/tile.png</texture>
-						</control>
-						<control type="image">
-							<posx>332</posx>
-							<posy>574</posy>
-							<width>360</width>
-							<height>50</height>
-							<aspectratio align="center" aligny="top">keep</aspectratio>
-							<texture>$INFO[Window(Weather).Property(WeatherProviderLogo)]</texture>
-							<visible>Weather.IsFetched + Skin.HasSetting(HomeLogo.Enabled)</visible>
-						    <visible>[Container(701).HasFocus(0) | Container(701).HasFocus(1)] + ![Control.HasFocus(725) + Container(20).HasFocus(7)]</visible>
 						</control>
 						<control type="label">
 							<posx>0</posx>
@@ -6310,6 +6342,7 @@
 						</control>
 						<control type="group">
 							<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir)) + Weather.IsFetched</visible>
+							<visible>IsEmpty(Window.Property(ShowMaps))</visible>
 							<include>visiblehidefadeinfo</include>
 							<control type="multiimage">
 								<width>1020</width>
@@ -6401,6 +6434,239 @@
 										<label>$INFO[Window(Weather).Property(Current.Humidity)]</label>
 										<textcolor>PrimaryT</textcolor>
 									</control>
+								</control>
+							</control>
+						</control>
+						<control type="group" id="702">
+							<description>maps</description>
+							<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir)) + Weather.IsFetched + !IsEmpty(Window(weather).Property(Map.IsFetched))</visible>
+							<visible>!IsEmpty(Window.Property(ShowMaps))</visible>
+							<control type="button" id="7021">
+								<onfocus>CancelAlarm(HomeTileMove,true)</onfocus>
+								<onup>AlarmClock(HomeTileMove,Control.Move(7022,1),00:07,silent,loop)</onup>
+								<onup>725</onup>
+								<onup>ClearProperty(ShowMaps)</onup>
+								<ondown>Control.Move(7022,1)</ondown>
+								<onleft>AlarmClock(HomeTileMove,Control.Move(7022,1),00:07,silent,loop)</onleft>
+								<onleft>701</onleft>
+								<onright>AlarmClock(HomeTileMove,Control.Move(7022,1),00:07,silent,loop)</onright>
+								<onright>Control.Move(20,1)</onright>
+								<onright>801</onright>
+								<onright>ClearProperty(ShowMaps)</onright>
+							</control>
+							<control type="image">
+								<posx>-5</posx>
+								<posy>-5</posy>
+								<width>1030</width>
+								<height>582</height>
+								<texture border="7">windows/home/tile.png</texture>
+							</control>
+							<control type="wraplist" id="7022">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1020</width>
+								<height>572</height>
+								<onup>725</onup>
+								<ondown>80</ondown>
+								<viewtype label="List">List</viewtype>
+								<scrolltime tween="cubic" easing="out">800</scrolltime>
+								<orientation>horizontal</orientation>
+								<preloaditems>2</preloaditems>
+								<pagecontrol>7024</pagecontrol>
+								<visible allowhiddenfocus="true">IntegerGreaterThan(Container(7022).NumItems,0)</visible>
+								<include>visiblehidefadeinfodelayvisible</include>
+								<itemlayout width="1020" height="572">
+									<control type="image">
+										<posx>0</posx>
+										<posy>0</posy>
+										<width>1020</width>
+										<height>572</height>
+										<aspectratio>stretch</aspectratio>
+										<texture background="true" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.Icon]</texture>
+									</control>
+									<control type="image">
+										<posx>0</posx>
+										<posy>0</posy>
+										<width>1020</width>
+										<height>572</height>
+										<aspectratio>stretch</aspectratio>
+										<texture background="true" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.Property(Layer)]</texture>
+										<colordiffuse>70FFFFFF</colordiffuse>
+									</control>
+									<control type="image">
+										<description>legend image</description>
+										<left>590</left>
+										<top>0</top>
+										<width>424</width>
+										<height>55</height>
+										<texture>$INFO[ListItem.Label2]</texture>
+									</control>
+								</itemlayout>
+								<focusedlayout width="1020" height="572">
+									<control type="image">
+										<posx>0</posx>
+										<posy>0</posy>
+										<width>1020</width>
+										<height>572</height>
+										<aspectratio>stretch</aspectratio>
+										<texture background="true" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.Icon]</texture>
+									</control>
+									<control type="image">
+										<posx>0</posx>
+										<posy>0</posy>
+										<width>1020</width>
+										<height>572</height>
+										<aspectratio>stretch</aspectratio>
+										<texture background="true" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.Property(Layer)]</texture>
+										<colordiffuse>70FFFFFF</colordiffuse>
+									</control>
+									<control type="image">
+										<description>legend image</description>
+										<left>590</left>
+										<top>0</top>
+										<width>424</width>
+										<height>55</height>
+										<texture>$INFO[ListItem.Label2]</texture>
+									</control>
+								</focusedlayout>
+								<content>
+									<include>HomeWidget.6</include>
+								</content>
+							</control>
+							<control type="image">
+								<description>Title overlay</description>
+								<posx>0</posx>
+								<posy>492</posy>
+								<width>1020</width>
+								<height>80</height>
+								<texture colordiffuse="HomeTitleOverlay">windows/common/white.png</texture>
+							</control>
+							<control type="group">
+								<visible>!ControlGroup(702).HasFocus + [IsEmpty(Window.Property(Alerts.IsFetched) | [!IsEmpty(Window.Property(Alerts.IsFetched) + StringCompare(Window.Property(Alerts.Count),0)]]</visible>
+								<control type="textbox">
+									<posx>10</posx>
+									<posy>487</posy>
+									<width>1006</width>
+									<height>79</height>
+									<label>[B]$INFO[Container(7022).ListItem.Label][/B][CR]$INFO[Window(Weather).Property(Location),, - ]$INFO[Window(Weather).Property(Current.Condition),, - ]$INFO[Window(Weather).Property(Today.Sunrise),$LOCALIZE[33027]: , - ]$INFO[Window(Weather).Property(Today.Sunset),$LOCALIZE[33028]: , - ][B]$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits][/B]</label>
+									<font>Font-Condensed-S29</font>
+									<textcolor>PrimaryOSD</textcolor>
+									<align>left</align>
+									<aligny>top</aligny>
+									<autoscroll delay="6000" time="2900" repeat="5000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
+									<visible>Control.IsVisible(7022)</visible>
+									<animation effect="fade" time="800" start="0" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+									<animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+								</control>
+							</control>
+							<control type="group">
+								<visible>!ControlGroup(702).HasFocus + !IsEmpty(Window.Property(Alerts.IsFetched)) + !StringCompare(Window.Property(Alerts.Count),0)</visible>
+								<control type="textbox">
+									<posx>10</posx>
+									<posy>487</posy>
+									<width>1006</width>
+									<height>79</height>
+									<label>[UPPERCASE][COLOR red]$LOCALIZE[33050][/COLOR][/UPPERCASE][CR]$INFO[Window.Property(Alerts)][CR][B]$INFO[Container(7022).ListItem.Label][/B]</label>
+									<font>Font-Condensed-S29</font>
+									<textcolor>PrimaryOSD</textcolor>
+									<align>left</align>
+									<aligny>top</aligny>
+									<autoscroll delay="6000" time="2900" repeat="5000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
+									<visible>Control.IsVisible(7022)</visible>
+									<animation effect="fade" time="800" start="0" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+									<animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+								</control>
+							</control>
+							<control type="group">
+								<visible>ControlGroup(702).HasFocus + [IsEmpty(Window.Property(Alerts.IsFetched) | [!IsEmpty(Window.Property(Alerts.IsFetched) + StringCompare(Window.Property(Alerts.Count),0)]]</visible>
+								<control type="image">
+									<posx>332</posx>
+									<posy>574</posy>
+									<width>360</width>
+									<height>50</height>
+									<aspectratio align="center" aligny="top">keep</aspectratio>
+									<texture>$INFO[Window(Weather).Property(WeatherProviderLogo)]</texture>
+									<visible>Weather.IsFetched + Skin.HasSetting(HomeLogo.Enabled)</visible>
+								</control>
+								<control type="textbox">
+									<posx>10</posx>
+									<posy>487</posy>
+									<width>1006</width>
+									<height>79</height>
+									<label>[B]$INFO[Container(7022).ListItem.Label][/B][CR]$INFO[Window(Weather).Property(Location),, - ]$INFO[Window(Weather).Property(Current.Condition),, - ]$INFO[Window(Weather).Property(Today.Sunrise),$LOCALIZE[33027]: , - ]$INFO[Window(Weather).Property(Today.Sunset),$LOCALIZE[33028]: , - ][B]$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits][/B]</label>
+									<font>Font-Condensed-S29</font>
+									<textcolor>PrimaryOSD</textcolor>
+									<align>left</align>
+									<aligny>top</aligny>
+									<autoscroll delay="6000" time="2900" repeat="5000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
+									<visible>Control.IsVisible(7022)</visible>
+									<animation effect="fade" time="800" start="0" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+									<animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+								</control>
+							</control>
+							<control type="group">
+								<visible>ControlGroup(702).HasFocus + !IsEmpty(Window.Property(Alerts.IsFetched)) + !StringCompare(Window.Property(Alerts.Count),0)</visible>
+								<control type="image">
+									<posx>332</posx>
+									<posy>574</posy>
+									<width>360</width>
+									<height>50</height>
+									<aspectratio align="center" aligny="top">keep</aspectratio>
+									<texture>$INFO[Window(Weather).Property(WeatherProviderLogo)]</texture>
+									<visible>Weather.IsFetched + Skin.HasSetting(HomeLogo.Enabled)</visible>
+								</control>
+								<control type="textbox">
+									<posx>10</posx>
+									<posy>487</posy>
+									<width>1006</width>
+									<height>79</height>
+									<label>[UPPERCASE][COLOR red]$LOCALIZE[33050][/COLOR][/UPPERCASE][CR]$INFO[Window.Property(Alerts)][CR][B]$INFO[Container(7022).ListItem.Label][/B]</label>
+									<font>Font-Condensed-S29</font>
+									<textcolor>PrimaryOSD</textcolor>
+									<align>left</align>
+									<aligny>top</aligny>
+									<autoscroll delay="6000" time="2900" repeat="5000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
+									<visible>Control.IsVisible(7022)</visible>
+									<animation effect="fade" time="800" start="0" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+									<animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+								</control>
+							</control>
+							<control type="group">
+								<visible>Control.IsVisible(7022)</visible>
+								<include>visiblehidefadeinfodelayvisible</include>
+								<control type="image">
+									<description>Scrollbar background</description>
+									<posx>911</posx>
+									<posy>585</posy>
+									<width>96</width>
+									<height>6</height>
+									<texture border="1">views/other/scrollbar-sq.png</texture>
+									<colordiffuse>PrimaryT</colordiffuse>
+								</control>
+								<control type="scrollbar" id="7024">
+									<description>Scrollbar</description>
+									<posx>911</posx>
+									<posy>585</posy>
+									<width>96</width>
+									<height>6</height>
+									<orientation>horizontal</orientation>
+									<texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
+									<texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+									<showonepage>false</showonepage>
+									<visible>!Skin.HasSetting(ColourFocus)</visible>
+								</control>
+								<control type="scrollbar" id="7024">
+									<description>Scrollbar</description>
+									<posx>911</posx>
+									<posy>585</posy>
+									<width>96</width>
+									<height>6</height>
+									<orientation>horizontal</orientation>
+									<texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
+									<texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+									<showonepage>false</showonepage>
+									<visible>Skin.HasSetting(ColourFocus)</visible>
+									<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
 								</control>
 							</control>
 						</control>
@@ -6870,6 +7136,7 @@
 						<width>331</width>
 						<height>620</height>
 						<onleft>Control.Move(20,-1)</onleft>
+						<onleft>ClearProperty(ShowMaps)</onleft>
 						<onleft condition="Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onleft>
 						<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomeChannels)">AlarmClock(HomeTileMove,Control.Move(11022,1),00:07,silent,loop)</onleft>
 						<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels) + !Skin.HasSetting(HomeTVShows)">AlarmClock(HomeTileMove,Control.Move(3022,1),00:07,silent,loop)</onleft>
@@ -6882,9 +7149,11 @@
 						<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels) + !Skin.HasSetting(HomeTVShows)">303</onleft>
 						<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">203</onleft>
 						<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">503</onleft>
-						<onright>Control.Move(20,1)</onright>
-						<onright>801</onright>
+						<onright condition="IsEmpty(Window(weather).Property(Map.IsFetched))">Control.Move(20,1)</onright>
+						<onright condition="IsEmpty(Window(weather).Property(Map.IsFetched))">801</onright>
+						<onright condition="!IsEmpty(Window(weather).Property(Map.IsFetched))">702</onright>
 						<onup>725</onup>
+						<onup>ClearProperty(ShowMaps)</onup>
 						<ondown>80</ondown>
 						<scrolltime>0</scrolltime>
 						<itemlayout width="289" height="289">
@@ -7023,6 +7292,37 @@
 							</item>
 						</content>
 					</control>
+					<control type="image">
+						<posx>269</posx>
+						<posy>-21</posy>
+						<width>1049</width>
+						<height>614</height>
+						<texture border="40">windows/home/tile-fo.png</texture>
+						<animation type="Visible">
+							<effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+						</animation>
+						<animation type="Hidden">
+							<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+						</animation>
+						<visible>ControlGroup(702).HasFocus</visible>
+						<visible>!Skin.HasSetting(ColourFocus)</visible>
+					</control>
+					<control type="image">
+						<posx>269</posx>
+						<posy>-21</posy>
+						<width>1049</width>
+						<height>614</height>
+						<texture border="40">windows/home/tile-fo.png</texture>
+						<animation type="Visible">
+							<effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+						</animation>
+						<animation type="Hidden">
+							<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+						</animation>
+						<visible>ControlGroup(702).HasFocus</visible>
+						<visible>Skin.HasSetting(ColourFocus)</visible>
+						<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
+					</control>
 				</control>
 			</control>
 			<control type="group" id="800">
@@ -7049,7 +7349,8 @@
 					<onleft condition="Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">525</onleft>
 					<onright condition="!Window.IsVisible(3009)">SetProperty(BounceRight,1,Home)</onright>
 					<onclick>ActivateWindow(4)</onclick>
-					<onup>80</onup>
+					<onup condition="!System.HasAddon(service.openelec.settings)">80</onup>
+					<onup condition="System.HasAddon(service.openelec.settings)">ActivateWindow(3026)</onup>
 					<ondown>801</ondown>
 				</control>
 				<control type="group" id="850">
@@ -7090,6 +7391,8 @@
 						<height>620</height>
 						<onleft>Control.Move(20,-1)</onleft>
 						<onleft condition="!Skin.HasSetting(HomeWeather)">701</onleft>
+						<onleft condition="IsEmpty(Window(weather).Property(Map.IsFetched))">ClearProperty(ShowMaps)</onleft>
+						<onleft condition="!IsEmpty(Window(weather).Property(Map.IsFetched))">SetProperty(ShowMaps,Yes)</onleft>
 						<onleft condition="Skin.HasSetting(HomeWeather) + !Skin.HasSetting(HomePrograms)">601</onleft>
 						<onleft condition="Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeMusic)">403</onleft>
 						<onleft condition="Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomeChannels)">1103</onleft>

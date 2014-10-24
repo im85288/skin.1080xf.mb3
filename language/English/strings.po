@@ -1218,3 +1218,7 @@ msgstr ""
 msgctxt "#49263"
 msgid "Home Tiles"
 msgstr ""
+
+msgctxt "#49264"
+msgid "14 day forecast"
+msgstr ""

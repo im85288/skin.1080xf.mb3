@@ -24,6 +24,7 @@
 	<onload condition="IsEmpty(Skin.String(tileweathercolor.name))">Skin.SetString(tileweathercolor.name,tileweather)</onload>
 	<onload condition="IsEmpty(Skin.String(tilesettingscolor.name))">Skin.SetString(tilesettingscolor.name,tilesettings)</onload>
 	<onload condition="IsEmpty(Skin.String(tilesearchcolor.name))">Skin.SetString(tilesearchcolor.name,tilesearch)</onload>
+	<onload>ClearProperty(ShowMaps)</onload>
 	<onunload>CancelAlarm(HomeTileMove,true)</onunload>
 	<onunload>CancelAlarm(HomeTileMoveTwo,true)</onunload>
 	<onunload>CancelAlarm(HomeTileMoveThree,true)</onunload>

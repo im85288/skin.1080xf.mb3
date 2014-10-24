@@ -1032,7 +1032,7 @@
 					<posy>-50</posy>
 					<width>300</width>
 					<height>40</height>
-					<label>$LOCALIZE[41695]</label>
+					<label>$LOCALIZE[49264]</label>
 					<textcolor>PrimaryT</textcolor>
 					<focusedcolor>$VAR[FocusModColourVar]</focusedcolor>
 					<font>Font-Condensed-S36</font>
@@ -1071,7 +1071,7 @@
 							<height>320</height>
 							<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
 							<texturenofocus colordiffuse="PrimaryBG">windows/common/white.png</texturenofocus>
-							<onleft>220</onleft>
+							<onleft>224</onleft>
 							<onright>212</onright>
 							<onup>201</onup>
 							<ondown>230</ondown>
@@ -2388,7 +2388,7 @@
 							<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
 							<texturenofocus colordiffuse="PrimaryBG">windows/common/white.png</texturenofocus>
 							<onleft>219</onleft>
-							<onright>211</onright>
+							<onright>221</onright>
 							<onup>201</onup>
 							<ondown>230</ondown>
 							<animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(220)">Conditional</animation>
@@ -2512,6 +2512,594 @@
 								<height>51</height>
 								<font>Font-Condensed-S36</font>
 								<label>$INFO[Window.Property(Daily.10.WindSpeed)]</label>
+								<textcolor>PrimaryT</textcolor>
+							</control>
+						</control>
+					</control>
+					<control type="group" id="2111">
+						<description>Day 11</description>
+						<animation effect="fade" start="0" end="100" delay="750">WindowOpen</animation>
+						<width>372</width>
+						<control type="image">
+							<posx>-5</posx>
+							<posy>568</posy>
+							<height>50</height>
+							<width>372</width>
+							<texture>dialogs/shutdown/shadow.png</texture>
+						</control>
+						<control type="button" id="221">
+							<posx>-5</posx>
+							<posy>256</posy>
+							<width>362</width>
+							<height>320</height>
+							<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+							<texturenofocus colordiffuse="PrimaryBG">windows/common/white.png</texturenofocus>
+							<onleft>220</onleft>
+							<onright>222</onright>
+							<onup>201</onup>
+							<ondown>230</ondown>
+							<animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(221)">Conditional</animation>
+						</control>
+						<control type="multiimage">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>352</width>
+							<height>260</height>
+							<timeperimage>999999999999999</timeperimage>
+							<randomize>true</randomize>
+							<fadetime>600</fadetime>
+							<loop>yes</loop>
+							<include>Animation_FanartFade</include>
+							<imagepath background="true">$INFO[Skin.String(WeatherFanartDir)]$INFO[Window.Property(Daily.11.FanartCode)]</imagepath>
+							<aspectratio align="center">scale</aspectratio>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>184</posy>
+							<width>352</width>
+							<height>76</height>
+							<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+						</control>
+						<control type="button">
+							<description>current temp value</description>
+							<posx>27</posx>
+							<posy>184</posy>
+							<width>300</width>
+							<height>76</height>
+							<font>Font-Condensed-S38</font>
+							<label>[B]$INFO[Window.Property(Daily.11.LongDay)][/B]</label>
+							<label2>$INFO[Window.Property(Daily.11.ShortDate)]</label2>
+							<disabledcolor>PrimaryT</disabledcolor>
+							<enable>false</enable>
+							<align>left</align>
+						</control>
+						<control type="image">
+							<description>day icon</description>
+							<posx>25</posx>
+							<posy>282</posy>
+							<height>138</height>
+							<width>138</width>
+							<texture>$INFO[Window.Property(Daily.11.FanartCode),weather/medium/,.png]</texture>
+							<aspectratio align="center">keep</aspectratio>
+							<colordiffuse>PrimaryT</colordiffuse>
+						</control>
+						<control type="image">
+							<description>temp high icon</description>
+							<posx>178</posx>
+							<posy>300</posy>
+							<height>48</height>
+							<width>24</width>
+							<texture>weather/temp-high.png</texture>
+							<colordiffuse>PrimaryT</colordiffuse>
+						</control>
+						<control type="label">
+							<description>temp high value</description>
+							<posx>218</posx>
+							<posy>300</posy>
+							<width>110</width>
+							<height>48</height>
+							<font>Font-Condensed-S42-B</font>
+							<label>$INFO[Window.Property(Daily.11.HighTemperature)]</label>
+							<textcolor>PrimaryT</textcolor>
+							<aligny>center</aligny>
+						</control>
+						<control type="image">
+							<description>temp low icon</description>
+							<posx>178</posx>
+							<posy>354</posy>
+							<height>48</height>
+							<width>24</width>
+							<texture>weather/temp-low.png</texture>
+							<colordiffuse>PrimaryT</colordiffuse>
+						</control>
+						<control type="label">
+							<description>temp low value</description>
+							<posx>218</posx>
+							<posy>354</posy>
+							<width>110</width>
+							<height>48</height>
+							<font>Font-Condensed-S42-B</font>
+							<label>$INFO[Window.Property(Daily.11.LowTemperature)]</label>
+							<textcolor>PrimaryT</textcolor>
+							<aligny>center</aligny>
+						</control>
+						<control type="label">
+							<description>outlook label</description>
+							<posx>20</posx>
+							<posy>428</posy>
+							<width>312</width>
+							<height>42</height>
+							<font>Font-Condensed-S42</font>
+							<label>$INFO[Window.Property(Daily.11.Outlook)]</label>
+							<textcolor>SecondaryT</textcolor>
+							<align>center</align>
+						</control>
+						<control type="grouplist">
+							<posx>18</posx>
+							<posy>490</posy>
+							<width>312</width>
+							<height>51</height>
+							<orientation>horizontal</orientation>
+							<align>center</align>
+							<control type="image">
+								<description>wind direction icon</description>
+								<posx>0</posx>
+								<posy>0</posy>
+								<height>51</height>
+								<width>51</width>
+								<texture>$INFO[Window.Property(Daily.11.WindDegree),special://skin/extras/weather/directions/small/,.png]</texture>
+								<aspectratio align="center">keep</aspectratio>
+								<colordiffuse>PrimaryT</colordiffuse>
+							</control>
+							<control type="label">
+								<description>wind speed label</description>
+								<posx>0</posx>
+								<posy>0</posy>
+								<width min="0" max="250">auto</width>
+								<height>51</height>
+								<font>Font-Condensed-S36</font>
+								<label>$INFO[Window.Property(Daily.11.WindSpeed)]</label>
+								<textcolor>PrimaryT</textcolor>
+							</control>
+						</control>
+					</control>
+					<control type="group" id="2112">
+						<description>Day 12</description>
+						<animation effect="fade" start="0" end="100" delay="750">WindowOpen</animation>
+						<width>372</width>
+						<control type="image">
+							<posx>-5</posx>
+							<posy>568</posy>
+							<height>50</height>
+							<width>372</width>
+							<texture>dialogs/shutdown/shadow.png</texture>
+						</control>
+						<control type="button" id="222">
+							<posx>-5</posx>
+							<posy>256</posy>
+							<width>362</width>
+							<height>320</height>
+							<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+							<texturenofocus colordiffuse="PrimaryBG">windows/common/white.png</texturenofocus>
+							<onleft>221</onleft>
+							<onright>223</onright>
+							<onup>201</onup>
+							<ondown>230</ondown>
+							<animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(222)">Conditional</animation>
+						</control>
+						<control type="multiimage">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>352</width>
+							<height>260</height>
+							<timeperimage>999999999999999</timeperimage>
+							<randomize>true</randomize>
+							<fadetime>600</fadetime>
+							<loop>yes</loop>
+							<include>Animation_FanartFade</include>
+							<imagepath background="true">$INFO[Skin.String(WeatherFanartDir)]$INFO[Window.Property(Daily.12.FanartCode)]</imagepath>
+							<aspectratio align="center">scale</aspectratio>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>184</posy>
+							<width>352</width>
+							<height>76</height>
+							<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+						</control>
+						<control type="button">
+							<description>current temp value</description>
+							<posx>27</posx>
+							<posy>184</posy>
+							<width>300</width>
+							<height>76</height>
+							<font>Font-Condensed-S38</font>
+							<label>[B]$INFO[Window.Property(Daily.12.LongDay)][/B]</label>
+							<label2>$INFO[Window.Property(Daily.12.ShortDate)]</label2>
+							<disabledcolor>PrimaryT</disabledcolor>
+							<enable>false</enable>
+							<align>left</align>
+						</control>
+						<control type="image">
+							<description>day icon</description>
+							<posx>25</posx>
+							<posy>282</posy>
+							<height>138</height>
+							<width>138</width>
+							<texture>$INFO[Window.Property(Daily.12.FanartCode),weather/medium/,.png]</texture>
+							<aspectratio align="center">keep</aspectratio>
+							<colordiffuse>PrimaryT</colordiffuse>
+						</control>
+						<control type="image">
+							<description>temp high icon</description>
+							<posx>178</posx>
+							<posy>300</posy>
+							<height>48</height>
+							<width>24</width>
+							<texture>weather/temp-high.png</texture>
+							<colordiffuse>PrimaryT</colordiffuse>
+						</control>
+						<control type="label">
+							<description>temp high value</description>
+							<posx>218</posx>
+							<posy>300</posy>
+							<width>110</width>
+							<height>48</height>
+							<font>Font-Condensed-S42-B</font>
+							<label>$INFO[Window.Property(Daily.12.HighTemperature)]</label>
+							<textcolor>PrimaryT</textcolor>
+							<aligny>center</aligny>
+						</control>
+						<control type="image">
+							<description>temp low icon</description>
+							<posx>178</posx>
+							<posy>354</posy>
+							<height>48</height>
+							<width>24</width>
+							<texture>weather/temp-low.png</texture>
+							<colordiffuse>PrimaryT</colordiffuse>
+						</control>
+						<control type="label">
+							<description>temp low value</description>
+							<posx>218</posx>
+							<posy>354</posy>
+							<width>110</width>
+							<height>48</height>
+							<font>Font-Condensed-S42-B</font>
+							<label>$INFO[Window.Property(Daily.12.LowTemperature)]</label>
+							<textcolor>PrimaryT</textcolor>
+							<aligny>center</aligny>
+						</control>
+						<control type="label">
+							<description>outlook label</description>
+							<posx>20</posx>
+							<posy>428</posy>
+							<width>312</width>
+							<height>42</height>
+							<font>Font-Condensed-S42</font>
+							<label>$INFO[Window.Property(Daily.12.Outlook)]</label>
+							<textcolor>SecondaryT</textcolor>
+							<align>center</align>
+						</control>
+						<control type="grouplist">
+							<posx>18</posx>
+							<posy>490</posy>
+							<width>312</width>
+							<height>51</height>
+							<orientation>horizontal</orientation>
+							<align>center</align>
+							<control type="image">
+								<description>wind direction icon</description>
+								<posx>0</posx>
+								<posy>0</posy>
+								<height>51</height>
+								<width>51</width>
+								<texture>$INFO[Window.Property(Daily.12.WindDegree),special://skin/extras/weather/directions/small/,.png]</texture>
+								<aspectratio align="center">keep</aspectratio>
+								<colordiffuse>PrimaryT</colordiffuse>
+							</control>
+							<control type="label">
+								<description>wind speed label</description>
+								<posx>0</posx>
+								<posy>0</posy>
+								<width min="0" max="250">auto</width>
+								<height>51</height>
+								<font>Font-Condensed-S36</font>
+								<label>$INFO[Window.Property(Daily.12.WindSpeed)]</label>
+								<textcolor>PrimaryT</textcolor>
+							</control>
+						</control>
+					</control>
+					<control type="group" id="2113">
+						<description>Day 13</description>
+						<animation effect="fade" start="0" end="100" delay="750">WindowOpen</animation>
+						<width>372</width>
+						<control type="image">
+							<posx>-5</posx>
+							<posy>568</posy>
+							<height>50</height>
+							<width>372</width>
+							<texture>dialogs/shutdown/shadow.png</texture>
+						</control>
+						<control type="button" id="223">
+							<posx>-5</posx>
+							<posy>256</posy>
+							<width>362</width>
+							<height>320</height>
+							<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+							<texturenofocus colordiffuse="PrimaryBG">windows/common/white.png</texturenofocus>
+							<onleft>222</onleft>
+							<onright>224</onright>
+							<onup>201</onup>
+							<ondown>230</ondown>
+							<animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(223)">Conditional</animation>
+						</control>
+						<control type="multiimage">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>352</width>
+							<height>260</height>
+							<timeperimage>999999999999999</timeperimage>
+							<randomize>true</randomize>
+							<fadetime>600</fadetime>
+							<loop>yes</loop>
+							<include>Animation_FanartFade</include>
+							<imagepath background="true">$INFO[Skin.String(WeatherFanartDir)]$INFO[Window.Property(Daily.13.FanartCode)]</imagepath>
+							<aspectratio align="center">scale</aspectratio>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>184</posy>
+							<width>352</width>
+							<height>76</height>
+							<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+						</control>
+						<control type="button">
+							<description>current temp value</description>
+							<posx>27</posx>
+							<posy>184</posy>
+							<width>300</width>
+							<height>76</height>
+							<font>Font-Condensed-S38</font>
+							<label>[B]$INFO[Window.Property(Daily.13.LongDay)][/B]</label>
+							<label2>$INFO[Window.Property(Daily.13.ShortDate)]</label2>
+							<disabledcolor>PrimaryT</disabledcolor>
+							<enable>false</enable>
+							<align>left</align>
+						</control>
+						<control type="image">
+							<description>day icon</description>
+							<posx>25</posx>
+							<posy>282</posy>
+							<height>138</height>
+							<width>138</width>
+							<texture>$INFO[Window.Property(Daily.13.FanartCode),weather/medium/,.png]</texture>
+							<aspectratio align="center">keep</aspectratio>
+							<colordiffuse>PrimaryT</colordiffuse>
+						</control>
+						<control type="image">
+							<description>temp high icon</description>
+							<posx>178</posx>
+							<posy>300</posy>
+							<height>48</height>
+							<width>24</width>
+							<texture>weather/temp-high.png</texture>
+							<colordiffuse>PrimaryT</colordiffuse>
+						</control>
+						<control type="label">
+							<description>temp high value</description>
+							<posx>218</posx>
+							<posy>300</posy>
+							<width>110</width>
+							<height>48</height>
+							<font>Font-Condensed-S42-B</font>
+							<label>$INFO[Window.Property(Daily.13.HighTemperature)]</label>
+							<textcolor>PrimaryT</textcolor>
+							<aligny>center</aligny>
+						</control>
+						<control type="image">
+							<description>temp low icon</description>
+							<posx>178</posx>
+							<posy>354</posy>
+							<height>48</height>
+							<width>24</width>
+							<texture>weather/temp-low.png</texture>
+							<colordiffuse>PrimaryT</colordiffuse>
+						</control>
+						<control type="label">
+							<description>temp low value</description>
+							<posx>218</posx>
+							<posy>354</posy>
+							<width>110</width>
+							<height>48</height>
+							<font>Font-Condensed-S42-B</font>
+							<label>$INFO[Window.Property(Daily.13.LowTemperature)]</label>
+							<textcolor>PrimaryT</textcolor>
+							<aligny>center</aligny>
+						</control>
+						<control type="label">
+							<description>outlook label</description>
+							<posx>20</posx>
+							<posy>428</posy>
+							<width>312</width>
+							<height>42</height>
+							<font>Font-Condensed-S42</font>
+							<label>$INFO[Window.Property(Daily.13.Outlook)]</label>
+							<textcolor>SecondaryT</textcolor>
+							<align>center</align>
+						</control>
+						<control type="grouplist">
+							<posx>18</posx>
+							<posy>490</posy>
+							<width>312</width>
+							<height>51</height>
+							<orientation>horizontal</orientation>
+							<align>center</align>
+							<control type="image">
+								<description>wind direction icon</description>
+								<posx>0</posx>
+								<posy>0</posy>
+								<height>51</height>
+								<width>51</width>
+								<texture>$INFO[Window.Property(Daily.13.WindDegree),special://skin/extras/weather/directions/small/,.png]</texture>
+								<aspectratio align="center">keep</aspectratio>
+								<colordiffuse>PrimaryT</colordiffuse>
+							</control>
+							<control type="label">
+								<description>wind speed label</description>
+								<posx>0</posx>
+								<posy>0</posy>
+								<width min="0" max="250">auto</width>
+								<height>51</height>
+								<font>Font-Condensed-S36</font>
+								<label>$INFO[Window.Property(Daily.13.WindSpeed)]</label>
+								<textcolor>PrimaryT</textcolor>
+							</control>
+						</control>
+					</control>
+					<control type="group" id="2114">
+						<description>Day 14</description>
+						<animation effect="fade" start="0" end="100" delay="750">WindowOpen</animation>
+						<width>372</width>
+						<control type="image">
+							<posx>-5</posx>
+							<posy>568</posy>
+							<height>50</height>
+							<width>372</width>
+							<texture>dialogs/shutdown/shadow.png</texture>
+						</control>
+						<control type="button" id="224">
+							<posx>-5</posx>
+							<posy>256</posy>
+							<width>362</width>
+							<height>320</height>
+							<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+							<texturenofocus colordiffuse="PrimaryBG">windows/common/white.png</texturenofocus>
+							<onleft>223</onleft>
+							<onright>211</onright>
+							<onup>201</onup>
+							<ondown>230</ondown>
+							<animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(224)">Conditional</animation>
+						</control>
+						<control type="multiimage">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>352</width>
+							<height>260</height>
+							<timeperimage>999999999999999</timeperimage>
+							<randomize>true</randomize>
+							<fadetime>600</fadetime>
+							<loop>yes</loop>
+							<include>Animation_FanartFade</include>
+							<imagepath background="true">$INFO[Skin.String(WeatherFanartDir)]$INFO[Window.Property(Daily.14.FanartCode)]</imagepath>
+							<aspectratio align="center">scale</aspectratio>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>184</posy>
+							<width>352</width>
+							<height>76</height>
+							<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+						</control>
+						<control type="button">
+							<description>current temp value</description>
+							<posx>27</posx>
+							<posy>184</posy>
+							<width>300</width>
+							<height>76</height>
+							<font>Font-Condensed-S38</font>
+							<label>[B]$INFO[Window.Property(Daily.14.LongDay)][/B]</label>
+							<label2>$INFO[Window.Property(Daily.14.ShortDate)]</label2>
+							<disabledcolor>PrimaryT</disabledcolor>
+							<enable>false</enable>
+							<align>left</align>
+						</control>
+						<control type="image">
+							<description>day icon</description>
+							<posx>25</posx>
+							<posy>282</posy>
+							<height>138</height>
+							<width>138</width>
+							<texture>$INFO[Window.Property(Daily.14.FanartCode),weather/medium/,.png]</texture>
+							<aspectratio align="center">keep</aspectratio>
+							<colordiffuse>PrimaryT</colordiffuse>
+						</control>
+						<control type="image">
+							<description>temp high icon</description>
+							<posx>178</posx>
+							<posy>300</posy>
+							<height>48</height>
+							<width>24</width>
+							<texture>weather/temp-high.png</texture>
+							<colordiffuse>PrimaryT</colordiffuse>
+						</control>
+						<control type="label">
+							<description>temp high value</description>
+							<posx>218</posx>
+							<posy>300</posy>
+							<width>110</width>
+							<height>48</height>
+							<font>Font-Condensed-S42-B</font>
+							<label>$INFO[Window.Property(Daily.14.HighTemperature)]</label>
+							<textcolor>PrimaryT</textcolor>
+							<aligny>center</aligny>
+						</control>
+						<control type="image">
+							<description>temp low icon</description>
+							<posx>178</posx>
+							<posy>354</posy>
+							<height>48</height>
+							<width>24</width>
+							<texture>weather/temp-low.png</texture>
+							<colordiffuse>PrimaryT</colordiffuse>
+						</control>
+						<control type="label">
+							<description>temp low value</description>
+							<posx>218</posx>
+							<posy>354</posy>
+							<width>110</width>
+							<height>48</height>
+							<font>Font-Condensed-S42-B</font>
+							<label>$INFO[Window.Property(Daily.14.LowTemperature)]</label>
+							<textcolor>PrimaryT</textcolor>
+							<aligny>center</aligny>
+						</control>
+						<control type="label">
+							<description>outlook label</description>
+							<posx>20</posx>
+							<posy>428</posy>
+							<width>312</width>
+							<height>42</height>
+							<font>Font-Condensed-S42</font>
+							<label>$INFO[Window.Property(Daily.14.Outlook)]</label>
+							<textcolor>SecondaryT</textcolor>
+							<align>center</align>
+						</control>
+						<control type="grouplist">
+							<posx>18</posx>
+							<posy>490</posy>
+							<width>312</width>
+							<height>51</height>
+							<orientation>horizontal</orientation>
+							<align>center</align>
+							<control type="image">
+								<description>wind direction icon</description>
+								<posx>0</posx>
+								<posy>0</posy>
+								<height>51</height>
+								<width>51</width>
+								<texture>$INFO[Window.Property(Daily.14.WindDegree),special://skin/extras/weather/directions/small/,.png]</texture>
+								<aspectratio align="center">keep</aspectratio>
+								<colordiffuse>PrimaryT</colordiffuse>
+							</control>
+							<control type="label">
+								<description>wind speed label</description>
+								<posx>0</posx>
+								<posy>0</posy>
+								<width min="0" max="250">auto</width>
+								<height>51</height>
+								<font>Font-Condensed-S36</font>
+								<label>$INFO[Window.Property(Daily.14.WindSpeed)]</label>
 								<textcolor>PrimaryT</textcolor>
 							</control>
 						</control>

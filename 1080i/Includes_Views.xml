@@ -568,7 +568,6 @@
 	</variable>
 	<variable name="ListFanart">
 		<value condition="[Container.Content(Seasons) | Container.Content(Episodes)] + !IsEmpty(ListItem.Art(season.fanart))">$INFO[ListItem.Art(season.fanart)]</value>
-		<value condition="!IsEmpty(ListItem.Property(medium_fanartimage))">$INFO[ListItem.Property(medium_fanartimage)]</value>
 		<value>$INFO[ListItem.Art(fanart)]</value>
 	</variable>
 	<variable name="SmallListFanart">
@@ -737,7 +736,7 @@
 		<value>$INFO[ListItem.ActualIcon,views/fallbacks/,/landscape.png]</value>
 	</variable>
 	<variable name="ThumbIcon">
-		<value condition="!IsEmpty(ListItem.Property(small_poster))">$INFO[ListItem.Property(small_poster)]</value>
+		<value condition="!IsEmpty(ListItem.Property(medium_poster))">$INFO[ListItem.Property(medium_poster)]</value>
 		<value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
 		<value>$INFO[ListItem.ActualIcon,views/fallbacks/,/square-medium.png]</value>
 	</variable>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">3010</defaultcontrol>
+	<zorder>2</zorder>
+	<coordinates>
+		<system>1</system>
+		<left>300</left>
+		<top>50</top>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<control type="image">
+			<left>0</left>
+			<top>24</top>
+			<width>1260</width>
+			<height>851</height>
+			<texture colordiffuse="FF333333">windows/common/white.png</texture>
+		</control>
+		<control type="image">
+			<left>20</left>
+			<top>20</top>
+			<width>1000</width>
+			<height>560</height>
+			<texture>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</texture>
+			<visible>![Skin.HasSetting(UseCustomBackground) + !IsEmpty(Skin.String(CustomBackgroundPath))]</visible>
+			<include>VisibleFadeEffect</include>
+			<colordiffuse>FF444444</colordiffuse>
+		</control>
+		<control type="label" id="1">
+			<description>header label</description>
+			<left>40</left>
+			<top>30</top>
+			<width>1160</width>
+			<height>30</height>
+			<font>font24_title</font>
+			<label>Person Info</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+		<!-- <control type="button" id="8"> <description>Close Window button</description> <left>960</left> <top>15</top> <width>64</width> <height>32</height> <label>-</label> <font>-</font> <onclick>PreviousMenu</onclick> <texturefocus>DialogCloseButton-focus.png</texturefocus> <texturenofocus>DialogCloseButton.png</texturenofocus> <onleft>-</onleft> <onright>-</onright> <onup>-</onup> <ondown>3005</ondown> </control> -->
+		<control type="label" id="3000">
+			<description>person name</description>
+			<left>40</left>
+			<top>45</top>
+			<width>1120</width>
+			<height>100</height>
+			<align>left</align>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>$VAR[FocusModColourVar]</textcolor>
+		</control>
+		<control type="image" id="3009">
+			<left>-45</left>
+			<top>110</top>
+			<width>450</width>
+			<height>450</height>
+			<align>left</align>
+			<aspectratio>keep</aspectratio>
+		</control>
+		<control type="textbox" id="3001">
+			<description>text</description>
+			<left>350</left>
+			<top>110</top>
+			<width>890</width>
+			<height>440</height>
+			<align>justify</align>
+			<label>-</label>
+			<font>font12</font>
+			<textcolor>white</textcolor>
+			<autoscroll delay="13000" time="3000" repeat="13000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
+		</control>
+		<control type="list" id="3010">
+			<left>40</left>
+			<top>550</top>
+			<width>1200</width>
+			<height>370</height>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<onup>-</onup>
+			<ondown>3011</ondown>
+			<pagecontrol>3011</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<orientation>horizontal</orientation>
+			<itemlayout width="200">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>200</width>
+					<height>300</height>
+					<texture>$INFO[Listitem.Icon]</texture>
+					<bordersize>5</bordersize>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>302</top>
+					<width>200</width>
+					<height>20</height>
+					<align>left</align>
+					<font>font10</font>
+					<textcolor>FFFFFFFFFF</textcolor>
+					<label>$INFO[Listitem.Label2]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout width="200">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>200</width>
+					<height>300</height>
+					<texture>$INFO[Listitem.Icon]</texture>
+				</control>
+				<control type="image"> <!--focused background left edge -->
+					<posx>0</posx>
+					<posy>300</posy>
+					<width>200</width>
+					<height>5</height>
+					<visible>Control.HasFocus(3010)</visible>
+					<texture condition="Control.HasFocus(3010)" colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>302</top>
+					<width>200</width>
+					<height>20</height>
+					<align>left</align>
+					<font>font10</font>
+					<textcolor>$VAR[FocusModColourVar]</textcolor>
+					<visible>Control.HasFocus(3010)</visible>
+					<label>$INFO[Listitem.Label2]</label>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>302</top>
+					<width>200</width>
+					<height>20</height>
+					<align>left</align>
+					<font>font10</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<visible>!Control.HasFocus(3010)</visible>
+					<label>$INFO[Listitem.Label2]</label>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="scrollbar" id="3011">
+			<left>40</left>
+			<top>880</top>
+			<width>1200</width>
+			<height>10</height>
+			<texturesliderbarfocus colordiffuse="CC888888" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+			<onup>3010</onup>
+			<showonepage>false</showonepage>
+			<orientation>horizontal</orientation>
+		</control>
+	</controls>
+</window>

@@ -1089,6 +1089,18 @@
 									<font>Font-Condensed-S60</font>
 									<textcolor>aawhite</textcolor>
 									<label>$LOCALIZE[49235]</label>
+									<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
+								</control>
+								<control type="label">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width min="0" max="700">auto</width>
+									<height>126</height>
+									<aligny>center</aligny>
+									<font>Font-Condensed-S60</font>
+									<textcolor>aawhite</textcolor>
+									<label>$LOCALIZE[41525]</label>
+									<visible>Skin.HasSetting(UseKodiLibrary)</visible>
 								</control>
 								<control type="fadelabel">
 									<posx>0</posx>

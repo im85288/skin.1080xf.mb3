@@ -1091,31 +1091,6 @@
 									<label>$LOCALIZE[49235]</label>
 									<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
 								</control>
-								<control type="grouplist">
-								<posx>35</posx>
-								<posy>223</posy>
-								<width>1179</width>
-								<height>126</height>
-								<orientation>horizontal</orientation>
-								<itemgap>15</itemgap>
-								<control type="label">
-									<posx>0</posx>
-									<posy>0</posy>
-									<width min="0" max="700">auto</width>
-									<height>126</height>
-									<aligny>center</aligny>
-									<font>Font-Condensed-S60</font>
-									<textcolor>aawhite</textcolor>
-									<label>$LOCALIZE[49235]</label>
-									<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
-								</control>
-								<control type="grouplist">
-								<posx>35</posx>
-								<posy>223</posy>
-								<width>1179</width>
-								<height>126</height>
-								<orientation>horizontal</orientation>
-								<itemgap>15</itemgap>
 								<control type="label">
 									<posx>0</posx>
 									<posy>0</posy>
@@ -5272,7 +5247,7 @@
 									<posy>0</posy>
 									<width>1020</width>
 									<height>572</height>
-									<aspectratio>stretch</aspectratio>
+									<aspectratio>keep</aspectratio>
 									<texture background="true" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.Icon]</texture>
 									<visible>Skin.HasSetting(ShowMusicThumbs)</visible>
 								</control>
@@ -5281,11 +5256,7 @@
 									<posy>0</posy>
 									<width>1020</width>
 									<height>572</height>
-<<<<<<< HEAD
-									<aspectratio>stretch</aspectratio>
-=======
 									<aspectratio>keep</aspectratio>
->>>>>>> e23f1890d3fb1146f4965da073d8c647457a589a
 									<texture background="true" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.Property(Fanart)]</texture>
 									<visible>!Skin.HasSetting(ShowMusicThumbs)</visible>
 								</control>
@@ -5296,7 +5267,7 @@
 									<posy>0</posy>
 									<width>1020</width>
 									<height>572</height>
-									<aspectratio>stretch</aspectratio>
+									<aspectratio>keep</aspectratio>
 									<texture background="true" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.Icon]</texture>
 									<visible>Skin.HasSetting(ShowMusicThumbs)</visible>
 								</control>
@@ -5305,11 +5276,7 @@
 									<posy>0</posy>
 									<width>1020</width>
 									<height>572</height>
-<<<<<<< HEAD
-									<aspectratio>stretch</aspectratio>
-=======
 									<aspectratio>keep</aspectratio>
->>>>>>> e23f1890d3fb1146f4965da073d8c647457a589a
 									<texture background="true" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.Property(Fanart)]</texture>
 									<visible>!Skin.HasSetting(ShowMusicThumbs)</visible>
 								</control>

@@ -181,6 +181,18 @@
 								<bordertexture colordiffuse="$VAR[HomeTileHomeColourVar]" border="7">$VAR[HomeTiles]</bordertexture>
 								<aspectratio scalediffuse="false" align="left" aligny="bottom">keep</aspectratio>
 								<texture background="true" fallback="dialogs/favourites/nothumb.png">$INFO[ListItem.Thumb]</texture>
+								<visible>!Skin.HasSetting(StandardTiles)</visible>
+							</control>
+							<control type="image">
+								<posx>-5</posx>
+								<posy>-5</posy>
+								<width>330</width>
+								<height>490</height>
+								<bordersize>5</bordersize>
+								<bordertexture border="7">special://skin/extras/standard/$INFO[Skin.String(tilehomestandard.name)].png</bordertexture>
+								<aspectratio scalediffuse="false" align="left" aligny="bottom">keep</aspectratio>
+								<texture background="true" fallback="dialogs/favourites/nothumb.png">$INFO[ListItem.Thumb]</texture>
+								<visible>Skin.HasSetting(StandardTiles)</visible>
 							</control>
 							<control type="image">
 								<posx>0</posx>
@@ -208,7 +220,6 @@
 									<height>50</height>
 									<texture>dialogs/shutdown/shadow.png</texture>
 								</control>
-								
 								<control type="image">
 									<posx>-2</posx>
 									<posy>475</posy>
@@ -248,6 +259,18 @@
 									<bordertexture colordiffuse="$VAR[HomeTileHomeColourVar]" border="7">$VAR[HomeTiles]</bordertexture>
 									<aspectratio scalediffuse="false" align="left" aligny="bottom">keep</aspectratio>
 									<texture background="true" fallback="dialogs/favourites/nothumb.png">$INFO[ListItem.Thumb]</texture>
+									<visible>!Skin.HasSetting(StandardTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>-5</posx>
+									<posy>-5</posy>
+									<width>330</width>
+									<height>490</height>
+									<bordersize>5</bordersize>
+									<bordertexture border="7">special://skin/extras/standard/$INFO[Skin.String(tilehomestandard.name)].png</bordertexture>
+									<aspectratio scalediffuse="false" align="left" aligny="bottom">keep</aspectratio>
+									<texture background="true" fallback="dialogs/favourites/nothumb.png">$INFO[ListItem.Thumb]</texture>
+									<visible>Skin.HasSetting(StandardTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>-21</posx>

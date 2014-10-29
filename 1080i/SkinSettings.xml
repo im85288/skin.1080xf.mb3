@@ -472,6 +472,13 @@
 						<onclick>Skin.ToggleSetting(HomeLogo.Enabled)</onclick>
 						<label>$LOCALIZE[49258]</label>
 					</control>
+					<control type="radiobutton" id="2009">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(ShowMusicThumbs)</selected>
+						<onclick>Skin.ToggleSetting(ShowMusicThumbs)</onclick>
+						<label>$LOCALIZE[49265]</label>
+					</control>
 					<control type="group" id="2007">
 						<description>Fake spin control</description>
 						<width>1210</width>
@@ -499,7 +506,7 @@
 							<height>60</height>
 							<onleft>20072</onleft>
 							<onright>20072</onright>
-							<onup>2006</onup>
+							<onup>2009</onup>
 							<ondown>4001</ondown>
 							<texturefocus colordiffuse="PrimaryT">buttons/spinctrl/arrow-down-fo.png</texturefocus>
 							<texturenofocus colordiffuse="PrimaryT">buttons/spinctrl/arrow-down-nf.png</texturenofocus>
@@ -695,21 +702,31 @@
 					<onleft>30</onleft>
 					<include>SettingsCategoryGrouplistVars</include>
 					<visible>Container(30).HasFocus(48)</visible>
-					<control type="radiobutton" id="760001">
+					<control type="radiobutton" id="7600112">
 						<width>1210</width>
 						<include>SettingsCategoryRadioButtonVars</include>
-						<selected>Skin.HasSetting(PlainTiles)</selected>
-						<onclick>Skin.ToggleSetting(PlainTiles)</onclick>
-						<onclick>ReloadSkin()</onclick>
-						<label>$LOCALIZE[49261]</label>
+						<selected>Skin.HasSetting(StandardTiles)</selected>
+						<onclick>Skin.ToggleSetting(StandardTiles)</onclick>
+						<onclick>Skin.Reset(ColourTiles)</onclick>
+						<label>$LOCALIZE[49267]</label>
 					</control>
 					<control type="radiobutton" id="760002">
 						<width>1210</width>
 						<include>SettingsCategoryRadioButtonVars</include>
 						<selected>Skin.HasSetting(ColourTiles)</selected>
 						<onclick>Skin.ToggleSetting(ColourTiles)</onclick>
+						<onclick>Skin.Reset(StandardTiles)</onclick>
 						<onclick>ReloadSkin()</onclick>
 						<label>$LOCALIZE[49262]</label>
+					</control>
+					<control type="radiobutton" id="760001">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(PlainTiles)</selected>
+						<onclick>Skin.ToggleSetting(PlainTiles)</onclick>
+						<onclick>ReloadSkin()</onclick>
+						<label>  - $LOCALIZE[49261]</label>
+						<visible>Skin.HasSetting(ColourTiles)</visible>
 					</control>
 					<control type="button" id="760012">
 						<posx>0</posx>
@@ -882,6 +899,178 @@
 						<onclick>Skin.SetString(tilesettingscolor.name,tilesettings)</onclick>
 						<label>$LOCALIZE[409]</label>
 						<visible>Skin.HasSetting(ColourTiles)</visible>
+					</control>
+					<control type="button" id="760112">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick>ActivateWindow(750)</onclick>
+						<label>Search Tiles</label>
+						<label2>$INFO[Skin.String(tilesearchstandard.name)]</label2>
+						<visible>Skin.HasSetting(StandardTiles)</visible>
+					</control>
+					<control type="button" id="760103">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick>ActivateWindow(742)</onclick>
+						<label>Live TV Tiles</label>
+						<label2>$INFO[Skin.String(tilelivetvstandard.name)]</label2>
+						<visible>Skin.HasSetting(StandardTiles)</visible>
+					</control>
+					<control type="button" id="760104">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick>ActivateWindow(741)</onclick>
+						<label>Home Tiles</label>
+						<label2>$INFO[Skin.String(tilehomestandard.name)]</label2>
+						<visible>Skin.HasSetting(StandardTiles)</visible>
+					</control>
+					<control type="button" id="760105">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick>ActivateWindow(743)</onclick>
+						<label>Movies Tiles</label>
+						<label2>$INFO[Skin.String(tilemoviesstandard.name)]</label2>
+						<visible>Skin.HasSetting(StandardTiles)</visible>
+					</control>
+					<control type="button" id="760106">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick>ActivateWindow(744)</onclick>
+						<label>TV Tiles</label>
+						<label2>$INFO[Skin.String(tiletvstandard.name)]</label2>
+						<visible>Skin.HasSetting(StandardTiles)</visible>
+					</control>
+					<control type="button" id="760107">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick>ActivateWindow(745)</onclick>
+						<label>Channels Tiles</label>
+						<label2>$INFO[Skin.String(tilechannelsstandard.name)]</label2>
+						<visible>Skin.HasSetting(StandardTiles)</visible>
+					</control>
+					<control type="button" id="760108">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick>ActivateWindow(746)</onclick>
+						<label>Music Tiles</label>
+						<label2>$INFO[Skin.String(tilemusicstandard.name)]</label2>
+						<visible>Skin.HasSetting(StandardTiles)</visible>
+					</control>
+					<control type="button" id="760109">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick>ActivateWindow(747)</onclick>
+						<label>Applications Tiles</label>
+						<label2>$INFO[Skin.String(tileapplicationsstandard.name)]</label2>
+						<visible>Skin.HasSetting(StandardTiles)</visible>
+					</control>
+					<control type="button" id="760110">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick>ActivateWindow(748)</onclick>
+						<label>Weather Tiles</label>
+						<label2>$INFO[Skin.String(tileweatherstandard.name)]</label2>
+						<visible>Skin.HasSetting(StandardTiles)</visible>
+					</control>
+					<control type="button" id="760111">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick>ActivateWindow(749)</onclick>
+						<label>Settings Tiles</label>
+						<label2>$INFO[Skin.String(tilesettingsstandard.name)]</label2>
+						<visible>Skin.HasSetting(StandardTiles)</visible>
+					</control>
+					<control type="button" id="760113">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick>Skin.SetString(tilelivetvstandard.name,tile-grey)</onclick>
+						<onclick>Skin.SetString(tilehomestandard.name,tile-grey)</onclick>
+						<onclick>Skin.SetString(tilemoviesstandard.name,tile-blue)</onclick>
+						<onclick>Skin.SetString(tiletvstandard.name,tile-green)</onclick>
+						<onclick>Skin.SetString(tilechannelsstandard.name,tile-pink)</onclick>
+						<onclick>Skin.SetString(tilemusicstandard.name,tile-yellow)</onclick>
+						<onclick>Skin.SetString(tileapplicationsstandard.name,tile-grey)</onclick>
+						<onclick>Skin.SetString(tileweatherstandard.name,tile-grey)</onclick>
+						<onclick>Skin.SetString(tilesettingsstandard.name,tile-grey)</onclick>
+						<label>$LOCALIZE[409]</label>
+						<visible>Skin.HasSetting(StandardTiles)</visible>
 					</control>
 				</control>
 				<!-- =================== -->
@@ -1214,7 +1403,6 @@
 						<onclick>Skin.ToggleSetting(alternatelivetvosd)</onclick>
 						<label>$LOCALIZE[49257]</label>
 					</control>
-					
 				</control>
 				<!-- ================ -->
 				<!-- Alternate librarys -->

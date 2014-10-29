@@ -1056,6 +1056,15 @@
 								<height>136</height>
 								<colordiffuse>$VAR[HomeTileSearchColourVar]</colordiffuse>
 								<texture border="7">$VAR[HomeTiles]</texture>
+								<visible>!Skin.HasSetting(StandardTiles)</visible>
+							</control>
+							<control type="image">
+								<posx>-5</posx>
+								<posy>218</posy>
+								<width>1259</width>
+								<height>136</height>
+								<texture border="7">special://skin/extras/standard/$INFO[Skin.String(tilesearchstandard.name)].png</texture>
+								<visible>Skin.HasSetting(StandardTiles)</visible>
 							</control>
 							<control type="image">
 								<posx>1115</posx>
@@ -1197,6 +1206,15 @@
 									<height>293</height>
 									<colordiffuse>$VAR[HomeTileLiveTVColourVar]</colordiffuse>
 									<texture border="7">$VAR[HomeTiles]</texture>
+									<visible>!Skin.HasSetting(StandardTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>19</posx>
+									<posy>19</posy>
+									<width>293</width>
+									<height>293</height>
+									<texture border="7">special://skin/extras/standard/$INFO[ListItem.Property(tilestandardname)].png</texture>
+									<visible>Skin.HasSetting(StandardTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -1275,6 +1293,15 @@
 										<height>293</height>
 										<colordiffuse>$VAR[HomeTileLiveTVColourVar]</colordiffuse>
 										<texture border="7">$VAR[HomeTiles]</texture>
+										<visible>!Skin.HasSetting(StandardTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">special://skin/extras/standard/$INFO[ListItem.Property(tilestandardname)].png</texture>
+										<visible>Skin.HasSetting(StandardTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -1314,31 +1341,37 @@
 								<label>$LOCALIZE[19023]</label>
 								<icon>windows/home/icons/tvshows.png</icon>
 								<onclick>ActivateWindow(tvchannels)</onclick>
+								<property name="tilestandardname">$INFO[Skin.String(tilelivetvstandard.name)]</property>
 							</item>
 							<item id="2">
 								<label>$LOCALIZE[19024]</label>
 								<icon>windows/home/icons/radio.png</icon>
 								<onclick>ActivateWindow(radiochannels)</onclick>
+								<property name="tilestandardname">$INFO[Skin.String(tilelivetvstandard.name)]</property>
 							</item>
 							<item id="3">
 								<label>$LOCALIZE[19069]</label>
 								<icon>windows/home/icons/epg.png</icon>
 								<onclick>ActivateWindow(tvguide)</onclick>
+								<property name="tilestandardname">$INFO[Skin.String(tilelivetvstandard.name)]</property>
 							</item>
 							<item id="4">
 								<label>$LOCALIZE[19163]</label>
 								<icon>windows/home/icons/recordings.png</icon>
 								<onclick>ActivateWindow(tvrecordings)</onclick>
+								<property name="tilestandardname">$INFO[Skin.String(tilelivetvstandard.name)]</property>
 							</item>
 							<item id="5">
 								<label>$LOCALIZE[19040]</label>
 								<icon>windows/home/icons/timers.png</icon>
 								<onclick>ActivateWindow(tvtimers)</onclick>
+								<property name="tilestandardname">$INFO[Skin.String(tilelivetvstandard.name)]</property>
 							</item>
 							<item id="6">
 								<label>$LOCALIZE[137]</label>
 								<icon>windows/home/icons/search-tv.png</icon>
 								<onclick>ActivateWindow(tvsearch)</onclick>
+								<property name="tilestandardname">$INFO[Skin.String(tilelivetvstandard.name)]</property>
 							</item>
 						</content>
 					</control>
@@ -2164,6 +2197,15 @@
 									<height>293</height>
 									<colordiffuse>$VAR[HomeTileHomeColourVar]</colordiffuse>
 									<texture border="7">$VAR[HomeTiles]</texture>
+									<visible>!Skin.HasSetting(StandardTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>19</posx>
+									<posy>19</posy>
+									<width>293</width>
+									<height>293</height>
+									<texture border="7">special://skin/extras/standard/$INFO[ListItem.Property(tilestandardname)].png</texture>
+									<visible>Skin.HasSetting(StandardTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -2246,6 +2288,15 @@
 										<height>293</height>
 										<colordiffuse>$VAR[HomeTileHomeColourVar]</colordiffuse>
 										<texture border="7">$VAR[HomeTiles]</texture>
+										<visible>!Skin.HasSetting(StandardTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">special://skin/extras/standard/$INFO[ListItem.Property(tilestandardname)].png</texture>
+										<visible>Skin.HasSetting(StandardTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -2307,6 +2358,7 @@
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<thumb>$INFO[Skin.String(HomeHomeTile1.Icon)]</thumb>
 								<icon>windows/home/icons/video.png</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tilehomestandard.name)]</property>
 								<property name="pos">top</property>
 								<property name="showlabel">$INFO[Skin.String(HomeHomeTile1.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeHomeTile1.Path)]</property>
@@ -2334,6 +2386,7 @@
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<thumb>$INFO[Skin.String(HomeHomeTile2.Icon)]</thumb>
 								<icon>windows/home/icons/tvshows.png</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tilehomestandard.name)]</property>
 								<property name="pos">top</property>
 								<property name="showlabel">$INFO[Skin.String(HomeHomeTile2.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeHomeTile2.Path)]</property>
@@ -2851,6 +2904,15 @@
 									<height>293</height>
 									<colordiffuse>$VAR[HomeTileMoviesColourVar]</colordiffuse>
 									<texture border="7">$VAR[HomeTiles]</texture>
+									<visible>!Skin.HasSetting(StandardTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>19</posx>
+									<posy>19</posy>
+									<width>293</width>
+									<height>293</height>
+									<texture border="7">special://skin/extras/standard/$INFO[ListItem.Property(tilestandardname)].png</texture>
+									<visible>Skin.HasSetting(StandardTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -2946,6 +3008,15 @@
 										<height>293</height>
 										<colordiffuse>$VAR[HomeTileMoviesColourVar]</colordiffuse>
 										<texture border="7">$VAR[HomeTiles]</texture>
+										<visible>!Skin.HasSetting(StandardTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">special://skin/extras/standard/$INFO[ListItem.Property(tilestandardname)].png</texture>
+										<visible>Skin.HasSetting(StandardTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -3021,6 +3092,7 @@
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<thumb>$INFO[Skin.String(HomeVideoTile5.Icon)]</thumb>
 								<icon>windows/home/icons/video.png</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tilemoviesstandard.name)]</property>
 								<property name="pos">top</property>
 								<property name="showlabel">$INFO[Skin.String(HomeVideoTile5.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeVideoTile5.Path)]</property>
@@ -3046,6 +3118,7 @@
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<thumb>$INFO[Skin.String(HomeVideoTile6.Icon)]</thumb>
 								<icon>windows/home/icons/videoaddons.png</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tilemoviesstandard.name)]</property>
 								<property name="pos">top</property>
 								<property name="showlabel">$INFO[Skin.String(HomeVideoTile6.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeVideoTile6.Path)]</property>
@@ -3088,6 +3161,15 @@
 									<height>293</height>
 									<colordiffuse>$VAR[HomeTileMoviesColourVar]</colordiffuse>
 									<texture border="7">$VAR[HomeTiles]</texture>
+									<visible>!Skin.HasSetting(StandardTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>19</posx>
+									<posy>19</posy>
+									<width>293</width>
+									<height>293</height>
+									<texture border="7">special://skin/extras/standard/$INFO[ListItem.Property(tilestandardname)].png</texture>
+									<visible>Skin.HasSetting(StandardTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -3179,6 +3261,15 @@
 										<height>293</height>
 										<colordiffuse>$VAR[HomeTileMoviesColourVar]</colordiffuse>
 										<texture border="7">$VAR[HomeTiles]</texture>
+										<visible>!Skin.HasSetting(StandardTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">special://skin/extras/standard/$INFO[ListItem.Property(tilestandardname)].png</texture>
+										<visible>Skin.HasSetting(StandardTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -3249,6 +3340,7 @@
 								<onclick condition="IsEmpty(Skin.String(HomeVideoTile1.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<icon>$INFO[Skin.String(HomeVideoTile1.Icon)]</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tilemoviesstandard.name)]</property>
 								<property name="pos">top</property>
 								<property name="showlabel">$INFO[Skin.String(HomeVideoTile1.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeVideoTile1.Path)]</property>
@@ -3272,6 +3364,7 @@
 								<onclick condition="IsEmpty(Skin.String(HomeVideoTile2.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<icon>$INFO[Skin.String(HomeVideoTile2.Icon)]</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tilemoviesstandard.name)]</property>
 								<property name="pos">top</property>
 								<property name="showlabel">$INFO[Skin.String(HomeVideoTile2.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeVideoTile2.Path)]</property>
@@ -3742,6 +3835,15 @@
 									<height>293</height>
 									<colordiffuse>$VAR[HomeTileTVColourVar]</colordiffuse>
 									<texture border="7">$VAR[HomeTiles]</texture>
+									<visible>!Skin.HasSetting(StandardTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>19</posx>
+									<posy>19</posy>
+									<width>293</width>
+									<height>293</height>
+									<texture border="7">special://skin/extras/standard/$INFO[ListItem.Property(tilestandardname)].png</texture>
+									<visible>Skin.HasSetting(StandardTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -3837,6 +3939,15 @@
 										<height>293</height>
 										<colordiffuse>$VAR[HomeTileTVColourVar]</colordiffuse>
 										<texture border="7">$VAR[HomeTiles]</texture>
+										<visible>!Skin.HasSetting(StandardTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">special://skin/extras/standard/$INFO[ListItem.Property(tilestandardname)].png</texture>
+										<visible>Skin.HasSetting(StandardTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -3912,6 +4023,7 @@
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<thumb>$INFO[Skin.String(HomeTVShowTile3.Icon)]</thumb>
 								<icon>windows/home/icons/tvshows.png</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tiletvstandard.name)]</property>
 								<property name="pos">top</property>
 								<property name="showlabel">$INFO[Skin.String(HomeTVShowTile3.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeTVShowTile3.Path)]</property>
@@ -3939,6 +4051,7 @@
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<thumb>$INFO[Skin.String(HomeTVShowTile4.Icon)]</thumb>
 								<icon>windows/home/icons/tvguide.png</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tiletvstandard.name)]</property>
 								<property name="pos">top</property>
 								<property name="showlabel">$INFO[Skin.String(HomeTVShowTile4.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeTVShowTile4.Path)]</property>
@@ -3979,6 +4092,15 @@
 									<height>293</height>
 									<colordiffuse>$VAR[HomeTileTVColourVar]</colordiffuse>
 									<texture border="7">$VAR[HomeTiles]</texture>
+									<visible>!Skin.HasSetting(StandardTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>19</posx>
+									<posy>19</posy>
+									<width>293</width>
+									<height>293</height>
+									<texture border="7">special://skin/extras/standard/$INFO[ListItem.Property(tilestandardname)].png</texture>
+									<visible>Skin.HasSetting(StandardTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -4070,6 +4192,15 @@
 										<height>293</height>
 										<colordiffuse>$VAR[HomeTileTVColourVar]</colordiffuse>
 										<texture border="7">$VAR[HomeTiles]</texture>
+										<visible>!Skin.HasSetting(StandardTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">special://skin/extras/standard/$INFO[ListItem.Property(tilestandardname)].png</texture>
+										<visible>Skin.HasSetting(StandardTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -4140,6 +4271,7 @@
 								<onclick condition="IsEmpty(Skin.String(HomeTVShowTile1.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<icon>$INFO[Skin.String(HomeTVShowTile1.Icon)]</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tiletvstandard.name)]</property>
 								<property name="showlabel">$INFO[Skin.String(HomeTVShowTile1.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeTVShowTile1.Path)]</property>
 								<property name="animate">$INFO[Skin.String(HomeTVShowTile1.Animate)]</property>
@@ -4162,6 +4294,7 @@
 								<onclick condition="IsEmpty(Skin.String(HomeTVShowTile2.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<icon>$INFO[Skin.String(HomeTVShowTile2.Icon)]</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tiletvstandard.name)]</property>
 								<property name="showlabel">$INFO[Skin.String(HomeTVShowTile2.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeTVShowTile2.Path)]</property>
 								<property name="animate">$INFO[Skin.String(HomeTVShowTile2.Animate)]</property>
@@ -4490,6 +4623,15 @@
 									<height>293</height>
 									<colordiffuse>$VAR[HomeTileChannelsColourVar]</colordiffuse>
 									<texture border="7">$VAR[HomeTiles]</texture>
+									<visible>!Skin.HasSetting(StandardTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>19</posx>
+									<posy>19</posy>
+									<width>293</width>
+									<height>293</height>
+									<texture border="7">special://skin/extras/standard/$INFO[ListItem.Property(tilestandardname)].png</texture>
+									<visible>Skin.HasSetting(StandardTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -4585,6 +4727,15 @@
 										<height>293</height>
 										<colordiffuse>$VAR[HomeTileChannelsColourVar]</colordiffuse>
 										<texture border="7">$VAR[HomeTiles]</texture>
+										<visible>!Skin.HasSetting(StandardTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">special://skin/extras/standard/$INFO[ListItem.Property(tilestandardname)].png</texture>
+										<visible>Skin.HasSetting(StandardTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -4659,6 +4810,7 @@
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<thumb>$INFO[Skin.String(HomeChannelsTile1.Icon)]</thumb>
 								<icon>special://skin/extras/icons/channels.png</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tilechannelsstandard.name)]</property>
 								<property name="pos">top</property>
 								<property name="showlabel">$INFO[Skin.String(HomeChannelsTile1.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeChannelsTile1.Path)]</property>
@@ -4686,6 +4838,7 @@
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<thumb>$INFO[Skin.String(HomeChannelsTile2.Icon)]</thumb>
 								<icon>special://skin/extras/icons/photos.png</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tilechannelsstandard.name)]</property>
 								<property name="pos">top</property>
 								<property name="showlabel">$INFO[Skin.String(HomeChannelsTile2.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeChannelsTile2.Path)]</property>
@@ -4722,6 +4875,15 @@
 									<height>293</height>
 									<colordiffuse>$VAR[HomeTileChannelsColourVar]</colordiffuse>
 									<texture border="7">$VAR[HomeTiles]</texture>
+									<visible>!Skin.HasSetting(StandardTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>19</posx>
+									<posy>19</posy>
+									<width>293</width>
+									<height>293</height>
+									<texture border="7">special://skin/extras/standard/$INFO[ListItem.Property(tilestandardname)].png</texture>
+									<visible>Skin.HasSetting(StandardTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -4813,6 +4975,15 @@
 										<height>293</height>
 										<colordiffuse>$VAR[HomeTileChannelsColourVar]</colordiffuse>
 										<texture border="7">$VAR[HomeTiles]</texture>
+										<visible>!Skin.HasSetting(StandardTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">special://skin/extras/standard/$INFO[ListItem.Property(tilestandardname)].png</texture>
+										<visible>Skin.HasSetting(StandardTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -4883,6 +5054,7 @@
 								<onclick condition="IsEmpty(Skin.String(HomeChannelsTile3.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<icon>$INFO[Skin.String(HomeChannelsTile3.Icon)]</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tilechannelsstandard.name)]</property>
 								<property name="showlabel">$INFO[Skin.String(HomeChannelsTile3.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeChannelsTile3.Path)]</property>
 								<property name="animate">$INFO[Skin.String(HomeChannelsTile3.Animate)]</property>
@@ -4905,6 +5077,7 @@
 								<onclick condition="IsEmpty(Skin.String(HomeChannelsTile4.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<icon>$INFO[Skin.String(HomeChannelsTile4.Icon)]</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tilechannelsstandard.name)]</property>
 								<property name="showlabel">$INFO[Skin.String(HomeChannelsTile4.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeChannelsTile4.Path)]</property>
 								<property name="animate">$INFO[Skin.String(HomeChannelsTile4.Animate)]</property>
@@ -5064,6 +5237,16 @@
 									<height>572</height>
 									<aspectratio>keep</aspectratio>
 									<texture background="true" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.Icon]</texture>
+									<visible>Skin.HasSetting(ShowMusicThumbs)</visible>
+								</control>
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>1020</width>
+									<height>572</height>
+									<aspectratio>keep</aspectratio>
+									<texture background="true" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.Property(Fanart)]</texture>
+									<visible>!Skin.HasSetting(ShowMusicThumbs)</visible>
 								</control>
 							</itemlayout>
 							<focusedlayout width="1020" height="572">
@@ -5074,6 +5257,16 @@
 									<height>572</height>
 									<aspectratio>keep</aspectratio>
 									<texture background="true" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.Icon]</texture>
+									<visible>Skin.HasSetting(ShowMusicThumbs)</visible>
+								</control>
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>1020</width>
+									<height>572</height>
+									<aspectratio>keep</aspectratio>
+									<texture background="true" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.Property(Fanart)]</texture>
+									<visible>!Skin.HasSetting(ShowMusicThumbs)</visible>
 								</control>
 							</focusedlayout>
 							<content>
@@ -5275,6 +5468,15 @@
 									<height>293</height>
 									<colordiffuse>$VAR[HomeTileMusicColourVar]</colordiffuse>
 									<texture border="7">$VAR[HomeTiles]</texture>
+									<visible>!Skin.HasSetting(StandardTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>19</posx>
+									<posy>19</posy>
+									<width>293</width>
+									<height>293</height>
+									<texture border="7">special://skin/extras/standard/$INFO[ListItem.Property(tilestandardname)].png</texture>
+									<visible>Skin.HasSetting(StandardTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -5370,6 +5572,15 @@
 										<height>293</height>
 										<colordiffuse>$VAR[HomeTileMusicColourVar]</colordiffuse>
 										<texture border="7">$VAR[HomeTiles]</texture>
+										<visible>!Skin.HasSetting(StandardTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">special://skin/extras/standard/$INFO[ListItem.Property(tilestandardname)].png</texture>
+										<visible>Skin.HasSetting(StandardTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -5445,6 +5656,7 @@
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<thumb>$INFO[Skin.String(HomeMusicTile3.Icon)]</thumb>
 								<icon>windows/home/icons/music.png</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tilemusicstandard.name)]</property>
 								<property name="pos">top</property>
 								<property name="showlabel">$INFO[Skin.String(HomeMusicTile3.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeMusicTile3.Path)]</property>
@@ -5472,6 +5684,7 @@
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<thumb>$INFO[Skin.String(HomeMusicTile4.Icon)]</thumb>
 								<icon>special://skin/extras/icons/musicvideo.png</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tilemusicstandard.name)]</property>
 								<property name="pos">top</property>
 								<property name="showlabel">$INFO[Skin.String(HomeMusicTile4.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeMusicTile4.Path)]</property>
@@ -5499,6 +5712,7 @@
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<thumb>$INFO[Skin.String(HomeMusicTile4.Icon)]</thumb>
 								<icon>windows/home/icons/addons.png</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tilemusicstandard.name)]</property>
 								<property name="pos">top</property>
 								<property name="showlabel">$INFO[Skin.String(HomeMusicTile4.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeMusicTile4.Path)]</property>
@@ -5534,7 +5748,15 @@
 								<height>293</height>
 								<colordiffuse>$VAR[HomeTileMusicColourVar]</colordiffuse>
 								<texture border="7">$VAR[HomeTiles]</texture>
-								<animation effect="fade" end="90" time="0" condition="true">Conditional</animation>
+								<visible>!Skin.HasSetting(StandardTiles)</visible>
+							</control>
+							<control type="image">
+								<posx>19</posx>
+								<posy>19</posy>
+								<width>293</width>
+								<height>293</height>
+								<texture border="7">special://skin/extras/standard/$INFO[ListItem.Property(tilestandardname)].png</texture>
+								<visible>Skin.HasSetting(StandardTiles)</visible>
 							</control>
 							<control type="group">
 								<animation effect="fade" end="90" time="0" condition="true">Conditional</animation>
@@ -5621,12 +5843,15 @@
 									<height>293</height>
 									<colordiffuse>$VAR[HomeTileMusicColourVar]</colordiffuse>
 									<texture border="7">$VAR[HomeTiles]</texture>
-									<animation type="Focus">
-										<effect type="fade" start="90" end="100" time="200" tween="sine" easing="in" />
-									</animation>
-									<animation type="Unfocus">
-										<effect type="fade" start="100" end="90" time="200" tween="sine" easing="out" />
-									</animation>
+									<visible>!Skin.HasSetting(StandardTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>19</posx>
+									<posy>19</posy>
+									<width>293</width>
+									<height>293</height>
+									<texture border="7">special://skin/extras/standard/$INFO[ListItem.Property(tilestandardname)].png</texture>
+									<visible>Skin.HasSetting(StandardTiles)</visible>
 								</control>
 								<control type="group">
 									<animation type="Focus">
@@ -5704,6 +5929,7 @@
 								<onclick condition="IsEmpty(Skin.String(HomeMusicTile1.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<icon>$INFO[Skin.String(HomeMusicTile1.Icon)]</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tilemusicstandard.name)]</property>
 								<property name="showlabel">$INFO[Skin.String(HomeMusicTile1.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeMusicTile1.Path)]</property>
 								<property name="animate">$INFO[Skin.String(HomeMusicTile1.Animate)]</property>
@@ -5726,6 +5952,7 @@
 								<onclick condition="IsEmpty(Skin.String(HomeMusicTile2.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<icon>$INFO[Skin.String(HomeMusicTile2.Icon)]</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tilemusicstandard.name)]</property>
 								<property name="showlabel">$INFO[Skin.String(HomeMusicTile2.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeMusicTile2.Path)]</property>
 								<property name="animate">$INFO[Skin.String(HomeMusicTile2.Animate)]</property>
@@ -5878,6 +6105,15 @@
 									<height>293</height>
 									<colordiffuse>$VAR[HomeTileApplicationsColourVar]</colordiffuse>
 									<texture border="7">$VAR[HomeTiles]</texture>
+									<visible>!Skin.HasSetting(StandardTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>19</posx>
+									<posy>19</posy>
+									<width>293</width>
+									<height>293</height>
+									<texture border="7">special://skin/extras/standard/$INFO[ListItem.Property(tilestandardname)].png</texture>
+									<visible>Skin.HasSetting(StandardTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -5968,6 +6204,15 @@
 										<height>293</height>
 										<colordiffuse>$VAR[HomeTileApplicationsColourVar]</colordiffuse>
 										<texture border="7">$VAR[HomeTiles]</texture>
+										<visible>!Skin.HasSetting(StandardTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">special://skin/extras/standard/$INFO[ListItem.Property(tilestandardname)].png</texture>
+										<visible>Skin.HasSetting(StandardTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -6036,6 +6281,7 @@
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<thumb>$INFO[Skin.String(HomeProgramTile5.Icon)]</thumb>
 								<icon>windows/home/icons/appearance.png</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tileapplicationsstandard.name)]</property>
 								<property name="pos">top</property>
 								<property name="showlabel">$INFO[Skin.String(HomeProgramTile5.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeProgramTile5.Path)]</property>
@@ -6062,6 +6308,7 @@
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<thumb>$INFO[Skin.String(HomeProgramTile7.Icon)]</thumb>
 								<icon>windows/home/icons/games.png</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tileapplicationsstandard.name)]</property>
 								<property name="pos">top</property>
 								<property name="showlabel">$INFO[Skin.String(HomeProgramTile7.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeProgramTile7.Path)]</property>
@@ -6085,6 +6332,7 @@
 								<onclick condition="IsEmpty(Skin.String(HomeProgramTile1.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<icon>$INFO[Skin.String(HomeProgramTile1.Icon)]</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tileapplicationsstandard.name)]</property>
 								<property name="showlabel">$INFO[Skin.String(HomeProgramTile1.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeProgramTile1.Path)]</property>
 								<property name="animate">$INFO[Skin.String(HomeProgramTile1.Animate)]</property>
@@ -6108,6 +6356,7 @@
 								<onclick condition="IsEmpty(Skin.String(HomeProgramTile2.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<icon>$INFO[Skin.String(HomeProgramTile2.Icon)]</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tileapplicationsstandard.name)]</property>
 								<property name="showlabel">$INFO[Skin.String(HomeProgramTile2.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeProgramTile2.Path)]</property>
 								<property name="animate">$INFO[Skin.String(HomeProgramTile2.Animate)]</property>
@@ -6134,6 +6383,7 @@
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<thumb>$INFO[Skin.String(HomeProgramTile6.Icon)]</thumb>
 								<icon>windows/home/icons/addons.png</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tileapplicationsstandard.name)]</property>
 								<property name="pos">top</property>
 								<property name="showlabel">$INFO[Skin.String(HomeProgramTile6.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeProgramTile6.Path)]</property>
@@ -6159,6 +6409,7 @@
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<thumb>$INFO[Skin.String(HomeProgramTile8.Icon)]</thumb>
 								<icon>windows/home/icons/pictures.png</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tileapplicationsstandard.name)]</property>
 								<property name="pos">top</property>
 								<property name="showlabel">$INFO[Skin.String(HomeProgramTile8.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeProgramTile8.Path)]</property>
@@ -6182,6 +6433,7 @@
 								<onclick condition="IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<icon>$INFO[Skin.String(HomeProgramTile3.Icon)]</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tileapplicationsstandard.name)]</property>
 								<property name="showlabel">$INFO[Skin.String(HomeProgramTile3.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeProgramTile3.Path)]</property>
 								<property name="animate">$INFO[Skin.String(HomeProgramTile3.Animate)]</property>
@@ -6205,6 +6457,7 @@
 								<onclick condition="IsEmpty(Skin.String(HomeProgramTile4.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
 								<icon>$INFO[Skin.String(HomeProgramTile4.Icon)]</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tileapplicationsstandard.name)]</property>
 								<property name="showlabel">$INFO[Skin.String(HomeProgramTile4.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeProgramTile4.Path)]</property>
 								<property name="animate">$INFO[Skin.String(HomeProgramTile4.Animate)]</property>
@@ -6464,6 +6717,7 @@
 								<onright>AlarmClock(HomeTileMove,Control.Move(7022,1),00:07,silent,loop)</onright>
 								<onright>Control.Move(20,1)</onright>
 								<onright>801</onright>
+								<onclick>ShowPicture($INFO[Container(7022).ListItem.Icon])</onclick>
 								<onright>ClearProperty(ShowMaps)</onright>
 							</control>
 							<control type="image">
@@ -6554,7 +6808,7 @@
 								<texture colordiffuse="HomeTitleOverlay">windows/common/white.png</texture>
 							</control>
 							<control type="group">
-								<visible>!ControlGroup(702).HasFocus + [IsEmpty(Window.Property(Alerts.IsFetched) | [!IsEmpty(Window.Property(Alerts.IsFetched) + StringCompare(Window.Property(Alerts.Count),0)]]</visible>
+								<visible>!ControlGroup(702).HasFocus + [IsEmpty(Window.Property(Alerts.IsFetched)) | [!IsEmpty(Window.Property(Alerts.IsFetched)) + StringCompare(Window.Property(Alerts.Count),0)]]</visible>
 								<control type="textbox">
 									<posx>10</posx>
 									<posy>487</posy>
@@ -6590,7 +6844,7 @@
 								</control>
 							</control>
 							<control type="group">
-								<visible>ControlGroup(702).HasFocus + [IsEmpty(Window.Property(Alerts.IsFetched) | [!IsEmpty(Window.Property(Alerts.IsFetched) + StringCompare(Window.Property(Alerts.Count),0)]]</visible>
+								<visible>ControlGroup(702).HasFocus + [IsEmpty(Window.Property(Alerts.IsFetched)) | [!IsEmpty(Window.Property(Alerts.IsFetched)) + StringCompare(Window.Property(Alerts.Count),0)]]</visible>
 								<control type="image">
 									<posx>332</posx>
 									<posy>574</posy>
@@ -6857,6 +7111,15 @@
 								<height>197</height>
 								<colordiffuse>$VAR[HomeTileWeatherColourVar]</colordiffuse>
 								<texture border="7">$VAR[HomeTiles]</texture>
+								<visible>!Skin.HasSetting(StandardTiles)</visible>
+							</control>
+							<control type="image">
+								<posx>-5</posx>
+								<posy>-5</posy>
+								<width>392</width>
+								<height>197</height>
+								<texture border="7">special://skin/extras/standard/$INFO[Skin.String(tileweatherstandard.name)].png</texture>
+								<visible>Skin.HasSetting(StandardTiles)</visible>
 							</control>
 							<control type="group">
 								<visible>Weather.IsFetched</visible>
@@ -6955,6 +7218,15 @@
 								<height>197</height>
 								<colordiffuse>$VAR[HomeTileWeatherColourVar]</colordiffuse>
 								<texture border="7">$VAR[HomeTiles]</texture>
+								<visible>!Skin.HasSetting(StandardTiles)</visible>
+							</control>
+							<control type="image">
+								<posx>-5</posx>
+								<posy>-5</posy>
+								<width>392</width>
+								<height>197</height>
+								<texture border="7">special://skin/extras/standard/$INFO[Skin.String(tileweatherstandard.name)].png</texture>
+								<visible>Skin.HasSetting(StandardTiles)</visible>
 							</control>
 							<control type="group">
 								<visible>Weather.IsFetched</visible>
@@ -7053,6 +7325,15 @@
 								<height>197</height>
 								<colordiffuse>$VAR[HomeTileWeatherColourVar]</colordiffuse>
 								<texture border="7">$VAR[HomeTiles]</texture>
+								<visible>!Skin.HasSetting(StandardTiles)</visible>
+							</control>
+							<control type="image">
+								<posx>-5</posx>
+								<posy>-5</posy>
+								<width>392</width>
+								<height>197</height>
+								<texture border="7">special://skin/extras/standard/$INFO[Skin.String(tileweatherstandard.name)].png</texture>
+								<visible>Skin.HasSetting(StandardTiles)</visible>
 							</control>
 							<control type="group">
 								<visible>Weather.IsFetched</visible>
@@ -7178,6 +7459,15 @@
 									<height>293</height>
 									<colordiffuse>$VAR[HomeTileWeatherColourVar]</colordiffuse>
 									<texture border="7">$VAR[HomeTiles]</texture>
+									<visible>!Skin.HasSetting(StandardTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>19</posx>
+									<posy>19</posy>
+									<width>293</width>
+									<height>293</height>
+									<texture border="7">special://skin/extras/standard/$INFO[ListItem.Property(tilestandardname)].png</texture>
+									<visible>Skin.HasSetting(StandardTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -7204,6 +7494,19 @@
 									<align>left</align>
 									<aligny>center</aligny>
 									<textoffsetx>20</textoffsetx>
+								</control>
+								<control type="label">
+									<posx>24</posx>
+									<posy>241</posy>
+									<width>283</width>
+									<height>66</height>
+									<label>$INFO[ListItem.Label2]</label>
+									<font>Font-Condensed-S31-B</font>
+									<textcolor>PrimaryOSD</textcolor>
+									<align>right</align>
+									<aligny>center</aligny>
+									<textoffsetx>20</textoffsetx>
+									<visible>!IsEmpty(ListItem.Label2) + IsEmpty(ListItem.Property(Path))</visible>
 								</control>
 							</control>
 						</itemlayout>
@@ -7256,6 +7559,15 @@
 										<height>293</height>
 										<colordiffuse>$VAR[HomeTileWeatherColourVar]</colordiffuse>
 										<texture border="7">$VAR[HomeTiles]</texture>
+										<visible>!Skin.HasSetting(StandardTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">special://skin/extras/standard/$INFO[ListItem.Property(tilestandardname)].png</texture>
+										<visible>Skin.HasSetting(StandardTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -7287,18 +7599,46 @@
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
 									</control>
+									<control type="label">
+										<posx>24</posx>
+										<posy>241</posy>
+										<width>283</width>
+										<height>66</height>
+										<label>$INFO[ListItem.Label]</label>
+										<font>Font-Condensed-S33</font>
+										<textcolor>PrimaryOSD</textcolor>
+										<align>left</align>
+										<aligny>center</aligny>
+										<textoffsetx>20</textoffsetx>
+									</control>
+									<control type="label">
+										<posx>24</posx>
+										<posy>241</posy>
+										<width>283</width>
+										<height>66</height>
+										<label>$INFO[ListItem.Label2]</label>
+										<font>Font-Condensed-S31-B</font>
+										<textcolor>PrimaryOSD</textcolor>
+										<align>right</align>
+										<aligny>center</aligny>
+										<textoffsetx>20</textoffsetx>
+										<visible>!IsEmpty(ListItem.Label2) + IsEmpty(ListItem.Property(Path))</visible>
+									</control>
 								</control>
 							</control>
 						</focusedlayout>
 						<content>
 							<item id="0">
 								<label>$LOCALIZE[8]</label>
+								<label2>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label2>
 								<icon>windows/home/icons/weather.png</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tileweatherstandard.name)]</property>
 								<onclick condition="!IsEmpty(Weather.Plugin)">ActivateWindow(weather)</onclick>
 								<onclick condition="IsEmpty(Weather.Plugin)">ActivateWindow(weathersettings)</onclick>
 							</item>
 							<item id="1">
 								<label>$LOCALIZE[5]</label>
+								<property name="tilestandardname">$INFO[Skin.String(tileweatherstandard.name)]</property>
 								<icon>windows/home/icons/settings.png</icon>
 								<onclick>ActivateWindow(weathersettings)</onclick>
 							</item>
@@ -7427,6 +7767,15 @@
 									<height>293</height>
 									<colordiffuse>$VAR[HomeTileSettingsColourVar]</colordiffuse>
 									<texture border="7">$VAR[HomeTiles]</texture>
+									<visible>!Skin.HasSetting(StandardTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>19</posx>
+									<posy>19</posy>
+									<width>256</width>
+									<height>293</height>
+									<texture border="7">special://skin/extras/standard/$INFO[ListItem.Property(tilestandardname)].png</texture>
+									<visible>Skin.HasSetting(StandardTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -7505,6 +7854,15 @@
 										<height>293</height>
 										<colordiffuse>$VAR[HomeTileSettingsColourVar]</colordiffuse>
 										<texture border="7">$VAR[HomeTiles]</texture>
+										<visible>!Skin.HasSetting(StandardTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>256</width>
+										<height>293</height>
+										<texture border="7">special://skin/extras/standard/$INFO[ListItem.Property(tilestandardname)].png</texture>
+										<visible>Skin.HasSetting(StandardTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -7544,60 +7902,70 @@
 								<label>$LOCALIZE[480]</label>
 								<icon>windows/home/icons/appearance.png</icon>
 								<onclick>ActivateWindow(appearancesettings)</onclick>
+								<property name="tilestandardname">$INFO[Skin.String(tilesettingsstandard.name)]</property>
 								<property name="pos">top</property>
 							</item>
 							<item id="2">
 								<label>$LOCALIZE[157]</label>
 								<icon>windows/home/icons/video.png</icon>
 								<onclick>ActivateWindow(videossettings)</onclick>
+								<property name="tilestandardname">$INFO[Skin.String(tilesettingsstandard.name)]</property>
 								<property name="pos">top</property>
 							</item>
 							<item id="3">
 								<label>$LOCALIZE[2]</label>
 								<icon>windows/home/icons/music.png</icon>
 								<onclick>ActivateWindow(musicsettings)</onclick>
+								<property name="tilestandardname">$INFO[Skin.String(tilesettingsstandard.name)]</property>
 								<property name="pos">top</property>
 							</item>
 							<item id="4">
 								<label>$LOCALIZE[1]</label>
 								<icon>windows/home/icons/pictures.png</icon>
 								<onclick>ActivateWindow(picturessettings)</onclick>
+								<property name="tilestandardname">$INFO[Skin.String(tilesettingsstandard.name)]</property>
 								<property name="pos">top</property>
 							</item>
 							<item id="5">
 								<label>$LOCALIZE[41220]</label>
 								<icon>windows/home/icons/tvshows.png</icon>
 								<onclick>ActivateWindow(pvrsettings)</onclick>
+								<property name="tilestandardname">$INFO[Skin.String(tilesettingsstandard.name)]</property>
 								<property name="pos">top</property>
 							</item>
 							<item id="6">
 								<label>$LOCALIZE[14036]</label>
 								<icon>windows/home/icons/network.png</icon>
 								<onclick>ActivateWindow(servicesettings)</onclick>
+								<property name="tilestandardname">$INFO[Skin.String(tilesettingsstandard.name)]</property>
 								<property name="pos">bottom</property>
 							</item>
 							<item id="7">
 								<label>$LOCALIZE[13200]</label>
 								<icon>windows/home/icons/profiles.png</icon>
 								<onclick>ActivateWindow(profiles)</onclick>
+								<property name="tilestandardname">$INFO[Skin.String(tilesettingsstandard.name)]</property>
 								<property name="pos">bottom</property>
 							</item>
 							<item id="8">
 								<label>$LOCALIZE[24001]</label>
 								<icon>windows/home/icons/addons.png</icon>
 								<onclick>ActivateWindow(addonbrowser)</onclick>
+								<property name="tilestandardname">$INFO[Skin.String(tilesettingsstandard.name)]</property>
 								<property name="pos">bottom</property>
 							</item>
 							<item id="9">
 								<label>$LOCALIZE[166]</label>
 								<icon>windows/home/icons/skin.png</icon>
 								<onclick>ActivateWindow(skinsettings)</onclick>
+								<property name="tilestandardname">$INFO[Skin.String(tilesettingsstandard.name)]</property>
 								<property name="pos">bottom</property>
 							</item>
 							<item id="10">
 								<label>$LOCALIZE[13000]</label>
 								<icon>windows/home/icons/system.png</icon>
 								<onclick>ActivateWindow(systemsettings)</onclick>
+								<property name="tilestandardname">$INFO[Skin.String(tilesettingsstandard.name)]</property>
 								<property name="pos">bottom</property>
 							</item>
 						</content>

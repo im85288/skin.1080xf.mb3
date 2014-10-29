@@ -17,7 +17,7 @@
 	<onload condition="IsEmpty(Skin.String(focuscolor.name))">Skin.SetString(focuscolor.name,Green Focus)</onload>
 	<onload condition="IsEmpty(Skin.String(tilelivetvcolor.name))">Skin.SetString(tilelivetvcolor.name,tilelivetv)</onload>
 	<onload condition="IsEmpty(Skin.String(tilehomecolor.name))">Skin.SetString(tilehomecolor.name,tilehome)</onload>
-	<onload condition="IsEmpty(Skin.String(tilemoviescolor.name))">Skin.SetString(tilelivetvcolor.name,tilemovies)</onload>
+	<onload condition="IsEmpty(Skin.String(tilemoviescolor.name))">Skin.SetString(tilemoviescolor.name,tilemovies)</onload>
 	<onload condition="IsEmpty(Skin.String(tiletvcolor.name))">Skin.SetString(tiletvcolor.name,tiletv)</onload>
 	<onload condition="IsEmpty(Skin.String(tilechannelscolor.name))">Skin.SetString(tilechannelscolor.name,tilechannels)</onload>
 	<onload condition="IsEmpty(Skin.String(tilemusiccolor.name))">Skin.SetString(tilemusiccolor.name,tilemusic)</onload>
@@ -25,7 +25,18 @@
 	<onload condition="IsEmpty(Skin.String(tileweathercolor.name))">Skin.SetString(tileweathercolor.name,tileweather)</onload>
 	<onload condition="IsEmpty(Skin.String(tilesettingscolor.name))">Skin.SetString(tilesettingscolor.name,tilesettings)</onload>
 	<onload condition="IsEmpty(Skin.String(tilesearchcolor.name))">Skin.SetString(tilesearchcolor.name,tilesearch)</onload>
-	<onload>ClearProperty(ShowMaps)</onload>
+	<onload condition="IsEmpty(Skin.String(tilelivetvstandard.name))">Skin.SetString(tilelivetvstandard.name,tile-grey)</onload>
+	<onload condition="IsEmpty(Skin.String(tilehomestandard.name))">Skin.SetString(tilehomestandard.name,tile-grey)</onload>	
+	<onload condition="IsEmpty(Skin.String(tilemoviesstandard.name))">Skin.SetString(tilemoviesstandard.name,tile-blue)</onload>
+	<onload condition="IsEmpty(Skin.String(tiletvstandard.name))">Skin.SetString(tiletvstandard.name,tile-green)</onload>
+	<onload condition="IsEmpty(Skin.String(tilechannelsstandard.name))">Skin.SetString(tilechannelsstandard.name,tile-pink)</onload>
+	<onload condition="IsEmpty(Skin.String(tilemusicstandard.name))">Skin.SetString(tilemusicstandard.name,tile-yellow)</onload>
+	<onload condition="IsEmpty(Skin.String(tileapplicationsstandard.name))">Skin.SetString(tileapplicationsstandard.name,tile-grey)</onload>
+	<onload condition="IsEmpty(Skin.String(tileweatherstandard.name))">Skin.SetString(tileweatherstandard.name,tile-grey)</onload>
+	<onload condition="IsEmpty(Skin.String(tilesettingsstandard.name))">Skin.SetString(tilesettingsstandard.name,tile-grey)</onload>
+	<onload condition="IsEmpty(Skin.String(tilesearchstandard.name))">Skin.SetString(tilesearchstandard.name,tile-grey)</onload>
+	
+	<onload condition="!Container(20).HasFocus(7)">ClearProperty(ShowMaps)</onload>
 	<onunload>CancelAlarm(HomeTileMove,true)</onunload>
 	<onunload>CancelAlarm(HomeTileMoveTwo,true)</onunload>
 	<onunload>CancelAlarm(HomeTileMoveThree,true)</onunload>

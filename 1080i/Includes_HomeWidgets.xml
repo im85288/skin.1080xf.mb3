@@ -102,7 +102,7 @@
 		<include condition="stringcompare(Skin.String(HomeWidget.5.Type),script.randomandlastitems) + stringcompare(Skin.String(HomeWidget.5.SubType),Music)">HomeWidget.5.Playlist.Music</include>
 	</include>
 	<include name="HomeWidget.6">
-		<include condition="!IsEmpty(Window(weather).Property(Map.IsFetched))">HomeWidget.6.Maps</include>
+		<include>HomeWidget.6.Maps</include>
 	</include>
 	<!-- =============== -->
 	<!-- Widget 1 (Home) -->
@@ -7475,306 +7475,336 @@
 	<include name="HomeWidget.5.Widgets.Random">
 		<item id="1">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RandomAlbum.1.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RandomAlbum.1.Thumb)]</icon>
 			<label>$INFO[Window.Property(RandomAlbum.1.Title)]</label>
 			<label2>$INFO[Window.Property(RandomAlbum.1.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RandomAlbum.1.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.1.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RandomAlbum.1.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RandomAlbum.1.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.1.Play))</visible>
 		</item>
 		<item id="2">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RandomAlbum.2.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RandomAlbum.2.Thumb)]</icon>
 			<label>$INFO[Window.Property(RandomAlbum.2.Title)]</label>
 			<label2>$INFO[Window.Property(RandomAlbum.2.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RandomAlbum.2.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.2.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RandomAlbum.2.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RandomAlbum.2.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.2.Play))</visible>
 		</item>
 		<item id="3">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RandomAlbum.3.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RandomAlbum.3.Thumb)]</icon>
 			<label>$INFO[Window.Property(RandomAlbum.3.Title)]</label>
 			<label2>$INFO[Window.Property(RandomAlbum.3.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RandomAlbum.3.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.3.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RandomAlbum.3.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RandomAlbum.3.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.3.Play))</visible>
 		</item>
 		<item id="4">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RandomAlbum.4.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RandomAlbum.4.Thumb)]</icon>
 			<label>$INFO[Window.Property(RandomAlbum.4.Title)]</label>
 			<label2>$INFO[Window.Property(RandomAlbum.4.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RandomAlbum.4.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.4.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RandomAlbum.4.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RandomAlbum.4.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.4.Play))</visible>
 		</item>
 		<item id="5">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RandomAlbum.5.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RandomAlbum.5.Thumb)]</icon>
 			<label>$INFO[Window.Property(RandomAlbum.5.Title)]</label>
 			<label2>$INFO[Window.Property(RandomAlbum.5.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RandomAlbum.5.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.5.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RandomAlbum.5.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RandomAlbum.5.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.5.Play))</visible>
 		</item>
 		<item id="6">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RandomAlbum.6.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RandomAlbum.6.Thumb)]</icon>
 			<label>$INFO[Window.Property(RandomAlbum.6.Title)]</label>
 			<label2>$INFO[Window.Property(RandomAlbum.6.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RandomAlbum.6.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.6.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RandomAlbum.6.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RandomAlbum.6.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.6.Play))</visible>
 		</item>
 		<item id="7">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RandomAlbum.7.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RandomAlbum.7.Thumb)]</icon>
 			<label>$INFO[Window.Property(RandomAlbum.7.Title)]</label>
 			<label2>$INFO[Window.Property(RandomAlbum.7.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RandomAlbum.7.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.7.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RandomAlbum.7.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RandomAlbum.7.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.7.Play))</visible>
 		</item>
 		<item id="8">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RandomAlbum.8.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RandomAlbum.8.Thumb)]</icon>
 			<label>$INFO[Window.Property(RandomAlbum.8.Title)]</label>
 			<label2>$INFO[Window.Property(RandomAlbum.8.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RandomAlbum.8.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.8.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RandomAlbum.8.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RandomAlbum.8.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.8.Play))</visible>
 		</item>
 		<item id="9">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RandomAlbum.9.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RandomAlbum.9.Thumb)]</icon>
 			<label>$INFO[Window.Property(RandomAlbum.9.Title)]</label>
 			<label2>$INFO[Window.Property(RandomAlbum.9.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RandomAlbum.9.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.9.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RandomAlbum.9.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RandomAlbum.9.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.9.Play))</visible>
 		</item>
 		<item id="10">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RandomAlbum.10.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RandomAlbum.10.Thumb)]</icon>
 			<label>$INFO[Window.Property(RandomAlbum.10.Title)]</label>
 			<label2>$INFO[Window.Property(RandomAlbum.10.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RandomAlbum.10.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.10.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RandomAlbum.10.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RandomAlbum.10.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.10.Play))</visible>
 		</item>
 	</include>
 	<include name="HomeWidget.5.Widgets.Recent">
 		<item id="1">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RecentAlbum.1.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RecentAlbum.1.Thumb)]</icon>
 			<label>$INFO[Window.Property(RecentAlbum.1.Title)]</label>
 			<label2>$INFO[Window.Property(RecentAlbum.1.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecentAlbum.1.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecentAlbum.1.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RecentAlbum.1.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RecentAlbum.1.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RecentAlbum.1.Play))</visible>
 		</item>
 		<item id="2">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RecentAlbum.2.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RecentAlbum.2.Thumb)]</icon>
 			<label>$INFO[Window.Property(RecentAlbum.2.Title)]</label>
 			<label2>$INFO[Window.Property(RecentAlbum.2.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecentAlbum.2.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecentAlbum.2.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RecentAlbum.2.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RecentAlbum.2.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RecentAlbum.2.Play))</visible>
 		</item>
 		<item id="3">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RecentAlbum.3.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RecentAlbum.3.Thumb)]</icon>
 			<label>$INFO[Window.Property(RecentAlbum.3.Title)]</label>
 			<label2>$INFO[Window.Property(RecentAlbum.3.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecentAlbum.3.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecentAlbum.3.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RecentAlbum.3.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RecentAlbum.3.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RecentAlbum.3.Play))</visible>
 		</item>
 		<item id="4">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RecentAlbum.4.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RecentAlbum.4.Thumb)]</icon>
 			<label>$INFO[Window.Property(RecentAlbum.4.Title)]</label>
 			<label2>$INFO[Window.Property(RecentAlbum.4.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecentAlbum.4.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecentAlbum.4.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RecentAlbum.4.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RecentAlbum.4.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RecentAlbum.4.Play))</visible>
 		</item>
 		<item id="5">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RecentAlbum.5.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RecentAlbum.5.Thumb)]</icon>
 			<label>$INFO[Window.Property(RecentAlbum.5.Title)]</label>
 			<label2>$INFO[Window.Property(RecentAlbum.5.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecentAlbum.5.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecentAlbum.5.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RecentAlbum.5.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RecentAlbum.5.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RecentAlbum.5.Play))</visible>
 		</item>
 		<item id="6">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RecentAlbum.6.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RecentAlbum.6.Thumb)]</icon>
 			<label>$INFO[Window.Property(RecentAlbum.6.Title)]</label>
 			<label2>$INFO[Window.Property(RecentAlbum.6.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecentAlbum.6.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecentAlbum.6.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RecentAlbum.6.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RecentAlbum.6.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RecentAlbum.6.Play))</visible>
 		</item>
 		<item id="7">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RecentAlbum.7.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RecentAlbum.7.Thumb)]</icon>
 			<label>$INFO[Window.Property(RecentAlbum.7.Title)]</label>
 			<label2>$INFO[Window.Property(RecentAlbum.7.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecentAlbum.7.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecentAlbum.7.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RecentAlbum.7.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RecentAlbum.7.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RecentAlbum.7.Play))</visible>
 		</item>
 		<item id="8">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RecentAlbum.8.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RecentAlbum.8.Thumb)]</icon>
 			<label>$INFO[Window.Property(RecentAlbum.8.Title)]</label>
 			<label2>$INFO[Window.Property(RecentAlbum.8.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecentAlbum.8.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecentAlbum.8.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RecentAlbum.8.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RecentAlbum.8.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RecentAlbum.8.Play))</visible>
 		</item>
 		<item id="9">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RecentAlbum.9.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RecentAlbum.9.Thumb)]</icon>
 			<label>$INFO[Window.Property(RecentAlbum.9.Title)]</label>
 			<label2>$INFO[Window.Property(RecentAlbum.9.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecentAlbum.9.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecentAlbum.9.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RecentAlbum.9.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RecentAlbum.9.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RecentAlbum.9.Play))</visible>
 		</item>
 		<item id="10">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RecentAlbum.10.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RecentAlbum.10.Thumb)]</icon>
 			<label>$INFO[Window.Property(RecentAlbum.10.Title)]</label>
 			<label2>$INFO[Window.Property(RecentAlbum.10.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecentAlbum.10.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecentAlbum.10.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RecentAlbum.10.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RecentAlbum.10.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RecentAlbum.10.Play))</visible>
 		</item>
 	</include>
 	<include name="HomeWidget.5.Widgets.Recommended">
 		<item id="1">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RecommendedAlbum.1.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RecommendedAlbum.1.Thumb)]</icon>
 			<label>$INFO[Window.Property(RecommendedAlbum.1.Title)]</label>
 			<label2>$INFO[Window.Property(RecommendedAlbum.1.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecommendedAlbum.1.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecommendedAlbum.1.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.1.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RecommendedAlbum.1.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RecommendedAlbum.1.Play))</visible>
 		</item>
 		<item id="2">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RecommendedAlbum.2.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RecommendedAlbum.2.Thumb)]</icon>
 			<label>$INFO[Window.Property(RecommendedAlbum.2.Title)]</label>
 			<label2>$INFO[Window.Property(RecommendedAlbum.2.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecommendedAlbum.2.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecommendedAlbum.2.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.2.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RecommendedAlbum.2.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RecommendedAlbum.2.Play))</visible>
 		</item>
 		<item id="3">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RecommendedAlbum.3.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RecommendedAlbum.3.Thumb)]</icon>
 			<label>$INFO[Window.Property(RecommendedAlbum.3.Title)]</label>
 			<label2>$INFO[Window.Property(RecommendedAlbum.3.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecommendedAlbum.3.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecommendedAlbum.3.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.3.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RecommendedAlbum.3.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RecommendedAlbum.3.Play))</visible>
 		</item>
 		<item id="4">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RecommendedAlbum.4.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RecommendedAlbum.4.Thumb)]</icon>
 			<label>$INFO[Window.Property(RecommendedAlbum.4.Title)]</label>
 			<label2>$INFO[Window.Property(RecommendedAlbum.4.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecommendedAlbum.4.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecommendedAlbum.4.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.4.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RecommendedAlbum.4.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RecommendedAlbum.4.Play))</visible>
 		</item>
 		<item id="5">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RecommendedAlbum.5.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RecommendedAlbum.5.Thumb)]</icon>
 			<label>$INFO[Window.Property(RecommendedAlbum.5.Title)]</label>
 			<label2>$INFO[Window.Property(RecommendedAlbum.5.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecommendedAlbum.5.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecommendedAlbum.5.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.5.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RecommendedAlbum.5.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RecommendedAlbum.5.Play))</visible>
 		</item>
 		<item id="6">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RecommendedAlbum.6.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RecommendedAlbum.6.Thumb)]</icon>
 			<label>$INFO[Window.Property(RecommendedAlbum.6.Title)]</label>
 			<label2>$INFO[Window.Property(RecommendedAlbum.6.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecommendedAlbum.6.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecommendedAlbum.6.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.6.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RecommendedAlbum.6.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RecommendedAlbum.6.Play))</visible>
 		</item>
 		<item id="7">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RecommendedAlbum.7.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RecommendedAlbum.7.Thumb)]</icon>
 			<label>$INFO[Window.Property(RecommendedAlbum.7.Title)]</label>
 			<label2>$INFO[Window.Property(RecommendedAlbum.7.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecommendedAlbum.7.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecommendedAlbum.7.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.7.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RecommendedAlbum.7.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RecommendedAlbum.7.Play))</visible>
 		</item>
 		<item id="8">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RecommendedAlbum.8.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RecommendedAlbum.8.Thumb)]</icon>
 			<label>$INFO[Window.Property(RecommendedAlbum.8.Title)]</label>
 			<label2>$INFO[Window.Property(RecommendedAlbum.8.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecommendedAlbum.8.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecommendedAlbum.8.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.8.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RecommendedAlbum.8.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RecommendedAlbum.8.Play))</visible>
 		</item>
 		<item id="9">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RecommendedAlbum.9.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RecommendedAlbum.9.Thumb)]</icon>
 			<label>$INFO[Window.Property(RecommendedAlbum.9.Title)]</label>
 			<label2>$INFO[Window.Property(RecommendedAlbum.9.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecommendedAlbum.9.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecommendedAlbum.9.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.9.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RecommendedAlbum.9.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RecommendedAlbum.9.Play))</visible>
 		</item>
 		<item id="10">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(RecommendedAlbum.10.Fanart)]</icon>
+			<icon>$INFO[Window.Property(RecommendedAlbum.10.Thumb)]</icon>
 			<label>$INFO[Window.Property(RecommendedAlbum.10.Title)]</label>
 			<label2>$INFO[Window.Property(RecommendedAlbum.10.Artist)]</label2>
 			<property name="year">$INFO[Window.Property(RecommendedAlbum.10.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RecommendedAlbum.10.Play)]</property>
 			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.10.Description)]</property>
+			<property name="Fanart">$INFO[Window.Property(RecommendedAlbum.10.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RecommendedAlbum.10.Play))</visible>
 		</item>
 	</include>
@@ -7866,7 +7896,7 @@
 			<label2>$INFO[Window(weather).Property(Map.1.Legend)]</label2>
 			<icon>$INFO[Window(weather).Property(Map.1.Area)]</icon>
 			<property name="Layer">$INFO[Window(weather).Property(Map.1.Layer)]</property>
-			<onclick>noop</onclick>
+			<onclick>ShowPicture(Window(weather).Property(Map.1.Area))</onclick>
 			<visible>Weather.IsFetched + !IsEmpty(Window(weather).Property(Map.1.Area)) + !IsEmpty(Window(weather).Property(Map.IsFetched))</visible>
 		</item>
 		<item id="2">
@@ -7874,7 +7904,7 @@
 			<label2>$INFO[Window(weather).Property(Map.2.Legend)]</label2>
 			<icon>$INFO[Window(weather).Property(Map.2.Area)]</icon>
 			<property name="Layer">$INFO[Window(weather).Property(Map.2.Layer)]</property>
-			<onclick>noop</onclick>
+			<onclick>ShowPicture(Window(weather).Property(Map.2.Area))</onclick>
 			<visible>Weather.IsFetched + !IsEmpty(Window(weather).Property(Map.2.Area)) + !IsEmpty(Window(weather).Property(Map.IsFetched))</visible>
 		</item>
 		<item id="3">
@@ -7882,7 +7912,7 @@
 			<label2>$INFO[Window(weather).Property(Map.3.Legend)]</label2>
 			<icon>$INFO[Window(weather).Property(Map.3.Area)]</icon>
 			<property name="Layer">$INFO[Window(weather).Property(Map.3.Layer)]</property>
-			<onclick>noop</onclick>
+			<onclick>ShowPicture(Window(weather).Property(Map.3.Area))</onclick>
 			<visible>Weather.IsFetched + !IsEmpty(Window(weather).Property(Map.3.Area)) + !IsEmpty(Window(weather).Property(Map.IsFetched))</visible>
 		</item>
 		<item id="4">
@@ -7890,7 +7920,7 @@
 			<label2>$INFO[Window(weather).Property(Map.4.Legend)]</label2>
 			<icon>$INFO[Window(weather).Property(Map.4.Area)]</icon>
 			<property name="Layer">$INFO[Window(weather).Property(Map.4.Layer)]</property>
-			<onclick>noop</onclick>
+			<onclick>ShowPicture(Window(weather).Property(Map.4.Area))</onclick>
 			<visible>Weather.IsFetched + !IsEmpty(Window(weather).Property(Map.4.Area)) + !IsEmpty(Window(weather).Property(Map.IsFetched))</visible>
 		</item>
 		<item id="5">
@@ -7898,7 +7928,7 @@
 			<label2>$INFO[Window(weather).Property(Map.5.Legend)]</label2>
 			<icon>$INFO[Window(weather).Property(Map.5.Area)]</icon>
 			<property name="Layer">$INFO[Window(weather).Property(Map.5.Layer)]</property>
-			<onclick>noop</onclick>
+			<onclick>ShowPicture(Window(weather).Property(Map.5.Area))</onclick>
 			<visible>Weather.IsFetched + !IsEmpty(Window(weather).Property(Map.5.Area)) + !IsEmpty(Window(weather).Property(Map.IsFetched))</visible>
 		</item>
 	</include>

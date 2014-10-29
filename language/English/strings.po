@@ -1222,3 +1222,15 @@ msgstr ""
 msgctxt "#49264"
 msgid "14 day forecast"
 msgstr ""
+
+msgctxt "#49265"
+msgid "Show Thumbs in Music Widget"
+msgstr ""
+
+msgctxt "#49266"
+msgid "Choose from standard tiles"
+msgstr ""
+
+msgctxt "#49267"
+msgid "Select from predefined tiles"
+msgstr ""

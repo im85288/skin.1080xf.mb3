@@ -524,11 +524,11 @@
 				<effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
 				<effect type="slide" start="0,0" end="0,-75" time="300" tween="sine" easing="out" />
 			</animation>
-			<animation type="Conditional" condition="!Window.IsActive(3020) + !Window.IsActive(3021) + !Window.IsActive(3022) + !Window.IsActive(3026) + !Window.IsActive(7020) + !Window.IsActive(7021) + !Window.IsActive(7022)">
+			<animation type="Conditional" condition="!Window.IsActive(3020) + !Window.IsActive(3021) + !Window.IsActive(3022) + !Window.IsActive(3026) + !Window.IsActive(7020) + !Window.IsActive(7021) + !Window.IsActive(7022) + !Window.IsActive(7030) + !Window.IsActive(7031) + !Window.IsActive(7032)">
 				<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="200" />
 				<effect type="zoom" start="100,229,1720,1" end="100,170,1720,70" tween="sine" easing="out" time="200" />
 			</animation>
-			<animation type="Conditional" condition="Window.IsActive(3020) | Window.IsActive(3021) | Window.IsActive(3022) | Window.IsActive(3026) | Window.IsActive(7020) | Window.IsActive(7021) | Window.IsActive(7022)">
+			<animation type="Conditional" condition="Window.IsActive(3020) | Window.IsActive(3021) | Window.IsActive(3022) | Window.IsActive(3026) | Window.IsActive(7020) | Window.IsActive(7021) | Window.IsActive(7022) | Window.IsActive(7030) | Window.IsActive(7031) | Window.IsActive(7032)">
 				<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="200" />
 				<effect type="zoom" start="100,170,1720,70" end="100,229,1720,1" tween="sine" easing="out" time="200" />
 			</animation>

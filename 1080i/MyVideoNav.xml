@@ -549,7 +549,7 @@
 					<control type="radiobutton" id="208">
 						<description>Thumbnail</description>
 						<include>optionsbuttonsdimensions</include>
-						<label>$LOCALIZE[42229]</label>
+						<label>$LOCALIZE[49268]</label>
 						<texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
 						<onclick>Container.SetViewMode(501)</onclick>
 						<selected>Control.IsVisible(501)</selected>

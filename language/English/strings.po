@@ -1234,3 +1234,7 @@ msgstr ""
 msgctxt "#49267"
 msgid "Select from predefined tiles"
 msgstr ""
+
+msgctxt "#49268"
+msgid "Alternate Thumbnail"
+msgstr ""

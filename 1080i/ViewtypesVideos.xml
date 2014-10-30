@@ -298,14 +298,14 @@
 					<control type="group">
 						<visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)</visible>
 						<posx>30</posx>
-							<control type="image">		
-							<posx>1300</posx>		
-							<posy>29</posy>		
-							<width>64</width>		
-							<height>41</height>		
-							<texture>views/list/other/unwatched.png</texture>		
-							<colordiffuse>SecondaryT</colordiffuse>		
-						</control>						
+						<control type="image">
+							<posx>1300</posx>
+							<posy>29</posy>
+							<width>64</width>
+							<height>41</height>
+							<texture>views/list/other/unwatched.png</texture>
+							<colordiffuse>SecondaryT</colordiffuse>
+						</control>
 						<control type="label">
 							<posx>1300</posx>
 							<posy>28</posy>
@@ -317,7 +317,7 @@
 							<scroll>false</scroll>
 							<align>center</align>
 						</control>
-						<visible>Skin.HasSetting(UseKodiLibrary)</visible>	
+						<visible>Skin.HasSetting(UseKodiLibrary)</visible>
 					</control>
 				</itemlayout>
 				<itemlayout height="100" condition="Container.Content(seasons)">
@@ -377,14 +377,14 @@
 					<control type="group">
 						<visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)</visible>
 						<posx>30</posx>
-							<control type="image">		
-							<posx>0</posx>		
-							<posy>29</posy>		
-							<width>64</width>		
-							<height>41</height>		
-							<texture>views/list/other/unwatched.png</texture>		
-							<colordiffuse>SecondaryT</colordiffuse>		
-						</control>						
+						<control type="image">
+							<posx>0</posx>
+							<posy>29</posy>
+							<width>64</width>
+							<height>41</height>
+							<texture>views/list/other/unwatched.png</texture>
+							<colordiffuse>SecondaryT</colordiffuse>
+						</control>
 						<control type="label">
 							<posx>0</posx>
 							<posy>28</posy>
@@ -396,7 +396,7 @@
 							<scroll>false</scroll>
 							<align>center</align>
 						</control>
-						<visible>Skin.HasSetting(UseKodiLibrary)</visible>	
+						<visible>Skin.HasSetting(UseKodiLibrary)</visible>
 					</control>
 				</itemlayout>
 				<itemlayout height="100" condition="Container.Content(episodes)">
@@ -673,7 +673,7 @@
 							<width>100</width>
 							<height>100</height>
 							<colordiffuse>$VAR[Colordiffuse.Color]</colordiffuse>
-						<texture>$VAR[DefaultListOverlay]</texture>
+							<texture>$VAR[DefaultListOverlay]</texture>
 						</control>
 						<control type="label">
 							<description>Year / Genre</description>
@@ -802,18 +802,18 @@
 							<scroll>false</scroll>
 							<visible>!IsEmpty(ListItem.Title)</visible>
 						</control>
-					</control>	
+					</control>
 					<control type="group">
 						<visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)</visible>
 						<posx>30</posx>
-							<control type="image">		
-							<posx>1300</posx>		
-							<posy>29</posy>		
-							<width>64</width>		
-							<height>41</height>		
-							<texture>views/list/other/unwatched.png</texture>		
-							<colordiffuse>SecondaryT</colordiffuse>		
-						</control>						
+						<control type="image">
+							<posx>1300</posx>
+							<posy>29</posy>
+							<width>64</width>
+							<height>41</height>
+							<texture>views/list/other/unwatched.png</texture>
+							<colordiffuse>SecondaryT</colordiffuse>
+						</control>
 						<control type="label">
 							<posx>1300</posx>
 							<posy>28</posy>
@@ -902,18 +902,18 @@
 							<textcolor>SecondaryT</textcolor>
 							<scroll>false</scroll>
 							<visible>!IsEmpty(ListItem.Property(NumEpisodes))</visible>
-						</control>						
+						</control>
 					</control>
 					<control type="group">
 						<visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)</visible>
 						<posx>30</posx>
-							<control type="image">		
-							<posx>0</posx>		
-							<posy>29</posy>		
-							<width>64</width>		
-							<height>41</height>		
-							<texture>views/list/other/unwatched.png</texture>		
-							<colordiffuse>SecondaryT</colordiffuse>		
+						<control type="image">
+							<posx>0</posx>
+							<posy>29</posy>
+							<width>64</width>
+							<height>41</height>
+							<texture>views/list/other/unwatched.png</texture>
+							<colordiffuse>SecondaryT</colordiffuse>
 						</control>
 						<control type="label">
 							<posx>0</posx>
@@ -926,7 +926,7 @@
 							<scroll>false</scroll>
 							<align>center</align>
 						</control>
-						<visible>Skin.HasSetting(UseKodiLibrary)</visible>						
+						<visible>Skin.HasSetting(UseKodiLibrary)</visible>
 					</control>
 				</focusedlayout>
 				<focusedlayout height="100" condition="Container.Content(episodes)">
@@ -2542,7 +2542,7 @@
 							<texture background="true">$VAR[ClearArt]</texture>
 							<colordiffuse>bbwhite</colordiffuse>
 							<aspectratio align="right" aligny="bottom" scalediffuse="false">keep</aspectratio>
-						    <visible>Skin.HasSetting(ViewsClearArt.Enabled)</visible>
+							<visible>Skin.HasSetting(ViewsClearArt.Enabled)</visible>
 						</control>
 						<control type="label">
 							<posx>30</posx>
@@ -4215,7 +4215,7 @@
 					<pagecontrol>70</pagecontrol>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<orientation>vertical</orientation>
-					<viewtype label="42229">list</viewtype>
+					<viewtype label="49268">list</viewtype>
 					<onleft>70</onleft>
 					<onright condition="!Skin.HasSetting(KioskMode)">9010</onright>
 					<onright condition="Skin.HasSetting(KioskMode)">501</onright>
@@ -4265,7 +4265,7 @@
 							<width>236</width>
 							<height>354</height>
 							<bordertexture border="1">windows/common/darkgrey.png</bordertexture>
-							<texture background="true">$VAR[WallPoster]</texture>
+							<texture background="true">$VAR[VideoWallPoster]</texture>
 							<colordiffuse>eewhite</colordiffuse>
 							<aspectratio>scale</aspectratio>
 							<visible>!Container.Content(Genres)</visible>
@@ -4358,7 +4358,7 @@
 								<height>354</height>
 								<bordertexture border="1">windows/common/darkgrey.png</bordertexture>
 								<aspectratio scalediffuse="false">scale</aspectratio>
-								<texture background="true">$VAR[WallPoster]</texture>
+								<texture background="true">$VAR[VideoWallPoster]</texture>
 								<visible>!Container.Content(Genres)</visible>
 							</control>
 							<control type="image">
@@ -5383,7 +5383,7 @@
 				<posy>25</posy>
 				<width>1216</width>
 				<height>684</height>
-				<texture background="true" diffuse="special://skin/extras/fade/lovefilm.png">$VAR[ListInfoLandscapeVar2]</texture>
+				<texture background="true">$VAR[ListInfoLandscapeVar2]</texture>
 				<aspectratio scalediffuse="false">keep</aspectratio>
 				<fadetime>200</fadetime>
 				<visible>!Container.Content(albums)</visible>
@@ -5415,37 +5415,40 @@
 				<posx>100</posx>
 				<posy>170</posy>
 				<width>495</width>
-				<height>470</height>
+				<height>500</height>
 				<label>$INFO[ListItem.Plot]</label>
 				<textcolor>SecondaryT</textcolor>
 				<font>Font-Condensed-S28</font>
 				<align>justify</align>
 				<scroll>false</scroll>
 				<visible>!Container.Content(artists) + !Container.Content(albums)</visible>
+				<autoscroll delay="8000" time="3000" repeat="13000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
 			</control>
 			<control type="textbox">
 				<posx>100</posx>
 				<posy>170</posy>
 				<width>495</width>
-				<height>470</height>
+				<height>490</height>
 				<label>$VAR[MusicPlotBox]</label>
 				<textcolor>SecondaryT</textcolor>
 				<font>Font-Condensed-S28</font>
 				<align>justify</align>
 				<scroll>false</scroll>
 				<visible>Container.Content(artists)</visible>
+				<autoscroll delay="8000" time="3000" repeat="13000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
 			</control>
 			<control type="textbox">
 				<posx>100</posx>
 				<posy>170</posy>
 				<width>1022</width>
-				<height>470</height>
+				<height>490</height>
 				<label>$VAR[MusicPlotBox]</label>
 				<textcolor>SecondaryT</textcolor>
 				<font>Font-Condensed-S28</font>
 				<align>justify</align>
 				<scroll>false</scroll>
 				<visible>Container.Content(albums)</visible>
+				<autoscroll delay="8000" time="3000" repeat="13000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
 			</control>
 		</control>
 	</include>
@@ -5485,8 +5488,8 @@
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<orientation>horizontal</orientation>
 				<viewtype label="42256">list</viewtype>
-				<ondown>70</ondown>
-				<pagecontrol>70</pagecontrol>
+				<ondown>706</ondown>
+				<pagecontrol>706</pagecontrol>
 				<onup condition="!Skin.HasSetting(KioskMode)">9010</onup>
 				<onup condition="Skin.HasSetting(KioskMode)">566</onup>
 				<onleft>566</onleft>
@@ -5502,22 +5505,18 @@
 			</control>
 		</control>
 		<!--Scrollbar -->
-		<control type="scrollbar" id="70">
+		<control type="scrollbar" id="706">
 			<description>Scrollbar</description>
-			<width>1920</width>
-			<height>26</height>
-			<posy>26r</posy>
+			<width>1820</width>
+			<height>20</height>
+			<posy>900</posy>
+			<posx>40</posx>
 			<orientation>horizontal</orientation>
-			<textureslidernib colordiffuse="PrimaryT">views/other/scrollbar-sq.png</textureslidernib>
-			<textureslidernibfocus colordiffuse="PrimaryT">views/other/scrollbar-sq.png</textureslidernibfocus>
-			<showonepage>true</showonepage>
+			<texturesliderbarfocus colordiffuse="PrimaryT" border="1">windows/common/white.png</texturesliderbarfocus>			
+			<showonepage>false</showonepage>
 			<onup>566</onup>
 			<ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
 			<ondown condition="Skin.HasSetting(KioskMode)">566</ondown>
-			<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
-			<animation effect="fade" start="40" end="100" time="300" tween="sine" easing="inout" condition="Control.HasFocus(70)">Conditional</animation>
-			<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(70)">Conditional</animation>
-			<visible>Control.IsVisible(566)</visible>
 		</control>
 	</include>
 	<!-- =============== -->
@@ -5553,7 +5552,7 @@
 							<posy>12</posy>
 							<width>226</width>
 							<height>340</height>
-							<texture background="true">$VAR[WallPoster]</texture>
+							<texture background="true">$VAR[VideoWallPoster]</texture>
 							<colordiffuse>FF444444</colordiffuse>
 							<aspectratio>keep</aspectratio>
 						</control>
@@ -5591,7 +5590,7 @@
 								<width>226</width>
 								<height>340</height>
 								<aspectratio scalediffuse="false">keep</aspectratio>
-								<texture background="true" diffuse="views/posterview/diffuse.png">$VAR[WallPoster]</texture>
+								<texture background="true" diffuse="views/posterview/diffuse.png">$VAR[VideoWallPoster]</texture>
 							</control>
 							<control type="image">
 								<description>Overlay</description>

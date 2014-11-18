@@ -4,7 +4,7 @@
 	<zorder>2</zorder>
 	<coordinates>
 		<system>1</system>
-		<left>300</left>
+		<left>330</left>
 		<top>50</top>
 	</coordinates>
 	<include>dialogeffect</include>
@@ -16,23 +16,14 @@
 			<height>851</height>
 			<texture colordiffuse="FF333333">windows/common/white.png</texture>
 		</control>
-		<control type="image">
-			<left>20</left>
-			<top>20</top>
-			<width>1000</width>
-			<height>560</height>
-			<texture>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</texture>
-			<visible>![Skin.HasSetting(UseCustomBackground) + !IsEmpty(Skin.String(CustomBackgroundPath))]</visible>
-			<include>VisibleFadeEffect</include>
-			<colordiffuse>FF444444</colordiffuse>
-		</control>
+		
 		<control type="label" id="1">
 			<description>header label</description>
 			<left>40</left>
 			<top>30</top>
 			<width>1160</width>
 			<height>30</height>
-			<font>font24_title</font>
+			<font>Font-Condensed-S38</font>
 			<label>Person Info</label>
 			<align>center</align>
 			<aligny>center</aligny>
@@ -42,21 +33,21 @@
 		<!-- <control type="button" id="8"> <description>Close Window button</description> <left>960</left> <top>15</top> <width>64</width> <height>32</height> <label>-</label> <font>-</font> <onclick>PreviousMenu</onclick> <texturefocus>DialogCloseButton-focus.png</texturefocus> <texturenofocus>DialogCloseButton.png</texturenofocus> <onleft>-</onleft> <onright>-</onright> <onup>-</onup> <ondown>3005</ondown> </control> -->
 		<control type="label" id="3000">
 			<description>person name</description>
-			<left>40</left>
-			<top>45</top>
+			<left>35</left>
+			<top>35</top>
 			<width>1120</width>
 			<height>100</height>
 			<align>left</align>
 			<label>-</label>
-			<font>font13</font>
+			<font>Font-Condensed-S32</font>
 			<textcolor>$VAR[FocusModColourVar]</textcolor>
 		</control>
+		<!-- Actor Image -->
 		<control type="image" id="3009">
-			<left>-45</left>
+			<left>18</left>
 			<top>110</top>
-			<width>450</width>
+			<width>337</width>
 			<height>450</height>
-			<align>left</align>
 			<aspectratio>keep</aspectratio>
 		</control>
 		<control type="textbox" id="3001">
@@ -67,15 +58,15 @@
 			<height>440</height>
 			<align>justify</align>
 			<label>-</label>
-			<font>font12</font>
+			<font>Font-Condensed-S27</font>
 			<textcolor>white</textcolor>
-			<autoscroll delay="13000" time="3000" repeat="13000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
+			<autoscroll delay="8000" time="3000" repeat="13000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
 		</control>
 		<control type="list" id="3010">
-			<left>40</left>
-			<top>550</top>
+			<left>35</left>
+			<top>555</top>
 			<width>1200</width>
-			<height>370</height>
+			<height>365</height>
 			<onleft>-</onleft>
 			<onright>-</onright>
 			<onup>-</onup>
@@ -86,15 +77,15 @@
 			<itemlayout width="200">
 				<control type="image">
 					<left>0</left>
-					<top>0</top>
+					<top>10</top>
 					<width>200</width>
-					<height>300</height>
+					<height>280</height>
 					<texture>$INFO[Listitem.Icon]</texture>
 					<bordersize>5</bordersize>
 				</control>
 				<control type="label">
 					<left>0</left>
-					<top>302</top>
+					<top>292</top>
 					<width>200</width>
 					<height>20</height>
 					<align>left</align>
@@ -106,14 +97,14 @@
 			<focusedlayout width="200">
 				<control type="image">
 					<left>0</left>
-					<top>0</top>
+					<top>10</top>
 					<width>200</width>
-					<height>300</height>
+					<height>280</height>
 					<texture>$INFO[Listitem.Icon]</texture>
 				</control>
 				<control type="image"> <!--focused background left edge -->
 					<posx>0</posx>
-					<posy>300</posy>
+					<posy>290</posy>
 					<width>200</width>
 					<height>5</height>
 					<visible>Control.HasFocus(3010)</visible>
@@ -121,7 +112,7 @@
 				</control>
 				<control type="label">
 					<left>0</left>
-					<top>302</top>
+					<top>298</top>
 					<width>200</width>
 					<height>20</height>
 					<align>left</align>
@@ -132,7 +123,7 @@
 				</control>
 				<control type="label">
 					<left>0</left>
-					<top>302</top>
+					<top>298</top>
 					<width>200</width>
 					<height>20</height>
 					<align>left</align>
@@ -145,10 +136,10 @@
 		</control>
 		<control type="scrollbar" id="3011">
 			<left>40</left>
-			<top>880</top>
+			<top>870</top>
 			<width>1200</width>
 			<height>10</height>
-			<texturesliderbarfocus colordiffuse="CC888888" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+			<texturesliderbarfocus colordiffuse="$VAR[FocusModColourVar]" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
 			<onup>3010</onup>
 			<showonepage>false</showonepage>
 			<orientation>horizontal</orientation>

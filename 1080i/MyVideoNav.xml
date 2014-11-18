@@ -280,6 +280,19 @@
 						<radioposx>-19</radioposx>
 						<visible>!Container.Content(episodes)</visible>
 					</control>
+					<control type="radiobutton" id="179">
+						<description>Show full fanart</description>
+						<include>optionsbuttonsdimensions</include>
+						<label>$LOCALIZE[49269]</label>
+						<texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
+						<onclick>Skin.ToggleSetting(InfoListShowFullFanart)</onclick>
+						<selected>Skin.HasSetting(InfoListShowFullFanart)</selected>
+						<visible>Control.IsVisible(52)</visible>
+						<textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
+						<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
+						<radioposx>-19</radioposx>
+						<visible>!Container.Content(episodes)</visible>
+					</control>
 					<control type="radiobutton" id="117">
 						<description>Show info in Info Panel</description>
 						<include>optionsbuttonsdimensions</include>

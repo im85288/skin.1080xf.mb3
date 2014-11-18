@@ -11,28 +11,27 @@
 				<visible>!Control.IsVisible(553) | [Control.IsVisible(553) + Window.IsActive(movieinformation)]</visible>
 				<animation effect="slide" end="-65" time="300" tween="sine" easing="inout" condition="Window.IsActive(mutebug)">Conditional</animation>
 				<animation effect="slide" end="-60" time="300" tween="sine" easing="inout" condition="PVR.IsRecording | PVR.HasTimer">Conditional</animation>
-			
 				<control type="label">
 					<description>Temperature Label</description>
-					<posx>1640</posx>
-					<posy>980</posy>
-					<width>120</width>
+					<left>1575</left>
+					<posy>977</posy>
+					<width>180</width>
 					<height>100</height>
 					<label>[B]$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits][/B]</label>
-					<font>Font-Condensed-S34-B</font>
+					<font>Font-Condensed-S31-B</font>
 					<textcolor>PrimaryT</textcolor>
 					<shadowcolor>22000000</shadowcolor>
-					<align>left</align>
+					<align>right</align>
 					<aligny>top</aligny>
 					<scroll>false</scroll>
 					<animation effect="slide" end="103" time="300" tween="sine" easing="inout" condition="!Weather.IsFetched | [stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]">Conditional</animation>
 				</control>
-					<control type="image">
+				<control type="image">
 					<description>Small weather</description>
-					<posx>1686</posx>
-					<posy>950</posy>
-					<width>100</width>
-					<height>100</height>
+					<left>1743</left>
+					<posy>979</posy>
+					<width>85</width>
+					<height>85</height>
 					<texture colordiffuse="PrimaryT">weather/small/$INFO[Weather.FanartCode].png</texture>
 					<visible>Weather.IsFetched + ![stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]</visible>
 					<include>visiblehidefadeinfo</include>
@@ -41,12 +40,12 @@
 				</control>
 				<control type="label">
 					<description>Clock label</description>
-					<posx>1880</posx>
-					<posy>968</posy>
+					<left>1575</left>
+					<posy>1012</posy>
 					<width>180</width>
 					<height>100</height>
 					<label>[B]$INFO[System.Time(hh:mm)][/B]</label>
-					<font>Font-Condensed-S50-B</font>
+					<font>Font-Condensed-S34-B</font>
 					<textcolor>PrimaryT</textcolor>
 					<shadowcolor>22000000</shadowcolor>
 					<align>right</align>
@@ -54,7 +53,7 @@
 					<scroll>false</scroll>
 					<animation effect="slide" end="28" time="300" tween="sine" easing="inout" condition="!Weather.IsFetched | [stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]">Conditional</animation>
 				</control>
-				<control type="label">
+			<!--  	<control type="label">
 					<description>Date label</description>
 					<posx>1685</posx>
 					<posy>1019</posy>
@@ -68,7 +67,7 @@
 					<aligny>top</aligny>
 					<scroll>false</scroll>
 					<animation effect="slide" end="60" time="300" tween="sine" easing="inout" condition="!Weather.IsFetched | [stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]">Conditional</animation>
-				</control>
+				</control> -->
 			</control>
 			<control type="group">
 				<visible>Control.IsVisible(553) + !Window.IsActive(movieinformation)</visible>
@@ -342,11 +341,12 @@
 	</variable>
 	<include name="Common-NowPlaying">
 		<control type="group">
-		    <visible>!Control.IsVisible(553) | [Control.IsVisible(553) + Window.IsActive(movieinformation)]</visible>
+			<visible>!Control.IsVisible(553) | [Control.IsVisible(553) + Window.IsActive(movieinformation)]</visible>
 			<posx>1741</posx>
 			<posy>26</posy>
 			<include>BannerListInfoAnimationNoOpenClose</include>
 			<visible>Player.HasMedia + IsEmpty(Window(videos).property(TvTunesIsAlive)) + !Window.IsActive(visualisation)</visible>
+			<visible>Player.HasMedia + IsEmpty(Window(Home).property(ThemeMediaMB3IsAlive)) + !Window.IsActive(visualisation)</visible>
 			<animation effect="slide" end="-76" time="300" tween="sine" easing="inout" condition="Window.IsActive(busydialog)">Conditional</animation>
 			<animation type="Conditional" condition="Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog) | Window.IsActive(volumebar)">
 				<effect type="fade" start="100" end="8" tween="sine" easing="out" time="300" />
@@ -448,11 +448,12 @@
 			</control>
 		</control>
 		<control type="group">
-		    <visible>Control.IsVisible(553) + !Window.IsActive(movieinformation)</visible>
+			<visible>Control.IsVisible(553) + !Window.IsActive(movieinformation)</visible>
 			<posx>1741</posx>
 			<posy>26</posy>
 			<include>BannerListInfoAnimationNoOpenClose</include>
 			<visible>Player.HasMedia + IsEmpty(Window(videos).property(TvTunesIsAlive)) + !Window.IsActive(visualisation)</visible>
+			<visible>Player.HasMedia + IsEmpty(Window(Home).property(ThemeMediaMB3IsAlive)) + !Window.IsActive(visualisation)</visible>
 			<animation effect="slide" end="-76" time="300" tween="sine" easing="inout" condition="Window.IsActive(busydialog)">Conditional</animation>
 			<animation type="Conditional" condition="Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog) | Window.IsActive(volumebar)">
 				<effect type="fade" start="100" end="8" tween="sine" easing="out" time="300" />

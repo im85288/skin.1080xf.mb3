@@ -1425,7 +1425,7 @@
 				</control>
 				<control type="group" id="550">
 					<posy>100</posy>
-					<posx>295</posx>
+					<posx>315</posx>
 					<animation type="WindowOpen" condition="[Container(20).HasFocus(1) + !System.GetBool(pvrmanager.enabled)] | [Container(20).HasFocus(9) + System.GetBool(pvrmanager.enabled)]" reversible="true">
 						<effect type="slide" start="1500" end="0" tween="cubic" easing="out" time="700" />
 						<effect type="fade" start="25" end="100" tween="sine" easing="in" time="350" delay="250" />
@@ -2501,7 +2501,7 @@
 				</control>
 				<control type="group" id="250">
 					<posy>100</posy>
-					<posx>295</posx>
+					<posx>365</posx>
 					<animation type="WindowOpen" condition="Container(20).HasFocus(2)" reversible="true">
 						<effect type="slide" start="1500" end="0" tween="cubic" easing="out" time="700" />
 						<effect type="fade" start="25" end="100" tween="sine" easing="in" time="350" delay="250" />
@@ -2528,7 +2528,7 @@
 					</animation>
 					<animation type="Conditional" condition="!Container(20).HasFocus(3) | Container(20).OnScrollNext | Container(20).OnScrollPrevious | Container(20).Scrolling | Window.IsVisible(shutdownmenu)">
 						<effect type="fade" start="100" end="80" time="500" tween="cubic" easing="inout" />
-						<effect type="zoom" start="100" end="50" time="500" tween="cubic" easing="inout" center="1220,386" />
+						<effect type="zoom" start="100" end="60" time="500" tween="cubic" easing="inout" center="1220,386" />
 					</animation>
 					<control type="image">
 						<description>Bottom shadow</description>
@@ -3450,7 +3450,7 @@
 				</control>
 				<control type="group" id="350">
 					<posy>100</posy>
-					<posx>295</posx>
+					<posx>365</posx>
 					<animation type="WindowOpen" condition="Container(20).HasFocus(3) | [Container(20).HasFocus(2) + Skin.HasSetting(HomeMovies)]" reversible="true">
 						<effect type="slide" start="1500" end="0" tween="cubic" easing="out" time="700" />
 						<effect type="fade" start="25" end="100" tween="sine" easing="in" time="350" delay="250" />
@@ -4380,7 +4380,7 @@
 				</control>
 				<control type="group" id="1150">
 					<posy>100</posy>
-					<posx>295</posx>
+					<posx>365</posx>
 					<animation type="WindowOpen" condition="Container(20).HasFocus(4) | [Container(20).HasFocus(3) + Skin.HasSetting(HomeTVShows)] | [Container(20).HasFocus(2) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)]" reversible="true">
 						<effect type="slide" start="1500" end="0" tween="cubic" easing="out" time="700" />
 						<effect type="fade" start="25" end="100" tween="sine" easing="in" time="350" delay="250" />
@@ -5164,7 +5164,7 @@
 				</control>
 				<control type="group" id="450">
 					<posy>100</posy>
-					<posx>295</posx>
+					<posx>320</posx>
 					<animation type="WindowOpen" condition="Container(20).HasFocus(11) | [Container(20).HasFocus(4) + Skin.HasSetting(HomeChannels)] | [Container(20).HasFocus(3) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeTVShows)] | [Container(20).HasFocus(2) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)]" reversible="true">
 						<effect type="slide" start="1500" end="0" tween="cubic" easing="out" time="700" />
 						<effect type="fade" start="25" end="100" tween="sine" easing="in" time="350" delay="250" />
@@ -5193,7 +5193,7 @@
 					<animation effect="slide" end="-39" time="500" tween="cubic" easing="inout" condition="Container(20).HasFocus(6) | Container(20).HasFocus(7) | Container(20).HasFocus(8)">Conditional</animation>
 					<animation type="Conditional" condition="!Container(20).HasFocus(5) | Container(20).OnScrollNext | Container(20).OnScrollPrevious | Container(20).Scrolling | Window.IsVisible(shutdownmenu)">
 						<effect type="fade" start="100" end="80" time="500" tween="cubic" easing="inout" />
-						<effect type="zoom" start="100" end="60" time="500" tween="cubic" easing="inout" center="1160,386" />
+						<effect type="zoom" start="100" end="57" time="500" tween="cubic" easing="inout" center="1160,386" />
 					</animation>
 					<control type="image">
 						<description>Bottom shadow</description>
@@ -6067,7 +6067,7 @@
 					<animation effect="slide" end="50" time="500" tween="cubic" easing="inout" condition="Container(20).HasFocus(7)">Conditional</animation>
 					<animation type="Conditional" condition="!Container(20).HasFocus(6) | Container(20).OnScrollNext | Container(20).OnScrollPrevious | Container(20).Scrolling | Window.IsVisible(shutdownmenu)">
 						<effect type="fade" start="100" end="80" time="500" tween="cubic" easing="inout" />
-						<effect type="zoom" start="100" end="60" time="500" tween="cubic" easing="inout" center="1160,386" />
+						<effect type="zoom" start="100" end="65" time="500" tween="cubic" easing="inout" center="1160,386" />
 					</animation>
 					<control type="image">
 						<description>Bottom shadow</description>
@@ -6515,7 +6515,7 @@
 				</control>
 				<control type="group" id="750">
 					<posy>100</posy>
-					<posx>295</posx>
+					<posx>320</posx>
 					<animation type="WindowOpen" condition="Container(20).HasFocus(6) | [Container(20).HasFocus(5) + Skin.HasSetting(HomePrograms)] | [Container(20).HasFocus(11) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic)] | [Container(20).HasFocus(4) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels)] | [Container(20).HasFocus(3) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeTVShows)] | [Container(20).HasFocus(2) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)]" reversible="true">
 						<effect type="slide" start="1500" end="0" tween="cubic" easing="out" time="700" />
 						<effect type="fade" start="25" end="100" tween="sine" easing="in" time="350" delay="250" />
@@ -6542,7 +6542,7 @@
 					</animation>
 					<animation type="Conditional" condition="!Container(20).HasFocus(7) | Container(20).OnScrollNext | Container(20).OnScrollPrevious | Container(20).Scrolling | Window.IsVisible(shutdownmenu)">
 						<effect type="fade" start="100" end="80" time="500" tween="cubic" easing="inout" />
-						<effect type="zoom" start="100" end="60" time="500" tween="cubic" easing="inout" center="1160,386" />
+						<effect type="zoom" start="100" end="57" time="500" tween="cubic" easing="inout" center="1160,386" />
 					</animation>
 					<control type="image">
 						<description>Bottom shadow</description>

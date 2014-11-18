@@ -7,7 +7,11 @@
 		<left>120</left>
 		<top>50</top>
 	</coordinates>
-	<include>dialogeffect</include>
+	<animation effect="slide" start="-2242,0" end="0,0" time="520" tween="quadratic">WindowOpen</animation>
+	<animation effect="slide" end="-2242,0" time="520" tween="quadratic">WindowClose</animation>
+	<animation effect="slide" start="2242,0" end="0,0" time="320" tween="quadratic" condition="!Window.IsVisible(script-Actors-DialogVideoInfo.xml)|!Window.IsVisible(script-Actors-DialogInfo.xml)">Conditional</animation>
+	<animation effect="slide" end="2242,0" time="320" tween="quadratic" condition="Window.IsVisible(script-Actors-DialogVideoInfo.xml)|Window.IsVisible(script-Actors-DialogInfo.xml)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="-729,0" time="320" tween="quadratic" condition="Skin.HasSetting(VideoInfoInverse)">Conditional</animation>
 	<controls>
 		<control type="image">
 			<left>0</left>
@@ -23,38 +27,50 @@
 			<height>860</height>
 			<colordiffuse>FF444444</colordiffuse>
 		</control>
+		<!-- Title label -->
 		<control type="label" id="3000">
-			<left>30</left>
-			<top>30</top>
-			<width>1450</width>
-			<height>20</height>
-			<align>center</align>
-			<label>-</label>
-			<font>font24_title</font>
-			<textcolor>$VAR[FocusModColourVar]</textcolor>
-		</control>
-		<control type="label" id="3003">
-			<left>30</left>
-			<top>55</top>
-			<width>300</width>
-			<height>20</height>
+			<left>610</left>
+			<top>20</top>
+			<width>710</width>
+			<height>40</height>
 			<align>left</align>
 			<label>-</label>
-			<font>font18_title</font>
+			<font>Font-Condensed-S38-Upper</font>
 			<textcolor>FFFFFFFFFF</textcolor>
 		</control>
-		<!-- episode image 16x9 -->
+		<!-- Episode/Tag Line -->
+		<control type="label" id="3003">
+			<left>610</left>
+			<top>62</top>
+			<width>710</width>
+			<height>35</height>
+			<align>left</align>
+			<label>-</label>
+			<font>Font-Condensed-S30</font>
+			<textcolor>$VAR[FocusModColourVar]</textcolor>
+		</control>
+		<!-- episode image season poster -->
 		<control type="image" id="3009">
-			<left>40</left>
-			<top>130</top>
-			<width>300</width>
-			<height>169</height>
-			<aspectratio>stretch</aspectratio>
+			<left>20</left>
+			<top>20</top>
+			<width>580</width>
+			<height>860</height>
+			<aspectratio>keep</aspectratio>
+			<visible>!Control.HasFocus(3291) | [Control.HasFocus(3291) + isEmpty(Container(3291).ListItem.Icon)]</visible>
+		</control>
+		<control type="image">
+			<left>20</left>
+			<top>20</top>
+			<width>580</width>
+			<height>860</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[Container(3291).ListItem.Icon]</texture>
+			<visible>Control.HasFocus(3291)</visible>
 		</control>
 		<control type="image" id="3010">
-			<left>40</left>
-			<top>265</top>
-			<width>250</width>
+			<left>60</left>
+			<top>345</top>
+			<width>175</width>
 			<height>5</height>
 			<texture background="true">-</texture>
 			<colordiffuse>AAFFFFFF</colordiffuse>
@@ -62,11 +78,12 @@
 		</control>
 		<!-- poster image -->
 		<control type="image" id="3011">
-			<left>60</left>
-			<top>100</top>
-			<width>300</width>
-			<height>450</height>
-			<aspectratio>keep</aspectratio>
+			<left>20</left>
+			<top>20</top>
+			<width>580</width>
+			<height>860</height>
+			<aspectratio>stretch</aspectratio>
+			<visible>!Control.HasFocus(3291) | [Control.HasFocus(3291) + isEmpty(Container(3291).ListItem.Icon)]</visible>
 		</control>
 		<control type="image" id="3012">
 			<left>60</left>
@@ -77,85 +94,54 @@
 			<colordiffuse>AAFFFFFF</colordiffuse>
 			<aspectratio>stretch</aspectratio>
 		</control>
+		<!-- discart -->
+		<control type="image" id="3091">
+			<left>-450</left>
+			<top>545</top>
+			<width>300</width>
+			<height>300</height>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="slide" start="0,0" end="1800,0" delay="600" time="1800" tween="quadratic" easing="out" />
+				<effect type="rotate" start="0" center="auto" end="-720" delay="400" time="1800" tween="quadratic" easing="out" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="slide" start="1800,0" end="2220,0" time="320" tween="quadratic" easing="out" />
+			</animation>
+		</control>
+		<!-- art when no discart -->
+		<control type="image" id="3092">
+			<left>1340</left>
+			<top>645</top>
+			<width>300</width>
+			<height>169</height>
+		</control>
+		<!-- studio shown when art logo available -->
+		<control type="image">
+			<left>1585</left>
+			<top>850</top>
+			<width>75</width>
+			<height>25</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<texture>$VAR[AeonFlagStudio]</texture>
+			<visible>Control.IsVisible(3092)</visible>
+		</control>
+		<!-- studio shown when discart not available and no art logo -->
+		<control type="image">
+			<left>1340</left>
+			<top>645</top>
+			<width>300</width>
+			<height>50</height>
+			<aligny>center</aligny>
+			<texture>$VAR[AeonFlagStudio]</texture>
+			<visible>!Control.IsVisible(3091) + !Control.IsVisible(3092)</visible>
+		</control>
+		<!-- Video resolution etc list NOT SHOWN -->
 		<control type="list" id="3220">
-			<left>30</left>
-			<top>600</top>
-			<width>350</width>
-			<height>205</height>
-			<onleft>3002</onleft>
-			<onright>3221</onright>
-			<onup>3235</onup>
-			<ondown>3002</ondown>
-			<pagecontrol>3221</pagecontrol>
-			<scrolltime>200</scrolltime>
+			<visible>false</visible>
 			<itemlayout height="30">
-				<control type="label">
-					<left>10</left>
-					<top>0</top>
-					<width>80</width>
-					<height>30</height>
-					<font>font12</font>
-					<align>left</align>
-					<aligny>center</aligny>
-					<textcolor>blue</textcolor>
-					<selectedcolor>selected</selectedcolor>
-					<info>ListItem.Label</info>
-				</control>
-				<control type="label">
-					<left>90</left>
-					<top>0</top>
-					<width>255</width>
-					<height>30</height>
-					<font>font10</font>
-					<align>left</align>
-					<aligny>center</aligny>
-					<textcolor>white</textcolor>
-					<selectedcolor>white</selectedcolor>
-					<info>ListItem.Label2</info>
-				</control>
 			</itemlayout>
 			<focusedlayout height="30">
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>350</width>
-					<height>30</height>
-					<visible>Control.HasFocus(3220)</visible>
-					<texture colordiffuse="CC555555">windows/common/white.png</texture>
-					<include>VisibleFadeEffect</include>
-				</control>
-				<control type="image"> <!--focused background left edge -->
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>5</width>
-					<height>30</height>
-					<visible>Control.HasFocus(3220)</visible>
-					<texture condition="Control.HasFocus(3220)" colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
-				</control>
-				<control type="label">
-					<left>10</left>
-					<top>0</top>
-					<width>80</width>
-					<height>30</height>
-					<font>font12</font>
-					<align>left</align>
-					<aligny>center</aligny>
-					<textcolor>blue</textcolor>
-					<selectedcolor>selected</selectedcolor>
-					<info>ListItem.Label</info>
-				</control>
-				<control type="label">
-					<left>90</left>
-					<top>0</top>
-					<width>255</width>
-					<height>30</height>
-					<font>font10</font>
-					<align>left</align>
-					<aligny>center</aligny>
-					<textcolor>white</textcolor>
-					<selectedcolor>white</selectedcolor>
-					<info>ListItem.Label2</info>
-				</control>
 			</focusedlayout>
 		</control>
 		<control type="scrollbar" id="3221">
@@ -169,36 +155,49 @@
 			<showonepage>false</showonepage>
 			<orientation>vertical</orientation>
 		</control>
+		<!-- Info list like year, rating etc NOT SHOWN -->
 		<control type="list" id="3226">
-			<left>400</left>
-			<top>600</top>
-			<width>815</width>
-			<height>205</height>
+			<visible>false</visible>
+			<itemlayout height="30">
+			</itemlayout>
+			<focusedlayout height="30">
+			</focusedlayout>
+		</control>
+		<!-- Alternate list -->
+		<control type="panel" id="3291">
+			<visible>true</visible>
+			<left>600</left>
+			<top>120</top>
+			<width>710</width>
+			<height>300</height>
 			<onleft>3220</onleft>
 			<onright>3235</onright>
 			<onup>3235</onup>
 			<ondown>3002</ondown>
 			<pagecontrol>-</pagecontrol>
 			<scrolltime>200</scrolltime>
-			<itemlayout height="30">
+			<orientation>horizontal</orientation>
+			<onleft>3002</onleft>
+			<onright>3230</onright>
+			<itemlayout height="100" width="355">
 				<control type="label">
 					<left>10</left>
 					<top>0</top>
-					<width>120</width>
-					<height>30</height>
-					<font>font12</font>
+					<width>345</width>
+					<height>40</height>
+					<font>Font-Condensed-S35</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textcolor>blue</textcolor>
+					<textcolor>$VAR[FocusModColourVar]</textcolor>
 					<selectedcolor>selected</selectedcolor>
 					<info>ListItem.Label</info>
 				</control>
 				<control type="label">
-					<left>130</left>
-					<top>0</top>
-					<width>680</width>
+					<left>10</left>
+					<top>50</top>
+					<width>345</width>
 					<height>30</height>
-					<font>font10</font>
+					<font>Font-Condensed-S30</font>
 					<align>left</align>
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
@@ -206,13 +205,13 @@
 					<info>ListItem.Label2</info>
 				</control>
 			</itemlayout>
-			<focusedlayout height="30">
+			<focusedlayout height="100" width="355">
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
-					<width>815</width>
-					<height>30</height>
-					<visible>Control.HasFocus(3226)</visible>
+					<width>355</width>
+					<height>100</height>
+					<visible>Control.HasFocus(3291)</visible>
 					<texture colordiffuse="CC555555">windows/common/white.png</texture>
 					<include>VisibleFadeEffect</include>
 				</control>
@@ -220,28 +219,28 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>5</width>
-					<height>30</height>
-					<visible>Control.HasFocus(3226)</visible>
-					<texture condition="Control.HasFocus(3226)" colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+					<height>100</height>
+					<visible>Control.HasFocus(3291)</visible>
+					<texture condition="Control.HasFocus(3291)" colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
 				</control>
 				<control type="label">
 					<left>10</left>
 					<top>0</top>
-					<width>120</width>
-					<height>30</height>
-					<font>font12</font>
+					<width>345</width>
+					<height>40</height>
+					<font>Font-Condensed-S35</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textcolor>blue</textcolor>
+					<textcolor>$VAR[FocusModColourVar]</textcolor>
 					<selectedcolor>selected</selectedcolor>
 					<info>ListItem.Label</info>
 				</control>
 				<control type="label">
-					<left>130</left>
-					<top>0</top>
-					<width>680</width>
+					<left>10</left>
+					<top>50</top>
+					<width>345</width>
 					<height>30</height>
-					<font>font10</font>
+					<font>Font-Condensed-S30</font>
 					<align>left</align>
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
@@ -251,68 +250,70 @@
 			</focusedlayout>
 		</control>
 		<!-- <control type="scrollbar" id="3227"> <left>270</left> <top>380</top> <width>20</width> <height>120</height> <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground> <texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar> <texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus> <textureslidernib>ScrollBarNib.png</textureslidernib> <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus> <onleft>3220</onleft> <onright>3235</onright> <showonepage>false</showonepage> <orientation>vertical</orientation> </control> -->
+		<!-- Plot -->
 		<control type="textbox" id="3223">
-			<left>420</left>
-			<top>100</top>
-			<width>800</width>
-			<height>550</height>
-			<font>font12</font>
+			<left>610</left>
+			<top>524</top>
+			<width>720</width>
+			<height>355</height>
+			<font>Font-Condensed-S28</font>
 			<align>justify</align>
 			<textcolor>white</textcolor>
 			<pagecontrol>3235</pagecontrol>
 			<visible>true</visible>
-			<autoscroll delay="13000" time="3000" repeat="13000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
+			<autoscroll delay="7000" time="3000" repeat="13000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
 		</control>
 		<control type="scrollbar" id="3235">
-			<left>1220</left>
-			<top>100</top>
+			<left>1330</left>
+			<top>520</top>
 			<width>10</width>
-			<height>550</height>
-			<texturesliderbarfocus colordiffuse="CC555555" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+			<height>355</height>
+			<texturesliderbarfocus colordiffuse="$VAR[FocusModColourVar]" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
 			<onleft>3226</onleft>
 			<onup>-</onup>
 			<onright>3230</onright>
 			<showonepage>false</showonepage>
 			<orientation>vertical</orientation>
 		</control>
+		<!-- People list -->
 		<control type="list" id="3230">
-			<left>1260</left>
-			<top>100</top>
-			<width>385</width>
-			<height>720</height>
-			<onleft>3226</onleft>
+			<left>1320</left>
+			<top>22</top>
+			<width>340</width>
+			<height>500</height>
+			<onleft>3291</onleft>
 			<onright>3231</onright>
 			<onup>-</onup>
 			<ondown>-</ondown>
 			<pagecontrol>3231</pagecontrol>
 			<scrolltime>200</scrolltime>
-			<itemlayout height="60">
+			<itemlayout height="100">
 				<control type="image">
 					<left>10</left>
 					<top>0</top>
-					<width>60</width>
-					<height>60</height>
+					<width>68</width>
+					<height>100</height>
 					<texture fallback="DefaultArtist.png">$INFO[Listitem.Icon]</texture>
-					<aspectratio>scale</aspectratio>
+					<aspectratio>keep</aspectratio>
 				</control>
 				<control type="label">
-					<left>75</left>
+					<left>85</left>
 					<top>0</top>
-					<width>290</width>
+					<width>255</width>
 					<height>30</height>
-					<font>font12</font>
+					<font>Font-Condensed-S27</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textcolor>blue</textcolor>
+					<textcolor>$VAR[FocusModColourVar]</textcolor>
 					<selectedcolor>selected</selectedcolor>
 					<info>ListItem.Label</info>
 				</control>
 				<control type="label">
-					<left>75</left>
+					<left>85</left>
 					<top>30</top>
-					<width>290</width>
+					<width>255</width>
 					<height>30</height>
-					<font>font10</font>
+					<font>Font-Condensed-S23</font>
 					<align>left</align>
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
@@ -320,20 +321,20 @@
 					<info>ListItem.Label2</info>
 				</control>
 			</itemlayout>
-			<focusedlayout height="60">
+			<focusedlayout height="100">
 				<control type="image">
 					<left>10</left>
 					<top>0</top>
-					<width>60</width>
-					<height>60</height>
+					<width>68</width>
+					<height>100</height>
 					<texture fallback="DefaultArtist.png">$INFO[Listitem.Icon]</texture>
 					<aspectratio>scale</aspectratio>
 				</control>
 				<control type="image">
-					<left>70</left>
+					<left>80</left>
 					<top>0</top>
-					<width>315</width>
-					<height>60</height>
+					<width>260</width>
+					<height>100</height>
 					<visible>Control.HasFocus(3230)</visible>
 					<texture colordiffuse="CC555555">windows/common/white.png</texture>
 					<include>VisibleFadeEffect</include>
@@ -342,28 +343,28 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>5</width>
-					<height>60</height>
+					<height>100</height>
 					<visible>Control.HasFocus(3230)</visible>
 					<texture condition="Control.HasFocus(3230)" colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
 				</control>
 				<control type="label">
-					<left>75</left>
+					<left>85</left>
 					<top>0</top>
-					<width>290</width>
+					<width>255</width>
 					<height>30</height>
-					<font>font12</font>
+					<font>Font-Condensed-S27</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textcolor>blue</textcolor>
+					<textcolor>$VAR[FocusModColourVar]</textcolor>
 					<selectedcolor>selected</selectedcolor>
 					<info>ListItem.Label</info>
 				</control>
 				<control type="label">
-					<left>75</left>
+					<left>85</left>
 					<top>30</top>
-					<width>290</width>
+					<width>255</width>
 					<height>30</height>
-					<font>font10</font>
+					<font>Font-Condensed-S23</font>
 					<align>left</align>
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
@@ -373,50 +374,220 @@
 			</focusedlayout>
 		</control>
 		<control type="scrollbar" id="3231">
-			<left>1645</left>
-			<top>100</top>
+			<left>1660</left>
+			<top>20</top>
 			<width>10</width>
-			<height>720</height>
-			<texturesliderbarfocus colordiffuse="CC555555" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+			<height>500</height>
+			<texturesliderbarfocus colordiffuse="$VAR[FocusModColourVar]" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
 			<onleft>3230</onleft>
 			<onright>-</onright>
 			<showonepage>false</showonepage>
 			<orientation>vertical</orientation>
 		</control>
+		<!-- play button -->
 		<control type="button" id="3002">
-			<left>16</left>
-			<top>800</top>
+			<left>585</left>
+			<top>415</top>
 			<width>100</width>
 			<height>100</height>
 			<align>left</align>
 			<aligny>bottom</aligny>
 			<font>font13</font>
 			<onleft>-</onleft>
-			<onright condition="!Control.IsEnabled(3102)">3230</onright>
+			<onright condition="!Control.IsEnabled(3102)">3192</onright>
 			<onright condition="Control.IsEnabled(3102)">3102</onright>
-			<onup>3220</onup>
+			<onup>3291</onup>
+			<ondown>3235</ondown>
 			<texturefocus colordiffuse="SelectedGreen">special://skin/extras/icons/play.png</texturefocus>
 			<texturenofocus colordiffuse="white">special://skin/extras/icons/play.png</texturenofocus>
 			<textcolor>white</textcolor>
 			<focusedcolor>$VAR[FocusModColourVar]</focusedcolor>
 			<visible>Control.IsEnabled(3002)</visible>
 		</control>
+		<!-- trailer button -->
 		<control type="button" id="3102">
-			<left>110</left>
-			<top>824</top>
-			<width>52</width>
-			<height>52</height>
+			<left>685</left>
+			<top>440</top>
+			<width>51</width>
+			<height>51</height>
 			<align>left</align>
 			<aligny>bottom</aligny>
 			<font>font13</font>
 			<onleft>3002</onleft>
-			<onright>3230</onright>
-			<onup>3220</onup>
+			<onright>3192</onright>
+			<ondown>3235</ondown>
+			<onup>3291</onup>
 			<texturefocus colordiffuse="SelectedGreen">special://skin/extras/icons/trailer.png</texturefocus>
 			<texturenofocus colordiffuse="white">special://skin/extras/icons/trailer.png</texturenofocus>
 			<textcolor>white</textcolor>
 			<focusedcolor>$VAR[FocusModColourVar]</focusedcolor>
 			<visible>Control.IsEnabled(3102)</visible>
+		</control>
+		<!-- Watched RadioButton -->
+		<control type="radiobutton" id="3192">
+			<onleft condition="!Control.IsEnabled(3102)">3002</onleft>
+			<onleft condition="Control.IsEnabled(3102)">3102</onleft>
+			<onright>3193</onright>
+			<ondown>3235</ondown>
+			<onup>3291</onup>
+			<left>765</left>
+			<top>445</top>
+			<textureradioonfocus colordiffuse="SelectedGreen">special://skin/extras/icons/checkedoff.png</textureradioonfocus>
+			<textureradioonnofocus>special://skin/extras/icons/checkedon.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="SelectedGreen">special://skin/extras/icons/checkedoff.png</textureradioofffocus>
+			<textureradiooffnofocus>special://skin/extras/icons/checkedoff.png</textureradiooffnofocus>
+			<radiowidth>47</radiowidth>
+			<radioheight>47</radioheight>
+			<width>47</width>
+			<height>47</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>Font-Condensed-S32</font>
+			<label>-</label>
+			<textcolor>grey</textcolor>
+			<focusedcolor>$VAR[FocusModColourVar]</focusedcolor>
+			<disabledcolor>black</disabledcolor>
+		</control>
+		<!-- Dislike RadioButton -->
+		<control type="radiobutton" id="3193">
+			<onleft>3192</onleft>
+			<onright>3194</onright>
+			<ondown>3235</ondown>
+			<onup>3291</onup>
+			<left>825</left>
+			<top>445</top>
+			<width>47</width>
+			<height>47</height>
+			<radiowidth>47</radiowidth>
+			<radioheight>47</radioheight>
+			<align>left</align>
+			<aligny>bottom</aligny>
+			<font>Font-Condensed-S32</font>
+			<textcolor>FF585858</textcolor>
+			<focusedcolor>$VAR[FocusModColourVar]</focusedcolor>
+			<disabledcolor>77585858</disabledcolor>
+			<shadowcolor>20FFFFFF</shadowcolor>
+			<textureradioonfocus colordiffuse="SelectedGreen">special://skin/extras/icons/thumbs_down_off.png</textureradioonfocus>
+			<textureradioonnofocus>special://skin/extras/icons/thumbs_down_on.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="SelectedGreen">special://skin/extras/icons/thumbs_down_off.png</textureradioofffocus>
+			<textureradiooffnofocus>special://skin/extras/icons/thumbs_down_off.png</textureradiooffnofocus>
+		</control>
+		<!-- Like RadioButton -->
+		<control type="radiobutton" id="3194">
+			<onleft>3193</onleft>
+			<onright>3195</onright>
+			<ondown>3235</ondown>
+			<onup>3291</onup>
+			<left>885</left>
+			<top>445</top>
+			<width>47</width>
+			<height>47</height>
+			<radiowidth>47</radiowidth>
+			<radioheight>47</radioheight>
+			<align>left</align>
+			<aligny>bottom</aligny>
+			<font>Font-Condensed-S32</font>
+			<textcolor>FF585858</textcolor>
+			<focusedcolor>$VAR[FocusModColourVar]</focusedcolor>
+			<disabledcolor>77585858</disabledcolor>
+			<shadowcolor>20FFFFFF</shadowcolor>
+			<textureradioonfocus colordiffuse="SelectedGreen">special://skin/extras/icons/thumbs_up_off.png</textureradioonfocus>
+			<textureradioonnofocus>special://skin/extras/icons/thumbs_up_on.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="SelectedGreen">special://skin/extras/icons/thumbs_up_off.png</textureradioofffocus>
+			<textureradiooffnofocus>special://skin/extras/icons/thumbs_up_off.png</textureradiooffnofocus>
+		</control>
+		<!-- Favourite RadioButton -->
+		<control type="radiobutton" id="3195">
+			<onleft>3194</onleft>
+			<onright>3230</onright>
+			<ondown>3235</ondown>
+			<onup>3291</onup>
+			<left>950</left>
+			<top>445</top>
+			<width>47</width>
+			<height>47</height>
+			<radiowidth>47</radiowidth>
+			<radioheight>47</radioheight>
+			<align>left</align>
+			<aligny>bottom</aligny>
+			<font>Font-Condensed-S32</font>
+			<textcolor>FF585858</textcolor>
+			<focusedcolor>$VAR[FocusModColourVar]</focusedcolor>
+			<disabledcolor>77585858</disabledcolor>
+			<shadowcolor>20FFFFFF</shadowcolor>
+			<textureradioonfocus colordiffuse="SelectedGreen">special://skin/extras/icons/heart_off.png</textureradioonfocus>
+			<textureradioonnofocus>special://skin/extras/icons/heart_on.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="SelectedGreen">special://skin/extras/icons/heart_off.png</textureradioofffocus>
+			<textureradiooffnofocus>special://skin/extras/icons/heart_off.png</textureradiooffnofocus>
+		</control>
+		<!-- ratings -->
+		<control type="group">
+			<left>1220</left>
+			<top>440</top>
+			<align>right</align>
+			<control type="image">
+				<width>50</width>
+				<height>50</height>
+				<aspect>stretch</aspect>
+				<texture>special://skin/extras/icons/imdb.png</texture>
+				<visible>!IsEmpty(Container(3226).ListItem(1).Label2) + !substring(Container(3226).ListItem(1).Label2,None)</visible>
+			</control>
+			<control type="label">
+				<top>10</top>
+				<left>55</left>
+				<width>90</width>
+				<font>Font-Condensed-S32</font>
+				<label>$INFO[Container(3226).ListItem(1).Label2]</label>
+				<textcolor>PrimaryOSD</textcolor>
+				<scroll>false</scroll>
+				<visible>!IsEmpty(Container(3226).ListItem(1).Label2) + !substring(Container(3226).ListItem(1).Label2,None)</visible>
+			</control>
+		</control>
+		<control type="group">
+			<left>1100</left>
+			<top>440</top>
+			<align>right</align>
+			<control type="image">
+				<width>50</width>
+				<height>50</height>
+				<aspect>stretch</aspect>
+				<texture>$VAR[RottenTomatoesInfo]</texture>
+				<visible>StringCompare(Container(3226).ListItem(6).Label,CriticRating:) + !substring(Container(3226).ListItem(6).Label2,None)</visible>
+			</control>
+			<control type="label">
+				<top>10</top>
+				<left>55</left>
+				<width>90</width>
+				<font>Font-Condensed-S32</font>
+				<label>$INFO[Container(3226).ListItem(6).Label2,,%]</label>
+				<textcolor>PrimaryOSD</textcolor>
+				<scroll>false</scroll>
+				<visible>StringCompare(Container(3226).ListItem(6).Label,CriticRating:) + !substring(Container(3226).ListItem(6).Label2,None)</visible>
+			</control>
+		</control>
+		<!-- Runtime and MPAA -->
+		<control type="label">
+			<top>850</top>
+			<left>1340</left>
+			<width>140</width>
+			<font>Font-Condensed-S27</font>
+			<label>$INFO[Container(3226).ListItem(3).Label2]</label>
+			<textcolor>PrimaryOSD</textcolor>
+			<scroll>false</scroll>
+			<align>left</align>
+			<visible>StringCompare(Container(3226).ListItem(3).Label,RunTime:)</visible>
+		</control>
+		<control type="label">
+			<top>850</top>
+			<left>1490</left>
+			<width>165</width>
+			<align>right</align>
+			<font>Font-Condensed-S27</font>
+			<label>$INFO[Container(3226).ListItem(2).Label2]</label>
+			<textcolor>PrimaryOSD</textcolor>
+			<scroll>false</scroll>
+			<visible>!Control.IsVisible(3092)</visible>
+			<visible>StringCompare(Container(3226).ListItem(2).Label,MPAA:) + !substring(Container(3226).ListItem(2).Label2,None)</visible>
 		</control>
 	</controls>
 </window>

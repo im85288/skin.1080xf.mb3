@@ -1186,7 +1186,17 @@
 						<texture background="true">$VAR[SmallListFanart]</texture>
 						<fadetime>500</fadetime>
 						<aspectratio>keep</aspectratio>
-						<visible>!Container.Content(Episodes)</visible>
+						<visible>!Container.Content(Episodes) + !Skin.HasSetting(InfoListShowFullFanart)</visible>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>576</width>
+						<height>600</height>
+						<texture background="true">$VAR[ListFanart]</texture>
+						<fadetime>500</fadetime>
+						<aspectratio>scale</aspectratio>
+						<visible>!Container.Content(Episodes) + Skin.HasSetting(InfoListShowFullFanart)</visible>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -1277,8 +1287,17 @@
 							<height>276</height>
 							<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 							<include>visiblehidefadeinfo</include>
-							<visible>!Container.Content(Episodes)</visible>
+							<visible>!Container.Content(Episodes) + !Skin.HasSetting(InfoListShowFullFanart)</visible>
 						</control>
+						<control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>576</width>
+                            <height>600</height>
+                            <texture>views/list/other/fanart-overlay.png</texture>
+                            <include>visiblehidefadeinfo</include>
+                            <visible>!Container.Content(Episodes) + Skin.HasSetting(InfoListShowFullFanart)</visible>
+                        </control>
 						<control type="label">
 							<posx>30</posx>
 							<posy>490</posy>
@@ -5512,7 +5531,7 @@
 			<posy>900</posy>
 			<posx>40</posx>
 			<orientation>horizontal</orientation>
-			<texturesliderbarfocus colordiffuse="PrimaryT" border="1">windows/common/white.png</texturesliderbarfocus>			
+			<texturesliderbarfocus colordiffuse="PrimaryT" border="1">windows/common/white.png</texturesliderbarfocus>
 			<showonepage>false</showonepage>
 			<onup>566</onup>
 			<ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>

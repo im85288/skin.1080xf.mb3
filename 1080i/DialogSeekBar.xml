@@ -5,7 +5,7 @@
 		<include>OSDWeatherClock</include>
 		<include>OSDChapterInfo</include>
 		<control type="group">
-		    <visible>!Skin.HasSetting(alternatelivetvosd) | [Skin.HasSetting(alternatelivetvosd) +  !VideoPlayer.Content(LiveTV)]</visible>
+			<visible>!Skin.HasSetting(alternatelivetvosd) | [Skin.HasSetting(alternatelivetvosd) + !VideoPlayer.Content(LiveTV)]</visible>
 			<animation type="WindowOpen">
 				<effect type="fade" start="0" end="100" time="200" tween="sine" easing="inout" />
 				<effect type="slide" start="0,85" end="0,0" time="300" tween="cubic" easing="out" />
@@ -140,7 +140,7 @@
 						<texture background="true">$VAR[OSDClearArt]</texture>
 						<aspectratio scalediffuse="false" aligny="bottom" align="center">keep</aspectratio>
 						<visible>[Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding] + ![Player.ShowInfo | Window.IsVisible(fullscreeninfo)]</visible>
-					    <visible>Skin.HasSetting(ClearArt.Enabled)</visible>
+						<visible>Skin.HasSetting(ClearArt.Enabled)</visible>
 					</control>
 				</control>
 				<control type="group">
@@ -162,7 +162,7 @@
 							<texture background="true">$VAR[OSDClearArt]</texture>
 							<aspectratio scalediffuse="false" aligny="bottom" align="right">keep</aspectratio>
 							<visible>!VideoPlayer.Content(LiveTV)</visible>
-						    <visible>Skin.HasSetting(ClearArt.Enabled)</visible>
+							<visible>Skin.HasSetting(ClearArt.Enabled)</visible>
 						</control>
 						<control type="group">
 							<visible>IsEmpty(Window.Property(ExtendPlot))</visible>
@@ -204,19 +204,6 @@
 									<include>visiblehidefadeflags</include>
 									<visible>!IsEmpty(VideoPlayer.AudioCodec)</visible>
 								</control>
-							</control>
-							<control type="label">
-								<posx>360</posx>
-								<posy>818</posy>
-								<width>1300</width>
-								<height>56</height>
-								<label>[UPPERCASE]$LOCALIZE[13350][/UPPERCASE]</label>
-								<textcolor>eewhite</textcolor>
-								<font>Font-Condensed-S50</font>
-								<align>left</align>
-								<aligny>center</aligny>
-								<scroll>false</scroll>
-								<visible>!VideoPlayer.Content(LiveTV) + !Player.Paused</visible>
 							</control>
 							<control type="label">
 								<posx>360</posx>
@@ -521,7 +508,7 @@
 			</control>
 		</control>
 		<control type="group">
-		    <visible>Skin.HasSetting(alternatelivetvosd) +  VideoPlayer.Content(LiveTV)</visible>
+			<visible>Skin.HasSetting(alternatelivetvosd) + VideoPlayer.Content(LiveTV)</visible>
 			<include>FullScreenInfoBarLiveTV</include>
 		</control>
 	</controls>

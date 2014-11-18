@@ -7,6 +7,11 @@
 			<size>20</size>
 		</font>
 		<font>
+			<name>Font-Condensed-S21</name>
+			<filename>OpenSansCond.ttf</filename>
+			<size>21</size>
+		</font>
+		<font>
 			<name>Font-Condensed-S22</name>
 			<filename>OpenSansCond.ttf</filename>
 			<size>22</size>
@@ -165,6 +170,12 @@
 			<style>bold</style>
 		</font>
 		<font>
+			<name>Font-Condensed-S38-Upper</name>
+			<filename>OpenSansCond.ttf</filename>
+			<size>38</size>
+			<style>uppercase</style>
+		</font>
+		<font>
 			<name>Font-Condensed-S40</name>
 			<filename>OpenSansCond.ttf</filename>
 			<size>40</size>
@@ -196,6 +207,7 @@
 			<filename>OpenSansCond.ttf</filename>
 			<size>45</size>
 		</font>
+		
 		<font>
 			<name>Font-Condensed-S45-B</name>
 			<filename>OpenSansCond.ttf</filename>

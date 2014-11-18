@@ -1238,3 +1238,11 @@ msgstr ""
 msgctxt "#49268"
 msgid "Alternate Thumbnail"
 msgstr ""
+
+msgctxt "#49269"
+msgid "Show full fanart"
+msgstr ""
+
+msgctxt "#49270"
+msgid "Use Native Kodi Music Library"
+msgstr ""

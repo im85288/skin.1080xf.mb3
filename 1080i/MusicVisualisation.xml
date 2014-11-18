@@ -107,19 +107,6 @@
 							<posy>818</posy>
 							<width>1360</width>
 							<height>56</height>
-							<label>[UPPERCASE]$LOCALIZE[13350][/UPPERCASE]</label>
-							<textcolor>SecondaryT</textcolor>
-							<font>Font-Condensed-S50</font>
-							<align>left</align>
-							<aligny>center</aligny>
-							<scroll>false</scroll>
-							<visible>!Pvr.IsPlayingRadio + !Player.Paused</visible>
-						</control>
-						<control type="label">
-							<posx>360</posx>
-							<posy>818</posy>
-							<width>1360</width>
-							<height>56</height>
 							<label>[UPPERCASE]$LOCALIZE[112][/UPPERCASE]</label>
 							<textcolor>SecondaryT</textcolor>
 							<font>Font-Condensed-S50</font>

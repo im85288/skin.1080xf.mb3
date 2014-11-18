@@ -1043,6 +1043,8 @@
 	</variable>
 	<variable name="AeonFlagStudio">
 		<value condition="!IsEmpty(ListItem.Studio)">$INFO[ListItem.Studio,special://skin/extras/studioflags/,.png]</value>
+		<value condition="StringCompare(Container(3226).ListItem(6).Label,Studio:)">$INFO[Container(3226).ListItem(6).Label2,special://skin/extras/studioflags/,.png]</value>
+		<value condition="StringCompare(Container(3226).ListItem(7).Label,Studio:)">$INFO[Container(3226).ListItem(7).Label2,special://skin/extras/studioflags/,.png]</value>
 		<value>special://skin/extras/studioflags/default-studio.png</value>
 	</variable>
 	<variable name="CoverflowViewPoster">
@@ -1092,5 +1094,10 @@
 		<value condition="[!substring(Container.FolderPath,videodb://,left) | Container.Content(actors)] + !IsEmpty(Container(780).ListItem(3).Art(thumb))">$INFO[Container(780).ListItem(3).Art(thumb)]</value>
 		<value condition="Container.Content(Seasons) + !IsEmpty(Container(780).ListItem(3).Art(tvshow.poster))">$INFO[Container(780).ListItem(3).Art(tvshow.poster)]</value>
 		<value>$INFO[Container(780).ListItem(3).ActualIcon,views/fallbacks/,/large.png]</value>
+	</variable>
+	
+	<variable name="RottenTomatoesInfo">
+		<value condition="StringCompare(Container(3226).ListItem(6).Label,CriticRating:) + IntegerGreaterThan(Container(3226).ListItem(6).Label2,59)">special://skin/extras/icons/rottentomatoes.png</value>
+		<value condition="StringCompare(Container(3226).ListItem(6).Label,CriticRating:) + !IntegerGreaterThan(Container(3226).ListItem(6).Label2,59)">special://skin/extras/icons/rottentomatoesrotten.png</value>
 	</variable>
 </includes>

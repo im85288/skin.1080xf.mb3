@@ -522,6 +522,71 @@
 		</control>
 		<!-- ratings -->
 		<control type="group">
+			<left>1033</left>
+			<top>440</top>
+			<align>right</align>
+			<control type="image">
+			    <left>125</left>
+			    <top>4</top>
+				<width>50</width>
+				<height>46</height>
+				<aspectratio scalediffuse="false">keep</aspectratio>
+				<texture border="4" diffuse="special://skin/extras/case_diffuse_full.png" background="true" colordiffuse="$VAR[CommunityRatingInfo]">windows/common/white.png</texture>
+				<visible>StringCompare(Container(3226).ListItem(6).Label,Metascore:) + !substring(Container(3226).ListItem(6).Label2,None)</visible>
+			</control>
+			<control type="image">
+			    <top>4</top>
+				<width>50</width>
+				<height>46</height>
+				<aspectratio scalediffuse="false">keep</aspectratio>
+				<texture border="4" diffuse="special://skin/extras/case_diffuse_full.png" background="true" colordiffuse="$VAR[CommunityRatingInfo]">windows/common/white.png</texture>
+				<visible>StringCompare(Container(3226).ListItem(7).Label,Metascore:) + !substring(Container(3226).ListItem(7).Label2,None)</visible>
+			</control>
+			<control type="label">
+				<top>12</top>
+				<left>125</left>
+				<width>50</width>
+				<font>Font-Condensed-S32-B</font>
+				<label>$INFO[Container(3226).ListItem(6).Label2]</label>
+				<textcolor>eewhite</textcolor>
+				<scroll>false</scroll>
+				<align>center</align>
+				<visible>StringCompare(Container(3226).ListItem(6).Label,Metascore:) + !substring(Container(3226).ListItem(6).Label2,None)</visible>
+			</control>
+			<control type="label">
+				<top>12</top>
+				<width>50</width>
+				<font>Font-Condensed-S32-B</font>
+				<label>$INFO[Container(3226).ListItem(7).Label2]</label>
+				<textcolor>eewhite</textcolor>
+				<scroll>false</scroll>
+				<align>center</align>
+				<visible>StringCompare(Container(3226).ListItem(7).Label,Metascore:) + !substring(Container(3226).ListItem(7).Label2,None)</visible>
+			</control>
+		</control>
+		<control type="group">
+			<left>1105</left>
+			<top>440</top>
+			<align>right</align>
+			<control type="image">
+				<width>50</width>
+				<height>50</height>
+				<aspect>stretch</aspect>
+				<texture>$VAR[RottenTomatoesInfo]</texture>
+				<visible>StringCompare(Container(3226).ListItem(6).Label,CriticRating:) + !substring(Container(3226).ListItem(6).Label2,None)</visible>
+			</control>
+			<control type="label">
+				<top>10</top>
+				<left>55</left>
+				<width>90</width>
+				<font>Font-Condensed-S32</font>
+				<label>$INFO[Container(3226).ListItem(6).Label2,,%]</label>
+				<textcolor>PrimaryOSD</textcolor>
+				<scroll>false</scroll>
+				<visible>StringCompare(Container(3226).ListItem(6).Label,CriticRating:) + !substring(Container(3226).ListItem(6).Label2,None)</visible>
+			</control>
+		</control>
+		<control type="group">
 			<left>1220</left>
 			<top>440</top>
 			<align>right</align>
@@ -541,28 +606,6 @@
 				<textcolor>PrimaryOSD</textcolor>
 				<scroll>false</scroll>
 				<visible>!IsEmpty(Container(3226).ListItem(1).Label2) + !substring(Container(3226).ListItem(1).Label2,None)</visible>
-			</control>
-		</control>
-		<control type="group">
-			<left>1100</left>
-			<top>440</top>
-			<align>right</align>
-			<control type="image">
-				<width>50</width>
-				<height>50</height>
-				<aspect>stretch</aspect>
-				<texture>$VAR[RottenTomatoesInfo]</texture>
-				<visible>StringCompare(Container(3226).ListItem(6).Label,CriticRating:) + !substring(Container(3226).ListItem(6).Label2,None)</visible>
-			</control>
-			<control type="label">
-				<top>10</top>
-				<left>55</left>
-				<width>90</width>
-				<font>Font-Condensed-S32</font>
-				<label>$INFO[Container(3226).ListItem(6).Label2,,%]</label>
-				<textcolor>PrimaryOSD</textcolor>
-				<scroll>false</scroll>
-				<visible>StringCompare(Container(3226).ListItem(6).Label,CriticRating:) + !substring(Container(3226).ListItem(6).Label2,None)</visible>
 			</control>
 		</control>
 		<!-- Runtime and MPAA -->

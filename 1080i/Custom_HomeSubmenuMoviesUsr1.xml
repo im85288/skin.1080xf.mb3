@@ -112,22 +112,22 @@
 				<item id="1">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>$INFO[Window(Home).Property(xbmb3c.usr.movies.0.unwatched.path)]</onclick>
+					<onclick>$INFO[Window(Home).Property(MediaBrowser.usr.movies.0.unwatched.path)]</onclick>
 				</item>
 				<item id="2">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>$INFO[Window(Home).Property(xbmb3c.usr.movies.0.inprogress.path)]</onclick>
+					<onclick>$INFO[Window(Home).Property(MediaBrowser.usr.movies.0.inprogress.path)]</onclick>
 				</item>
 				<item id="3">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>$INFO[Window(Home).Property(xbmb3c.usr.movies.0.recent.path)]</onclick>
+					<onclick>$INFO[Window(Home).Property(MediaBrowser.usr.movies.0.recent.path)]</onclick>
 				</item>
 				<item id="4">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>$INFO[Window(Home).Property(xbmb3c.usr.movies.0.genre.path)]</onclick>
+					<onclick>$INFO[Window(Home).Property(MediaBrowser.usr.movies.0.genre.path)]</onclick>
 				</item>
 			</content>
 		</control>

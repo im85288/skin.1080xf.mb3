@@ -165,12 +165,17 @@
 		<value condition="!Skin.HasSetting(HomeWeatherImageFanart)">$INFO[Skin.String(HomeWeatherMultiImage)]</value>
 		<value condition="Skin.HasSetting(HomeWeatherImageFanart)">$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</value>
 	</variable>
+	<variable name="HomeHomeMultiPath">
+		<value condition="!Skin.HasSetting(GlobalImageFanart)">$INFO[Skin.String(GlobalBackdropMulti)]</value>
+		<value condition="Skin.HasSetting(GlobalImageFanart) + System.HasAddon(script.grab.fanart) + Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(script.grab.fanart.Global.FanArt)]</value>
+		<value condition="Skin.HasSetting(GlobalImageFanart)">$INFO[Window(Home).Property(MB3.Background.Global.FanArt)]</value>
+	</variable>
 	<variable name="HomeFanartPath">
 		<value condition="System.HasAddon(script.grab.fanart) + Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(script.grab.fanart.Global.FanArt)]</value>
 		<value>$INFO[Window(Home).Property(MB3.Background.Global.FanArt)]</value>
 	</variable>
 	<include name="BackgroundFanart">
-	   <control type="videowindow">
+		<control type="videowindow">
 			<include>FullscreenDimensions</include>
 			<visible>Player.HasVideo + [!IsEmpty(Window(Home).property(ThemeMediaMB3IsAlive)) | Window.IsActive(movieinformation)]</visible>
 		</control>
@@ -238,7 +243,8 @@
 			<animation effect="fade" time="300" start="0" end="100" tween="sine" easing="out">Visible</animation>
 			<animation effect="fade" time="300" start="100" end="0" tween="sine" easing="in">Hidden</animation>
 			<visible>[Window.IsActive(contentsettings) | Window.IsActive(addonsettings) | Window.IsActive(filebrowser) | [Window.IsActive(virtualkeyboard) + IsEmpty(Window(Home).Property(HomeSearch))] | Window.IsActive(playercontrols) | Window.IsActive(profilesettings) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(mediasource) | Window.IsActive(screencalibration) | Window.IsActive(numericinput) | Window.IsActive(filestackingdialog) | Window.IsActive(LockSettings) | Window.IsActive(smartplaylisteditor) | Window.IsActive(smartplaylistrule) | Window.IsActive(pictureinfo) | Window.IsActive(script-RSS_Editor-rssEditor.xml) | Window.IsActive(script-RSS_Editor-setEditor.xml) | Window.IsActive(3001) | Window.IsActive(3002) | Window.IsActive(3003) | Window.IsActive(3006) | Window.IsActive(peripherals) | Window.IsActive(peripheralsettings) | Window.IsActive(mediafilter) | Window.IsActive(mediafilter) | Window.IsActive(pvrgroupmanager) |
-				Window.IsActive(pvrtimersetting) | Window.IsActive(pvrguidesearch) | Window.IsActive(pvrchannelmanager) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(DialogSelect.xml) | Window.IsActive(yesnodialog) | Window.IsActive(okdialog) | ControlGroup(9000).HasFocus() | [Window.IsActive(contextmenu) + !Window.IsActive(favourites) + !Window.IsActive(filemanager) + !Window.IsActive(home)]] + !Window.IsActive(movieinformation) + !Window.IsActive(1122) + !Window.IsActive(addoninformation) + !Window.IsActive(musicinformation) + !Window.IsActive(script-globalsearch-infodialog.xml) + !Window.IsActive(musicplaylisteditor)</visible>
+				Window.IsActive(pvrtimersetting) | Window.IsActive(pvrguidesearch) | Window.IsActive(pvrchannelmanager) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(DialogSelect.xml) | Window.IsActive(yesnodialog) | Window.IsActive(okdialog) | ControlGroup(9000).HasFocus() | [Window.IsActive(contextmenu) + !Window.IsActive(favourites) + !Window.IsActive(filemanager) + !Window.IsActive(home)]] + !Window.IsActive(movieinformation) + !Window.IsActive(1122) + !Window.IsActive(addoninformation) + !Window.IsActive(musicinformation) + !Window.IsActive(script-globalsearch-infodialog.xml) + !Window.IsActive(musicplaylisteditor)
+			</visible>
 		</control>
 	</include>
 	<include name="FadeBackgroundMovieInfo">

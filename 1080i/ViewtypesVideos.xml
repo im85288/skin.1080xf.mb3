@@ -1054,8 +1054,8 @@
 				<onright condition="Skin.HasSetting(KioskMode)">50</onright>
 				<ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
 				<ondown condition="Skin.HasSetting(KioskMode)">50</ondown>
-				<texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
-				<texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+				<texturesliderbar colordiffuse="$VAR[FocusModColourVar]" border="1">views/other/scrollbar-sq.png</texturesliderbar>
+				<texturesliderbarfocus colordiffuse="$VAR[FocusModColourVar]" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
 				<orientation>vertical</orientation>
 				<showonepage>false</showonepage>
 				<animation effect="fade" start="45" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
@@ -1108,6 +1108,7 @@
 					<texture background="true">$INFO[ListItem.Art(discart)]</texture>
 					<aspectratio align="center">keep</aspectratio>
 					<animation effect="slide" start="0,250" end="0,10" time="600" delay="450" condition="Control.HasFocus(52)">Conditional</animation>
+					<animation effect="rotate" center="auto" start="360" end="0" time="3000" loop="true" condition="Player.Playing">Conditional</animation>
 					<visible>Skin.HasSetting(CDArt.Enabled)</visible>
 					<visible>!IsEmpty(ListItem.Art(discart))</visible>
 				</control>
@@ -1186,7 +1187,16 @@
 						<texture background="true">$VAR[SmallListFanart]</texture>
 						<fadetime>500</fadetime>
 						<aspectratio>keep</aspectratio>
-						<visible>!Container.Content(Episodes) + !Skin.HasSetting(InfoListShowFullFanart)</visible>
+						<visible>!Container.Content(Episodes) + !Skin.HasSetting(InfoListShowFullFanart) + [!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(InfoListShowVideo)] | [Player.HasVideo + Skin.HasSetting(InfoListShowVideo) + IsEmpty(Window(Home).property(ThemeMediaMB3IsAlive))]]</visible>
+					</control>
+					<control type="videowindow">
+						<description>video</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>576</width>
+						<height>324</height>
+						<aspectratio>stretch</aspectratio>
+						<visible>!Container.Content(Episodes) + !Skin.HasSetting(InfoListShowFullFanart) + Player.HasVideo + Skin.HasSetting(InfoListShowVideo) + !IsEmpty(Window(Home).property(ThemeMediaMB3IsAlive))</visible>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -1206,7 +1216,16 @@
 						<texture background="true" fallback="views/fallbacks/DefaultVideo.png/landscape.png">$INFO[Container(52).ListItem.Thumb]</texture>
 						<fadetime>500</fadetime>
 						<aspectratio>keep</aspectratio>
-						<visible>Container.Content(Episodes)</visible>
+						<visible>Container.Content(Episodes) + [!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(InfoListShowVideo)] | [Player.HasVideo + Skin.HasSetting(InfoListShowVideo) + IsEmpty(Window(Home).property(ThemeMediaMB3IsAlive))]]</visible>
+					</control>
+					<control type="videowindow">
+						<description>video</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>576</width>
+						<height>324</height>
+						<aspectratio>stretch</aspectratio>
+						<visible>Container.Content(Episodes) + Player.HasVideo + Skin.HasSetting(InfoListShowVideo) + !IsEmpty(Window(Home).property(ThemeMediaMB3IsAlive))</visible>
 					</control>
 					<control type="group">
 						<visible>!Skin.HasSetting(InfoListHideInfo) | [Skin.HasSetting(InfoListShowPlotOnFocus) + Control.HasFocus(71)]</visible>
@@ -1290,14 +1309,14 @@
 							<visible>!Container.Content(Episodes) + !Skin.HasSetting(InfoListShowFullFanart)</visible>
 						</control>
 						<control type="image">
-                            <posx>0</posx>
-                            <posy>0</posy>
-                            <width>576</width>
-                            <height>600</height>
-                            <texture>views/list/other/fanart-overlay.png</texture>
-                            <include>visiblehidefadeinfo</include>
-                            <visible>!Container.Content(Episodes) + Skin.HasSetting(InfoListShowFullFanart)</visible>
-                        </control>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>576</width>
+							<height>600</height>
+							<texture>views/list/other/fanart-overlay.png</texture>
+							<include>visiblehidefadeinfo</include>
+							<visible>!Container.Content(Episodes) + Skin.HasSetting(InfoListShowFullFanart)</visible>
+						</control>
 						<control type="label">
 							<posx>30</posx>
 							<posy>490</posy>
@@ -2070,8 +2089,8 @@
 					<onright condition="Control.IsVisible(71) | [Skin.HasSetting(InfoListShowPlotOnFocus) + !IsEmpty(Container(52).ListItem.Plot)]">71</onright>
 					<onright condition="!Control.IsVisible(71) + !Skin.HasSetting(KioskMode)">9010</onright>
 					<onright condition="!Control.IsVisible(71) + Skin.HasSetting(KioskMode)">52</onright>
-					<texturesliderbar colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texturesliderbar>
-					<texturesliderbarfocus colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+					<texturesliderbar colordiffuse="$VAR[FocusModColourVar]" border="1">views/other/scrollbar-sq.png</texturesliderbar>
+					<texturesliderbarfocus colordiffuse="$VAR[FocusModColourVar]" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
 					<orientation>vertical</orientation>
 					<showonepage>false</showonepage>
 					<animation effect="fade" start="35" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772) + !Control.HasFocus(70)">Conditional</animation>
@@ -2086,8 +2105,8 @@
 					<onleft>52</onleft>
 					<onright condition="!Skin.HasSetting(KioskMode)">9010</onright>
 					<onright condition="Skin.HasSetting(KioskMode)">52</onright>
-					<texturesliderbar colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texturesliderbar>
-					<texturesliderbarfocus colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+					<texturesliderbar colordiffuse="$VAR[FocusModColourVar]" border="1">views/other/scrollbar-sq.png</texturesliderbar>
+					<texturesliderbarfocus colordiffuse="$VAR[FocusModColourVar]" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
 					<orientation>vertical</orientation>
 					<showonepage>false</showonepage>
 					<animation effect="fade" start="35" end="0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(71)">Conditional</animation>
@@ -2102,8 +2121,8 @@
 					<onleft>52</onleft>
 					<onright condition="!Skin.HasSetting(KioskMode)">9010</onright>
 					<onright condition="Skin.HasSetting(KioskMode)">52</onright>
-					<texturesliderbar colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texturesliderbar>
-					<texturesliderbarfocus colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+					<texturesliderbar colordiffuse="$VAR[FocusModColourVar]" border="1">views/other/scrollbar-sq.png</texturesliderbar>
+					<texturesliderbarfocus colordiffuse="$VAR[FocusModColourVar]" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
 					<orientation>vertical</orientation>
 					<showonepage>false</showonepage>
 					<animation effect="fade" start="35" end="0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(71)">Conditional</animation>
@@ -2242,8 +2261,8 @@
 					<onup>53</onup>
 					<ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
 					<ondown condition="Skin.HasSetting(KioskMode)">53</ondown>
-					<texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
-					<texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+					<texturesliderbar colordiffuse="$VAR[FocusModColourVar]" border="1">views/other/scrollbar-sq.png</texturesliderbar>
+					<texturesliderbarfocus colordiffuse="$VAR[FocusModColourVar]" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
 					<orientation>horizontal</orientation>
 					<showonepage>false</showonepage>
 					<animation effect="fade" start="35" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772) + !Control.HasFocus(70)">Conditional</animation>
@@ -2339,6 +2358,16 @@
 						<texture background="true">$VAR[ListFanart]</texture>
 						<fadetime>500</fadetime>
 						<aspectratio>keep</aspectratio>
+						<visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(PanelShowVideo)] | [Player.HasVideo + Skin.HasSetting(PanelShowVideo) + IsEmpty(Window(Home).property(ThemeMediaMB3IsAlive))]</visible>
+					</control>
+					<control type="videowindow">
+						<description>video</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1070</width>
+						<height>600</height>
+						<aspectratio>stretch</aspectratio>
+						<visible>Player.HasVideo + Skin.HasSetting(PanelShowVideo) + !IsEmpty(Window(Home).property(ThemeMediaMB3IsAlive))</visible>
 					</control>
 					<control type="group">
 						<visible>!Skin.HasSetting(InfoPanelHideInfo)</visible>
@@ -3485,7 +3514,16 @@
 								<height>270</height>
 								<texture background="true">$VAR[ExtendedViewThumb]</texture>
 								<aspectratio align="center" aligny="center" scalediffuse="false">keep</aspectratio>
-								<visible>[[Container.Content(tvshows) + !Skin.HasSetting(ExtendedUseClearArt) + !Skin.HasSetting(ExtendedUseClearLogo)] | [Container.Content(movies) + !Skin.HasSetting(ExtendedUseClearMovieArt) + !Skin.HasSetting(ExtendedUseClearMovieLogo)]] | [IsEmpty(ListItem.Art(clearart)) + IsEmpty(ListItem.Art(clearlogo))]</visible>
+								<visible>[[Container.Content(tvshows) + !Skin.HasSetting(ExtendedUseClearArt) + !Skin.HasSetting(ExtendedUseClearLogo)] | [Container.Content(movies) + !Skin.HasSetting(ExtendedUseClearMovieArt) + !Skin.HasSetting(ExtendedUseClearMovieLogo)]] | [IsEmpty(ListItem.Art(clearart)) + IsEmpty(ListItem.Art(clearlogo))] + [!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(LandscapeShowVideo)]]</visible>
+							</control>
+							<control type="videowindow">
+								<description>video</description>
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>480</width>
+								<height>270</height>
+								<aspectratio>stretch</aspectratio>
+								<visible>Player.HasVideo + Skin.HasSetting(LandscapeShowVideo) + !IsEmpty(Window(Home).property(ThemeMediaMB3IsAlive))</visible>
 							</control>
 							<control type="image">
 								<posx>0</posx>
@@ -3494,7 +3532,7 @@
 								<height>270</height>
 								<texture background="true">$VAR[ExtendedViewLogo]</texture>
 								<aspectratio align="center" aligny="bottom" scalediffuse="false">keep</aspectratio>
-								<visible>[[Container.Content(tvshows) + [Skin.HasSetting(ExtendedUseClearArt) | Skin.HasSetting(ExtendedUseClearLogo)]] | [Container.Content(movies) + [Skin.HasSetting(ExtendedUseClearMovieArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]]] + ![IsEmpty(ListItem.Art(clearart)) + IsEmpty(ListItem.Art(clearlogo))]</visible>
+								<visible>[[Container.Content(tvshows) + [Skin.HasSetting(ExtendedUseClearArt) | Skin.HasSetting(ExtendedUseClearLogo)]] | [Container.Content(movies) + [Skin.HasSetting(ExtendedUseClearMovieArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]]] + ![IsEmpty(ListItem.Art(clearart)) + IsEmpty(ListItem.Art(clearlogo))] + [!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(LandscapeShowVideo)]]</visible>
 							</control>
 							<control type="image">
 								<posx>0</posx>
@@ -3550,8 +3588,8 @@
 					<width>1712</width>
 					<height>6</height>
 					<orientation>horizontal</orientation>
-					<texturesliderbar border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
-					<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
+					<texturesliderbar colordiffuse="$VAR[FocusModColourVar]" border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
+					<texturesliderbarfocus colordiffuse="$VAR[FocusModColourVar]" border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<onup>54</onup>
 					<ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
@@ -3579,8 +3617,8 @@
 			</control>
 			<control type="group">
 				<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(55) + !Window.IsActive(favourites)</visible>
-				<animation effect="slide" start="0,0" end="400,0" time="500">UnFocus</animation>
-				<animation effect="slide" start="400,0" end="0,0" time="500">Focus</animation>
+				<animation effect="slide" start="0,0" end="400,0" time="10">UnFocus</animation>
+				<animation effect="slide" start="400,0" end="0,0" time="10">Focus</animation>
 				<control type="fixedlist" id="55">
 					<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Actors) | Container.Content(Sets)</visible>
 					<posx>0</posx>
@@ -3632,10 +3670,10 @@
 					<focusedlayout width="250" height="800">
 						<control type="group">
 							<animation type="Focus">
-								<effect type="zoom" delay="300" start="100" end="200" time="500" center="102,338" />
+								<effect type="zoom" delay="3" start="100" end="200" time="70" center="102,338" />
 							</animation>
 							<animation type="UnFocus">
-								<effect type="zoom" delay="300" start="200" end="100" time="500" center="102,338" />
+								<effect type="zoom" delay="3" start="200" end="100" time="700" center="102,338" />
 							</animation>
 							<control type="image">
 								<posx>0</posx>
@@ -3665,6 +3703,7 @@
 								<aspectratio align="center">keep</aspectratio>
 								<animation effect="slide" start="0" end="0,-170" time="600" delay="450">Focus</animation>
 								<animation effect="slide" end="0" start="0,-170" time="600" delay="0">UnFocus</animation>
+								<animation effect="rotate" center="auto" start="360" end="0" time="3000" loop="true" condition="Player.Playing">Conditional</animation>
 								<visible>Skin.HasSetting(CDArt.Enabled)</visible>
 								<visible>!IsEmpty(ListItem.Art(discart))</visible>
 							</control>
@@ -3801,8 +3840,8 @@
 					<width>1712</width>
 					<height>6</height>
 					<orientation>horizontal</orientation>
-					<texturesliderbar colordiffuse="PrimaryT" border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
-					<texturesliderbarfocus colordiffuse="PrimaryT" border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
+					<texturesliderbar colordiffuse="$VAR[FocusModColourVar]" border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
+					<texturesliderbarfocus colordiffuse="$VAR[FocusModColourVar]" border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<onup>55</onup>
 					<ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
@@ -4196,8 +4235,8 @@
 						<onright>500</onright>
 						<onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
 						<onleft condition="Skin.HasSetting(KioskMode)">500</onleft>
-						<texturesliderbar colordiffuse="PrimaryBG" border="1">views/other/scrollbar-sq.png</texturesliderbar>
-						<texturesliderbarfocus colordiffuse="PrimaryBG" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+						<texturesliderbar colordiffuse="$VAR[FocusModColourVar]" border="1">views/other/scrollbar-sq.png</texturesliderbar>
+						<texturesliderbarfocus colordiffuse="$VAR[FocusModColourVar]" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
 						<orientation>vertical</orientation>
 						<showonepage>false</showonepage>
 						<animation effect="fade" start="50" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772) + !Control.HasFocus(70)">Conditional</animation>
@@ -4456,8 +4495,8 @@
 						<onright>501</onright>
 						<onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
 						<onleft condition="Skin.HasSetting(KioskMode)">501</onleft>
-						<texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
-						<texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+						<texturesliderbar colordiffuse="$VAR[FocusModColourVar]" border="1">views/other/scrollbar-sq.png</texturesliderbar>
+						<texturesliderbarfocus colordiffuse="$VAR[FocusModColourVar]" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
 						<orientation>vertical</orientation>
 						<showonepage>false</showonepage>
 						<animation effect="fade" start="50" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772) + !Control.HasFocus(70)">Conditional</animation>
@@ -5364,8 +5403,8 @@
 					<posy>169</posy>
 					<width>6</width>
 					<height>742</height>
-					<texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
-					<texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+					<texturesliderbar colordiffuse="$VAR[FocusModColourVar]" border="1">views/other/scrollbar-sq.png</texturesliderbar>
+					<texturesliderbarfocus colordiffuse="$VAR[FocusModColourVar]" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
 					<orientation>vertical</orientation>
 					<showonepage>false</showonepage>
 					<onright>60</onright>
@@ -5405,7 +5444,16 @@
 				<texture background="true">$VAR[ListInfoLandscapeVar2]</texture>
 				<aspectratio scalediffuse="false">keep</aspectratio>
 				<fadetime>200</fadetime>
-				<visible>!Container.Content(albums)</visible>
+				<visible>!Container.Content(albums) + [!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(LoveFilmShowVideo)] | [Player.HasVideo + Skin.HasSetting(LoveFilmShowVideo) + IsEmpty(Window(Home).property(ThemeMediaMB3IsAlive))]]</visible>
+			</control>
+			<control type="videowindow">
+				<description>video</description>
+				<posx>619</posx>
+				<posy>25</posy>
+				<width>1216</width>
+				<height>684</height>
+				<aspectratio>stretch</aspectratio>
+				<visible>!Container.Content(albums) + Player.HasVideo + Skin.HasSetting(LoveFilmShowVideo) + !IsEmpty(Window(Home).property(ThemeMediaMB3IsAlive))</visible>
 			</control>
 			<control type="image">
 				<description>Landscape</description>
@@ -5531,7 +5579,7 @@
 			<posy>900</posy>
 			<posx>40</posx>
 			<orientation>horizontal</orientation>
-			<texturesliderbarfocus colordiffuse="PrimaryT" border="1">windows/common/white.png</texturesliderbarfocus>
+			<texturesliderbarfocus colordiffuse="$VAR[FocusModColourVar]" border="1">windows/common/white.png</texturesliderbarfocus>
 			<showonepage>false</showonepage>
 			<onup>566</onup>
 			<ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
@@ -5756,8 +5804,8 @@
 						<onright>582</onright>
 						<onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
 						<onleft condition="Skin.HasSetting(KioskMode)">582</onleft>
-						<texturesliderbar colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texturesliderbar>
-						<texturesliderbarfocus colordiffuse="PrimaryT" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+						<texturesliderbar colordiffuse="$VAR[FocusModColourVar]" border="1">views/other/scrollbar-sq.png</texturesliderbar>
+						<texturesliderbarfocus colordiffuse="$VAR[FocusModColourVar]" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
 						<orientation>vertical</orientation>
 						<showonepage>false</showonepage>
 						<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772) + !Control.HasFocus(70)">Conditional</animation>
@@ -5836,6 +5884,16 @@
 							<height>464</height>
 							<texture background="true" diffuse="arctic/reel/fanart-big.png">$VAR[ListInfoLandscapeVar]</texture>
 							<aspectratio scalediffuse="false">keep</aspectratio>
+							<visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(ReelShowVideo)] | [Player.HasVideo + Skin.HasSetting(ReelShowVideo) + IsEmpty(Window(Home).property(ThemeMediaMB3IsAlive))]</visible>
+						</control>
+						<control type="videowindow">
+							<description>video</description>
+							<posx>10</posx>
+							<posy>10</posy>
+							<width>828</width>
+							<height>464</height>
+							<aspectratio>stretch</aspectratio>
+							<visible>Player.HasVideo + Skin.HasSetting(ReelShowVideo) + !IsEmpty(Window(Home).property(ThemeMediaMB3IsAlive))</visible>
 						</control>
 						<!-- CD ART -->
 						<control type="image">
@@ -6294,6 +6352,129 @@
 			<animation effect="fade" start="40" end="100" time="300" tween="sine" easing="inout" condition="Control.HasFocus(70)">Conditional</animation>
 			<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(70)">Conditional</animation>
 			<visible>Control.IsVisible(780)</visible>
+		</control>
+	</include>
+	<!--Titan -->
+	<include name="BannerPlexlayout">
+		<control type="image">
+			<width>590</width>
+			<height>120</height>
+			<texture background="true">$VAR[DefaultBannerFallbackPoster]</texture>
+			<aspectratio scalediffuse="false" align="left">stretch</aspectratio>
+		</control>
+	</include>
+	<include name="Viewtype-BannerPlex">
+		<!--Panel -->
+		<control type="group">
+			<visible>Control.IsVisible(56)</visible>
+			<include>animation_view_change</include>
+			<include>animation_list</include>
+			<!-- ID="56" -->
+			<control type="panel" id="56">
+				<posx>45</posx>
+				<posy>340</posy>
+				<width>1860</width>
+				<height>570</height>
+				<onup>56</onup>
+				<ondown>56</ondown>
+				<onleft>9000</onleft>
+				<onright>56</onright>
+				<pagecontrol>60</pagecontrol>
+				<viewtype label="Banner Plex">bigwide</viewtype>
+				<scrolltime tween="Cubic" easing="inout">500</scrolltime>
+				<focusposition>0</focusposition>
+				<orientation>vertical</orientation>
+				<preloaditems>2</preloaditems>
+				<visible>container.content(MusicVideos) | Container.Content(tvshows) | Container.Content(Movies) | container.content(seasons)</visible>
+				<itemlayout height="145" width="610" condition="container.content(MusicVideos) | Container.Content(tvshows) | Container.Content(Movies) | container.content(seasons)">
+					<control type="group">
+						<posy>10</posy>
+						<posx>10</posx>
+						<control type="image">
+							<width>604</width>
+							<height>126</height>
+							<texture>views/posterview/shadow.png</texture>
+						</control>
+						<include>BannerPlexlayout</include>
+					</control>
+				</itemlayout>
+				<focusedlayout height="145" width="610" condition="container.content(MusicVideos) | Container.Content(tvshows) | Container.Content(Movies) | container.content(seasons)">
+					<control type="group">
+						<posy>10</posy>
+						<posx>10</posx>
+						<animation type="focus">
+							<effect type="zoom" start="100" end="105" center="auto" time="150" />
+						</animation>
+						<animation type="unfocus">
+							<effect type="zoom" start="105" end="100" center="auto" time="150" />
+						</animation>
+						<control type="image">
+							<width>590</width>
+							<height>120</height>
+							<bordersize>-5</bordersize>
+							<texture>windows/common/white.png</texture>
+							<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
+							<aspectratio scalediffuse="false" align="left">stretch</aspectratio>
+						</control>
+						<include>BannerPlexlayout</include>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Control.HasFocus(56)</visible>
+			<top>170</top>
+			<left>55</left>
+			<control type="label">
+				<width>678</width>
+				<font>Font-Condensed-S45</font>
+				<label>$INFO[Container(56).ListItem.Label]</label>
+				<textcolor>FFFFFFFF</textcolor>
+				<shadowcolor>77000000</shadowcolor>
+				<scroll>false</scroll>
+				<animation effect="slide" end="0,40" time="0" condition="IsEmpty(Container(553).ListItem.Genre)">Conditional</animation>
+			</control>
+			<control type="label">
+				<top>90</top>
+				<width>678</width>
+				<font>Font-Condensed-S30</font>
+				<label>$INFO[Container(56).ListItem.Genre]</label>
+				<textcolor>DDFFFFFF</textcolor>
+				<shadowcolor>22000000</shadowcolor>
+				<scroll>false</scroll>
+			</control>
+			<control type="label">
+				<top>140</top>
+				<width>678</width>
+				<font>Font-Condensed-S30</font>
+				<label>$VAR[VideoPanelThumbInfo]</label>
+				<textcolor>DDFFFFFF</textcolor>
+				<shadowcolor>22000000</shadowcolor>
+				<scroll>false</scroll>
+			</control>
+		</control>
+		<!--Scollbar -->
+		<control type="group">
+			<visible>Control.IsVisible(56)</visible>
+			<visible>![Window.IsActive(DialogVideoInfo.xml)]</visible>
+			<visible>IntegerGreaterThan(Container(56).NumItems,30)</visible>
+			<visible>!Container.Content(songs)</visible>
+			<control type="scrollbar" id="660">
+				<!--Scrollbar ID60 -->
+				<visible>IntegerGreaterThan(Container(56).NumItems,30)</visible>
+				<visible>!Container.Content(songs) + !Container.Content(seasons) + !Container.Content(episodes)</visible>
+				<posx>60</posx>
+				<width>1800</width>
+				<posy>940</posy>
+				<height>15</height>
+				<onup>56</onup>
+				<onright>noop</onright>
+				<textureslidernib colordiffuse="PrimaryT">views/other/scrollbar-sq.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="PrimaryT">views/other/scrollbar-sq.png</textureslidernibfocus>
+				<orientation>horizontal</orientation>
+				<visible allowhiddenfocus="true">Control.HasFocus(60) | Container.Scrolling</visible>
+				<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(60) | Container.Scrolling">Conditional</animation>
+			</control>
 		</control>
 	</include>
 </includes>

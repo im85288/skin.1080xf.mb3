@@ -167,7 +167,7 @@
 				<width>-50</width>
 				<height>100</height>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="65,50" condition="!Container(3).HasFocus(8)">Conditional</animation>
-				<visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.movies.0.title)) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.0.title)) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
 				<control type="image">
 					<posx>-25</posx>
 					<posy>13</posy>
@@ -191,21 +191,21 @@
 			<control type="label">
 				<description>User 1</description>
 				<include>HomeLabel</include>
-				<label>$INFO[Window(Home).Property(xbmb3c.usr.movies.0.title)]</label>
+				<label>$INFO[Window(Home).Property(MediaBrowser.usr.movies.0.title)]</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(8)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(8)">Conditional</animation>
 				<visible>!Container(3).HasFocus(8)</visible>
-				<visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.movies.0.title))</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.0.title))</visible>
 				<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
 			</control>
 			<control type="label">
 				<description>User 1</description>
 				<include>HomeLabelColour</include>
-				<label>$INFO[Window(Home).Property(xbmb3c.usr.movies.0.title)]</label>
+				<label>$INFO[Window(Home).Property(MediaBrowser.usr.movies.0.title)]</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(8)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(8)">Conditional</animation>
 				<visible>Container(3).HasFocus(8)</visible>
-				<visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.movies.0.title))</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.0.title))</visible>
 				<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
 			</control>
 			<control type="image">
@@ -239,7 +239,7 @@
 				<width>-50</width>
 				<height>100</height>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="65,50" condition="!Container(3).HasFocus(9)">Conditional</animation>
-				<visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.movies.1.title)) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.1.title)) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
 				<control type="image">
 					<posx>-25</posx>
 					<posy>13</posy>
@@ -264,21 +264,21 @@
 				<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
 				<description>User 2</description>
 				<include>HomeLabel</include>
-				<label>$INFO[Window(Home).Property(xbmb3c.usr.movies.1.title)]</label>
+				<label>$INFO[Window(Home).Property(MediaBrowser.usr.movies.1.title)]</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(9)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(9)">Conditional</animation>
 				<visible>!Container(3).HasFocus(9)</visible>
-				<visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.movies.1.title))</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.1.title))</visible>
 			</control>
 			<control type="label">
 				<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
 				<description>User 2</description>
 				<include>HomeLabelColour</include>
-				<label>$INFO[Window(Home).Property(xbmb3c.usr.movies.1.title)]</label>
+				<label>$INFO[Window(Home).Property(MediaBrowser.usr.movies.1.title)]</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(9)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(9)">Conditional</animation>
 				<visible>Container(3).HasFocus(9)</visible>
-				<visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.movies.1.title))</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.1.title))</visible>
 			</control>
 			<control type="group">
 				<posx>0</posx>
@@ -286,7 +286,7 @@
 				<width>-50</width>
 				<height>100</height>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="65,50" condition="!Container(3).HasFocus(10)">Conditional</animation>
-				<visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.movies.2.title)) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.2.title)) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
 				<control type="image">
 					<posx>-25</posx>
 					<posy>13</posy>
@@ -310,20 +310,20 @@
 			<control type="label">
 				<description>User 3</description>
 				<include>HomeLabel</include>
-				<label>$INFO[Window(Home).Property(xbmb3c.usr.movies.2.title)]</label>
+				<label>$INFO[Window(Home).Property(MediaBrowser.usr.movies.2.title)]</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(10)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(10)">Conditional</animation>
 				<visible>!Container(3).HasFocus(10)</visible>
-				<visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.movies.2.title))</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.2.title))</visible>
 			</control>
 			<control type="label">
 				<description>User 3</description>
 				<include>HomeLabelColour</include>
-				<label>$INFO[Window(Home).Property(xbmb3c.usr.movies.2.title)]</label>
+				<label>$INFO[Window(Home).Property(MediaBrowser.usr.movies.2.title)]</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(10)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(10)">Conditional</animation>
 				<visible>Container(3).HasFocus(10)</visible>
-				<visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.movies.2.title))</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.2.title))</visible>
 			</control>
 		</control>
 		<control type="wraplist" id="3">
@@ -350,60 +350,60 @@
 				<item id="1">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.movies.5.path)]</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.std.movies.5.path)]</onclick>
 					<onclick condition="Skin.HasSetting(UseKodiLibrary)">XBMC.ActivateWindow(10025,special://skin/playlists/Unwatched Movies.xsp,return)</onclick>
 				</item>
 				<item id="2">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.movies.2.path)]</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.std.movies.2.path)]</onclick>
 					<onclick condition="Skin.HasSetting(UseKodiLibrary)">XBMC.ActivateWindow(10025,special://skin/playlists/Movies In Progress.xsp,return)</onclick>
 				</item>
 				<item id="3">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.movies.1.path)]</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.std.movies.1.path)]</onclick>
 					<onclick condition="Skin.HasSetting(UseKodiLibrary)">XBMC.ActivateWindow(10025,special://skin/playlists/New Movies.xsp,return)</onclick>
 				</item>
 				<item id="4">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.movies.4.path)]</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.std.movies.4.path)]</onclick>
 					<onclick condition="Skin.HasSetting(UseKodiLibrary)">ActivateWindow(Videos,MovieSets,return)</onclick>
 				</item>
 				<item id="5">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.playlists.0.path)]</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.std.playlists.0.path)]</onclick>
 				</item>
 				<item id="6">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.movies.6.path)]</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.std.movies.6.path)]</onclick>
 					<onclick condition="Skin.HasSetting(UseKodiLibrary)">ActivateWindow(VideoLibrary,MovieGenres,return)</onclick>
 				</item>
 				<item id="7">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.movies.7.path)]</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.std.movies.7.path)]</onclick>
 					<onclick condition="Skin.HasSetting(UseKodiLibrary)">ActivateWindow(VideoLibrary,MoviesStudios,return)</onclick>
 				</item>
 				<item id="8">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.usr.movies.0.path)]</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.usr.movies.0.path)]</onclick>
 					<onclick condition="Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,root)</onclick>
 				</item>
 				<item id="9">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.usr.movies.1.path)]</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.usr.movies.1.path)]</onclick>
 					<onclick condition="Skin.HasSetting(UseKodiLibrary) + !Library.IsScanningVideo">UpdateLibrary(video)</onclick>
 				</item>
 				<item id="10">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.usr.movies.2.path)]</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.usr.movies.2.path)]</onclick>
 				</item>
 			</content>
 		</control>

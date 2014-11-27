@@ -384,32 +384,32 @@
 				<item id="1">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>$INFO[Window(Home).Property(xbmb3c.std.music.4.path)]</onclick>
+					<onclick>$INFO[Window(Home).Property(MediaBrowser.std.music.4.path)]</onclick>
 				</item>
 				<item id="2">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>$INFO[Window(Home).Property(xbmb3c.std.music.5.path)]</onclick>
+					<onclick>$INFO[Window(Home).Property(MediaBrowser.std.music.5.path)]</onclick>
 				</item>
 				<item id="3">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>$INFO[Window(Home).Property(xbmb3c.std.music.6.path)]</onclick>
+					<onclick>$INFO[Window(Home).Property(MediaBrowser.std.music.6.path)]</onclick>
 				</item>
 				<item id="4">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>$INFO[Window(Home).Property(xbmb3c.std.music.7.path)]</onclick>
+					<onclick>$INFO[Window(Home).Property(MediaBrowser.std.music.7.path)]</onclick>
 				</item>
 				<item id="5">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>$INFO[Window(Home).Property(xbmb3c.std.music.8.path)]</onclick>
+					<onclick>$INFO[Window(Home).Property(MediaBrowser.std.music.8.path)]</onclick>
 				</item>
 				<item id="6">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>$INFO[Window(Home).Property(xbmb3c.std.music.3.path)]</onclick>
+					<onclick>$INFO[Window(Home).Property(MediaBrowser.std.music.3.path)]</onclick>
 				</item>
 			</content>
 		</control>

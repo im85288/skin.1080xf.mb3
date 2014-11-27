@@ -41,6 +41,8 @@
 	<color name="SelectedRed">FFE10101</color>
 	<color name="SelectedGreen">FF42EE3A</color>
 	<color name="SelectedBlue">FF31D0FF</color>
+	<color name="SelectedOrange">ffD6A51E</color>
+	<color name="green">FF0A9903</color>
 	
 	<!-- WHITES AND BLACKS -->
 	<color name="mod-black">ddeeeeee</color>

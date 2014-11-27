@@ -1246,3 +1246,7 @@ msgstr ""
 msgctxt "#49270"
 msgid "Use Native Kodi Music Library"
 msgstr ""
+
+msgctxt "#49272"
+msgid "Show Video Backdrop"
+msgstr ""

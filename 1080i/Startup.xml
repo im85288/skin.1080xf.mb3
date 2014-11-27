@@ -36,6 +36,7 @@
 			<onfocus condition="!Skin.HasSetting(Skin.Initialization)">Skin.SetBool(HomeLogo.Enabled)</onfocus>
 			<onfocus condition="!Skin.HasSetting(Skin.Initialization)">Skin.SetBool(ClearArt.Enabled)</onfocus>
 			<onfocus condition="!Skin.HasSetting(Skin.Initialization)">Skin.SetBool(ViewsClearArt.Enabled)</onfocus>
+			<onfocus condition="System.HasAddon(plugin.video.xbmb3c) + !Skin.HasSetting(Skin.Initialization)">XBMC.RunScript(service.mediabrowser.skinhelper,SETRECOMMENDEDMB3SETTINGS,1080XF)</onfocus>
 		</control>
 		<control type="button" id="11">
 			<onfocus>ClearProperty(Skin.Initialization)</onfocus>

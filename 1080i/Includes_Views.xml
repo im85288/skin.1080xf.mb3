@@ -19,6 +19,7 @@
 		<include>Viewtype-Reel</include>
 		<include>Viewtype-BannerFanart</include>
 		<include>Viewtype-Coverflow</include>
+		<include>Viewtype-BannerPlex</include>
 		<include condition="Skin.HasSetting(NextAired.Enabled)">NextAiredInfo</include>
 	</include>
 	<include name="MusicViews">
@@ -1095,9 +1096,81 @@
 		<value condition="Container.Content(Seasons) + !IsEmpty(Container(780).ListItem(3).Art(tvshow.poster))">$INFO[Container(780).ListItem(3).Art(tvshow.poster)]</value>
 		<value>$INFO[Container(780).ListItem(3).ActualIcon,views/fallbacks/,/large.png]</value>
 	</variable>
-	
 	<variable name="RottenTomatoesInfo">
 		<value condition="StringCompare(Container(3226).ListItem(6).Label,CriticRating:) + IntegerGreaterThan(Container(3226).ListItem(6).Label2,59)">special://skin/extras/icons/rottentomatoes.png</value>
 		<value condition="StringCompare(Container(3226).ListItem(6).Label,CriticRating:) + !IntegerGreaterThan(Container(3226).ListItem(6).Label2,59)">special://skin/extras/icons/rottentomatoesrotten.png</value>
 	</variable>
+	<variable name="CommunityRatingInfo">
+		<value condition="StringCompare(Container(3226).ListItem(6).Label,Metascore:) + IntegerGreaterThan(Container(3226).ListItem(6).Label2,59)">green</value>
+		<value condition="StringCompare(Container(3226).ListItem(7).Label,Metascore:) + IntegerGreaterThan(Container(3226).ListItem(7).Label2,59)">green</value>
+		<value condition="StringCompare(Container(3226).ListItem(6).Label,Metascore:) + [IntegerGreaterThan(Container(3226).ListItem(6).Label2,39) + !IntegerGreaterThan(Container(3226).ListItem(6).Label2,59)]">SelectedOrange</value>
+		<value condition="StringCompare(Container(3226).ListItem(7).Label,Metascore:) + [IntegerGreaterThan(Container(3226).ListItem(7).Label2,39) + !IntegerGreaterThan(Container(3226).ListItem(7).Label2,59)]">SelectedOrange</value>
+		<value condition="StringCompare(Container(3226).ListItem(6).Label,Metascore:) + !IntegerGreaterThan(Container(3226).ListItem(6).Label2,39)">SelectedRed</value>
+		<value condition="StringCompare(Container(3226).ListItem(7).Label,Metascore:) + !IntegerGreaterThan(Container(3226).ListItem(7).Label2,39)">SelectedRed</value>
+	</variable>
+	<!-- =============== -->
+	<!-- Additional Info -->
+	<!-- =============== -->
+	<variable name="value_ground1_label">
+		<!-- Land / Premiere -->
+		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos)">$LOCALIZE[21875] :</value>
+		<!-- Land -->
+		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">Premiere :</value>
+		<!-- Premiere -->
+	</variable>
+	<variable name="value_ground1_value">
+		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos)">$INFO[ListItem.Country]</value>
+		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$INFO[ListItem.Premiered]</value>
+	</variable>
+	<variable name="value_ground2_label">
+		<!-- Genre / Regie -->
+		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons)">$LOCALIZE[515] :</value>
+		<!-- Genre -->
+		<value condition="Container.Content(episodes)">$LOCALIZE[20339] :</value>
+		<!-- Regie -->
+	</variable>
+	<variable name="value_ground2_value">
+		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Genre]</value>
+		<value condition="Container.Content(episodes)">$INFO[ListItem.Director]</value>
+	</variable>
+	<variable name="value_ground3_label">
+		<!-- Studio -->
+		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos) |  Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$LOCALIZE[20388] :</value>
+		<!-- Studio -->
+	</variable>
+	<variable name="value_ground3_value">
+		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos) |  Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$INFO[ListItem.Studio]</value>
+	</variable>
+	<variable name="value_ground4_label">
+		<!-- Regie / Episodes (counter) / Duration -->
+		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos)">$LOCALIZE[20339] :</value>
+		<!-- Regie -->
+		<value condition="Container.Content(tvshows)">$LOCALIZE[20360] :</value>
+		<!-- Episodes -->
+		<value condition="Container.Content(episodes)">$LOCALIZE[180] :</value>
+		<!-- Duration -->
+	</variable>
+	<variable name="value_ground4_value">
+		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos)">$INFO[ListItem.Director]</value>
+		<value condition="Container.Content(tvshows)">$INFO[ListItem.Property(TotalEpisodes)] ($LOCALIZE[16101]: $INFO[ListItem.Property(UnwatchedEpisodes)])</value>
+		<value condition="Container.Content(episodes) + !SubString(ListItem.Duration,min)">$INFO[ListItem.Duration] min</value>
+		<value condition="Container.Content(episodes) + SubString(ListItem.Duration,min)">$INFO[ListItem.Duration]</value>
+	</variable>
+	<variable name="value_list_label_2">
+		<value condition="[Container.Content(movies) | Container.Content(musicvideos)] + ![SubString(ListItem.Duration,min) | SubString(ListItem.Path,videodb://1/7,left)]">[COLOR=SelectedBlue]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration] min - [COLOR=SelectedBlue]$LOCALIZE[20339]: [/COLOR] $INFO[ListItem.Director]</value>
+		<value condition="[Container.Content(movies) | Container.Content(musicvideos)] + SubString(ListItem.Duration,min) + !SubString(ListItem.Path,videodb://1/7,left)">[COLOR=SelectedBlue]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration] - [COLOR=SelectedBlue]$LOCALIZE[20339]: [/COLOR] $INFO[ListItem.Director]</value>
+		<value condition="SubString(ListItem.Path,videodb://1/7,left)">[COLOR=SelectedBlue]$LOCALIZE[20457][/COLOR]</value>
+		<!-- Movie Sets -->
+		<value condition="Container.Content(tvshows) + !IsEmpty(ListItem.Episode)">[COLOR=SelectedBlue]$LOCALIZE[20360]: [/COLOR]$INFO[ListItem.Episode] - [COLOR=SelectedBlue]$LOCALIZE[16101]: [/COLOR]$INFO[ListItem.Property(UnWatchedEpisodes)]</value>
+		<value condition="Container.Content(seasons) + !IsEmpty(ListItem.Episode)">[COLOR=SelectedBlue]$INFO[ListItem.TVShowTitle][/COLOR] - [COLOR=SelectedBlue]$LOCALIZE[20360]: [/COLOR]$INFO[ListItem.Property(TotalEpisodes)] - [COLOR=SelectedBlue]$LOCALIZE[16101]: [/COLOR]$INFO[ListItem.Property(UnWatchedEpisodes)]</value>
+		<value condition="Container.Content(episodes) + !SubString(ListItem.Duration,min)">[COLOR=SelectedBlue]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration] min - [COLOR=SelectedBlue]$INFO[ListItem.TVShowTitle][/COLOR]</value>
+		<value condition="Container.Content(episodes) + SubString(ListItem.Duration,min)">[COLOR=SelectedBlue]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration] - [COLOR=SelectedBlue]$INFO[ListItem.TVShowTitle][/COLOR]</value>
+		<value condition="Container.Content(artists)">[COLOR=SelectedBlue]$LOCALIZE[21898]: [/COLOR]$INFO[ListItem.Property(Artist_YearsActive)]</value>
+		<!-- YearsActive/Artists -->
+		<value condition="Container.Content(songs) + !SubString(ListItem.Duration,min)">[COLOR=SelectedBlue]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration] min</value>
+		<value condition="Container.Content(songs) + SubString(ListItem.Duration,min)">[COLOR=SelectedBlue]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration]</value>
+		<value condition="Container.Content(addons) + !IsEmpty(ListItem.Property(Addon.Version)) + IsEmpty(ListItem.Label2)">[COLOR=SelectedBlue]$LOCALIZE[24051] [/COLOR]$INFO[ListItem.Property(Addon.Version)] - [COLOR=SelectedBlue]$LOCALIZE[21863]: [/COLOR]$INFO[ListItem.Property(Addon.Creator)]</value>
+		<value condition="Container.Content(addons) + !IsEmpty(ListItem.Property(Addon.Version)) + !IsEmpty(ListItem.Label2)">[COLOR=SelectedBlue]$LOCALIZE[24051] [/COLOR]$INFO[ListItem.Property(Addon.Version)] - [COLOR=SelectedBlue]$LOCALIZE[21863]: [/COLOR]$INFO[ListItem.Property(Addon.Creator)] - [COLOR=SelectedBlue]$INFO[ListItem.Label2][/COLOR]</value>
+	</variable>
+	
 </includes>

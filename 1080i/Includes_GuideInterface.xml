@@ -226,14 +226,14 @@
 			<item id="0">
 				<label>$LOCALIZE[41445]</label>
 				<include>GuideDialogClose</include>
-				<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.movies.0.path)]</onclick>
+				<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.std.movies.0.path)]</onclick>
 				<onclick condition="!Library.HasContent(movies) + Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,files,return)</onclick>
 				<onclick condition="Library.HasContent(movies) + Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,movietitles,return)</onclick>
 			</item>
 			<item id="1">
 				<label>$LOCALIZE[41446]</label>
 				<include>GuideDialogClose</include>
-				<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.tvshows.0.path)]</onclick>
+				<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.std.tvshows.0.path)]</onclick>
 				<onclick condition="!Library.HasContent(tvshows) + Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,files,return)</onclick>
 				<onclick condition="Library.HasContent(tvshows) + Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,tvshowtitles,return)</onclick>
 			</item>
@@ -276,7 +276,7 @@
 			<item id="7">
 				<label>$LOCALIZE[41450]</label>
 				<include>GuideDialogClose</include>
-				<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.movies.1.path)]</onclick>
+				<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.std.movies.1.path)]</onclick>
 				<onclick condition="Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,RecentlyAddedMovies,return)</onclick>
 				<visible>!Skin.HasSetting(Guide.Custom3) + IsEmpty(Skin.String(Guide.Custom3.Path))</visible>
 			</item>
@@ -292,7 +292,7 @@
 			<item id="9">
 				<label>$LOCALIZE[41451]</label>
 				<include>GuideDialogClose</include>
-				<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(xbmb3c.std.tvshows.1.path)]</onclick>
+				<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.std.tvshows.1.path)]</onclick>
 				<onclick condition="Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,RecentlyAddedEpisodes,return)</onclick>
 				<visible>!Skin.HasSetting(Guide.Custom4) + IsEmpty(Skin.String(Guide.Custom4.Path))</visible>
 			</item>

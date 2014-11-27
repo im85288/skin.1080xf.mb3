@@ -1212,7 +1212,8 @@
 		<control type="button" id="8">
 			<description>Play</description>
 			<visible>false</visible>
-			<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(home).Property("MB3.Action")]</onclick>
+			<onclick condition="!Skin.HasSetting(UseKodiLibrary) + !StringCompare(Window(home).Property(MB3.Action),None)">$INFO[Window(home).Property("MB3.Action")]</onclick>
+			<onclick condition="!Skin.HasSetting(UseKodiLibrary) + StringCompare(Window(home).Property(MB3.Action),None)">PlayMedia($ESCINFO[ListItem.FileNameAndPath])</onclick>
 			<onclick>Dialog.Close(MovieInformation)</onclick>
 		</control>
 		<control type="button" id="10">

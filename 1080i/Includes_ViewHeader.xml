@@ -239,7 +239,7 @@
 		<control type="group">
 			<posx>75</posx>
 			<posy>26</posy>
-			<visible>!stringcompare(Container.FolderName,XBMB3C)</visible>
+			<visible>!stringcompare(Container.FolderName,MediaBrowser)</visible>
 			<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + !Window.IsActive(1122) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">

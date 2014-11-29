@@ -10,32 +10,33 @@
 	<onload condition="Container(20).HasFocus(3)">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onload>
 	<onload condition="Container(20).HasFocus(4)">AlarmClock(HomeTileMove,Control.Move(3022,1),00:07,silent,loop)</onload>
 	<onload condition="Container(20).HasFocus(11)">AlarmClock(HomeTileMove,Control.Move(11022,1),00:07,silent,loop)</onload>
+	<onload condition="Container(20).HasFocus(10)">AlarmClock(HomeTileMove,Control.Move(10022,1),00:07,silent,loop)</onload>
 	<onload condition="Container(20).HasFocus(5)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onload>
 	<onload condition="Container(20).HasFocus(7)">AlarmClock(HomeTileMove,Control.Move(7022,1),00:07,silent,loop)</onload>
 	<onload condition="!Skin.HasSetting(HideHomeProfileInfo)">AlarmClock(ProfileMove,Control.Move(30,1),00:10,silent,loop)</onload>
-	<!--  <onload condition="System.HasAddon(plugin.video.xbmb3c)">RunScript(plugin.video.xbmb3c,skin)</onload> -->
 	<onload condition="IsEmpty(Skin.String(focuscolor.name))">Skin.SetString(focuscolor.name,Green Focus)</onload>
 	<onload condition="IsEmpty(Skin.String(tilelivetvcolor.name))">Skin.SetString(tilelivetvcolor.name,tilelivetv)</onload>
 	<onload condition="IsEmpty(Skin.String(tilehomecolor.name))">Skin.SetString(tilehomecolor.name,tilehome)</onload>
 	<onload condition="IsEmpty(Skin.String(tilemoviescolor.name))">Skin.SetString(tilemoviescolor.name,tilemovies)</onload>
 	<onload condition="IsEmpty(Skin.String(tiletvcolor.name))">Skin.SetString(tiletvcolor.name,tiletv)</onload>
 	<onload condition="IsEmpty(Skin.String(tilechannelscolor.name))">Skin.SetString(tilechannelscolor.name,tilechannels)</onload>
+	<onload condition="IsEmpty(Skin.String(tilephotoscolor.name))">Skin.SetString(tilephotoscolor.name,tilephotos)</onload>
 	<onload condition="IsEmpty(Skin.String(tilemusiccolor.name))">Skin.SetString(tilemusiccolor.name,tilemusic)</onload>
 	<onload condition="IsEmpty(Skin.String(tileapplicationscolor.name))">Skin.SetString(tileapplicationscolor.name,tileapplications)</onload>
 	<onload condition="IsEmpty(Skin.String(tileweathercolor.name))">Skin.SetString(tileweathercolor.name,tileweather)</onload>
 	<onload condition="IsEmpty(Skin.String(tilesettingscolor.name))">Skin.SetString(tilesettingscolor.name,tilesettings)</onload>
 	<onload condition="IsEmpty(Skin.String(tilesearchcolor.name))">Skin.SetString(tilesearchcolor.name,tilesearch)</onload>
 	<onload condition="IsEmpty(Skin.String(tilelivetvstandard.name))">Skin.SetString(tilelivetvstandard.name,tile-grey)</onload>
-	<onload condition="IsEmpty(Skin.String(tilehomestandard.name))">Skin.SetString(tilehomestandard.name,tile-grey)</onload>	
+	<onload condition="IsEmpty(Skin.String(tilehomestandard.name))">Skin.SetString(tilehomestandard.name,tile-grey)</onload>
 	<onload condition="IsEmpty(Skin.String(tilemoviesstandard.name))">Skin.SetString(tilemoviesstandard.name,tile-blue)</onload>
 	<onload condition="IsEmpty(Skin.String(tiletvstandard.name))">Skin.SetString(tiletvstandard.name,tile-green)</onload>
 	<onload condition="IsEmpty(Skin.String(tilechannelsstandard.name))">Skin.SetString(tilechannelsstandard.name,tile-pink)</onload>
+	<onload condition="IsEmpty(Skin.String(tilephotosstandard.name))">Skin.SetString(tilephotosstandard.name,tile-orange)</onload>
 	<onload condition="IsEmpty(Skin.String(tilemusicstandard.name))">Skin.SetString(tilemusicstandard.name,tile-yellow)</onload>
 	<onload condition="IsEmpty(Skin.String(tileapplicationsstandard.name))">Skin.SetString(tileapplicationsstandard.name,tile-grey)</onload>
-	<onload condition="IsEmpty(Skin.String(tileweatherstandard.name))">Skin.SetString(tileweatherstandard.name,tile-grey)</onload>
+	<onload condition="IsEmpty(Skin.String(tileweatherstandard.name))">Skin.SetString(tileweatherstandard.name,tile-red)</onload>
 	<onload condition="IsEmpty(Skin.String(tilesettingsstandard.name))">Skin.SetString(tilesettingsstandard.name,tile-grey)</onload>
 	<onload condition="IsEmpty(Skin.String(tilesearchstandard.name))">Skin.SetString(tilesearchstandard.name,tile-grey)</onload>
-	
 	<onload condition="!Container(20).HasFocus(7)">ClearProperty(ShowMaps)</onload>
 	<onunload>CancelAlarm(HomeTileMove,true)</onunload>
 	<onunload>CancelAlarm(HomeTileMoveTwo,true)</onunload>

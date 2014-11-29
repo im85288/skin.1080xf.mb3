@@ -68,6 +68,14 @@
                     <onclick>SetProperty(ReloadSkin,1,Home)</onclick>
                     <label>$LOCALIZE[19019]</label>
                 </control>
+                 <control type="radiobutton" id="21033">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>!Skin.HasSetting(HomePhotos)</selected>
+                    <onclick>Skin.ToggleSetting(HomePhotos)</onclick>
+                    <onclick>SetProperty(ReloadSkin,1,Home)</onclick>
+                    <label>$LOCALIZE[49273]</label>
+                </control>
                 <control type="radiobutton" id="2104">
                     <width>1210</width>
                     <include>SettingsDialogRadioButtonVars</include>

@@ -73,6 +73,8 @@
             <include condition="stringcompare(Window(skinsettings).property(Dialog),$LOCALIZE[2])">SettingsBackgroundDialogMusic</include>
             <include condition="stringcompare(Window(skinsettings).property(Dialog),$LOCALIZE[41504])">SettingsBackgroundDialogPrograms</include>
             <include condition="stringcompare(Window(skinsettings).property(Dialog),$LOCALIZE[12600])">SettingsBackgroundDialogWeather</include>
+            <include condition="stringcompare(Window(skinsettings).property(Dialog),$LOCALIZE[19019])">SettingsBackgroundDialogChannels</include>
+            <include condition="stringcompare(Window(skinsettings).property(Dialog),$LOCALIZE[49273])">SettingsBackgroundDialogPhotos</include>
             
             <control type="group">
                 <posx>547</posx>

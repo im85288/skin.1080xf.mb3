@@ -1242,6 +1242,440 @@
 			</control>
 		</control>
 	</include>
+	<include name="PanelDialogHomeWidget8">
+		<control type="grouplist" id="4">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>532</width>
+			<height>360</height>
+			<itemgap>0</itemgap>
+			<onup>4</onup>
+			<ondown>4</ondown>
+			<onleft>5</onleft>
+			<onright condition="Control.IsVisible(3)">3</onright>
+			<onright condition="!Control.IsVisible(3)">5</onright>
+			<scrolltime>0</scrolltime>
+			<orientation>vertical</orientation>
+			<control type="group" id="2141">
+				<description>Fake spin control</description>
+				<width>1210</width>
+				<height>60</height>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>532</width>
+					<height>60</height>
+					<texture>dialogs/default/separator-btn.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>!ControlGroup(2141).HasFocus</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>532</width>
+					<height>60</height>
+					<texture border="2">dialogs/default/highlight.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>ControlGroup(2141).HasFocus</visible>
+				</control>
+				<control type="button" id="21411">
+					<posx>450</posx>
+					<posy>0</posy>
+					<width>32</width>
+					<height>60</height>
+					<onleft>5</onleft>
+					<onright>21412</onright>
+					<onup>2405</onup>
+					<ondown>2143</ondown>
+					<texturefocus>buttons/spinctrl/arrow-light-down-fo.png</texturefocus>
+					<texturenofocus>buttons/spinctrl/arrow-light-down-nf.png</texturenofocus>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),service.skin.widgets)">Skin.SetString(HomeWidget.8.Type,bbc.popular)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),service.skin.widgets)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49278])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.popular)">Skin.SetString(HomeWidget.8.Type,bbc.sport)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.popular)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49279])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.sport)">Skin.SetString(HomeWidget.8.Type,bbc.scifi)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.sport)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49280])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.scifi)">Skin.SetString(HomeWidget.8.Type,bbc.documentaries)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.scifi)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49281])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.documentaries)">Skin.SetString(HomeWidget.8.Type,bbc.music)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.documentaries)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49282])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.music)">Skin.SetString(HomeWidget.8.Type,youtube.top100)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.music)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49283])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),youtube.top100)">Skin.SetString(HomeWidget.8.Type,youtube.mostdiscussed)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),youtube.top100)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49284])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),youtube.mostdiscussed)">Skin.SetString(HomeWidget.8.Type,youtube.trending)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),youtube.mostdiscussed)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49285])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),youtube.trending)">Skin.SetString(HomeWidget.8.Type,youtube.mostviewed)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),youtube.trending)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49286])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),youtube.mostviewed)">Skin.SetString(HomeWidget.8.Type,netflix.newmovies)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),youtube.mostviewed)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49287])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),netflix.newmovies)">Skin.SetString(HomeWidget.8.Type,netflix.randommovies)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),netflix.newmovies)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49288])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),netflix.randommovies)">Skin.SetString(HomeWidget.8.Type,netflix.inprogressmovies)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),netflix.randommovies)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49289])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),netflix.inprogressmovies)">Skin.SetString(HomeWidget.8.Type,netflix.newtvshows)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),netflix.inprogressmovies)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49290])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),netflix.newtvshows)">Skin.SetString(HomeWidget.8.Type,netflix.randomtvshows)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),netflix.newtvshows)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49291])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),netflix.randomtvshows)">Skin.SetString(HomeWidget.8.Type,netflix.inprogresstvshows)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),netflix.randomtvshows)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49292])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),netflix.inprogresstvshows)">Skin.SetString(HomeWidget.8.Type,service.skin.widgets)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),netflix.inprogresstvshows)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[19019])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),service.skin.widgets)">Skin.SetString(HomeWidget.8.Type,bbc.popular)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),service.skin.widgets)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49278])</onclick>
+				</control>
+				<control type="button" id="21412">
+					<posx>482</posx>
+					<posy>0</posy>
+					<width>32</width>
+					<height>60</height>
+					<onleft>21411</onleft>
+					<onright condition="Control.IsVisible(3)">3</onright>
+					<onright condition="!Control.IsVisible(3)">5</onright>
+					<onup>2405</onup>
+					<ondown>2143</ondown>
+					<texturefocus>buttons/spinctrl/arrow-light-up-fo.png</texturefocus>
+					<texturenofocus>buttons/spinctrl/arrow-light-up-nf.png</texturenofocus>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),netflix.inprogresstvshows)">Skin.SetString(HomeWidget.8.Type,netflix.randomtvshows)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),netflix.inprogresstvshows)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49291])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),netflix.randomtvshows)">Skin.SetString(HomeWidget.8.Type,netflix.newtvshows)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),netflix.randomtvshows)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49290])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),netflix.newtvshows)">Skin.SetString(HomeWidget.8.Type,netflix.inprogressmovies)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),netflix.newtvshows)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49289])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),netflix.inprogressmovies)">Skin.SetString(HomeWidget.8.Type,netflix.randommovies)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),netflix.inprogressmovies)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49288])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),netflix.randommovies)">Skin.SetString(HomeWidget.8.Type,netflix.newmovies)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),netflix.randommovies)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49287])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),netflix.newmovies)">Skin.SetString(HomeWidget.8.Type,youtube.mostviewed)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),netflix.newmovies)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49286])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),youtube.mostviewed)">Skin.SetString(HomeWidget.8.Type,youtube.trending)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),youtube.mostviewed)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49285])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),youtube.trending)">Skin.SetString(HomeWidget.8.Type,youtube.mostdiscussed)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),youtube.trending)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49284])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),youtube.mostdiscussed)">Skin.SetString(HomeWidget.8.Type,youtube.top100)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),youtube.mostdiscussed)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49283])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),youtube.top100)">Skin.SetString(HomeWidget.8.Type,bbc.music)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),youtube.top100)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49282])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.music)">Skin.SetString(HomeWidget.8.Type,bbc.documentaries)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.music)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49281])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.documentaries)">Skin.SetString(HomeWidget.8.Type,bbc.scifi)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.documentaries)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49280])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.scifi)">Skin.SetString(HomeWidget.8.Type,bbc.sport)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.scifi)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49279])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.sport)">Skin.SetString(HomeWidget.8.Type,bbc.popular)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.sport)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49278])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.popular)">Skin.SetString(HomeWidget.8.Type,service.skin.widgets)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.popular)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[19019])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),service.skin.widgets)">Skin.SetString(HomeWidget.8.Type,netflix.inprogresstvshows)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),service.skin.widgets)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49292])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),netflix.inprogresstvshows)">Skin.SetString(HomeWidget.8.Type,netflix.randomtvshows)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),netflix.inprogresstvshows)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49291])</onclick>
+				</control>
+				<control type="button">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>455</width>
+					<height>60</height>
+					<align>left</align>
+					<textoffsetx>20</textoffsetx>
+					<font>Font-Condensed-S30</font>
+					<textcolor>FF585858</textcolor>
+					<label>$LOCALIZE[41162]</label>
+					<label2>$INFO[Skin.String(HomeWidget.8.TypeName)]</label2>
+					<visible>!ControlGroup(2141).HasFocus</visible>
+				</control>
+				<control type="button">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>455</width>
+					<height>60</height>
+					<align>left</align>
+					<textoffsetx>20</textoffsetx>
+					<font>Font-Condensed-S30</font>
+					<textcolor>eewhite</textcolor>
+					<label>$LOCALIZE[41162]</label>
+					<label2>$INFO[Skin.String(HomeWidget.8.TypeName)]</label2>
+					<visible>ControlGroup(2141).HasFocus</visible>
+				</control>
+			</control>
+			<control type="group" id="2142">
+				<description>Fake spin control</description>
+				<width>1210</width>
+				<height>60</height>
+				<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>532</width>
+					<height>60</height>
+					<texture>dialogs/default/separator-btn.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="button" id="21421">
+					<posx>450</posx>
+					<posy>0</posy>
+					<width>32</width>
+					<height>60</height>
+					<texturefocus>buttons/spinctrl/arrow-light-down-fo.png</texturefocus>
+					<texturenofocus>buttons/spinctrl/arrow-light-down-nf.png</texturenofocus>
+					<onclick>noop</onclick>
+					<enable>false</enable>
+				</control>
+				<control type="button" id="21422">
+					<posx>482</posx>
+					<posy>0</posy>
+					<width>32</width>
+					<height>60</height>
+					<texturefocus>buttons/spinctrl/arrow-light-up-fo.png</texturefocus>
+					<texturenofocus>buttons/spinctrl/arrow-light-up-nf.png</texturenofocus>
+					<onclick>noop</onclick>
+					<enable>false</enable>
+				</control>
+				<control type="button">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>455</width>
+					<height>60</height>
+					<align>left</align>
+					<textoffsetx>20</textoffsetx>
+					<font>Font-Condensed-S30</font>
+					<textcolor>FF585858</textcolor>
+					<disabledcolor>77585858</disabledcolor>
+					<label>$LOCALIZE[41141]</label>
+					<label2>$INFO[Skin.String(HomeWidget.8.SubTypeName)]</label2>
+					<enable>false</enable>
+				</control>
+			</control>
+			<control type="button" id="2143">
+				<include>SettingsCustomDialogButtonVars</include>
+				<label>$LOCALIZE[559]</label>
+				<label2>$INFO[Skin.String(HomeWidget.8.Playlist)]</label2>
+				<onclick>Skin.SetFile(HomeWidget.8.Playlist,.xsp,special://profile/playlists/music/)</onclick>
+				<enable>stringcompare(Skin.String(HomeWidget.8.Type),script.randomandlastitems)</enable>
+				<animation effect="fade" start="100" end="50" time="0" condition="!stringcompare(Skin.String(HomeWidget.8.Type),script.randomandlastitems)">Conditional</animation>
+			</control>
+			<control type="radiobutton" id="2403">
+				<include>SettingsCustomDialogRadioButtonVars</include>
+				<label>$LOCALIZE[41164]</label>
+				<onclick condition="!stringcompare(Skin.String(HomeWidget.8.Method),Random)">Skin.SetString(HomeWidget.8.Method,Random)</onclick>
+				<onclick condition="stringcompare(Skin.String(HomeWidget.8.Method),Random)">Skin.SetString(HomeWidget.8.Method,Playlist)</onclick>
+				<selected>stringcompare(Skin.String(HomeWidget.8.Method),Random)</selected>
+				<enable>stringcompare(Skin.String(HomeWidget.8.Type),script.randomandlastitems)</enable>
+				<animation effect="fade" start="100" end="50" time="0" condition="!stringcompare(Skin.String(HomeWidget.8.Type),script.randomandlastitems)">Conditional</animation>
+			</control>
+			<control type="radiobutton" id="2404">
+				<include>SettingsCustomDialogRadioButtonVars</include>
+				<label>$LOCALIZE[41165]</label>
+				<onclick condition="!substring(Skin.String(HomeWidget.8.UnWatched),True)">Skin.SetString(HomeWidget.8.UnWatched,True)</onclick>
+				<onclick condition="substring(Skin.String(HomeWidget.8.UnWatched),True)">Skin.SetString(HomeWidget.8.UnWatched,False)</onclick>
+				<selected>substring(Skin.String(HomeWidget.8.UnWatched),True)</selected>
+				<enable>stringcompare(Skin.String(HomeWidget.8.Type),script.randomandlastitems)</enable>
+				<animation effect="fade" start="100" end="50" time="0" condition="!stringcompare(Skin.String(HomeWidget.8.Type),script.randomandlastitems)">Conditional</animation>
+			</control>
+			<control type="radiobutton" id="2405">
+				<include>SettingsCustomDialogRadioButtonVars</include>
+				<label>$LOCALIZE[41166]</label>
+				<onclick condition="!substring(Skin.String(HomeWidget.8.Resume),True)">Skin.SetString(HomeWidget.8.Resume,True)</onclick>
+				<onclick condition="substring(Skin.String(HomeWidget.8.Resume),True)">Skin.SetString(HomeWidget.8.Resume,False)</onclick>
+				<selected>substring(Skin.String(HomeWidget.8.Resume),True)</selected>
+				<enable>stringcompare(Skin.String(HomeWidget.8.Type),script.randomandlastitems)</enable>
+				<animation effect="fade" start="100" end="50" time="0" condition="!stringcompare(Skin.String(HomeWidget.8.Type),script.randomandlastitems)">Conditional</animation>
+			</control>
+		</control>
+	</include>
+	<include name="PanelDialogHomeWidget10">
+		<control type="grouplist" id="4">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>532</width>
+			<height>360</height>
+			<itemgap>0</itemgap>
+			<onup>4</onup>
+			<ondown>4</ondown>
+			<onleft>5</onleft>
+			<onright condition="Control.IsVisible(3)">3</onright>
+			<onright condition="!Control.IsVisible(3)">5</onright>
+			<scrolltime>0</scrolltime>
+			<orientation>vertical</orientation>
+			<control type="group" id="2141">
+				<description>Fake spin control</description>
+				<width>1210</width>
+				<height>60</height>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>532</width>
+					<height>60</height>
+					<texture>dialogs/default/separator-btn.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>!ControlGroup(2141).HasFocus</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>532</width>
+					<height>60</height>
+					<texture border="2">dialogs/default/highlight.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>ControlGroup(2141).HasFocus</visible>
+				</control>
+				<control type="button" id="21411">
+					<posx>450</posx>
+					<posy>0</posy>
+					<width>32</width>
+					<height>60</height>
+					<onleft>5</onleft>
+					<onright>21412</onright>
+					<onup>2405</onup>
+					<ondown>2143</ondown>
+					<texturefocus>buttons/spinctrl/arrow-light-down-fo.png</texturefocus>
+					<texturenofocus>buttons/spinctrl/arrow-light-down-nf.png</texturenofocus>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),service.skin.widgets)">Skin.SetString(HomeWidget.10.Type,extendedinfo.xkcd)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),service.skin.widgets)">Skin.SetString(HomeWidget.10.TypeName,$LOCALIZE[49293])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.xkcd)">Skin.SetString(HomeWidget.10.Type,extendedinfo.cyanidehappiness)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.xkcd)">Skin.SetString(HomeWidget.10.TypeName,$LOCALIZE[49294])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.cyanidehappiness)">Skin.SetString(HomeWidget.10.Type,extendedinfo.dailybabes)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.cyanidehappiness)">Skin.SetString(HomeWidget.10.TypeName,$LOCALIZE[49295])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.dailybabes)">Skin.SetString(HomeWidget.10.Type,service.skin.widgets)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.dailybabes)">Skin.SetString(HomeWidget.10.TypeName,$LOCALIZE[49273])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),service.skin.widgets)">Skin.SetString(HomeWidget.10.Type,extendedinfo.xkcd)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),service.skin.widgets)">Skin.SetString(HomeWidget.10.TypeName,$LOCALIZE[49293])</onclick>
+				</control>
+				<control type="button" id="21412">
+					<posx>482</posx>
+					<posy>0</posy>
+					<width>32</width>
+					<height>60</height>
+					<onleft>21411</onleft>
+					<onright condition="Control.IsVisible(3)">3</onright>
+					<onright condition="!Control.IsVisible(3)">5</onright>
+					<onup>2405</onup>
+					<ondown>2143</ondown>
+					<texturefocus>buttons/spinctrl/arrow-light-up-fo.png</texturefocus>
+					<texturenofocus>buttons/spinctrl/arrow-light-up-nf.png</texturenofocus>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.dailybabes)">Skin.SetString(HomeWidget.10.Type,extendedinfo.cyanidehappiness)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.dailybabes)">Skin.SetString(HomeWidget.10.TypeName,$LOCALIZE[49294])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.cyanidehappiness)">Skin.SetString(HomeWidget.10.Type,extendedinfo.xkcd)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.cyanidehappiness)">Skin.SetString(HomeWidget.10.TypeName,$LOCALIZE[49293])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.xkcd)">Skin.SetString(HomeWidget.10.Type,service.skin.widgets)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.xkcd)">Skin.SetString(HomeWidget.10.TypeName,$LOCALIZE[49273])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),service.skin.widgets)">Skin.SetString(HomeWidget.10.Type,extendedinfo.dailybabes)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),service.skin.widgets)">Skin.SetString(HomeWidget.10.TypeName,$LOCALIZE[49295])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.dailybabes)">Skin.SetString(HomeWidget.10.Type,extendedinfo.cyanidehappiness)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.dailybabes)">Skin.SetString(HomeWidget.10.TypeName,$LOCALIZE[49294])</onclick>
+				</control>
+				<control type="button">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>455</width>
+					<height>60</height>
+					<align>left</align>
+					<textoffsetx>20</textoffsetx>
+					<font>Font-Condensed-S30</font>
+					<textcolor>FF585858</textcolor>
+					<label>$LOCALIZE[41162]</label>
+					<label2>$INFO[Skin.String(HomeWidget.10.TypeName)]</label2>
+					<visible>!ControlGroup(2141).HasFocus</visible>
+				</control>
+				<control type="button">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>455</width>
+					<height>60</height>
+					<align>left</align>
+					<textoffsetx>20</textoffsetx>
+					<font>Font-Condensed-S30</font>
+					<textcolor>eewhite</textcolor>
+					<label>$LOCALIZE[41162]</label>
+					<label2>$INFO[Skin.String(HomeWidget.10.TypeName)]</label2>
+					<visible>ControlGroup(2141).HasFocus</visible>
+				</control>
+			</control>
+			<control type="group" id="2142">
+				<description>Fake spin control</description>
+				<width>1210</width>
+				<height>60</height>
+				<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>532</width>
+					<height>60</height>
+					<texture>dialogs/default/separator-btn.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="button" id="21421">
+					<posx>450</posx>
+					<posy>0</posy>
+					<width>32</width>
+					<height>60</height>
+					<texturefocus>buttons/spinctrl/arrow-light-down-fo.png</texturefocus>
+					<texturenofocus>buttons/spinctrl/arrow-light-down-nf.png</texturenofocus>
+					<onclick>noop</onclick>
+					<enable>false</enable>
+				</control>
+				<control type="button" id="21422">
+					<posx>482</posx>
+					<posy>0</posy>
+					<width>32</width>
+					<height>60</height>
+					<texturefocus>buttons/spinctrl/arrow-light-up-fo.png</texturefocus>
+					<texturenofocus>buttons/spinctrl/arrow-light-up-nf.png</texturenofocus>
+					<onclick>noop</onclick>
+					<enable>false</enable>
+				</control>
+				<control type="button">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>455</width>
+					<height>60</height>
+					<align>left</align>
+					<textoffsetx>20</textoffsetx>
+					<font>Font-Condensed-S30</font>
+					<textcolor>FF585858</textcolor>
+					<disabledcolor>77585858</disabledcolor>
+					<label>$LOCALIZE[41141]</label>
+					<label2>$INFO[Skin.String(HomeWidget.10.SubTypeName)]</label2>
+					<enable>false</enable>
+				</control>
+			</control>
+			<control type="button" id="2143">
+				<include>SettingsCustomDialogButtonVars</include>
+				<label>$LOCALIZE[559]</label>
+				<label2>$INFO[Skin.String(HomeWidget.10.Playlist)]</label2>
+				<onclick>Skin.SetFile(HomeWidget.10.Playlist,.xsp,special://profile/playlists/music/)</onclick>
+				<enable>stringcompare(Skin.String(HomeWidget.10.Type),script.randomandlastitems)</enable>
+				<animation effect="fade" start="100" end="50" time="0" condition="!stringcompare(Skin.String(HomeWidget.10.Type),script.randomandlastitems)">Conditional</animation>
+			</control>
+			<control type="radiobutton" id="2403">
+				<include>SettingsCustomDialogRadioButtonVars</include>
+				<label>$LOCALIZE[41164]</label>
+				<onclick condition="!stringcompare(Skin.String(HomeWidget.10.Method),Random)">Skin.SetString(HomeWidget.10.Method,Random)</onclick>
+				<onclick condition="stringcompare(Skin.String(HomeWidget.10.Method),Random)">Skin.SetString(HomeWidget.10.Method,Playlist)</onclick>
+				<selected>stringcompare(Skin.String(HomeWidget.10.Method),Random)</selected>
+				<enable>stringcompare(Skin.String(HomeWidget.10.Type),script.randomandlastitems)</enable>
+				<animation effect="fade" start="100" end="50" time="0" condition="!stringcompare(Skin.String(HomeWidget.10.Type),script.randomandlastitems)">Conditional</animation>
+			</control>
+			<control type="radiobutton" id="2404">
+				<include>SettingsCustomDialogRadioButtonVars</include>
+				<label>$LOCALIZE[41165]</label>
+				<onclick condition="!substring(Skin.String(HomeWidget.10.UnWatched),True)">Skin.SetString(HomeWidget.10.UnWatched,True)</onclick>
+				<onclick condition="substring(Skin.String(HomeWidget.10.UnWatched),True)">Skin.SetString(HomeWidget.10.UnWatched,False)</onclick>
+				<selected>substring(Skin.String(HomeWidget.10.UnWatched),True)</selected>
+				<enable>stringcompare(Skin.String(HomeWidget.10.Type),script.randomandlastitems)</enable>
+				<animation effect="fade" start="100" end="50" time="0" condition="!stringcompare(Skin.String(HomeWidget.10.Type),script.randomandlastitems)">Conditional</animation>
+			</control>
+			<control type="radiobutton" id="2405">
+				<include>SettingsCustomDialogRadioButtonVars</include>
+				<label>$LOCALIZE[41166]</label>
+				<onclick condition="!substring(Skin.String(HomeWidget.10.Resume),True)">Skin.SetString(HomeWidget.10.Resume,True)</onclick>
+				<onclick condition="substring(Skin.String(HomeWidget.10.Resume),True)">Skin.SetString(HomeWidget.10.Resume,False)</onclick>
+				<selected>substring(Skin.String(HomeWidget.10.Resume),True)</selected>
+				<enable>stringcompare(Skin.String(HomeWidget.10.Type),script.randomandlastitems)</enable>
+				<animation effect="fade" start="100" end="50" time="0" condition="!stringcompare(Skin.String(HomeWidget.10.Type),script.randomandlastitems)">Conditional</animation>
+			</control>
+		</control>
+	</include>
 	<include name="PanelDialogHomeWidgets">
 		<control type="group">
 			<visible>!Window.IsVisible(yesnodialog)</visible>
@@ -1376,6 +1810,14 @@
 							<label>$LOCALIZE[41162] 5 ($LOCALIZE[2])</label>
 							<onclick>noop</onclick>
 						</item>
+						<item id="6">
+							<label>$LOCALIZE[41162] 6 (Channels)</label>
+							<onclick>noop</onclick>
+						</item>
+						<item id="6">
+							<label>$LOCALIZE[41162] 7 ($LOCALIZE[49273])</label>
+							<onclick>noop</onclick>
+						</item>
 					</content>
 				</control>
 				<control type="group">
@@ -1409,6 +1851,18 @@
 					<include>PanelDialogHomeWidget5</include>
 				</control>
 				<control type="group">
+					<posx>558</posx>
+					<posy>360</posy>
+					<visible>Container(3).HasFocus(6)</visible>
+					<include>PanelDialogHomeWidget8</include>
+				</control>
+				<control type="group">
+					<posx>558</posx>
+					<posy>360</posy>
+					<visible>Container(3).HasFocus(7)</visible>
+					<include>PanelDialogHomeWidget10</include>
+				</control>
+				<control type="group">
 					<posx>546</posx>
 					<posy>716</posy>
 					<control type="button" id="5">
@@ -1440,6 +1894,8 @@
 						<onclick condition="Container(3).HasFocus(3)">SetFocus(13)</onclick>
 						<onclick condition="Container(3).HasFocus(4)">SetFocus(14)</onclick>
 						<onclick condition="Container(3).HasFocus(5)">SetFocus(15)</onclick>
+						<onclick condition="Container(3).HasFocus(6)">SetFocus(16)</onclick>
+						<onclick condition="Container(3).HasFocus(7)">SetFocus(17)</onclick>
 						<visible>!Control.HasFocus(2142)</visible>
 						<include>visiblehidefadeinfo</include>
 					</control>
@@ -1497,6 +1953,28 @@
 						<onfocus>Skin.SetString(HomeWidget.5.Method,Playlist)</onfocus>
 						<onfocus>Skin.SetString(HomeWidget.5.UnWatched,False)</onfocus>
 						<onfocus>Skin.SetString(HomeWidget.5.Resume,False)</onfocus>
+						<onfocus>SetFocus(6)</onfocus>
+						<visible allowhiddenfocus="true">false</visible>
+					</control>
+					<control type="button" id="16">
+						<onfocus>Skin.SetString(HomeWidget.8.Type,service.skin.widgets)</onfocus>
+						<onfocus>Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[19019])</onfocus>
+						<onfocus>Skin.SetString(HomeWidget.8.SubType,Video)</onfocus>
+						<onfocus>Skin.SetString(HomeWidget.8.SubTypeName,Video)</onfocus>
+						<onfocus>Skin.SetString(HomeWidget.8.Method,Playlist)</onfocus>
+						<onfocus>Skin.SetString(HomeWidget.8.UnWatched,False)</onfocus>
+						<onfocus>Skin.SetString(HomeWidget.8.Resume,False)</onfocus>
+						<onfocus>SetFocus(6)</onfocus>
+						<visible allowhiddenfocus="true">false</visible>
+					</control>
+					<control type="button" id="17">
+						<onfocus>Skin.SetString(HomeWidget.10.Type,service.skin.widgets)</onfocus>
+						<onfocus>Skin.SetString(HomeWidget.10.TypeName,$LOCALIZE[49273])</onfocus>
+						<onfocus>Skin.SetString(HomeWidget.10.SubType,Photo)</onfocus>
+						<onfocus>Skin.SetString(HomeWidget.10.SubTypeName,Photo)</onfocus>
+						<onfocus>Skin.SetString(HomeWidget.10.Method,Playlist)</onfocus>
+						<onfocus>Skin.SetString(HomeWidget.10.UnWatched,False)</onfocus>
+						<onfocus>Skin.SetString(HomeWidget.10.Resume,False)</onfocus>
 						<onfocus>SetFocus(6)</onfocus>
 						<visible allowhiddenfocus="true">false</visible>
 					</control>

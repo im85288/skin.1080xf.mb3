@@ -156,6 +156,14 @@
 		<value condition="Skin.HasSetting(HomeTvImageFanart) + System.HasAddon(script.grab.fanart) + Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(script.grab.fanart.TV.FanArt)]</value>
 		<value condition="Skin.HasSetting(HomeTvImageFanart)">$INFO[Window(Home).Property(MB3.Background.TV.FanArt)]</value>
 	</variable>
+	<variable name="HomePhotosMultiPath">
+		<value condition="!Skin.HasSetting(HomePhotosImageFanart)">$INFO[Skin.String(HomePhotosMultiImage)]</value>
+		<value condition="Skin.HasSetting(HomePhotosImageFanart)">$INFO[Window(Home).Property(MB3.Background.Photos.FanArt)]</value>
+	</variable>
+	<variable name="HomeChannelsMultiPath">
+		<value condition="!Skin.HasSetting(HomeChannelsImageFanart)">$INFO[Skin.String(HomeChannelsMultiImage)]</value>
+		<value condition="Skin.HasSetting(HomeChannelsImageFanart)">$INFO[Window(Home).Property(MB3.Background.Channels.FanArt)]</value>
+	</variable>
 	<variable name="HomeMusicMultiPath">
 		<value condition="!Skin.HasSetting(HomeMusicImageFanart)">$INFO[Skin.String(HomeMusicMultiImage)]</value>
 		<value condition="Skin.HasSetting(HomeMusicImageFanart) + System.HasAddon(script.grab.fanart) + Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(script.grab.fanart.Music.FanArt)]</value>

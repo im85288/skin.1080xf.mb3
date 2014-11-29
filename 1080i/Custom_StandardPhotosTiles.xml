@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="751">
+	<defaultcontrol always="true">100</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>GlobalBackground</include>
+		<control type="label">
+			<label>Photos Tiles</label>
+			<left>75</left>
+			<top>50</top>
+			<width>1720</width>
+			<font>Font-Condensed-S32</font>
+		</control>
+		<control type="group"> <!--content -->
+			<include>ViewAnimation</include>
+			<include>HiddenByMenu</include>
+			<control type="panel" id="100"> <!--colours -->
+				<left>68</left>
+				<top>240</top>
+				<width>1852</width>
+				<height>720</height>
+				<onup>100</onup>
+				<ondown>100</ondown>
+				<onleft>100</onleft>
+				<onright>100</onright>
+				<orientation>horizontal</orientation>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="155" width="155">
+					<control type="image">
+						<left>7</left>
+						<top>7</top>
+						<width>150</width>
+						<height>150</height>
+						<texture>$INFO[ListItem.Thumb]</texture>
+					</control>
+					<control type="image"> <!--watched icon -->
+						<left>-10</left>
+						<top>-9</top>
+						<include>WatchedOverlay</include>
+						<texture>overlaywatched.png</texture>
+						<visible>StringCompare(ListItem.Label,selected)</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="155" width="155">
+					<control type="image">
+						<left>0</left>
+						<width>164</width>
+						<height>164</height>
+						<texture>$INFO[ListItem.Thumb]</texture>
+						<bordertexture colordiffuse="PrimaryT">windows/common/white.png</bordertexture>
+						<bordersize>7</bordersize>
+					</control>
+					<control type="image"> <!--watched icon -->
+						<left>-10</left>
+						<top>-9</top>
+						<include>WatchedOverlay</include>
+						<texture>overlaywatched.png</texture>
+						<visible>StringCompare(ListItem.Label,selected)</visible>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1"> <!--current -->
+						<onclick>Close</onclick>
+						<thumb>special://skin/extras/standard/$INFO[Skin.String(tilephotosstandard.name)].png</thumb>
+						<label>selected</label>
+					</item>
+					<item id="71"> <!-- tiles -->
+						<onclick>Skin.SetString(tilephotosstandard.name,tile-blue)</onclick>
+						<onclick>Close</onclick>
+						<thumb>special://skin/extras/standard/tile-blue.png</thumb>
+					</item>
+					<item id="72"> <!-- tiles -->
+						<onclick>Skin.SetString(tilephotosstandard.name,tile-cyan)</onclick>
+						<onclick>Close</onclick>
+						<thumb>special://skin/extras/standard/tile-cyan.png</thumb>
+					</item>
+					<item id="73"> <!-- tiles -->
+						<onclick>Skin.SetString(tilephotosstandard.name,tile-grey)</onclick>
+						<onclick>Close</onclick>
+						<thumb>special://skin/extras/standard/tile-grey.png</thumb>
+					</item>
+					<item id="733"> <!-- tiles -->
+						<onclick>Skin.SetString(tilephotosstandard.name,tile-black)</onclick>
+						<onclick>Close</onclick>
+						<thumb>special://skin/extras/standard/tile-black.png</thumb>
+					</item>
+					<item id="74"> <!-- tiles -->
+						<onclick>Skin.SetString(tilephotosstandard.name,tile-green)</onclick>
+						<onclick>Close</onclick>
+						<thumb>special://skin/extras/standard/tile-green.png</thumb>
+					</item>
+					<item id="744"> <!-- tiles -->
+						<onclick>Skin.SetString(tilephotosstandard.name,tile-green2)</onclick>
+						<onclick>Close</onclick>
+						<thumb>special://skin/extras/standard/tile-green2.png</thumb>
+					</item>
+					<item id="75"> <!-- tiles -->
+						<onclick>Skin.SetString(tilephotosstandard.name,tile-orange)</onclick>
+						<onclick>Close</onclick>
+						<thumb>special://skin/extras/standard/tile-orange.png</thumb>
+					</item>
+					<item id="2"> <!--tiles -->
+						<onclick>Skin.SetString(tilephotosstandard.name,tile-pink)</onclick>
+						<onclick>Close</onclick>
+						<thumb>special://skin/extras/standard/tile-pink.png</thumb>
+					</item>
+					<item id="22"> <!--tiles -->
+						<onclick>Skin.SetString(tilephotosstandard.name,tile-pink2)</onclick>
+						<onclick>Close</onclick>
+						<thumb>special://skin/extras/standard/tile-pink2.png</thumb>
+					</item>
+					<item id="3"> <!--tiles -->
+						<onclick>Skin.SetString(tilephotosstandard.name,tile-purple)</onclick>
+						<onclick>Close</onclick>
+						<thumb>special://skin/extras/standard/tile-purple.png</thumb>
+					</item>
+					<item id="33"> <!--tiles -->
+						<onclick>Skin.SetString(tilephotosstandard.name,tile-purple2)</onclick>
+						<onclick>Close</onclick>
+						<thumb>special://skin/extras/standard/tile-purple2.png</thumb>
+					</item>
+					<item id="4"> <!--tiles -->
+						<onclick>Skin.SetString(tilephotosstandard.name,tile-red)</onclick>
+						<onclick>Close</onclick>
+						<thumb>special://skin/extras/standard/tile-red.png</thumb>
+					</item>
+					<item id="5"> <!--tiles -->
+						<onclick>Skin.SetString(tilephotosstandard.name,tile-yellow)</onclick>
+						<onclick>Close</onclick>
+						<thumb>special://skin/extras/standard/tile-yellow.png</thumb>
+					</item>
+					<item id="55"> <!--tiles -->
+						<onclick>Skin.SetString(tilephotosstandard.name,tile-yellow2)</onclick>
+						<onclick>Close</onclick>
+						<thumb>special://skin/extras/standard/tile-yellow2.png</thumb>
+					</item>
+				</content>
+			</control>
+		</control>
+	</controls>
+</window>

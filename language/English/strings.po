@@ -1250,3 +1250,93 @@ msgstr ""
 msgctxt "#49272"
 msgid "Show Video Backdrop"
 msgstr ""
+
+msgctxt "#49273"
+msgid "Photos"
+msgstr ""
+
+msgctxt "#49274"
+msgid "Path to Pictures Directory"
+msgstr ""
+
+msgctxt "#49275"
+msgid "YouTube"
+msgstr ""
+
+msgctxt "#49276"
+msgid "MediaBrowser"
+msgstr ""
+
+msgctxt "#49278"
+msgid "BBC Popular"
+msgstr ""
+
+msgctxt "#49279"
+msgid "BBC Sport"
+msgstr ""
+
+msgctxt "#49280"
+msgid "BBC Technology"
+msgstr ""
+
+msgctxt "#49281"
+msgid "BBC Documentaries"
+msgstr ""
+
+msgctxt "#49282"
+msgid "BBC Music"
+msgstr ""
+
+msgctxt "#49283"
+msgid "YouTube Top 100 Trailers"
+msgstr ""
+
+msgctxt "#49284"
+msgid "YouTube Most Discussed"
+msgstr ""
+
+msgctxt "#49285"
+msgid "YouTube Trending"
+msgstr ""
+
+msgctxt "#49286"
+msgid "YouTube Most Viewed"
+msgstr ""
+
+msgctxt "#49287"
+msgid "Netflix New Movies"
+msgstr ""
+
+msgctxt "#49288"
+msgid "Netflix Random Movies"
+msgstr ""
+
+msgctxt "#49289"
+msgid "Netflix InProgress Movies"
+msgstr ""
+
+msgctxt "#49290"
+msgid "Netflix New TvShows"
+msgstr ""
+
+msgctxt "#49291"
+msgid "Netflix Random TvShows"
+msgstr ""
+
+msgctxt "#49292"
+msgid "Netflix InProgress TvShows"
+msgstr ""
+
+msgctxt "#49293"
+msgid "XKCD"
+msgstr ""
+
+msgctxt "#49294"
+msgid "Cyanide Happiness"
+msgstr ""
+
+msgctxt "#49295"
+msgid "Daily Babes"
+msgstr ""
+
+

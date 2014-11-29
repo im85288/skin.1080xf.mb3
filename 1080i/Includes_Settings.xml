@@ -567,6 +567,168 @@
 			<enable>!IsEmpty(Skin.String(HomeTVShowsMultiImage))</enable>
 		</control>
 	</include>
+	<include name="SettingsBackgroundDialogPhotos">
+		<control type="image">
+			<include>SettingsBackgroundDialogImageVars</include>
+			<texture background="true" fallback="special://skin/extras/backgrounds/01.jpg">$INFO[Skin.String(GlobalBackdropSingle)]</texture>
+			<visible>IsEmpty(Skin.String(GlobalBackdropMulti)) + IsEmpty(Skin.String(HomePhotosSingleImage)) + IsEmpty(Skin.String(HomePhotosMultiImage))</visible>
+		</control>
+		<control type="multiimage">
+			<include>SettingsBackgroundDialogMultiImageVars</include>
+			<imagepath background="true">$INFO[Skin.String(GlobalBackdropMulti)]</imagepath>
+			<visible>!IsEmpty(Skin.String(GlobalBackdropMulti)) + IsEmpty(Skin.String(HomePhotosSingleImage)) + IsEmpty(Skin.String(HomePhotosMultiImage)) + !Skin.HasSetting(HomePhotosImageFanart)</visible>
+		</control>
+		<control type="image">
+			<include>SettingsBackgroundDialogImageVars</include>
+			<texture background="true">$INFO[Skin.String(HomePhotosSingleImage)]</texture>
+			<visible>!IsEmpty(Skin.String(HomePhotosSingleImage)) + !Skin.HasSetting(HomePhotosImageFanart)</visible>
+		</control>
+		<control type="multiimage">
+			<include>SettingsBackgroundDialogMultiImageVars</include>
+			<imagepath background="true">$INFO[Skin.String(HomePhotosMultiImage)]</imagepath>
+			<visible>!IsEmpty(Skin.String(HomePhotosMultiImage)) + !Skin.HasSetting(HomePhotosImageFanart)</visible>
+		</control>
+		<control type="multiimage">
+			<include>SettingsBackgroundDialogMultiImageVars</include>
+			<imagepath background="true">$INFO[Window(Home).Property(MB3.Background.Photos.FanArt)]</imagepath>
+			<visible>Skin.HasSetting(HomePhotosImageFanart)</visible>
+		</control>
+		<control type="grouplist" id="3">
+			<include>SettingsBackgroundDialogGroupListVars</include>
+			<control type="radiobutton" id="2101">
+				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<label>$LOCALIZE[41251]</label>
+				<selected>IsEmpty(Skin.String(HomePhotosSingleImage)) + IsEmpty(Skin.String(HomePhotosMultiImage)) + !Skin.HasSetting(HomePhotosImageFanart)</selected>
+				<onclick>Skin.Reset(HomePhotosSingleImage)</onclick>
+				<onclick>Skin.Reset(HomePhotosMultiImage)</onclick>
+				<onclick>Skin.Reset(HomePhotosImageFanart)</onclick>
+				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2101)">Conditional</animation>
+			</control>
+			<control type="radiobutton" id="2102">
+				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<selected>!IsEmpty(Skin.String(HomePhotosSingleImage))</selected>
+				<onclick>Skin.Reset(HomePhotosMultiImage)</onclick>
+				<onclick>Skin.Reset(HomePhotosImageFanart)</onclick>
+				<onclick>Skin.SetString(HomePhotosSingleImage,special://skin/extras/backgrounds/01.jpg)</onclick>
+				<label>$LOCALIZE[41252]</label>
+				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2102)">Conditional</animation>
+			</control>
+			<control type="radiobutton" id="2103">
+				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<selected>!IsEmpty(Skin.String(HomePhotosMultiImage))</selected>
+				<onclick>Skin.Reset(HomePhotosSingleImage)</onclick>
+				<onclick>Skin.Reset(HomePhotosImageFanart)</onclick>
+				<onclick>Skin.SetString(HomePhotosMultiImage,special://skin/extras/backgrounds/)</onclick>
+				<label>$LOCALIZE[41253]</label>
+				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2103)">Conditional</animation>
+			</control>
+			<control type="radiobutton" id="2104">
+				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<selected>Skin.HasSetting(HomePhotosImageFanart)</selected>
+				<onclick>Skin.Reset(HomePhotosSingleImage)</onclick>
+				<onclick>Skin.Reset(HomePhotosMultiImage)</onclick>
+				<onclick>Skin.ToggleSetting(HomePhotosImageFanart)</onclick>
+				<label>Use Fanart</label>
+				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2104)">Conditional</animation>
+				<visible>[System.HasAddon(script.grab.fanart) + Skin.HasSetting(UseKodiLibrary)] | !Skin.HasSetting(UseKodiLibrary)</visible>
+			</control>
+		</control>
+		<control type="button" id="4">
+			<include>SettingsBackgroundDialogButtonVars</include>
+			<label2>$INFO[Skin.String(HomePhotosSingleImage)]</label2>
+			<onclick>Skin.SetImage(HomePhotosSingleImage)</onclick>
+			<visible>IsEmpty(Skin.String(HomePhotosMultiImage))</visible>
+			<enable>!IsEmpty(Skin.String(HomePhotosSingleImage))</enable>
+		</control>
+		<control type="button" id="4">
+			<include>SettingsBackgroundDialogButtonVars</include>
+			<label2>$INFO[Skin.String(HomePhotosMultiImage)]</label2>
+			<onclick>Skin.SetPath(HomePhotosMultiImage)</onclick>
+			<visible>!IsEmpty(Skin.String(HomePhotosMultiImage))</visible>
+			<enable>!IsEmpty(Skin.String(HomePhotosMultiImage))</enable>
+		</control>
+	</include>
+	<include name="SettingsBackgroundDialogChannels">
+		<control type="image">
+			<include>SettingsBackgroundDialogImageVars</include>
+			<texture background="true" fallback="special://skin/extras/backgrounds/01.jpg">$INFO[Skin.String(GlobalBackdropSingle)]</texture>
+			<visible>IsEmpty(Skin.String(GlobalBackdropMulti)) + IsEmpty(Skin.String(HomeChannelsSingleImage)) + IsEmpty(Skin.String(HomeChannelsMultiImage))</visible>
+		</control>
+		<control type="multiimage">
+			<include>SettingsBackgroundDialogMultiImageVars</include>
+			<imagepath background="true">$INFO[Skin.String(GlobalBackdropMulti)]</imagepath>
+			<visible>!IsEmpty(Skin.String(GlobalBackdropMulti)) + IsEmpty(Skin.String(HomeChannelsSingleImage)) + IsEmpty(Skin.String(HomeChannelsMultiImage)) + !Skin.HasSetting(HomeChannelsImageFanart)</visible>
+		</control>
+		<control type="image">
+			<include>SettingsBackgroundDialogImageVars</include>
+			<texture background="true">$INFO[Skin.String(HomeChannelsSingleImage)]</texture>
+			<visible>!IsEmpty(Skin.String(HomeChannelsSingleImage)) + !Skin.HasSetting(HomeChannelsImageFanart)</visible>
+		</control>
+		<control type="multiimage">
+			<include>SettingsBackgroundDialogMultiImageVars</include>
+			<imagepath background="true">$INFO[Skin.String(HomeChannelsMultiImage)]</imagepath>
+			<visible>!IsEmpty(Skin.String(HomeChannelsMultiImage)) + !Skin.HasSetting(HomeChannelsImageFanart)</visible>
+		</control>
+		<control type="multiimage">
+			<include>SettingsBackgroundDialogMultiImageVars</include>
+			<imagepath background="true">$INFO[Window(Home).Property(MB3.Background.Channels.FanArt)]</imagepath>
+			<visible>Skin.HasSetting(HomeChannelsImageFanart)</visible>
+		</control>
+		<control type="grouplist" id="3">
+			<include>SettingsBackgroundDialogGroupListVars</include>
+			<control type="radiobutton" id="2101">
+				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<label>$LOCALIZE[41251]</label>
+				<selected>IsEmpty(Skin.String(HomeChannelsSingleImage)) + IsEmpty(Skin.String(HomeChannelsMultiImage)) + !Skin.HasSetting(HomeChannelsImageFanart)</selected>
+				<onclick>Skin.Reset(HomeChannelsSingleImage)</onclick>
+				<onclick>Skin.Reset(HomeChannelsMultiImage)</onclick>
+				<onclick>Skin.Reset(HomeChannelsImageFanart)</onclick>
+				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2101)">Conditional</animation>
+			</control>
+			<control type="radiobutton" id="2102">
+				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<selected>!IsEmpty(Skin.String(HomeChannelsSingleImage))</selected>
+				<onclick>Skin.Reset(HomeChannelsMultiImage)</onclick>
+				<onclick>Skin.Reset(HomeChannelsImageFanart)</onclick>
+				<onclick>Skin.SetString(HomeChannelsSingleImage,special://skin/extras/backgrounds/01.jpg)</onclick>
+				<label>$LOCALIZE[41252]</label>
+				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2102)">Conditional</animation>
+			</control>
+			<control type="radiobutton" id="2103">
+				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<selected>!IsEmpty(Skin.String(HomeChannelsMultiImage))</selected>
+				<onclick>Skin.Reset(HomeChannelsSingleImage)</onclick>
+				<onclick>Skin.Reset(HomeChannelsImageFanart)</onclick>
+				<onclick>Skin.SetString(HomeChannelsMultiImage,special://skin/extras/backgrounds/)</onclick>
+				<label>$LOCALIZE[41253]</label>
+				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2103)">Conditional</animation>
+			</control>
+			<control type="radiobutton" id="2104">
+				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<selected>Skin.HasSetting(HomeChannelsImageFanart)</selected>
+				<onclick>Skin.Reset(HomeChannelsSingleImage)</onclick>
+				<onclick>Skin.Reset(HomeChannelsMultiImage)</onclick>
+				<onclick>Skin.ToggleSetting(HomeChannelsImageFanart)</onclick>
+				<label>Use Fanart</label>
+				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2104)">Conditional</animation>
+				<visible>[System.HasAddon(script.grab.fanart) + Skin.HasSetting(UseKodiLibrary)] | !Skin.HasSetting(UseKodiLibrary)</visible>
+			</control>
+		</control>
+		<control type="button" id="4">
+			<include>SettingsBackgroundDialogButtonVars</include>
+			<label2>$INFO[Skin.String(HomeChannelsSingleImage)]</label2>
+			<onclick>Skin.SetImage(HomeChannelsSingleImage)</onclick>
+			<visible>IsEmpty(Skin.String(HomeChannelsMultiImage))</visible>
+			<enable>!IsEmpty(Skin.String(HomeChannelsSingleImage))</enable>
+		</control>
+		<control type="button" id="4">
+			<include>SettingsBackgroundDialogButtonVars</include>
+			<label2>$INFO[Skin.String(HomeChannelsMultiImage)]</label2>
+			<onclick>Skin.SetPath(HomeChannelsMultiImage)</onclick>
+			<visible>!IsEmpty(Skin.String(HomeChannelsMultiImage))</visible>
+			<enable>!IsEmpty(Skin.String(HomeChannelsMultiImage))</enable>
+		</control>
+	</include>
 	<include name="SettingsBackgroundDialogMusic">
 		<control type="image">
 			<include>SettingsBackgroundDialogImageVars</include>

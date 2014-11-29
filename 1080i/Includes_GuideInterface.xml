@@ -206,8 +206,15 @@
 				<posy>0</posy>
 				<width>743</width>
 				<height>66</height>
-				<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+				<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
 				<include>guidelistfocusanim2</include>
+			</control>
+			<control type="image"> <!--focused background left edge -->
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>5</width>
+				<height>66</height>
+				<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
 			</control>
 			<control type="label">
 				<posx>26</posx>
@@ -358,8 +365,15 @@
 				<posy>0</posy>
 				<width>743</width>
 				<height>66</height>
-				<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+				<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
 				<include>guidelistfocusanim2</include>
+			</control>
+			<control type="image"> <!--focused background left edge -->
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>5</width>
+				<height>66</height>
+				<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
 			</control>
 			<control type="image">
 				<posx>670</posx>
@@ -536,6 +550,13 @@
 				<include>guidelistfocusanim2</include>
 				<include>visiblehidefadeinfo</include>
 				<visible>!ControlGroup(9108).HasFocus() + !ControlGroup(9109).HasFocus()</visible>
+			</control>
+			<control type="image"> <!--focused background left edge -->
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>5</width>
+				<height>133</height>
+				<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
 			</control>
 			<!-- Latest Movies -->
 			<control type="group">
@@ -1033,117 +1054,131 @@
 		</content>
 	</include>
 	<include name="GuideSystemInfo">
-		<control type="list">
-			<posx>643</posx>
-			<posy>333</posy>
-			<width>743</width>
-			<height>469</height>
-			<orientation>vertical</orientation>
-			<scrolltime>0</scrolltime>
-			<itemlayout height="67" width="750">
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>743</width>
-					<height>68</height>
-					<texture border="90,3,90,3">views/list/other/separator.png</texture>
-				</control>
-				<control type="label">
-					<posx>26</posx>
-					<posy>0</posy>
-					<width>691</width>
-					<height>66</height>
-					<label>$INFO[ListItem.Label]</label>
-					<textcolor>SecondaryT</textcolor>
-					<shadowcolor>22000000</shadowcolor>
-					<font>Font-Condensed-S38</font>
-					<align>left</align>
-					<scroll>false</scroll>
-				</control>
-				<control type="label">
-					<posx>717</posx>
-					<posy>0</posy>
-					<width>691</width>
-					<height>66</height>
-					<label>$INFO[ListItem.Label2]</label>
-					<textcolor>SecondaryT</textcolor>
-					<shadowcolor>22000000</shadowcolor>
-					<font>Font-Condensed-S34-B</font>
-					<align>right</align>
-					<scroll>false</scroll>
-				</control>
-			</itemlayout>
-			<focusedlayout height="67" width="750">
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>743</width>
-					<height>68</height>
-					<texture border="90,3,90,3">views/list/other/separator.png</texture>
-				</control>
-				<control type="label">
-					<posx>26</posx>
-					<posy>0</posy>
-					<width>691</width>
-					<height>66</height>
-					<label>$INFO[ListItem.Label]</label>
-					<textcolor>SecondaryT</textcolor>
-					<shadowcolor>22000000</shadowcolor>
-					<font>Font-Condensed-S38</font>
-					<align>left</align>
-					<scroll>false</scroll>
-				</control>
-				<control type="label">
-					<posx>717</posx>
-					<posy>0</posy>
-					<width>691</width>
-					<height>66</height>
-					<label>$INFO[ListItem.Label2]</label>
-					<textcolor>SecondaryT</textcolor>
-					<shadowcolor>22000000</shadowcolor>
-					<font>Font-Condensed-S34-B</font>
-					<align>right</align>
-					<scroll>false</scroll>
-				</control>
-			</focusedlayout>
-			<content>
-				<item id="0">
-					<label>$LOCALIZE[41453]</label>
-					<label2>$INFO[Window(Home).Property(MB3UserName)]</label2>
-					<onclick>noop</onclick>
-				</item>
-				<item id="1">
-					<label>$LOCALIZE[41454]</label>
-					<label2>$INFO[Network.IPAddress]</label2>
-					<onclick>noop</onclick>
-				</item>
-				<item id="2">
-					<label>$LOCALIZE[41455]</label>
-					<label2>$INFO[System.FreeMemory]</label2>
-					<onclick>noop</onclick>
-				</item>
-				<item id="3">
-					<label>$LOCALIZE[41456]</label>
-					<label2>$INFO[System.ScreenWidth,,x]$INFO[System.ScreenHeight,, @ ]$INFO[System.FPS,, FPS]</label2>
-					<onclick>noop</onclick>
-				</item>
-				<item id="4">
-					<label>$LOCALIZE[41457]</label>
-					<label2>$INFO[System.Uptime]</label2>
-					<onclick>noop</onclick>
-				</item>
-				<item id="5">
-					<label>$LOCALIZE[41458]</label>
-					<label2>2.1.1</label2>
-					<onclick>noop</onclick>
-				</item>
-				<item id="6">
-					<label>$LOCALIZE[41459]</label>
-					<label2>$INFO[System.BuildVersion]</label2>
-					<onclick>noop</onclick>
-				</item>
-			</content>
-		</control>
+		<posx>643</posx>
+		<posy>333</posy>
+		<width>743</width>
+		<height>469</height>
+		<orientation>vertical</orientation>
+		<scrolltime>0</scrolltime>
+		<itemlayout height="67" width="750">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>743</width>
+				<height>68</height>
+				<texture border="90,3,90,3">views/list/other/separator.png</texture>
+			</control>
+			<control type="label">
+				<posx>26</posx>
+				<posy>0</posy>
+				<width>691</width>
+				<height>66</height>
+				<label>$INFO[ListItem.Label]</label>
+				<textcolor>SecondaryT</textcolor>
+				<shadowcolor>22000000</shadowcolor>
+				<font>Font-Condensed-S38</font>
+				<align>left</align>
+				<scroll>false</scroll>
+			</control>
+			<control type="label">
+				<posx>26</posx>
+				<posy>0</posy>
+				<width>691</width>
+				<height>66</height>
+				<label>$INFO[ListItem.Label2]</label>
+				<textcolor>SecondaryT</textcolor>
+				<shadowcolor>22000000</shadowcolor>
+				<font>Font-Condensed-S34-B</font>
+				<align>right</align>
+				<scroll>false</scroll>
+			</control>
+		</itemlayout>
+		<focusedlayout height="67" width="750">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>743</width>
+				<height>68</height>
+				<texture border="90,3,90,3">views/list/other/separator.png</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>743</width>
+				<height>68</height>
+				<include>defaultfocusanim</include>
+				<include>visiblehidefadeinfo</include>
+				<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+			</control>
+			<control type="image"> <!--focused background left edge -->
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>5</width>
+				<height>68</height>
+				<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+			</control>
+			<control type="label">
+				<posx>26</posx>
+				<posy>0</posy>
+				<width>691</width>
+				<height>66</height>
+				<label>$INFO[ListItem.Label]</label>
+				<textcolor>SecondaryT</textcolor>
+				<shadowcolor>22000000</shadowcolor>
+				<font>Font-Condensed-S38</font>
+				<align>left</align>
+				<scroll>false</scroll>
+			</control>
+			<control type="label">
+				<posx>26</posx>
+				<posy>0</posy>
+				<width>691</width>
+				<height>66</height>
+				<label>$INFO[ListItem.Label2]</label>
+				<textcolor>SecondaryT</textcolor>
+				<shadowcolor>22000000</shadowcolor>
+				<font>Font-Condensed-S34-B</font>
+				<align>right</align>
+				<scroll>false</scroll>
+			</control>
+		</focusedlayout>
+		<content>
+			<item id="0">
+				<label>$LOCALIZE[41453]</label>
+				<label2>$INFO[Window(Home).Property(MB3UserName)]</label2>
+				<onclick>noop</onclick>
+			</item>
+			<item id="1">
+				<label>$LOCALIZE[41454]</label>
+				<label2>$INFO[Network.IPAddress]</label2>
+				<onclick>noop</onclick>
+			</item>
+			<item id="2">
+				<label>$LOCALIZE[41455]</label>
+				<label2>$INFO[System.FreeMemory]</label2>
+				<onclick>noop</onclick>
+			</item>
+			<item id="3">
+				<label>$LOCALIZE[41456]</label>
+				<label2>$INFO[System.ScreenWidth,,x]$INFO[System.ScreenHeight,, @ ]$INFO[System.FPS,, FPS]</label2>
+				<onclick>noop</onclick>
+			</item>
+			<item id="4">
+				<label>$LOCALIZE[41457]</label>
+				<label2>$INFO[System.Uptime]</label2>
+				<onclick>noop</onclick>
+			</item>
+			<item id="5">
+				<label>$LOCALIZE[41458]</label>
+				<label2>2.1.1</label2>
+				<onclick>noop</onclick>
+			</item>
+			<item id="6">
+				<label>$LOCALIZE[41459]</label>
+				<label2>$INFO[System.BuildVersion]</label2>
+				<onclick>noop</onclick>
+			</item>
+		</content>
 	</include>
 	<include name="GuideUpNext">
 		<posx>643</posx>

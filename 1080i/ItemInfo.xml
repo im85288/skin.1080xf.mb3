@@ -398,7 +398,7 @@
 			<onright condition="Control.IsEnabled(3102)">3102</onright>
 			<onup>3291</onup>
 			<ondown>3235</ondown>
-			<texturefocus colordiffuse="SelectedGreen">special://skin/extras/icons/play.png</texturefocus>
+			<texturefocus colordiffuse="MediaBrowserGreen">special://skin/extras/icons/play.png</texturefocus>
 			<texturenofocus colordiffuse="white">special://skin/extras/icons/play.png</texturenofocus>
 			<textcolor>white</textcolor>
 			<focusedcolor>$VAR[FocusModColourVar]</focusedcolor>
@@ -417,7 +417,7 @@
 			<onright>3192</onright>
 			<ondown>3235</ondown>
 			<onup>3291</onup>
-			<texturefocus colordiffuse="SelectedGreen">special://skin/extras/icons/trailer.png</texturefocus>
+			<texturefocus colordiffuse="MediaBrowserGreen">special://skin/extras/icons/trailer.png</texturefocus>
 			<texturenofocus colordiffuse="white">special://skin/extras/icons/trailer.png</texturenofocus>
 			<textcolor>white</textcolor>
 			<focusedcolor>$VAR[FocusModColourVar]</focusedcolor>
@@ -432,9 +432,9 @@
 			<onup>3291</onup>
 			<left>765</left>
 			<top>445</top>
-			<textureradioonfocus colordiffuse="SelectedGreen">special://skin/extras/icons/checkedoff.png</textureradioonfocus>
+			<textureradioonfocus colordiffuse="MediaBrowserGreen">special://skin/extras/icons/checkedoff.png</textureradioonfocus>
 			<textureradioonnofocus>special://skin/extras/icons/checkedon.png</textureradioonnofocus>
-			<textureradioofffocus colordiffuse="SelectedGreen">special://skin/extras/icons/checkedoff.png</textureradioofffocus>
+			<textureradioofffocus colordiffuse="MediaBrowserGreen">special://skin/extras/icons/checkedoff.png</textureradioofffocus>
 			<textureradiooffnofocus>special://skin/extras/icons/checkedoff.png</textureradiooffnofocus>
 			<radiowidth>47</radiowidth>
 			<radioheight>47</radioheight>
@@ -467,9 +467,9 @@
 			<focusedcolor>$VAR[FocusModColourVar]</focusedcolor>
 			<disabledcolor>77585858</disabledcolor>
 			<shadowcolor>20FFFFFF</shadowcolor>
-			<textureradioonfocus colordiffuse="SelectedGreen">special://skin/extras/icons/thumbs_down_off.png</textureradioonfocus>
+			<textureradioonfocus colordiffuse="MediaBrowserGreen">special://skin/extras/icons/thumbs_down_off.png</textureradioonfocus>
 			<textureradioonnofocus>special://skin/extras/icons/thumbs_down_on.png</textureradioonnofocus>
-			<textureradioofffocus colordiffuse="SelectedGreen">special://skin/extras/icons/thumbs_down_off.png</textureradioofffocus>
+			<textureradioofffocus colordiffuse="MediaBrowserGreen">special://skin/extras/icons/thumbs_down_off.png</textureradioofffocus>
 			<textureradiooffnofocus>special://skin/extras/icons/thumbs_down_off.png</textureradiooffnofocus>
 		</control>
 		<!-- Like RadioButton -->
@@ -491,9 +491,9 @@
 			<focusedcolor>$VAR[FocusModColourVar]</focusedcolor>
 			<disabledcolor>77585858</disabledcolor>
 			<shadowcolor>20FFFFFF</shadowcolor>
-			<textureradioonfocus colordiffuse="SelectedGreen">special://skin/extras/icons/thumbs_up_off.png</textureradioonfocus>
+			<textureradioonfocus colordiffuse="MediaBrowserGreen">special://skin/extras/icons/thumbs_up_off.png</textureradioonfocus>
 			<textureradioonnofocus>special://skin/extras/icons/thumbs_up_on.png</textureradioonnofocus>
-			<textureradioofffocus colordiffuse="SelectedGreen">special://skin/extras/icons/thumbs_up_off.png</textureradioofffocus>
+			<textureradioofffocus colordiffuse="MediaBrowserGreen">special://skin/extras/icons/thumbs_up_off.png</textureradioofffocus>
 			<textureradiooffnofocus>special://skin/extras/icons/thumbs_up_off.png</textureradiooffnofocus>
 		</control>
 		<!-- Favourite RadioButton -->
@@ -515,9 +515,9 @@
 			<focusedcolor>$VAR[FocusModColourVar]</focusedcolor>
 			<disabledcolor>77585858</disabledcolor>
 			<shadowcolor>20FFFFFF</shadowcolor>
-			<textureradioonfocus colordiffuse="SelectedGreen">special://skin/extras/icons/heart_off.png</textureradioonfocus>
+			<textureradioonfocus colordiffuse="MediaBrowserGreen">special://skin/extras/icons/heart_off.png</textureradioonfocus>
 			<textureradioonnofocus>special://skin/extras/icons/heart_on.png</textureradioonnofocus>
-			<textureradioofffocus colordiffuse="SelectedGreen">special://skin/extras/icons/heart_off.png</textureradioofffocus>
+			<textureradioofffocus colordiffuse="MediaBrowserGreen">special://skin/extras/icons/heart_off.png</textureradioofffocus>
 			<textureradiooffnofocus>special://skin/extras/icons/heart_off.png</textureradiooffnofocus>
 		</control>
 		<!-- ratings -->
@@ -581,7 +581,7 @@
 				<width>90</width>
 				<font>Font-Condensed-S32</font>
 				<label>$INFO[Container(3226).ListItem(6).Label2,,%]</label>
-				<textcolor>PrimaryOSD</textcolor>
+				<textcolor>eewhite</textcolor>
 				<scroll>false</scroll>
 				<visible>StringCompare(Container(3226).ListItem(6).Label,CriticRating:) + !substring(Container(3226).ListItem(6).Label2,None)</visible>
 			</control>
@@ -603,7 +603,7 @@
 				<width>90</width>
 				<font>Font-Condensed-S32</font>
 				<label>$INFO[Container(3226).ListItem(1).Label2]</label>
-				<textcolor>PrimaryOSD</textcolor>
+				<textcolor>eewhite</textcolor>
 				<scroll>false</scroll>
 				<visible>!IsEmpty(Container(3226).ListItem(1).Label2) + !substring(Container(3226).ListItem(1).Label2,None)</visible>
 			</control>
@@ -615,7 +615,7 @@
 			<width>140</width>
 			<font>Font-Condensed-S27</font>
 			<label>$INFO[Container(3226).ListItem(3).Label2]</label>
-			<textcolor>PrimaryOSD</textcolor>
+			<textcolor>eewhite</textcolor>
 			<scroll>false</scroll>
 			<align>left</align>
 			<visible>StringCompare(Container(3226).ListItem(3).Label,RunTime:)</visible>
@@ -627,7 +627,7 @@
 			<align>right</align>
 			<font>Font-Condensed-S27</font>
 			<label>$INFO[Container(3226).ListItem(2).Label2]</label>
-			<textcolor>PrimaryOSD</textcolor>
+			<textcolor>eewhite</textcolor>
 			<scroll>false</scroll>
 			<visible>!Control.IsVisible(3092)</visible>
 			<visible>StringCompare(Container(3226).ListItem(2).Label,MPAA:) + !substring(Container(3226).ListItem(2).Label2,None)</visible>

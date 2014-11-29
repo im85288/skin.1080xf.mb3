@@ -289,6 +289,14 @@
 						<label2>[COLOR=SelectedBlue]$INFO[Skin.String(cdartlocation)][/COLOR]</label2>
 						<animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(1013)">Conditional</animation>
 					</control>
+					<control type="button" id="1019">
+						<width>1210</width>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick>Skin.SetPath(PicturesDir)</onclick>
+						<label>$LOCALIZE[49274]</label>
+						<label2>[COLOR=SelectedBlue]$INFO[Skin.String(PicturesDir)][/COLOR]</label2>
+						<animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(1019)">Conditional</animation>
+					</control>
 					<control type="group" id="1007">
 						<description>Fake spin control</description>
 						<width>1210</width>
@@ -725,7 +733,7 @@
 						<selected>Skin.HasSetting(PlainTiles)</selected>
 						<onclick>Skin.ToggleSetting(PlainTiles)</onclick>
 						<onclick>ReloadSkin()</onclick>
-						<label>  - $LOCALIZE[49261]</label>
+						<label> - $LOCALIZE[49261]</label>
 						<visible>Skin.HasSetting(ColourTiles)</visible>
 					</control>
 					<control type="button" id="760012">
@@ -818,6 +826,21 @@
 						<label2>[COLOR=$VAR[HomeTileChannelsColourVar]]$INFO[Skin.String(tilechannelscolor.name)][/COLOR]</label2>
 						<visible>Skin.HasSetting(ColourTiles)</visible>
 					</control>
+					<control type="button" id="7600077">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick>ActivateWindow(711)</onclick>
+						<label>Photos Tiles</label>
+						<label2>[COLOR=$VAR[HomeTilePhotosColourVar]]$INFO[Skin.String(tilephotoscolor.name)][/COLOR]</label2>
+						<visible>Skin.HasSetting(ColourTiles)</visible>
+					</control>
 					<control type="button" id="760008">
 						<posx>0</posx>
 						<posy>0</posy>
@@ -893,6 +916,7 @@
 						<onclick>Skin.SetString(tilemoviescolor.name,tilemovies)</onclick>
 						<onclick>Skin.SetString(tiletvcolor.name,tiletv)</onclick>
 						<onclick>Skin.SetString(tilechannelscolor.name,tilechannels)</onclick>
+						<onclick>Skin.SetString(tilephotoscolor.name,tilephotos)</onclick>
 						<onclick>Skin.SetString(tilemusiccolor.name,tilemusic)</onclick>
 						<onclick>Skin.SetString(tileapplicationscolor.name,tileapplications)</onclick>
 						<onclick>Skin.SetString(tileweathercolor.name,tileweather)</onclick>
@@ -988,6 +1012,21 @@
 						<onclick>ActivateWindow(745)</onclick>
 						<label>Channels Tiles</label>
 						<label2>$INFO[Skin.String(tilechannelsstandard.name)]</label2>
+						<visible>Skin.HasSetting(StandardTiles)</visible>
+					</control>
+					<control type="button" id="7601071">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick>ActivateWindow(751)</onclick>
+						<label>Photos Tiles</label>
+						<label2>$INFO[Skin.String(tilephotosstandard.name)]</label2>
 						<visible>Skin.HasSetting(StandardTiles)</visible>
 					</control>
 					<control type="button" id="760108">
@@ -1237,6 +1276,28 @@
 						<onclick>ClearProperty(CustomDialogType)</onclick>
 						<onclick>ClearProperty(CustomDialog)</onclick>
 						<onclick>SetProperty(Dialog,$LOCALIZE[20343])</onclick>
+						<onclick>ActivateWindow(3002)</onclick>
+					</control>
+					<control type="button" id="5004">
+						<width>1210</width>
+						<texturefocus colordiffuse="TertiaryM" border="150,3,150,3">windows/common/white.png</texturefocus>
+						<texturenofocus colordiffuse="PrimaryT" border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<label>$LOCALIZE[19019]</label>
+						<onclick>ClearProperty(CustomDialogType)</onclick>
+						<onclick>ClearProperty(CustomDialog)</onclick>
+						<onclick>SetProperty(Dialog,$LOCALIZE[19019])</onclick>
+						<onclick>ActivateWindow(3002)</onclick>
+					</control>
+					<control type="button" id="5005">
+						<width>1210</width>
+						<texturefocus colordiffuse="TertiaryM" border="150,3,150,3">windows/common/white.png</texturefocus>
+						<texturenofocus colordiffuse="PrimaryT" border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<label>$LOCALIZE[49273]</label>
+						<onclick>ClearProperty(CustomDialogType)</onclick>
+						<onclick>ClearProperty(CustomDialog)</onclick>
+						<onclick>SetProperty(Dialog,$LOCALIZE[49273])</onclick>
 						<onclick>ActivateWindow(3002)</onclick>
 					</control>
 					<control type="button" id="5006">

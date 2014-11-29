@@ -33,6 +33,7 @@
 	<color name="ddwhite">DDFFFFFF</color>
 	<color name="eewhite">EEFFFFFF</color>
 	<!-- Menus -->
+	<color name="MediaBrowserGreen">FF42EE3A</color>
 	<color name="MenuBlue">FF55B2FA</color>
 	<color name="MenuGrey">CC484848</color>
 	<color name="KeyboardGrey">99484848</color>
@@ -93,6 +94,7 @@
 	<color name="tilemovies">FF2D89C2</color>
 	<color name="tilemusic">FFFFD95C</color>
 	<color name="tilechannels">FFFF6666</color>
+	<color name="tilephotos">FF111111</color>
 	<color name="tileapplications">FF111111</color>
 	<color name="tileweather">FF111111</color>
 	<color name="tilesettings">FF111111</color>

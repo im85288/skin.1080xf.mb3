@@ -5229,7 +5229,7 @@
 				<width>2320</width>
 				<height>780</height>
 				<description>Pictures</description>
-				<visible>!Skin.HasSetting(HomePictures)</visible>
+				<visible>!Skin.HasSetting(HomePhotos)</visible>
 				<control type="button" id="1025">
 					<onleft>CancelAlarm(HomeTileMove,true)</onleft>
 					<onleft>CancelAlarm(HomeTileMoveTwo,true)</onleft>

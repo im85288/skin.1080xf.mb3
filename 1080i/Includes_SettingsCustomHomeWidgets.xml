@@ -1814,7 +1814,7 @@
 							<label>$LOCALIZE[41162] 6 (Channels)</label>
 							<onclick>noop</onclick>
 						</item>
-						<item id="6">
+						<item id="7">
 							<label>$LOCALIZE[41162] 7 ($LOCALIZE[49273])</label>
 							<onclick>noop</onclick>
 						</item>

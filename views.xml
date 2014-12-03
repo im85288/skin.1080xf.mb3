@@ -12,5 +12,7 @@
     <view id="Reel" value="577" />
     <view id="Banner Fanart" value="553" />
     <view id="Coverflow" value="780" />
-    <view id="Banner Plex" value="56" />    
+    <view id="Banner Plex" value="56" />
+    <view id="VideoWall Fanart" value="580" />
+    <view id="List Wall" value="58" />    
 </views>

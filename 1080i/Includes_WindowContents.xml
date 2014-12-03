@@ -20,7 +20,7 @@
 		<control type="image">
 			<include>FullscreenDimensions</include>
 			<texture colordiffuse="HomeBG">special://skin/extras/backgrounds/white.png</texture>
-			<visible>!Control.IsVisible(553) | [Control.IsVisible(553) + Window.IsActive(movieinformation)]</visible>
+			<visible>[!Control.IsVisible(553) + !Control.IsVisible(580)] | [Control.IsVisible(553) + Window.IsActive(movieinformation)] | [Control.IsVisible(580) + Window.IsActive(movieinformation)]</visible>
 		</control>
 	</include>
 	<include name="CommonItemsHome">

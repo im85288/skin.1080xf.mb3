@@ -5983,8 +5983,8 @@
 			<height>26</height>
 			<posy>26r</posy>
 			<orientation>horizontal</orientation>
-			<textureslidernib colordiffuse="PrimaryT">views/other/scrollbar-sq.png</textureslidernib>
-			<textureslidernibfocus colordiffuse="PrimaryT">views/other/scrollbar-sq.png</textureslidernibfocus>
+			<textureslidernib colordiffuse="$VAR[FocusModColourVar]">views/other/scrollbar-sq.png</textureslidernib>
+			<textureslidernibfocus colordiffuse="$VAR[FocusModColourVar]">views/other/scrollbar-sq.png</textureslidernibfocus>
 			<showonepage>true</showonepage>
 			<onup>577</onup>
 			<ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
@@ -6342,8 +6342,8 @@
 			<height>26</height>
 			<posy>26r</posy>
 			<orientation>horizontal</orientation>
-			<textureslidernib colordiffuse="PrimaryT">views/other/scrollbar-sq.png</textureslidernib>
-			<textureslidernibfocus colordiffuse="PrimaryT">views/other/scrollbar-sq.png</textureslidernibfocus>
+			<textureslidernib colordiffuse="$VAR[FocusModColourVar]">views/other/scrollbar-sq.png</textureslidernib>
+			<textureslidernibfocus colordiffuse="$VAR[FocusModColourVar]">views/other/scrollbar-sq.png</textureslidernibfocus>
 			<showonepage>true</showonepage>
 			<onup>780</onup>
 			<ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
@@ -6469,12 +6469,1309 @@
 				<height>15</height>
 				<onup>56</onup>
 				<onright>noop</onright>
-				<textureslidernib colordiffuse="PrimaryT">views/other/scrollbar-sq.png</textureslidernib>
-				<textureslidernibfocus colordiffuse="PrimaryT">views/other/scrollbar-sq.png</textureslidernibfocus>
+				<textureslidernib colordiffuse="$VAR[FocusModColourVar]">views/other/scrollbar-sq.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="$VAR[FocusModColourVar]">views/other/scrollbar-sq.png</textureslidernibfocus>
 				<orientation>horizontal</orientation>
 				<visible allowhiddenfocus="true">Control.HasFocus(60) | Container.Scrolling</visible>
 				<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(60) | Container.Scrolling">Conditional</animation>
 			</control>
+		</control>
+	</include>
+	<include name="ViewType-VideoWallFanartView">
+		<control type="group">
+			<visible>Control.IsVisible(580)</visible>
+			<include>VideoWallAnimations</include>
+			<control type="wraplist" id="580">
+				<width>1920</width>
+				<height>1080</height>
+				<onleft>580</onleft>
+				<onright>580</onright>
+				<onup>9111</onup>
+				<ondown>60</ondown>
+				<preloaditems>2</preloaditems>
+				<pagecontrol>60</pagecontrol>
+				<viewtype label="49296">BigWrap</viewtype>
+				<scrolltime tween="Cubic" easing="out">350</scrolltime>
+				<orientation>horizontal</orientation>
+				<include condition="Window.IsVisible(videolibrary)">VideoWallFanartVideos</include>
+				<visible>[Container.Content(movies) | Container.Content(tvshows)]</visible>
+			</control>
+		</control>
+		<control type="group">
+			<include>BackgroundVignette</include>
+			<include>VideoWallAnimations</include>
+			<visible>Control.IsVisible(580)</visible>
+		</control>
+		<control type="group">
+			<left>38</left>
+			<top>728</top>
+			<include>VideoWallAnimations</include>
+			<visible>Control.IsVisible(580)</visible>
+			<animation type="Conditional" reversible="false" condition="![Window.IsActive(favourites) | Window.IsActive(movieinformation) | Window.IsActive(shutdownmenu) | Window.IsActive(contextmenu) | Window.IsActive(playercontrols)]">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" />
+			</animation>
+			<animation type="Conditional" reversible="false" condition="Window.IsActive(favourites) | Window.IsActive(movieinformation) | Window.IsActive(shutdownmenu) | Window.IsActive(contextmenu) | Window.IsActive(playercontrols)">
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+			</animation>
+			<control type="image">
+				<left>-38</left>
+				<top>-728</top>
+				<width>1920</width>
+				<height>1080</height>
+				<aspectratio>stretch</aspectratio>
+				<texture background="true">special://skin/extras/videowall/video_grid.png</texture>
+				<colordiffuse>CCFFFFFF</colordiffuse>
+			</control>
+			<control type="label">
+				<left>30</left>
+				<top>0</top>
+				<height>39</height>
+				<width>1260</width>
+				<textcolor>white</textcolor>
+				<shadowcolor>77000000</shadowcolor>
+				<font>Font-Condensed-S46</font>
+				<scroll>false</scroll>
+				<align>left</align>
+				<label>$INFO[Container(580).ListItem.label]</label>
+			</control>
+			<control type="label">
+				<left>32</left>
+				<top>55</top>
+				<width>1260</width>
+				<height>45</height>
+				<label>$INFO[Container(580).ListItem.Genre]</label>
+				<font>Font-Condensed-S32</font>
+				<textcolor>$VAR[FocusModColourVar]</textcolor>
+				<shadowcolor>77000000</shadowcolor>
+				<scroll>false</scroll>
+				<visible>!stringcompare(Container(580).ListItem.Label,..) + IsEmpty(Container(580).ListItem.Tagline)</visible>
+			</control>
+			<control type="label">
+				<left>32</left>
+				<top>55</top>
+				<width>1260</width>
+				<height>45</height>
+				<label>$INFO[Container(580).ListItem.Tagline]</label>
+				<font>Font-Condensed-S32</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>77000000</shadowcolor>
+				<scroll>false</scroll>
+				<visible>!stringcompare(Container(580).ListItem.Label,..)</visible>
+			</control>
+			<!-- Small Down Info -->
+			<control type="group">
+				<left>30</left>
+				<top>120</top>
+				<control type="image">
+					<left>-32</left>
+					<top>-20</top>
+					<width>120</width>
+					<height>72</height>
+					<colordiffuse>77white</colordiffuse>
+					<aspectratio align="left" aligny="center">stretch</aspectratio>
+					<texture>$VAR[ListHDSDFlag580]</texture>
+					<visible>Container.Content(Movies) | Container.Content(Episodes)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>57</width>
+					<height>33</height>
+					<colordiffuse>77white</colordiffuse>
+					<aspectratio align="left" aligny="center">stretch</aspectratio>
+					<texture background="true">flags/sets/sets.png</texture>
+					<visible>Substring(ListItem.Path,videodb://movies/sets/)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>75</width>
+					<height>33</height>
+					<colordiffuse>77white</colordiffuse>
+					<aspectratio align="left" aligny="center">stretch</aspectratio>
+					<texture background="true">$INFO[Container(580).ListItem.mpaa,flags/mpaa/tv/medium/,.png]</texture>
+					<visible>Container.Content(TVShows) + !IsEmpty(Container(580).ListItem.mpaa)</visible>
+				</control>
+				<control type="label">
+					<left>68</left>
+					<top>0</top>
+					<height>30</height>
+					<width>300</width>
+					<textcolor>99FFFFFF</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<font>Font-Condensed-S32</font>
+					<scroll>false</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$VAR[SmallGlobalInfo]</label>
+					<animation effect="slide" start="0,0" end="-68,0" time="0" tween="sine" easing="inout" condition="IsEmpty(ListItem.VideoResolution) + !Substring(ListItem.Path,videodb://movies/sets/)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="8,0" time="0" tween="sine" easing="inout" condition="Substring(ListItem.Path,videodb://movies/sets/)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="90,0" time="0" tween="sine" easing="inout" condition="Container.Content(TVShows) + !IsEmpty(ListItem.mpaa)">Conditional</animation>
+				</control>
+			</control>
+			<control type="group">
+				<left>420</left>
+				<top>43</top>
+				<visible>Skin.HasSetting(VideoWallFanartShowPlot)</visible>
+				<control type="textbox">
+					<width>940</width>
+					<height>130</height>
+					<label>$INFO[Container(580).ListItem.Plot]</label>
+					<font>Font-Condensed-S32</font>
+					<textcolor>AAFFFFFF</textcolor>
+					<align>justify</align>
+					<autoscroll delay="13000" time="3000" repeat="13000" />
+				</control>
+			</control>
+			<control type="image">
+				<left>1375</left>
+				<top>-12</top>
+				<width>465</width>
+				<height>180</height>
+				<aspectratio align="right" aligny="center">keep</aspectratio>
+				<texture background="true" fallback="thumbs/fallback_episode_tp.png">$VAR[VideoWallThumb]</texture>
+			</control>
+			<control type="scrollbar" id="60">
+				<left>30</left>
+				<top>188</top>
+				<width>1755</width>
+				<height>14</height>
+				<texturesliderbackground>-</texturesliderbackground>
+				<texturesliderbar colordiffuse="$VAR[FocusModColourVar]" border="1">views/other/scrollbar-sq.png</texturesliderbar>
+				<texturesliderbarfocus colordiffuse="$VAR[FocusModColourVar]" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+				<textureslidernib>-</textureslidernib>
+				<textureslidernibfocus>-</textureslidernibfocus>
+				<onup>580</onup>
+				<ondown>580</ondown>
+				<showonepage>false</showonepage>
+				<orientation>horizontal</orientation>
+				<animation effect="fade" start="100" end="0" time="250" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+				<visible>Control.IsVisible(580)</visible>
+			</control>
+		</control>
+	</include>
+	<include name="VideoWallFanartVideos">
+		<itemlayout height="1080" width="1920">
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<texture background="true">$VAR[ViewFanart580]</texture>
+			</control>
+		</itemlayout>
+		<focusedlayout height="1080" width="1920">
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<texture background="true">$VAR[ViewFanart580]</texture>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="ViewType-ListWallViewVideos">
+		<control type="group">
+			<visible>Control.IsVisible(58)</visible>
+			<control type="group">
+				<left>0</left>
+				<top>-2</top>
+				<visible>Control.IsVisible(58)</visible>
+				<include>DialogZoomInOutAnimation</include>
+				<control type="image">
+					<include>FullscreenDimensions</include>
+					<texture>windows/common/black.png</texture>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<animation type="WindowOpen" tween="sine" easing="out">
+						<effect type="fade" start="0" end="100" time="1000" />
+					</animation>
+					<animation type="WindowClose" tween="sine" easing="out">
+						<effect type="fade" start="100" end="0" time="1000" delay="1200" />
+					</animation>
+				</control>
+				<control type="group" id="6013">
+					<animation reversible="false" effect="slide" start="0,0" end="0,-363" time="300" tween="quadratic" easing="out">Hidden</animation>
+					<visible>Container(58).OnNext</visible>
+					<include>Includes_OnNext_ListWall</include>
+				</control>
+				<control type="group" id="6014">
+					<animation reversible="false" effect="slide" start="0,0" end="0,363" time="300" tween="quadratic" easing="out">Hidden</animation>
+					<visible>Container(58).OnPrevious</visible>
+					<include>Includes_OnPrevious_ListWall</include>
+				</control>
+				<control type="group">
+					<animation type="WindowOpen" tween="sine" easing="out">
+						<effect type="fade" start="0" end="100" time="1000" />
+					</animation>
+					<animation type="WindowClose" tween="sine" easing="out">
+						<effect type="fade" start="100" end="0" time="1000" delay="800" />
+					</animation>
+					<visible>!Control.IsVisible(6013) + !Control.IsVisible(6014)</visible>
+					<include>Includes_Static_ListWall</include>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Control.IsVisible(58)</visible>
+				<control type="group">
+					<include>DialogFadeInOutAnimation</include>
+					<animation effect="fade" start="0" end="100" time="400" tween="sine" easing="out">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" time="2000" tween="sine" easing="out">WindowClose</animation>
+					<control type="image">
+						<include>FullscreenDimensions</include>
+						<texture>special://skin/extras/wall/wall_overlay.png</texture>
+						<fadetime>FanartCrossfadeTime</fadetime>
+					</control>
+					<control type="image">
+						<include>FullscreenDimensions</include>
+						<texture>special://skin/extras/wall/wall_mask.png</texture>
+						<fadetime>FanartCrossfadeTime</fadetime>
+					</control>
+				</control>
+				<control type="group">
+					<include>DialogZoomInOutAnimation</include>
+					<control type="image">
+						<left>663</left>
+						<top>42</top>
+						<width>861</width>
+						<height>1053</height>
+						<aspectratio aligny="center" align="center">stretch</aspectratio>
+						<texture background="true">special://skin/extras/wall/poster_blue_shadow_no.png</texture>
+						<animation type="WindowClose">
+							<effect type="zoom" start="663,42,574,702" end="810,222,366,438" time="980" delay="0" tween="sine" easing="out" />
+							<effect type="fade" start="100" end="0" time="500" delay="650" tween="sine" easing="out" />
+						</animation>
+					</control>
+					<control type="group">
+						<visible>!Container.Content(TVShows)</visible>
+						<animation type="Conditional" condition="[Control.IsVisible(6013) | Control.IsVisible(6014)]">
+							<effect type="fade" start="100" end="0" time="200" delay="0" tween="sine" easing="out" />
+							<effect type="slide" start="0,0" end="-188,0" time="200" delay="0" tween="sine" easing="in" />
+						</animation>
+						<control type="image">
+							<left>938</left>
+							<top>390</top>
+							<width>279</width>
+							<height>279</height>
+							<aspectratio aligny="center" align="center">stretch</aspectratio>
+							<texture background="true">special://skin/extras/wall/bluray.png</texture>
+							<animation type="WindowOpen">
+								<effect type="fade" start="0" end="100" time="500" delay="800" tween="sine" easing="out" />
+								<effect type="zoom" start="938,390,186,186" end="840,297,500,500" time="980" delay="750" tween="sine" easing="out" />
+								<effect type="slide" start="0,-20" end="80,-20" time="980" delay="750" tween="sine" easing="out" />
+							</animation>
+							<animation type="WindowClose">
+								<effect type="fade" start="100" end="0" time="400" delay="200" tween="sine" easing="out" />
+								<effect type="zoom" start="840,297,346,346" end="938,390,186,186" time="780" delay="0" tween="sine" easing="out" />
+								<effect type="slide" start="100,0" end="0,0" time="780" delay="0" tween="sine" easing="out" />
+							</animation>
+							<animation type="Conditional" condition="!IntegerGreaterThan(ListItem.VideoResolution,719)">
+								<effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="out" />
+							</animation>
+						</control>
+						<control type="image">
+							<left>938</left>
+							<top>390</top>
+							<width>279</width>
+							<height>279</height>
+							<aspectratio aligny="center" align="center">stretch</aspectratio>
+							<texture background="true">special://skin/extras/wall/dvd.png</texture>
+							<animation type="WindowOpen">
+								<effect type="fade" start="0" end="100" time="500" delay="800" tween="sine" easing="out" />
+								<effect type="zoom" start="938,390,186,186" end="840,297,500,500" time="980" delay="750" tween="sine" easing="out" />
+								<effect type="slide" start="0,-20" end="80,-20" time="980" delay="750" tween="sine" easing="out" />
+							</animation>
+							<animation type="WindowClose">
+								<effect type="fade" start="100" end="0" time="400" delay="200" tween="sine" easing="out" />
+								<effect type="zoom" start="840,297,346,346" end="938,390,186,186" time="780" delay="0" tween="sine" easing="out" />
+								<effect type="slide" start="100,0" end="0,0" time="780" delay="0" tween="sine" easing="out" />
+							</animation>
+							<animation type="Conditional" condition="IntegerGreaterThan(ListItem.VideoResolution,719) | IsEmpty(ListItem.VideoResolution)">
+								<effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="out" />
+							</animation>
+						</control>
+						<control type="image">
+							<left>938</left>
+							<top>390</top>
+							<width>279</width>
+							<height>279</height>
+							<aspectratio aligny="center" align="center">stretch</aspectratio>
+							<texture background="true">$INFO[ListItem.Art(discart)]</texture>
+							<visible>Skin.HasSetting(CDArt.Enabled)</visible>
+							<animation effect="fade" start="100" end="0" time="350" delay="350">Hidden</animation>
+							<visible>!Control.IsVisible(6013) + !Control.IsVisible(6014)</visible>
+							<animation type="WindowOpen">
+								<effect type="fade" start="0" end="100" time="500" delay="800" tween="sine" easing="out" />
+								<effect type="zoom" start="938,390,186,186" end="840,297,500,500" time="980" delay="750" tween="sine" easing="out" />
+								<effect type="slide" start="0,-20" end="80,-20" time="980" delay="750" tween="sine" easing="out" />
+							</animation>
+							<animation type="WindowClose">
+								<effect type="fade" start="100" end="0" time="400" delay="200" tween="sine" easing="out" />
+								<effect type="zoom" start="840,297,346,346" end="938,390,186,186" time="780" delay="0" tween="sine" easing="out" />
+								<effect type="slide" start="100,0" end="0,0" time="780" delay="0" tween="sine" easing="out" />
+							</animation>
+							<animation effect="rotate" center="auto" start="360" end="0" time="3000" loop="true" condition="Player.Playing">Conditional</animation>
+						</control>
+						<control type="image">
+							<left>938</left>
+							<top>390</top>
+							<width>279</width>
+							<height>279</height>
+							<aspectratio aligny="center" align="center">stretch</aspectratio>
+							<texture background="true">special://skin/extras/wall/disc_shadow.png</texture>
+							<animation type="WindowOpen">
+								<effect type="fade" start="0" end="100" time="500" delay="800" tween="sine" easing="out" />
+								<effect type="zoom" start="938,390,186,186" end="840,297,500,500" time="980" delay="750" tween="sine" easing="out" />
+								<effect type="slide" start="0,-20" end="80,-20" time="980" delay="750" tween="sine" easing="out" />
+							</animation>
+							<animation type="WindowClose">
+								<effect type="fade" start="100" end="0" time="400" delay="200" tween="sine" easing="out" />
+								<effect type="zoom" start="840,297,346,346" end="938,390,186,186" time="780" delay="0" tween="sine" easing="out" />
+								<effect type="slide" start="100,0" end="0,0" time="780" delay="0" tween="sine" easing="out" />
+							</animation>
+							<animation type="Conditional" condition="IsEmpty(ListItem.VideoResolution)">
+								<effect type="fade" start="100" end="0" time="200" delay="0" tween="sine" easing="out" />
+							</animation>
+						</control>
+					</control>
+					<control type="image">
+						<left>900</left>
+						<top>264</top>
+						<width>387</width>
+						<height>579</height>
+						<aspectratio aligny="center" align="center" scalediffuse="false">scale</aspectratio>
+						<texture background="true" diffuse="special://skin/extras/wall/poster_diffuse.png" fallback="thumbs/fallback_poster_big.png">$INFO[ListItem.Icon]</texture>
+						<animation type="WindowClose">
+							<effect type="zoom" start="900,264,258,386" end="960,360,162,242" time="980" delay="0" tween="sine" easing="out" />
+							<effect type="fade" start="100" end="0" time="500" delay="800" tween="sine" easing="out" />
+						</animation>
+					</control>
+					<control type="image">
+						<left>900</left>
+						<top>264</top>
+						<width>387</width>
+						<height>579</height>
+						<aspectratio aligny="center" align="center">stretch</aspectratio>
+						<texture background="true">special://skin/extras/wall/poster_overlay.png</texture>
+						<animation type="WindowClose">
+							<effect type="zoom" start="900,264,258,386" end="960,360,162,242" time="980" delay="0" tween="sine" easing="out" />
+							<effect type="fade" start="100" end="0" time="500" delay="800" tween="sine" easing="out" />
+						</animation>
+					</control>
+					<control type="image">
+						<left>900</left>
+						<top>264</top>
+						<width>387</width>
+						<height>579</height>
+						<aspectratio aligny="center" align="center" scalediffuse="false">scale</aspectratio>
+						<texture background="true" diffuse="special://skin/extras/wall/poster_diffuse.png" fallback="thumbs/fallback_poster_big.png">$INFO[ListItem(-1).Icon]</texture>
+						<animation effect="fade" start="100" end="0" time="200" delay="150" condition="Control.IsVisible(6013)">Conditional</animation>
+						<visible>Control.IsVisible(6013) + !stringcompare(ListItem(-1).Label,..)</visible>
+					</control>
+					<control type="image">
+						<left>900</left>
+						<top>264</top>
+						<width>387</width>
+						<height>579</height>
+						<aspectratio aligny="center" align="center">stretch</aspectratio>
+						<texture background="true">special://skin/extras/wall/poster_overlay.png</texture>
+						<animation effect="fade" start="100" end="0" time="200" delay="150" condition="Control.IsVisible(6013)">Conditional</animation>
+						<visible>Control.IsVisible(6013) + !stringcompare(ListItem(-1).Label,..)</visible>
+					</control>
+					<control type="image">
+						<left>900</left>
+						<top>264</top>
+						<width>387</width>
+						<height>579</height>
+						<aspectratio aligny="center" align="center" scalediffuse="false">scale</aspectratio>
+						<texture background="true" diffuse="special://skin/extras/wall/poster_diffuse.png" fallback="thumbs/fallback_poster_big.png">$INFO[ListItem(1).Icon]</texture>
+						<animation effect="fade" start="100" end="0" time="200" delay="150" condition="Control.IsVisible(6014)">Conditional</animation>
+						<visible>Control.IsVisible(6014) + !stringcompare(ListItem(1).Label,..)</visible>
+					</control>
+					<control type="image">
+						<left>900</left>
+						<top>264</top>
+						<width>387</width>
+						<height>579</height>
+						<aspectratio aligny="center" align="center">stretch</aspectratio>
+						<texture background="true">special://skin/extras/wall/poster_overlay.png</texture>
+						<animation effect="fade" start="100" end="0" time="200" delay="150" condition="Control.IsVisible(6014)">Conditional</animation>
+						<visible>Control.IsVisible(6014) + !stringcompare(ListItem(1).Label,..)</visible>
+					</control>
+				</control>
+			</control>
+			<control type="group">
+				<include>DialogZoomInOutAnimation</include>
+				<animation type="WindowOpen">
+					<effect type="fade" start="0" end="100" time="800" delay="800" tween="sine" easing="out" />
+					<effect type="slide" start="-540" end="0" time="980" delay="750" tween="sine" easing="out" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="slide" start="0" end="-540" time="980" delay="0" tween="sine" easing="out" />
+					<effect type="fade" start="100" end="0" time="800" delay="0" tween="sine" easing="out" />
+				</animation>
+				<animation type="Visible">
+					<effect type="fade" start="0" end="100" time="800" delay="800" tween="sine" easing="out" />
+					<effect type="slide" start="-540" end="0" time="980" delay="750" tween="sine" easing="out" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="slide" start="0" end="-540" time="980" delay="0" tween="sine" easing="out" />
+					<effect type="fade" start="100" end="0" time="800" delay="0" tween="sine" easing="out" />
+				</animation>
+				<control type="fixedlist" id="58">
+					<left>45</left>
+					<top>248</top>
+					<width>1785</width>
+					<height>608</height>
+					<onleft>60</onleft>
+					<onright>9111</onright>
+					<onup>58</onup>
+					<ondown>58</ondown>
+					<focusposition>4</focusposition>
+					<preloaditems>2</preloaditems>
+					<movement>4</movement>
+					<viewtype label="49297">Multiple Walls</viewtype>
+					<pagecontrol>60</pagecontrol>
+					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<visible>Container.Content(Movies) | Container.Content(TVShows)</visible>
+					<itemlayout height="68" width="1065">
+						<control type="label">
+							<left>21</left>
+							<top>0</top>
+							<width>150</width>
+							<height>68</height>
+							<font>Font-Condensed-S28</font>
+							<textcolor>77white</textcolor>
+							<shadowcolor>77000000</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>․ ․ ․</label>
+							<visible>IsEmpty(ListItem.Year) + !Stringcompare(ListItem.Label,..)</visible>
+						</control>
+						<control type="label">
+							<left>22</left>
+							<top>0</top>
+							<width>150</width>
+							<height>68</height>
+							<font>Font-Condensed-S32</font>
+							<textcolor>77white</textcolor>
+							<shadowcolor>77000000</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Year]</label>
+							<visible>!IsEmpty(ListItem.Year)</visible>
+						</control>
+						<control type="image">
+							<left>62</left>
+							<top>5</top>
+							<width>91</width>
+							<height>61</height>
+							<aspectratio align="left" aligny="top">stretch</aspectratio>
+							<texture colordiffuse="77white">$VAR[ListHDSDFlag]</texture>
+						</control>
+						<control type="label">
+							<left>142</left>
+							<top>0</top>
+							<width>660</width>
+							<height>64</height>
+							<font>Font-Condensed-S32</font>
+							<textcolor>77white</textcolor>
+							<shadowcolor>77000000</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="68" width="1065">
+						<control type="group">
+							<include>ListFocusAnimation</include>
+							<control type="label">
+								<left>21</left>
+								<top>0</top>
+								<width>150</width>
+								<height>68</height>
+								<font>Font-Condensed-S28</font>
+								<textcolor>white</textcolor>
+								<shadowcolor>77000000</shadowcolor>
+								<align>left</align>
+								<aligny>center</aligny>
+								<label>․ ․ ․</label>
+								<visible>IsEmpty(ListItem.Year) + !Stringcompare(ListItem.Label,..)</visible>
+							</control>
+							<control type="label">
+								<left>22</left>
+								<top>0</top>
+								<width>150</width>
+								<height>68</height>
+								<font>Font-Condensed-S32</font>
+								<textcolor>white</textcolor>
+								<shadowcolor>77000000</shadowcolor>
+								<align>left</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Year]</label>
+								<visible>!IsEmpty(ListItem.Year)</visible>
+							</control>
+							<control type="image">
+								<left>62</left>
+								<top>5</top>
+								<width>91</width>
+								<height>61</height>
+								<aspectratio align="left" aligny="top">stretch</aspectratio>
+								<texture>$VAR[ListHDSDFlag]</texture>
+							</control>
+							<control type="label">
+								<left>142</left>
+								<top>0</top>
+								<width>660</width>
+								<height>64</height>
+								<font>Font-Condensed-S32</font>
+								<textcolor>white</textcolor>
+								<shadowcolor>77000000</shadowcolor>
+								<align>left</align>
+								<aligny>center</aligny>
+								<scroll>true</scroll>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="scrollbar" id="60">
+					<left>38</left>
+					<top>268</top>
+					<width>14</width>
+					<height>570</height>
+					<texturesliderbackground>-</texturesliderbackground>
+					<texturesliderbar colordiffuse="$VAR[FocusModColourVar]" border="1">views/other/scrollbar-sq.png</texturesliderbar>
+					<texturesliderbarfocus colordiffuse="$VAR[FocusModColourVar]" border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+					<textureslidernib>-</textureslidernib>
+					<textureslidernibfocus>-</textureslidernibfocus>
+					<onleft>9111</onleft>
+					<onright>58</onright>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+					<animation effect="fade" start="100" end="0" time="250" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+					<visible>Control.IsVisible(58)</visible>
+				</control>
+				<control type="image">
+					<left>78</left>
+					<top>225</top>
+					<width>34</width>
+					<height>30</height>
+					<texture>special://skin/extras/buttons/arrow.png</texture>
+				</control>
+				<control type="image">
+					<left>78</left>
+					<top>848</top>
+					<width>34</width>
+					<height>30</height>
+					<texture flipy="true">special://skin/extras/buttons/arrow.png</texture>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="Includes_OnNext_ListWall">
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-14).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-13).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>720</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-12).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>1080</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-11).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>240</left>
+			<top>0</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-11).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>240</left>
+			<top>360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-10).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>240</left>
+			<top>720</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-9).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>240</left>
+			<top>1080</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-8).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>480</left>
+			<top>0</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-8).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>480</left>
+			<top>360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-7).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>480</left>
+			<top>720</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-6).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>480</left>
+			<top>1080</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-5).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>720</left>
+			<top>0</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-5).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>720</left>
+			<top>360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-4).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>720</left>
+			<top>720</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-3).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>720</left>
+			<top>1080</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-2).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>960</left>
+			<top>0</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-2).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>960</left>
+			<top>360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-1).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>960</left>
+			<top>720</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(0).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>960</left>
+			<top>1080</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(1).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1200</left>
+			<top>0</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(1).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1200</left>
+			<top>360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(2).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1200</left>
+			<top>720</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(3).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1200</left>
+			<top>1080</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(4).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1440</left>
+			<top>0</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(4).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1440</left>
+			<top>360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(5).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1440</left>
+			<top>720</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(6).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1440</left>
+			<top>1080</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(7).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1680</left>
+			<top>0</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(7).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1680</left>
+			<top>360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(8).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1680</left>
+			<top>720</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(9).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1680</left>
+			<top>1080</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(10).Icon]</texture>
+		</control>
+	</include>
+	<!-- OnPrevious -->
+	<include name="Includes_OnPrevious_ListWall">
+		<control type="image">
+			<left>0</left>
+			<top>-360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-13).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-12).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-11).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>720</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-10).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>240</left>
+			<top>-360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-10).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>240</left>
+			<top>0</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-9).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>240</left>
+			<top>360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-8).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>240</left>
+			<top>720</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-7).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>480</left>
+			<top>-360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-7).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>480</left>
+			<top>0</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-6).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>480</left>
+			<top>360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-5).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>480</left>
+			<top>720</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-4).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>720</left>
+			<top>-360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-4).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>720</left>
+			<top>0</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-3).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>720</left>
+			<top>360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-2).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>720</left>
+			<top>720</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-1).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>960</left>
+			<top>-360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-1).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>960</left>
+			<top>0</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(0).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>960</left>
+			<top>360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(1).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>960</left>
+			<top>720</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(2).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1200</left>
+			<top>-360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(2).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1200</left>
+			<top>0</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(3).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1200</left>
+			<top>360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(4).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1200</left>
+			<top>720</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(5).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1440</left>
+			<top>-360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(5).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1440</left>
+			<top>0</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(6).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1440</left>
+			<top>360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(7).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1440</left>
+			<top>720</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(8).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1680</left>
+			<top>-360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(8).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1680</left>
+			<top>0</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(9).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1680</left>
+			<top>360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(10).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1680</left>
+			<top>720</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(11).Icon]</texture>
+		</control>
+	</include>
+	<!-- Static -->
+	<include name="Includes_Static_ListWall">
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-13).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-12).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>720</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-11).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>240</left>
+			<top>0</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-10).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>240</left>
+			<top>360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-9).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>240</left>
+			<top>720</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-8).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>480</left>
+			<top>0</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-7).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>480</left>
+			<top>360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-6).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>480</left>
+			<top>720</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-5).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>720</left>
+			<top>0</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-4).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>720</left>
+			<top>360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-3).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>720</left>
+			<top>720</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-2).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>960</left>
+			<top>0</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-1).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>960</left>
+			<top>360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(0).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>960</left>
+			<top>720</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(1).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1200</left>
+			<top>0</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(2).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1200</left>
+			<top>360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(3).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1200</left>
+			<top>720</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(4).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1440</left>
+			<top>0</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(5).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1440</left>
+			<top>360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(6).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1440</left>
+			<top>720</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(7).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1680</left>
+			<top>0</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(8).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1680</left>
+			<top>360</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(9).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1680</left>
+			<top>720</top>
+			<width>243</width>
+			<height>363</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="special://skin/extras/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(10).Icon]</texture>
 		</control>
 	</include>
 </includes>

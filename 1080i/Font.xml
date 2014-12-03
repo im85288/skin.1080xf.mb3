@@ -214,6 +214,12 @@
 			<size>45</size>
 			<style>bold</style>
 		</font>
+		
+		<font>
+			<name>Font-Condensed-S46</name>
+			<filename>OpenSansCond.ttf</filename>
+			<size>46</size>
+		</font>
 		<font>
 			<name>Font-Condensed-S50</name>
 			<filename>OpenSansCond.ttf</filename>

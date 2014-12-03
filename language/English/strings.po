@@ -1339,4 +1339,19 @@ msgctxt "#49295"
 msgid "Daily Babes"
 msgstr ""
 
+msgctxt "#49296"
+msgid "VideoWall Fanart"
+msgstr ""
+
+msgctxt "#49297"
+msgid "List Wall"
+msgstr ""
+
+msgctxt "#49298"
+msgid "Premiere"
+msgstr ""
+
+msgctxt "#49299"
+msgid "Aired"
+msgstr ""
 

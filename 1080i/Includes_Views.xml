@@ -20,6 +20,8 @@
 		<include>Viewtype-BannerFanart</include>
 		<include>Viewtype-Coverflow</include>
 		<include>Viewtype-BannerPlex</include>
+		<include>ViewType-VideoWallFanartView</include>
+		<include>ViewType-ListWallViewVideos</include>
 		<include condition="Skin.HasSetting(NextAired.Enabled)">NextAiredInfo</include>
 	</include>
 	<include name="MusicViews">
@@ -86,7 +88,7 @@
 	<include name="CommonClearLogoDetails">
 		<control type="group">
 			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
-			<visible>!Control.IsVisible(553) | [Control.IsVisible(553) + Window.IsActive(movieinformation)]</visible>
+			<visible>[!Control.IsVisible(553) + !Control.IsVisible(580)] | [Control.IsVisible(553) + Window.IsActive(movieinformation)] | [Control.IsVisible(580) + Window.IsActive(movieinformation)]</visible>
 			<animation type="Visible" reversible="false">
 				<effect type="fade" start="0" end="100" time="450" delay="0" tween="sine" easing="in" />
 			</animation>
@@ -418,6 +420,17 @@
 		<value condition="SubString(ListItem.FileNameAndPath,.3D.) | SubString(ListItem.FileNameAndPath,-3D.)">flags/other/3d-default.png</value>
 		<value condition="IntegerGreaterThan(ListItem.VideoResolution,719)">flags/defs/hd.png</value>
 		<value condition="!IsEmpty(ListItem.VideoResolution)">flags/defs/sd.png</value>
+	</variable>
+	<variable name="ListHDSDFlag580">
+		<value condition="SubString(Container(580).ListItem.FileNameAndPath,.3D.) | SubString(Container(580).ListItem.FileNameAndPath,-3D.)">flags/other/3d-default.png</value>
+		<value condition="IntegerGreaterThan(Container(580).ListItem.VideoResolution,719)">flags/defs/hd.png</value>
+		<value condition="!IsEmpty(Container(580).ListItem.VideoResolution)">flags/defs/sd.png</value>
+	</variable>
+	<variable name="ViewFanart580">
+		<value condition="!IsEmpty(Window(Home).Property(MB3.Background.Item.FanArt))">$INFO[Window(Home).Property(MB3.Background.Item.FanArt)]</value>
+		<value condition="!IsEmpty(Window(home).property(fanart_image)) + !Window.IsActive(script-Actors-DialogInfo.xml) + [Window.IsActive(movieinformation) | Window.IsActive(script-Actors-DialogVideoInfo.xml)]">$INFO[Window(home).property(fanart_image)]</value>
+		<value condition="!Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent))">$INFO[Container(580).ListItem.Art(fanart)]</value>
+		<value>-</value>
 	</variable>
 	<variable name="ListHDSDFlagSmall">
 		<value condition="SubString(ListItem.FileNameAndPath,.3D.) | SubString(ListItem.FileNameAndPath,-3D.)">flags/other/3d-ilist.png</value>
@@ -1171,5 +1184,16 @@
 		<value condition="Container.Content(songs) + SubString(ListItem.Duration,min)">[COLOR=SelectedBlue]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration]</value>
 		<value condition="Container.Content(addons) + !IsEmpty(ListItem.Property(Addon.Version)) + IsEmpty(ListItem.Label2)">[COLOR=SelectedBlue]$LOCALIZE[24051] [/COLOR]$INFO[ListItem.Property(Addon.Version)] - [COLOR=SelectedBlue]$LOCALIZE[21863]: [/COLOR]$INFO[ListItem.Property(Addon.Creator)]</value>
 		<value condition="Container.Content(addons) + !IsEmpty(ListItem.Property(Addon.Version)) + !IsEmpty(ListItem.Label2)">[COLOR=SelectedBlue]$LOCALIZE[24051] [/COLOR]$INFO[ListItem.Property(Addon.Version)] - [COLOR=SelectedBlue]$LOCALIZE[21863]: [/COLOR]$INFO[ListItem.Property(Addon.Creator)] - [COLOR=SelectedBlue]$INFO[ListItem.Label2][/COLOR]</value>
+	</variable>
+	<variable name="SmallGlobalInfo">
+		<value condition="Container.Content(Movies) + IsEmpty(Container(580).ListItem.Property(ReleaseDate))">$INFO[Container(580).ListItem.Year]$INFO[Container(580).ListItem.Rating, • ,]$INFO[Container(580).ListItem.Duration, • , $LOCALIZE[12391]]</value>
+		<value condition="Container.Content(Movies) + !IsEmpty(Container(580).ListItem.Property(ReleaseDate))">$INFO[Container(580).ListItem.Property(ReleaseDate),$LOCALIZE[49298]: ]</value>
+		<value condition="Container.Content(TVShows) | Container.Content(Seasons) + !IsEmpty(Container(580).ListItem.Property(UnWatchedEpisodes))">$INFO[Container(580).ListItem.Year,, • ,]$INFO[Container(580).ListItem.Rating,, • ,]$INFO[Container(580).ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[16101]]</value>
+		<value condition="Container.Content(Episodes)">$INFO[Container(580).ListItem.Premiered,$LOCALIZE[49299] ]$INFO[Container(580).ListItem.Rating, • ,]$INFO[Container(580).ListItem.Duration, • , $LOCALIZE[12391]]</value>
+	</variable>
+	<variable name="VideoWallThumb">
+		<value condition="!IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
+		<value condition="!IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
+		<value>$INFO[ListItem.ActualIcon,thumbs/,/folderback_episode_tp.png]</value>
 	</variable>
 </includes>

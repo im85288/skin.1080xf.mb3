@@ -315,7 +315,7 @@
 					<aspectratio align="center" aligny="bottom">keep</aspectratio>
 					<texture fallback="blank.png">$INFO[Skin.String(cdartlocation)]$INFO[ListItem.Artist,,/logo.png]</texture>
 					<colordiffuse>ee000000</colordiffuse>
-					<visible>Skin.HasSetting(Logo.Enabled)</visible>
+					<visible>!isEmpty(ListItem.Artist) + Skin.HasSetting(Logo.Enabled)</visible>
 				</control>
 				<control type="image" id="89456">
 					<posx>90</posx>
@@ -323,7 +323,7 @@
 					<width>280</width>
 					<height>92</height>
 					<aspectratio align="center" aligny="bottom">keep</aspectratio>
-					<visible>Skin.HasSetting(Logo.Enabled)</visible>
+					<visible>!isEmpty(ListItem.Artist) + Skin.HasSetting(Logo.Enabled)</visible>
 					<texture fallback="blank.png">$INFO[Skin.String(cdartlocation)]$INFO[ListItem.Artist,,/logo.png]</texture>
 				</control>
 				<control type="label">
@@ -338,7 +338,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<wrapmultiline>true</wrapmultiline>
-					<visible>StringCompare(Control.GetLabel(89456),blank.png) | !Skin.HasSetting(Logo.Enabled)</visible>
+					<visible>isEmpty(ListItem.Artist) | !Skin.HasSetting(Logo.Enabled)</visible>
 				</control>
 			</control>
 			<!-- LEFT SIDE -->
@@ -1172,5 +1172,4 @@
 		<value condition="Container.Content(addons) + !IsEmpty(ListItem.Property(Addon.Version)) + IsEmpty(ListItem.Label2)">[COLOR=SelectedBlue]$LOCALIZE[24051] [/COLOR]$INFO[ListItem.Property(Addon.Version)] - [COLOR=SelectedBlue]$LOCALIZE[21863]: [/COLOR]$INFO[ListItem.Property(Addon.Creator)]</value>
 		<value condition="Container.Content(addons) + !IsEmpty(ListItem.Property(Addon.Version)) + !IsEmpty(ListItem.Label2)">[COLOR=SelectedBlue]$LOCALIZE[24051] [/COLOR]$INFO[ListItem.Property(Addon.Version)] - [COLOR=SelectedBlue]$LOCALIZE[21863]: [/COLOR]$INFO[ListItem.Property(Addon.Creator)] - [COLOR=SelectedBlue]$INFO[ListItem.Label2][/COLOR]</value>
 	</variable>
-	
 </includes>

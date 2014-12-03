@@ -6075,7 +6075,7 @@
 					<onright condition="Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeWeather)">725</onright>
 					<onright condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeWeather)">825</onright>
 					<onclick condition="!Library.HasContent(music)">ActivateWindow(musicfiles)</onclick>
-					<onclick condition="Library.HasContent(music) + IsEmpty(Skin.String(music.path))">ActivateWindow(musiclibrary)</onclick>
+					<onclick condition="Library.HasContent(music) + IsEmpty(Skin.String(music.path))">ActivateWindow(Music)</onclick>
 					<onclick condition="Library.HasContent(music) + !IsEmpty(Skin.String(music.path))">ActivateWindow(musiclibrary,$INFO[Skin.String(music.path)],return)</onclick>
 					<onup>ActivateWindow(3022)</onup>
 					<ondown>401</ondown>

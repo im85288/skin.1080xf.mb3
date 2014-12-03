@@ -325,37 +325,37 @@
 				<item id="2">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>ActivateWindow(musiclibrary,genres,return)</onclick>
+					<onclick>ActivateWindow(music,genres,return)</onclick>
 				</item>
 				<item id="3">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>ActivateWindow(musiclibrary,artists,return)</onclick>
+					<onclick>ActivateWindow(music,artists,return)</onclick>
 				</item>
 				<item id="4">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>ActivateWindow(musiclibrary,albums,return)</onclick>
+					<onclick>ActivateWindow(music,albums,return)</onclick>
 				</item>
 				<item id="5">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>ActivateWindow(musiclibrary,songs,return)</onclick>
+					<onclick>ActivateWindow(music,songs,return)</onclick>
 				</item>
 				<item id="6">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>ActivateWindow(musiclibrary,years,return)</onclick>
+					<onclick>ActivateWindow(music,years,return)</onclick>
 				</item>
 				<item id="7">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>ActivateWindow(musiclibrary,top100,return)</onclick>
+					<onclick>ActivateWindow(music,top100,return)</onclick>
 				</item>
 				<item id="8">
 					<label>-</label>
 					<onclick>PreviousMenu</onclick>
-					<onclick>ActivateWindow(musiclibrary,playlists,return)</onclick>
+					<onclick>ActivateWindow(music,playlists,return)</onclick>
 				</item>
 				<item id="9">
 					<label>-</label>

@@ -1026,8 +1026,8 @@
 					<onright condition="System.GetBool(pvrmanager.enabled)">925</onright>
 					<onright condition="!System.GetBool(pvrmanager.enabled)">525</onright>
 					<onclick>SetProperty(HomeSearch,1)</onclick>
-					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.std.search.0.path)])</onclick>
-					<onclick condition="Skin.HasSetting(UseKodiLibrary)">RunScript(script.globalsearch)</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">RunScript(plugin.video.xbmb3c,-1,mode=18)</onclick>
+			    	<onclick condition="Skin.HasSetting(UseKodiLibrary)">RunScript(script.globalsearch)</onclick>
 					<onup>80</onup>
 					<ondown>101</ondown>
 				</control>
@@ -1185,7 +1185,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<onclick>SetProperty(HomeSearch,1)</onclick>
-							<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.std.search.0.path)])</onclick>
+							<onclick condition="!Skin.HasSetting(UseKodiLibrary)">RunScript(plugin.video.xbmb3c,-1,mode=18)</onclick>
 							<onclick condition="Skin.HasSetting(UseKodiLibrary)">RunScript(script.globalsearch)</onclick>
 						</control>
 					</control>

@@ -194,7 +194,7 @@
 						<texturefocus border="70,2,2,2">dialogs/options/buttons/search-fo.png</texturefocus>
 						<texturenofocus border="70,2,2,2">dialogs/options/buttons/search-nf.png</texturenofocus>
 						<animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(388)">Conditional</animation>
-						<onclick>$INFO[Window(Home).Property(xbmb3c.std.search.0.path)]</onclick>
+						<onclick condition="!Skin.HasSetting(UseKodiLibrary)">RunScript(plugin.video.xbmb3c,-1,mode=18)</onclick>
 						<visible>substring(Container.FolderPath,plugin://plugin.video.xbmb3c)</visible>
 					</control>
 					<control type="edit" id="19">

@@ -22,6 +22,7 @@
 		<include>Viewtype-BannerPlex</include>
 		<include>ViewType-VideoWallFanartView</include>
 		<include>ViewType-ListWallViewVideos</include>
+		<include>ViewType-GalleryView</include>
 		<include condition="Skin.HasSetting(NextAired.Enabled)">NextAiredInfo</include>
 	</include>
 	<include name="MusicViews">
@@ -426,10 +427,22 @@
 		<value condition="IntegerGreaterThan(Container(580).ListItem.VideoResolution,719)">flags/defs/hd.png</value>
 		<value condition="!IsEmpty(Container(580).ListItem.VideoResolution)">flags/defs/sd.png</value>
 	</variable>
+	<variable name="ListHDSDFlag520">
+		<value condition="SubString(Container(520).ListItem.FileNameAndPath,.3D.) | SubString(Container(520).ListItem.FileNameAndPath,-3D.)">flags/other/3d-default.png</value>
+		<value condition="IntegerGreaterThan(Container(520).ListItem.VideoResolution,719)">flags/defs/hd.png</value>
+		<value condition="!IsEmpty(Container(520).ListItem.VideoResolution)">flags/defs/sd.png</value>
+	</variable>
 	<variable name="ViewFanart580">
 		<value condition="!IsEmpty(Window(Home).Property(MB3.Background.Item.FanArt))">$INFO[Window(Home).Property(MB3.Background.Item.FanArt)]</value>
 		<value condition="!IsEmpty(Window(home).property(fanart_image)) + !Window.IsActive(script-Actors-DialogInfo.xml) + [Window.IsActive(movieinformation) | Window.IsActive(script-Actors-DialogVideoInfo.xml)]">$INFO[Window(home).property(fanart_image)]</value>
 		<value condition="!Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent))">$INFO[Container(580).ListItem.Art(fanart)]</value>
+		<value>-</value>
+	</variable>
+	<variable name="ViewFanart520">
+	    <value condition="Container.Content(episodes) + !IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
+		<value condition="!IsEmpty(ListItem.Property(medium_fanartimage)) + Skin.HasSetting(GalleryShowFanart">$INFO[ListItem.Property(medium_fanartimage)]</value>
+		<value condition="!IsEmpty(ListItem.Art(landscape)) + !Skin.HasSetting(GalleryShowFanart)">$INFO[ListItem.Art(landscape)]</value>
+		<value>$INFO[ListItem.Art(fanart)]</value>
 		<value>-</value>
 	</variable>
 	<variable name="ListHDSDFlagSmall">
@@ -1190,6 +1203,12 @@
 		<value condition="Container.Content(Movies) + !IsEmpty(Container(580).ListItem.Property(ReleaseDate))">$INFO[Container(580).ListItem.Property(ReleaseDate),$LOCALIZE[49298]: ]</value>
 		<value condition="Container.Content(TVShows) | Container.Content(Seasons) + !IsEmpty(Container(580).ListItem.Property(UnWatchedEpisodes))">$INFO[Container(580).ListItem.Year,, • ,]$INFO[Container(580).ListItem.Rating,, • ,]$INFO[Container(580).ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[16101]]</value>
 		<value condition="Container.Content(Episodes)">$INFO[Container(580).ListItem.Premiered,$LOCALIZE[49299] ]$INFO[Container(580).ListItem.Rating, • ,]$INFO[Container(580).ListItem.Duration, • , $LOCALIZE[12391]]</value>
+	</variable>
+	<variable name="SmallGlobalInfo520">
+		<value condition="Container.Content(Movies) + IsEmpty(ListItem.Property(ReleaseDate))">$INFO[ListItem.Year]$INFO[ListItem.Rating, • ,]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</value>
+		<value condition="Container.Content(Movies) + !IsEmpty(ListItem.Property(ReleaseDate))">$INFO[ListItem.Property(ReleaseDate),$LOCALIZE[49298]: ]</value>
+		<value condition="Container.Content(TVShows) | Container.Content(Seasons) + !IsEmpty(ListItem.Property(UnWatchedEpisodes))">$INFO[ListItem.Year,, • ,]$INFO[ListItem.Rating,, • ,]$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[16101]]</value>
+		<value condition="Container.Content(Episodes)">$INFO[ListItem.Premiered,$LOCALIZE[49299] ]$INFO[ListItem.Rating, • ,]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</value>
 	</variable>
 	<variable name="VideoWallThumb">
 		<value condition="!IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>

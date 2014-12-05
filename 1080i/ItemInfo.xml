@@ -33,7 +33,7 @@
 			<top>20</top>
 			<width>710</width>
 			<height>40</height>
-			<align>left</align>
+			<align>center</align>
 			<label>-</label>
 			<font>Font-Condensed-S38-Upper</font>
 			<textcolor>FFFFFFFFFF</textcolor>
@@ -55,17 +55,35 @@
 			<top>20</top>
 			<width>580</width>
 			<height>860</height>
-			<aspectratio>keep</aspectratio>
-			<visible>!Control.HasFocus(3291) | [Control.HasFocus(3291) + isEmpty(Container(3291).ListItem.Icon)]</visible>
+			<aspectratio>stretch</aspectratio>
+			<visible>[!Control.HasFocus(3291) | [Control.HasFocus(3291) + isEmpty(Container(3291).ListItem.Icon)]] + [!Control.HasFocus(3230) | [Control.HasFocus(3230) + isEmpty(Container(3230).ListItem.Icon)]]</visible>
+		</control>
+		<!-- poster image -->
+		<control type="image" id="3011">
+			<left>20</left>
+			<top>20</top>
+			<width>580</width>
+			<height>860</height>
+			<aspectratio>stretch</aspectratio>
+			<visible>!Control.HasFocus(3291) | [Control.HasFocus(3291) + isEmpty(Container(3291).ListItem.Icon)] + [!Control.HasFocus(3230) | [Control.HasFocus(3230) + isEmpty(Container(3230).ListItem.Icon)]]</visible>
 		</control>
 		<control type="image">
 			<left>20</left>
 			<top>20</top>
 			<width>580</width>
 			<height>860</height>
-			<aspectratio>keep</aspectratio>
+			<aspectratio>stretch</aspectratio>
 			<texture>$INFO[Container(3291).ListItem.Icon]</texture>
 			<visible>Control.HasFocus(3291)</visible>
+		</control>
+		<control type="image">
+			<left>20</left>
+			<top>20</top>
+			<width>580</width>
+			<height>860</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>$INFO[Container(3230).ListItem.Icon]</texture>
+			<visible>Control.HasFocus(3230)</visible>
 		</control>
 		<control type="image" id="3010">
 			<left>60</left>
@@ -75,15 +93,6 @@
 			<texture background="true">-</texture>
 			<colordiffuse>AAFFFFFF</colordiffuse>
 			<aspectratio>stretch</aspectratio>
-		</control>
-		<!-- poster image -->
-		<control type="image" id="3011">
-			<left>20</left>
-			<top>20</top>
-			<width>580</width>
-			<height>860</height>
-			<aspectratio>stretch</aspectratio>
-			<visible>!Control.HasFocus(3291) | [Control.HasFocus(3291) + isEmpty(Container(3291).ListItem.Icon)]</visible>
 		</control>
 		<control type="image" id="3012">
 			<left>60</left>
@@ -200,8 +209,8 @@
 					<font>Font-Condensed-S30</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textcolor>white</textcolor>
-					<selectedcolor>white</selectedcolor>
+					<textcolor>BBFFFFFF</textcolor>
+					<selectedcolor>BBFFFFFF</selectedcolor>
 					<info>ListItem.Label2</info>
 				</control>
 			</itemlayout>
@@ -243,8 +252,8 @@
 					<font>Font-Condensed-S30</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textcolor>white</textcolor>
-					<selectedcolor>white</selectedcolor>
+					<textcolor>BBFFFFFF</textcolor>
+					<selectedcolor>BBFFFFFF</selectedcolor>
 					<info>ListItem.Label2</info>
 				</control>
 			</focusedlayout>
@@ -256,9 +265,9 @@
 			<top>524</top>
 			<width>720</width>
 			<height>355</height>
-			<font>Font-Condensed-S28</font>
+			<font>Font-Condensed-S32</font>
 			<align>justify</align>
-			<textcolor>white</textcolor>
+			<textcolor>DDFFFFFF</textcolor>
 			<pagecontrol>3235</pagecontrol>
 			<visible>true</visible>
 			<autoscroll delay="7000" time="3000" repeat="13000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
@@ -316,8 +325,8 @@
 					<font>Font-Condensed-S23</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textcolor>white</textcolor>
-					<selectedcolor>white</selectedcolor>
+					<textcolor>BBFFFFFF</textcolor>
+					<selectedcolor>BBFFFFFF</selectedcolor>
 					<info>ListItem.Label2</info>
 				</control>
 			</itemlayout>
@@ -367,8 +376,8 @@
 					<font>Font-Condensed-S23</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textcolor>white</textcolor>
-					<selectedcolor>white</selectedcolor>
+					<textcolor>BBFFFFFF</textcolor>
+					<selectedcolor>AAFFFFFF</selectedcolor>
 					<info>ListItem.Label2</info>
 				</control>
 			</focusedlayout>
@@ -526,8 +535,8 @@
 			<top>440</top>
 			<align>right</align>
 			<control type="image">
-			    <left>125</left>
-			    <top>4</top>
+				<left>125</left>
+				<top>4</top>
 				<width>50</width>
 				<height>46</height>
 				<aspectratio scalediffuse="false">keep</aspectratio>
@@ -535,7 +544,7 @@
 				<visible>StringCompare(Container(3226).ListItem(6).Label,Metascore:) + !substring(Container(3226).ListItem(6).Label2,None)</visible>
 			</control>
 			<control type="image">
-			    <top>4</top>
+				<top>4</top>
 				<width>50</width>
 				<height>46</height>
 				<aspectratio scalediffuse="false">keep</aspectratio>

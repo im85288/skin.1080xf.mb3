@@ -14,5 +14,6 @@
     <view id="Coverflow" value="780" />
     <view id="Banner Plex" value="56" />
     <view id="VideoWall Fanart" value="580" />
-    <view id="List Wall" value="58" />    
+    <view id="List Wall" value="58" />
+    <view id="Gallery" value="520" />
 </views>

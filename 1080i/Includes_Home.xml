@@ -320,7 +320,7 @@
 					<effect type="zoom" start="100" end="50" center="125,80" tween="sine" easing="inout" time="300" />
 				</animation>
 				<control type="image">
-					<posx>0</posx>
+					<posx>68</posx>
 					<posy>14</posy>
 					<width>341</width>
 					<height>100</height>
@@ -328,7 +328,7 @@
 					<visible>!StringCompare(Skin.CurrentColourTheme,Snow) + !Skin.HasSetting(UseKodiLibrary)</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
+					<posx>68</posx>
 					<posy>14</posy>
 					<width>341</width>
 					<height>100</height>
@@ -337,9 +337,9 @@
 				</control>
 				<control type="image">
 					<left>0</left>
-					<top>135</top>
-					<width>96</width>
-					<height>126</height>
+					<top>48</top>
+					<width>48</width>
+					<height>33</height>
 					<texture>$INFO[Window(Home).Property(MB3UserImage)]</texture>
 					<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
 				</control>

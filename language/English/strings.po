@@ -1355,3 +1355,15 @@ msgctxt "#49299"
 msgid "Aired"
 msgstr ""
 
+msgctxt "#49300"
+msgid "Gallery"
+msgstr ""
+
+msgctxt "#49301"
+msgid "Show Landscape"
+msgstr ""
+
+msgctxt "#49302"
+msgid "Show Fanart"
+msgstr ""
+

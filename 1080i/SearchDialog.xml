@@ -136,9 +136,9 @@
 				<width>60</width>
 				<height>60</height>
 				<label>A</label>
-				<onleft>-</onleft>
+				<onleft>3025</onleft>
 				<onright>3021</onright>
-				<onup>-</onup>
+				<onup>3110</onup>
 				<ondown>3026</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -155,7 +155,7 @@
 				<label>B</label>
 				<onleft>3020</onleft>
 				<onright>3022</onright>
-				<onup>-</onup>
+				<onup>3110</onup>
 				<ondown>3027</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -172,7 +172,7 @@
 				<label>C</label>
 				<onleft>3021</onleft>
 				<onright>3023</onright>
-				<onup>-</onup>
+				<onup>3110</onup>
 				<ondown>3028</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -189,7 +189,7 @@
 				<label>D</label>
 				<onleft>3022</onleft>
 				<onright>3024</onright>
-				<onup>-</onup>
+				<onup>3110</onup>
 				<ondown>3029</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -206,7 +206,7 @@
 				<label>E</label>
 				<onleft>3023</onleft>
 				<onright>3025</onright>
-				<onup>-</onup>
+				<onup>3110</onup>
 				<ondown>3030</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -223,7 +223,7 @@
 				<label>F</label>
 				<onleft>3024</onleft>
 				<onright>3110</onright>
-				<onup>-</onup>
+				<onup>3110</onup>
 				<ondown>3031</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -239,7 +239,7 @@
 				<width>60</width>
 				<height>60</height>
 				<label>G</label>
-				<onleft>-</onleft>
+				<onleft>3031</onleft>
 				<onright>3027</onright>
 				<onup>3020</onup>
 				<ondown>3032</ondown>
@@ -342,7 +342,7 @@
 				<width>60</width>
 				<height>60</height>
 				<label>M</label>
-				<onleft>-</onleft>
+				<onleft>3037</onleft>
 				<onright>3033</onright>
 				<onup>3026</onup>
 				<ondown>3038</ondown>
@@ -445,7 +445,7 @@
 				<width>60</width>
 				<height>60</height>
 				<label>S</label>
-				<onleft>-</onleft>
+				<onleft>3043</onleft>
 				<onright>3039</onright>
 				<onup>3032</onup>
 				<ondown>3044</ondown>
@@ -548,7 +548,7 @@
 				<width>60</width>
 				<height>60</height>
 				<label>Y</label>
-				<onleft>-</onleft>
+				<onleft>3049</onleft>
 				<onright>3045</onright>
 				<onup>3038</onup>
 				<ondown>3050</ondown>
@@ -651,7 +651,7 @@
 				<width>60</width>
 				<height>60</height>
 				<label>$NUMBER[4]</label>
-				<onleft>-</onleft>
+				<onleft>3055</onleft>
 				<onright>3051</onright>
 				<onup>3044</onup>
 				<ondown>3056</ondown>
@@ -754,10 +754,10 @@
 				<width>90</width>
 				<height>60</height>
 				<label>DEL</label>
-				<onleft>-</onleft>
+				<onleft>3058</onleft>
 				<onright>3057</onright>
 				<onup>3050</onup>
-				<ondown>-</ondown>
+				<ondown>3110</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>Font-Condensed-S32</font>
@@ -774,7 +774,7 @@
 				<onleft>3056</onleft>
 				<onright>3058</onright>
 				<onup>3052</onup>
-				<ondown>-</ondown>
+				<ondown>3110</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>Font-Condensed-S32</font>
@@ -791,7 +791,7 @@
 				<onleft>3057</onleft>
 				<onright>3110</onright>
 				<onup>3054</onup>
-				<ondown>-</ondown>
+				<ondown>3110</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>Font-Condensed-S32</font>

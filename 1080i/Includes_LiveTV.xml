@@ -26,7 +26,7 @@
 				<!-- Main background -->
 				<control type="image" id="1">
 					<left>15</left>
-					<width>1845</width>
+					<width>1865</width>
 					<height>280</height>
 					<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 					<animation effect="fade" end="90" condition="true">Conditional</animation>
@@ -36,14 +36,14 @@
 					<left>365</left>
 					<width>1480</width>
 					<height>2</height>
-					<texture border="0" colordiffuse="PrimaryT">special://skin/new_pvr/osd_line_white.png</texture>
+					<texture border="0" colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/new_pvr/osd_line_white.png</texture>
 				</control>
 				<control type="image">
 					<top>236</top>
 					<left>40</left>
 					<width>1805</width>
 					<height>2</height>
-					<texture border="0" colordiffuse="PrimaryT">special://skin/new_pvr/osd_line_white.png</texture>
+					<texture border="0" colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/new_pvr/osd_line_white.png</texture>
 				</control>
 			</control>
 			<!-- Channel logo -->
@@ -642,6 +642,83 @@
 					<aspectratio scalediffuse="false" aligny="bottom" align="center">keep</aspectratio>
 					<visible>[Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding] + ![Player.ShowInfo | Window.IsVisible(fullscreeninfo)]</visible>
 					<visible>Skin.HasSetting(ClearArt.Enabled)</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<visible>[Player.ShowInfo | Window.IsVisible(fullscreeninfo)] + !Window.IsActive(videoosd)</visible>
+			<animation effect="slide" time="400" start="0,200"  easing="out" tween="back">WindowOpen</animation>
+			<animation effect="slide" time="400" end="0,200" delay="300" easing="in" tween="back">WindowClose</animation>
+			<control type="group">
+				<top>460</top>
+				<left>150</left>
+				<!-- Main background -->
+				<control type="image">
+					<width>1620</width>
+					<height>300</height>
+					<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+					<animation effect="fade" end="90" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+				    <left>1532</left>
+					<top>1</top>
+					<width>88</width>
+					<height>88</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>$INFO[VideoPlayer.Cover]</texture>
+				</control>
+				<control type="label">
+					<left>20</left>
+					<top>10</top>
+					<width>130</width>
+					<height>80</height>
+					<align>left</align>
+					<font>Font-Condensed-S72</font>
+					<textcolor>PrimaryT</textcolor>
+					<label>$INFO[VideoPlayer.ChannelNumber]</label>
+				</control>
+				<control type="label">
+					<left>20</left>
+					<top>10</top>
+					<width>1600</width>
+					<height>80</height>
+					<align>center</align>
+					<font>Font-Condensed-S72</font>
+					<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
+					<label>$INFO[VideoPlayer.Title]</label>
+					<visible>!IsEmpty(VideoPlayer.Title)</visible>
+					<visible>![VideoPlayer.Content(LiveTV) + Player.Recording]</visible>
+				</control>
+				<control type="image">
+					<top>90</top>
+					<left>0</left>
+					<width>1620</width>
+					<height>2</height>
+					<texture border="0" colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/new_pvr/osd_line_white.png</texture>
+				</control>
+				<control type="label">
+					<left>20</left>
+					<top>99</top>
+					<width>1600</width>
+					<height>30</height>
+					<align>left</align>
+					<font>Font-Condensed-S30</font>
+					<label>$INFO[VideoPlayer.Genre,[COLOR=SelectedBlue]$LOCALIZE[135]:[/COLOR] ,]</label>
+					<textcolor>SecondaryT</textcolor>
+				</control>
+				<control type="textbox">
+					<description>Plot</description>
+					<left>20</left>
+					<top>140</top>
+					<width>1580</width>
+					<height>150</height>
+					<info>VideoPlayer.Plot</info>
+					<align>justify</align>
+					<textcolor>PrimaryT</textcolor>
+					<shadowcolor>33000000</shadowcolor>
+					<pagecontrol>71</pagecontrol>
+					<autoscroll delay="13000" time="3000" repeat="13000" />
+					<font>Font-Condensed-S32</font>
 				</control>
 			</control>
 		</control>

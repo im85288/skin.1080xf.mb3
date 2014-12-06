@@ -135,6 +135,14 @@
 			<texture>$VAR[AeonFlagStudio]</texture>
 			<visible>Control.IsVisible(3092)</visible>
 		</control>
+		
+		<!-- thumb when no discart or art -->
+		<control type="image" id="3093">
+			<left>1340</left>
+			<top>645</top>
+			<width>300</width>
+			<height>169</height>
+		</control>
 		<!-- studio shown when discart not available and no art logo -->
 		<control type="image">
 			<left>1340</left>
@@ -143,7 +151,7 @@
 			<height>50</height>
 			<aligny>center</aligny>
 			<texture>$VAR[AeonFlagStudio]</texture>
-			<visible>!Control.IsVisible(3091) + !Control.IsVisible(3092)</visible>
+			<visible>!Control.IsVisible(3091) + !Control.IsVisible(3092) + !Control.IsVisible(3093)</visible>
 		</control>
 		<!-- Video resolution etc list NOT SHOWN -->
 		<control type="list" id="3220">

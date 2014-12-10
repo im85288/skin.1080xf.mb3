@@ -30,22 +30,22 @@
 				</control>
 				<control type="image">
 					<posx>98</posx>
-					<posy>215</posy>
+					<posy>177</posy>
 					<width>1900</width>
-					<height>733</height>
+					<height>790</height>
 					<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 				</control>
 				<control type="epggrid" id="10">
 					<description>EPG Grid</description>
 					<viewtype label="19032">list</viewtype>
 					<posx>100</posx>
-					<posy>178</posy>
+					<posy>140</posy>
 					<width>1855</width>
-					<height>520</height>
+					<height>600</height>
 					<pagecontrol>10</pagecontrol>
 					<scrolltime>250</scrolltime>
 					<timeblocks>40</timeblocks>
-					<rulerunit>6</rulerunit>
+					<rulerunit>7</rulerunit>
 					<onleft>101</onleft>
 					<onright>101</onright>
 					<onup>10</onup>
@@ -344,27 +344,31 @@
 					<posx>480</posx>
 					<posy>698</posy>
 					<control type="image">
-						<width>1482</width>
-						<height>250</height>
+						<posx>-382</posx>
+						<posy>70</posy>
+						<width>1920</width>
+						<height>200</height>
 						<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
 					</control>
 					<control type="image">
-						<posx>-360</posx>
-						<width>444</width>
-						<height>246</height>
+						<posy>60</posy>
+						<posx>-230</posx>
+						<width>180</width>
+						<height>180</height>
 						<texture background="true" fallback="windows/pvr/defaultchannel.png">$INFO[Container(10).ListItem.Icon]</texture>
-						<aspectratio>stretch</aspectratio>
-					    <visible>!Pvr.IsPlayingTv</visible>
+						<aspectratio>keep</aspectratio>
+					    <visible>!Player.HasVideo</visible>
 					</control>
 					<control type="videowindow">
+						<posy>50</posy>
 					    <posx>-360</posx>
-						<width>444</width>
-						<height>250</height>
-						<visible>Pvr.IsPlayingTv</visible>
+						<width>460</width>
+						<height>205</height>
+						<visible>Player.HasVideo</visible>
 					</control>
 					<control type="button">
 						<posx>138</posx>
-						<posy>0</posy>
+						<posy>30</posy>
 						<width>1252</width>
 						<height>86</height>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
@@ -379,7 +383,7 @@
 					</control>
 					<control type="button">
 						<posx>138</posx>
-						<posy>0</posy>
+						<posy>30</posy>
 						<width>1252</width>
 						<height>86</height>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
@@ -395,7 +399,7 @@
 					<control type="textbox">
 						<description>Plot value</description>
 						<posx>138</posx>
-						<posy>70</posy>
+						<posy>90</posy>
 						<width>1252</width>
 						<height>165</height>
 						<font>Font-Condensed-S30</font>

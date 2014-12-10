@@ -1,0 +1,519 @@
+<window type="dialog" id="7028">
+	<defaultcontrol always="true">3</defaultcontrol>
+	<onunload>ClearProperty(Close,7028)</onunload>
+	<visible>Window.IsActive(7028) + Window.IsActive(Home)</visible>
+	<controls>
+		<control type="GroupList">
+			<description>Button labels</description>
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="200" />
+				<effect type="zoom" start="0,229,1920,1" end="0,170,1920,70" tween="sine" easing="out" time="200" />
+			</animation>
+			<animation type="WindowClose" condition="!IsEmpty(Window(7028).Property(Close))">
+				<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="200" />
+				<effect type="zoom" start="0,170,1920,70" end="0,229,1920,1" tween="sine" easing="out" time="200" />
+			</animation>
+			<animation type="WindowClose" condition="IsEmpty(Window(7028).Property(Close))">
+				<effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
+				<effect type="slide" start="0,0" end="0,-75" time="300" tween="sine" easing="out" />
+			</animation>
+			<animation type="Conditional" condition="Window.IsActive(7020) | Window.IsActive(7021) | Window.IsActive(7022)">
+				<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="200" />
+				<effect type="zoom" start="100,170,1720,70" end="100,229,1720,1" tween="sine" easing="out" time="200" />
+			</animation>
+			<posx>0</posx>
+			<posy>170</posy>
+			<width>1920</width>
+			<height>70</height>
+			<align>center</align>
+			<orientation>horizontal</orientation>
+			<usecontrolcoords>true</usecontrolcoords>
+			<itemgap>45</itemgap>
+			<control type="group">
+				<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>-50</width>
+				<height>100</height>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="65,50" condition="!Container(3).HasFocus(1)">Conditional</animation>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.0.title)) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Container(3).HasFocus(1)]">Conditional</animation>
+					<visible>!Container(3).HasFocus(1)</visible>
+				</control>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Container(3).HasFocus(1)]">Conditional</animation>
+					<visible>[Container(3).HasFocus(1)]</visible>
+					<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
+				</control>
+			</control>
+			<control type="label">
+				<description>User 1</description>
+				<include>HomeLabel</include>
+				<label>$INFO[Window(Home).Property(MediaBrowser.usr.movies.0.title)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(1)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(1)">Conditional</animation>
+				<visible>!Container(3).HasFocus(1)</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.0.title))</visible>
+				<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
+			</control>
+			<control type="label">
+				<description>User 1</description>
+				<include>HomeLabelColour</include>
+				<label>$INFO[Window(Home).Property(MediaBrowser.usr.movies.0.title)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(1)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(1)">Conditional</animation>
+				<visible>Container(3).HasFocus(1)</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.0.title))</visible>
+				<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
+			</control>
+			<control type="group">
+				<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>-50</width>
+				<height>100</height>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="65,50" condition="!Container(3).HasFocus(2)">Conditional</animation>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.1.title)) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Container(3).HasFocus(2)]">Conditional</animation>
+					<visible>!Container(3).HasFocus(2)</visible>
+				</control>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Container(3).HasFocus(2)]">Conditional</animation>
+					<visible>[Container(3).HasFocus(2)]</visible>
+					<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
+				</control>
+			</control>
+			<control type="label">
+				<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
+				<description>User 2</description>
+				<include>HomeLabel</include>
+				<label>$INFO[Window(Home).Property(MediaBrowser.usr.movies.1.title)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(2)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(2)">Conditional</animation>
+				<visible>!Container(3).HasFocus(2)</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.1.title))</visible>
+			</control>
+			<control type="label">
+				<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
+				<description>User 2</description>
+				<include>HomeLabelColour</include>
+				<label>$INFO[Window(Home).Property(MediaBrowser.usr.movies.1.title)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(2)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(2)">Conditional</animation>
+				<visible>Container(3).HasFocus(2)</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.1.title))</visible>
+			</control>
+			<control type="group">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>-50</width>
+				<height>100</height>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="65,50" condition="!Container(3).HasFocus(3)">Conditional</animation>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.2.title)) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Container(3).HasFocus(3)]">Conditional</animation>
+					<visible>!Container(3).HasFocus(3)</visible>
+				</control>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Container(3).HasFocus(3)]">Conditional</animation>
+					<visible>[Container(3).HasFocus(3)]</visible>
+					<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
+				</control>
+			</control>
+			<control type="label">
+				<description>User 3</description>
+				<include>HomeLabel</include>
+				<label>$INFO[Window(Home).Property(MediaBrowser.usr.movies.2.title)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(3)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(3)">Conditional</animation>
+				<visible>!Container(3).HasFocus(3)</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.2.title))</visible>
+			</control>
+			<control type="label">
+				<description>User 3</description>
+				<include>HomeLabelColour</include>
+				<label>$INFO[Window(Home).Property(MediaBrowser.usr.movies.2.title)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(3)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(3)">Conditional</animation>
+				<visible>Container(3).HasFocus(3)</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.2.title))</visible>
+			</control>
+			<control type="group">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>-50</width>
+				<height>100</height>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="65,50" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.3.title)) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Container(3).HasFocus(4)]">Conditional</animation>
+					<visible>!Container(3).HasFocus(4)</visible>
+				</control>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Container(3).HasFocus(4)]">Conditional</animation>
+					<visible>[Container(3).HasFocus(4)]</visible>
+					<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
+				</control>
+			</control>
+			<control type="label">
+				<description>User 4</description>
+				<include>HomeLabel</include>
+				<label>$INFO[Window(Home).Property(MediaBrowser.usr.movies.3.title)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<visible>!Container(3).HasFocus(4)</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.3.title))</visible>
+			</control>
+			<control type="label">
+				<description>User 3</description>
+				<include>HomeLabelColour</include>
+				<label>$INFO[Window(Home).Property(MediaBrowser.usr.movies.3.title)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<visible>Container(3).HasFocus(4)</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.3.title))</visible>
+			</control>
+			<control type="group">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>-50</width>
+				<height>100</height>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="65,50" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.4.title)) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Container(3).HasFocus(5)]">Conditional</animation>
+					<visible>!Container(3).HasFocus(5)</visible>
+				</control>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Container(3).HasFocus(5)]">Conditional</animation>
+					<visible>[Container(3).HasFocus(5)]</visible>
+					<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
+				</control>
+			</control>
+			<control type="label">
+				<description>User 5</description>
+				<include>HomeLabel</include>
+				<label>$INFO[Window(Home).Property(MediaBrowser.usr.movies.4.title)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<visible>!Container(3).HasFocus(5)</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.4.title))</visible>
+			</control>
+			<control type="label">
+				<description>User 5</description>
+				<include>HomeLabelColour</include>
+				<label>$INFO[Window(Home).Property(MediaBrowser.usr.movies.4.title)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<visible>Container(3).HasFocus(5)</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.4.title))</visible>
+			</control>
+			<control type="group">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>-50</width>
+				<height>100</height>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="65,50" condition="!Container(3).HasFocus(6)">Conditional</animation>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.5.title)) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Container(3).HasFocus(6)]">Conditional</animation>
+					<visible>!Container(3).HasFocus(6)</visible>
+				</control>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Container(3).HasFocus(6]">Conditional</animation>
+					<visible>[Container(3).HasFocus(6)]</visible>
+					<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
+				</control>
+			</control>
+			<control type="label">
+				<description>User 6</description>
+				<include>HomeLabel</include>
+				<label>$INFO[Window(Home).Property(MediaBrowser.usr.movies.5.title)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(6)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(6)">Conditional</animation>
+				<visible>!Container(3).HasFocus(6)</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.5.title))</visible>
+			</control>
+			<control type="label">
+				<description>User 6</description>
+				<include>HomeLabelColour</include>
+				<label>$INFO[Window(Home).Property(MediaBrowser.usr.movies.5.title)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(6)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(6)">Conditional</animation>
+				<visible>Container(3).HasFocus(6)</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.5.title))</visible>
+			</control>
+			<control type="group">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>-50</width>
+				<height>100</height>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="65,50" condition="!Container(3).HasFocus(7)">Conditional</animation>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.6.title)) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Container(3).HasFocus(7)]">Conditional</animation>
+					<visible>!Container(3).HasFocus(7)</visible>
+				</control>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Container(3).HasFocus(7)]">Conditional</animation>
+					<visible>[Container(3).HasFocus(7)]</visible>
+					<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
+				</control>
+			</control>
+			<control type="label">
+				<description>User 7</description>
+				<include>HomeLabel</include>
+				<label>$INFO[Window(Home).Property(MediaBrowser.usr.movies.6.title)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(7)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(7)">Conditional</animation>
+				<visible>!Container(3).HasFocus(7)</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.6.title))</visible>
+			</control>
+			<control type="label">
+				<description>User 7</description>
+				<include>HomeLabelColour</include>
+				<label>$INFO[Window(Home).Property(MediaBrowser.usr.movies.6.title)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(7)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(7)">Conditional</animation>
+				<visible>Container(3).HasFocus(7)</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.6.title))</visible>
+			</control>
+			<control type="group">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>-50</width>
+				<height>100</height>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="65,50" condition="!Container(3).HasFocus(8)">Conditional</animation>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.7.title)) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Container(3).HasFocus(8)]">Conditional</animation>
+					<visible>!Container(3).HasFocus(8)</visible>
+				</control>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Container(3).HasFocus(8)]">Conditional</animation>
+					<visible>[Container(3).HasFocus(8)]</visible>
+					<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
+				</control>
+			</control>
+			<control type="label">
+				<description>User 8</description>
+				<include>HomeLabel</include>
+				<label>$INFO[Window(Home).Property(MediaBrowser.usr.movies.7.title)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(8)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(8)">Conditional</animation>
+				<visible>!Container(3).HasFocus(8)</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.7.title))</visible>
+			</control>
+			<control type="label">
+				<description>User 8</description>
+				<include>HomeLabelColour</include>
+				<label>$INFO[Window(Home).Property(MediaBrowser.usr.movies.7.title)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(8)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(8)">Conditional</animation>
+				<visible>Container(3).HasFocus(8)</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.7.title))</visible>
+			</control>
+			<control type="group">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>-50</width>
+				<height>100</height>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="65,50" condition="!Container(3).HasFocus(9)">Conditional</animation>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.8.title)) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Container(3).HasFocus(9)]">Conditional</animation>
+					<visible>!Container(3).HasFocus(9)</visible>
+				</control>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Container(3).HasFocus(9)]">Conditional</animation>
+					<visible>[Container(3).HasFocus(9)]</visible>
+					<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
+				</control>
+			</control>
+			<control type="label">
+				<description>User 9</description>
+				<include>HomeLabel</include>
+				<label>$INFO[Window(Home).Property(MediaBrowser.usr.movies.8.title)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(9)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(9)">Conditional</animation>
+				<visible>!Container(3).HasFocus(9)</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.8.title))</visible>
+			</control>
+			<control type="label">
+				<description>User 9</description>
+				<include>HomeLabelColour</include>
+				<label>$INFO[Window(Home).Property(MediaBrowser.usr.movies.8.title)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(9)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(9)">Conditional</animation>
+				<visible>Container(3).HasFocus(9)</visible>
+				<visible>!IsEmpty(Window(Home).Property(MediaBrowser.usr.movies.8.title))</visible>
+			</control>
+		</control>
+		<control type="wraplist" id="3">
+			<description>Control list</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>2</height>
+			<width>2</width>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<onup>SetProperty(Close,1)</onup>
+			<onup>PreviousMenu</onup>
+			<onup condition="Container(3).HasFocus(1)">ActivateWindow(7020)</onup>
+			<onup condition="Container(3).HasFocus(2)">ActivateWindow(7021)</onup>
+			<onup condition="Container(3).HasFocus(3)">ActivateWindow(7022)</onup>
+			<onup condition="Container(3).HasFocus(4)">ActivateWindow(7023)</onup>
+			<onup condition="Container(3).HasFocus(5)">ActivateWindow(7024)</onup>
+			<onup condition="Container(3).HasFocus(6)">ActivateWindow(7025)</onup>
+			<onup condition="Container(3).HasFocus(7)">ActivateWindow(7026)</onup>
+			<onup condition="Container(3).HasFocus(8)">ActivateWindow(7027)</onup>
+			<onup condition="Container(3).HasFocus(9)">ActivateWindow(7029)</onup>
+			<ondown>SetProperty(Close,1)</ondown>
+			<ondown>PreviousMenu</ondown>
+			<orientation>horizontal</orientation>
+			<scrolltime>0</scrolltime>
+			<viewtype>list</viewtype>
+			<itemlayout width="2" height="2" />
+			<focusedlayout width="2" height="2" />
+			<content>
+				<item id="1">
+					<label>-</label>
+					<onclick>PreviousMenu</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.usr.movies.0.path)]</onclick>
+				</item>
+				<item id="2">
+					<label>-</label>
+					<onclick>PreviousMenu</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.usr.movies.1.path)]</onclick>
+				</item>
+				<item id="3">
+					<label>-</label>
+					<onclick>PreviousMenu</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.usr.movies.2.path)]</onclick>
+				</item>
+				<item id="4">
+					<label>-</label>
+					<onclick>PreviousMenu</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.usr.movies.3.path)]</onclick>
+				</item>
+				<item id="5">
+					<label>-</label>
+					<onclick>PreviousMenu</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.usr.movies.4.path)]</onclick>
+				</item>
+				<item id="6">
+					<label>-</label>
+					<onclick>PreviousMenu</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.usr.movies.5.path)]</onclick>
+				</item>
+				<item id="7">
+					<label>-</label>
+					<onclick>PreviousMenu</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.usr.movies.6.path)]</onclick>
+				</item>
+				<item id="8">
+					<label>-</label>
+					<onclick>PreviousMenu</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.usr.movies.7.path)]</onclick>
+				</item>
+				<item id="9">
+					<label>-</label>
+					<onclick>PreviousMenu</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.usr.movies.8.path)]</onclick>
+				</item>
+			</content>
+		</control>
+	</controls>
+</window>

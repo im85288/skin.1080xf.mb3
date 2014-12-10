@@ -54,6 +54,13 @@
 		<onload condition="IsEmpty(Skin.String(HomeWidget.8.Method))">Skin.SetString(HomeWidget.8.Method,Playlist)</onload>
 		<onload condition="IsEmpty(Skin.String(HomeWidget.8.UnWatched))">Skin.SetString(HomeWidget.8.UnWatched,False)</onload>
 		<onload condition="IsEmpty(Skin.String(HomeWidget.8.Resume))">Skin.SetString(HomeWidget.8.Resume,False)</onload>
+		<onload condition="IsEmpty(Skin.String(HomeWidget.9.Type))">Skin.SetString(HomeWidget.9.Type,service.skin.widgets)</onload>
+		<onload condition="IsEmpty(Skin.String(HomeWidget.9.TypeName))">Skin.SetString(HomeWidget.9.TypeName,$LOCALIZE[49304])</onload>
+		<onload condition="IsEmpty(Skin.String(HomeWidget.9.SubType))">Skin.SetString(HomeWidget.9.SubType,LiveTV)</onload>
+		<onload condition="IsEmpty(Skin.String(HomeWidget.9.SubTypeName))">Skin.SetString(HomeWidget.9.SubTypeName,LiveTV)</onload>
+		<onload condition="IsEmpty(Skin.String(HomeWidget.9.Method))">Skin.SetString(HomeWidget.9.Method,Playlist)</onload>
+		<onload condition="IsEmpty(Skin.String(HomeWidget.9.UnWatched))">Skin.SetString(HomeWidget.9.UnWatched,False)</onload>
+		<onload condition="IsEmpty(Skin.String(HomeWidget.9.Resume))">Skin.SetString(HomeWidget.9.Resume,False)</onload>
 		<onload condition="IsEmpty(Skin.String(HomeWidget.10.Type))">Skin.SetString(HomeWidget.10.Type,service.skin.widgets)</onload>
 		<onload condition="IsEmpty(Skin.String(HomeWidget.10.TypeName))">Skin.SetString(HomeWidget.10.TypeName,$LOCALIZE[49273])</onload>
 		<onload condition="IsEmpty(Skin.String(HomeWidget.10.SubType))">Skin.SetString(HomeWidget.10.SubType,Photo)</onload>
@@ -121,6 +128,7 @@
 		<include condition="stringcompare(Skin.String(HomeWidget.5.Type),service.skin.widgets.recent)">HomeWidget.5.Widgets.Recent</include>
 		<include condition="stringcompare(Skin.String(HomeWidget.5.Type),service.skin.widgets.recommended)">HomeWidget.5.Widgets.Recommended</include>
 		<include condition="stringcompare(Skin.String(HomeWidget.5.Type),script.randomandlastitems) + stringcompare(Skin.String(HomeWidget.5.SubType),Music)">HomeWidget.5.Playlist.Music</include>
+		<include condition="stringcompare(Skin.String(HomeWidget.5.Type),smartish.albums)">HomeWidget.5.Widgets.Smartish</include>
 	</include>
 	<include name="HomeWidget.6">
 		<include>HomeWidget.6.Maps</include>
@@ -7980,5 +7988,13 @@
 		<value condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.dailybabes)" target="pictures">plugin://script.extendedinfo?info=dailybabes</value>
 		<value condition="!Skin.HasSetting(UseKodiLibrary)" target="pictures">$INFO[Window(Home).Property(MediaBrowser.std.photo.0.content)]</value>
 		<value condition="Skin.HasSetting(UseKodiLibrary)" target="pictures">$INFO[Skin.String(PicturesDir)]</value>
+	</variable>
+	<variable name="HomeWidget.9.LiveTV">
+		<value condition="stringcompare(Skin.String(HomeWidget.9.Type),smartish.pvrchannels) + !Window.IsVisible(3050)">plugin://service.smartish.widgets?type=pvr&amp;reload=10</value>
+		<value condition="stringcompare(Skin.String(HomeWidget.9.Type),all.pvrrecordings) + !Window.IsVisible(3050)">pvr://recordings/</value>
+		<value condition="stringcompare(Skin.String(HomeWidget.9.Type),service.skin.widgets) + !Window.IsVisible(3050)">pvr://channels/tv/all tv channels/</value>
+	</variable>
+	<variable name="HomeWidget.5.Smart">
+		<value>plugin://service.smartish.widgets?type=albums&amp;reload=10</value>
 	</variable>
 </includes>

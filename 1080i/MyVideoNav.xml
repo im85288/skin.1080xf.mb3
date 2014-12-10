@@ -65,11 +65,11 @@
 					<control type="button" id="2">
 						<description>View</description>
 						<visible>false</visible>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,MOVIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SEASONS,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SERIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,EPISODES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,BOXSETS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,MOVIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SEASONS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SERIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,EPISODES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,BOXSETS,00)</onclick>
 					</control>
 					<control type="button" id="100">
 						<description>Label</description>
@@ -585,12 +585,24 @@
 						<radioposx>-19</radioposx>
 					</control>
 					<control type="radiobutton" id="186">
-						<description>Show landscape</description>
+						<description>Show Gallery fanart</description>
 						<include>optionsbuttonsdimensions</include>
 						<label>$LOCALIZE[49302]</label>
 						<texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
 						<onclick>Skin.ToggleSetting(GalleryShowFanart)</onclick>
 						<selected>Skin.HasSetting(GalleryShowFanart)</selected>
+						<visible>Control.IsVisible(520)</visible>
+						<textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
+						<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
+						<radioposx>-19</radioposx>
+					</control>
+					<control type="radiobutton" id="187">
+						<description>Show video backdrop</description>
+						<include>optionsbuttonsdimensions</include>
+						<label>$LOCALIZE[49272]</label>
+						<texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
+						<onclick>Skin.ToggleSetting(GalleryShowVideo)</onclick>
+						<selected>Skin.HasSetting(GalleryShowVideo)</selected>
 						<visible>Control.IsVisible(520)</visible>
 						<textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
 						<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
@@ -629,11 +641,11 @@
 						<textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
 						<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
 						<radioposx>-19</radioposx>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,MOVIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SEASONS,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SERIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,EPISODES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,BOXSETS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,MOVIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SEASONS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SERIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,EPISODES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,BOXSETS,00)</onclick>
 					</control>
 					<control type="radiobutton" id="203">
 						<description>Info List</description>
@@ -645,11 +657,11 @@
 						<textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
 						<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
 						<radioposx>-19</radioposx>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,MOVIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SEASONS,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SERIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,EPISODES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,BOXSETS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,MOVIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SEASONS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SERIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,EPISODES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,BOXSETS,00)</onclick>
 						<visible>[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets)] | [substring(Container.FolderPath,plugin,left) + Container.HasFiles]</visible>
 					</control>
 					<control type="radiobutton" id="204">
@@ -662,11 +674,11 @@
 						<textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
 						<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
 						<radioposx>-19</radioposx>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,MOVIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SEASONS,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SERIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,EPISODES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,BOXSETS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,MOVIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SEASONS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SERIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,EPISODES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,BOXSETS,00)</onclick>
 						<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Sets)</visible>
 					</control>
 					<control type="radiobutton" id="205">
@@ -679,11 +691,11 @@
 						<textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
 						<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
 						<radioposx>-19</radioposx>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,MOVIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SEASONS,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SERIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,EPISODES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,BOXSETS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,MOVIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SEASONS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SERIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,EPISODES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,BOXSETS,00)</onclick>
 						<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Sets)</visible>
 					</control>
 					<control type="radiobutton" id="206">
@@ -696,11 +708,11 @@
 						<textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
 						<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
 						<radioposx>-19</radioposx>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,MOVIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SEASONS,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SERIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,EPISODES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,BOXSETS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,MOVIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SEASONS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SERIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,EPISODES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,BOXSETS,00)</onclick>
 						<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Actors) | Container.Content(Sets)</visible>
 					</control>
 					<control type="radiobutton" id="207">
@@ -713,11 +725,11 @@
 						<textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
 						<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
 						<radioposx>-19</radioposx>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,MOVIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SEASONS,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SERIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,EPISODES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,BOXSETS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,MOVIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SEASONS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SERIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,EPISODES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,BOXSETS,00)</onclick>
 						<visible>substring(Container.FolderPath,plugin,left) | Container.HasFiles + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(actors) | Container.Content(Sets)]</visible>
 					</control>
 					<control type="radiobutton" id="208">
@@ -730,11 +742,11 @@
 						<textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
 						<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
 						<radioposx>-19</radioposx>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,MOVIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SEASONS,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SERIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,EPISODES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,BOXSETS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,MOVIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SEASONS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SERIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,EPISODES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,BOXSETS,00)</onclick>
 						<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(actors) | Container.Content(Sets)</visible>
 					</control>
 					<control type="radiobutton" id="209">
@@ -747,11 +759,11 @@
 						<textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
 						<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
 						<radioposx>-19</radioposx>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,MOVIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SEASONS,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SERIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,EPISODES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,BOXSETS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,MOVIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SEASONS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SERIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,EPISODES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,BOXSETS,00)</onclick>
 						<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets)</visible>
 					</control>
 					<control type="radiobutton" id="210">
@@ -764,11 +776,11 @@
 						<textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
 						<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
 						<radioposx>-19</radioposx>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,MOVIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SEASONS,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SERIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,EPISODES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,BOXSETS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,MOVIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SEASONS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SERIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,EPISODES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,BOXSETS,00)</onclick>
 					</control>
 					<control type="radiobutton" id="211">
 						<description>Video Wall</description>
@@ -780,11 +792,11 @@
 						<textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
 						<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
 						<radioposx>-19</radioposx>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,MOVIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SEASONS,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SERIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,EPISODES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,BOXSETS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,MOVIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SEASONS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SERIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,EPISODES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,BOXSETS,00)</onclick>
 						<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets)</visible>
 					</control>
 					<control type="radiobutton" id="212">
@@ -797,11 +809,11 @@
 						<textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
 						<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
 						<radioposx>-19</radioposx>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,MOVIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SEASONS,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SERIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,EPISODES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,BOXSETS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,MOVIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SEASONS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SERIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,EPISODES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,BOXSETS,00)</onclick>
 					</control>
 					<control type="radiobutton" id="213">
 						<description>Reel</description>
@@ -813,11 +825,11 @@
 						<textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
 						<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
 						<radioposx>-19</radioposx>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,MOVIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SEASONS,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SERIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,EPISODES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,BOXSETS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,MOVIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SEASONS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SERIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,EPISODES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,BOXSETS,00)</onclick>
 						<visible>Container.Content(Movies) | Container.Content(TVShows)</visible>
 					</control>
 					<control type="radiobutton" id="214">
@@ -830,11 +842,11 @@
 						<textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
 						<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
 						<radioposx>-19</radioposx>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,MOVIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SEASONS,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SERIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,EPISODES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,BOXSETS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,MOVIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SEASONS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SERIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,EPISODES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,BOXSETS,00)</onclick>
 						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(musicvideos)</visible>
 					</control>
 					<control type="radiobutton" id="215">
@@ -847,11 +859,11 @@
 						<textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
 						<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
 						<radioposx>-19</radioposx>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,MOVIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SEASONS,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SERIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,EPISODES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,BOXSETS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,MOVIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SEASONS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SERIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,EPISODES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,BOXSETS,00)</onclick>
 						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(musicvideos)</visible>
 					</control>
 					<control type="radiobutton" id="216">
@@ -864,11 +876,11 @@
 						<textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
 						<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
 						<radioposx>-19</radioposx>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,MOVIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SEASONS,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SERIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,EPISODES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,BOXSETS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,MOVIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SEASONS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SERIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,EPISODES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,BOXSETS,00)</onclick>
 						<visible>Container.Content(tvshows) | Container.Content(movies) | Container.Content(musicvideos)</visible>
 					</control>
 					<control type="radiobutton" id="217">
@@ -881,15 +893,15 @@
 						<textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
 						<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
 						<radioposx>-19</radioposx>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,MOVIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SEASONS,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SERIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,EPISODES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,BOXSETS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,MOVIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SEASONS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SERIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,EPISODES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,BOXSETS,00)</onclick>
 						<visible>Container.Content(tvshows) | Container.Content(movies) | Container.Content(musicvideos)</visible>
 					</control>
 					<control type="radiobutton" id="218">
-						<description>List Video Wall</description>
+						<description>Gallery</description>
 						<include>optionsbuttonsdimensions</include>
 						<label>$LOCALIZE[49300]</label>
 						<texturefocus border="2">dialogs/options/buttons/default-fo.png</texturefocus>
@@ -898,11 +910,11 @@
 						<textureradioon>buttons/radio/options-radio-button-fo.png</textureradioon>
 						<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
 						<radioposx>-19</radioposx>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,MOVIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SEASONS,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,SERIES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,EPISODES,00)</onclick>
-						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(service.mediabrowser.skinhelper,SETVIEW,BOXSETS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Episodes)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,EPISODES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Movies)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,MOVIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(seasons)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SEASONS,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(TVShows)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,SERIES,00)</onclick>
+						<onclick condition="substring(Container.FolderPath,plugin://plugin.video.xbmb3c) + Container.Content(Sets)">XBMC.RunScript(plugin.video.xbmb3c,SETVIEW,BOXSETS,00)</onclick>
 						<visible>[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets)]</visible>
 					</control>
 				</control>

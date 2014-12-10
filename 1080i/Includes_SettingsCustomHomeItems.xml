@@ -1080,6 +1080,7 @@
 					<include condition="StringCompare(Window.Property(SingleDialog),widget4)">PanelDialogHomeWidget4</include>
 					<include condition="StringCompare(Window.Property(SingleDialog),widget5)">PanelDialogHomeWidget5</include>
 					<include condition="StringCompare(Window.Property(SingleDialog),widget8)">PanelDialogHomeWidget8</include>
+					<include condition="StringCompare(Window.Property(SingleDialog),widget9)">PanelDialogHomeWidget9</include>
 					<include condition="StringCompare(Window.Property(SingleDialog),widget10)">PanelDialogHomeWidget10</include>
 				</control>
 				<control type="group">
@@ -1128,6 +1129,7 @@
 						<onclick condition="StringCompare(Window.Property(SingleDialog),widget5)">SetFocus(15)</onclick>
 						<onclick condition="StringCompare(Window.Property(SingleDialog),widget8)">SetFocus(16)</onclick>
 						<onclick condition="StringCompare(Window.Property(SingleDialog),widget10)">SetFocus(17)</onclick>
+						<onclick condition="StringCompare(Window.Property(SingleDialog),widget9)">SetFocus(18)</onclick>
 						<visible allowhiddenfocus="true">!Control.HasFocus(2142)</visible>
 						<include>visiblehidefadeinfo</include>
 					</control>
@@ -1218,6 +1220,17 @@
 						<onfocus>Skin.SetString(HomeWidget.10.Method,Playlist)</onfocus>
 						<onfocus>Skin.SetString(HomeWidget.10.UnWatched,False)</onfocus>
 						<onfocus>Skin.SetString(HomeWidget.10.Resume,False)</onfocus>
+						<onfocus>SetFocus(6)</onfocus>
+						<visible allowhiddenfocus="true">false</visible>
+					</control>
+					<control type="button" id="18">
+						<onfocus>Skin.SetString(HomeWidget.9.Type,service.skin.widgets)</onfocus>
+						<onfocus>Skin.SetString(HomeWidget.9.TypeName,$LOCALIZE[49304])</onfocus>
+						<onfocus>Skin.SetString(HomeWidget.9.SubType,LiveTV)</onfocus>
+						<onfocus>Skin.SetString(HomeWidget.9.SubTypeName,LiveTV)</onfocus>
+						<onfocus>Skin.SetString(HomeWidget.9.Method,Playlist)</onfocus>
+						<onfocus>Skin.SetString(HomeWidget.9.UnWatched,False)</onfocus>
+						<onfocus>Skin.SetString(HomeWidget.9.Resume,False)</onfocus>
 						<onfocus>SetFocus(6)</onfocus>
 						<visible allowhiddenfocus="true">false</visible>
 					</control>

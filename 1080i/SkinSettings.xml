@@ -696,12 +696,6 @@
 						<onclick>Skin.ToggleSetting(ViewsClearArt.Enabled)</onclick>
 						<label>$LOCALIZE[49259]</label>
 					</control>
-					<control type="button" id="3006">
-						<width>1210</width>
-						<include>SettingsCategoryDefaultButtonVars</include>
-						<label>Set Default Views (eg Movies, Tv)</label>
-						<onclick>RunAddon(plugin.video.xbmb3c,"?mode=3&url=http%3a%2f%2fSETVIEWSSETVIEWS")</onclick>
-					</control>
 				</control>
 				<!-- =================== -->
 				<!-- Home Tiles Settings -->

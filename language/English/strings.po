@@ -1367,3 +1367,27 @@ msgctxt "#49302"
 msgid "Show Fanart"
 msgstr ""
 
+msgctxt "#49303"
+msgid "Live TV"
+msgstr ""
+
+msgctxt "#49304"
+msgid "Channels"
+msgstr ""
+
+msgctxt "#49305"
+msgid "Recordings"
+msgstr ""
+
+msgctxt "#49306"
+msgid "Recommended Channels"
+msgstr ""
+
+msgctxt "#49307"
+msgid "Recommended Recordings"
+msgstr ""
+
+msgctxt "#49308"
+msgid "Smart Recommended Albums"
+msgstr ""
+

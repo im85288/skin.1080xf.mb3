@@ -7889,6 +7889,14 @@
 							<aspectratio aligny="center" align="center">stretch</aspectratio>
 							<texture background="true" fallback="thumbs/fallback_fanart_big_tp.png">$VAR[ViewFanart520]</texture>
 							<bordersize>6</bordersize>
+							<visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(GalleryShowVideo)] | [Player.HasVideo + Skin.HasSetting(GalleryShowVideo) + IsEmpty(Window(Home).property(ThemeMediaMB3IsAlive))]</visible>
+						</control>
+						<control type="videowindow">
+							<description>video</description>
+							<width>1012</width>
+							<height>570</height>
+							<aspectratio>stretch</aspectratio>
+							<visible>Player.HasVideo + Skin.HasSetting(GalleryShowVideo) + !IsEmpty(Window(Home).property(ThemeMediaMB3IsAlive))</visible>
 						</control>
 					</control>
 					<control type="group">

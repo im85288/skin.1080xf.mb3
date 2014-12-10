@@ -154,6 +154,13 @@
 		<onclick condition="Window.IsActive(7020)">Dialog.Close(7020)</onclick>
 		<onclick condition="Window.IsActive(7021)">Dialog.Close(7021)</onclick>
 		<onclick condition="Window.IsActive(7022)">Dialog.Close(7022)</onclick>
+		<onclick condition="Window.IsActive(7023)">Dialog.Close(7023)</onclick>
+		<onclick condition="Window.IsActive(7024)">Dialog.Close(7024)</onclick>
+		<onclick condition="Window.IsActive(7025)">Dialog.Close(7025)</onclick>
+		<onclick condition="Window.IsActive(7026)">Dialog.Close(7026)</onclick>
+		<onclick condition="Window.IsActive(7027)">Dialog.Close(7027)</onclick>
+		<onclick condition="Window.IsActive(7028)">Dialog.Close(7028)</onclick>
+		<onclick condition="Window.IsActive(7029)">Dialog.Close(7029)</onclick>
 		<onclick condition="Window.IsActive(7030)">Dialog.Close(7030)</onclick>
 		<onclick condition="Window.IsActive(7031)">Dialog.Close(7031)</onclick>
 		<onclick condition="Window.IsActive(7032)">Dialog.Close(7032)</onclick>

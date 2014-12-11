@@ -1391,3 +1391,31 @@ msgctxt "#49308"
 msgid "Smart Recommended Albums"
 msgstr ""
 
+msgctxt "#49309"
+msgid "My Picsdb"
+msgstr ""
+
+msgctxt "#49310"
+msgid "Picture Addons"
+msgstr ""
+
+msgctxt "#49311"
+msgid "Program Addons"
+msgstr ""
+
+msgctxt "#49312"
+msgid "Video Addons"
+msgstr ""
+
+msgctxt "#49313"
+msgid "EuroGamer"
+msgstr ""
+
+msgctxt "#49314"
+msgid "Engadget"
+msgstr ""
+
+msgctxt "#49315"
+msgid "MobileTech Review"
+msgstr ""
+

@@ -1299,8 +1299,18 @@
 					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.scifi)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49281])</onclick>
 					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.documentaries)">Skin.SetString(HomeWidget.8.Type,bbc.music)</onclick>
 					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.documentaries)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49282])</onclick>
-					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.music)">Skin.SetString(HomeWidget.8.Type,youtube.top100)</onclick>
-					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.music)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49283])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.music)">Skin.SetString(HomeWidget.8.Type,program.addons)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.music)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49311])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),program.addons)">Skin.SetString(HomeWidget.8.Type,video.addons)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),program.addons)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49312])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),video.addons)">Skin.SetString(HomeWidget.8.Type,extendedinfo.eurogamer)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),video.addons)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49313])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),extendedinfo.eurogamer)">Skin.SetString(HomeWidget.8.Type,extendedinfo.engadget)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),extendedinfo.eurogamer)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49314])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),extendedinfo.engadget)">Skin.SetString(HomeWidget.8.Type,extendedinfo.mobiletechreview)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),extendedinfo.engadget)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49315])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),extendedinfo.mobiletechreview)">Skin.SetString(HomeWidget.8.Type,youtube.top100)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),extendedinfo.mobiletechreview)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49283])</onclick>
 					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),youtube.top100)">Skin.SetString(HomeWidget.8.Type,youtube.mostdiscussed)</onclick>
 					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),youtube.top100)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49284])</onclick>
 					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),youtube.mostdiscussed)">Skin.SetString(HomeWidget.8.Type,youtube.trending)</onclick>
@@ -1354,8 +1364,18 @@
 					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),youtube.trending)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49284])</onclick>
 					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),youtube.mostdiscussed)">Skin.SetString(HomeWidget.8.Type,youtube.top100)</onclick>
 					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),youtube.mostdiscussed)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49283])</onclick>
-					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),youtube.top100)">Skin.SetString(HomeWidget.8.Type,bbc.music)</onclick>
-					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),youtube.top100)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49282])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),youtube.top100)">Skin.SetString(HomeWidget.8.Type,extendedinfo.mobiletechreview)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),youtube.top100)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49315])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),extendedinfo.mobiletechreview)">Skin.SetString(HomeWidget.8.Type,extendedinfo.engadget)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),extendedinfo.mobiletechreview)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49314])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),extendedinfo.engadget)">Skin.SetString(HomeWidget.8.Type,extendedinfo.eurogamer)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),extendedinfo.engadget)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49313])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),extendedinfo.eurogamer)">Skin.SetString(HomeWidget.8.Type,video.addons)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),extendedinfo.eurogamer)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49312])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),video.addons)">Skin.SetString(HomeWidget.8.Type,program.addons)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),video.addons)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49311])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),program.addons)">Skin.SetString(HomeWidget.8.Type,bbc.music)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),program.addons)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49282])</onclick>
 					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.music)">Skin.SetString(HomeWidget.8.Type,bbc.documentaries)</onclick>
 					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.music)">Skin.SetString(HomeWidget.8.TypeName,$LOCALIZE[49281])</onclick>
 					<onclick condition="stringcompare(Skin.String(HomeWidget.8.Type),bbc.documentaries)">Skin.SetString(HomeWidget.8.Type,bbc.scifi)</onclick>
@@ -1725,8 +1745,10 @@
 					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.xkcd)">Skin.SetString(HomeWidget.10.TypeName,$LOCALIZE[49294])</onclick>
 					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.cyanidehappiness)">Skin.SetString(HomeWidget.10.Type,extendedinfo.dailybabes)</onclick>
 					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.cyanidehappiness)">Skin.SetString(HomeWidget.10.TypeName,$LOCALIZE[49295])</onclick>
-					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.dailybabes)">Skin.SetString(HomeWidget.10.Type,service.skin.widgets)</onclick>
-					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.dailybabes)">Skin.SetString(HomeWidget.10.TypeName,$LOCALIZE[49273])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.dailybabes)">Skin.SetString(HomeWidget.10.Type,mypicsdb.pics)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.dailybabes)">Skin.SetString(HomeWidget.10.TypeName,$LOCALIZE[49309])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),mypicsdb.pics)">Skin.SetString(HomeWidget.10.Type,service.skin.widgets)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),mypicsdb.pics)">Skin.SetString(HomeWidget.10.TypeName,$LOCALIZE[49273])</onclick>
 					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),service.skin.widgets)">Skin.SetString(HomeWidget.10.Type,extendedinfo.xkcd)</onclick>
 					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),service.skin.widgets)">Skin.SetString(HomeWidget.10.TypeName,$LOCALIZE[49293])</onclick>
 				</control>
@@ -1742,16 +1764,18 @@
 					<ondown>2143</ondown>
 					<texturefocus>buttons/spinctrl/arrow-light-up-fo.png</texturefocus>
 					<texturenofocus>buttons/spinctrl/arrow-light-up-nf.png</texturenofocus>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),mypicsdb.pics)">Skin.SetString(HomeWidget.10.Type,extendedinfo.dailybabes)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),mypicsdb.pics)">Skin.SetString(HomeWidget.10.TypeName,$LOCALIZE[49295])</onclick>
 					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.dailybabes)">Skin.SetString(HomeWidget.10.Type,extendedinfo.cyanidehappiness)</onclick>
 					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.dailybabes)">Skin.SetString(HomeWidget.10.TypeName,$LOCALIZE[49294])</onclick>
 					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.cyanidehappiness)">Skin.SetString(HomeWidget.10.Type,extendedinfo.xkcd)</onclick>
 					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.cyanidehappiness)">Skin.SetString(HomeWidget.10.TypeName,$LOCALIZE[49293])</onclick>
 					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.xkcd)">Skin.SetString(HomeWidget.10.Type,service.skin.widgets)</onclick>
 					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.xkcd)">Skin.SetString(HomeWidget.10.TypeName,$LOCALIZE[49273])</onclick>
-					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),service.skin.widgets)">Skin.SetString(HomeWidget.10.Type,extendedinfo.dailybabes)</onclick>
-					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),service.skin.widgets)">Skin.SetString(HomeWidget.10.TypeName,$LOCALIZE[49295])</onclick>
-					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.dailybabes)">Skin.SetString(HomeWidget.10.Type,extendedinfo.cyanidehappiness)</onclick>
-					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.dailybabes)">Skin.SetString(HomeWidget.10.TypeName,$LOCALIZE[49294])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),service.skin.widgets)">Skin.SetString(HomeWidget.10.Type,mypicsdb.pics)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),service.skin.widgets)">Skin.SetString(HomeWidget.10.TypeName,$LOCALIZE[49309])</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),mypicsdb.pics)">Skin.SetString(HomeWidget.10.Type,extendedinfo.dailybabes)</onclick>
+					<onclick condition="stringcompare(Skin.String(HomeWidget.10.Type),mypicsdb.pics)">Skin.SetString(HomeWidget.10.TypeName,$LOCALIZE[49295])</onclick>
 				</control>
 				<control type="button">
 					<posx>0</posx>

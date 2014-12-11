@@ -135,7 +135,6 @@
 			<texture>$VAR[AeonFlagStudio]</texture>
 			<visible>Control.IsVisible(3092)</visible>
 		</control>
-		
 		<!-- thumb when no discart or art -->
 		<control type="image" id="3093">
 			<left>1340</left>
@@ -411,8 +410,9 @@
 			<aligny>bottom</aligny>
 			<font>font13</font>
 			<onleft>-</onleft>
-			<onright condition="!Control.IsEnabled(3102)">3192</onright>
+			<onright condition="!Control.IsEnabled(3102) + !Control.IsEnabled(3103)">3192</onright>
 			<onright condition="Control.IsEnabled(3102)">3102</onright>
+			<onright condition="Control.IsEnabled(3103)">3103</onright>
 			<onup>3291</onup>
 			<ondown>3235</ondown>
 			<texturefocus colordiffuse="MediaBrowserGreen">special://skin/extras/icons/play.png</texturefocus>
@@ -440,10 +440,30 @@
 			<focusedcolor>$VAR[FocusModColourVar]</focusedcolor>
 			<visible>Control.IsEnabled(3102)</visible>
 		</control>
+		<!-- couchpotato button -->
+		<control type="button" id="3103">
+			<left>685</left>
+			<top>440</top>
+			<width>51</width>
+			<height>51</height>
+			<align>left</align>
+			<aligny>bottom</aligny>
+			<font>font13</font>
+			<onleft>3002</onleft>
+			<onright>3192</onright>
+			<ondown>3235</ondown>
+			<onup>3291</onup>
+			<texturefocus colordiffuse="white">special://skin/extras/icons/couchpotato.png</texturefocus>
+			<texturenofocus colordiffuse="MediaBrowserGreen">special://skin/extras/icons/couchpotato.png</texturenofocus>
+			<textcolor>white</textcolor>
+			<focusedcolor>$VAR[FocusModColourVar]</focusedcolor>
+			<visible>Control.IsEnabled(3103)</visible>
+		</control>
 		<!-- Watched RadioButton -->
 		<control type="radiobutton" id="3192">
-			<onleft condition="!Control.IsEnabled(3102)">3002</onleft>
+			<onleft condition="!Control.IsEnabled(3102) + !Control.IsEnabled(3103)">3002</onleft>
 			<onleft condition="Control.IsEnabled(3102)">3102</onleft>
+			<onleft condition="Control.IsEnabled(3103)">3103</onleft>
 			<onright>3193</onright>
 			<ondown>3235</ondown>
 			<onup>3291</onup>

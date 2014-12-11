@@ -138,6 +138,7 @@
 						<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
 						<effect type="zoom" start="90" end="100" center="661,438" tween="cubic" easing="out" time="400" delay="105" />
 					</animation>
+					<!--
 					<include>PVRVisibleHiddenAnimation</include>
 					<control type="label">
 						<posx>168</posx>
@@ -151,6 +152,7 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.StartDate]</label>
 					</control>
+					-->
 					<control type="image">
 						<description>Shadow</description>
 						<posx>50</posx>
@@ -207,13 +209,14 @@
 								<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Icon]</texture>
 								<aspectratio>keep</aspectratio>
 							</control>
+							
 							<control type="label">
 								<description>Label</description>
-								<posx>125</posx>
+								<posx>760</posx>
 								<posy>0</posy>
 								<width>233</width>
 								<height>58</height>
-								<font>Font-Condensed-S34-B</font>
+								<font>Font-Condensed-S30-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.StartDate]</label>
 								<textcolor>SecondaryT</textcolor>
@@ -221,9 +224,10 @@
 								<scroll>false</scroll>
 								<visible>!IsEmpty(ListItem.Overlay)</visible>
 							</control>
+							
 							<control type="label">
 								<description>Start time -> Duration</description>
-								<posx>125</posx>
+								<posx>760</posx>
 								<posy>42</posy>
 								<width>233</width>
 								<height>50</height>
@@ -237,7 +241,7 @@
 							</control>
 							<control type="label">
 								<description>Label</description>
-								<posx>373</posx>
+								<posx>125</posx>
 								<posy>0</posy>
 								<width>575</width>
 								<height>58</height>
@@ -251,7 +255,7 @@
 							</control>
 							<control type="label">
 								<description>Title</description>
-								<posx>373</posx>
+								<posx>125</posx>
 								<posy>42</posy>
 								<width>575</width>
 								<height>50</height>
@@ -340,11 +344,11 @@
 								</control>
 								<control type="label">
 									<description>Label</description>
-									<posx>125</posx>
+									<posx>760</posx>
 									<posy>0</posy>
 									<width>233</width>
 									<height>58</height>
-									<font>Font-Condensed-S34-B</font>
+									<font>Font-Condensed-S30-B</font>
 									<align>left</align>
 									<label>$VAR[ListItem.StartDate]</label>
 									<textcolor>PrimaryT</textcolor>
@@ -354,7 +358,7 @@
 								</control>
 								<control type="label">
 									<description>Label</description>
-									<posx>373</posx>
+									<posx>125</posx>
 									<posy>0</posy>
 									<width>575</width>
 									<height>58</height>
@@ -382,7 +386,7 @@
 								</control>
 								<control type="label">
 									<description>Start time -> Duration</description>
-									<posx>125</posx>
+									<posx>760</posx>
 									<posy>42</posy>
 									<width>233</width>
 									<height>50</height>
@@ -396,7 +400,7 @@
 								</control>
 								<control type="label">
 									<description>Title</description>
-									<posx>373</posx>
+									<posx>125</posx>
 									<posy>42</posy>
 									<width>575</width>
 									<height>50</height>

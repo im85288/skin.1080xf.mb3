@@ -473,6 +473,22 @@
 						<onclick>Skin.ToggleSetting(ShowBackgroundHomeMenu)</onclick>
 						<label>$LOCALIZE[49251]</label>
 					</control>
+					<control type="radiobutton" id="2011">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(RainDrops)</selected>
+						<onclick>Skin.ToggleSetting(RainDrops)</onclick>
+						<onclick>Skin.Reset(Snow)</onclick>
+						<label>Raindrops effect</label>
+					</control>
+					<control type="radiobutton" id="2012">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(Snow)</selected>
+						<onclick>Skin.ToggleSetting(Snow)</onclick>
+						<onclick>Skin.Reset(RainDrops)</onclick>
+						<label>Snow effect</label>
+					</control>
 					<control type="radiobutton" id="2006">
 						<width>1210</width>
 						<include>SettingsCategoryRadioButtonVars</include>

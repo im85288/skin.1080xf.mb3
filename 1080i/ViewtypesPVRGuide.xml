@@ -352,7 +352,7 @@
 					</control>
 					<control type="image">
 						<posy>60</posy>
-						<posx>-230</posx>
+						<posx>-220</posx>
 						<width>180</width>
 						<height>180</height>
 						<texture background="true" fallback="windows/pvr/defaultchannel.png">$INFO[Container(10).ListItem.Icon]</texture>

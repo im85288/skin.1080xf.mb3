@@ -441,7 +441,7 @@
 					<scrollspeed>80</scrollspeed>
 					<visible>Container(20).HasFocus(7)</visible>
 				</control>
-				<control type="fadelabel">
+					<control type="fadelabel">
 					<posy>80</posy>
 					<posx>0</posx>
 					<include>HomeProfileInfoLabel</include>
@@ -9312,6 +9312,115 @@
 					</control>
 				</control>
 			</control>
-		</control>
+		</control>	
+		<!--Next recording on home screen-->
+		<control type="group">
+            <visible>Container(20).HasFocus(9) + !PVR.IsRecording + PVR.HasNonRecordingTimer + Skin.HasSetting(HideHomeProfileInfo)</visible>
+            <control type="image" description="Recording Channel Icon">
+                <posx>10</posx>
+                <posy>15</posy>
+                <width>140</width>
+                <height>140</height>
+                <aspectratio>keep</aspectratio>
+                <texture background="true" fallback="img/DefaultVideoCover.png">$INFO[PVR.NextRecordingChannelIcon]</texture>
+                <bordertexture border="8">img/ThumbBorder.png</bordertexture>
+                <bordersize>10</bordersize>
+            </control>
+            <control type="image">
+                <posx>160</posx>
+                <posy>40</posy>
+                <width>30</width>
+                <height>30</height>
+                <aspectratio>keep</aspectratio>
+                <texture>img/PVR-HasTimer.png</texture>
+            </control>
+            <control type="label">
+                <description>Next Timer Header label</description>
+                <posx>200</posx>
+                <posy>30</posy>
+                <height>55</height>
+                <width>310</width>
+                <font>Details</font>
+                <label>$LOCALIZE[19157]</label>
+                <textcolor>$VAR[FocusModHomeColourVar]</textcolor>
+                <align>left</align>
+                <aligny>center</aligny>
+            </control>
+            <control type="label" description="next recording time">
+                <description>NextRecordingDateTime</description>
+                <posx>160</posx>
+                <posy>65</posy>
+                <width>420</width>
+                <height>55</height>
+                <label>$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19126] - ]</label>
+                <textcolor>PrimaryOSD</textcolor>
+                <align>left</align>
+                <scroll>true</scroll>
+            </control>
+            <control type="textbox" description="Next Recording title Channel">
+                <posx>160</posx>
+                <posy>100</posy>
+                <width>800 </width>
+                <height>55</height>
+                <align>left</align>
+                <font>Details</font>
+                <textcolor>PrimaryOSD</textcolor>
+                <label>[COLOR=White]$INFO[PVR.NextRecordingTitle][/COLOR][COLOR=White] ([/COLOR]$INFO[PVR.NextRecordingChannel][COLOR=White])[/COLOR]</label>
+            </control>
+        </control>
+                <!--Now recording on home screen-->
+	<control type="group">
+            <visible>Container(20).HasFocus(9) + [PVR.IsRecording] + Skin.HasSetting(HideHomeProfileInfo)</visible>
+            <control type="image" description="Recording Channel Icon">
+                <posx>10</posx>
+                <posy>15</posy>
+                <width>140</width>
+                <height>140</height>
+                <aspectratio>keep</aspectratio>
+                <texture background="true" fallback="img/DefaultVideoCover.png">$INFO[PVR.NowRecordingChannelIcon]</texture>
+                <bordertexture border="8">img/ThumbBorder.png</bordertexture>
+                <bordersize>10</bordersize>
+            </control>
+            <control type="image">
+                <posx>160</posx>
+                <posy>40</posy>
+                <width>35</width>
+                <height>35</height>
+                <aspectratio>keep</aspectratio>
+                <texture>img/PVR-IsRecording.png</texture>
+            </control>
+            <control type="label">
+                <description>Is Recording Header label</description>
+                <posx>200</posx>
+                <posy>30</posy>
+                <height>55</height>
+                <width>310</width>
+                <label>$LOCALIZE[19158]</label>
+                <textcolor>$VAR[FocusModHomeColourVar]</textcolor>
+                <align>left</align>
+                <aligny>center</aligny>
+            </control>
+            <control type="label" description="current recording time">
+                <description>NowRecordingDateTime</description>
+                <posx>160</posx>
+                <posy>65</posy>
+                <width>420</width>
+                <height>55</height>
+                <label>$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]</label>
+                <textcolor>PrimaryOSD</textcolor>
+                <align>left</align>
+                <scroll>true</scroll>
+            </control>
+            <control type="textbox" description="Now Recording title Channel">
+                <posx>160</posx>
+                <posy>100</posy>
+                <width>800 </width>
+                <height>55</height>
+                <align>left</align>
+                <font>Details</font>
+                <textcolor>PrimaryOSD</textcolor>
+                <label>[COLOR=White]$INFO[PVR.NowRecordingTitle][/COLOR][COLOR=White] ([/COLOR]$INFO[PVR.NowRecordingChannel][COLOR=White])[/COLOR]</label>
+            </control>
+        </control>
 	</include>
 </includes>

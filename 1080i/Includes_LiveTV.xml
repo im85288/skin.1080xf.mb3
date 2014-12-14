@@ -649,6 +649,7 @@
 			<visible>[Player.ShowInfo | Window.IsVisible(fullscreeninfo)] + !Window.IsActive(videoosd)</visible>
 			<animation effect="slide" time="400" start="0,200"  easing="out" tween="back">WindowOpen</animation>
 			<animation effect="slide" time="400" end="0,200" delay="300" easing="in" tween="back">WindowClose</animation>
+			<visible>Skin.HasSetting(alternatelivetvplot)</visible>
 			<control type="group">
 				<top>460</top>
 				<left>150</left>

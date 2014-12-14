@@ -34,4 +34,8 @@
     <include name="SpinControlReversed">
         <reverse>yes</reverse>
     </include>
+    
+    <include name="CastMB3Content">
+        <content target="video">$INFO[ListItem.Property(CastPluginLink)]</content>
+    </include>
 </includes>

@@ -441,7 +441,8 @@
 	<variable name="ViewFanart520">
 		<value condition="Container.Content(episodes) + !IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="!IsEmpty(ListItem.Property(medium_fanartimage)) + Skin.HasSetting(GalleryShowFanart)">$INFO[ListItem.Property(medium_fanartimage)]</value>
-		<value condition="!IsEmpty(ListItem.Art(landscape)) + !Skin.HasSetting(GalleryShowFanart)">$INFO[ListItem.Art(landscape)]</value>
+		<value condition="!IsEmpty(ListItem.Property(medium_landscape)) + !Skin.HasSetting(GalleryShowFanart)">$INFO[ListItem.Property(medium_landscape)]</value>
+		<value  condition="!IsEmpty(ListItem.Property(medium_fanartimage))">$INFO[ListItem.Property(medium_fanartimage)]</value>
 		<value>$INFO[ListItem.Art(fanart)]</value>
 		<value>-</value>
 	</variable>

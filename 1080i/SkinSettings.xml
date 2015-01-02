@@ -780,6 +780,13 @@
 						<label2 fallback="US">[COLOR=SelectedBlue]$VAR[MovieMPAALangLabel][/COLOR]</label2>
 						<onclick>ActivateWindow(3006)</onclick>
 					</control>
+					<control type="radiobutton" id="3006">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(ShowViewHeader)</selected>
+						<onclick>Skin.ToggleSetting(ShowViewHeader)</onclick>
+						<label>Show Header info in Views</label>
+					</control>
 					<control type="radiobutton" id="3007">
 						<width>1210</width>
 						<include>SettingsCategoryRadioButtonVars</include>
@@ -1586,6 +1593,15 @@
 						<onclick>Skin.ToggleSetting(UseKodiLibrary)</onclick>
 						<onclick>XBMC.ReloadSkin()</onclick>
 						<label>$LOCALIZE[49256]</label>
+					</control>
+					<control type="radiobutton" id="11002">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(UseKodiPicturesLibrary)</selected>
+						<onclick>Skin.ToggleSetting(UseKodiPicturesLibrary)</onclick>
+						<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
+						<onclick>XBMC.ReloadSkin()</onclick>
+						<label>Use Kodi Pictures Library</label>
 					</control>
 				</control>
 				<!-- =============== -->

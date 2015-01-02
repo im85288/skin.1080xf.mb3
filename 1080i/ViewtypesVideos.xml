@@ -8,18 +8,15 @@
 			<include>CommonViewAnimations</include>
 			<include>OptionsShutdownAnimation</include>
 			<control type="label">
-				<posx>430</posx>
+				<left>248</left>
 				<posy>152</posy>
-				<width>560</width>
+				<width>1424</width>
 				<height>30</height>
+				<align>right</align>
 				<font>Font-Condensed-S29-B</font>
 				<textcolor>SecondaryT</textcolor>
 				<shadowcolor>22000000</shadowcolor>
 				<label>$INFO[Control.GetLabel(3)]</label>
-				<animation effect="slide" end="-10" time="0" condition="Container.Content(Movies)">Conditional</animation>
-				<animation effect="slide" end="310" time="0" condition="Container.Content(TVShows)">Conditional</animation>
-				<animation effect="slide" end="34" time="0" condition="Container.Content(Seasons)">Conditional</animation>
-				<animation effect="slide" end="182" time="0" condition="Container.Content(Episodes)">Conditional</animation>
 			</control>
 			<control type="image">
 				<posx>248</posx>
@@ -2426,6 +2423,7 @@
 							<textcolor>bbwhite</textcolor>
 							<shadowcolor>22000000</shadowcolor>
 							<scroll>false</scroll>
+							<visible>!Skin.HasSetting(ShowViewHeader)</visible>
 							<animation effect="slide" end="0,40" time="0" condition="IsEmpty(Container(53).ListItem.Genre)">Conditional</animation>
 						</control>
 						<control type="label">
@@ -2437,6 +2435,7 @@
 							<textcolor>77white</textcolor>
 							<shadowcolor>22000000</shadowcolor>
 							<scroll>false</scroll>
+							<visible>!Skin.HasSetting(ShowViewHeader)</visible>
 						</control>
 						<control type="label">
 							<posx>30</posx>
@@ -2447,6 +2446,7 @@
 							<textcolor>77white</textcolor>
 							<shadowcolor>22000000</shadowcolor>
 							<scroll>false</scroll>
+							<visible>!Skin.HasSetting(ShowViewHeader)</visible>
 						</control>
 					</control>
 				</control>
@@ -2601,6 +2601,7 @@
 							<textcolor>FFFFFFFF</textcolor>
 							<shadowcolor>77000000</shadowcolor>
 							<scroll>false</scroll>
+							<visible>!Skin.HasSetting(ShowViewHeader)</visible>
 							<animation effect="slide" end="0,40" time="0" condition="IsEmpty(Container(553).ListItem.Genre)">Conditional</animation>
 						</control>
 						<control type="label">
@@ -2612,6 +2613,7 @@
 							<textcolor>DDFFFFFF</textcolor>
 							<shadowcolor>22000000</shadowcolor>
 							<scroll>false</scroll>
+							<visible>!Skin.HasSetting(ShowViewHeader)</visible>
 						</control>
 						<control type="label">
 							<posx>30</posx>
@@ -2622,6 +2624,7 @@
 							<textcolor>DDFFFFFF</textcolor>
 							<shadowcolor>22000000</shadowcolor>
 							<scroll>false</scroll>
+							<visible>!Skin.HasSetting(ShowViewHeader)</visible>
 						</control>
 					</control>
 				</control>
@@ -3737,6 +3740,7 @@
 				</animation>
 				<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(55) + !Window.IsActive(favourites)</visible>
 				<control type="group">
+					<visible>!Skin.HasSetting(ShowViewHeader)</visible>
 					<control type="group">
 						<animation type="Visible" reversible="false">
 							<effect type="fade" start="0" end="100" time="150" delay="150" tween="sine" easing="in" />
@@ -4188,6 +4192,7 @@
 					<shadowcolor>22000000</shadowcolor>
 					<align>left</align>
 					<visible>!Skin.HasSetting(ThumbnailSmall)</visible>
+					<visible>!Skin.HasSetting(ShowViewHeader)</visible>
 				</control>
 				<control type="button">
 					<posx>185</posx>
@@ -4201,6 +4206,7 @@
 					<shadowcolor>22000000</shadowcolor>
 					<align>left</align>
 					<visible>Skin.HasSetting(ThumbnailSmall)</visible>
+					<visible>!Skin.HasSetting(ShowViewHeader)</visible>
 				</control>
 				<control type="image">
 					<description>Watched/unwatched overlay</description>
@@ -4634,7 +4640,7 @@
 			<control type="fixedlist" id="60">
 				<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets)</visible>
 				<posx>0</posx>
-				<posy>134</posy>
+				<posy>142</posy>
 				<width>1920</width>
 				<height>812</height>
 				<pagecontrol>70</pagecontrol>
@@ -5689,6 +5695,7 @@
 						<posx>110</posx>
 						<posy>830</posy>
 						<control type="group">
+							<visible>!Skin.HasSetting(ShowViewHeader)</visible>
 							<visible>Container.Content(movies) | Container.Content(Sets)</visible>
 							<control type="label">
 								<posx>85</posx>
@@ -5729,6 +5736,7 @@
 						</control>
 						<control type="group">
 							<visible>Container.Content(tvshows)</visible>
+							<visible>!Skin.HasSetting(ShowViewHeader)</visible>
 							<control type="label">
 								<posx>130</posx>
 								<posy>15</posy>
@@ -6266,6 +6274,7 @@
 			</control>
 			<control type="group">
 				<visible>Control.IsVisible(780)</visible>
+				<visible>!Skin.HasSetting(ShowViewHeader)</visible>
 				<control type="group">
 					<posx>1270</posx>
 					<posy>850</posy>
@@ -6304,6 +6313,7 @@
 				<control type="group">
 					<posx>1270</posx>
 					<posy>850</posy>
+					<visible>!Skin.HasSetting(ShowViewHeader)</visible>
 					<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
 					<control type="label">
 						<posx>130</posx>
@@ -6423,6 +6433,7 @@
 		</control>
 		<control type="group">
 			<visible>Control.HasFocus(56)</visible>
+			<visible>!Skin.HasSetting(ShowViewHeader)</visible>
 			<top>170</top>
 			<left>55</left>
 			<control type="label">
@@ -7900,6 +7911,7 @@
 						</control>
 					</control>
 					<control type="group">
+						<visible>!Skin.HasSetting(ShowViewHeader)</visible>
 						<left>69</left>
 						<top>158</top>
 						<control type="image">

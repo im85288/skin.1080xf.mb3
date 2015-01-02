@@ -7993,8 +7993,8 @@
 		<value condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.dailybabes)" target="pictures">plugin://script.extendedinfo?info=dailybabes</value>
 		<value condition="stringcompare(Skin.String(HomeWidget.10.Type),mypicsdb.pics)" target="pictures">plugin://plugin.image.mypicsdb?action='showpics'&amp;method='lastpicsshooted'&amp;name='The%2050%20latest%20pics'&amp;page='1'&amp;viewmode='view'</value>
 		<value condition="stringcompare(Skin.String(HomeWidget.10.Type),pictures.addons)" target="pictures">addons://sources/image/</value>
-		<value condition="!Skin.HasSetting(UseKodiLibrary)" target="pictures">$INFO[Window(Home).Property(MediaBrowser.std.photo.0.content)]</value>
-		<value condition="Skin.HasSetting(UseKodiLibrary)" target="pictures">$INFO[Skin.String(PicturesDir)]</value>
+		<value condition="!Skin.HasSetting(UseKodiLibrary) + !Skin.HasSetting(UseKodiPicturesLibrary)" target="pictures">$INFO[Window(Home).Property(MediaBrowser.std.photo.0.content)]</value>
+		<value condition="Skin.HasSetting(UseKodiLibrary) | [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseKodiPicturesLibrary)]" target="pictures">$INFO[Skin.String(PicturesDir)]</value>
 	</variable>
 	<variable name="HomeWidget.9.LiveTV">
 		<value condition="stringcompare(Skin.String(HomeWidget.9.Type),smartish.pvrchannels) + !Window.IsVisible(3050)">plugin://service.smartish.widgets?type=pvr&amp;reload=10</value>

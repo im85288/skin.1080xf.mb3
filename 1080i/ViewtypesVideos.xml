@@ -3856,6 +3856,748 @@
 			</control>
 		</control>
 	</include>
+	<!-- original poster (524) -->
+	<include name="Viewtype-Poster-Original">
+		<control type="group">
+			<include>FullscreenDimensions</include>
+			<include>OptionsShutdownAnimation</include>
+			<control type="image" id="80">
+				<animation type="WindowOpen" reversible="false">
+					<effect type="fade" start="0" end="100" delay="700" time="0" />
+				</animation>
+				<animation effect="fade" start="0" end="100" time="0" delay="1000" reversible="false">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
+				<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(524) + !Window.IsActive(favourites)</visible>
+			</control>
+			<control type="group">
+				<posx>113</posx>
+				<posy>240</posy>
+				<animation effect="fade" start="0" end="100" time="0" reversible="false">Visible</animation>
+				<visible>Window.Next(Home) | Window.Next(programs) | Window.Next(pictures) | Window.Next(filemanager) | Window.Next(settings) | Window.Next(music) | Window.Next(systeminfo) | Window.Next(screencalibration) | Window.Next(picturessettings) | Window.Next(programssettings) | Window.Next(weathersettings) | Window.Next(musicsettings) | Window.Next(systemsettings) | Window.Next(videossettings) | Window.Next(servicesettings) | Window.Next(appearancesettings) | Window.Next(pvrsettings) | Window.Next(videos) | Window.Next(videoplaylist) | Window.Next(LoginScreen) | Window.Next(profiles) | Window.Next(addonbrowser) | Window.Next(filebrowser) | Window.Next(ProfileSettings) | Window.Next(LockSettings) | Window.Next(smartplaylisteditor) | Window.Next(smartplaylistrule) | Window.Next(musicplaylist) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(fullscreenvideo) | Window.Next(visualisation) | Window.Next(slideshow) | Window.Next(karaoke) | Window.Next(weather) |
+					Window.Next(pvr) | Window.Next(script-NextAired-TVGuide.xml) | !Control.IsVisible(80)
+				</visible>
+				<control type="group">
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" start="100" end="94.7368421" time="0" center="-186,301" />
+					</animation>
+					<animation type="WindowOpen">
+						<effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+						<effect type="slide" start="-400" end="0" delay="100" tween="cubic" easing="out" time="600" />
+					</animation>
+					<animation type="Visible" condition="IsEmpty(Window(home).property(NoAnimation)) + !Window.Next(visualisation)" reversible="false">
+						<effect type="fade" start="0" end="100" delay="400" tween="sine" easing="in" time="300" />
+						<effect type="slide" start="-400" end="0" delay="400" tween="cubic" easing="out" time="600" />
+					</animation>
+					<include>GuideNoAnimation</include>
+					<animation type="Hidden" reversible="false">
+						<effect type="zoom" start="100" end="115" center="960,360" tween="sine" delay="0" easing="out" time="300" />
+						<effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+						<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+						<effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
+					</animation>
+					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(524) + !Window.IsActive(favourites)</visible>
+					<control type="group">
+						<posx>-372</posx>
+						<control type="image">
+							<description>Reflection</description>
+							<posx>-4</posx>
+							<posy>588</posy>
+							<width>380</width>
+							<height>570</height>
+							<colordiffuse>77white</colordiffuse>
+							<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPoster-1]</texture>
+							<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="image">
+							<description>Shadow Bottom</description>
+							<posx>-35</posx>
+							<posy>567</posy>
+							<width>442</width>
+							<height>36</height>
+							<texture>views/posterview/shadow.png</texture>
+						</control>
+						<control type="image">
+							<description>Poster</description>
+							<posx>-4</posx>
+							<posy>16</posy>
+							<width>380</width>
+							<height>570</height>
+							<colordiffuse>ddwhite</colordiffuse>
+							<texture background="true">$VAR[PosterViewPoster-1]</texture>
+							<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="image">
+							<posx>276</posx>
+							<posy>16</posy>
+							<width>100</width>
+							<height>100</height>
+							<texture>$VAR[ExtendedOverlay-1]</texture>
+						</control>
+						<visible>!IsEmpty(Container(524).ListItemNoWrap(-1).Label)</visible>
+					</control>
+				</control>
+				<control type="group">
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" start="100" end="94.7368421" time="0" center="2046,301" />
+					</animation>
+					<animation type="WindowOpen">
+						<effect type="fade" start="0" end="200" delay="100" tween="sine" easing="in" time="300" />
+						<effect type="slide" start="1600" end="0" delay="100" tween="cubic" easing="out" time="600" />
+					</animation>
+					<animation type="Visible" condition="IsEmpty(Window(home).property(NoAnimation)) + !Window.Next(visualisation)" reversible="false">
+						<effect type="fade" start="0" end="100" delay="400" tween="sine" easing="in" time="300" />
+						<effect type="slide" start="1600" end="0" delay="400" tween="cubic" easing="out" time="600" />
+					</animation>
+					<include>GuideNoAnimation</include>
+					<animation type="Hidden" reversible="false">
+						<effect type="zoom" start="100" end="115" center="960,360" tween="sine" delay="0" easing="out" time="300" />
+						<effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+						<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+						<effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
+					</animation>
+					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(524) + !Window.IsActive(favourites)</visible>
+					<control type="group">
+						<posx>1860</posx>
+						<control type="image">
+							<description>Reflection</description>
+							<posx>-4</posx>
+							<posy>588</posy>
+							<width>380</width>
+							<height>570</height>
+							<colordiffuse>77white</colordiffuse>
+							<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPoster5]</texture>
+							<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="image">
+							<description>Shadow Bottom</description>
+							<posx>-35</posx>
+							<posy>567</posy>
+							<width>442</width>
+							<height>36</height>
+							<texture>views/posterview/shadow.png</texture>
+						</control>
+						<control type="image">
+							<description>Poster</description>
+							<posx>-4</posx>
+							<posy>16</posy>
+							<width>380</width>
+							<height>570</height>
+							<colordiffuse>ddwhite</colordiffuse>
+							<texture background="true">$VAR[PosterViewPoster5]</texture>
+							<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+						</control>
+						<visible>!IsEmpty(Container(524).ListItemNoWrap(5).Label)</visible>
+					</control>
+				</control>
+				<control type="group">
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" start="100" end="94.7368421" time="0" center="1674,301" />
+					</animation>
+					<animation type="WindowOpen">
+						<effect type="fade" start="0" end="200" delay="100" tween="sine" easing="in" time="300" />
+						<effect type="slide" start="1300" end="0" delay="100" tween="cubic" easing="out" time="600" />
+					</animation>
+					<animation type="Visible" condition="IsEmpty(Window(home).property(NoAnimation)) + !Window.Next(visualisation)" reversible="false">
+						<effect type="fade" start="0" end="100" delay="400" tween="sine" easing="in" time="300" />
+						<effect type="slide" start="1300" end="0" delay="400" tween="cubic" easing="out" time="600" />
+					</animation>
+					<include>GuideNoAnimation</include>
+					<animation type="Hidden" reversible="false">
+						<effect type="zoom" start="100" end="115" center="960,360" tween="sine" delay="0" easing="out" time="300" />
+						<effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+						<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+						<effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
+					</animation>
+					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(524) + !Window.IsActive(favourites)</visible>
+					<control type="group">
+						<posx>1488</posx>
+						<control type="image">
+							<description>Reflection</description>
+							<posx>-4</posx>
+							<posy>588</posy>
+							<width>380</width>
+							<height>570</height>
+							<colordiffuse>77white</colordiffuse>
+							<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPoster4]</texture>
+							<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="image">
+							<description>Shadow Bottom</description>
+							<posx>-35</posx>
+							<posy>567</posy>
+							<width>442</width>
+							<height>36</height>
+							<texture>views/posterview/shadow.png</texture>
+						</control>
+						<control type="image">
+							<description>Poster</description>
+							<posx>-4</posx>
+							<posy>16</posy>
+							<width>380</width>
+							<height>570</height>
+							<colordiffuse>ddwhite</colordiffuse>
+							<texture background="true">$VAR[PosterViewPoster4]</texture>
+							<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="image">
+							<posx>276</posx>
+							<posy>16</posy>
+							<width>100</width>
+							<height>100</height>
+							<texture>$VAR[ExtendedOverlay4]</texture>
+						</control>
+						<visible>!IsEmpty(Container(524).ListItemNoWrap(4).Label)</visible>
+					</control>
+				</control>
+				<control type="group">
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" start="100" end="94.7368421" time="0" center="1302,301" />
+					</animation>
+					<animation type="WindowOpen">
+						<effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+						<effect type="slide" start="1000" end="0" delay="100" tween="cubic" easing="out" time="600" />
+					</animation>
+					<animation type="Visible" condition="IsEmpty(Window(home).property(NoAnimation)) + !Window.Next(visualisation)" reversible="false">
+						<effect type="fade" start="0" end="100" delay="400" tween="sine" easing="in" time="300" />
+						<effect type="slide" start="1000" end="0" delay="400" tween="cubic" easing="out" time="600" />
+					</animation>
+					<include>GuideNoAnimation</include>
+					<animation type="Hidden" reversible="false">
+						<effect type="zoom" start="100" end="115" center="960,360" tween="sine" delay="0" easing="out" time="300" />
+						<effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+						<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+						<effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
+					</animation>
+					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(524) + !Window.IsActive(favourites)</visible>
+					<control type="group">
+						<posx>1116</posx>
+						<control type="image">
+							<description>Reflection</description>
+							<posx>-4</posx>
+							<posy>588</posy>
+							<width>380</width>
+							<height>570</height>
+							<colordiffuse>77white</colordiffuse>
+							<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPoster3]</texture>
+							<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="image">
+							<description>Shadow Bottom</description>
+							<posx>-35</posx>
+							<posy>567</posy>
+							<width>442</width>
+							<height>36</height>
+							<texture>views/posterview/shadow.png</texture>
+						</control>
+						<control type="image">
+							<description>Poster</description>
+							<posx>-4</posx>
+							<posy>16</posy>
+							<width>380</width>
+							<height>570</height>
+							<colordiffuse>ddwhite</colordiffuse>
+							<texture background="true">$VAR[PosterViewPoster3]</texture>
+							<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="image">
+							<posx>276</posx>
+							<posy>16</posy>
+							<width>100</width>
+							<height>100</height>
+							<texture>$VAR[ExtendedOverlay3]</texture>
+						</control>
+						<visible>!IsEmpty(Container(524).ListItemNoWrap(3).Label)</visible>
+					</control>
+				</control>
+				<control type="group">
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" start="100" end="94.7368421" time="0" center="930,301" />
+					</animation>
+					<animation type="WindowOpen">
+						<effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+						<effect type="slide" start="700" end="0" delay="100" tween="cubic" easing="out" time="600" />
+					</animation>
+					<animation type="Visible" condition="IsEmpty(Window(home).property(NoAnimation)) + !Window.Next(visualisation)" reversible="false">
+						<effect type="fade" start="0" end="100" delay="400" tween="sine" easing="in" time="300" />
+						<effect type="slide" start="700" end="0" delay="400" tween="cubic" easing="out" time="600" />
+					</animation>
+					<include>GuideNoAnimation</include>
+					<animation type="Hidden" reversible="false">
+						<effect type="zoom" start="100" end="115" center="960,360" tween="sine" delay="0" easing="out" time="300" />
+						<effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+						<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+						<effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
+					</animation>
+					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(524) + !Window.IsActive(favourites)</visible>
+					<control type="group">
+						<posx>744</posx>
+						<control type="image">
+							<description>Reflection</description>
+							<posx>-4</posx>
+							<posy>588</posy>
+							<width>380</width>
+							<height>570</height>
+							<colordiffuse>77white</colordiffuse>
+							<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPoster2]</texture>
+							<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="image">
+							<description>Shadow Bottom</description>
+							<posx>-35</posx>
+							<posy>567</posy>
+							<width>442</width>
+							<height>36</height>
+							<texture>views/posterview/shadow.png</texture>
+						</control>
+						<control type="image">
+							<description>Poster</description>
+							<posx>-4</posx>
+							<posy>16</posy>
+							<width>380</width>
+							<height>570</height>
+							<colordiffuse>ddwhite</colordiffuse>
+							<texture background="true">$VAR[PosterViewPoster2]</texture>
+							<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="image">
+							<posx>276</posx>
+							<posy>16</posy>
+							<width>100</width>
+							<height>100</height>
+							<texture>$VAR[ExtendedOverlay2]</texture>
+						</control>
+						<visible>!IsEmpty(Container(524).ListItemNoWrap(2).Label)</visible>
+					</control>
+				</control>
+				<control type="group">
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" start="100" end="94.7368421" time="0" center="558,301" />
+					</animation>
+					<animation type="WindowOpen">
+						<effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+						<effect type="slide" start="400" end="0" delay="100" tween="cubic" easing="out" time="600" />
+					</animation>
+					<animation type="Visible" condition="IsEmpty(Window(home).property(NoAnimation)) + !Window.Next(visualisation)" reversible="false">
+						<effect type="fade" start="0" end="100" delay="400" tween="sine" easing="in" time="300" />
+						<effect type="slide" start="400" end="0" delay="400" tween="cubic" easing="out" time="600" />
+					</animation>
+					<include>GuideNoAnimation</include>
+					<animation type="Hidden" reversible="false">
+						<effect type="zoom" start="100" end="115" center="960,360" tween="sine" delay="0" easing="out" time="300" />
+						<effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+						<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+						<effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
+					</animation>
+					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(524) + !Window.IsActive(favourites)</visible>
+					<control type="group">
+						<posx>372</posx>
+						<control type="image">
+							<description>Reflection</description>
+							<posx>-4</posx>
+							<posy>588</posy>
+							<width>380</width>
+							<height>570</height>
+							<colordiffuse>77white</colordiffuse>
+							<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPoster1]</texture>
+							<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="image">
+							<description>Shadow Bottom</description>
+							<posx>-35</posx>
+							<posy>567</posy>
+							<width>442</width>
+							<height>36</height>
+							<texture>views/posterview/shadow.png</texture>
+						</control>
+						<control type="image">
+							<description>Poster</description>
+							<posx>-4</posx>
+							<posy>16</posy>
+							<width>380</width>
+							<height>570</height>
+							<colordiffuse>ddwhite</colordiffuse>
+							<texture background="true">$VAR[PosterViewPoster1]</texture>
+							<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="image">
+							<posx>276</posx>
+							<posy>16</posy>
+							<width>100</width>
+							<height>100</height>
+							<texture>$VAR[ExtendedOverlay1]</texture>
+						</control>
+						<visible>!IsEmpty(Container(524).ListItemNoWrap(1).Label)</visible>
+					</control>
+				</control>
+				<control type="group">
+					<animation type="WindowOpen">
+						<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="700" />
+						<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+						<effect type="zoom" start="94.7368421" end="100" center="400,301" tween="cubic" easing="out" time="400" />
+					</animation>
+					<animation type="Visible" condition="IsEmpty(Window(home).property(NoAnimation)) + !Window.Next(visualisation)" reversible="false">
+						<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="700" delay="300" />
+						<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="300" />
+						<effect type="zoom" start="94.7368421" end="100" center="400,301" tween="cubic" easing="out" time="400" delay="300" />
+					</animation>
+					<include>GuideNoAnimation</include>
+					<animation type="Hidden" reversible="false">
+						<effect type="zoom" start="100" end="115" center="960,360" tween="sine" delay="0" easing="out" time="300" />
+						<effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+						<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+						<effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
+					</animation>
+					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(524) + !Window.IsActive(favourites)</visible>
+					<control type="image">
+						<description>Reflection</description>
+						<posx>-4</posx>
+						<posy>588</posy>
+						<width>380</width>
+						<height>570</height>
+						<colordiffuse>77white</colordiffuse>
+						<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPoster0]</texture>
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+					</control>
+					<control type="image">
+						<posx>-16</posx>
+						<posy>576</posy>
+						<width>406</width>
+						<height>594</height>
+						<texture border="31" flipy="true" diffuse="views/posterview/diffuse-ref.png">views/panel/focus.png</texture>
+					</control>
+					<control type="image">
+						<description>Shadow Bottom</description>
+						<posx>-35</posx>
+						<posy>567</posy>
+						<width>442</width>
+						<height>36</height>
+						<texture>views/posterview/shadow.png</texture>
+					</control>
+					<control type="image">
+						<description>Shadow Focus</description>
+						<posx>-120</posx>
+						<posy>16</posy>
+						<width>612</width>
+						<height>571</height>
+						<texture border="108">views/posterview/shadow-focus.png</texture>
+					</control>
+					<control type="image">
+						<description>Poster</description>
+						<posx>-4</posx>
+						<posy>16</posy>
+						<width>380</width>
+						<height>570</height>
+						<texture background="true">$VAR[PosterViewPoster0]</texture>
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+					</control>
+					<control type="image">
+						<posx>276</posx>
+						<posy>16</posy>
+						<width>100</width>
+						<height>100</height>
+						<texture>$VAR[ExtendedOverlay0]</texture>
+					</control>
+					<control type="image">
+						<posx>-16</posx>
+						<posy>4</posy>
+						<width>406</width>
+						<height>594</height>
+						<texture border="31">views/panel/focus.png</texture>
+					</control>
+				</control>
+			</control>
+			<control type="group">
+				<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(524) + !Window.IsActive(favourites)</visible>
+				<animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
+				<animation effect="fade" start="0" end="100" time="0" delay="1000" reversible="false">Visible</animation>
+				<control type="fixedlist" id="524">
+					<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Actors) | Container.Content(Sets)</visible>
+					<posx>-259</posx>
+					<posy>240</posy>
+					<width>2300</width>
+					<height>830</height>
+					<pagecontrol>70</pagecontrol>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<orientation>horizontal</orientation>
+					<viewtype label="Poster (Original)">list</viewtype>
+					<onleft>524</onleft>
+					<onright>524</onright>
+					<onup condition="!Skin.HasSetting(KioskMode)">9010</onup>
+					<onup condition="Skin.HasSetting(KioskMode)">524</onup>
+					<ondown>70</ondown>
+					<focusposition>1</focusposition>
+					<preloaditems>2</preloaditems>
+					<animation type="WindowOpen" reversible="false">
+						<effect type="fade" start="0" end="100" time="0" />
+						<effect type="slide" start="0,-1500" end="0,0" delay="700" time="0" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+						<effect type="fade" start="100" end="0" time="0" />
+					</animation>
+					<itemlayout width="372">
+						<control type="group">
+							<animation effect="Conditional" condition="true">
+								<effect type="zoom" end="94.7368421" time="0" center="186,301" />
+							</animation>
+							<control type="image">
+								<description>Reflection</description>
+								<posx>-4</posx>
+								<posy>588</posy>
+								<width>380</width>
+								<height>570</height>
+								<colordiffuse>77white</colordiffuse>
+								<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPoster]</texture>
+								<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+							</control>
+							<control type="image">
+								<description>Shadow Bottom</description>
+								<posx>-35</posx>
+								<posy>567</posy>
+								<width>442</width>
+								<height>36</height>
+								<texture>views/posterview/shadow.png</texture>
+							</control>
+							<control type="image">
+								<description>Poster</description>
+								<posx>-4</posx>
+								<posy>16</posy>
+								<width>380</width>
+								<height>570</height>
+								<colordiffuse>ddwhite</colordiffuse>
+								<texture background="true">$VAR[PosterViewPoster]</texture>
+								<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+							</control>
+							<control type="image">
+								<posx>276</posx>
+								<posy>16</posy>
+								<width>100</width>
+								<height>100</height>
+								<texture>$VAR[ExtendedOverlay]</texture>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout width="372">
+						<control type="group">
+							<animation type="Focus" condition="Container(524).OnNext | Container(524).OnPrevious">
+								<effect type="zoom" start="94.7368421" end="100" time="350" tween="sine" easing="out" center="186,301" />
+							</animation>
+							<animation type="Unfocus" condition="Container(524).OnNext | Container(524).OnPrevious">
+								<effect type="zoom" start="100" end="94.7368421" time="250" tween="sine" easing="out" center="186,301" />
+							</animation>
+							<control type="image">
+								<description>Reflection</description>
+								<posx>-4</posx>
+								<posy>588</posy>
+								<width>380</width>
+								<height>570</height>
+								<colordiffuse>77white</colordiffuse>
+								<texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPoster]</texture>
+								<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+							</control>
+							<control type="image">
+								<posx>-16</posx>
+								<posy>576</posy>
+								<width>406</width>
+								<height>594</height>
+								<texture border="31" flipy="true" diffuse="views/posterview/diffuse-ref.png">views/panel/focus.png</texture>
+								<animation effect="fade" start="0" end="100" time="200" tween="sine" easing="in" condition="Container(524).OnNext | Container(524).OnPrevious">Focus</animation>
+								<animation effect="fade" start="100" end="0" time="200" tween="sine" easing="out" condition="Container(524).OnNext | Container(524).OnPrevious">UnFocus</animation>
+							</control>
+							<control type="image">
+								<description>Shadow Bottom</description>
+								<posx>-35</posx>
+								<posy>567</posy>
+								<width>442</width>
+								<height>36</height>
+								<texture>views/posterview/shadow.png</texture>
+							</control>
+							<control type="image">
+								<description>Shadow Focus</description>
+								<posx>-120</posx>
+								<posy>16</posy>
+								<width>612</width>
+								<height>571</height>
+								<texture border="108">views/posterview/shadow-focus.png</texture>
+								<animation effect="fade" start="0" end="100" time="200" tween="sine" easing="in" condition="Container(524).OnNext | Container(524).OnPrevious">Focus</animation>
+								<animation effect="fade" start="100" end="0" time="200" tween="sine" easing="out" condition="Container(524).OnNext | Container(524).OnPrevious">UnFocus</animation>
+							</control>
+							<control type="image">
+								<description>Poster</description>
+								<posx>-4</posx>
+								<posy>16</posy>
+								<width>380</width>
+								<height>570</height>
+								<texture background="true">$VAR[PosterViewPoster]</texture>
+								<animation effect="fade" start="86.71875" end="100" time="200" tween="sine" easing="in" condition="Container(524).OnNext | Container(524).OnPrevious">Focus</animation>
+								<animation effect="fade" start="100" end="86.71875" time="200" tween="sine" easing="out" condition="Container(524).OnNext | Container(524).OnPrevious">UnFocus</animation>
+								<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+							</control>
+							<control type="image">
+								<posx>276</posx>
+								<posy>16</posy>
+								<width>100</width>
+								<height>100</height>
+								<texture>$VAR[ExtendedOverlay]</texture>
+							</control>
+							<control type="image">
+								<posx>-16</posx>
+								<posy>4</posy>
+								<width>406</width>
+								<height>594</height>
+								<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
+								<texture border="31">views/panel/focus.png</texture>
+								<animation effect="fade" start="0" end="100" time="200" tween="sine" easing="in" condition="Container(524).OnNext | Container(524).OnPrevious">Focus</animation>
+								<animation effect="fade" start="100" end="0" time="200" tween="sine" easing="out" condition="Container(524).OnNext | Container(524).OnPrevious">UnFocus</animation>
+							</control>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="group">
+				<animation type="WindowOpen" reversible="false">
+					<effect type="fade" start="0" end="100" delay="400" time="300" tween="sine" easing="inout" />
+				</animation>
+				<animation type="Visible" reversible="true">
+					<effect type="fade" start="0" end="100" delay="700" time="300" tween="sine" easing="inout" />
+				</animation>
+				<animation type="Hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+				</animation>
+				<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(524) + !Window.IsActive(favourites)</visible>
+				<visible>!Skin.HasSetting(ShowViewHeader)</visible>
+				<control type="group">
+					<control type="group">
+						<animation type="Visible" reversible="false">
+							<effect type="fade" start="0" end="100" time="150" delay="150" tween="sine" easing="in" />
+						</animation>
+						<visible>!Container(524).OnNext + !Container(524).OnPrevious</visible>
+						<posx>110</posx>
+						<posy>845</posy>
+						<control type="group">
+							<visible>Container.Content(movies) | Container.Content(Sets)</visible>
+							<control type="label">
+								<posx>85</posx>
+								<posy>15</posy>
+								<width>1730</width>
+								<label>$INFO[Container(524).ListItem.Label]</label>
+								<font>Font-Condensed-S45-B</font>
+								<textcolor>aawhite</textcolor>
+								<scroll>false</scroll>
+								<align>left</align>
+								<animation effect="slide" end="-73" time="0" condition="IsEmpty(Container(524).ListItem.VideoResolution)">Conditional</animation>
+							</control>
+							<control type="image">
+								<posx>-29</posx>
+								<posy>-20</posy>
+								<width>140</width>
+								<height>100</height>
+								<texture>$VAR[ListHDSDFlag]</texture>
+								<colordiffuse>aawhite</colordiffuse>
+								<visible>!Skin.HasSetting(nohdflag) + !IsEmpty(Container(524).ListItem.VideoResolution)</visible>
+							</control>
+							<control type="label">
+								<posx>13</posx>
+								<posy>65</posy>
+								<width>1730</width>
+								<label>$INFO[Container(524).ListItem.Rating,★ , [COLOR=44FFFFFF]/[/COLOR] ]$INFO[Container(524).ListItem.Year,,]$INFO[Container(524).ListItem.Duration, [COLOR=44FFFFFF]/[/COLOR] , $LOCALIZE[12391]]</label>
+								<font>Font-Condensed-S36</font>
+								<textcolor>77white</textcolor>
+								<scroll>false</scroll>
+								<align>left</align>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
+							<control type="label">
+								<posx>130</posx>
+								<posy>15</posy>
+								<width>1685</width>
+								<label>$INFO[Container(524).ListItem.Label]$INFO[Container(524).ListItem.Year, (,)]</label>
+								<font>Font-Condensed-S45-B</font>
+								<textcolor>aawhite</textcolor>
+								<scroll>false</scroll>
+								<align>left</align>
+								<animation effect="slide" end="-116" time="0" condition="IsEmpty(ListItem.MPAA)">Conditional</animation>
+							</control>
+							<control type="group">
+								<posx>5</posx>
+								<posy>3</posy>
+								<include>TVRatingFlagsSmall</include>
+							</control>
+							<control type="label">
+								<posx>13</posx>
+								<posy>65</posy>
+								<width>1730</width>
+								<label>$INFO[ListItem.Property(UnWatchedEpisodes),$LOCALIZE[41311],]</label>
+								<font>Font-Condensed-S36</font>
+								<textcolor>77white</textcolor>
+								<scroll>false</scroll>
+								<align>left</align>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container.Content(actors)</visible>
+							<control type="label">
+								<posx>15</posx>
+								<posy>15</posy>
+								<width>1800</width>
+								<label>$INFO[Container(524).ListItem.Label]</label>
+								<font>Font-Condensed-S45-B</font>
+								<textcolor>aawhite</textcolor>
+								<scroll>false</scroll>
+								<align>left</align>
+							</control>
+						</control>
+					</control>
+				</control>
+				<!--Scrollbar -->
+				<control type="image">
+					<description>Scrollbar background (visible on focus)</description>
+					<posx>104</posx>
+					<posy>125r</posy>
+					<width>1712</width>
+					<height>6</height>
+					<texture border="6,0,6,0">views/other/scrollbar-sq.png</texture>
+					<visible>Control.HasFocus(70)</visible>
+					<animation effect="fade" start="0" end="25" time="300" tween="sine" easing="inout">Visible</animation>
+					<animation effect="fade" start="25" end="0" time="300" tween="sine" easing="inout">Hidden</animation>
+				</control>
+				<control type="scrollbar" id="70">
+					<description>Scrollbar</description>
+					<posx>104</posx>
+					<posy>125r</posy>
+					<width>1712</width>
+					<height>6</height>
+					<orientation>horizontal</orientation>
+					<texturesliderbar border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
+					<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
+					<showonepage>false</showonepage>
+					<onup>524</onup>
+					<ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
+					<ondown condition="Skin.HasSetting(KioskMode)">524</ondown>
+					<animation effect="fade" start="40" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
+					<visible>Control.IsVisible(524)</visible>
+				</control>
+			</control>
+		</control>
+	</include>
 	<!-- ======================= -->
 	<!-- Generic Thumbnail (500) -->
 	<!-- ======================= -->

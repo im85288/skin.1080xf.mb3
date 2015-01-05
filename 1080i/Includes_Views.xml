@@ -11,6 +11,7 @@
 		<include>Viewtype-Panel</include>
 		<include>Viewtype-Landscape</include>
 		<include>Viewtype-Poster</include>
+		<include>Viewtype-Poster-Original</include>
 		<include>Viewtype-Thumbnail</include>
 		<include>Viewtype-ThumbnailVideo</include>
 		<include>Viewtype-Banner</include>

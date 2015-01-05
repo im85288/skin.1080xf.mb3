@@ -249,7 +249,6 @@
 						<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
 						<radioposx>-19</radioposx>
 						<animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(14)">Conditional</animation>
-						<visible>!substring(Container.FolderPath,plugin://plugin.video.xbmb3c)</visible>
 					</control>
 					<control type="togglebutton" id="20">
 						<description>Update library / stop scanning</description>

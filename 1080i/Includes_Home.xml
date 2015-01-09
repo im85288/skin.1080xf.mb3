@@ -9416,6 +9416,7 @@
                 <bordersize>10</bordersize>
             </control>
             <control type="image">
+            	<animation effect="fade" start="65" end="100" time="750" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
                 <posx>160</posx>
                 <posy>40</posy>
                 <width>35</width>

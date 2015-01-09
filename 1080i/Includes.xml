@@ -4,6 +4,7 @@
     <include file="Includes_ContextMenu.xml" />
     <include file="Includes_HomeWidgets.xml" />
     <include file="Includes_Home.xml" />
+    <include file="Includes_Home_NetflixUI.xml" />
     <include file="Includes_WindowContents.xml" />
     <include file="Includes_ViewHeader.xml" />
     <include file="Includes_Views.xml" />
@@ -33,5 +34,9 @@
     </include>
     <include name="SpinControlReversed">
         <reverse>yes</reverse>
+    </include>
+    
+    <include name="CastMB3Content">
+        <content target="video">$INFO[ListItem.Property(CastPluginLink)]</content>
     </include>
 </includes>

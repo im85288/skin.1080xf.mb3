@@ -441,7 +441,7 @@
 					<scrollspeed>80</scrollspeed>
 					<visible>Container(20).HasFocus(7)</visible>
 				</control>
-					<control type="fadelabel">
+				<control type="fadelabel">
 					<posy>80</posy>
 					<posx>0</posx>
 					<include>HomeProfileInfoLabel</include>
@@ -5647,7 +5647,8 @@
 					<onright condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePrograms)">625</onright>
 					<onright condition="Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeWeather)">725</onright>
 					<onright condition="Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeWeather)">825</onright>
-					<onclick>$INFO[Window(Home).Property(MediaBrowser.std.photo.0.path)]</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary) + !Skin.HasSetting(UseKodiPicturesLibrary)">$INFO[Window(Home).Property(MediaBrowser.std.photo.0.path)]</onclick>
+					<onclick condition="Skin.HasSetting(UseKodiLibrary) | [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseKodiPicturesLibrary)]">ActivateWindow(pictures)</onclick>
 					<onup>ActivateWindow(10021)</onup>
 					<ondown>1001</ondown>
 				</control>
@@ -5702,7 +5703,8 @@
 							<onleft>1001</onleft>
 							<onright>AlarmClock(HomeTileMove,Control.Move(10022,1),00:07,silent,loop)</onright>
 							<onright>1003</onright>
-							<onclick>ShowPicture($INFO[Container(10022).ListItem.Thumb])</onclick>
+							<onclick condition="IsEmpty(Container(10022).ListItem.PicturePath)">ShowPicture($INFO[Container(10022).ListItem.Thumb])</onclick>
+							<onclick condition="!IsEmpty(Container(10022).ListItem.PicturePath)">ShowPicture($INFO[Container(10022).ListItem.PicturePath])</onclick>
 							<onback condition="!Skin.HasSetting(KioskMode)">SetProperty(SingleDialog,widget10,3003)</onback>
 							<onback condition="!Skin.HasSetting(KioskMode)">SetProperty(Dialog,$LOCALIZE[41168],skinsettings)</onback>
 							<onback condition="!Skin.HasSetting(KioskMode)">ActivateWindow(3003)</onback>
@@ -5735,6 +5737,16 @@
 									<height>572</height>
 									<aspectratio>stretch</aspectratio>
 									<texture background="true">$INFO[ListItem.Thumb]</texture>
+									<visible>IsEmpty(ListItem.PicturePath)</visible>
+								</control>
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>1020</width>
+									<height>572</height>
+									<aspectratio>stretch</aspectratio>
+									<texture background="true">$INFO[ListItem.PicturePath]</texture>
+									<visible>!IsEmpty(ListItem.PicturePath)</visible>
 								</control>
 							</itemlayout>
 							<focusedlayout width="1020" height="572">
@@ -5745,6 +5757,16 @@
 									<height>572</height>
 									<aspectratio>stretch</aspectratio>
 									<texture background="true">$INFO[ListItem.Thumb]</texture>
+									<visible>IsEmpty(ListItem.PicturePath)</visible>
+								</control>
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>1020</width>
+									<height>572</height>
+									<aspectratio>stretch</aspectratio>
+									<texture background="true">$INFO[ListItem.PicturePath]</texture>
+									<visible>!IsEmpty(ListItem.PicturePath)</visible>
 								</control>
 							</focusedlayout>
 							<content target="pictures">$VAR[HomeWidget.10.Pictures]</content>
@@ -5820,7 +5842,22 @@
 							<align>left</align>
 							<aligny>top</aligny>
 							<enable>false</enable>
-							<visible>Control.IsVisible(10022)</visible>
+							<visible>Control.IsVisible(10022) + !IsEmpty(Container(10022).ListItem.Label2)</visible>
+							<include>visiblehidefadeinfodelayvisible</include>
+						</control>
+						<control type="button">
+							<description>Title label</description>
+							<posx>20</posx>
+							<posy>537</posy>
+							<width>980</width>
+							<height>30</height>
+							<label>$INFO[Container(10022).ListItem.PictureCaption]</label>
+							<font>Font-Condensed-S29</font>
+							<disabledcolor>PrimaryOSD</disabledcolor>
+							<align>left</align>
+							<aligny>top</aligny>
+							<enable>false</enable>
+							<visible>Control.IsVisible(10022) + IsEmpty(Container(10022).ListItem.Label2)</visible>
 							<include>visiblehidefadeinfodelayvisible</include>
 						</control>
 						<control type="label">
@@ -6107,11 +6144,10 @@
 								<property name="showlabel">$INFO[Skin.String(HomePhotosTile1.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomePhotosTile1.Path)]</property>
 								<property name="animate">$INFO[Skin.String(HomePhotosTile1.Animate)]</property>
-								<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
+								<visible>!Skin.HasSetting(UseKodiLibrary) + !Skin.HasSetting(UseKodiPicturesLibrary)</visible>
 							</item>
 							<item id="1">
 								<label fallback="1">$INFO[Skin.String(HomeChannelsTile1.Label)]</label>
-								<label2>$INFO[Window(Home).Property(MB3TotalPhotos)]</label2>
 								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomePhotosTile1) + !stringcompare(Skin.String(HomePhotosTile1.Type),4) + !stringcompare(Skin.String(HomePhotosTile1.Type),5) + !stringcompare(Skin.String(HomePhotosTile1.Type),6) + !stringcompare(Skin.String(HomePhotosTile1.Type),7) + !stringcompare(Skin.String(HomePhotosTile1.Type),8)">RunAddon($INFO[Skin.String(HomePhotosTile1.Path)])</onclick>
 								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomePhotosTile1) + stringcompare(Skin.String(HomePhotosTile1.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomePhotosTile1.Path)],return)</onclick>
 								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomePhotosTile1) + stringcompare(Skin.String(HomePhotosTile1.Type),8)">XBMC.ActivateWindow(10025,$INFO[Skin.String(HomePhotosTile1.Path)],return)</onclick>
@@ -6136,7 +6172,7 @@
 								<property name="showlabel">$INFO[Skin.String(HomePhotosTile1.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomePhotosTile1.Path)]</property>
 								<property name="animate">$INFO[Skin.String(HomePhotosTile1.Animate)]</property>
-								<visible>Skin.HasSetting(UseKodiLibrary)</visible>
+								<visible>Skin.HasSetting(UseKodiLibrary) | [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseKodiPicturesLibrary)]</visible>
 							</item>
 							<item id="2">
 								<label fallback="1039">$INFO[Skin.String(HomePhotosTile2.Label)]</label>
@@ -9312,8 +9348,8 @@
 					</control>
 				</control>
 			</control>
-		</control>	
-		<!--Next recording on home screen-->
+		</control>
+		<!--Next recording on home screen -->
 		<control type="group">
             <visible>Container(20).HasFocus(9) + !PVR.IsRecording + PVR.HasNonRecordingTimer + Skin.HasSetting(HideHomeProfileInfo)</visible>
             <control type="image" description="Recording Channel Icon">

@@ -81,7 +81,7 @@
 		<include condition="stringcompare(Skin.String(HomeWidget.1.Type),upcoming)">HomeWidget.1.Upcoming</include>
 		<include condition="stringcompare(Skin.String(HomeWidget.1.Type),incinema)">HomeWidget.1.InCinema</include>
 		<include condition="stringcompare(Skin.String(HomeWidget.1.Type),popular)">HomeWidget.1.Popular</include>
-		<include condition="stringcompare(Skin.String(HomeWidget.1.Type),toprated)">HomeWidget.1.TopRated</include>
+		<include condition="stringcompare(Skin.String(HomeWidget.1.Type),topratedmovies)">HomeWidget.1.TopRated</include>
 		<include condition="stringcompare(Skin.String(HomeWidget.1.Type),trendingmovies)">HomeWidget.1.TrendingMovies</include>
 		<include condition="stringcompare(Skin.String(HomeWidget.1.Type),trendingshows)">HomeWidget.1.TrendingShows</include>
 		<include condition="stringcompare(Skin.String(HomeWidget.1.Type),mb3playlists) + stringcompare(Skin.String(HomeWidget.1.MB3PlaylistSubType),Playlist1)">HomeWidget.1.MB3Playlist1</include>
@@ -103,7 +103,7 @@
 		<include condition="stringcompare(Skin.String(HomeWidget.2.Type),upcoming)">HomeWidget.2.Upcoming</include>
 		<include condition="stringcompare(Skin.String(HomeWidget.2.Type),incinema)">HomeWidget.2.InCinema</include>
 		<include condition="stringcompare(Skin.String(HomeWidget.2.Type),popular)">HomeWidget.2.Popular</include>
-		<include condition="stringcompare(Skin.String(HomeWidget.2.Type),toprated)">HomeWidget.2.TopRated</include>
+		<include condition="stringcompare(Skin.String(HomeWidget.2.Type),topratedmovies)">HomeWidget.2.TopRated</include>
 		<include condition="stringcompare(Skin.String(HomeWidget.2.Type),trendingmovies)">HomeWidget.2.TrendingMovies</include>
 		<include condition="stringcompare(Skin.String(HomeWidget.2.Type),trendingshows)">HomeWidget.2.TrendingShows</include>
 	</include>
@@ -114,7 +114,7 @@
 		<include condition="stringcompare(Skin.String(HomeWidget.3.Type),upcoming)">HomeWidget.3.Upcoming</include>
 		<include condition="stringcompare(Skin.String(HomeWidget.3.Type),incinema)">HomeWidget.3.InCinema</include>
 		<include condition="stringcompare(Skin.String(HomeWidget.3.Type),popular)">HomeWidget.3.Popular</include>
-		<include condition="stringcompare(Skin.String(HomeWidget.3.Type),toprated)">HomeWidget.3.TopRated</include>
+		<include condition="stringcompare(Skin.String(HomeWidget.3.Type),topratedmovies)">HomeWidget.3.TopRated</include>
 		<include condition="stringcompare(Skin.String(HomeWidget.3.Type),trendingmovies)">HomeWidget.3.TrendingMovies</include>
 	</include>
 	<include name="HomeWidget.4">
@@ -1319,83 +1319,83 @@
 	<include name="HomeWidget.1.InCinema">
 		<item id="1">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget1.InCinemasMovies.1.Art(fanart))]</icon>
-			<label>$INFO[Window.Property(HomeWidget1.InCinemasMovies.1.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget1.InCinemasMovies.1.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget1.InCinemasMovies.1.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget1.InCinemasMovies.1.Art(fanart)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget1.InTheatersMovies.1.Art(fanart))]</icon>
+			<label>$INFO[Window.Property(HomeWidget1.InTheatersMovies.1.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget1.InTheatersMovies.1.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget1.InTheatersMovies.1.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget1.InTheatersMovies.1.Art(fanart)))</visible>
 		</item>
 		<item id="2">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget1.InCinemasMovies.2.Art(fanart))]</icon>
-			<label>$INFO[Window.Property(HomeWidget1.InCinemasMovies.2.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget1.InCinemasMovies.2.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget1.InCinemasMovies.2.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget1.InCinemasMovies.2.Art(fanart)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget1.InTheatersMovies.2.Art(fanart))]</icon>
+			<label>$INFO[Window.Property(HomeWidget1.InTheatersMovies.2.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget1.InTheatersMovies.2.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget1.InTheatersMovies.2.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget1.InTheatersMovies.2.Art(fanart)))</visible>
 		</item>
 		<item id="3">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget1.InCinemasMovies.3.Art(fanart))]</icon>
-			<label>$INFO[Window.Property(HomeWidget1.InCinemasMovies.3.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget1.InCinemasMovies.3.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget1.InCinemasMovies.3.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget1.InCinemasMovies.3.Art(fanart)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget1.InTheatersMovies.3.Art(fanart))]</icon>
+			<label>$INFO[Window.Property(HomeWidget1.InTheatersMovies.3.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget1.InTheatersMovies.3.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget1.InTheatersMovies.3.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget1.InTheatersMovies.3.Art(fanart)))</visible>
 		</item>
 		<item id="4">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget1.InCinemasMovies.4.Art(fanart))]</icon>
-			<label>$INFO[Window.Property(HomeWidget1.InCinemasMovies.4.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget1.InCinemasMovies.4.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget1.InCinemasMovies.4.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget1.InCinemasMovies.4.Art(fanart)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget1.InTheatersMovies.4.Art(fanart))]</icon>
+			<label>$INFO[Window.Property(HomeWidget1.InTheatersMovies.4.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget1.InTheatersMovies.4.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget1.InTheatersMovies.4.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget1.InTheatersMovies.4.Art(fanart)))</visible>
 		</item>
 		<item id="5">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget1.InCinemasMovies.5.Art(fanart))]</icon>
-			<label>$INFO[Window.Property(HomeWidget1.InCinemasMovies.5.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget1.InCinemasMovies.5.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget1.InCinemasMovies.5.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget1.InCinemasMovies.5.Art(fanart)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget1.InTheatersMovies.5.Art(fanart))]</icon>
+			<label>$INFO[Window.Property(HomeWidget1.InTheatersMovies.5.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget1.InTheatersMovies.5.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget1.InTheatersMovies.5.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget1.InTheatersMovies.5.Art(fanart)))</visible>
 		</item>
 		<item id="6">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget1.InCinemasMovies.6.Art(fanart))]</icon>
-			<label>$INFO[Window.Property(HomeWidget1.InCinemasMovies.6.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget1.InCinemasMovies.6.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget1.InCinemasMovies.6.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget1.InCinemasMovies.6.Art(fanart)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget1.InTheatersMovies.6.Art(fanart))]</icon>
+			<label>$INFO[Window.Property(HomeWidget1.InTheatersMovies.6.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget1.InTheatersMovies.6.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget1.InTheatersMovies.6.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget1.InTheatersMovies.6.Art(fanart)))</visible>
 		</item>
 		<item id="7">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget1.InCinemasMovies.7.Art(fanart))]</icon>
-			<label>$INFO[Window.Property(HomeWidget1.InCinemasMovies.7.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget1.InCinemasMovies.7.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget1.InCinemasMovies.7.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget1.InCinemasMovies.7.Art(fanart)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget1.InTheatersMovies.7.Art(fanart))]</icon>
+			<label>$INFO[Window.Property(HomeWidget1.InTheatersMovies.7.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget1.InTheatersMovies.7.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget1.InTheatersMovies.7.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget1.InTheatersMovies.7.Art(fanart)))</visible>
 		</item>
 		<item id="8">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget1.InCinemasMovies.8.Art(fanart))]</icon>
-			<label>$INFO[Window.Property(HomeWidget1.InCinemasMovies.8.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget1.InCinemasMovies.8.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget1.InCinemasMovies.8.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget1.InCinemasMovies.8.Art(fanart)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget1.InTheatersMovies.8.Art(fanart))]</icon>
+			<label>$INFO[Window.Property(HomeWidget1.InTheatersMovies.8.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget1.InTheatersMovies.8.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget1.InTheatersMovies.8.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget1.InTheatersMovies.8.Art(fanart)))</visible>
 		</item>
 		<item id="9">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget1.InCinemasMovies.9.Art(fanart))]</icon>
-			<label>$INFO[Window.Property(HomeWidget1.InCinemasMovies.9.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget1.InCinemasMovies.9.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget1.InCinemasMovies.9.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget1.InCinemasMovies.9.Art(fanart)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget1.InTheatersMovies.9.Art(fanart))]</icon>
+			<label>$INFO[Window.Property(HomeWidget1.InTheatersMovies.9.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget1.InTheatersMovies.9.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget1.InTheatersMovies.9.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget1.InTheatersMovies.9.Art(fanart)))</visible>
 		</item>
 		<item id="10">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget1.InCinemasMovies.10.Art(fanart))]</icon>
-			<label>$INFO[Window.Property(HomeWidget1.InCinemasMovies.10.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget1.InCinemasMovies.10.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget1.InCinemasMovies.10.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget1.InCinemasMovies.10.Art(fanart)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget1.InTheatersMovies.10.Art(fanart))]</icon>
+			<label>$INFO[Window.Property(HomeWidget1.InTheatersMovies.10.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget1.InTheatersMovies.10.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget1.InTheatersMovies.10.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget1.InTheatersMovies.10.Art(fanart)))</visible>
 		</item>
 	</include>
 	<include name="HomeWidget.1.Popular">
@@ -1568,7 +1568,7 @@
 			<icon>$INFO[Window.Property(HomeWidget1.TrendingMovies.1.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget1.TrendingMovies.1.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget1.TrendingMovies.1.Rating)]$INFO[Window.Property(HomeWidget1.TrendingMovies.1.Year), • ,]</label2>
-			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.1.Trailer]))</property>
+			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.1.Trailer)])</property>
 			<visible>!IsEmpty(Window.Property(HomeWidget1.TrendingMovies.1.Art(fanart)))</visible>
 		</item>
 		<item id="2">
@@ -1576,7 +1576,7 @@
 			<icon>$INFO[Window.Property(HomeWidget1.TrendingMovies.2.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget1.TrendingMovies.2.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget1.TrendingMovies.2.Rating)]$INFO[Window.Property(HomeWidget1.TrendingMovies.2.Year), • ,]</label2>
-			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.2.Trailer]))</property>
+			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.2.Trailer)])</property>
 			<visible>!IsEmpty(Window.Property(HomeWidget1.TrendingMovies.2.Art(fanart)))</visible>
 		</item>
 		<item id="3">
@@ -1584,7 +1584,7 @@
 			<icon>$INFO[Window.Property(HomeWidget1.TrendingMovies.3.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget1.TrendingMovies.3.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget1.TrendingMovies.3.Rating)]$INFO[Window.Property(HomeWidget1.TrendingMovies.3.Year), • ,]</label2>
-			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.3.Trailer]))</property>
+			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.3.Trailer)])</property>
 			<visible>!IsEmpty(Window.Property(HomeWidget1.TrendingMovies.3.Art(fanart)))</visible>
 		</item>
 		<item id="4">
@@ -1592,7 +1592,7 @@
 			<icon>$INFO[Window.Property(HomeWidget1.TrendingMovies.4.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget1.TrendingMovies.4.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget1.TrendingMovies.4.Rating)]$INFO[Window.Property(HomeWidget1.TrendingMovies.4.Year), • ,]</label2>
-			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.4.Trailer]))</property>
+			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.4.Trailer)])</property>
 			<visible>!IsEmpty(Window.Property(HomeWidget1.TrendingMovies.4.Art(fanart)))</visible>
 		</item>
 		<item id="5">
@@ -1600,7 +1600,7 @@
 			<icon>$INFO[Window.Property(HomeWidget1.TrendingMovies.5.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget1.TrendingMovies.5.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget1.TrendingMovies.5.Rating)]$INFO[Window.Property(HomeWidget1.TrendingMovies.5.Year), • ,]</label2>
-			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.5.Trailer]))</property>
+			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.5.Trailer)])</property>
 			<visible>!IsEmpty(Window.Property(HomeWidget1.TrendingMovies.5.Art(fanart)))</visible>
 		</item>
 		<item id="6">
@@ -1608,7 +1608,7 @@
 			<icon>$INFO[Window.Property(HomeWidget1.TrendingMovies.6.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget1.TrendingMovies.6.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget1.TrendingMovies.6.Rating)]$INFO[Window.Property(HomeWidget1.TrendingMovies.6.Year), • ,]</label2>
-			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.6.Trailer]))</property>
+			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.6.Trailer)])</property>
 			<visible>!IsEmpty(Window.Property(HomeWidget1.TrendingMovies.6.Art(fanart)))</visible>
 		</item>
 		<item id="7">
@@ -1616,7 +1616,7 @@
 			<icon>$INFO[Window.Property(HomeWidget1.TrendingMovies.7.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget1.TrendingMovies.7.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget1.TrendingMovies.7.Rating)]$INFO[Window.Property(HomeWidget1.TrendingMovies.7.Year), • ,]</label2>
-			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.7.Trailer]))</property>
+			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.7.Trailer)])</property>
 			<visible>!IsEmpty(Window.Property(HomeWidget1.TrendingMovies.7.Art(fanart)))</visible>
 		</item>
 		<item id="8">
@@ -1624,7 +1624,7 @@
 			<icon>$INFO[Window.Property(HomeWidget1.TrendingMovies.8.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget1.TrendingMovies.8.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget1.TrendingMovies.8.Rating)]$INFO[Window.Property(HomeWidget1.TrendingMovies.8.Year), • ,]</label2>
-			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.8.Trailer]))</property>
+			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.8.Trailer)])</property>
 			<visible>!IsEmpty(Window.Property(HomeWidget1.TrendingMovies.8.Art(fanart)))</visible>
 		</item>
 		<item id="9">
@@ -1632,7 +1632,7 @@
 			<icon>$INFO[Window.Property(HomeWidget1.TrendingMovies.9.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget1.TrendingMovies.9.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget1.TrendingMovies.9.Rating)]$INFO[Window.Property(HomeWidget1.TrendingMovies.9.Year), • ,]</label2>
-			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.9.Trailer]))</property>
+			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.9.Trailer)])</property>
 			<visible>!IsEmpty(Window.Property(HomeWidget1.TrendingMovies.9.Art(fanart)))</visible>
 		</item>
 		<item id="10">
@@ -1640,7 +1640,7 @@
 			<icon>$INFO[Window.Property(HomeWidget1.TrendingMovies.10.Art(fanart))]</icon>
 			<label>$INFO[Window.Property(HomeWidget1.TrendingMovies.10.Title)]</label>
 			<label2>$INFO[Window.Property(HomeWidget1.TrendingMovies.10.Rating)]$INFO[Window.Property(HomeWidget1.TrendingMovies.10.Year), • ,]</label2>
-			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.10.Trailer]))</property>
+			<property name="Play">PlayMedia($INFO[Window.Property(HomeWidget1.TrendingMovies.10.Trailer)])</property>
 			<visible>!IsEmpty(Window.Property(HomeWidget1.TrendingMovies.10.Art(fanart)))</visible>
 		</item>
 	</include>
@@ -5834,83 +5834,83 @@
 	<include name="HomeWidget.2.InCinema">
 		<item id="1">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget2.InCinemasMovies.1.Art(poster))]</icon>
-			<label>$INFO[Window.Property(HomeWidget2.InCinemasMovies.1.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget2.InCinemasMovies.1.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget2.InCinemasMovies.1.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget2.InCinemasMovies.1.Art(poster)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget2.InTheatersMovies.1.Art(poster))]</icon>
+			<label>$INFO[Window.Property(HomeWidget2.InTheatersMovies.1.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget2.InTheatersMovies.1.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget2.InTheatersMovies.1.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget2.InTheatersMovies.1.Art(poster)))</visible>
 		</item>
 		<item id="2">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget2.InCinemasMovies.2.Art(poster))]</icon>
-			<label>$INFO[Window.Property(HomeWidget2.InCinemasMovies.2.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget2.InCinemasMovies.2.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget2.InCinemasMovies.2.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget2.InCinemasMovies.2.Art(poster)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget2.InTheatersMovies.2.Art(poster))]</icon>
+			<label>$INFO[Window.Property(HomeWidget2.InTheatersMovies.2.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget2.InTheatersMovies.2.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget2.InTheatersMovies.2.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget2.InTheatersMovies.2.Art(poster)))</visible>
 		</item>
 		<item id="3">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget2.InCinemasMovies.3.Art(poster))]</icon>
-			<label>$INFO[Window.Property(HomeWidget2.InCinemasMovies.3.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget2.InCinemasMovies.3.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget2.InCinemasMovies.3.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget2.InCinemasMovies.3.Art(poster)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget2.InTheatersMovies.3.Art(poster))]</icon>
+			<label>$INFO[Window.Property(HomeWidget2.InTheatersMovies.3.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget2.InTheatersMovies.3.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget2.InTheatersMovies.3.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget2.InTheatersMovies.3.Art(poster)))</visible>
 		</item>
 		<item id="4">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget2.InCinemasMovies.4.Art(poster))]</icon>
-			<label>$INFO[Window.Property(HomeWidget2.InCinemasMovies.4.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget2.InCinemasMovies.4.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget2.InCinemasMovies.4.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget2.InCinemasMovies.4.Art(poster)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget2.InTheatersMovies.4.Art(poster))]</icon>
+			<label>$INFO[Window.Property(HomeWidget2.InTheatersMovies.4.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget2.InTheatersMovies.4.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget2.InTheatersMovies.4.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget2.InTheatersMovies.4.Art(poster)))</visible>
 		</item>
 		<item id="5">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget2.InCinemasMovies.5.Art(poster))]</icon>
-			<label>$INFO[Window.Property(HomeWidget2.InCinemasMovies.5.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget2.InCinemasMovies.5.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget2.InCinemasMovies.5.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget2.InCinemasMovies.5.Art(poster)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget2.InTheatersMovies.5.Art(poster))]</icon>
+			<label>$INFO[Window.Property(HomeWidget2.InTheatersMovies.5.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget2.InTheatersMovies.5.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget2.InTheatersMovies.5.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget2.InTheatersMovies.5.Art(poster)))</visible>
 		</item>
 		<item id="6">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget2.InCinemasMovies.6.Art(poster))]</icon>
-			<label>$INFO[Window.Property(HomeWidget2.InCinemasMovies.6.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget2.InCinemasMovies.6.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget2.InCinemasMovies.6.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget2.InCinemasMovies.6.Art(poster)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget2.InTheatersMovies.6.Art(poster))]</icon>
+			<label>$INFO[Window.Property(HomeWidget2.InTheatersMovies.6.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget2.InTheatersMovies.6.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget2.InTheatersMovies.6.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget2.InTheatersMovies.6.Art(poster)))</visible>
 		</item>
 		<item id="7">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget2.InCinemasMovies.7.Art(poster))]</icon>
-			<label>$INFO[Window.Property(HomeWidget2.InCinemasMovies.7.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget2.InCinemasMovies.7.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget2.InCinemasMovies.7.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget2.InCinemasMovies.7.Art(poster)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget2.InTheatersMovies.7.Art(poster))]</icon>
+			<label>$INFO[Window.Property(HomeWidget2.InTheatersMovies.7.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget2.InTheatersMovies.7.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget2.InTheatersMovies.7.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget2.InTheatersMovies.7.Art(poster)))</visible>
 		</item>
 		<item id="8">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget2.InCinemasMovies.8.Art(poster))]</icon>
-			<label>$INFO[Window.Property(HomeWidget2.InCinemasMovies.8.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget2.InCinemasMovies.8.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget2.InCinemasMovies.8.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget2.InCinemasMovies.8.Art(poster)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget2.InTheatersMovies.8.Art(poster))]</icon>
+			<label>$INFO[Window.Property(HomeWidget2.InTheatersMovies.8.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget2.InTheatersMovies.8.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget2.InTheatersMovies.8.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget2.InTheatersMovies.8.Art(poster)))</visible>
 		</item>
 		<item id="9">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget2.InCinemasMovies.9.Art(poster))]</icon>
-			<label>$INFO[Window.Property(HomeWidget2.InCinemasMovies.9.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget2.InCinemasMovies.9.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget2.InCinemasMovies.9.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget2.InCinemasMovies.9.Art(poster)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget2.InTheatersMovies.9.Art(poster))]</icon>
+			<label>$INFO[Window.Property(HomeWidget2.InTheatersMovies.9.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget2.InTheatersMovies.9.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget2.InTheatersMovies.9.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget2.InTheatersMovies.9.Art(poster)))</visible>
 		</item>
 		<item id="10">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget2.InCinemasMovies.10.Art(poster))]</icon>
-			<label>$INFO[Window.Property(HomeWidget2.InCinemasMovies.10.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget2.InCinemasMovies.10.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget2.InCinemasMovies.10.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget2.InCinemasMovies.10.Art(poster)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget2.InTheatersMovies.10.Art(poster))]</icon>
+			<label>$INFO[Window.Property(HomeWidget2.InTheatersMovies.10.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget2.InTheatersMovies.10.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget2.InTheatersMovies.10.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget2.InTheatersMovies.10.Art(poster)))</visible>
 		</item>
 	</include>
 	<include name="HomeWidget.2.Popular">
@@ -6725,83 +6725,83 @@
 	<include name="HomeWidget.3.InCinema">
 		<item id="1">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.InCinemasMovies.1.Art(fanart))]</icon>
-			<label>$INFO[Window.Property(HomeWidget3.InCinemasMovies.1.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget3.InCinemasMovies.1.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InCinemasMovies.1.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemasMovies.1.Art(fanart)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget3.InTheatersMovies.1.Art(fanart))]</icon>
+			<label>$INFO[Window.Property(HomeWidget3.InTheatersMovies.1.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget3.InTheatersMovies.1.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InTheatersMovies.1.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.InTheatersMovies.1.Art(fanart)))</visible>
 		</item>
 		<item id="2">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.InCinemasMovies.2.Art(fanart))]</icon>
-			<label>$INFO[Window.Property(HomeWidget3.InCinemasMovies.2.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget3.InCinemasMovies.2.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InCinemasMovies.2.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemasMovies.2.Art(fanart)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget3.InTheatersMovies.2.Art(fanart))]</icon>
+			<label>$INFO[Window.Property(HomeWidget3.InTheatersMovies.2.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget3.InTheatersMovies.2.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InTheatersMovies.2.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.InTheatersMovies.2.Art(fanart)))</visible>
 		</item>
 		<item id="3">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.InCinemasMovies.3.Art(fanart))]</icon>
-			<label>$INFO[Window.Property(HomeWidget3.InCinemasMovies.3.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget3.InCinemasMovies.3.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InCinemasMovies.3.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemasMovies.3.Art(fanart)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget3.InTheatersMovies.3.Art(fanart))]</icon>
+			<label>$INFO[Window.Property(HomeWidget3.InTheatersMovies.3.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget3.InTheatersMovies.3.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InTheatersMovies.3.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.InTheatersMovies.3.Art(fanart)))</visible>
 		</item>
 		<item id="4">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.InCinemasMovies.4.Art(fanart))]</icon>
-			<label>$INFO[Window.Property(HomeWidget3.InCinemasMovies.4.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget3.InCinemasMovies.4.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InCinemasMovies.4.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemasMovies.4.Art(fanart)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget3.InTheatersMovies.4.Art(fanart))]</icon>
+			<label>$INFO[Window.Property(HomeWidget3.InTheatersMovies.4.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget3.InTheatersMovies.4.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InTheatersMovies.4.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.InTheatersMovies.4.Art(fanart)))</visible>
 		</item>
 		<item id="5">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.InCinemasMovies.5.Art(fanart))]</icon>
-			<label>$INFO[Window.Property(HomeWidget3.InCinemasMovies.5.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget3.InCinemasMovies.5.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InCinemasMovies.5.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemasMovies.5.Art(fanart)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget3.InTheatersMovies.5.Art(fanart))]</icon>
+			<label>$INFO[Window.Property(HomeWidget3.InTheatersMovies.5.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget3.InTheatersMovies.5.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InTheatersMovies.5.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.InTheatersMovies.5.Art(fanart)))</visible>
 		</item>
 		<item id="6">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.InCinemasMovies.6.Art(fanart))]</icon>
-			<label>$INFO[Window.Property(HomeWidget3.InCinemasMovies.6.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget3.InCinemasMovies.6.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InCinemasMovies.6.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemasMovies.6.Art(fanart)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget3.InTheatersMovies.6.Art(fanart))]</icon>
+			<label>$INFO[Window.Property(HomeWidget3.InTheatersMovies.6.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget3.InTheatersMovies.6.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InTheatersMovies.6.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.InTheatersMovies.6.Art(fanart)))</visible>
 		</item>
 		<item id="7">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.InCinemasMovies.7.Art(fanart))]</icon>
-			<label>$INFO[Window.Property(HomeWidget3.InCinemasMovies.7.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget3.InCinemasMovies.7.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InCinemasMovies.7.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemasMovies.7.Art(fanart)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget3.InTheatersMovies.7.Art(fanart))]</icon>
+			<label>$INFO[Window.Property(HomeWidget3.InTheatersMovies.7.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget3.InTheatersMovies.7.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InTheatersMovies.7.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.InTheatersMovies.7.Art(fanart)))</visible>
 		</item>
 		<item id="8">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.InCinemasMovies.8.Art(fanart))]</icon>
-			<label>$INFO[Window.Property(HomeWidget3.InCinemasMovies.8.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget3.InCinemasMovies.8.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InCinemasMovies.8.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemasMovies.8.Art(fanart)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget3.InTheatersMovies.8.Art(fanart))]</icon>
+			<label>$INFO[Window.Property(HomeWidget3.InTheatersMovies.8.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget3.InTheatersMovies.8.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InTheatersMovies.8.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.InTheatersMovies.8.Art(fanart)))</visible>
 		</item>
 		<item id="9">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.InCinemasMovies.9.Art(fanart))]</icon>
-			<label>$INFO[Window.Property(HomeWidget3.InCinemasMovies.9.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget3.InCinemasMovies.9.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InCinemasMovies.9.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemasMovies.9.Art(fanart)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget3.InTheatersMovies.9.Art(fanart))]</icon>
+			<label>$INFO[Window.Property(HomeWidget3.InTheatersMovies.9.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget3.InTheatersMovies.9.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InTheatersMovies.9.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.InTheatersMovies.9.Art(fanart)))</visible>
 		</item>
 		<item id="10">
 			<onclick>noop</onclick>
-			<icon>$INFO[Window.Property(HomeWidget3.InCinemasMovies.10.Art(fanart))]</icon>
-			<label>$INFO[Window.Property(HomeWidget3.InCinemasMovies.10.Title)]</label>
-			<label2>$INFO[Window.Property(HomeWidget3.InCinemasMovies.10.Rating)]</label2>
-			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InCinemasMovies.10.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
-			<visible>!IsEmpty(Window.Property(HomeWidget3.InCinemasMovies.10.Art(fanart)))</visible>
+			<icon>$INFO[Window.Property(HomeWidget3.InTheatersMovies.10.Art(fanart))]</icon>
+			<label>$INFO[Window.Property(HomeWidget3.InTheatersMovies.10.Title)]</label>
+			<label2>$INFO[Window.Property(HomeWidget3.InTheatersMovies.10.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window.Property(HomeWidget3.InTheatersMovies.10.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window.Property(HomeWidget3.InTheatersMovies.10.Art(fanart)))</visible>
 		</item>
 	</include>
 	<include name="HomeWidget.3.Popular">
@@ -7993,8 +7993,8 @@
 		<value condition="stringcompare(Skin.String(HomeWidget.10.Type),extendedinfo.dailybabes)" target="pictures">plugin://script.extendedinfo?info=dailybabes</value>
 		<value condition="stringcompare(Skin.String(HomeWidget.10.Type),mypicsdb.pics)" target="pictures">plugin://plugin.image.mypicsdb?action='showpics'&amp;method='lastpicsshooted'&amp;name='The%2050%20latest%20pics'&amp;page='1'&amp;viewmode='view'</value>
 		<value condition="stringcompare(Skin.String(HomeWidget.10.Type),pictures.addons)" target="pictures">addons://sources/image/</value>
-		<value condition="!Skin.HasSetting(UseKodiLibrary)" target="pictures">$INFO[Window(Home).Property(MediaBrowser.std.photo.0.content)]</value>
-		<value condition="Skin.HasSetting(UseKodiLibrary)" target="pictures">$INFO[Skin.String(PicturesDir)]</value>
+		<value condition="!Skin.HasSetting(UseKodiLibrary) + !Skin.HasSetting(UseKodiPicturesLibrary)" target="pictures">$INFO[Window(Home).Property(MediaBrowser.std.photo.0.content)]</value>
+		<value condition="Skin.HasSetting(UseKodiLibrary) | [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseKodiPicturesLibrary)]" target="pictures">$INFO[Skin.String(PicturesDir)]</value>
 	</variable>
 	<variable name="HomeWidget.9.LiveTV">
 		<value condition="stringcompare(Skin.String(HomeWidget.9.Type),smartish.pvrchannels) + !Window.IsVisible(3050)">plugin://service.smartish.widgets?type=pvr&amp;reload=10</value>

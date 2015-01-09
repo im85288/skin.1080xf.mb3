@@ -23,10 +23,33 @@
 			<visible>[!Control.IsVisible(553) + !Control.IsVisible(580)] | [Control.IsVisible(553) + Window.IsActive(movieinformation)] | [Control.IsVisible(580) + Window.IsActive(movieinformation)]</visible>
 		</control>
 	</include>
+	<include name="CommonOverlayNetflix">
+		<control type="videowindow">
+			<include>FullscreenDimensions</include>
+			<visible>Skin.HasSetting(BackgroundVideo) + Player.HasVideo</visible>
+		</control>
+		<control type="visualisation">
+			<include>FullscreenDimensions</include>
+			<visible>Player.HasAudio + Skin.HasSetting(OSDVisualisation.Enabled) + Skin.HasSetting(HomeVisualisation.Enabled)</visible>
+		</control>
+		<control type="image">
+			<posx>-200</posx>
+			<posy>0</posy>
+			<width>3000</width>
+			<height>1080</height>
+			<aspectratio>stretch</aspectratio>
+			<include>Animation_FanartFade</include>
+			<texture>special://skin/extras/backgrounds/black_content2.png</texture>
+		</control>
+	</include>
 	<include name="CommonItemsHome">
 		<include>CommonContent</include>
 		<include>HomeCustomBackdrops</include>
 		<include>CommonOverlay</include>
+	</include>
+	<include name="CommonItemsNetflix">
+		<include>BackgroundFanartNetflix</include>
+		<include>CommonOverlayNetflix</include>
 	</include>
 	<include name="CommonItems">
 		<include>CommonContent</include>
@@ -205,6 +228,43 @@
 			<fadetime>500</fadetime>
 			<include>Animation_FanartFade</include>
 			<visible>!Skin.HasSetting(HideFanart) + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo] + !Window.IsActive(favourites) + !Player.HasVideo</visible>
+		</control>
+	</include>
+	<include name="BackgroundFanartNetflix">
+		<control type="videowindow">
+			<include>FullscreenDimensions</include>
+			<visible>Player.HasVideo</visible>
+		</control>
+		<control type="image">
+			<description>List Panel fanart</description>
+			<include>FullscreenDimensions</include>
+			<texture background="true">$VAR[NetflixFanart]</texture>
+			<fadetime>500</fadetime>
+			<include>Animation_FanartFade</include>
+			<visible>!Skin.HasSetting(HideFanart) + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo]  + !Player.HasVideo</visible>
+			<visible>!Container(776).HasFocus(9)</visible>
+			<visible>IsEmpty(Window(Home).Property(MB3.Background.Item.FanArt))</visible>
+		</control>
+		<control type="image">
+			<description>List Panel fanart</description>
+			<include>FullscreenDimensions</include>
+			<texture background="true">$INFO[Window(Home).Property(MB3.Background.Item.FanArt)]</texture>
+			<fadetime>500</fadetime>
+			<include>Animation_FanartFade</include>
+			<visible>!Skin.HasSetting(HideFanart) + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo] + !Player.HasVideo</visible>
+			<visible>!Container(776).HasFocus(9)</visible>
+			<visible>!IsEmpty(Window(Home).Property(MB3.Background.Item.FanArt))</visible>
+		</control>
+		<control type="multiimage">
+			<include>FullscreenDimensions</include>
+			<timeperimage>10000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>600</fadetime>
+			<loop>yes</loop>
+			<include>Animation_FanartFade</include>
+			<imagepath background="true">$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
+			<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir)) + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo] + Weather.IsFetched + !Window.IsActive(favourites)</visible>
+			<visible>Container(776).HasFocus(9)</visible>
 		</control>
 	</include>
 	<include name="BackgroundFanartMusicOSD">

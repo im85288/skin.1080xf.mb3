@@ -11,6 +11,7 @@
 		<include>Viewtype-Panel</include>
 		<include>Viewtype-Landscape</include>
 		<include>Viewtype-Poster</include>
+		<include>Viewtype-Poster-Original</include>
 		<include>Viewtype-Thumbnail</include>
 		<include>Viewtype-ThumbnailVideo</include>
 		<include>Viewtype-Banner</include>
@@ -89,7 +90,7 @@
 	<include name="CommonClearLogoDetails">
 		<control type="group">
 			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
-			<visible>[!Control.IsVisible(553) + !Control.IsVisible(580)] | [Control.IsVisible(553) + Window.IsActive(movieinformation)] | [Control.IsVisible(580) + Window.IsActive(movieinformation)]</visible>
+			<visible>[!Control.IsVisible(580)] | [Control.IsVisible(580) + Window.IsActive(movieinformation)]</visible>
 			<animation type="Visible" reversible="false">
 				<effect type="fade" start="0" end="100" time="450" delay="0" tween="sine" easing="in" />
 			</animation>
@@ -136,162 +137,63 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>100</posx>
-				<posy>950</posy>
+				<visible>Skin.HasSetting(ShowViewHeader)</visible>
+				<posx>0</posx>
+				<posy>0</posy>
 				<control type="group">
-					<visible>[Container.Content(Episodes) | Container.Content(Movies)]</visible>
-					<posx>210</posx>
-					<control type="image">
-						<posx>0</posx>
-						<posy>22</posy>
-						<width>100</width>
-						<height>52</height>
-						<aspectratio>stretch</aspectratio>
-						<texture border="20,10,20,10">aeonflags/posters/left.png</texture>
-						<colordiffuse>Mod_Tags</colordiffuse>
-					</control>
-					<control type="image">
-						<posx>7</posx>
-						<posy>22</posy>
-						<width>92</width>
-						<height>52</height>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture fallback="special://skin/extras/studioflags/default-studio.png">$VAR[AeonFlagHDSD]</texture>
-						<colordiffuse>Mod_Tags_Alt</colordiffuse>
-						<visible>!substring(ListItem.Path,videodb://movies/sets,left)</visible>
-					</control>
-					<control type="image">
-						<posx>13</posx>
-						<posy>28</posy>
-						<width>82</width>
-						<height>38</height>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture>flags/other/set-info.png</texture>
-						<colordiffuse>Mod_Tags_Alt</colordiffuse>
-						<visible>substring(ListItem.Path,videodb://movies/sets,left) | [ListItem.IsFolder + Container.Content(Movies)]</visible>
-					</control>
-					<control type="image">
-						<posx>100</posx>
-						<posy>22</posy>
-						<width>245</width>
-						<height>52</height>
-						<aspectratio>stretch</aspectratio>
-						<texture border="20,10,20,10">aeonflags/posters/right.png</texture>
-						<colordiffuse>Mod_Tags</colordiffuse>
-					</control>
-					<control type="image">
-						<posx>128</posx>
-						<posy>22</posy>
-						<width>90</width>
-						<height>52</height>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture>$VAR[AeonFlagVideoCodec]</texture>
-						<colordiffuse>PrimaryT</colordiffuse>
-						<visible>!substring(ListItem.Path,videodb://movies/sets,left)</visible>
-					</control>
-					<control type="image">
-						<posx>228</posx>
-						<posy>22</posy>
-						<width>90</width>
-						<height>52</height>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture>$VAR[AeonFlagAudioCodec]</texture>
-						<colordiffuse>Mod_Tags</colordiffuse>
-						<visible>!substring(ListItem.Path,videodb://movies/sets,left)</visible>
-					</control>
 					<control type="label">
-						<posx>108</posx>
-						<posy>22</posy>
-						<width>220</width>
-						<height>52</height>
-						<label>$LOCALIZE[20457]</label>
-						<font>Font-Condensed-S25</font>
-						<textcolor>Mod_Tags</textcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-						<wrapmultiline>false</wrapmultiline>
-						<visible>substring(ListItem.Path,videodb://movies/sets,left) | [ListItem.IsFolder + Container.Content(Movies)]</visible>
+						<description>Title</description>
+						<posy>30</posy>
+						<left>44</left>
+						<height>40</height>
+						<width>1800</width>
+						<align>left</align>
+						<font>Font-Condensed-S45-B</font>
+						<label>$INFO[ListItem.Title]</label>
+						<textcolor>PrimaryT</textcolor>
+					</control>
+					<!-- <control type="label"> <description>title2</description> <posy>73</posy> <left>44</left> <height>40</height> <width>1000</width> <align>left</align> <font>Font-Condensed-S30</font> <label>$INFO[ListItem.Genre]</label> <textcolor>SecondaryT</textcolor> </control> -->
+					<control type="grouplist">
+						<posx>40</posx>
+						<posy>25</posy>
+						<width>1600</width>
+						<height>150</height>
+						<itemgap>7</itemgap>
+						<align>left</align>
+						<orientation>horizontal</orientation>
+						<control type="image">
+							<description>rating stars</description>
+							<height>140</height>
+							<width>140</width>
+							<aspectratio>keep</aspectratio>
+							<texture background="true" fallback="special://skin/extras/stars/rating0.png">special://skin/extras/stars/$INFO[ListItem.Rating].png</texture>
+							<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
+							<fadetime>800</fadetime>
+						</control>
+						<control type="label">
+							<description>title2</description>
+							<height>140</height>
+							<width>auto</width>
+							<font>Font-Condensed-S30</font>
+							<label>$INFO[ListItem.Year,,]$INFO[ListItem.Duration, ,min][COLOR=$VAR[FocusModHomeColourVar]]$INFO[ListItem.Genre, ,][/COLOR]</label>
+							<textcolor>PrimaryT</textcolor>
+						</control>
+						<!-- <control type="image"> <left>0</left> <top>0</top> <width>57</width> <height>33</height> <colordiffuse>99FFFFFF</colordiffuse> <aspectratio align="left" aligny="center">stretch</aspectratio> <texture background="true">flags/sets/sets.png</texture> <visible>Substring(ListItem.Path,videodb://movies/sets/)</visible> </control> -->
 					</control>
 				</control>
-				<!-- RATING AND STUDIO -->
-				<control type="group">
-					<control type="image">
-						<posx>0</posx>
-						<posy>22</posy>
-						<width>100</width>
-						<height>52</height>
-						<aspectratio>stretch</aspectratio>
-						<texture border="20,10,20,10">aeonflags/posters/left.png</texture>
-						<colordiffuse>Mod_Tags</colordiffuse>
-					</control>
-					<control type="image">
-						<posx>7</posx>
-						<posy>22</posy>
-						<width>92</width>
-						<height>52</height>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture fallback="special://skin/extras/studioflags/default-studio.png">$VAR[AeonFlagStudio]</texture>
-						<colordiffuse>Mod_Tags_Alt</colordiffuse>
-					</control>
-					<control type="image">
-						<posx>100</posx>
-						<posy>22</posy>
-						<width>100</width>
-						<height>52</height>
-						<aspectratio>stretch</aspectratio>
-						<texture border="20,10,20,10">aeonflags/posters/right.png</texture>
-						<colordiffuse>Mod_Tags</colordiffuse>
-					</control>
-					<control type="image">
-						<posx>100</posx>
-						<posy>16</posy>
-						<width>94</width>
-						<height>64</height>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture>$VAR[AeonFlagMovieMPAAVar]</texture>
-						<colordiffuse>Mod_Tags</colordiffuse>
-					</control>
-				</control>
-				<!-- TV GENRES -->
-				<control type="group">
-					<visible>![Container.Content(Episodes) | Container.Content(Movies)]</visible>
-					<control type="image">
-						<posx>210</posx>
-						<posy>22</posy>
-						<width>100</width>
-						<height>52</height>
-						<aspectratio>stretch</aspectratio>
-						<texture border="20,10,20,10">aeonflags/posters/left.png</texture>
-						<colordiffuse>Mod_Tags</colordiffuse>
-					</control>
-					<control type="image">
-						<posx>220</posx>
-						<posy>27</posy>
-						<width>92</width>
-						<height>44</height>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture colordiffuse="Mod_Tags_Alt">aeonflags/posters/genre.png</texture>
-					</control>
-					<control type="image">
-						<posx>310</posx>
-						<posy>22</posy>
-						<width>245</width>
-						<height>52</height>
-						<aspectratio>stretch</aspectratio>
-						<texture border="20,10,20,10">aeonflags/posters/right.png</texture>
-						<colordiffuse>Mod_Tags</colordiffuse>
-					</control>
-					<control type="label">
-						<posx>328</posx>
-						<posy>34</posy>
-						<width>205</width>
-						<label>$INFO[ListItem.Genre]</label>
-						<font>Font-Condensed-S25</font>
-						<textcolor>Mod_Tags</textcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-						<wrapmultiline>false</wrapmultiline>
-					</control>
+			</control>
+			<control type="group">
+				<visible>Skin.HasSetting(ShowViewHeader)</visible>
+				<posx>35</posx>
+				<posy>110</posy>
+				<control type="grouplist">
+					<width>783</width>
+					<height>60</height>
+					<align>left</align>
+					<itemgap>-9</itemgap>
+					<orientation>horizontal</orientation>
+					<align>left</align>
+					<include>InfoFlags</include>
 				</control>
 			</control>
 		</control>
@@ -441,7 +343,8 @@
 	<variable name="ViewFanart520">
 		<value condition="Container.Content(episodes) + !IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="!IsEmpty(ListItem.Property(medium_fanartimage)) + Skin.HasSetting(GalleryShowFanart)">$INFO[ListItem.Property(medium_fanartimage)]</value>
-		<value condition="!IsEmpty(ListItem.Art(landscape)) + !Skin.HasSetting(GalleryShowFanart)">$INFO[ListItem.Art(landscape)]</value>
+		<value condition="!IsEmpty(ListItem.Property(medium_landscape)) + !Skin.HasSetting(GalleryShowFanart)">$INFO[ListItem.Property(medium_landscape)]</value>
+		<value condition="!IsEmpty(ListItem.Property(medium_fanartimage))">$INFO[ListItem.Property(medium_fanartimage)]</value>
 		<value>$INFO[ListItem.Art(fanart)]</value>
 		<value>-</value>
 	</variable>

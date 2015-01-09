@@ -1,19 +1,20 @@
 ﻿<views>
-    <view id="List" value="50" />
-    <view id="Info list" value="52" />
-    <view id="Panel" value="53" />
-    <view id="Landscape" value="54" />
-    <view id="Poster" value="55" />
-    <view id="Banner" value="60" />
-    <view id="Thumbnail" value="500" />
-    <view id="Alternate Thumbnail" value="501" />
-    <view id="Love Film" value="566" />
-    <view id="Video Wall" value="582" />
-    <view id="Reel" value="577" />
-    <view id="Banner Fanart" value="553" />
-    <view id="Coverflow" value="780" />
-    <view id="Banner Plex" value="56" />
-    <view id="VideoWall Fanart" value="580" />
-    <view id="List Wall" value="58" />
-    <view id="Gallery" value="520" />
+	<view id="List" value="50" />
+	<view id="Info list" value="52" />
+	<view id="Panel" value="53" />
+	<view id="Landscape" value="54" />
+	<view id="Poster" value="55" />
+	<view id="Poster (Original)" value="524" />
+	<view id="Banner" value="60" />
+	<view id="Thumbnail" value="500" />
+	<view id="Alternate Thumbnail" value="501" />
+	<view id="Love Film" value="566" />
+	<view id="Video Wall" value="582" />
+	<view id="Reel" value="577" />
+	<view id="Banner Fanart" value="553" />
+	<view id="Coverflow" value="780" />
+	<view id="Banner Plex" value="56" />
+	<view id="VideoWall Fanart" value="580" />
+	<view id="List Wall" value="58" />
+	<view id="Gallery" value="520" />
 </views>

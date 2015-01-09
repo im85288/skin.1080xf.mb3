@@ -314,7 +314,7 @@
 							<posy>0</posy>
 							<width>1210</width>
 							<height>77</height>
-							<texture colordiffuse="TertiaryM" border="150,3,150,3">windows/common/white.png</texture>
+							<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<visible>ControlGroup(1007).HasFocus</visible>
 						</control>
@@ -423,9 +423,98 @@
 					<visible>Container(30).HasFocus(32)</visible>
 					<onleft>30</onleft>
 					<include>SettingsCategoryGrouplistVars</include>
+					<control type="group" id="2016">
+						<description>Fake spin control</description>
+						<width>1210</width>
+						<height>77</height>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1210</width>
+							<height>77</height>
+							<texture border="90,3,90,3">views/list/other/separator.png</texture>
+							<visible>!ControlGroup(2016).HasFocus</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1210</width>
+							<height>77</height>
+							<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+							<visible>ControlGroup(2016).HasFocus</visible>
+						</control>
+						<control type="button" id="20161">
+							<posx>1104</posx>
+							<posy>8</posy>
+							<width>32</width>
+							<height>60</height>
+							<onleft>20162</onleft>
+							<onright>20162</onright>
+							<onup>2016</onup>
+							<ondown>2000</ondown>
+							<texturefocus colordiffuse="PrimaryT">buttons/spinctrl/arrow-down-fo.png</texturefocus>
+							<texturenofocus colordiffuse="PrimaryT">buttons/spinctrl/arrow-down-nf.png</texturenofocus>
+							<onclick condition="stringcompare(Skin.String(HomeScreen),metro)">Skin.SetString(HomeScreen,netflix)</onclick>
+							<onclick condition="stringcompare(Skin.String(HomeScreen),netflix)">Skin.SetString(HomeScreen,metro)</onclick>
+						</control>
+						<control type="button" id="20162">
+							<posx>1145</posx>
+							<posy>8</posy>
+							<width>32</width>
+							<height>60</height>
+							<onleft>20161</onleft>
+							<onright>20161</onright>
+							<onup>2016</onup>
+							<ondown>2000</ondown>
+							<texturefocus colordiffuse="PrimaryT">buttons/spinctrl/arrow-up-fo.png</texturefocus>
+							<texturenofocus colordiffuse="PrimaryT">buttons/spinctrl/arrow-up-nf.png</texturenofocus>
+							<onclick condition="stringcompare(Skin.String(HomeScreen),netflix)">Skin.SetString(HomeScreen,metro)</onclick>
+							<onclick condition="stringcompare(Skin.String(HomeScreen),metro)">Skin.SetString(HomeScreen,netflix)</onclick>
+						</control>
+						<control type="button">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1120</width>
+							<height>77</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textoffsetx>35</textoffsetx>
+							<font>Font-Condensed-S30-B</font>
+							<textcolor>SecondaryT</textcolor>
+							<label>Home screen</label>
+							<label2>$INFO[Skin.String(HomeScreen)]</label2>
+							<visible>!ControlGroup(2016).HasFocus</visible>
+						</control>
+						<control type="button">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1120</width>
+							<height>77</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textoffsetx>35</textoffsetx>
+							<font>Font-Condensed-S30-B</font>
+							<textcolor>$VAR[FocusModColourVar]</textcolor>
+							<label>Home screen</label>
+							<visible>ControlGroup(2016).HasFocus</visible>
+						</control>
+						<control type="button">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1120</width>
+							<height>77</height>
+							<align>right</align>
+							<aligny>center</aligny>
+							<textoffsetx>35</textoffsetx>
+							<font>Font-Condensed-S30-B</font>
+							<textcolor>$VAR[FocusModColourVar]</textcolor>
+							<label>$INFO[Skin.String(HomeScreen)]</label>
+							<visible>ControlGroup(2016).HasFocus</visible>
+						</control>
+					</control>
 					<control type="button" id="2000">
 						<width>1210</width>
-						<texturefocus colordiffuse="TertiaryM" border="150,3,150,3">windows/common/white.png</texturefocus>
+						<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
 						<texturenofocus colordiffuse="PrimaryT" border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
 						<include>SettingsCategoryDefaultButtonVars</include>
 						<onclick>SetProperty(Dialog,$LOCALIZE[41131])</onclick>
@@ -436,7 +525,7 @@
 					</control>
 					<control type="button" id="2001">
 						<width>1210</width>
-						<texturefocus colordiffuse="TertiaryM" border="150,3,150,3">windows/common/white.png</texturefocus>
+						<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
 						<texturenofocus colordiffuse="PrimaryT" border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
 						<include>SettingsCategoryDefaultButtonVars</include>
 						<onclick>SetProperty(Dialog,$LOCALIZE[41136])</onclick>
@@ -445,7 +534,7 @@
 					</control>
 					<control type="button" id="2002">
 						<width>1210</width>
-						<texturefocus colordiffuse="TertiaryM" border="150,3,150,3">windows/common/white.png</texturefocus>
+						<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
 						<texturenofocus colordiffuse="PrimaryT" border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
 						<include>SettingsCategoryDefaultButtonVars</include>
 						<onclick>SetProperty(Dialog,$LOCALIZE[41140])</onclick>
@@ -520,7 +609,7 @@
 							<posy>0</posy>
 							<width>1210</width>
 							<height>77</height>
-							<texture colordiffuse="TertiaryM" border="150,3,150,3">windows/common/white.png</texture>
+							<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
 							<visible>ControlGroup(2007).HasFocus</visible>
 						</control>
 						<control type="button" id="20071">
@@ -690,6 +779,13 @@
 						<label>$LOCALIZE[41192]</label>
 						<label2 fallback="US">[COLOR=SelectedBlue]$VAR[MovieMPAALangLabel][/COLOR]</label2>
 						<onclick>ActivateWindow(3006)</onclick>
+					</control>
+					<control type="radiobutton" id="3006">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(ShowViewHeader)</selected>
+						<onclick>Skin.ToggleSetting(ShowViewHeader)</onclick>
+						<label>Show Header info in Views</label>
 					</control>
 					<control type="radiobutton" id="3007">
 						<width>1210</width>
@@ -1246,7 +1342,7 @@
 					<visible>Container(30).HasFocus(35)</visible>
 					<control type="button" id="5000">
 						<width>1210</width>
-						<texturefocus colordiffuse="TertiaryM" border="150,3,150,3">windows/common/white.png</texturefocus>
+						<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
 						<texturenofocus colordiffuse="PrimaryT" border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
 						<include>SettingsCategoryDefaultButtonVars</include>
 						<label>$LOCALIZE[41251]</label>
@@ -1257,7 +1353,7 @@
 					</control>
 					<control type="button" id="5001">
 						<width>1210</width>
-						<texturefocus colordiffuse="TertiaryM" border="150,3,150,3">windows/common/white.png</texturefocus>
+						<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
 						<texturenofocus colordiffuse="PrimaryT" border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
 						<include>SettingsCategoryDefaultButtonVars</include>
 						<label>$LOCALIZE[5]</label>
@@ -1268,7 +1364,7 @@
 					</control>
 					<control type="button" id="5002">
 						<width>1210</width>
-						<texturefocus colordiffuse="TertiaryM" border="150,3,150,3">windows/common/white.png</texturefocus>
+						<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
 						<texturenofocus colordiffuse="PrimaryT" border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
 						<include>SettingsCategoryDefaultButtonVars</include>
 						<label>$LOCALIZE[342]</label>
@@ -1279,7 +1375,7 @@
 					</control>
 					<control type="button" id="5003">
 						<width>1210</width>
-						<texturefocus colordiffuse="TertiaryM" border="150,3,150,3">windows/common/white.png</texturefocus>
+						<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
 						<texturenofocus colordiffuse="PrimaryT" border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
 						<include>SettingsCategoryDefaultButtonVars</include>
 						<label>$LOCALIZE[20343]</label>
@@ -1290,7 +1386,7 @@
 					</control>
 					<control type="button" id="5004">
 						<width>1210</width>
-						<texturefocus colordiffuse="TertiaryM" border="150,3,150,3">windows/common/white.png</texturefocus>
+						<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
 						<texturenofocus colordiffuse="PrimaryT" border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
 						<include>SettingsCategoryDefaultButtonVars</include>
 						<label>$LOCALIZE[19019]</label>
@@ -1301,7 +1397,7 @@
 					</control>
 					<control type="button" id="5005">
 						<width>1210</width>
-						<texturefocus colordiffuse="TertiaryM" border="150,3,150,3">windows/common/white.png</texturefocus>
+						<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
 						<texturenofocus colordiffuse="PrimaryT" border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
 						<include>SettingsCategoryDefaultButtonVars</include>
 						<label>$LOCALIZE[49273]</label>
@@ -1312,7 +1408,7 @@
 					</control>
 					<control type="button" id="5006">
 						<width>1210</width>
-						<texturefocus colordiffuse="TertiaryM" border="150,3,150,3">windows/common/white.png</texturefocus>
+						<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
 						<texturenofocus colordiffuse="PrimaryT" border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
 						<include>SettingsCategoryDefaultButtonVars</include>
 						<label>$LOCALIZE[2]</label>
@@ -1323,7 +1419,7 @@
 					</control>
 					<control type="button" id="5009">
 						<width>1210</width>
-						<texturefocus colordiffuse="TertiaryM" border="150,3,150,3">windows/common/white.png</texturefocus>
+						<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
 						<texturenofocus colordiffuse="PrimaryT" border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
 						<include>SettingsCategoryDefaultButtonVars</include>
 						<label>$LOCALIZE[41504]</label>
@@ -1334,7 +1430,7 @@
 					</control>
 					<control type="button" id="5010">
 						<width>1210</width>
-						<texturefocus colordiffuse="TertiaryM" border="150,3,150,3">windows/common/white.png</texturefocus>
+						<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
 						<texturenofocus colordiffuse="PrimaryT" border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
 						<include>SettingsCategoryDefaultButtonVars</include>
 						<label>$LOCALIZE[12600]</label>
@@ -1474,6 +1570,14 @@
 						<onclick>Skin.ToggleSetting(alternatelivetvosd)</onclick>
 						<label>$LOCALIZE[49257]</label>
 					</control>
+					<control type="radiobutton" id="10004">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(alternatelivetvplot)</selected>
+						<onclick>Skin.ToggleSetting(alternatelivetvplot)</onclick>
+						<visible>Skin.HasSetting(alternatelivetvosd)</visible>
+						<label> - Show Plot</label>
+					</control>
 				</control>
 				<!-- ================ -->
 				<!-- Alternate librarys -->
@@ -1489,6 +1593,15 @@
 						<onclick>Skin.ToggleSetting(UseKodiLibrary)</onclick>
 						<onclick>XBMC.ReloadSkin()</onclick>
 						<label>$LOCALIZE[49256]</label>
+					</control>
+					<control type="radiobutton" id="11002">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(UseKodiPicturesLibrary)</selected>
+						<onclick>Skin.ToggleSetting(UseKodiPicturesLibrary)</onclick>
+						<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
+						<onclick>XBMC.ReloadSkin()</onclick>
+						<label>Use Kodi Pictures Library</label>
 					</control>
 				</control>
 				<!-- =============== -->

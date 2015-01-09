@@ -7,6 +7,7 @@
 			<visible>!Window.IsActive(pvrguideinfo)</visible>
 			<visible>!Window.IsActive(RecordPrefs.xml)</visible>
 			<visible>!Window.IsActive(DeleteTimer.xml)</visible>
+			<visible>!Window.IsActive(DialogYesNo.xml)</visible>
 			<include>OptionsShutdownAnimation</include>
 			<animation effect="slide" start="0" end="478" time="400" tween="sine" easing="inout" condition="ControlGroup(9001).HasFocus">Conditional</animation>
 			<include>listEndAnimation</include>

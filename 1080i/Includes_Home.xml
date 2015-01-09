@@ -9374,7 +9374,7 @@
                 <posx>200</posx>
                 <posy>30</posy>
                 <height>55</height>
-                <width>310</width>
+                <width>350</width>
                 <font>Details</font>
                 <label>$LOCALIZE[19157]</label>
                 <textcolor>$VAR[FocusModHomeColourVar]</textcolor>
@@ -9385,7 +9385,7 @@
                 <description>NextRecordingDateTime</description>
                 <posx>160</posx>
                 <posy>65</posy>
-                <width>450</width>
+                <width>500</width>
                 <height>55</height>
                 <label>$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19126] - ]</label>
                 <textcolor>PrimaryOSD</textcolor>
@@ -9428,7 +9428,7 @@
                 <posx>200</posx>
                 <posy>30</posy>
                 <height>55</height>
-                <width>310</width>
+                <width>350</width>
                 <label>$LOCALIZE[19158]</label>
                 <textcolor>$VAR[FocusModHomeColourVar]</textcolor>
                 <align>left</align>
@@ -9438,7 +9438,7 @@
                 <description>NowRecordingDateTime</description>
                 <posx>160</posx>
                 <posy>65</posy>
-                <width>450</width>
+                <width>500</width>
                 <height>55</height>
                 <label>$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]</label>
                 <textcolor>PrimaryOSD</textcolor>

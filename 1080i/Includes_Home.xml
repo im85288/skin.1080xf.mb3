@@ -9318,21 +9318,20 @@
             <visible>Container(20).HasFocus(9) + !PVR.IsRecording + PVR.HasNonRecordingTimer + Skin.HasSetting(HideHomeProfileInfo)</visible>
             <control type="image" description="Recording Channel Icon">
                 <posx>10</posx>
-                <posy>15</posy>
+                <posy>20</posy>
                 <width>140</width>
                 <height>140</height>
                 <aspectratio>keep</aspectratio>
-                <texture background="true" fallback="img/DefaultVideoCover.png">$INFO[PVR.NextRecordingChannelIcon]</texture>
-                <bordertexture border="8">img/ThumbBorder.png</bordertexture>
+                <texture background="true" fallback="windows/pvr/defaultchannel.png">$INFO[PVR.NextRecordingChannelIcon]</texture>
                 <bordersize>10</bordersize>
             </control>
             <control type="image">
                 <posx>160</posx>
                 <posy>40</posy>
-                <width>30</width>
-                <height>30</height>
+                <width>35</width>
+                <height>35</height>
                 <aspectratio>keep</aspectratio>
-                <texture>img/PVR-HasTimer.png</texture>
+                <texture>special://skin/new_pvr/PVR-HasTimer.png</texture>
             </control>
             <control type="label">
                 <description>Next Timer Header label</description>
@@ -9350,7 +9349,7 @@
                 <description>NextRecordingDateTime</description>
                 <posx>160</posx>
                 <posy>65</posy>
-                <width>420</width>
+                <width>450</width>
                 <height>55</height>
                 <label>$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19126] - ]</label>
                 <textcolor>PrimaryOSD</textcolor>
@@ -9373,12 +9372,11 @@
             <visible>Container(20).HasFocus(9) + [PVR.IsRecording] + Skin.HasSetting(HideHomeProfileInfo)</visible>
             <control type="image" description="Recording Channel Icon">
                 <posx>10</posx>
-                <posy>15</posy>
+                <posy>20</posy>
                 <width>140</width>
                 <height>140</height>
                 <aspectratio>keep</aspectratio>
-                <texture background="true" fallback="img/DefaultVideoCover.png">$INFO[PVR.NowRecordingChannelIcon]</texture>
-                <bordertexture border="8">img/ThumbBorder.png</bordertexture>
+                <texture background="true" fallback="windows/pvr/defaultchannel.png">$INFO[PVR.NowRecordingChannelIcon]</texture>
                 <bordersize>10</bordersize>
             </control>
             <control type="image">
@@ -9387,7 +9385,7 @@
                 <width>35</width>
                 <height>35</height>
                 <aspectratio>keep</aspectratio>
-                <texture>img/PVR-IsRecording.png</texture>
+                <texture>special://skin/new_pvr/PVR-IsRecording.png</texture>
             </control>
             <control type="label">
                 <description>Is Recording Header label</description>
@@ -9404,7 +9402,7 @@
                 <description>NowRecordingDateTime</description>
                 <posx>160</posx>
                 <posy>65</posy>
-                <width>420</width>
+                <width>450</width>
                 <height>55</height>
                 <label>$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]</label>
                 <textcolor>PrimaryOSD</textcolor>

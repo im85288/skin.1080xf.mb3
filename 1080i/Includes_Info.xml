@@ -104,7 +104,7 @@
 				<!-- <control type="label"> <description>Date label</description> <posx>1685</posx> <posy>1019</posy> <width>180</width> <height>100</height> <label>$INFO[System.Date]</label> <font>Font-Condensed-S26</font> <textcolor>FFFFFFFF</textcolor> <shadowcolor>22000000</shadowcolor> <align>left</align> <aligny>top</aligny> <scroll>false</scroll> <animation effect="slide" end="60" time="300" tween="sine" easing="inout" condition="!Weather.IsFetched | [stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]">Conditional</animation> </control> -->
 			</control>
 			<control type="group">
-				<visible>PVR.IsRecording</visible>
+				<visible>PVR.IsRecording + !Container(20).HasFocus(9)</visible>
 				<animation effect="slide" end="-60" time="300" tween="sine" easing="inout" condition="Window.IsActive(mutebug)">Conditional</animation>
 				<include>visiblehidefadeinfo</include>
 				<control type="image">
@@ -131,7 +131,7 @@
 				<texture colordiffuse="PrimaryT">windows/pvr/timer.png</texture>
 				<animation effect="slide" end="-60" time="300" tween="sine" easing="inout" condition="Window.IsActive(mutebug)">Conditional</animation>
 				<include>visiblehidefadeinfo</include>
-				<visible>!PVR.IsRecording + PVR.HasTimer</visible>
+				<visible>!PVR.IsRecording + PVR.HasTimer + !Container(20).HasFocus(9)</visible>
 			</control>
 			<control type="image">
 				<description>Mute</description>

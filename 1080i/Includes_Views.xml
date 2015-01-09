@@ -137,7 +137,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>Skin.HasSetting(ShowViewHeader)</visible>
+				<visible>Skin.HasSetting(ShowViewHeader) + !Window.IsActive(movieinformation)</visible>
 				<posx>0</posx>
 				<posy>0</posy>
 				<control type="group">
@@ -183,7 +183,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>Skin.HasSetting(ShowViewHeader)</visible>
+				<visible>Skin.HasSetting(ShowViewHeader) + !Window.IsActive(movieinformation)</visible>
 				<posx>35</posx>
 				<posy>110</posy>
 				<control type="grouplist">

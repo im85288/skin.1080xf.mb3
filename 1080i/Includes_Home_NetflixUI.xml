@@ -5,7 +5,7 @@
 		<control type="group">
 			<visible>!Window.IsActive(favourites)</visible>
 			<control type="button" id="525">
-				<onfocus>SetFocus(777)</onfocus>
+				<onfocus>SetFocus(776)</onfocus>
 				<visible>true</visible>
 			</control>
 			<control type="label">

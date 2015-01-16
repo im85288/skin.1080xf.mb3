@@ -592,6 +592,13 @@
 						<onclick>Skin.ToggleSetting(ShowMusicThumbs)</onclick>
 						<label>$LOCALIZE[49265]</label>
 					</control>
+					<control type="radiobutton" id="2010">
+                        <width>1210</width>
+                        <include>SettingsCategoryRadioButtonVars</include>
+                        <selected>Skin.HasSetting(discart2)</selected>
+                        <onclick>Skin.ToggleSetting(discart2)</onclick>
+                        <label>Show Spinning Disc on Home Screen</label>
+                    </control>
 					<control type="group" id="2007">
 						<description>Fake spin control</description>
 						<width>1210</width>

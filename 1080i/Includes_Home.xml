@@ -9457,5 +9457,18 @@
                 <label>[COLOR=White]$INFO[PVR.NowRecordingTitle][/COLOR][COLOR=White] ([/COLOR]$INFO[PVR.NowRecordingChannel][COLOR=White])[/COLOR]</label>
             </control>
         </control>
+        <!--Spinning DiscArt-->
+        <control type="image">
+				<animation effect="rotate" center="auto" start="360" end="0" time="4000" loop="true" condition="!Player.paused">Conditional</animation>
+				<description>discart</description>
+				<posx>1750</posx>
+				<posy>5</posy>
+				<width>140</width>
+				<height>140</height>
+				<texture background="true">$INFO[Player.Art(discart)]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>Skin.HasSetting(discart2) + Window.IsActive(home) + !Window.IsActive(infodialog)</visible>
+				<visible>!IsEmpty(Player.Art(discart))</visible>
+		</control>
 	</include>
 </includes>

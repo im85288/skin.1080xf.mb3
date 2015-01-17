@@ -164,6 +164,19 @@
 							<visible>!VideoPlayer.Content(LiveTV)</visible>
 							<visible>Skin.HasSetting(ClearArt.Enabled)</visible>
 						</control>
+						<control type="image">
+							<animation effect="rotate" center="auto" start="360" end="0" time="3500" loop="true" condition="Window.IsActive(fullscreeninfo)">Conditional</animation>
+							<description>discart</description>
+							<posx>33</posx>
+							<posy>645</posy>
+							<width>264</width>
+							<height>264</height>
+							<texture background="true">$INFO[Player.Art(discart)]</texture>
+							<aspectratio align="center">keep</aspectratio>
+							<visible>!VideoPlayer.Content(LiveTV)</visible>
+							<visible>!IsEmpty(Player.Art(discart))</visible>
+							<visible>Skin.HasSetting(discart)</visible>
+						</control>
 						<control type="group">
 							<visible>IsEmpty(Window.Property(ExtendPlot))</visible>
 							<include>visiblehidefadeinfo</include>

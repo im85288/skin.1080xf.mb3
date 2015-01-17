@@ -592,6 +592,13 @@
 						<onclick>Skin.ToggleSetting(ShowMusicThumbs)</onclick>
 						<label>$LOCALIZE[49265]</label>
 					</control>
+					<control type="radiobutton" id="2010">
+                        <width>1210</width>
+                        <include>SettingsCategoryRadioButtonVars</include>
+                        <selected>Skin.HasSetting(discart2)</selected>
+                        <onclick>Skin.ToggleSetting(discart2)</onclick>
+                        <label>Show Spinning Disc on Home Screen</label>
+                    </control>
 					<control type="group" id="2007">
 						<description>Fake spin control</description>
 						<width>1210</width>
@@ -1334,6 +1341,13 @@
 						<onclick>Skin.ToggleSetting(musicvis.hidetext)</onclick>
 						<label>$LOCALIZE[49237]</label>
 					</control>
+                    <control type="radiobutton" id="8009">
+                        <width>1210</width>
+                        <include>SettingsCategoryRadioButtonVars</include>
+                        <selected>Skin.HasSetting(discart)</selected>
+                        <onclick>Skin.ToggleSetting(discart)</onclick>
+                        <label>Show Spinning Disc</label>
+                    </control>
 				</control>
 				<!-- Background Settings -->
 				<control type="grouplist" id="5">

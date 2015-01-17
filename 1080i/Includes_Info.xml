@@ -367,6 +367,7 @@
 						<effect type="zoom" start="100" end="50" center="50,77" tween="sine" easing="inout" time="300" />
 					</animation>
 					<visible>Player.Paused</visible>
+					<visible>IsEmpty(Player.Art(discart)) | !Skin.HasSetting(discart2) | !Window.IsActive(home)</visible>
 				</control>
 				<control type="image">
 					<description>Now Playing - Play</description>
@@ -384,6 +385,7 @@
 						<effect type="zoom" start="100" end="50" center="50,77" tween="sine" easing="inout" time="300" />
 					</animation>
 					<visible>!Player.Paused</visible>
+					<visible>IsEmpty(Player.Art(discart)) | !Skin.HasSetting(discart2) | !Window.IsActive(home)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -391,6 +393,7 @@
 					<width>100</width>
 					<height>100</height>
 					<texture>dialogs/extendedprogress/loading-back.png</texture>
+					<visible>IsEmpty(Player.Art(discart)) | !Skin.HasSetting(discart2) | !Window.IsActive(home)</visible>
 				</control>
 				<control type="progress" id="933">
 					<texturebg>-</texturebg>
@@ -407,6 +410,7 @@
 					<height>100</height>
 					<texture>$INFO[Control.GetLabel(933),overlays/nowplaying/progress/p,.png]</texture>
 					<visible>!IsEmpty(Player.Duration)</visible>
+					<visible>IsEmpty(Player.Art(discart)) | !Skin.HasSetting(discart2) | !Window.IsActive(home)</visible>
 				</control>
 				<control type="image">
 					<description>Loading indicator</description>
@@ -417,6 +421,7 @@
 					<texture>dialogs/search/loading.png</texture>
 					<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="!Player.Paused">Conditional</animation>
 					<visible>IsEmpty(Player.Duration)</visible>
+					<visible>IsEmpty(Player.Art(discart)) | !Skin.HasSetting(discart2) | !Window.IsActive(home)</visible>
 				</control>
 			</control>
 		</control>
@@ -527,6 +532,18 @@
 				</control>
 			</control>
 		</control>
+		<!--<control type="image">
+					<animation effect="rotate" center="auto" start="360" end="0" time="4000" loop="true" condition="!Player.paused">Conditional</animation>
+					<description>discart</description>
+					<posx>1750</posx>
+					<posy>5</posy>
+					<texture background="true">$INFO[Player.Art(discart)]</texture>
+					<width>135</width>
+					<height>135</height>
+					<aspectratio align="center">keep</aspectratio>
+					<visible>Skin.HasSetting(discart2) + !Window.IsActive(infodialog) + Window.IsActive(home)</visible>
+					<visible>!IsEmpty(Player.Art(discart))</visible>
+			</control> -->
 	</include>
 	<include name="Common-Home-Info">
 		<include>Common-Clock</include>

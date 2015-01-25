@@ -29,7 +29,7 @@
 				<top>5</top>
 				<width>1090</width>
 				<height>680</height>
-				<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+				<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
@@ -62,7 +62,7 @@
 				<top>10</top>
 				<width>795</width>
 				<height>668</height>
-				<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+				<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 			</control>
 			<control type="image">
 				<left>268</left>
@@ -150,7 +150,7 @@
 						<top>0</top>
 						<width>260</width>
 						<height>55</height>
-						<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+						<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 						<animation effect="fade" end="50" time="10">Unfocus</animation>
 					</control>
 					<control type="image"> <!--focused background left edge -->
@@ -158,7 +158,7 @@
 						<posy>0</posy>
 						<width>5</width>
 						<height>55</height>
-						<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+						<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 					</control>
 					<control type="label">
 						<left>10</left>
@@ -424,7 +424,7 @@
 								<width>786</width>
 								<height>38</height>
 								<visible>Control.HasFocus(1100)</visible>
-								<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+								<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 							</control>
 							<control type="label">
 								<left>40</left>
@@ -1248,7 +1248,7 @@
 				<width>230</width>
 				<height>40</height>
 				<visible>true</visible>
-				<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+				<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
 				<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
 				<label></label>
 				<font>Font-Condensed-S23</font>
@@ -1268,7 +1268,7 @@
 				<width>230</width>
 				<height>40</height>
 				<visible>true</visible>
-				<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+				<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
 				<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
 				<label></label>
 				<font>Font-Condensed-S23</font>
@@ -1288,7 +1288,7 @@
 				<width>230</width>
 				<height>40</height>
 				<visible>true</visible>
-				<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+				<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
 				<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
 				<label></label>
 				<font>Font-Condensed-S23</font>
@@ -1308,7 +1308,7 @@
 				<width>230</width>
 				<height>40</height>
 				<visible>true</visible>
-				<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+				<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
 				<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
 				<label></label>
 				<font>Font-Condensed-S23</font>
@@ -1328,7 +1328,7 @@
 				<width>230</width>
 				<height>40</height>
 				<visible>true</visible>
-				<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+				<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
 				<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
 				<label></label>
 				<font>Font-Condensed-S23</font>

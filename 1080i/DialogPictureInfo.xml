@@ -184,7 +184,7 @@
 								<posy>0</posy>
 								<width>5</width>
 								<height>60</height>
-								<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+								<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 							</control>
 							<control type="label">
 								<posx>20</posx>

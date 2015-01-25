@@ -18,14 +18,14 @@
                 <top>5</top>
                 <width>600</width>
                 <height>174</height>
-               <texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+               <texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
             </control>
             <control type="image">
                 <left>5</left>
                 <top>5</top>
                 <width>600</width>
                 <height>174</height>
-               <texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+               <texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
             </control>
             <control type="group">
                 <left>17</left>

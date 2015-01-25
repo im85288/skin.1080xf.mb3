@@ -100,7 +100,7 @@
 				<posy>60</posy>
 				<width>515</width>
 				<height>76</height>
-				<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+				<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="label">

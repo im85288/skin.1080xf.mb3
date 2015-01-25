@@ -289,7 +289,7 @@
 					<posy>573</posy>
 					<width>638</width>
 					<height>335</height>
-					<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+					<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 				</control>
 				<!-- Fanart / Thumb / Overlay -->
 				<control type="group">
@@ -455,10 +455,9 @@
 							<posy>0</posy>
 							<width>634</width>
 							<height>82</height>
-							<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+							<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 							<animation effect="slide" start="0,83" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(9333).OnPrevious">Focus</animation>
 							<animation effect="slide" start="0,-83" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(9333).OnNext">Focus</animation>
-							<include>visiblehidefadeinfo</include>
 							<visible>Control.HasFocus(9333)</visible>
 						</control>
 						<control type="image"> <!--focused background left edge -->
@@ -466,7 +465,7 @@
 							<posy>0</posy>
 							<width>5</width>
 							<height>82</height>
-							<texture condition="Control.HasFocus(9333)" colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+							<texture condition="Control.HasFocus(9333)" colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="label">
 							<posx>30</posx>
@@ -1030,17 +1029,16 @@
 								<posy>0</posy>
 								<width>1190</width>
 								<height>60</height>
-								<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+								<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 								<animation effect="slide" start="0,83" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(9333).OnPrevious">Focus</animation>
 								<animation effect="slide" start="0,-83" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(9333).OnNext">Focus</animation>
-								<include>visiblehidefadeinfo</include>
 							</control>
 							<control type="image"> <!--focused background left edge -->
 								<posx>0</posx>
 								<posy>0</posy>
 								<width>5</width>
 								<height>60</height>
-								<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+								<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 							</control>
 							<control type="label">
 								<posx>10</posx>

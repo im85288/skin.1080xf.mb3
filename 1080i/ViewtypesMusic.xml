@@ -23,7 +23,7 @@
 				<posy>187</posy>
 				<height>704</height>
 				<width>1424</width>
-				<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+				<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 			</control>
 			<control type="image">
 				<description>Shadow</description>
@@ -415,9 +415,7 @@
 						<posy>0</posy>
 						<width>1420</width>
 						<height>99</height>
-						<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
-						<include>defaultfocusanim</include>
-						<include>visiblehidefadeinfo</include>
+						<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 						<visible>Control.HasFocus(50) + !Window.IsVisible(songinformation)</visible>
 					</control>
 					<control type="image"> <!--focused background left edge -->
@@ -425,7 +423,7 @@
 						<posy>0</posy>
 						<width>5</width>
 						<height>99</height>
-						<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+						<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 					</control>
 					<control type="image">
 						<posx>30</posx>
@@ -520,9 +518,7 @@
 						<posy>0</posy>
 						<width>1420</width>
 						<height>99</height>
-						<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
-						<include>defaultfocusanim</include>
-						<include>visiblehidefadeinfo</include>
+						<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 						<visible>Control.HasFocus(50)</visible>
 					</control>
 					<control type="image"> <!--focused background left edge -->
@@ -530,7 +526,7 @@
 						<posy>0</posy>
 						<width>5</width>
 						<height>99</height>
-						<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+						<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 					</control>
 					<control type="image">
 						<posx>30</posx>
@@ -601,9 +597,7 @@
 						<posy>0</posy>
 						<width>1420</width>
 						<height>99</height>
-						<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
-						<include>defaultfocusanim</include>
-						<include>visiblehidefadeinfo</include>
+						<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 						<visible>Control.HasFocus(50)</visible>
 					</control>
 					<control type="image"> <!--focused background left edge -->
@@ -611,7 +605,7 @@
 						<posy>0</posy>
 						<width>5</width>
 						<height>99</height>
-						<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+						<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 					</control>
 					<control type="image">
 						<posx>30</posx>
@@ -728,9 +722,7 @@
 						<posy>0</posy>
 						<width>1420</width>
 						<height>99</height>
-						<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
-						<include>defaultfocusanim</include>
-						<include>visiblehidefadeinfo</include>
+						<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 						<visible>Control.HasFocus(50) + !Window.IsVisible(songinformation)</visible>
 					</control>
 					<control type="image"> <!--focused background left edge -->
@@ -738,7 +730,7 @@
 						<posy>0</posy>
 						<width>5</width>
 						<height>99</height>
-						<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+						<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 					</control>
 					<control type="image">
 						<posx>30</posx>
@@ -943,9 +935,8 @@
 						<posy>-3</posy>
 						<width>580</width>
 						<height>484</height>
-						<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+						<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 						<visible>IsEmpty(Container(52).ListItem.Art(fanart))</visible>
-						<include>visiblehidefadeinfo</include>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -1062,7 +1053,7 @@
 					<posy>394</posy>
 					<width>634</width>
 					<height>484</height>
-					<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+					<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 				</control>
 				<control type="list" id="52">
 					<visible>Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Window.IsVisible(MusicPlaylist)</visible>
@@ -1203,9 +1194,7 @@
 							<posy>0</posy>
 							<width>630</width>
 							<height>59</height>
-							<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
-							<include>listfocusanim</include>
-							<include>visiblehidefadeinfo</include>
+							<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 							<visible>Control.HasFocus(52)</visible>
 						</control>
 						<control type="group">
@@ -1239,9 +1228,7 @@
 							<posy>0</posy>
 							<width>630</width>
 							<height>59</height>
-							<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
-							<include>listfocusanim</include>
-							<include>visiblehidefadeinfo</include>
+							<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 							<visible>Control.HasFocus(52)</visible>
 						</control>
 						<control type="group">
@@ -1302,9 +1289,7 @@
 								<posy>0</posy>
 								<width>630</width>
 								<height>59</height>
-								<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
-								<include>listfocusanim</include>
-								<include>visiblehidefadeinfo</include>
+								<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 								<visible>Control.HasFocus(52)</visible>
 							</control>
 							<control type="image">

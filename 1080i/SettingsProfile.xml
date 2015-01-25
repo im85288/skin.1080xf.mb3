@@ -15,7 +15,7 @@
 				<posy>187</posy>
 				<height>704</height>
 				<width>1214</width>
-				<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+				<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 			</control>
 			<control type="image">
 				<description>Shadow</description>
@@ -35,7 +35,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$LOCALIZE[20096]</label>
-				<texturefocus colordiffuse="TertiaryM" border="150,3,150,3">windows/common/white.png</texturefocus>
+				<texturefocus colordiffuse="TertiaryM" border="150,3,150,3">special://skin/extras/backgrounds/white.png</texturefocus>
 				<texturenofocus colordiffuse="TertiaryM" border="90,3,90,3">views/list/other/separator.png</texturenofocus>
 				<textcolor>SecondaryT</textcolor>
 				<focusedcolor>$VAR[FocusModColourVar]</focusedcolor>
@@ -53,7 +53,7 @@
 				<width>5</width>
 				<height>77</height>
 				<visible>Control.HasFocus(4)</visible>
-				<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+				<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 			</control>
 			<control type="button" id="5">
 				<description>Auto login button</description>
@@ -66,7 +66,7 @@
 				<aligny>center</aligny>
 				<label>$LOCALIZE[42260]</label>
 				<label2>$INFO[System.ProfileAutoLogin]</label2>
-				<texturefocus colordiffuse="TertiaryM" border="150,3,150,3">windows/common/white.png</texturefocus>
+				<texturefocus colordiffuse="TertiaryM" border="150,3,150,3">special://skin/extras/backgrounds/white.png</texturefocus>
 				<texturenofocus colordiffuse="TertiaryM" border="90,3,90,3">views/list/other/separator.png</texturenofocus>
 				<textcolor>SecondaryT</textcolor>
 				<focusedcolor>$VAR[FocusModColourVar]</focusedcolor>
@@ -83,7 +83,7 @@
 				<width>5</width>
 				<height>77</height>
 				<visible>Control.HasFocus(5)</visible>
-				<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+				<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 			</control>
 			<control type="label" id="6">
 				<description>Profiles label</description>
@@ -158,14 +158,14 @@
 						<control type="image">
 							<height>77</height>
 							<width>1210</width>
-							<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+							<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="image"> <!--focused background left edge -->
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>5</width>
 							<height>77</height>
-							<texture condition="Control.HasFocus(30)" colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+							<texture condition="Control.HasFocus(30)" colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="image">
 							<posx>35</posx>

@@ -57,7 +57,7 @@
 						<posy>215</posy>
 						<width>1326</width>
 						<height>676</height>
-						<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+						<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 					</control>
 					<control type="list" id="50">
 						<posx>150</posx>
@@ -229,10 +229,9 @@
 								<posy>0</posy>
 								<width>1322</width>
 								<height>95</height>
-								<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+								<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 								<animation effect="slide" start="0,96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(50).OnPrevious">focus</animation>
 								<animation effect="slide" start="0,-96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(50).OnNext">focus</animation>
-								<include>visiblehidefadeinfo</include>
 								<visible>Control.HasFocus(50)</visible>
 							</control>
 							<control type="image"> <!--focused background left edge -->
@@ -241,7 +240,7 @@
 								<width>5</width>
 								<height>95</height>
 								<visible>Control.HasFocus(50)</visible>
-								<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+								<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 							</control>
 							<control type="image">
 								<posx>1220</posx>
@@ -411,7 +410,7 @@
 							<posy>-3</posy>
 							<width>580</width>
 							<height>676</height>
-							<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+							<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="group">
 							<visible>Container(52).ListItem.HasEpg</visible>
@@ -635,7 +634,7 @@
 						<posy>215</posy>
 						<width>1026</width>
 						<height>676</height>
-						<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+						<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 					</control>
 					<control type="list" id="52">
 						<posx>150</posx>
@@ -807,10 +806,9 @@
 								<posy>0</posy>
 								<width>1022</width>
 								<height>95</height>
-								<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+								<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 								<animation effect="slide" start="0,96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(52).OnPrevious">focus</animation>
 								<animation effect="slide" start="0,-96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(52).OnNext">focus</animation>
-								<include>visiblehidefadeinfo</include>
 								<visible>Control.HasFocus(52)</visible>
 							</control>
 							<control type="image"> <!--focused background left edge -->
@@ -819,7 +817,7 @@
 								<width>5</width>
 								<height>95</height>
 								<visible>Control.HasFocus(52)</visible>
-								<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+								<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 							</control>
 							<control type="image">
 								<posx>930</posx>
@@ -984,7 +982,7 @@
 						<top>215</top>
 						<width>1600</width>
 						<height>760</height>
-						<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+						<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 					</control>
 					<control type="panel" id="53">
 						<left>150</left>
@@ -1109,15 +1107,14 @@
 								<control type="image">
 									<width>395</width>
 									<height>155</height>
-									<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
-									<include>visiblehidefadeinfo</include>
+									<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 									<visible>Control.HasFocus(53)</visible>
 								</control>
 								<control type="image"> <!--focused background left edge -->
 									<width>5</width>
 									<height>155</height>
 									<visible>Control.HasFocus(53)</visible>
-									<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+									<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 								</control>
 								<control type="image">
 									<left>285</left>

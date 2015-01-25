@@ -11,7 +11,7 @@
 				<posy>50</posy>
 				<width>800</width>
 				<height>900</height>
-				<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+				<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 			</control>
 			<control type="group">
 				<visible>!Window.IsActive(DialogPVRGuideInfo.xml)</visible>
@@ -242,10 +242,9 @@
 							<posy>0</posy>
 							<width>780</width>
 							<height>94</height>
-							<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+							<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<visible>Control.HasFocus(11)</visible>
-							<include>visiblehidefadeinfo</include>
 						</control>
 						<control type="image"> <!--focused background left edge -->
 							<posx>0</posx>
@@ -253,7 +252,7 @@
 							<width>5</width>
 							<height>94</height>
 							<visible>Control.HasFocus(11)</visible>
-							<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+							<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="image">
 							<posx>20</posx>

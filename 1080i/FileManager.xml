@@ -107,7 +107,7 @@
 						<posy>-3</posy>
 						<width>756</width>
 						<height>604</height>
-						<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+						<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 					</control>
 					<control type="list" id="20">
 						<description>Left File List</description>
@@ -209,14 +209,13 @@
 								<posy>0</posy>
 								<width>752</width>
 								<height>59</height>
-								<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+								<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 								<animation type="Focus" condition="Container(20).OnNext" reversible="false">
 									<effect type="slide" start="0,-60" end="0,0" time="300" tween="back" easing="out" />
 								</animation>
 								<animation type="Focus" condition="Container(20).OnPrevious" reversible="false">
 									<effect type="slide" start="0,60" end="0,0" time="300" tween="back" easing="out" />
 								</animation>
-								<include>visiblehidefadeinfo</include>
 								<visible>Control.HasFocus(20)</visible>
 							</control>
 							<control type="image">
@@ -383,7 +382,7 @@
 						<posy>-3</posy>
 						<width>756</width>
 						<height>604</height>
-						<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+						<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 					</control>
 					<control type="list" id="21">
 						<description>Right File List</description>
@@ -473,14 +472,13 @@
 								<posy>0</posy>
 								<width>752</width>
 								<height>59</height>
-								<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+								<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 								<animation type="Focus" condition="Container(21).OnNext" reversible="false">
 									<effect type="slide" start="0,-60" end="0,0" time="300" tween="back" easing="out" />
 								</animation>
 								<animation type="Focus" condition="Container(21).OnPrevious" reversible="false">
 									<effect type="slide" start="0,60" end="0,0" time="300" tween="back" easing="out" />
 								</animation>
-								<include>visiblehidefadeinfo</include>
 								<visible>Control.HasFocus(21)</visible>
 							</control>
 							<control type="image">

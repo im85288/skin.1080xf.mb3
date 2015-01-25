@@ -39,7 +39,7 @@
 							<posy>-3</posy>
 							<width>580</width>
 							<height>676</height>
-							<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+							<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="label">
 							<posx>30</posx>
@@ -129,7 +129,7 @@
 						<posy>215</posy>
 						<width>1026</width>
 						<height>676</height>
-						<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+						<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 					</control>
 					<control type="list" id="50">
 						<posx>150</posx>
@@ -362,10 +362,9 @@
 								<posy>0</posy>
 								<width>1022</width>
 								<height>95</height>
-								<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+								<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 								<animation effect="slide" start="0,96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(50).OnPrevious">focus</animation>
 								<animation effect="slide" start="0,-96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(50).OnNext">focus</animation>
-								<include>visiblehidefadeinfo</include>
 								<visible>Control.HasFocus(50)</visible>
 							</control>
 							<control type="image"> <!--focused background left edge -->
@@ -374,7 +373,7 @@
 								<width>5</width>
 								<height>95</height>
 								<visible>Control.HasFocus(50)</visible>
-								<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+								<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 							</control>
 							<control type="group">
 								<animation type="Focus" condition="Container(50).OnNext | Container(50).OnPrevious" reversible="false">
@@ -489,10 +488,9 @@
 								<posy>0</posy>
 								<width>1022</width>
 								<height>95</height>
-								<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+								<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 								<animation effect="slide" start="0,96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(50).OnPrevious">focus</animation>
 								<animation effect="slide" start="0,-96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(50).OnNext">focus</animation>
-								<include>visiblehidefadeinfo</include>
 								<visible>Control.HasFocus(50)</visible>
 							</control>
 							<control type="image"> <!--focused background left edge -->
@@ -501,7 +499,7 @@
 								<width>5</width>
 								<height>95</height>
 								<visible>Control.HasFocus(50)</visible>
-								<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+								<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 							</control>
 							<control type="group">
 								<animation type="Focus" condition="Container(50).OnNext | Container(50).OnPrevious" reversible="false">

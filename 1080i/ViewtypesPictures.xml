@@ -26,7 +26,7 @@
                 <posy>187</posy>
                 <height>704</height>
                 <width>1424</width>
-                <texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+                <texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
             </control>
             <control type="image">
                 <description>Shadow</description>
@@ -138,9 +138,7 @@
                         <posy>0</posy>
                         <width>1420</width>
                         <height>99</height>
-                        <texture colordiffuse="TertiaryM">windows/common/white.png</texture>
-                        <include>defaultfocusanim</include>
-                        <include>visiblehidefadeinfo</include>
+                        <texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
                         <visible>Control.HasFocus(50)</visible>
                     </control>
                     <control type="image"> <!--focused background left edge -->
@@ -149,7 +147,7 @@
 						<width>5</width>
 						<height>99</height>
 						<visible>Control.HasFocus(50)</visible>
-						<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+						<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 					</control>
                     <control type="image">
                         <posx>30</posx>

@@ -35,7 +35,7 @@
 				<posy>160</posy>
 				<width>462</width>
 				<height>320</height>
-				<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+				<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 			</control>
 			<control type="multiimage">
 				<posx>-27</posx>
@@ -54,7 +54,7 @@
 				<posy>88</posy>
 				<width>452</width>
 				<height>76</height>
-				<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+				<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
 			</control>
 			<control type="image">
 				<description>Small weather</description>
@@ -204,7 +204,7 @@
 				<posy>48</posy>
 				<width>255</width>
 				<height>285</height>
-				<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+				<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 			</control>
 			<control type="group">
 				<visible>!IsEmpty(Skin.String(WeatherFanartDir)) + Skin.HasSetting(ShowDailyWeatherFanart)</visible>
@@ -226,7 +226,7 @@
 					<posy>-3</posy>
 					<width>245</width>
 					<height>56</height>
-					<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+					<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
 				</control>
 				<control type="label">
 					<description>day label</description>
@@ -308,7 +308,7 @@
 				<posy>48</posy>
 				<width>255</width>
 				<height>285</height>
-				<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+				<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 			</control>
 			<control type="group">
 				<visible>!IsEmpty(Skin.String(WeatherFanartDir)) + Skin.HasSetting(ShowDailyWeatherFanart)</visible>
@@ -330,7 +330,7 @@
 					<posy>-3</posy>
 					<width>245</width>
 					<height>56</height>
-					<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+					<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
 				</control>
 				<control type="label">
 					<description>day label</description>
@@ -412,7 +412,7 @@
 				<posy>48</posy>
 				<width>255</width>
 				<height>285</height>
-				<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+				<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 			</control>
 			<control type="group">
 				<visible>!IsEmpty(Skin.String(WeatherFanartDir)) + Skin.HasSetting(ShowDailyWeatherFanart)</visible>
@@ -434,7 +434,7 @@
 					<posy>-3</posy>
 					<width>245</width>
 					<height>56</height>
-					<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+					<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
 				</control>
 				<control type="label">
 					<description>day label</description>
@@ -516,7 +516,7 @@
 				<posy>48</posy>
 				<width>255</width>
 				<height>285</height>
-				<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+				<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 			</control>
 			<control type="group">
 				<visible>!IsEmpty(Skin.String(WeatherFanartDir)) + Skin.HasSetting(ShowDailyWeatherFanart)</visible>
@@ -538,7 +538,7 @@
 					<posy>-3</posy>
 					<width>245</width>
 					<height>56</height>
-					<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+					<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
 				</control>
 				<control type="label">
 					<description>day label</description>
@@ -620,7 +620,7 @@
 				<posy>48</posy>
 				<width>255</width>
 				<height>285</height>
-				<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+				<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 			</control>
 			<control type="group">
 				<visible>!IsEmpty(Skin.String(WeatherFanartDir)) + Skin.HasSetting(ShowDailyWeatherFanart)</visible>
@@ -642,7 +642,7 @@
 					<posy>-3</posy>
 					<width>245</width>
 					<height>56</height>
-					<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+					<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
 				</control>
 				<control type="label">
 					<description>day label</description>
@@ -860,7 +860,7 @@
 					<posy>256</posy>
 					<width>492</width>
 					<height>320</height>
-					<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+					<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 				</control>
 				<control type="multiimage">
 					<posx>115</posx>
@@ -880,7 +880,7 @@
 					<posy>184</posy>
 					<width>482</width>
 					<height>76</height>
-					<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+					<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
 				</control>
 				<control type="label">
 					<description>current condition label</description>
@@ -1069,8 +1069,8 @@
 							<posy>256</posy>
 							<width>362</width>
 							<height>320</height>
-							<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
-							<texturenofocus colordiffuse="PrimaryBG">windows/common/white.png</texturenofocus>
+							<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
+							<texturenofocus colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texturenofocus>
 							<onleft>224</onleft>
 							<onright>212</onright>
 							<onup>201</onup>
@@ -1095,7 +1095,7 @@
 							<posy>184</posy>
 							<width>352</width>
 							<height>76</height>
-							<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+							<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="button">
 							<description>current temp value</description>
@@ -1213,8 +1213,8 @@
 							<posy>256</posy>
 							<width>362</width>
 							<height>320</height>
-							<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
-							<texturenofocus colordiffuse="PrimaryBG">windows/common/white.png</texturenofocus>
+							<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
+							<texturenofocus colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texturenofocus>
 							<onleft>211</onleft>
 							<onright>213</onright>
 							<onup>201</onup>
@@ -1239,7 +1239,7 @@
 							<posy>184</posy>
 							<width>352</width>
 							<height>76</height>
-							<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+							<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="button">
 							<description>current temp value</description>
@@ -1358,8 +1358,8 @@
 							<posy>256</posy>
 							<width>362</width>
 							<height>320</height>
-							<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
-							<texturenofocus colordiffuse="PrimaryBG">windows/common/white.png</texturenofocus>
+							<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
+							<texturenofocus colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texturenofocus>
 							<onleft>212</onleft>
 							<onright>214</onright>
 							<onup>201</onup>
@@ -1384,7 +1384,7 @@
 							<posy>184</posy>
 							<width>352</width>
 							<height>76</height>
-							<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+							<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="button">
 							<description>current temp value</description>
@@ -1504,8 +1504,8 @@
 							<posy>256</posy>
 							<width>362</width>
 							<height>320</height>
-							<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
-							<texturenofocus colordiffuse="PrimaryBG">windows/common/white.png</texturenofocus>
+							<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
+							<texturenofocus colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texturenofocus>
 							<onleft>213</onleft>
 							<onright>215</onright>
 							<onup>201</onup>
@@ -1530,7 +1530,7 @@
 							<posy>184</posy>
 							<width>352</width>
 							<height>76</height>
-							<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+							<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="button">
 							<description>current temp value</description>
@@ -1650,8 +1650,8 @@
 							<posy>256</posy>
 							<width>362</width>
 							<height>320</height>
-							<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
-							<texturenofocus colordiffuse="PrimaryBG">windows/common/white.png</texturenofocus>
+							<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
+							<texturenofocus colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texturenofocus>
 							<onleft>214</onleft>
 							<onright>216</onright>
 							<onup>201</onup>
@@ -1676,7 +1676,7 @@
 							<posy>184</posy>
 							<width>352</width>
 							<height>76</height>
-							<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+							<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="button">
 							<description>current temp value</description>
@@ -1797,8 +1797,8 @@
 							<posy>256</posy>
 							<width>362</width>
 							<height>320</height>
-							<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
-							<texturenofocus colordiffuse="PrimaryBG">windows/common/white.png</texturenofocus>
+							<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
+							<texturenofocus colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texturenofocus>
 							<onleft>215</onleft>
 							<onright>217</onright>
 							<onup>201</onup>
@@ -1823,7 +1823,7 @@
 							<posy>184</posy>
 							<width>352</width>
 							<height>76</height>
-							<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+							<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="button">
 							<description>current temp value</description>
@@ -1944,8 +1944,8 @@
 							<posy>256</posy>
 							<width>362</width>
 							<height>320</height>
-							<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
-							<texturenofocus colordiffuse="PrimaryBG">windows/common/white.png</texturenofocus>
+							<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
+							<texturenofocus colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texturenofocus>
 							<onleft>216</onleft>
 							<onright>218</onright>
 							<onup>201</onup>
@@ -1970,7 +1970,7 @@
 							<posy>184</posy>
 							<width>352</width>
 							<height>76</height>
-							<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+							<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="button">
 							<description>current temp value</description>
@@ -2091,8 +2091,8 @@
 							<posy>256</posy>
 							<width>362</width>
 							<height>320</height>
-							<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
-							<texturenofocus colordiffuse="PrimaryBG">windows/common/white.png</texturenofocus>
+							<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
+							<texturenofocus colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texturenofocus>
 							<onleft>217</onleft>
 							<onright>219</onright>
 							<onup>201</onup>
@@ -2117,7 +2117,7 @@
 							<posy>184</posy>
 							<width>352</width>
 							<height>76</height>
-							<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+							<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="button">
 							<description>current temp value</description>
@@ -2238,8 +2238,8 @@
 							<posy>256</posy>
 							<width>362</width>
 							<height>320</height>
-							<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
-							<texturenofocus colordiffuse="PrimaryBG">windows/common/white.png</texturenofocus>
+							<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
+							<texturenofocus colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texturenofocus>
 							<onleft>218</onleft>
 							<onright>220</onright>
 							<onup>201</onup>
@@ -2264,7 +2264,7 @@
 							<posy>184</posy>
 							<width>352</width>
 							<height>76</height>
-							<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+							<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="button">
 							<description>current temp value</description>
@@ -2385,8 +2385,8 @@
 							<posy>256</posy>
 							<width>362</width>
 							<height>320</height>
-							<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
-							<texturenofocus colordiffuse="PrimaryBG">windows/common/white.png</texturenofocus>
+							<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
+							<texturenofocus colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texturenofocus>
 							<onleft>219</onleft>
 							<onright>221</onright>
 							<onup>201</onup>
@@ -2411,7 +2411,7 @@
 							<posy>184</posy>
 							<width>352</width>
 							<height>76</height>
-							<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+							<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="button">
 							<description>current temp value</description>
@@ -2532,8 +2532,8 @@
 							<posy>256</posy>
 							<width>362</width>
 							<height>320</height>
-							<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
-							<texturenofocus colordiffuse="PrimaryBG">windows/common/white.png</texturenofocus>
+							<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
+							<texturenofocus colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texturenofocus>
 							<onleft>220</onleft>
 							<onright>222</onright>
 							<onup>201</onup>
@@ -2558,7 +2558,7 @@
 							<posy>184</posy>
 							<width>352</width>
 							<height>76</height>
-							<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+							<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="button">
 							<description>current temp value</description>
@@ -2679,8 +2679,8 @@
 							<posy>256</posy>
 							<width>362</width>
 							<height>320</height>
-							<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
-							<texturenofocus colordiffuse="PrimaryBG">windows/common/white.png</texturenofocus>
+							<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
+							<texturenofocus colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texturenofocus>
 							<onleft>221</onleft>
 							<onright>223</onright>
 							<onup>201</onup>
@@ -2705,7 +2705,7 @@
 							<posy>184</posy>
 							<width>352</width>
 							<height>76</height>
-							<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+							<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="button">
 							<description>current temp value</description>
@@ -2826,8 +2826,8 @@
 							<posy>256</posy>
 							<width>362</width>
 							<height>320</height>
-							<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
-							<texturenofocus colordiffuse="PrimaryBG">windows/common/white.png</texturenofocus>
+							<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
+							<texturenofocus colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texturenofocus>
 							<onleft>222</onleft>
 							<onright>224</onright>
 							<onup>201</onup>
@@ -2852,7 +2852,7 @@
 							<posy>184</posy>
 							<width>352</width>
 							<height>76</height>
-							<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+							<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="button">
 							<description>current temp value</description>
@@ -2973,8 +2973,8 @@
 							<posy>256</posy>
 							<width>362</width>
 							<height>320</height>
-							<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
-							<texturenofocus colordiffuse="PrimaryBG">windows/common/white.png</texturenofocus>
+							<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
+							<texturenofocus colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texturenofocus>
 							<onleft>223</onleft>
 							<onright>211</onright>
 							<onup>201</onup>
@@ -2999,7 +2999,7 @@
 							<posy>184</posy>
 							<width>352</width>
 							<height>76</height>
-							<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+							<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="button">
 							<description>current temp value</description>
@@ -3195,7 +3195,7 @@
 					<posy>-3</posy>
 					<width>714</width>
 					<height>575</height>
-					<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+					<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 				</control>
 				<control type="list" id="310">
 					<posx>16</posx>
@@ -3301,7 +3301,7 @@
 							<posy>0</posy>
 							<width>710</width>
 							<height>94</height>
-							<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+							<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 							<animation type="Focus" condition="Container(310).OnNext" reversible="false">
 								<effect type="slide" start="0,-100" end="0,0" time="300" tween="back" easing="out" />
 							</animation>
@@ -3317,7 +3317,7 @@
 							<width>5</width>
 							<height>94</height>
 							<visible>Control.HasFocus(310)</visible>
-							<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+							<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="group">
 							<animation type="Focus" condition="Container(310).OnNext | Container(310).OnPrevious" reversible="false">

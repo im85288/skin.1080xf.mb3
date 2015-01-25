@@ -13,7 +13,7 @@
 			<top>0</top>
 			<width>1680</width>
 			<height>900</height>
-			<texture colordiffuse="FF333333">windows/common/white.png</texture>
+			<texture colordiffuse="FF333333">special://skin/extras/backgrounds/white.png</texture>
 		</control>
 		<control type="image">
 			<left>20</left>
@@ -113,7 +113,7 @@
 					<width>190</width>
 					<height>5</height>
 					<visible>Control.HasFocus(3010)</visible>
-					<texture condition="Control.HasFocus(3010)" colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+					<texture condition="Control.HasFocus(3010)" colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 				</control>
 				<control type="label">
 					<left>0</left>

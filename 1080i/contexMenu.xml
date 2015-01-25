@@ -22,7 +22,7 @@
 				<top>0</top>
 				<width>340</width>
 				<height>400</height>
-				<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+				<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 			</control>
 			<control type="list" id="4323">
 				<left>18</left>
@@ -63,14 +63,14 @@
 						<top>0</top>
 						<width>304</width>
 						<height>38</height>
-						<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+						<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 					</control>
 					<control type="image"> <!--focused background left edge -->
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>5</width>
 						<height>38</height>
-						<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+						<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 					</control>
 					<control type="label">
 						<left>0</left>

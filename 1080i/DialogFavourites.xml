@@ -199,7 +199,7 @@
 								<posy>479</posy>
 								<width>320</width>
 								<height>1</height>
-								<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+								<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
 							</control>
 						</control>
 					</itemlayout>
@@ -226,7 +226,7 @@
 									<width>324</width>
 									<height>80</height>
 									<colordiffuse>$VAR[HomeTileOverlay]</colordiffuse>
-									<texture>windows/common/white.png</texture>
+									<texture>special://skin/extras/backgrounds/white.png</texture>
 								</control>
 								<control type="label">
 									<posx>20</posx>
@@ -310,7 +310,7 @@
 									<posy>479</posy>
 									<width>320</width>
 									<height>1</height>
-									<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+									<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
 								</control>
 							</control>
 						</control>

@@ -46,7 +46,7 @@
 					<posy>278</posy>
 					<height>613</height>
 					<width>342</width>
-					<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+					<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 				</control>
 				<control type="list" id="30">
 					<posx>180</posx>
@@ -85,7 +85,7 @@
 							<posy>0</posy>
 							<width>338</width>
 							<height>77</height>
-							<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+							<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 							<animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(30)">Conditional</animation>
 						</control>
 						<control type="image"> <!--focused background left edge -->
@@ -93,7 +93,7 @@
 							<posy>0</posy>
 							<width>5</width>
 							<height>77</height>
-							<texture condition="Control.HasFocus(30)" colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+							<texture condition="Control.HasFocus(30)" colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="label">
 							<posx>0</posx>
@@ -192,7 +192,7 @@
 					<posy>278</posy>
 					<height>613</height>
 					<width>1214</width>
-					<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+					<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 				</control>
 				<control type="image">
 					<description>Shadow</description>
@@ -314,7 +314,7 @@
 							<posy>0</posy>
 							<width>1210</width>
 							<height>77</height>
-							<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+							<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<visible>ControlGroup(1007).HasFocus</visible>
 						</control>
@@ -440,7 +440,7 @@
 							<posy>0</posy>
 							<width>1210</width>
 							<height>77</height>
-							<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+							<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 							<visible>ControlGroup(2016).HasFocus</visible>
 						</control>
 						<control type="button" id="20161">
@@ -514,7 +514,7 @@
 					</control>
 					<control type="button" id="2000">
 						<width>1210</width>
-						<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+						<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
 						<texturenofocus colordiffuse="PrimaryT" border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
 						<include>SettingsCategoryDefaultButtonVars</include>
 						<onclick>SetProperty(Dialog,$LOCALIZE[41131])</onclick>
@@ -525,7 +525,7 @@
 					</control>
 					<control type="button" id="2001">
 						<width>1210</width>
-						<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+						<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
 						<texturenofocus colordiffuse="PrimaryT" border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
 						<include>SettingsCategoryDefaultButtonVars</include>
 						<onclick>SetProperty(Dialog,$LOCALIZE[41136])</onclick>
@@ -534,7 +534,7 @@
 					</control>
 					<control type="button" id="2002">
 						<width>1210</width>
-						<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+						<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
 						<texturenofocus colordiffuse="PrimaryT" border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
 						<include>SettingsCategoryDefaultButtonVars</include>
 						<onclick>SetProperty(Dialog,$LOCALIZE[41140])</onclick>
@@ -616,7 +616,7 @@
 							<posy>0</posy>
 							<width>1210</width>
 							<height>77</height>
-							<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+							<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 							<visible>ControlGroup(2007).HasFocus</visible>
 						</control>
 						<control type="button" id="20071">
@@ -1356,7 +1356,7 @@
 					<visible>Container(30).HasFocus(35)</visible>
 					<control type="button" id="5000">
 						<width>1210</width>
-						<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+						<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
 						<texturenofocus colordiffuse="PrimaryT" border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
 						<include>SettingsCategoryDefaultButtonVars</include>
 						<label>$LOCALIZE[41251]</label>
@@ -1367,7 +1367,7 @@
 					</control>
 					<control type="button" id="5001">
 						<width>1210</width>
-						<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+						<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
 						<texturenofocus colordiffuse="PrimaryT" border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
 						<include>SettingsCategoryDefaultButtonVars</include>
 						<label>$LOCALIZE[5]</label>
@@ -1378,7 +1378,7 @@
 					</control>
 					<control type="button" id="5002">
 						<width>1210</width>
-						<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+						<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
 						<texturenofocus colordiffuse="PrimaryT" border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
 						<include>SettingsCategoryDefaultButtonVars</include>
 						<label>$LOCALIZE[342]</label>
@@ -1389,7 +1389,7 @@
 					</control>
 					<control type="button" id="5003">
 						<width>1210</width>
-						<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+						<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
 						<texturenofocus colordiffuse="PrimaryT" border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
 						<include>SettingsCategoryDefaultButtonVars</include>
 						<label>$LOCALIZE[20343]</label>
@@ -1400,7 +1400,7 @@
 					</control>
 					<control type="button" id="5004">
 						<width>1210</width>
-						<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+						<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
 						<texturenofocus colordiffuse="PrimaryT" border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
 						<include>SettingsCategoryDefaultButtonVars</include>
 						<label>$LOCALIZE[19019]</label>
@@ -1411,7 +1411,7 @@
 					</control>
 					<control type="button" id="5005">
 						<width>1210</width>
-						<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+						<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
 						<texturenofocus colordiffuse="PrimaryT" border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
 						<include>SettingsCategoryDefaultButtonVars</include>
 						<label>$LOCALIZE[49273]</label>
@@ -1422,7 +1422,7 @@
 					</control>
 					<control type="button" id="5006">
 						<width>1210</width>
-						<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+						<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
 						<texturenofocus colordiffuse="PrimaryT" border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
 						<include>SettingsCategoryDefaultButtonVars</include>
 						<label>$LOCALIZE[2]</label>
@@ -1433,7 +1433,7 @@
 					</control>
 					<control type="button" id="5009">
 						<width>1210</width>
-						<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+						<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
 						<texturenofocus colordiffuse="PrimaryT" border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
 						<include>SettingsCategoryDefaultButtonVars</include>
 						<label>$LOCALIZE[41504]</label>
@@ -1444,7 +1444,7 @@
 					</control>
 					<control type="button" id="5010">
 						<width>1210</width>
-						<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+						<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
 						<texturenofocus colordiffuse="PrimaryT" border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
 						<include>SettingsCategoryDefaultButtonVars</include>
 						<label>$LOCALIZE[12600]</label>

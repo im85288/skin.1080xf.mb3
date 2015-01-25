@@ -23,7 +23,7 @@
 				<posy>187</posy>
 				<height>704</height>
 				<width>1424</width>
-				<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+				<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 			</control>
 			<control type="image">
 				<description>Shadow</description>
@@ -510,17 +510,15 @@
 						<posy>0</posy>
 						<width>1420</width>
 						<height>99</height>
-						<include>defaultfocusanim</include>
-						<include>visiblehidefadeinfo</include>
 						<visible>Control.HasFocus(50)</visible>
-						<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+						<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 					</control>
 					<control type="image"> <!--focused background left edge -->
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>5</width>
 						<height>99</height>
-						<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+						<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 					</control>
 					<control type="image">
 						<posx>76</posx>
@@ -605,17 +603,15 @@
 						<posy>0</posy>
 						<width>1420</width>
 						<height>99</height>
-						<include>defaultfocusanim</include>
-						<include>visiblehidefadeinfo</include>
 						<visible>Control.HasFocus(50)</visible>
-						<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+						<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 					</control>
 					<control type="image"> <!--focused background left edge -->
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>5</width>
 						<height>99</height>
-						<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+						<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 					</control>
 					<control type="image">
 						<description>Thumbnail</description>
@@ -737,17 +733,15 @@
 						<posy>0</posy>
 						<width>1420</width>
 						<height>99</height>
-						<include>defaultfocusanim</include>
-						<include>visiblehidefadeinfo</include>
 						<visible>Control.HasFocus(50)</visible>
-						<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+						<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 					</control>
 					<control type="image"> <!--focused background left edge -->
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>5</width>
 						<height>99</height>
-						<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+						<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 					</control>
 					<control type="image">
 						<description>Thumbnail</description>
@@ -839,17 +833,15 @@
 						<posy>0</posy>
 						<width>1420</width>
 						<height>99</height>
-						<include>defaultfocusanim</include>
-						<include>visiblehidefadeinfo</include>
 						<visible>Control.HasFocus(50)</visible>
-						<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+						<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 					</control>
 					<control type="image"> <!--focused background left edge -->
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>5</width>
 						<height>99</height>
-						<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+						<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 					</control>
 					<control type="image">
 						<description>Thumbnail</description>
@@ -950,17 +942,15 @@
 						<posy>0</posy>
 						<width>1420</width>
 						<height>99</height>
-						<include>defaultfocusanim</include>
-						<include>visiblehidefadeinfo</include>
 						<visible>Control.HasFocus(50)</visible>
-						<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+						<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 					</control>
 					<control type="image"> <!--focused background left edge -->
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>5</width>
 						<height>99</height>
-						<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+						<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 					</control>
 					<control type="image">
 						<description>Thumbnail</description>
@@ -1172,7 +1162,7 @@
 						<posy>0</posy>
 						<width>580</width>
 						<height>600</height>
-						<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+						<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 						<visible>[IsEmpty(Container(52).ListItem.Art(fanart)) + IsEmpty(Container(52).ListItem.Art(season.fanart))] | Container.Content(Episodes)</visible>
 						<include>visiblehidefadeinfo</include>
 					</control>
@@ -1235,9 +1225,8 @@
 								<posy>0</posy>
 								<width>576</width>
 								<height>600</height>
-								<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+								<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 								<visible>!IsEmpty(Container(52).ListItem.Art(fanart)) | !IsEmpty(Container(52).ListItem.Art(season.fanart))</visible>
-								<include>visiblehidefadeinfo</include>
 							</control>
 							<control type="label">
 								<posx>30</posx>
@@ -1272,7 +1261,7 @@
 								<posy>325</posy>
 								<width>576</width>
 								<height>204</height>
-								<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+								<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 							</control>
 							<control type="textbox">
 								<description>Plot</description>
@@ -1301,8 +1290,7 @@
 							<posy>324</posy>
 							<width>576</width>
 							<height>276</height>
-							<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
-							<include>visiblehidefadeinfo</include>
+							<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 							<visible>!Container.Content(Episodes) + !Skin.HasSetting(InfoListShowFullFanart)</visible>
 						</control>
 						<control type="image">
@@ -1404,7 +1392,7 @@
 					<posy>277</posy>
 					<width>714</width>
 					<height>600</height>
-					<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+					<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 				</control>
 				<control type="list" id="52">
 					<visible>[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets)] | [substring(Container.FolderPath,plugin,left) + Container.HasFiles]</visible>
@@ -1708,9 +1696,7 @@
 							<posy>0</posy>
 							<width>710</width>
 							<height>59</height>
-							<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
-							<include>listfocusanim</include>
-							<include>visiblehidefadeinfo</include>
+							<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 							<visible>Control.HasFocus(52)</visible>
 						</control>
 						<control type="image"> <!--focused background left edge -->
@@ -1718,7 +1704,7 @@
 							<posy>0</posy>
 							<width>5</width>
 							<height>59</height>
-							<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+							<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 							<visible>Control.HasFocus(52)</visible>
 						</control>
 						<control type="group">
@@ -1774,9 +1760,7 @@
 							<posy>0</posy>
 							<width>710</width>
 							<height>59</height>
-							<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
-							<include>listfocusanim</include>
-							<include>visiblehidefadeinfo</include>
+							<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 							<visible>Control.HasFocus(52)</visible>
 						</control>
 						<control type="image"> <!--focused background left edge -->
@@ -1784,7 +1768,7 @@
 							<posy>0</posy>
 							<width>5</width>
 							<height>59</height>
-							<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+							<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 							<visible>Control.HasFocus(52)</visible>
 						</control>
 						<control type="group">
@@ -1855,9 +1839,7 @@
 							<posy>0</posy>
 							<width>710</width>
 							<height>59</height>
-							<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
-							<include>listfocusanim</include>
-							<include>visiblehidefadeinfo</include>
+							<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 							<visible>Control.HasFocus(52)</visible>
 						</control>
 						<control type="image"> <!--focused background left edge -->
@@ -1865,7 +1847,7 @@
 							<posy>0</posy>
 							<width>5</width>
 							<height>59</height>
-							<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+							<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 							<visible>Control.HasFocus(52)</visible>
 						</control>
 						<control type="group">
@@ -1939,9 +1921,7 @@
 							<posy>0</posy>
 							<width>710</width>
 							<height>59</height>
-							<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
-							<include>listfocusanim</include>
-							<include>visiblehidefadeinfo</include>
+							<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 							<visible>Control.HasFocus(52)</visible>
 						</control>
 						<control type="image"> <!--focused background left edge -->
@@ -1949,7 +1929,7 @@
 							<posy>0</posy>
 							<width>5</width>
 							<height>59</height>
-							<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+							<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 							<visible>Control.HasFocus(52)</visible>
 						</control>
 						<control type="group">
@@ -2010,9 +1990,7 @@
 							<posy>0</posy>
 							<width>710</width>
 							<height>59</height>
-							<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
-							<include>listfocusanim</include>
-							<include>visiblehidefadeinfo</include>
+							<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 							<visible>Control.HasFocus(52)</visible>
 						</control>
 						<control type="image"> <!--focused background left edge -->
@@ -2020,7 +1998,7 @@
 							<posy>0</posy>
 							<width>5</width>
 							<height>59</height>
-							<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+							<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 							<visible>Control.HasFocus(52)</visible>
 						</control>
 						<control type="group">
@@ -2688,7 +2666,7 @@
 								<posy>265</posy>
 								<width>490</width>
 								<height>360</height>
-								<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+								<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 							</control>
 							<control type="image">
 								<posx>0</posx>
@@ -3338,14 +3316,14 @@
 								<posy>265</posy>
 								<width>490</width>
 								<height>360</height>
-								<texture colordiffuse="SecondaryM">windows/common/white.png</texture>
+								<texture colordiffuse="SecondaryM">special://skin/extras/backgrounds/white.png</texture>
 							</control>
 							<control type="image">
 								<posx>0</posx>
 								<posy>270</posy>
 								<width>480</width>
 								<height>104</height>
-								<texture colordiffuse="SecondaryM">windows/common/white.png</texture>
+								<texture colordiffuse="SecondaryM">special://skin/extras/backgrounds/white.png</texture>
 							</control>
 							<control type="label">
 								<posx>20</posx>
@@ -3448,7 +3426,7 @@
 									<posy>265</posy>
 									<width>490</width>
 									<height>360</height>
-									<texture colordiffuse="SecondaryM">windows/common/white.png</texture>
+									<texture colordiffuse="SecondaryM">special://skin/extras/backgrounds/white.png</texture>
 								</control>
 							</control>
 							<control type="image">
@@ -3456,7 +3434,7 @@
 								<posy>270</posy>
 								<width>480</width>
 								<height>104</height>
-								<texture colordiffuse="SecondaryM">windows/common/white.png</texture>
+								<texture colordiffuse="SecondaryM">special://skin/extras/backgrounds/white.png</texture>
 							</control>
 							<control type="label">
 								<posx>20</posx>
@@ -4658,7 +4636,7 @@
 							<posy>12</posy>
 							<width>332</width>
 							<height>332</height>
-							<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+							<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="image">
 							<description>Poster</description>
@@ -4675,7 +4653,7 @@
 							<posy>272</posy>
 							<width>332</width>
 							<height>72</height>
-							<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+							<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="label">
 							<posx>27</posx>
@@ -4707,7 +4685,7 @@
 							<posy>12</posy>
 							<width>217</width>
 							<height>217</height>
-							<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+							<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="image">
 							<description>Poster</description>
@@ -4724,7 +4702,7 @@
 							<posy>179</posy>
 							<width>217</width>
 							<height>50</height>
-							<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+							<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="label">
 							<posx>27</posx>
@@ -4762,7 +4740,7 @@
 								<posy>12</posy>
 								<width>332</width>
 								<height>332</height>
-								<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+								<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 							</control>
 							<control type="image">
 								<posx>12</posx>
@@ -4784,7 +4762,7 @@
 									<posy>272</posy>
 									<width>332</width>
 									<height>72</height>
-									<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+									<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 								</control>
 								<control type="label">
 									<posx>27</posx>
@@ -4858,7 +4836,7 @@
 								<posy>12</posy>
 								<width>217</width>
 								<height>217</height>
-								<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+								<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 							</control>
 							<control type="image">
 								<posx>12</posx>
@@ -4880,7 +4858,7 @@
 									<posy>179</posy>
 									<width>217</width>
 									<height>50</height>
-									<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+									<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 								</control>
 								<control type="label">
 									<posx>27</posx>
@@ -6174,14 +6152,14 @@
 				<posy>0</posy>
 				<width>1810</width>
 				<height>734</height>
-				<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+				<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 			</control>
 			<control type="image">
 				<posx>75</posx>
 				<posy>25</posy>
 				<width>1760</width>
 				<height>684</height>
-				<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+				<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 			</control>
 			<control type="image">
 				<description>Landscape</description>
@@ -6327,7 +6305,7 @@
 			<posy>900</posy>
 			<posx>40</posx>
 			<orientation>horizontal</orientation>
-			<texturesliderbarfocus colordiffuse="$VAR[FocusModColourVar]" border="1">windows/common/white.png</texturesliderbarfocus>
+			<texturesliderbarfocus colordiffuse="$VAR[FocusModColourVar]" border="1">special://skin/extras/backgrounds/white.png</texturesliderbarfocus>
 			<showonepage>false</showonepage>
 			<onup>566</onup>
 			<ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
@@ -6344,7 +6322,7 @@
 				<include>CommonViewAnimations</include>
 				<control type="image">
 					<include>FullscreenDimensions</include>
-					<texture colordiffuse="QuaternaryBG">windows/common/white.png</texture>
+					<texture colordiffuse="QuaternaryBG">special://skin/extras/backgrounds/white.png</texture>
 				</control>
 				<control type="panel" id="582">
 					<include>OptionsShutdownAnimation</include>
@@ -7164,7 +7142,7 @@
 							<width>590</width>
 							<height>120</height>
 							<bordersize>-5</bordersize>
-							<texture>windows/common/white.png</texture>
+							<texture>special://skin/extras/backgrounds/white.png</texture>
 							<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
 							<aspectratio scalediffuse="false" align="left">stretch</aspectratio>
 						</control>

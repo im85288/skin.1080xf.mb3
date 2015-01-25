@@ -37,7 +37,7 @@
 			<posy>222</posy>
 			<width>246</width>
 			<height>66</height>
-			<texture colordiffuse="HomeTileOverlay">windows/common/white.png</texture>
+			<texture colordiffuse="HomeTileOverlay">special://skin/extras/backgrounds/white.png</texture>
 		</control>
 	</include>
 	<include name="SettingsLabelVars">
@@ -105,14 +105,14 @@
 		<disabledcolor>SecondaryT</disabledcolor>
 		<font>Font-Condensed-S30-B</font>
 		<textoffsetx>35</textoffsetx>
-		<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+		<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
 		<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
 	</include>
 	<include name="SettingsCategoryDefaultButtonVars">
 		<height>77</height>
 		<align>left</align>
 		<aligny>center</aligny>
-		<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+		<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
 		<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
 		<textcolor>SecondaryT</textcolor>
 		<focusedcolor>$VAR[FocusModColourVar]</focusedcolor>
@@ -126,7 +126,7 @@
 		<radioposx>1087</radioposx>
 		<align>left</align>
 		<aligny>center</aligny>
-		<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+		<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
 		<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
 		<textcolor>SecondaryT</textcolor>
 		<focusedcolor>$VAR[FocusModColourVar]</focusedcolor>

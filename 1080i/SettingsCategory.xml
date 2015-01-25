@@ -49,7 +49,7 @@
                     <posy>278</posy>
                     <height>613</height>
                     <width>342</width>
-                    <texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+                    <texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
                 </control>
 
                 <!-- Side Buttons -->
@@ -103,7 +103,7 @@
                     <posy>278</posy>
                     <height>613</height>
                     <width>1214</width>
-                    <texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+                    <texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
                 </control>
                 <control type="image">
                     <description>Shadow</description>
@@ -170,7 +170,7 @@
                     <posy>278</posy>
                     <height>613</height>
                     <width>498</width>
-                    <texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+                    <texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
                 </control>
                 <control type="textbox" id="6">
                     <description>Plot</description>
@@ -219,7 +219,7 @@
             <height>77</height>
             <align>left</align>
             <aligny>center</aligny>
-            <texturefocus colordiffuse="TertiaryM" border="150,3,150,3">windows/common/white.png</texturefocus>
+            <texturefocus colordiffuse="TertiaryM" border="150,3,150,3">special://skin/extras/backgrounds/white.png</texturefocus>
             <texturenofocus colordiffuse="TertiaryM" border="90,3,90,3">views/list/other/separator.png</texturenofocus>
             <textcolor>SecondaryT</textcolor>
             <focusedcolor>$VAR[FocusModColourVar]</focusedcolor>
@@ -233,7 +233,7 @@
             <radioposx>1087</radioposx>
             <align>left</align>
             <aligny>center</aligny>
-            <texturefocus colordiffuse="TertiaryM" border="150,3,150,3">windows/common/white.png</texturefocus>
+            <texturefocus colordiffuse="TertiaryM" border="150,3,150,3">special://skin/extras/backgrounds/white.png</texturefocus>
             <texturenofocus colordiffuse="TertiaryM" border="90,3,90,3">views/list/other/separator.png</texturenofocus>
             <textcolor>SecondaryT</textcolor>
             <focusedcolor>$VAR[FocusModColourVar]</focusedcolor>
@@ -247,7 +247,7 @@
             <spinposx>33</spinposx>
             <align>left</align>
             <aligny>center</aligny>
-            <texturefocus colordiffuse="TertiaryM" border="150,3,150,3">windows/common/white.png</texturefocus>
+            <texturefocus colordiffuse="TertiaryM" border="150,3,150,3">special://skin/extras/backgrounds/white.png</texturefocus>
             <texturenofocus colordiffuse="TertiaryM" border="90,3,90,3">views/list/other/separator.png</texturenofocus>
             <textcolor>SecondaryT</textcolor>
             <focusedcolor>$VAR[FocusModColourVar]</focusedcolor>

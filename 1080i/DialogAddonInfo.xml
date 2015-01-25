@@ -117,7 +117,7 @@
 					<posy>658</posy>
 					<width>444</width>
 					<height>250</height>
-					<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+					<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 				</control>
 				<!-- Icon -->
 				<control type="image">
@@ -159,7 +159,7 @@
 							<disabledcolor>TertiaryT</disabledcolor>
 							<shadowcolor>33000000</shadowcolor>
 							<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
-							<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+							<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
 						</control>
 						<control type="button" id="7">
 							<description>Enable/Disable Addon button</description>
@@ -175,7 +175,7 @@
 							<disabledcolor>TertiaryT</disabledcolor>
 							<shadowcolor>33000000</shadowcolor>
 							<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
-							<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+							<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
 						</control>
 						<control type="button" id="6">
 							<description>Deinstall Addon button</description>
@@ -191,7 +191,7 @@
 							<disabledcolor>TertiaryT</disabledcolor>
 							<shadowcolor>33000000</shadowcolor>
 							<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
-							<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+							<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
 						</control>
 						<control type="button" id="8">
 							<description>Update Addon button</description>
@@ -208,7 +208,7 @@
 							<disabledcolor>TertiaryT</disabledcolor>
 							<shadowcolor>33000000</shadowcolor>
 							<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
-							<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+							<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
 						</control>
 						<control type="button" id="11">
 							<description>Rollback button</description>
@@ -224,7 +224,7 @@
 							<focusedcolor>PrimaryT</focusedcolor>
 							<disabledcolor>TertiaryT</disabledcolor>
 							<shadowcolor>33000000</shadowcolor>
-							<texturefocus colordiffuse="TertiaryM">windows/common/white.png</texturefocus>
+							<texturefocus colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texturefocus>
 						</control>
 						<control type="button" id="20">
 							<visible>!Control.IsEnabled(6) + !Control.IsEnabled(7) + !Control.IsEnabled(8) + !Control.IsEnabled(9) + !Control.IsEnabled(11)</visible>

@@ -182,7 +182,7 @@
 					<posy>658</posy>
 					<width>444</width>
 					<height>250</height>
-					<texture colordiffuse="PrimaryBG">windows/common/white.png</texture>
+					<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
 				</control>
 				<control type="image">
 					<description>Artist/Album Thumb</description>
@@ -241,7 +241,7 @@
 							<posy>0</posy>
 							<width>440</width>
 							<height>81</height>
-							<texture colordiffuse="TertiaryM">windows/common/white.png</texture>
+							<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 							<animation effect="slide" start="0,82" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(9333).OnPrevious">Focus</animation>
 							<animation effect="slide" start="0,-82" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(9333).OnNext">Focus</animation>
 							<include>visiblehidefadeinfo</include>
@@ -253,7 +253,7 @@
 							<width>5</width>
 							<height>81</height>
 							<visible>Control.HasFocus(9333)</visible>
-							<texture colordiffuse="$VAR[FocusModHomeColourVar]">windows/common/white.png</texture>
+							<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
 						</control>
 						<control type="label">
 							<posx>25</posx>

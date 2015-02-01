@@ -496,6 +496,7 @@
 							<onclick>Dialog.Close(MovieInformation)</onclick>
 							<visible>System.HasAddon(script.cinema.experience) + Container.Content(movies) + !SubString(Container.FolderPath,plugin)</visible>
 						</item>
+						plugin.video.youtube/kodion/search/query/?q=, trailer],return)
 						<item id="2">
 							<label>$LOCALIZE[20410]</label>
 							<!-- <onclick condition="!Skin.HasSetting(PlayTrailer.Minimized)">PreviousMenu</onclick> <onclick condition="!Skin.HasSetting(PlayTrailer.Minimized)">PlayMedia($INFO[ListItem.Trailer])</onclick> <onclick condition="Skin.HasSetting(PlayTrailer.Minimized)">PlayMedia($INFO[ListItem.Trailer],false,1)</onclick> -->
@@ -509,7 +510,7 @@
 							<label>$LOCALIZE[20410] YouTube</label>
 							<onclick>Dialog.Close(movieinformation)</onclick>
 							<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
-							<onclick>ActivateWindow(music,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[ListItem.TVShowTitle] $INFO[ListItem.Label],return)</onclick>
+							<onclick>ActivateWindow(videos,$INFO[ListItem.Label,plugin://plugin.video.youtube/kodion/search/query/?q=, trailer],return)</onclick>
 							<visible>IsEmpty(Window(home).Property("MB3.TrailerAction")) + stringcompare(ListItem.Property(ItemType),Movie)</visible>
 						</item>
 						<item id="2">
@@ -517,7 +518,7 @@
 							<label>YouTube</label>
 							<onclick>Dialog.Close(movieinformation)</onclick>
 							<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
-							<onclick>ActivateWindow(music,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[ListItem.Title],return)</onclick>
+							<onclick>ActivateWindow(videos,$INFO[ListItem.Title,plugin://plugin.video.youtube/kodion/search/query/?q=, trailer],return)</onclick>
 							<visible>!stringcompare(ListItem.Property(ItemType),Movie)</visible>
 						</item>
 						<item id="3">

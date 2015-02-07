@@ -590,15 +590,16 @@
 						<include>SettingsCategoryRadioButtonVars</include>
 						<selected>Skin.HasSetting(ShowMusicThumbs)</selected>
 						<onclick>Skin.ToggleSetting(ShowMusicThumbs)</onclick>
+						<onclick>ReloadSkin</onclick>
 						<label>$LOCALIZE[49265]</label>
 					</control>
 					<control type="radiobutton" id="2010">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>Skin.HasSetting(discart2)</selected>
-                        <onclick>Skin.ToggleSetting(discart2)</onclick>
-                        <label>Show Spinning Disc on Home Screen</label>
-                    </control>
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(discart2)</selected>
+						<onclick>Skin.ToggleSetting(discart2)</onclick>
+						<label>Show Spinning Disc on Home Screen</label>
+					</control>
 					<control type="group" id="2007">
 						<description>Fake spin control</description>
 						<width>1210</width>
@@ -794,6 +795,15 @@
 						<onclick>Skin.ToggleSetting(ShowViewHeader)</onclick>
 						<label>Show Header info in Views</label>
 					</control>
+					<control type="radiobutton" id="3016">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(UseSkinIndicators)</selected>
+						<onclick>Skin.ToggleSetting(UseSkinIndicators)</onclick>
+						<label>Use native skin indicators</label>
+						<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
+					</control>
+					
 					<control type="radiobutton" id="3007">
 						<width>1210</width>
 						<include>SettingsCategoryRadioButtonVars</include>
@@ -1341,13 +1351,13 @@
 						<onclick>Skin.ToggleSetting(musicvis.hidetext)</onclick>
 						<label>$LOCALIZE[49237]</label>
 					</control>
-                    <control type="radiobutton" id="8009">
-                        <width>1210</width>
-                        <include>SettingsCategoryRadioButtonVars</include>
-                        <selected>Skin.HasSetting(discart)</selected>
-                        <onclick>Skin.ToggleSetting(discart)</onclick>
-                        <label>Show Spinning Disc</label>
-                    </control>
+					<control type="radiobutton" id="8009">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(discart)</selected>
+						<onclick>Skin.ToggleSetting(discart)</onclick>
+						<label>Show Spinning Disc</label>
+					</control>
 				</control>
 				<!-- Background Settings -->
 				<control type="grouplist" id="5">
@@ -1464,9 +1474,16 @@
 					<control type="radiobutton" id="6001">
 						<width>1210</width>
 						<include>SettingsCategoryRadioButtonVars</include>
-						<selected>!Skin.HasSetting(Guide.HideClock)</selected>
+						<selected>Skin.HasSetting(Guide.HideClock)</selected>
 						<onclick>Skin.ToggleSetting(Guide.HideClock)</onclick>
-						<label>$LOCALIZE[41270]</label>
+						<label>$LOCALIZE[131] $LOCALIZE[552] & $LOCALIZE[555]</label>
+					</control>
+					<control type="radiobutton" id="60012">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(Guide.HideWeather)</selected>
+						<onclick>Skin.ToggleSetting(Guide.HideWeather)</onclick>
+						<label>$LOCALIZE[131] $LOCALIZE[400]</label>
 					</control>
 					<control type="radiobutton" id="6002">
 						<width>1210</width>

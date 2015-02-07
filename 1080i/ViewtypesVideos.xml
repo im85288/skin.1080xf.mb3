@@ -314,7 +314,7 @@
 							<scroll>false</scroll>
 							<align>center</align>
 						</control>
-						<visible>Skin.HasSetting(UseKodiLibrary)</visible>
+						<visible>Skin.HasSetting(UseKodiLibrary) | [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]</visible>
 					</control>
 				</itemlayout>
 				<itemlayout height="100" condition="Container.Content(seasons)">
@@ -393,7 +393,7 @@
 							<scroll>false</scroll>
 							<align>center</align>
 						</control>
-						<visible>Skin.HasSetting(UseKodiLibrary)</visible>
+						<visible>Skin.HasSetting(UseKodiLibrary) | [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]</visible>
 					</control>
 				</itemlayout>
 				<itemlayout height="100" condition="Container.Content(episodes)">
@@ -816,7 +816,7 @@
 							<scroll>false</scroll>
 							<align>center</align>
 						</control>
-						<visible>Skin.HasSetting(UseKodiLibrary)</visible>
+						<visible>Skin.HasSetting(UseKodiLibrary) | [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]</visible>
 					</control>
 				</focusedlayout>
 				<focusedlayout height="100" condition="Container.Content(seasons)">
@@ -915,7 +915,7 @@
 							<scroll>false</scroll>
 							<align>center</align>
 						</control>
-						<visible>Skin.HasSetting(UseKodiLibrary)</visible>
+						<visible>Skin.HasSetting(UseKodiLibrary) | [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]</visible>
 					</control>
 				</focusedlayout>
 				<focusedlayout height="100" condition="Container.Content(episodes)">
@@ -2486,6 +2486,13 @@
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<texture colordiffuse="FF777777" scalediffuse="false">$VAR[DefaultBannerFallbackPoster]</texture>
 						</control>
+						<control type="image">
+							<posx>440</posx>
+							<posy>5</posy>
+							<width>60</width>
+							<height>60</height>
+							<texture>$VAR[BannerOverlayFo]</texture>
+						</control>
 					</itemlayout>
 					<focusedlayout width="1000" height="185">
 						<control type="group">
@@ -2499,6 +2506,13 @@
 								<height>185</height>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 								<texture colordiffuse="FFFFFFFF" scalediffuse="false">$VAR[DefaultBannerFallbackPoster]</texture>
+							</control>
+							<control type="image">
+								<posx>440</posx>
+								<posy>5</posy>
+								<width>60</width>
+								<height>60</height>
+								<texture>$VAR[BannerOverlayFo]</texture>
 							</control>
 						</control>
 					</focusedlayout>
@@ -3646,6 +3660,14 @@
 								<texture diffuse="special://skin/extras/case_diffuse_full.png" background="true">$VAR[PosterViewPoster]</texture>
 								<visible>!IsEmpty(ListItem.Title)</visible>
 							</control>
+							<control type="image">
+								<posx>150</posx>
+								<posy>170</posy>
+								<width>50</width>
+								<height>50</height>
+								<texture>$VAR[InfoPanelOverlay]</texture>
+								<visible>!IsEmpty(ListItem.Title)</visible>
+							</control>
 						</control>
 					</itemlayout>
 					<focusedlayout width="250" height="800">
@@ -3695,6 +3717,14 @@
 								<height>300</height>
 								<aspectratio scalediffuse="false">keep</aspectratio>
 								<texture diffuse="special://skin/extras/case_diffuse_full.png" background="true">$VAR[PosterViewPoster]</texture>
+								<visible>!IsEmpty(ListItem.Title)</visible>
+							</control>
+							<control type="image">
+								<posx>150</posx>
+								<posy>170</posy>
+								<width>50</width>
+								<height>50</height>
+								<texture>$VAR[InfoPanelOverlay]</texture>
 								<visible>!IsEmpty(ListItem.Title)</visible>
 							</control>
 							<!-- <control type="image"> <posx>-16</posx> <posy>4</posy> <width>406</width> <height>594</height> <texture border="31">views/panel/focus.png</texture> <animation effect="fade" start="0" end="100" time="200" tween="sine" easing="in" condition="Container(55).OnNext | Container(55).OnPrevious">Focus</animation> <animation effect="fade" start="100" end="0" time="200" tween="sine" easing="out" condition="Container(55).OnNext | Container(55).OnPrevious">UnFocus</animation> <visible>!Skin.HasSetting(ColourFocus)</visible> </control> <control type="image"> <posx>-16</posx> <posy>4</posy> <width>406</width> <height>594</height> <texture border="31">views/panel/focus.png</texture> <animation effect="fade" start="0" end="100" time="200" tween="sine" easing="in" condition="Container(55).OnNext | Container(55).OnPrevious">Focus</animation> <animation effect="fade" start="100" end="0" time="200" tween="sine" easing="out" condition="Container(55).OnNext | Container(55).OnPrevious">UnFocus</animation> 
@@ -6172,6 +6202,13 @@
 				<fadetime>200</fadetime>
 				<visible>!Container.Content(albums) + [!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(LoveFilmShowVideo)] | [Player.HasVideo + Skin.HasSetting(LoveFilmShowVideo) + IsEmpty(Window(Home).property(ThemeMediaMB3IsAlive))]]</visible>
 			</control>
+			<control type="image">
+				<posx>1735</posx>
+				<posy>25</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>$VAR[ExtendedOverlay]</texture>
+			</control>
 			<control type="videowindow">
 				<description>video</description>
 				<posx>619</posx>
@@ -6249,7 +6286,7 @@
 		<control type="group">
 			<visible>Control.IsVisible(566) + !Window.IsActive(movieinformation) + !Window.IsActive(musicinformation)</visible>
 			<include>BannerListAnimations</include>
-			<include>OptionsShutdownAnimation</include>
+			<include>OptionsShutdownAnimationLovefilm</include>
 			<control type="group">
 				<posy>490</posy>
 				<animation effect="fade" start="0" end="100" delay="400" time="350" reversible="false" condition="![Container(566).OnNext | Container(566).OnPrevious]">Conditional</animation>
@@ -6351,12 +6388,11 @@
 						</control>
 						<control type="image">
 							<posx>163</posx>
-							<posy>277</posy>
+							<posy>12</posy>
 							<width>75</width>
 							<height>75</height>
 							<aspect>keepaspect</aspect>
-							<texture>$VAR[WallOverlay]</texture>
-							<colordiffuse>FF444444</colordiffuse>
+							<texture>$VAR[ExtendedOverlay]</texture>
 							<visible>!IsEmpty(ListItem.Overlay)</visible>
 						</control>
 					</itemlayout>
@@ -6395,11 +6431,11 @@
 							</control>
 							<control type="image">
 								<posx>163</posx>
-								<posy>277</posy>
+								<posy>12</posy>
 								<width>75</width>
 								<height>75</height>
 								<aspect>keepaspect</aspect>
-								<texture>$VAR[PosterOverlay]</texture>
+								<texture>$VAR[ExtendedOverlay]</texture>
 								<visible>!IsEmpty(ListItem.Overlay)</visible>
 							</control>
 						</control>
@@ -6591,6 +6627,15 @@
 							<aspectratio>stretch</aspectratio>
 							<colordiffuse>Mod_Border</colordiffuse>
 						</control>
+						<control type="image">
+							<posx>374</posx>
+							<posy>10</posy>
+							<width>50</width>
+							<height>50</height>
+							<aspect>keepaspect</aspect>
+							<texture>$VAR[ExtendedOverlay]</texture>
+							<visible>!IsEmpty(ListItem.Overlay)</visible>
+						</control>
 					</control>
 				</itemlayout>
 				<focusedlayout width="848" height="714">
@@ -6613,6 +6658,15 @@
 							<texture background="true" diffuse="arctic/reel/fanart-big.png">$VAR[ListInfoLandscapeVar]</texture>
 							<aspectratio scalediffuse="false">keep</aspectratio>
 							<visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(ReelShowVideo)] | [Player.HasVideo + Skin.HasSetting(ReelShowVideo) + IsEmpty(Window(Home).property(ThemeMediaMB3IsAlive))]</visible>
+						</control>
+						<control type="image">
+							<posx>738</posx>
+							<posy>10</posy>
+							<width>100</width>
+							<height>100</height>
+							<aspect>keepaspect</aspect>
+							<texture>$VAR[ExtendedOverlay]</texture>
+							<visible>!IsEmpty(ListItem.Overlay)</visible>
 						</control>
 						<control type="videowindow">
 							<description>video</description>
@@ -6775,6 +6829,13 @@
 					<texture diffuse="special://skin/extras/case_diffuse_full.png" background="true">$VAR[CoverflowViewPoster-3]</texture>
 				</control>
 				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture flipx="true">$VAR[CoverflowViewPosterOverlay-3]</texture>
+				</control>
+				<control type="image">
 					<posx>-8</posx>
 					<posy>-8</posy>
 					<width>416</width>
@@ -6808,6 +6869,13 @@
 					<width>400</width>
 					<height>600</height>
 					<texture diffuse="special://skin/extras/case_diffuse_full.png" background="true">$VAR[CoverflowViewPoster-2]</texture>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture flipx="true">$VAR[CoverflowViewPosterOverlay-2]</texture>
 				</control>
 				<control type="image">
 					<posx>-8</posx>
@@ -6845,6 +6913,13 @@
 					<texture diffuse="special://skin/extras/case_diffuse_full.png" background="true">$VAR[CoverflowViewPoster-1]</texture>
 				</control>
 				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture flipx="true">$VAR[CoverflowViewPosterOverlay-1]</texture>
+				</control>
+				<control type="image">
 					<posx>-8</posx>
 					<posy>-8</posy>
 					<width>416</width>
@@ -6878,6 +6953,13 @@
 					<width>400</width>
 					<height>600</height>
 					<texture diffuse="special://skin/extras/case_diffuse_full.png" background="true">$VAR[CoverflowViewPoster3]</texture>
+				</control>
+				<control type="image">
+					<posx>300</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture>$VAR[CoverflowViewPosterOverlay3]</texture>
 				</control>
 				<control type="image">
 					<posx>-8</posx>
@@ -6915,6 +6997,13 @@
 					<texture diffuse="special://skin/extras/case_diffuse_full.png" background="true">$VAR[CoverflowViewPoster2]</texture>
 				</control>
 				<control type="image">
+					<posx>300</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture>$VAR[CoverflowViewPosterOverlay2]</texture>
+				</control>
+				<control type="image">
 					<posx>-8</posx>
 					<posy>-8</posy>
 					<width>416</width>
@@ -6950,6 +7039,13 @@
 					<texture diffuse="special://skin/extras/case_diffuse_full.png" background="true">$VAR[CoverflowViewPoster1]</texture>
 				</control>
 				<control type="image">
+					<posx>300</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture>$VAR[CoverflowViewPosterOverlay1]</texture>
+				</control>
+				<control type="image">
 					<posx>-8</posx>
 					<posy>-8</posy>
 					<width>416</width>
@@ -6983,6 +7079,13 @@
 					<height>600</height>
 					<texture diffuse="special://skin/extras/case_diffuse_full.png" background="true">$VAR[CoverflowViewPoster]</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
+				</control>
+				<control type="image">
+					<posx>300</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture>$VAR[ExtendedOverlay]</texture>
 				</control>
 				<control type="image">
 					<posx>-8</posx>
@@ -7126,6 +7229,13 @@
 							<texture>views/posterview/shadow.png</texture>
 						</control>
 						<include>BannerPlexlayout</include>
+						<control type="image">
+							<posx>570</posx>
+							<posy>2</posy>
+							<width>18</width>
+							<height>18</height>
+							<texture>$VAR[BannerOverlayNF]</texture>
+						</control>
 					</control>
 				</itemlayout>
 				<focusedlayout height="145" width="610" condition="container.content(MusicVideos) | Container.Content(tvshows) | Container.Content(Movies) | container.content(seasons)">
@@ -7147,6 +7257,13 @@
 							<aspectratio scalediffuse="false" align="left">stretch</aspectratio>
 						</control>
 						<include>BannerPlexlayout</include>
+						<control type="image">
+							<posx>570</posx>
+							<posy>2</posy>
+							<width>18</width>
+							<height>18</height>
+							<texture>$VAR[BannerOverlayNF]</texture>
+						</control>
 					</control>
 				</focusedlayout>
 			</control>

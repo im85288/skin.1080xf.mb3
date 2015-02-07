@@ -68,6 +68,15 @@
 			<visible>!Control.HasFocus(3291) | [Control.HasFocus(3291) + isEmpty(Container(3291).ListItem.Icon)] + [!Control.HasFocus(3230) | [Control.HasFocus(3230) + isEmpty(Container(3230).ListItem.Icon)]]</visible>
 		</control>
 		<control type="image">
+			<left>500</left>
+			<top>20</top>
+			<width>100</width>
+			<height>100</height>
+			<texture>$VAR[ExtendedOverlayInfo]</texture>
+			<visible>!Control.HasFocus(3291) | [Control.HasFocus(3291) + isEmpty(Container(3291).ListItem.Icon)] + [!Control.HasFocus(3230) | [Control.HasFocus(3230) + isEmpty(Container(3230).ListItem.Icon)]]</visible>
+			<visible>[!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]</visible>
+		</control>
+		<control type="image">
 			<left>20</left>
 			<top>20</top>
 			<width>580</width>

@@ -837,7 +837,7 @@
 					<posy>-50</posy>
 					<width>300</width>
 					<height>40</height>
-					<label>$LOCALIZE[41694]</label>
+					<label>$LOCALIZE[24027] $LOCALIZE[19030]</label>
 					<textcolor>PrimaryT</textcolor>
 					<focusedcolor>$VAR[FocusModColourVar]</focusedcolor>
 					<font>Font-Condensed-S36</font>

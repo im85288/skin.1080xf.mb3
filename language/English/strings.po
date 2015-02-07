@@ -1419,3 +1419,6 @@ msgctxt "#49315"
 msgid "MobileTech Review"
 msgstr ""
 
+msgctxt "#49316"
+msgid "Use Alternate Music Layout"
+msgstr ""

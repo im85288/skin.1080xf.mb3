@@ -11,49 +11,61 @@
 				<visible>!Control.IsVisible(553) | [Control.IsVisible(553) + Window.IsActive(movieinformation)]</visible>
 				<animation effect="slide" end="-65" time="300" tween="sine" easing="inout" condition="Window.IsActive(mutebug)">Conditional</animation>
 				<animation effect="slide" end="-60" time="300" tween="sine" easing="inout" condition="PVR.IsRecording | PVR.HasTimer">Conditional</animation>
-				<control type="label">
-					<description>Temperature Label</description>
-					<left>1575</left>
-					<posy>977</posy>
-					<width>180</width>
-					<height>100</height>
-					<label>[B]$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits][/B]</label>
-					<font>Font-Condensed-S31-B</font>
-					<textcolor>PrimaryT</textcolor>
-					<shadowcolor>22000000</shadowcolor>
-					<align>right</align>
-					<aligny>top</aligny>
-					<scroll>false</scroll>
-					<animation effect="slide" end="103" time="300" tween="sine" easing="inout" condition="!Weather.IsFetched | [stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]">Conditional</animation>
-				</control>
 				<control type="image">
 					<description>Small weather</description>
-					<left>1743</left>
-					<posy>979</posy>
-					<width>85</width>
-					<height>85</height>
-					<texture colordiffuse="PrimaryT">weather/small/$INFO[Weather.FanartCode].png</texture>
+					<posx>174r</posx>
+					<posy>950</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture>weather/small/$INFO[Weather.FanartCode].png</texture>
 					<visible>Weather.IsFetched + ![stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]</visible>
 					<include>visiblehidefadeinfo</include>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<align>left</align>
+					<visible>Skin.HasSetting(Guide.HideWeather)</visible>
 				</control>
 				<control type="label">
-					<description>Clock label</description>
-					<left>1575</left>
-					<posy>1012</posy>
-					<width>180</width>
+					<description>Weather label</description>
+					<posx>164r</posx>
+					<posy>950</posy>
+					<width>250</width>
 					<height>100</height>
-					<label>[B]$INFO[System.Time(hh:mm)][/B]</label>
+					<label>[B]$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits][/B]</label>
 					<font>Font-Condensed-S34-B</font>
 					<textcolor>PrimaryT</textcolor>
 					<shadowcolor>22000000</shadowcolor>
 					<align>right</align>
-					<aligny>top</aligny>
 					<scroll>false</scroll>
-					<animation effect="slide" end="28" time="300" tween="sine" easing="inout" condition="!Weather.IsFetched | [stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]">Conditional</animation>
+					<animation effect="slide" end="60" time="300" tween="sine" easing="inout" condition="!Weather.IsFetched | [stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]">Conditional</animation>
+					<visible>Weather.IsFetched + ![stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]</visible>
+					<visible>Skin.HasSetting(Guide.HideWeather)</visible>
 				</control>
-				<!-- <control type="label"> <description>Date label</description> <posx>1685</posx> <posy>1019</posy> <width>230</width> <height>100</height> <label>$INFO[System.Date]</label> <font>Font-Condensed-S26</font> <textcolor>PrimaryT</textcolor> <shadowcolor>22000000</shadowcolor> <align>left</align> <aligny>top</aligny> <scroll>false</scroll> <animation effect="slide" end="60" time="300" tween="sine" easing="inout" condition="!Weather.IsFetched | [stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]">Conditional</animation> </control> -->
+				<control type="image">
+					<description>Clock image</description>
+					<posx>355r</posx>
+					<posy>950</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture>windows/home/clock.png</texture>
+					<include>visiblehidefadeinfo</include>
+					<visible>Skin.HasSetting(Guide.HideClock)</visible>
+					<animation effect="slide" end="170" time="300" tween="sine" easing="inout" condition="!Skin.HasSetting(Guide.HideWeather)">Conditional</animation>
+					<animation effect="slide" end="170" time="300" tween="sine" easing="inout" condition="!Weather.IsFetched">Conditional</animation>
+				</control>
+				<control type="label">
+					<description>Clock label</description>
+					<posx>340r</posx>
+					<posy>950</posy>
+					<width>355</width>
+					<height>100</height>
+					<label>[B]$INFO[System.Date(DDD d mmm)] • $INFO[System.Time][/B]</label>
+					<font>Font-Condensed-S34-B</font>
+					<textcolor>PrimaryT</textcolor>
+					<shadowcolor>22000000</shadowcolor>
+					<align>right</align>
+					<scroll>false</scroll>
+					<visible>Skin.HasSetting(Guide.HideClock)</visible>
+					<animation effect="slide" end="172" time="300" tween="sine" easing="inout" condition="!Skin.HasSetting(Guide.HideWeather)">Conditional</animation>
+					<animation effect="slide" end="172" time="300" tween="sine" easing="inout" condition="!Weather.IsFetched">Conditional</animation>
+				</control>
 			</control>
 			<control type="group">
 				<visible>Control.IsVisible(553) + !Window.IsActive(movieinformation)</visible>
@@ -532,18 +544,7 @@
 				</control>
 			</control>
 		</control>
-		<!--<control type="image">
-					<animation effect="rotate" center="auto" start="360" end="0" time="4000" loop="true" condition="!Player.paused">Conditional</animation>
-					<description>discart</description>
-					<posx>1750</posx>
-					<posy>5</posy>
-					<texture background="true">$INFO[Player.Art(discart)]</texture>
-					<width>135</width>
-					<height>135</height>
-					<aspectratio align="center">keep</aspectratio>
-					<visible>Skin.HasSetting(discart2) + !Window.IsActive(infodialog) + Window.IsActive(home)</visible>
-					<visible>!IsEmpty(Player.Art(discart))</visible>
-			</control> -->
+		<!--<control type="image"> <animation effect="rotate" center="auto" start="360" end="0" time="4000" loop="true" condition="!Player.paused">Conditional</animation> <description>discart</description> <posx>1750</posx> <posy>5</posy> <texture background="true">$INFO[Player.Art(discart)]</texture> <width>135</width> <height>135</height> <aspectratio align="center">keep</aspectratio> <visible>Skin.HasSetting(discart2) + !Window.IsActive(infodialog) + Window.IsActive(home)</visible> <visible>!IsEmpty(Player.Art(discart))</visible> </control> -->
 	</include>
 	<include name="Common-Home-Info">
 		<include>Common-Clock</include>

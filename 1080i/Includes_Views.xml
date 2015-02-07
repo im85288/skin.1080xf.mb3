@@ -391,60 +391,125 @@
 	<!-- Overlays -->
 	<variable name="InfoListOverlay">
 		<value condition="ListItem.IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/list-p.png]</value>
+		<value condition="ListItem.IsResumable + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[ListItem.Overlay,overlays/,/list-p.png]</value>
 		<value condition="!IntegerGreaterThan(ListItem.PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/list-w.png]</value>
+		<value condition="!IntegerGreaterThan(ListItem.PlayCount,0) + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[ListItem.Overlay,overlays/,/list-w.png]</value>
 	</variable>
 	<variable name="InfoPanelOverlay">
 		<value condition="ListItem.IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/panel-p.png]</value>
+		<value condition="ListItem.IsResumable + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[ListItem.Overlay,overlays/,/panel-p.png]</value>
 		<value condition="!IntegerGreaterThan(ListItem.PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/panel-w.png]</value>
+		<value condition="!IntegerGreaterThan(ListItem.PlayCount,0) + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[ListItem.Overlay,overlays/,/panel-w.png]</value>
 	</variable>
 	<variable name="DefaultListOverlay">
 		<value condition="Container.ListItem.IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/default-p.png]</value>
+		<value condition="Container.ListItem.IsResumable + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[ListItem.Overlay,overlays/,/default-p.png]</value>
 		<value condition="!IntegerGreaterThan(ListItem.PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/default-w.png]</value>
+		<value condition="!IntegerGreaterThan(ListItem.PlayCount,0) + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[ListItem.Overlay,overlays/,/default-w.png]</value>
 	</variable>
 	<variable name="ExtendedOverlay">
 		<value condition="Container.ListItem.IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/extended-p.png]</value>
+		<value condition="Container.ListItem.IsResumable + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[ListItem.Overlay,overlays/,/extended-p.png]</value>
 		<value condition="!IntegerGreaterThan(ListItem.PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/extended-w.png]</value>
+		<value condition="!IntegerGreaterThan(ListItem.PlayCount,0) + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[ListItem.Overlay,overlays/,/extended-w.png]</value>
 	</variable>
 	<variable name="ExtendedOverlay0">
 		<value condition="Container.ListItem(0).IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[Container.ListItem(0).Overlay,overlays/,/extended-p.png]</value>
+		<value condition="Container.ListItem(0).IsResumable + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[Container.ListItem(0).Overlay,overlays/,/extended-p.png]</value>
 		<value condition="!IntegerGreaterThan(Container.ListItem(0).PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[Container.ListItem(0).Overlay,overlays/,/extended-w.png]</value>
+		<value condition="!IntegerGreaterThan(Container.ListItem(0).PlayCount,0) + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[Container.ListItem(0).Overlay,overlays/,/extended-w.png]</value>
 	</variable>
 	<variable name="ExtendedOverlay1">
 		<value condition="Container.ListItem(1).IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[Container.ListItem(1).Overlay,overlays/,/extended-p.png]</value>
+		<value condition="Container.ListItem(1).IsResumable + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[Container.ListItem(1).Overlay,overlays/,/extended-p.png]</value>
 		<value condition="!IntegerGreaterThan(Container.ListItem(1).PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[Container.ListItem(1).Overlay,overlays/,/extended-w.png]</value>
+		<value condition="!IntegerGreaterThan(Container.ListItem(1).PlayCount,0) + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[Container.ListItem(1).Overlay,overlays/,/extended-w.png]</value>
 	</variable>
 	<variable name="ExtendedOverlay2">
 		<value condition="Container.ListItem(2).IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[Container.ListItem(2).Overlay,overlays/,/extended-p.png]</value>
+		<value condition="Container.ListItem(2).IsResumable + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[Container.ListItem(2).Overlay,overlays/,/extended-p.png]</value>
 		<value condition="!IntegerGreaterThan(Container.ListItem(2).PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[Container.ListItem(2).Overlay,overlays/,/extended-w.png]</value>
+		<value condition="!IntegerGreaterThan(Container.ListItem(2).PlayCount,0) + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[Container.ListItem(2).Overlay,overlays/,/extended-w.png]</value>
 	</variable>
 	<variable name="ExtendedOverlay3">
 		<value condition="Container.ListItem(3).IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[Container.ListItem(3).Overlay,overlays/,/extended-p.png]</value>
+		<value condition="Container.ListItem(3).IsResumable + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[Container.ListItem(3).Overlay,overlays/,/extended-p.png]</value>
 		<value condition="!IntegerGreaterThan(Container.ListItem(3).PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[Container.ListItem(3).Overlay,overlays/,/extended-w.png]</value>
+		<value condition="!IntegerGreaterThan(Container.ListItem(3).PlayCount,0) + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[Container.ListItem(3).Overlay,overlays/,/extended-w.png]</value>
 	</variable>
 	<variable name="ExtendedOverlay4">
 		<value condition="Container.ListItem(4).IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[Container.ListItem(4).Overlay,overlays/,/extended-p.png]</value>
+		<value condition="Container.ListItem(4).IsResumable + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[Container.ListItem(4).Overlay,overlays/,/extended-p.png]</value>
 		<value condition="!IntegerGreaterThan(Container.ListItem(4).PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[Container.ListItem(4).Overlay,overlays/,/extended-w.png]</value>
+		<value condition="!IntegerGreaterThan(Container.ListItem(4).PlayCount,0) + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[Container.ListItem(4).Overlay,overlays/,/extended-w.png]</value>
 	</variable>
 	<variable name="ExtendedOverlay-1">
 		<value condition="Container.ListItem(-1).IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[Container.ListItem(-1).Overlay,overlays/,/extended-p.png]</value>
+		<value condition="Container.ListItem(-1).IsResumable + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[Container.ListItem(-1).Overlay,overlays/,/extended-p.png]</value>
 		<value condition="!IntegerGreaterThan(Container.ListItem(-1).PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[Container.ListItem(-1).Overlay,overlays/,/extended-w.png]</value>
+		<value condition="!IntegerGreaterThan(Container.ListItem(-1).PlayCount,0) + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[Container.ListItem(-1).Overlay,overlays/,/extended-w.png]</value>
+	</variable>
+	<variable name="CoverflowViewPosterOverlay-3">
+		<value condition="Container(780).ListItem(-3).IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[Container(780).ListItem(-3).Overlay,overlays/,/extended-p.png]</value>
+		<value condition="Container(780).ListItem(-3).IsResumable + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[Container(780).ListItem(-3).Overlay,overlays/,/extended-p.png]</value>
+		<value condition="!IntegerGreaterThan(Container(780).ListItem(-3).PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[Container(780).ListItem(-3).Overlay,overlays/,/extended-w.png]</value>
+		<value condition="!IntegerGreaterThan(Container(780).ListItem(-3).PlayCount,0) + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[Container(780).ListItem(-3).Overlay,overlays/,/extended-w.png]</value>
+	</variable>
+	<variable name="CoverflowViewPosterOverlay-2">
+		<value condition="Container(780).ListItem(-2).IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[Container(780).ListItem(-2).Overlay,overlays/,/extended-p.png]</value>
+		<value condition="Container(780).ListItem(-2).IsResumable + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[Container(780).ListItem(-2).Overlay,overlays/,/extended-p.png]</value>
+		<value condition="!IntegerGreaterThan(Container(780).ListItem(-2).PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[Container(780).ListItem(-2).Overlay,overlays/,/extended-w.png]</value>
+		<value condition="!IntegerGreaterThan(Container(780).ListItem(-2).PlayCount,0) + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[Container(780).ListItem(-2).Overlay,overlays/,/extended-w.png]</value>
+	</variable>
+	<variable name="CoverflowViewPosterOverlay-1">
+		<value condition="Container(780).ListItem(-1).IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[Container(780).ListItem(-1).Overlay,overlays/,/extended-p.png]</value>
+		<value condition="Container(780).ListItem(-1).IsResumable + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[Container(780).ListItem(-1).Overlay,overlays/,/extended-p.png]</value>
+		<value condition="!IntegerGreaterThan(Container(780).ListItem(-1).PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[Container(780).ListItem(-1).Overlay,overlays/,/extended-w.png]</value>
+		<value condition="!IntegerGreaterThan(Container(780).ListItem(-1).PlayCount,0) + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[Container(780).ListItem(-1).Overlay,overlays/,/extended-w.png]</value>
+	</variable>
+	<variable name="CoverflowViewPosterOverlay1">
+		<value condition="Container(780).ListItem(1).IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[Container(780).ListItem(1).Overlay,overlays/,/extended-p.png]</value>
+		<value condition="Container(780).ListItem(1).IsResumable + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[Container(780).ListItem(1).Overlay,overlays/,/extended-p.png]</value>
+		<value condition="!IntegerGreaterThan(Container(780).ListItem(1).PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[Container(780).ListItem(1).Overlay,overlays/,/extended-w.png]</value>
+		<value condition="!IntegerGreaterThan(Container(780).ListItem(1).PlayCount,0) + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[Container(780).ListItem(1).Overlay,overlays/,/extended-w.png]</value>
+	</variable>
+	<variable name="CoverflowViewPosterOverlay2">
+		<value condition="Container(780).ListItem(2).IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[Container(780).ListItem(2).Overlay,overlays/,/extended-p.png]</value>
+		<value condition="Container(780).ListItem(2).IsResumable + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[Container(780).ListItem(2).Overlay,overlays/,/extended-p.png]</value>
+		<value condition="!IntegerGreaterThan(Container(780).ListItem(2).PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[Container(780).ListItem(2).Overlay,overlays/,/extended-w.png]</value>
+		<value condition="!IntegerGreaterThan(Container(780).ListItem(2).PlayCount,0) + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[Container(780).ListItem(2).Overlay,overlays/,/extended-w.png]</value>
+	</variable>
+	<variable name="CoverflowViewPosterOverlay3">
+		<value condition="Container(780).ListItem(3).IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[Container(780).ListItem(3).Overlay,overlays/,/extended-p.png]</value>
+		<value condition="Container(780).ListItem(3).IsResumable + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[Container(780).ListItem(3).Overlay,overlays/,/extended-p.png]</value>
+		<value condition="!IntegerGreaterThan(Container(780).ListItem(3).PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[Container(780).ListItem(3).Overlay,overlays/,/extended-w.png]</value>
+		<value condition="!IntegerGreaterThan(Container(780).ListItem(3).PlayCount,0) + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[Container(780).ListItem(3).Overlay,overlays/,/extended-w.png]</value>
 	</variable>
 	<variable name="VideoInfoOverlay">
 		<value condition="IntegerGreaterThan(ListItem.PercentPlayed,0) + !IntegerGreaterThan(ListItem.PercentPlayed,99) + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/extended-p.png]</value>
+		<value condition="IntegerGreaterThan(ListItem.PercentPlayed,0) + !IntegerGreaterThan(ListItem.PercentPlayed,99) + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[ListItem.Overlay,overlays/,/extended-p.png]</value>
 		<value condition="!IntegerGreaterThan(ListItem.PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/extended-w.png]</value>
+		<value condition="!IntegerGreaterThan(ListItem.PlayCount,0) + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[ListItem.Overlay,overlays/,/extended-w.png]</value>
 	</variable>
 	<variable name="ActorsVideoInfoOverlay">
 		<value condition="!IsEmpty(ListItem.Property(isResumable)) + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/extended-p.png]</value>
+		<value condition="!IsEmpty(ListItem.Property(isResumable)) + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[ListItem.Overlay,overlays/,/extended-p.png]</value>
 		<value condition="!IntegerGreaterThan(ListItem.PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/extended-w.png]</value>
+		<value condition="!IntegerGreaterThan(ListItem.PlayCount,0) + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[ListItem.Overlay,overlays/,/extended-w.png]</value>
 	</variable>
 	<variable name="BannerOverlayFo">
 		<value condition="ListItem.IsPlaying + Skin.HasSetting(UseKodiLibrary)">views/banner/other/playing-top.png</value>
+		<value condition="ListItem.IsPlaying + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">views/banner/other/playing-top.png</value>
 		<value condition="ListItem.IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/banner-p-fo.png]</value>
+		<value condition="ListItem.IsResumable + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[ListItem.Overlay,overlays/,/banner-p-fo.png]</value>
 		<value condition="!IntegerGreaterThan(ListItem.PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/banner-w-fo.png]</value>
+		<value condition="!IntegerGreaterThan(ListItem.PlayCount,0) + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[ListItem.Overlay,overlays/,/banner-w-fo.png]</value>
 	</variable>
 	<variable name="BannerOverlayNF">
 		<value condition="Container.ListItem.IsResumable + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/banner-p-nf.png]</value>
+		<value condition="Container.ListItem.IsResumable + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[ListItem.Overlay,overlays/,/banner-p-nf.png]</value>
 		<value condition="!IntegerGreaterThan(ListItem.PlayCount,0) + Skin.HasSetting(UseKodiLibrary)">$INFO[ListItem.Overlay,overlays/,/banner-w-nf.png]</value>
+		<value condition="!IntegerGreaterThan(ListItem.PlayCount,0) + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">$INFO[ListItem.Overlay,overlays/,/banner-w-nf.png]</value>
 	</variable>
 	<variable name="AddonOverlay">
 		<value condition="stringcompare(ListItem.Label2,$LOCALIZE[24098])">overlays/addons/broken.png</value>
@@ -1036,6 +1101,11 @@
 		<value condition="StringCompare(Container(3226).ListItem(7).Label,Metascore:) + [IntegerGreaterThan(Container(3226).ListItem(7).Label2,39) + !IntegerGreaterThan(Container(3226).ListItem(7).Label2,59)]">SelectedOrange</value>
 		<value condition="StringCompare(Container(3226).ListItem(6).Label,Metascore:) + !IntegerGreaterThan(Container(3226).ListItem(6).Label2,39)">SelectedRed</value>
 		<value condition="StringCompare(Container(3226).ListItem(7).Label,Metascore:) + !IntegerGreaterThan(Container(3226).ListItem(7).Label2,39)">SelectedRed</value>
+	</variable>
+	<variable name="ExtendedOverlayInfo">
+		<value condition="StringCompare(Container(3226).ListItem(6).Label,PlayedCount:) + !IntegerGreaterThan(Container(3226).ListItem(6).Label2,0) + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">overlays/OverlayUnWatched.png/extended-w.png</value>
+		<value condition="StringCompare(Container(3226).ListItem(7).Label,PlayedCount:) + !IntegerGreaterThan(Container(3226).ListItem(7).Label2,0) + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">overlays/OverlayUnWatched.png/extended-w.png</value>
+		<value condition="StringCompare(Container(3226).ListItem(8).Label,PlayedCount:) + !IntegerGreaterThan(Container(3226).ListItem(8).Label2,0) + [!Skin.HasSetting(UseKodiLibrary) + Skin.HasSetting(UseSkinIndicators)]">overlays/OverlayUnWatched.png/extended-w.png</value>
 	</variable>
 	<!-- =============== -->
 	<!-- Additional Info -->

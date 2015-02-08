@@ -1869,7 +1869,6 @@
 					<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeChannels) + !Skin.HasSetting(HomePhotos)">AlarmClock(HomeTileMove,Control.Move(10022,1),00:07,silent,loop)</onright>
 					<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomePhotos) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onright>
 					<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomePhotos) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(40222,1),00:07,silent,loop)</onright>
-					
 					<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomePhotos) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomeWeather)">AlarmClock(HomeTileMove,Control.Move(7022,1),00:07,silent,loop)</onright>
 					<onright>Control.Move(20,1)</onright>
 					<onright condition="!Skin.HasSetting(HomeMovies)">225</onright>
@@ -2422,7 +2421,6 @@
 							<onright condition="Skin.HasSetting(HomeMovies) + !Skin.HasSetting(HomeTVShows)">AlarmClock(HomeTileMove,Control.Move(3022,1),00:07,silent,loop)</onright>
 							<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onright>
 							<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(40222,1),00:07,silent,loop)</onright>
-							
 							<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomeWeather)">AlarmClock(HomeTileMove,Control.Move(7022,1),00:07,silent,loop)</onright>
 							<onright condition="IsEmpty(Window(weather).Property(Map.IsFetched))">ClearProperty(ShowMaps)</onright>
 							<onright condition="!IsEmpty(Window(weather).Property(Map.IsFetched))">SetProperty(ShowMaps,Yes)</onright>
@@ -2958,7 +2956,6 @@
 					<onright condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeChannels) + !Skin.HasSetting(HomePhotos)">AlarmClock(HomeTileMove,Control.Move(10022,1),00:07,silent,loop)</onright>
 					<onright condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomePhotos) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onright>
 					<onright condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomePhotos) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(40222,1),00:07,silent,loop)</onright>
-					
 					<onright condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomePhotos) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomeWeather)">AlarmClock(HomeTileMove,Control.Move(7022,1),00:07,silent,loop)</onright>
 					<onright>Control.Move(20,1)</onright>
 					<onright condition="!Skin.HasSetting(HomeTVShows)">325</onright>
@@ -3625,7 +3622,6 @@
 						<onright condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeChannels) + !Skin.HasSetting(HomePhotos)">AlarmClock(HomeTileMove,Control.Move(10022,1),00:07,silent,loop)</onright>
 						<onright condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeChannels)  + Skin.HasSetting(HomePhotos) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onright>
 						<onright condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeChannels)  + Skin.HasSetting(HomePhotos) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(40222,1),00:07,silent,loop)</onright>
-						
 						<onright condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomePhotos) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomeWeather)">AlarmClock(HomeTileMove,Control.Move(7022,1),00:07,silent,loop)</onright>
 						<onright>Control.Move(20,1)</onright>
 						<onright condition="!Skin.HasSetting(HomeTVShows)">301</onright>
@@ -3916,7 +3912,6 @@
 					<onright condition="Skin.HasSetting(HomeChannels) + !Skin.HasSetting(HomePhotos)">AlarmClock(HomeTileMove,Control.Move(10022,1),00:07,silent,loop)</onright>
 					<onright condition="Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomePhotos) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onright>
 					<onright condition="Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomePhotos) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(40222,1),00:07,silent,loop)</onright>
-					
 					<onright condition="Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomePhotos) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomeWeather)">AlarmClock(HomeTileMove,Control.Move(7022,1),00:07,silent,loop)</onright>
 					<onright>Control.Move(20,1)</onright>
 					<onright condition="!Skin.HasSetting(HomeChannels)">1125</onright>
@@ -4565,7 +4560,6 @@
 						<onright condition="Skin.HasSetting(HomeChannels) + !Skin.HasSetting(HomePhotos)">AlarmClock(HomeTileMove,Control.Move(10022,1),00:07,silent,loop)</onright>
 						<onright condition="Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomePhotos) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onright>
 						<onright condition="Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomePhotos) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(40222,1),00:07,silent,loop)</onright>
-						
 						<onright condition="Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomePhotos) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomeWeather)">AlarmClock(HomeTileMove,Control.Move(7022,1),00:07,silent,loop)</onright>
 						<onright>Control.Move(20,1)</onright>
 						<onright condition="!Skin.HasSetting(HomeChannels)">1101</onright>
@@ -4858,7 +4852,6 @@
 					<onright condition="!Skin.HasSetting(HomePhotos)">AlarmClock(HomeTileMove,Control.Move(10022,1),00:07,silent,loop)</onright>
 					<onright condition="Skin.HasSetting(HomePhotos) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onright>
 					<onright condition="Skin.HasSetting(HomePhotos) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(40222,1),00:07,silent,loop)</onright>
-					
 					<onright condition="Skin.HasSetting(HomePhotos) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomeWeather)">AlarmClock(HomeTileMove,Control.Move(7022,1),00:07,silent,loop)</onright>
 					<onright condition="!Skin.HasSetting(HomePhotos)">1025</onright>
 					<onright condition="Skin.HasSetting(HomePhotos) + !Skin.HasSetting(HomeMusic)">425</onright>
@@ -5137,6 +5130,8 @@
 						<onright>CancelAlarm(HomeTileMove,true)</onright>
 						<onright>1102</onright>
 						<onup>1125</onup>
+						<onback condition="!Skin.HasSetting(KioskMode)">SetProperty(EditTile,1)</onback>
+						<onback condition="!Skin.HasSetting(KioskMode)">Select</onback>
 						<ondown>80</ondown>
 						<scrolltime>0</scrolltime>
 						<itemlayout width="289" height="289">
@@ -5382,7 +5377,6 @@
 						<onright condition="!Skin.HasSetting(HomePhotos)">AlarmClock(HomeTileMove,Control.Move(10022,1),00:07,silent,loop)</onright>
 						<onright condition="Skin.HasSetting(HomePhotos) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onright>
 						<onright condition="Skin.HasSetting(HomePhotos) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(40222,1),00:07,silent,loop)</onright>
-						
 						<onright condition="Skin.HasSetting(HomePhotos) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomeWeather)">AlarmClock(HomeTileMove,Control.Move(7022,1),00:07,silent,loop)</onright>
 						<onright>Control.Move(20,1)</onright>
 						<onright condition="!Skin.HasSetting(HomePhotos)">1001</onright>
@@ -5393,6 +5387,8 @@
 						<onright condition="!IsEmpty(Window(weather).Property(Map.IsFetched))">SetProperty(ShowMaps,Yes)</onright>
 						<onright condition="Skin.HasSetting(HomePhotos) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeWeather)">801</onright>
 						<onup>1125</onup>
+						<onback condition="!Skin.HasSetting(KioskMode)">SetProperty(EditTile,1)</onback>
+						<onback condition="!Skin.HasSetting(KioskMode)">Select</onback>
 						<ondown>80</ondown>
 						<scrolltime>0</scrolltime>
 						<itemlayout width="289" height="289">
@@ -5567,28 +5563,26 @@
 						</focusedlayout>
 						<content>
 							<item id="1">
-								<label fallback="49276">$INFO[Skin.String(HomeChannelsTile3.Label)]</label>
-								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeChannelsTile3) + !stringcompare(Skin.String(HomeChannelsTile3.Type),4) + !stringcompare(Skin.String(HomeChannelsTile3.Type),5) + !stringcompare(Skin.String(HomeChannelsTile3.Type),6) + !stringcompare(Skin.String(HomeChannelsTile3.Type),7)">RunAddon($INFO[Skin.String(HomeChannelsTile3.Path)])</onclick>
-								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeChannelsTile3) + stringcompare(Skin.String(HomeChannelsTile3.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeChannelsTile3.Path)],return)</onclick>
-								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeChannelsTile3) + stringcompare(Skin.String(HomeChannelsTile3.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeChannelsTile3.Path)],return)</onclick>
-								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeChannelsTile3) + [stringcompare(Skin.String(HomeChannelsTile3.Type),6) | stringcompare(Skin.String(HomeChannelsTile3.Type),7)]">$INFO[Skin.String(HomeChannelsTile3.Path)]</onclick>
-								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeChannelsTile3)">ActivateWindow(10025,"plugin://plugin.video.xbmb3c/",return))</onclick>
-								<onclick condition="!IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeChannelsTile3)</onclick>
-								<onclick condition="!IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeChannelsTile3.Type))">Skin.SetString(HomeChannelsTile3.Type,0)</onclick>
-								<onclick condition="!IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeChannelsTile3.TypeName))">Skin.SetString(HomeChannelsTile3.TypeName,$LOCALIZE[41145])</onclick>
-								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(SingleDialog,item37,3003)</onclick>
-								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(Dialog,$LOCALIZE[41136],skinsettings)</onclick>
-								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit,HomeChannelsTile3,3003)</onclick>
-								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.Type,$INFO[Skin.String(HomeChannelsTile3.Type)],3003)</onclick>
-								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.ShowLabel,$INFO[Skin.String(HomeChannelsTile3.ShowLabel)],3003)</onclick>
-								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.Animate,$INFO[Skin.String(HomeChannelsTile3.Animate)],3003)</onclick>
-								<onclick condition="!IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
+								<label>$INFO[Skin.String(HomeChannelsTile3.Label)]</label>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeChannelsTile3.Type),4) + !stringcompare(Skin.String(HomeChannelsTile3.Type),5) + !stringcompare(Skin.String(HomeChannelsTile3.Type),6) + !stringcompare(Skin.String(HomeChannelsTile3.Type),7)">RunAddon($INFO[Skin.String(HomeChannelsTile3.Path)])</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeChannelsTile3.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeChannelsTile3.Path)],return)</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeChannelsTile3.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeChannelsTile3.Path)],return)</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeChannelsTile3.Type),6) | stringcompare(Skin.String(HomeChannelsTile3.Type),7)]">$INFO[Skin.String(HomeChannelsTile3.Path)]</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeChannelsTile3.Path)) | !IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeChannelsTile3)</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeChannelsTile3.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeChannelsTile3.Type))">Skin.SetString(HomeChannelsTile3.Type,0)</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeChannelsTile3.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeChannelsTile3.TypeName))">Skin.SetString(HomeChannelsTile3.TypeName,$LOCALIZE[41145])</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeChannelsTile3.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(SingleDialog,item37,3003)</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeChannelsTile3.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(Dialog,$LOCALIZE[41136],skinsettings)</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeChannelsTile3.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit,HomeChannelsTile3,3003)</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeChannelsTile3.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.Type,$INFO[Skin.String(HomeChannelsTile3.Type)],3003)</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeChannelsTile3.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.ShowLabel,$INFO[Skin.String(HomeChannelsTile3.ShowLabel)],3003)</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeChannelsTile3.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.Animate,$INFO[Skin.String(HomeChannelsTile3.Animate)],3003)</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeChannelsTile3.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
-								<thumb>$INFO[Skin.String(HomeChannelsTile3.Icon)]</thumb>
-								<icon>special://skin/extras/icons/mediabrowser.png</icon>
+								<icon>$INFO[Skin.String(HomeChannelsTile3.Icon)]</icon>
 								<property name="tilestandardname">$INFO[Skin.String(tilechannelsstandard.name)]</property>
-								<property name="showlabel">$VAR[HomeChannelsTile3ShowLabel]</property>
-								<property name="path">$VAR[HomeChannelsTile3Path]</property>
+								<property name="showlabel">$INFO[Skin.String(HomeChannelsTile3.ShowLabel)]</property>
+								<property name="path">$INFO[Skin.String(HomeChannelsTile3.Path)]</property>
 								<property name="animate">$INFO[Skin.String(HomeChannelsTile3.Animate)]</property>
 							</item>
 							<item id="2">
@@ -5675,7 +5669,6 @@
 					<onright>Control.Move(20,1)</onright>
 					<onright condition="!Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onright>
 					<onright condition="!Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(40222,1),00:07,silent,loop)</onright>
-					
 					<onright condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomeWeather)">AlarmClock(HomeTileMove,Control.Move(7022,1),00:07,silent,loop)</onright>
 					<onright condition="!Skin.HasSetting(HomeMusic)">425</onright>
 					<onright condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePrograms)">625</onright>
@@ -5974,6 +5967,8 @@
 						<onleft condition="Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">501</onleft>
 						<onright>1002</onright>
 						<onup>1025</onup>
+						<onback condition="!Skin.HasSetting(KioskMode)">SetProperty(EditTile,1)</onback>
+						<onback condition="!Skin.HasSetting(KioskMode)">Select</onback>
 						<ondown>80</ondown>
 						<scrolltime>0</scrolltime>
 						<itemlayout width="289" height="289">
@@ -6246,7 +6241,6 @@
 						<onright>CancelAlarm(HomeTileMove,true)</onright>
 						<onright condition="!Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onright>
 						<onright condition="!Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(40222,1),00:07,silent,loop)</onright>
-						
 						<onright condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomeWeather)">AlarmClock(HomeTileMove,Control.Move(7022,1),00:07,silent,loop)</onright>
 						<onright>Control.Move(20,1)</onright>
 						<onright condition="!Skin.HasSetting(HomeMusic)">401</onright>
@@ -6256,6 +6250,8 @@
 						<onright condition="!IsEmpty(Window(weather).Property(Map.IsFetched))">SetProperty(ShowMaps,Yes)</onright>
 						<onright condition="Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeWeather)">801</onright>
 						<onup>1025</onup>
+						<onback condition="!Skin.HasSetting(KioskMode)">SetProperty(EditTile,1)</onback>
+						<onback condition="!Skin.HasSetting(KioskMode)">Select</onback>
 						<ondown>80</ondown>
 						<scrolltime>0</scrolltime>
 						<itemlayout width="289" height="289">
@@ -8256,7 +8252,6 @@
 						<onleft>CancelAlarm(HomeTileMove,true)</onleft>
 						<onleft condition="!Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onleft>
 						<onleft condition="!Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(40222,1),00:07,silent,loop)</onleft>
-						
 						<onleft condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePhotos)">AlarmClock(HomeTileMove,Control.Move(10022,1),00:07,silent,loop)</onleft>
 						<onleft condition="Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePhotos) + !Skin.HasSetting(HomeChannels)">AlarmClock(HomeTileMove,Control.Move(11022,1),00:07,silent,loop)</onleft>
 						<onleft condition="Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePhotos) + Skin.HasSetting(HomeChannels) + !Skin.HasSetting(HomeTVShows)">AlarmClock(HomeTileMove,Control.Move(3022,1),00:07,silent,loop)</onleft>
@@ -8666,7 +8661,6 @@
 					<onleft>Control.Move(20,-1)</onleft>
 					<onleft condition="Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onleft>
 					<onleft condition="Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(40222,1),00:07,silent,loop)</onleft>
-					
 					<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePhotos)">AlarmClock(HomeTileMove,Control.Move(10022,1),00:07,silent,loop)</onleft>
 					<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePhotos) + !Skin.HasSetting(HomeChannels)">AlarmClock(HomeTileMove,Control.Move(11022,1),00:07,silent,loop)</onleft>
 					<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePhotos) + Skin.HasSetting(HomeChannels) + !Skin.HasSetting(HomeTVShows)">AlarmClock(HomeTileMove,Control.Move(3022,1),00:07,silent,loop)</onleft>
@@ -9623,7 +9617,6 @@
 						<onleft>ClearProperty(ShowMaps)</onleft>
 						<onleft condition="Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onleft>
 						<onleft condition="Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(40222,1),00:07,silent,loop)</onleft>
-						
 						<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePhotos)">AlarmClock(HomeTileMove,Control.Move(10022,1),00:07,silent,loop)</onleft>
 						<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePhotos) + !Skin.HasSetting(HomeChannels)">AlarmClock(HomeTileMove,Control.Move(11022,1),00:07,silent,loop)</onleft>
 						<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePhotos) + Skin.HasSetting(HomeChannels) + !Skin.HasSetting(HomeTVShows)">AlarmClock(HomeTileMove,Control.Move(3022,1),00:07,silent,loop)</onleft>
@@ -9884,7 +9877,6 @@
 					<onleft condition="!Skin.HasSetting(HomeWeather)">AlarmClock(HomeTileMove,Control.Move(7022,1),00:07,silent,loop)</onleft>
 					<onleft condition="Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onleft>
 					<onleft condition="Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(40222,1),00:07,silent,loop)</onleft>
-					
 					<onleft condition="Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePhotos)">AlarmClock(HomeTileMove,Control.Move(10022,1),00:07,silent,loop)</onleft>
 					<onleft condition="Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePhotos) + !Skin.HasSetting(HomeChannels)">AlarmClock(HomeTileMove,Control.Move(11022,1),00:07,silent,loop)</onleft>
 					<onleft condition="Skin.HasSetting(HomeWeather) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePhotos) + Skin.HasSetting(HomeChannels) + !Skin.HasSetting(HomeTVShows)">AlarmClock(HomeTileMove,Control.Move(3022,1),00:07,silent,loop)</onleft>

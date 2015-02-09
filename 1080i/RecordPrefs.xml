@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">10</defaultcontrol>
+	<defaultcontrol condition="System.HasAddon(pvr.wmc)" always="true">10</defaultcontrol>
+	<defaultcontrol condition="System.HasAddon(pvr.nextpvr)" always="true">21</defaultcontrol>
 	<include>KeyboardAnimations</include>
 	<include>OptionsShutdownAnimation</include>
 	<controls>
@@ -164,7 +165,7 @@
 			</control>
 			<control type="spincontrolex" id="25">
 				<description>pre padding</description>
-				<posx>40</posx>
+				<posx>0</posx>
 				<posy>45</posy>
 				<width>800</width>
 				<height>40</height>
@@ -252,7 +253,8 @@
 				<include>DialogButtonDimensions</include>
 				<texturefocus>buttons/select-fo.png</texturefocus>
 				<texturenofocus>buttons/select-nf.png</texturenofocus>
-				<onup>14</onup>
+				<onup condition="System.HasAddon(pvr.wmc)">14</onup>
+				<onup condition="System.HasAddon(pvr.nextpvr)">27</onup>
 				<onleft>2</onleft>
 			</control>
 			<control type="button" id="2" description="Close">
@@ -260,7 +262,8 @@
 				<texturenofocus>buttons/cancel-nf.png</texturenofocus>
 				<include>DialogButtonDimensions</include>
 				<label>$LOCALIZE[42002]</label>
-				<onup>14</onup>
+				<onup condition="System.HasAddon(pvr.wmc)">14</onup>
+				<onup condition="System.HasAddon(pvr.nextpvr)">27</onup>
 				<onright>1</onright>
 			</control>
 		</control>

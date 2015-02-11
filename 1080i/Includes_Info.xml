@@ -54,7 +54,7 @@
 					<description>Clock label</description>
 					<posx>340r</posx>
 					<posy>950</posy>
-					<width>355</width>
+					<width>395</width>
 					<height>100</height>
 					<label>[B]$INFO[System.Date(DDD d mmm)] • $INFO[System.Time][/B]</label>
 					<font>Font-Condensed-S34-B</font>

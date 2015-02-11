@@ -1634,9 +1634,9 @@
 						</focusedlayout>
 						<content>
 							<item id="1">
-								<label>$LOCALIZE[19023]</label>
-								<icon>windows/home/icons/tvshows.png</icon>
-								<onclick>ActivateWindow(tvchannels)</onclick>
+								<label>$LOCALIZE[19069]</label>
+								<icon>windows/home/icons/epg.png</icon>
+								<onclick>ActivateWindow(tvguide)</onclick>
 								<property name="tilestandardname">$INFO[Skin.String(tilelivetvstandard.name)]</property>
 							</item>
 							<item id="2">
@@ -1802,9 +1802,9 @@
 						</focusedlayout>
 						<content>
 							<item id="1">
-								<label>$LOCALIZE[19069]</label>
-								<icon>windows/home/icons/epg.png</icon>
-								<onclick>ActivateWindow(tvguide)</onclick>
+								<label>$LOCALIZE[19023]</label>
+								<icon>windows/home/icons/tvshows.png</icon>
+								<onclick>ActivateWindow(tvchannels)</onclick>
 								<property name="tilestandardname">$INFO[Skin.String(tilelivetvstandard.name)]</property>
 							</item>
 							<item id="2">

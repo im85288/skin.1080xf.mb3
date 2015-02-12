@@ -293,7 +293,7 @@
 	</variable>
 	<variable name="TotalMovies">
 		<value condition="Skin.HasSetting(UseKodiLibrary)">$INFO[Window.Property(Movies.Count)]</value>
-		<value>$INFO[Window(Home).Property(MB3TotalMovies)]</value>
+		<value>$INFO[Window(Home).Property(MediaBrowser.views.movies.0.total)]</value>
 	</variable>
 	<variable name="TotalMoviesWatched">
 		<value condition="Skin.HasSetting(UseKodiLibrary)">$INFO[Window.Property(Movies.Watched)]</value>
@@ -2965,7 +2965,7 @@
 					<onright condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomePhotos) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePrograms)">625</onright>
 					<onright condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomePhotos) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeWeather)">725</onright>
 					<onright condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomePhotos) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeWeather)">825</onright>
-					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.std.movies.0.path)]</onclick>
+					<onclick condition="!Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.views.movies.0.path)]</onclick>
 					<onclick condition="!Library.HasContent(movies) + Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,files,return)</onclick>
 					<onclick condition="Library.HasContent(movies) + Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,movietitles,return)</onclick>
 					<onup>ActivateWindow(3020)</onup>
@@ -3560,7 +3560,7 @@
 								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeVideoTile5) + stringcompare(Skin.String(HomeVideoTile5.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeVideoTile5.Path)],return)</onclick>
 								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeVideoTile5) + stringcompare(Skin.String(HomeVideoTile5.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeVideoTile5.Path)],return)</onclick>
 								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeVideoTile5) + [stringcompare(Skin.String(HomeVideoTile5.Type),6) | stringcompare(Skin.String(HomeVideoTile5.Type),7)]">$INFO[Skin.String(HomeVideoTile5.Path)]</onclick>
-								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeVideoTile5) + !Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.std.movies.0.path)]</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeVideoTile5) + !Skin.HasSetting(UseKodiLibrary)">$INFO[Window(Home).Property(MediaBrowser.views.movies.0.path)]</onclick>
 								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeVideoTile5) + Library.HasContent(movies) + Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,movietitles,return)</onclick>
 								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeVideoTile5) + !Library.HasContent(movies) + Skin.HasSetting(UseKodiLibrary)">ActivateWindow(videos,files,return)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeVideoTile5)</onclick>

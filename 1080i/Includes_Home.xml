@@ -355,7 +355,7 @@
 				</control>
 				<control type="image">
 					<posx>25</posx>
-					<posy>46</posy>
+					<posy>31</posy>
 					<width>60</width>
 					<height>60</height>
 					<texture>$INFO[System.ProfileThumb]</texture>

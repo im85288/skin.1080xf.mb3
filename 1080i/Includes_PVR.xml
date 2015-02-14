@@ -71,6 +71,28 @@
 				<animation effect="slide" start="0,112" end="0,0" time="300" tween="back" easing="out" condition="!IsEmpty(Window.Property(Movement)) + ControlGroup(9001).HasFocus(104)" reversible="false">Conditional</animation>
 				<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="!ControlGroup(9001).HasFocus">Conditional</animation>
 			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>5</width>
+				<height>111</height>
+				<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
+				<animation effect="slide" end="0,112" time="0" condition="ControlGroup(9001).HasFocus(101)">Conditional</animation>
+				<animation effect="slide" end="0,224" time="0" condition="ControlGroup(9001).HasFocus(102)">Conditional</animation>
+				<animation effect="slide" end="0,336" time="0" condition="ControlGroup(9001).HasFocus(103)">Conditional</animation>
+				<animation effect="slide" end="0,448" time="0" condition="ControlGroup(9001).HasFocus(104)">Conditional</animation>
+				<animation effect="slide" start="0,-112" end="0,0" time="300" tween="back" easing="out" condition="IsEmpty(Window.Property(Movement)) + ControlGroup(9001).HasFocus(100)" reversible="false">Conditional</animation>
+				<animation effect="slide" start="0,112" end="0,0" time="300" tween="back" easing="out" condition="!IsEmpty(Window.Property(Movement)) + ControlGroup(9001).HasFocus(100)" reversible="false">Conditional</animation>
+				<animation effect="slide" start="0,-112" end="0,0" time="300" tween="back" easing="out" condition="IsEmpty(Window.Property(Movement)) + ControlGroup(9001).HasFocus(101)" reversible="false">Conditional</animation>
+				<animation effect="slide" start="0,112" end="0,0" time="300" tween="back" easing="out" condition="!IsEmpty(Window.Property(Movement)) + ControlGroup(9001).HasFocus(101)" reversible="false">Conditional</animation>
+				<animation effect="slide" start="0,-112" end="0,0" time="300" tween="back" easing="out" condition="IsEmpty(Window.Property(Movement)) + ControlGroup(9001).HasFocus(102)" reversible="false">Conditional</animation>
+				<animation effect="slide" start="0,112" end="0,0" time="300" tween="back" easing="out" condition="!IsEmpty(Window.Property(Movement)) + ControlGroup(9001).HasFocus(102)" reversible="false">Conditional</animation>
+				<animation effect="slide" start="0,-112" end="0,0" time="300" tween="back" easing="out" condition="IsEmpty(Window.Property(Movement)) + ControlGroup(9001).HasFocus(103)" reversible="false">Conditional</animation>
+				<animation effect="slide" start="0,112" end="0,0" time="300" tween="back" easing="out" condition="!IsEmpty(Window.Property(Movement)) + ControlGroup(9001).HasFocus(103)" reversible="false">Conditional</animation>
+				<animation effect="slide" start="0,-112" end="0,0" time="300" tween="back" easing="out" condition="IsEmpty(Window.Property(Movement)) + ControlGroup(9001).HasFocus(104)" reversible="false">Conditional</animation>
+				<animation effect="slide" start="0,112" end="0,0" time="300" tween="back" easing="out" condition="!IsEmpty(Window.Property(Movement)) + ControlGroup(9001).HasFocus(104)" reversible="false">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="!ControlGroup(9001).HasFocus">Conditional</animation>
+			</control>
 			<control type="button" id="100">
 				<description>Channels</description>
 				<posy>0</posy>

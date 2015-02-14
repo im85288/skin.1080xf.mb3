@@ -90,8 +90,8 @@
 							<visible>ListItem.IsSelected | ListItem.IsPlaying</visible>
 						</control>
 						<control type="image">
-							<posx>360</posx>
-							<posy>5</posy>
+							<left>425</left>
+							<top>5</top>
 							<width>70</width>
 							<height>70</height>
 							<texture background="true" fallback="windows/pvr/defaultchannel.png">$VAR[PvrListIcon]</texture>
@@ -99,9 +99,8 @@
 						</control>
 						<control type="label">
 							<description>Label</description>
-							<posx>150</posx>
-							<posy>0</posy>
-							<width>305</width>
+							<left>100</left>
+							<width>315</width>
 							<height>80</height>
 							<font>Font-Condensed-S34-B</font>
 							<align>left</align>
@@ -112,12 +111,10 @@
 						</control>
 						<control type="label">
 							<description>ChannelNumber</description>
-							<posx>-10</posx>
-							<posy>0</posy>
-							<width>75</width>
+							<left>7</left>
+							<width>88</width>
 							<height>80</height>
 							<font>Font-Condensed-S49</font>
-							<align>right</align>
 							<label>$INFO[ListItem.ChannelNumberLabel]</label>
 							<textcolor>PrimaryT</textcolor>
 							<selectedcolor>PrimaryT</selectedcolor>
@@ -150,9 +147,16 @@
 							<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 							<visible>Control.HasFocus(10)</visible>
 						</control>
+						<control type="image"> <!--focused background left edge -->
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>5</width>
+							<height>79</height>
+							<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
+						</control>
 						<control type="image">
-							<posx>360</posx>
-							<posy>5</posy>
+							<left>425</left>
+							<top>5</top>
 							<width>70</width>
 							<height>70</height>
 							<texture background="true" fallback="windows/pvr/defaultchannel.png">$VAR[PvrListIcon]</texture>
@@ -160,9 +164,8 @@
 						</control>
 						<control type="label">
 							<description>Label</description>
-							<posx>150</posx>
-							<posy>0</posy>
-							<width>305</width>
+							<left>100</left>
+							<width>315</width>
 							<height>80</height>
 							<font>Font-Condensed-S34-B</font>
 							<align>left</align>
@@ -174,12 +177,10 @@
 						</control>
 						<control type="label">
 							<description>ChannelNumber</description>
-							<posx>-10</posx>
-							<posy>0</posy>
-							<width>75</width>
+							<left>7</left>
+							<width>88</width>
 							<height>80</height>
 							<font>Font-Condensed-S49</font>
-							<align>right</align>
 							<label>$INFO[ListItem.ChannelNumberLabel]</label>
 							<textcolor>SecondaryT</textcolor>
 							<selectedcolor>SecondaryT</selectedcolor>
@@ -360,11 +361,11 @@
 						<height>180</height>
 						<texture background="true" fallback="windows/pvr/defaultchannel.png">$INFO[Container(10).ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
-					    <visible>!Player.HasVideo</visible>
+						<visible>!Player.HasVideo</visible>
 					</control>
 					<control type="videowindow">
 						<posy>50</posy>
-					    <posx>-360</posx>
+						<posx>-360</posx>
 						<width>460</width>
 						<height>205</height>
 						<visible>Player.HasVideo</visible>

@@ -1259,7 +1259,7 @@
 		<font>
 			<name>Font-Condensed-S34-B</name>
 			<filename>Montserrat-Regular.ttf</filename>
-			<size>29</size>
+			<size>28</size>
 			<style>bold</style>
 		</font>
 		<font>
@@ -1365,7 +1365,7 @@
 		<font>
 			<name>Font-Condensed-S49</name>
 			<filename>Montserrat-Regular.ttf</filename>
-			<size>45</size>
+			<size>40</size>
 		</font>
 		<font>
 			<name>Font-Condensed-S52-B</name>

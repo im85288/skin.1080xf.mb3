@@ -1422,3 +1422,7 @@ msgstr ""
 msgctxt "#49316"
 msgid "Use Alternate Music Layout"
 msgstr ""
+
+msgctxt "#49317"
+msgid "Enable Lyrics while playing music (CU LRC Lyrics)"
+msgstr ""

@@ -803,7 +803,6 @@
 						<label>Use native skin indicators</label>
 						<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
 					</control>
-					
 					<control type="radiobutton" id="3007">
 						<width>1210</width>
 						<include>SettingsCategoryRadioButtonVars</include>
@@ -1648,6 +1647,15 @@
 						<label>$LOCALIZE[41282]</label>
 						<label2>[COLOR=SelectedBlue]$INFO[system.addontitle(Skin.String(LyricScript_Path))][/COLOR]</label2>
 						<onclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
+					</control>
+					<control type="radiobutton" id="7011">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<onclick>Skin.ToggleSetting(showlyrics)</onclick>
+						<onclick>Notification($LOCALIZE[24074],$LOCALIZE[24074])</onclick>
+						<selected>Skin.HasSetting(showlyrics)</selected>
+						<enable>System.HasAddon(script.cu.lrclyrics)</enable>
+						<label>$LOCALIZE[49317]</label>
 					</control>
 					<control type="radiobutton" id="7005">
 						<width>1210</width>

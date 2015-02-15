@@ -69,8 +69,8 @@
         <textcolor>grey</textcolor>
         <focusedcolor>blue</focusedcolor>
         <disabledcolor>black</disabledcolor>
-        <textureradiofocus>special://skin/extras/icons/radio-light-fo.png</textureradiofocus>
-        <textureradionofocus>special://skin/extras/icons/radio-light-nf.png</textureradionofocus>
+        <textureradiofocus>buttons/radio/radio-light-fo.png</textureradiofocus>
+        <textureradionofocus>buttons/radio/radio-light-nf.png</textureradionofocus>
         <textoffsetx>5</textoffsetx>
         <pulseonselect>false</pulseonselect>
     </default>

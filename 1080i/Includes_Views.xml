@@ -349,44 +349,44 @@
 		<value>-</value>
 	</variable>
 	<variable name="ListHDSDFlagSmall">
-		<value condition="SubString(ListItem.FileNameAndPath,.3D.) | SubString(ListItem.FileNameAndPath,-3D.)">flags/other/3d-ilist.png</value>
-		<value condition="IntegerGreaterThan(ListItem.VideoResolution,719)">flags/defs/hd-ilist.png</value>
-		<value condition="!IsEmpty(ListItem.VideoResolution)">flags/defs/sd-ilist.png</value>
+		<value condition="ListItem.IsStereoscopic">flags/other/3d-ilist.png</value>
+		<value condition="!ListItem.IsStereoscopic + IntegerGreaterThan(ListItem.VideoResolution,719)">flags/defs/hd-ilist.png</value>
+		<value condition="!ListItem.IsStereoscopic + !IsEmpty(ListItem.VideoResolution)">flags/defs/sd-ilist.png</value>
 	</variable>
 	<variable name="BannerListHDSDFlag">
-		<value condition="SubString(ListItem.FileNameAndPath,.3D.) | SubString(ListItem.FileNameAndPath,-3D.)">flags/other/3d-banner.png</value>
-		<value condition="IntegerGreaterThan(ListItem.VideoResolution,719)">flags/defs/hd-banner.png</value>
-		<value condition="!IsEmpty(ListItem.VideoResolution)">flags/defs/sd-banner.png</value>
+		<value condition="ListItem.IsStereoscopic">flags/other/3d-banner.png</value>
+		<value condition="!ListItem.IsStereoscopic + IntegerGreaterThan(ListItem.VideoResolution,719)">flags/defs/hd-banner.png</value>
+		<value condition="!ListItem.IsStereoscopic + !IsEmpty(ListItem.VideoResolution)">flags/defs/sd-banner.png</value>
 	</variable>
 	<variable name="LandscapeHDSD3DLabel">
-		<value condition="SubString(ListItem.FileNameAndPath,.3D.) | SubString(ListItem.FileNameAndPath,-3D.)"> [COLOR=44FFFFFF]/[/COLOR] 3D</value>
-		<value condition="IntegerGreaterThan(ListItem.VideoResolution,719)"> [COLOR=44FFFFFF]/[/COLOR] HD</value>
-		<value condition="!IsEmpty(ListItem.VideoResolution)"> [COLOR=44FFFFFF]/[/COLOR] SD</value>
+		<value condition="ListItem.IsStereoscopic"> [COLOR=44FFFFFF]/[/COLOR] 3D</value>
+		<value condition="!ListItem.IsStereoscopic + IntegerGreaterThan(ListItem.VideoResolution,719)"> [COLOR=44FFFFFF]/[/COLOR] HD</value>
+		<value condition="!ListItem.IsStereoscopic + !IsEmpty(ListItem.VideoResolution)"> [COLOR=44FFFFFF]/[/COLOR] SD</value>
 	</variable>
 	<variable name="LandscapeHDSD3DLabel0">
-		<value condition="SubString(Container(54).ListItem(0).FileNameAndPath,.3D.) | SubString(Container(54).ListItem(0).FileNameAndPath,-3D.)"> [COLOR=44FFFFFF]/[/COLOR] 3D</value>
-		<value condition="IntegerGreaterThan(Container(54).ListItem(0).VideoResolution,719)"> [COLOR=44FFFFFF]/[/COLOR] HD</value>
-		<value condition="!IsEmpty(Container(54).ListItem(0).VideoResolution)"> [COLOR=44FFFFFF]/[/COLOR] SD</value>
+		<value condition="Container(54).ListItem(0).IsStereoscopic"> [COLOR=44FFFFFF]/[/COLOR] 3D</value>
+		<value condition="!Container(54).ListItem(0).IsStereoscopic + IntegerGreaterThan(Container(54).ListItem(0).VideoResolution,719)"> [COLOR=44FFFFFF]/[/COLOR] HD</value>
+		<value condition="!Container(54).ListItem(0).IsStereoscopic + !IsEmpty(Container(54).ListItem(0).VideoResolution)"> [COLOR=44FFFFFF]/[/COLOR] SD</value>
 	</variable>
 	<variable name="LandscapeHDSD3DLabel1">
-		<value condition="SubString(Container(54).ListItem(1).FileNameAndPath,.3D.) | SubString(Container(54).ListItem(1).FileNameAndPath,-3D.)"> [COLOR=44FFFFFF]/[/COLOR] 3D</value>
-		<value condition="IntegerGreaterThan(Container(54).ListItem(1).VideoResolution,719)"> [COLOR=44FFFFFF]/[/COLOR] HD</value>
-		<value condition="!IsEmpty(Container(54).ListItem(1).VideoResolution)"> [COLOR=44FFFFFF]/[/COLOR] SD</value>
+		<value condition="Container(54).ListItem(1).IsStereoscopic"> [COLOR=44FFFFFF]/[/COLOR] 3D</value>
+		<value condition="!Container(54).ListItem(1).IsStereoscopic + IntegerGreaterThan(Container(54).ListItem(1).VideoResolution,719)"> [COLOR=44FFFFFF]/[/COLOR] HD</value>
+		<value condition="!Container(54).ListItem(1).IsStereoscopic + !IsEmpty(Container(54).ListItem(1).VideoResolution)"> [COLOR=44FFFFFF]/[/COLOR] SD</value>
 	</variable>
 	<variable name="LandscapeHDSD3DLabel2">
-		<value condition="SubString(Container(54).ListItem(2).FileNameAndPath,.3D.) | SubString(Container(54).ListItem(2).FileNameAndPath,-3D.)"> [COLOR=44FFFFFF]/[/COLOR] 3D</value>
-		<value condition="IntegerGreaterThan(Container(54).ListItem(2).VideoResolution,719)"> [COLOR=44FFFFFF]/[/COLOR] HD</value>
-		<value condition="!IsEmpty(Container(54).ListItem(2).VideoResolution)"> [COLOR=44FFFFFF]/[/COLOR] SD</value>
+		<value condition="Container(54).ListItem(2).IsStereoscopic"> [COLOR=44FFFFFF]/[/COLOR] 3D</value>
+		<value condition="!Container(54).ListItem(2).IsStereoscopic + IntegerGreaterThan(Container(54).ListItem(2).VideoResolution,719)"> [COLOR=44FFFFFF]/[/COLOR] HD</value>
+		<value condition="!Container(54).ListItem(2).IsStereoscopic + !IsEmpty(Container(54).ListItem(2).VideoResolution)"> [COLOR=44FFFFFF]/[/COLOR] SD</value>
 	</variable>
 	<variable name="LandscapeHDSD3DLabel3">
-		<value condition="SubString(Container(54).ListItem(3).FileNameAndPath,.3D.) | SubString(Container(54).ListItem(3).FileNameAndPath,-3D.)"> [COLOR=44FFFFFF]/[/COLOR] 3D</value>
-		<value condition="IntegerGreaterThan(Container(54).ListItem(3).VideoResolution,719)"> [COLOR=44FFFFFF]/[/COLOR] HD</value>
-		<value condition="!IsEmpty(Container(54).ListItem(3).VideoResolution)"> [COLOR=44FFFFFF]/[/COLOR] SD</value>
+		<value condition="Container(54).ListItem(3).IsStereoscopic"> [COLOR=44FFFFFF]/[/COLOR] 3D</value>
+		<value condition="!Container(54).ListItem(3).IsStereoscopic + IntegerGreaterThan(Container(54).ListItem(3).VideoResolution,719)"> [COLOR=44FFFFFF]/[/COLOR] HD</value>
+		<value condition="!Container(54).ListItem(3).IsStereoscopic + !IsEmpty(Container(54).ListItem(3).VideoResolution)"> [COLOR=44FFFFFF]/[/COLOR] SD</value>
 	</variable>
 	<variable name="LandscapeHDSD3DLabel-1">
-		<value condition="SubString(Container(54).ListItem(-1).FileNameAndPath,.3D.) | SubString(Container(54).ListItem(-1).FileNameAndPath,-3D.)"> [COLOR=44FFFFFF]/[/COLOR] 3D</value>
-		<value condition="IntegerGreaterThan(Container(54).ListItem(-1).VideoResolution,719)"> [COLOR=44FFFFFF]/[/COLOR] HD</value>
-		<value condition="!IsEmpty(Container(54).ListItem(-1).VideoResolution)"> [COLOR=44FFFFFF]/[/COLOR] SD</value>
+		<value condition="Container(54).ListItem(-1).IsStereoscopic"> [COLOR=44FFFFFF]/[/COLOR] 3D</value>
+		<value condition="!Container(54).ListItem(-1).IsStereoscopic + IntegerGreaterThan(Container(54).ListItem(-1).VideoResolution,719)"> [COLOR=44FFFFFF]/[/COLOR] HD</value>
+		<value condition="!Container(54).ListItem(-1).IsStereoscopic + !IsEmpty(Container(54).ListItem(-1).VideoResolution)"> [COLOR=44FFFFFF]/[/COLOR] SD</value>
 	</variable>
 	<!-- Overlays -->
 	<variable name="InfoListOverlay">

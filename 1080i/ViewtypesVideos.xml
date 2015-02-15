@@ -93,15 +93,6 @@
 						<scroll>false</scroll>
 					</control>
 					<control type="image">
-						<description>Watched/unwatched overlay</description>
-						<posx>-8</posx>
-						<posy>0</posy>
-						<width>100</width>
-						<height>100</height>
-						<colordiffuse>$VAR[Colordiffuse.Color]</colordiffuse>
-						<texture>$VAR[DefaultListOverlay]</texture>
-					</control>
-					<control type="image">
 						<posx>76</posx>
 						<posy>8</posy>
 						<width>85</width>
@@ -220,7 +211,7 @@
 						<width>90</width>
 						<height>60</height>
 						<texture>flags/other/set-list.png</texture>
-						<visible>stringcompare(ListItem.Property(ItemType),BoxSet)</visible>
+						<visible>stringcompare(ListItem.Property(ItemType),BoxSet) | substring(ListItem.Path,videodb://movies/sets,left)</visible>
 						<colordiffuse>PrimaryT</colordiffuse>
 					</control>
 					<control type="label">
@@ -566,16 +557,6 @@
 							<textcolor>SecondaryT</textcolor>
 							<selectedcolor>SecondaryT</selectedcolor>
 							<scroll>false</scroll>
-						</control>
-						<control type="image">
-							<description>Watched/unwatched overlay</description>
-							<posx>-8</posx>
-							<posy>0</posy>
-							<width>100</width>
-							<height>100</height>
-							<colordiffuse>SecondaryT</colordiffuse>
-							<texture>$VAR[DefaultListOverlay]</texture>
-							<visible>!IsEmpty(ListItem.Overlay)</visible>
 						</control>
 					</control>
 				</focusedlayout>
@@ -6177,108 +6158,241 @@
 	<!-- =============== -->
 	<include name="Viewtype-LoveFilm-Content">
 		<control type="group">
+			<posx>5</posx>
+			<posy>-</posy>
 			<control type="image">
-				<posx>50</posx>
+				<posx>95</posx>
 				<posy>0</posy>
-				<width>1810</width>
+				<width>1720</width>
 				<height>734</height>
-				<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
-			</control>
-			<control type="image">
-				<posx>75</posx>
-				<posy>25</posy>
-				<width>1760</width>
-				<height>684</height>
-				<texture colordiffuse="PrimaryBG">special://skin/extras/backgrounds/white.png</texture>
+				<texture>views/fanart/back-tile.png</texture>
 			</control>
 			<control type="image">
 				<description>Landscape</description>
-				<posx>619</posx>
-				<posy>25</posy>
-				<width>1216</width>
-				<height>684</height>
+				<posx>585</posx>
+				<posy>0</posy>
+				<width>1230</width>
+				<height>734</height>
 				<texture background="true">$VAR[ListInfoLandscapeVar2]</texture>
-				<aspectratio scalediffuse="false">keep</aspectratio>
-				<fadetime>200</fadetime>
-				<visible>!Container.Content(albums) + [!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(LoveFilmShowVideo)] | [Player.HasVideo + Skin.HasSetting(LoveFilmShowVideo) + IsEmpty(Window(Home).property(ThemeMediaMB3IsAlive))]]</visible>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<visible>[!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(LoveFilmShowVideo)] | [Player.HasVideo + Skin.HasSetting(LoveFilmShowVideo) + IsEmpty(Window(Home).property(ThemeMediaMB3IsAlive))]]</visible>
+				<visible>!Container.Content(episodes)</visible>
 			</control>
 			<control type="image">
-				<posx>1735</posx>
-				<posy>25</posy>
+				<posx>585</posx>
+				<posy>0</posy>
+				<width>1230</width>
+				<height>734</height>
+				<texture border="7">views/fanart/slide-overlay.png</texture>
+				<visible>[!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(LoveFilmShowVideo)] | [Player.HasVideo + Skin.HasSetting(LoveFilmShowVideo) + IsEmpty(Window(Home).property(ThemeMediaMB3IsAlive))]]</visible>
+				<visible>Container.Content(episodes)</visible>
+			</control>
+			<control type="image">
+				<posx>585</posx>
+				<posy>0</posy>
+				<width>1230</width>
+				<height>734</height>
+				<texture border="7">views/fanart/slide-overlay.png</texture>
+				<visible>Player.HasVideo + Skin.HasSetting(LoveFilmShowVideo) + !IsEmpty(Window(Home).property(ThemeMediaMB3IsAlive))</visible>
+			</control>
+			<control type="image">
+				<description>Landscape</description>
+				<posx>585</posx>
+				<posy>0</posy>
+				<width>1230</width>
+				<height>734</height>
+				<texture background="true">$VAR[ListInfoLandscapeVar2]</texture>
+				<aspectratio scalediffuse="false">keep</aspectratio>
+				<visible>[!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(LoveFilmShowVideo)] | [Player.HasVideo + Skin.HasSetting(LoveFilmShowVideo) + IsEmpty(Window(Home).property(ThemeMediaMB3IsAlive))]]</visible>
+				<visible>Container.Content(episodes)</visible>
+			</control>
+			<control type="videowindow">
+				<description>video</description>
+				<posx>585</posx>
+				<posy>0</posy>
+				<width>1230</width>
+				<height>734</height>
+				<visible>Player.HasVideo + Skin.HasSetting(LoveFilmShowVideo) + !IsEmpty(Window(Home).property(ThemeMediaMB3IsAlive))</visible>
+			</control>
+			<control type="image">
+				<posx>585</posx>
+				<posy>647</posy>
+				<width>1230</width>
+				<height>87</height>
+				<texture border="7">views/fanart/slide-overlay.png</texture>
+			</control>
+			<control type="image">
+				<posx>1715</posx>
+				<posy>0</posy>
 				<width>100</width>
 				<height>100</height>
 				<texture>$VAR[ExtendedOverlay]</texture>
 			</control>
-			<control type="videowindow">
-				<description>video</description>
-				<posx>619</posx>
-				<posy>25</posy>
-				<width>1216</width>
-				<height>684</height>
-				<aspectratio>stretch</aspectratio>
-				<visible>!Container.Content(albums) + Player.HasVideo + Skin.HasSetting(LoveFilmShowVideo) + !IsEmpty(Window(Home).property(ThemeMediaMB3IsAlive))</visible>
+			<control type="image">
+				<description>Poster</description>
+				<posx>95</posx>
+				<posy>0</posy>
+				<width>490</width>
+				<height>734</height>
+				<texture background="true">$VAR[PosterViewPoster]</texture>
+				<fadetime>500</fadetime>
+				<aspectratio>scale</aspectratio>
+				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(artists) | Container.Content(songs) + [!Container.Content(seasons) | IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)]</visible>
 			</control>
 			<control type="image">
-				<description>Landscape</description>
-				<posx>1151</posx>
-				<posy>25</posy>
-				<width>684</width>
-				<height>684</height>
-				<texture background="true" diffuse="special://skin/extras/fade/lovefilm.png">$VAR[WallPoster]</texture>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<fadetime>200</fadetime>
-				<visible>Container.Content(albums)</visible>
+				<posx>95</posx>
+				<posy>0</posy>
+				<width>490</width>
+				<height>734</height>
+				<texture>windows/common/grey.png</texture>
+				<colordiffuse>DF222222</colordiffuse>
+				<include>visiblehidefadeinfo</include>
+				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(artists) | Container.Content(songs) + [!Container.Content(seasons) | IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)]</visible>
 			</control>
-			<control type="textbox">
-				<posx>100</posx>
-				<posy>46</posy>
-				<width>509</width>
-				<height>100</height>
+			<control type="label">
+				<posx>617</posx>
+				<posy>656</posy>
+				<width>1216</width>
+				<height>66</height>
 				<label>$INFO[ListItem.Label]</label>
-				<textcolor>PrimaryT</textcolor>
-				<font>Font-Condensed-S40</font>
+				<textcolor>aawhite</textcolor>
+				<font>Font-Condensed-S38</font>
 				<align>left</align>
-				<aligny>top</aligny>
+				<aligny>center</aligny>
 				<scroll>false</scroll>
 			</control>
+			<control type="label">
+				<posx>690</posx>
+				<posy>656</posy>
+				<width>1098</width>
+				<height>66</height>
+				<label>$INFO[ListItem.Rating,★ ,]$INFO[ListItem.Duration, [COLOR=ffffffff]/[/COLOR] , $LOCALIZE[12391]]</label>
+				<textcolor>aawhite</textcolor>
+				<font>Font-Condensed-S38</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<scroll>false</scroll>
+			</control>
+			<control type="label">
+				<posx>121</posx>
+				<posy>680</posy>
+				<width>430</width>
+				<font>Font-Condensed-S30</font>
+				<label>$VAR[ListItem.Year]</label>
+				<textcolor>77white</textcolor>
+				<shadowcolor>22000000</shadowcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<scroll>false</scroll>
+				<visible>!Container.Content(episodes)</visible>
+			</control>
+			<control type="label">
+				<posx>121</posx>
+				<posy>680</posy>
+				<width>430</width>
+				<font>Font-Condensed-S30</font>
+				<label>$LOCALIZE[20416]: $INFO[ListItem.Premiered]</label>
+				<textcolor>77white</textcolor>
+				<shadowcolor>22000000</shadowcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<scroll>false</scroll>
+				<visible>Container.Content(episodes) + !IsEmpty(ListItem.Premiered)</visible>
+			</control>
+			<control type="label">
+				<posx>121</posx>
+				<posy>640</posy>
+				<width>430</width>
+				<font>Font-Condensed-S30</font>
+				<label>$INFO[ListItem.Genre]</label>
+				<textcolor>77white</textcolor>
+				<shadowcolor>22000000</shadowcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<scroll>false</scroll>
+			</control>
+			<control type="label">
+				<posx>121</posx>
+				<posy>600</posy>
+				<width>430</width>
+				<font>Font-Condensed-S30</font>
+				<label>$LOCALIZE[16101]: $INFO[ListItem.Property(UnWatchedEpisodes)] / $INFO[ListItem.Property(TotalEpisodes)]</label>
+				<textcolor>77white</textcolor>
+				<shadowcolor>22000000</shadowcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<scroll>true</scroll>
+				<visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)</visible>
+			</control>
+			<control type="label">
+				<posx>121</posx>
+				<posy>30</posy>
+				<width>510</width>
+				<font>Font-Condensed-S60</font>
+				<label>$LOCALIZE[207]</label>
+				<textcolor>aawhite</textcolor>
+				<shadowcolor>22000000</shadowcolor>
+				<scroll>false</scroll>
+				<visible>!IsEmpty(ListItem.Plot)</visible>
+			</control>
 			<control type="textbox">
-				<posx>100</posx>
-				<posy>170</posy>
-				<width>495</width>
-				<height>500</height>
+				<posx>121</posx>
+				<posy>80</posy>
+				<width>430</width>
+				<height>495</height>
 				<label>$INFO[ListItem.Plot]</label>
-				<textcolor>SecondaryT</textcolor>
-				<font>Font-Condensed-S28</font>
+				<textcolor>CCFFFFFF</textcolor>
+				<font>Font-Condensed-S34</font>
 				<align>justify</align>
 				<scroll>false</scroll>
 				<visible>!Container.Content(artists) + !Container.Content(albums)</visible>
 				<autoscroll delay="8000" time="3000" repeat="13000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
 			</control>
 			<control type="textbox">
-				<posx>100</posx>
-				<posy>170</posy>
-				<width>495</width>
-				<height>490</height>
+				<posx>121</posx>
+				<posy>80</posy>
+				<width>430</width>
+				<height>495</height>
 				<label>$VAR[MusicPlotBox]</label>
-				<textcolor>SecondaryT</textcolor>
-				<font>Font-Condensed-S28</font>
+				<textcolor>CCFFFFFF</textcolor>
+				<font>Font-Condensed-S34</font>
+				<align>justify</align>
+				<scroll>false</scroll>
+				<visible>Container.Content(albums)</visible>
+				<autoscroll delay="8000" time="3000" repeat="13000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
+			</control>
+			<control type="textbox">
+				<posx>121</posx>
+				<posy>80</posy>
+				<width>430</width>
+				<height>600</height>
+				<label>$VAR[MusicPlotBox]</label>
+				<textcolor>CCFFFFFF</textcolor>
+				<font>Font-Condensed-S34</font>
 				<align>justify</align>
 				<scroll>false</scroll>
 				<visible>Container.Content(artists)</visible>
 				<autoscroll delay="8000" time="3000" repeat="13000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
 			</control>
-			<control type="textbox">
-				<posx>100</posx>
-				<posy>170</posy>
-				<width>1022</width>
-				<height>490</height>
-				<label>$VAR[MusicPlotBox]</label>
-				<textcolor>SecondaryT</textcolor>
-				<font>Font-Condensed-S28</font>
-				<align>justify</align>
-				<scroll>false</scroll>
-				<visible>Container.Content(albums)</visible>
-				<autoscroll delay="8000" time="3000" repeat="13000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
+			<control type="image">
+				<posx>490</posx>
+				<posy>18</posy>
+				<width>60</width>
+				<height>57</height>
+				<aspectratio align="right" aligny="center">keep</aspectratio>
+				<texture>$INFO[ListItem.Studio,special://skin/extras/studioflags/,.png]</texture>
+				<colordiffuse>aawhite</colordiffuse>
+				<visible>Container.Content(TVShows) + !IsEmpty(ListItem.Studio)</visible>
+			</control>
+			<control type="image">
+				<description>Flagging</description>
+				<posx>450</posx>
+				<posy>0</posy>
+				<width>140</width>
+				<height>100</height>
+				<texture>$VAR[ListHDSDFlag]</texture>
+				<colordiffuse>$VAR[Colordiffuse.Color]</colordiffuse>
+				<visible>!IsEmpty(ListItem.VideoResolution)</visible>
 			</control>
 		</control>
 	</include>
@@ -6293,19 +6407,19 @@
 				<visible>Control.IsVisible(566)</visible>
 				<control type="image">
 					<description>Left</description>
-					<posx>-26</posx>
+					<posx>42</posx>
 					<width>100</width>
 					<height>100</height>
-					<texture>special://skin/extras/buttons/options-left.png</texture>
+					<texture>views/fanart/arrow-left.png</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<colordiffuse>PrimaryT</colordiffuse>
 				</control>
 				<control type="image">
 					<description>Left</description>
-					<posx>1834</posx>
+					<posx>1778</posx>
 					<width>100</width>
 					<height>100</height>
-					<texture>special://skin/extras/buttons/options-right.png</texture>
+					<texture>views/fanart/arrow-right.png</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<colordiffuse>PrimaryT</colordiffuse>
 				</control>

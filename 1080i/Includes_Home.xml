@@ -330,16 +330,14 @@
 					<effect type="zoom" start="100" end="50" center="125,80" tween="sine" easing="inout" time="300" />
 				</animation>
 				<control type="image">
-					<posx>68</posx>
-					<posy>14</posy>
+					<left>68</left>
 					<width>341</width>
 					<height>100</height>
 					<texture>special://skin/extras/icons/mblogotextwhite.png</texture>
 					<visible>!StringCompare(Skin.CurrentColourTheme,Snow) + !Skin.HasSetting(UseKodiLibrary)</visible>
 				</control>
 				<control type="image">
-					<posx>68</posx>
-					<posy>14</posy>
+					<left>68</left>
 					<width>341</width>
 					<height>100</height>
 					<texture>special://skin/extras/icons/mblogotextblack.png</texture>
@@ -347,27 +345,26 @@
 				</control>
 				<control type="image">
 					<left>0</left>
-					<top>48</top>
-					<width>48</width>
-					<height>33</height>
+					<top>21</top>
+					<width>60</width>
+					<height>60</height>
 					<texture>$INFO[Window(Home).Property(MB3UserImage)]</texture>
 					<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
 				</control>
 				<control type="image">
-					<posx>25</posx>
-					<posy>31</posy>
+					<left>0</left>
+					<top>21</top>
 					<width>60</width>
 					<height>60</height>
 					<texture>$INFO[System.ProfileThumb]</texture>
 					<visible>Skin.HasSetting(UseKodiLibrary)</visible>
 				</control>
 				<control type="image">
-					<posx>13</posx>
-					<posy>34</posy>
-					<width>84</width>
-					<height>84</height>
+					<left>-5</left>
+					<top>16</top>
+					<width>70</width>
+					<height>70</height>
 					<texture>windows/home/ava-overlay.png</texture>
-					<visible>Skin.HasSetting(UseKodiLibrary)</visible>
 				</control>
 				<control type="fadelabel">
 					<posx>0</posx>

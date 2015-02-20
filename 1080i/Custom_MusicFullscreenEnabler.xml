@@ -1,6 +1,6 @@
 <window type="dialog" id="3010">
-    <allowoverlay>no</allowoverlay>
-    <onload condition="!Window.IsActive(visualisation)">FullScreen</onload>
-    <visible>Player.HasAudio + Skin.HasSetting(AutoMusicFullscreen.Enabled)</visible>
-    <controls></controls>
+	<allowoverlay>no</allowoverlay>
+	<onload condition="!Window.IsActive(visualisation)">FullScreen</onload>
+	<visible>IsEmpty(Window(10025).Property(TvTunesIsAlive)) + IsEmpty(Window(Home).property(ThemeMediaMB3IsAlive)) + Player.HasAudio + Skin.HasSetting(AutoMusicFullscreen.Enabled)</visible>
+	<controls></controls>
 </window>

@@ -30,7 +30,7 @@
 			<visible>!Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos)]</visible>
 			<!-- Title Label -->
 			<control type="group">
-				<visible>!Player.HasMedia + !Window.IsActive(infodialog) + !Window.IsActive(extendedprogressdialog)</visible>
+				<visible>[!Player.HasMedia | !IsEmpty(Window(10025).Property(TvTunesIsAlive))] + !Window.IsActive(infodialog) + !Window.IsActive(extendedprogressdialog)</visible>
 				<include>visiblehidefadeinfo</include>
 				<control type="grouplist">
 					<posx>87</posx>
@@ -91,7 +91,7 @@
 			</control>
 			<!-- Title Label -->
 			<control type="group">
-				<visible>Player.HasMedia | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog)</visible>
+				<visible>[Player.HasMedia + IsEmpty(Window(10025).Property(TvTunesIsAlive))] | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog)</visible>
 				<include>visiblehidefadeinfo</include>
 				<control type="grouplist">
 					<posx>87</posx>

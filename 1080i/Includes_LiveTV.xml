@@ -10,6 +10,194 @@
 	<include name="EpgProgressVar">
 		<progresstexture border="0,48,18,14">special://skin/new_pvr/epg-progress-indicator.png</progresstexture>
 	</include>
+	<include name="EpgWideWidthVar">
+		<channellayout height="80" width="505">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>500</width>
+				<height>81</height>
+				<texture border="90,3,90,3">views/list/other/separator.png</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>1</posy>
+				<width>500</width>
+				<height>79</height>
+				<texture>views/other/selected.png</texture>
+				<colordiffuse>07FFFFFF</colordiffuse>
+				<aspectratio aligny="top">center</aspectratio>
+				<visible>ListItem.IsSelected | ListItem.IsPlaying</visible>
+			</control>
+			<control type="image">
+				<left>425</left>
+				<top>5</top>
+				<width>70</width>
+				<height>70</height>
+				<texture background="true" fallback="windows/pvr/defaultchannel.png">$VAR[PvrListIcon]</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="label">
+				<description>Label</description>
+				<left>100</left>
+				<width>315</width>
+				<height>80</height>
+				<font>Font-Condensed-S34-B</font>
+				<align>left</align>
+				<label>$INFO[ListItem.ChannelName]</label>
+				<textcolor>SecondaryT</textcolor>
+				<selectedcolor>SelectedGreen</selectedcolor>
+				<scroll>false</scroll>
+			</control>
+			<control type="label">
+				<description>ChannelNumber</description>
+				<left>7</left>
+				<width>88</width>
+				<height>80</height>
+				<font>Font-Condensed-S49</font>
+				<label>$INFO[ListItem.ChannelNumberLabel]</label>
+				<textcolor>PrimaryT</textcolor>
+				<selectedcolor>PrimaryT</selectedcolor>
+				<scroll>false</scroll>
+			</control>
+		</channellayout>
+		<focusedchannellayout height="80" width="505">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>500</width>
+				<height>81</height>
+				<texture border="90,3,90,3">views/list/other/separator.png</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>1</posy>
+				<width>500</width>
+				<height>79</height>
+				<texture>views/other/selected.png</texture>
+				<colordiffuse>07FFFFFF</colordiffuse>
+				<aspectratio aligny="top">center</aspectratio>
+				<visible>ListItem.IsSelected | ListItem.IsPlaying</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>500</width>
+				<height>79</height>
+				<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
+				<visible>Control.HasFocus(10)</visible>
+			</control>
+			<control type="image"> <!--focused background left edge -->
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>5</width>
+				<height>79</height>
+				<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
+			</control>
+			<control type="image">
+				<left>425</left>
+				<top>5</top>
+				<width>70</width>
+				<height>70</height>
+				<texture background="true" fallback="windows/pvr/defaultchannel.png">$VAR[PvrListIcon]</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="label">
+				<description>Label</description>
+				<left>100</left>
+				<width>315</width>
+				<height>80</height>
+				<font>Font-Condensed-S34-B</font>
+				<align>left</align>
+				<label>$INFO[ListItem.ChannelName]</label>
+				<textcolor>PrimaryT</textcolor>
+				<selectedcolor>SelectedGreen</selectedcolor>
+				<scroll>false</scroll>
+				<animation effect="fade" start="100" end="64" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(10) + ![ListItem.IsSelected | ListItem.IsPlaying]">Conditional</animation>
+			</control>
+			<control type="label">
+				<description>ChannelNumber</description>
+				<left>7</left>
+				<width>88</width>
+				<height>80</height>
+				<font>Font-Condensed-S49</font>
+				<label>$INFO[ListItem.ChannelNumberLabel]</label>
+				<textcolor>SecondaryT</textcolor>
+				<selectedcolor>SecondaryT</selectedcolor>
+				<scroll>false</scroll>
+				<animation effect="fade" start="100" end="64" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(10) + ![ListItem.IsSelected | ListItem.IsPlaying]">Conditional</animation>
+			</control>
+		</focusedchannellayout>
+	</include>
+	<include name="EpgSmallWidthVar">
+		<channellayout height="80" width="80">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>80</width>
+				<height>81</height>
+				<texture border="90,3,90,3">views/list/other/separator.png</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>1</posy>
+				<width>80</width>
+				<height>79</height>
+				<texture>views/other/selected.png</texture>
+				<colordiffuse>07FFFFFF</colordiffuse>
+				<aspectratio aligny="top">center</aspectratio>
+				<visible>ListItem.IsSelected | ListItem.IsPlaying</visible>
+			</control>
+			<control type="image">
+				<left>5</left>
+				<width>75</width>
+				<height>80</height>
+				<texture background="true" fallback="windows/pvr/defaultchannel.png">$VAR[PvrListIcon]</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+		</channellayout>
+		<focusedchannellayout height="80" width="80">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>80</width>
+				<height>81</height>
+				<texture border="90,3,90,3">views/list/other/separator.png</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>1</posy>
+				<width>80</width>
+				<height>79</height>
+				<texture>views/other/selected.png</texture>
+				<colordiffuse>07FFFFFF</colordiffuse>
+				<aspectratio aligny="top">center</aspectratio>
+				<visible>ListItem.IsSelected | ListItem.IsPlaying</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>80</width>
+				<height>79</height>
+				<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
+				<visible>Control.HasFocus(10)</visible>
+			</control>
+			<control type="image"> <!--focused background left edge -->
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>4</width>
+				<height>79</height>
+				<texture colordiffuse="$VAR[FocusModHomeColourVar]">special://skin/extras/backgrounds/white.png</texture>
+			</control>
+			<control type="image">
+				<left>5</left>
+				<width>75</width>
+				<height>80</height>
+				<texture background="true" fallback="windows/pvr/defaultchannel.png">$VAR[PvrListIcon]</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+		</focusedchannellayout>
+	</include>
 	<variable name="LiveTVColourVar">
 		<value condition="Skin.HasSetting(ColourFocus)">$INFO[Skin.String(focuscolor.name)]</value>
 		<value condition="!Skin.HasSetting(ColourFocus)">FF333333</value>
@@ -647,7 +835,7 @@
 		</control>
 		<control type="group">
 			<visible>[Player.ShowInfo | Window.IsVisible(fullscreeninfo)] + !Window.IsActive(videoosd)</visible>
-			<animation effect="slide" time="400" start="0,200"  easing="out" tween="back">WindowOpen</animation>
+			<animation effect="slide" time="400" start="0,200" easing="out" tween="back">WindowOpen</animation>
 			<animation effect="slide" time="400" end="0,200" delay="300" easing="in" tween="back">WindowClose</animation>
 			<visible>Skin.HasSetting(alternatelivetvplot)</visible>
 			<control type="group">
@@ -661,7 +849,7 @@
 					<animation effect="fade" end="90" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
-				    <left>1532</left>
+					<left>1532</left>
 					<top>1</top>
 					<width>88</width>
 					<height>88</height>

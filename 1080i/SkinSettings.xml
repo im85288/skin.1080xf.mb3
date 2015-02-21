@@ -1593,6 +1593,13 @@
 						<onclick>Skin.ToggleSetting(ShowEpgProgress)</onclick>
 						<label>Show progress in EPG</label>
 					</control>
+					<control type="radiobutton" id="10005">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(ShowIconViewEpg)</selected>
+						<onclick>Skin.ToggleSetting(ShowIconViewEpg)</onclick>
+						<label>Show Icon view in EPG</label>
+					</control>
 					<control type="radiobutton" id="10003">
 						<width>1210</width>
 						<include>SettingsCategoryRadioButtonVars</include>

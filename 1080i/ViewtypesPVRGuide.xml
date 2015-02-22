@@ -273,7 +273,7 @@
 					<control type="button">
 						<posx>20</posx>
 						<posy>30</posy>
-						<width>1392</width>
+						<width>1342</width>
 						<height>86</height>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 						<label2>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label2>
@@ -289,7 +289,7 @@
 					<control type="button">
 						<posx>20</posx>
 						<posy>30</posy>
-						<width>1392</width>
+						<width>1342</width>
 						<height>86</height>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 						<label2>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label2>
@@ -306,7 +306,7 @@
 						<description>Plot value</description>
 						<posx>20</posx>
 						<posy>90</posy>
-						<width>1392</width>
+						<width>1342</width>
 						<height>165</height>
 						<font>Font-Condensed-S30</font>
 						<align>justify</align>
@@ -320,7 +320,7 @@
 					<control type="button">
 						<posx>-80</posx>
 						<posy>30</posy>
-						<width>1492</width>
+						<width>1442</width>
 						<height>86</height>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 						<label2>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label2>
@@ -336,7 +336,7 @@
 					<control type="button">
 						<posx>-80</posx>
 						<posy>30</posy>
-						<width>1492</width>
+						<width>1442</width>
 						<height>86</height>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 						<label2>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label2>
@@ -353,7 +353,7 @@
 						<description>Plot value</description>
 						<posx>-80</posx>
 						<posy>90</posy>
-						<width>1492</width>
+						<width>1442</width>
 						<height>165</height>
 						<font>Font-Condensed-S30</font>
 						<align>justify</align>

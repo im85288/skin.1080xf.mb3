@@ -22,6 +22,14 @@
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item22)">$INFO[Skin.String(HomeProgramTile6.Label)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item23)">$INFO[Skin.String(HomeProgramTile7.Label)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item24)">$INFO[Skin.String(HomeProgramTile8.Label)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item25)">$INFO[Skin.String(HomeMusicTile5.Label)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item26)">$INFO[Skin.String(HomeMusicTile6.Label)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item27)">$INFO[Skin.String(HomeProgramTile9.Label)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item28)">$INFO[Skin.String(HomeProgramTile10.Label)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item29)">$INFO[Skin.String(HomeLiveTvTile1.Label)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item30)">$INFO[Skin.String(HomeLiveTvTile2.Label)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item31)">$INFO[Skin.String(HomeLiveTvTile3.Label)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item32)">$INFO[Skin.String(HomeLiveTvTile4.Label)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item35)">$INFO[Skin.String(HomeChannelsTile1.Label)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item36)">$INFO[Skin.String(HomeChannelsTile2.Label)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item37)">$INFO[Skin.String(HomeChannelsTile3.Label)]</value>
@@ -54,6 +62,14 @@
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item22)">$INFO[Skin.String(HomeProgramTile6.Icon)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item23)">$INFO[Skin.String(HomeProgramTile7.Icon)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item24)">$INFO[Skin.String(HomeProgramTile8.Icon)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item25)">$INFO[Skin.String(HomeMusicTile5.Icon)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item26)">$INFO[Skin.String(HomeMusicTile6.Icon)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item27)">$INFO[Skin.String(HomeProgramTile9.Icon)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item28)">$INFO[Skin.String(HomeProgramTile10.Icon)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item29)">$INFO[Skin.String(HomeLiveTvTile1.Icon)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item30)">$INFO[Skin.String(HomeLiveTvTile2.Icon)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item31)">$INFO[Skin.String(HomeLiveTvTile3.Icon)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item32)">$INFO[Skin.String(HomeLiveTvTile4.Icon)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item35)">$INFO[Skin.String(HomeChannelsTile1.Icon)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item36)">$INFO[Skin.String(HomeChannelsTile2.Icon)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item37)">$INFO[Skin.String(HomeChannelsTile3.Icon)]</value>
@@ -86,6 +102,14 @@
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item22)">$INFO[Skin.String(HomeProgramTile6.TypeName)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item23)">$INFO[Skin.String(HomeProgramTile7.TypeName)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item24)">$INFO[Skin.String(HomeProgramTile8.TypeName)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item25)">$INFO[Skin.String(HomeMusicTile5.TypeName)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item26)">$INFO[Skin.String(HomeMusicTile6.TypeName)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item27)">$INFO[Skin.String(HomeProgramTile9.TypeName)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item28)">$INFO[Skin.String(HomeProgramTile10.TypeName)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item29)">$INFO[Skin.String(HomeLiveTvTile1.TypeName)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item30)">$INFO[Skin.String(HomeLiveTvTile2.TypeName)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item31)">$INFO[Skin.String(HomeLiveTvTile3.TypeName)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item32)">$INFO[Skin.String(HomeLiveTvTile4.TypeName)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item35)">$INFO[Skin.String(HomeChannelsTile1.TypeName)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item36)">$INFO[Skin.String(HomeChannelsTile2.TypeName)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item37)">$INFO[Skin.String(HomeChannelsTile3.TypeName)]</value>
@@ -118,6 +142,14 @@
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item22)">$INFO[Skin.String(HomeProgramTile6.Path)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item23)">$INFO[Skin.String(HomeProgramTile7.Path)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item24)">$INFO[Skin.String(HomeProgramTile8.Path)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item25)">$INFO[Skin.String(HomeMusicTile5.Path)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item26)">$INFO[Skin.String(HomeMusicTile6.Path)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item27)">$INFO[Skin.String(HomeProgramTile9.Path)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item28)">$INFO[Skin.String(HomeProgramTile10.Path)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item29)">$INFO[Skin.String(HomeLiveTvTile1.Path)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item30)">$INFO[Skin.String(HomeLiveTvTile2.Path)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item31)">$INFO[Skin.String(HomeLiveTvTile3.Path)]</value>
+		<value condition="stringcompare(Window(3003).Property(SingleDialog),item32)">$INFO[Skin.String(HomeLiveTvTile4.Path)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item35)">$INFO[Skin.String(HomeChannelsTile1.Path)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item36)">$INFO[Skin.String(HomeChannelsTile2.Path)]</value>
 		<value condition="stringcompare(Window(3003).Property(SingleDialog),item37)">$INFO[Skin.String(HomeChannelsTile3.Path)]</value>
@@ -384,6 +416,86 @@
 						<scrolltime tween="cubic" easing="out">500</scrolltime>
 						<orientation>vertical</orientation>
 						<itemgap>0</itemgap>
+						<control type="radiobutton" id="27">
+							<include>SettingsBackgroundDialogRadioButtonVars</include>
+							<label>$LOCALIZE[41220] tile 1</label>
+							<onclick>Skin.SetString(HomeLiveTvTile1.Type,0)</onclick>
+							<onclick>Skin.SetString(HomeLiveTvTile1.TypeName,$LOCALIZE[41145])</onclick>
+							<onclick>Skin.Reset(HomeLiveTvTile1.Label)</onclick>
+							<onclick>Skin.Reset(HomeLiveTvTile1.Icon)</onclick>
+							<onclick>Skin.Reset(HomeLiveTvTile1.Animate)</onclick>
+							<onclick>Skin.Reset(HomeLiveTvTile1.ShowLabel)</onclick>
+							<onclick>Skin.Reset(HomeLiveTvTile1.Path)</onclick>
+							<onclick>Skin.ToggleSetting(HomeLiveTvTile1)</onclick>
+							<onclick>SetProperty(HomeTileEdit.Enabled,$INFO[Skin.HasSetting(HomeLiveTvTile1)])</onclick>
+							<onfocus>SetProperty(SingleDialog,item27)</onfocus>
+							<onfocus>SetProperty(HomeTileEdit,HomeLiveTvTile1)</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.Enabled,$INFO[Skin.HasSetting(HomeLiveTvTile1)])</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.Type,$INFO[Skin.String(HomeLiveTvTile1.Type)])</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.ShowLabel,$INFO[Skin.String(HomeLiveTvTile1.ShowLabel)])</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.Animate,$INFO[Skin.String(HomeLiveTvTile1.Animate)])</onfocus>
+							<selected>Skin.HasSetting(HomeLiveTvTile1)</selected>
+						</control>
+						<control type="radiobutton" id="28">
+							<include>SettingsBackgroundDialogRadioButtonVars</include>
+							<label>$LOCALIZE[41220] tile 2</label>
+							<onclick>Skin.SetString(HomeLiveTvTile2.Type,0)</onclick>
+							<onclick>Skin.SetString(HomeLiveTvTile2.TypeName,$LOCALIZE[41145])</onclick>
+							<onclick>Skin.Reset(HomeLiveTvTile2.Label)</onclick>
+							<onclick>Skin.Reset(HomeLiveTvTile2.Icon)</onclick>
+							<onclick>Skin.Reset(HomeLiveTvTile2.Animate)</onclick>
+							<onclick>Skin.Reset(HomeLiveTvTile2.ShowLabel)</onclick>
+							<onclick>Skin.Reset(HomeLiveTvTile2.Path)</onclick>
+							<onclick>Skin.ToggleSetting(HomeLiveTvTile2)</onclick>
+							<onclick>SetProperty(HomeTileEdit.Enabled,$INFO[Skin.HasSetting(HomeLiveTvTile2)])</onclick>
+							<onfocus>SetProperty(SingleDialog,item28)</onfocus>
+							<onfocus>SetProperty(HomeTileEdit,HomeLiveTvTile2)</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.Enabled,$INFO[Skin.HasSetting(HomeLiveTvTile2)])</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.Type,$INFO[Skin.String(HomeLiveTvTile2.Type)])</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.ShowLabel,$INFO[Skin.String(HomeLiveTvTile2.ShowLabel)])</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.Animate,$INFO[Skin.String(HomeLiveTvTile2.Animate)])</onfocus>
+							<selected>Skin.HasSetting(HomeLiveTvTile2)</selected>
+						</control>
+						<control type="radiobutton" id="29">
+							<include>SettingsBackgroundDialogRadioButtonVars</include>
+							<label>$LOCALIZE[41220] tile 3</label>
+							<onclick>Skin.SetString(HomeLiveTvTile3.Type,0)</onclick>
+							<onclick>Skin.SetString(HomeLiveTvTile3.TypeName,$LOCALIZE[41145])</onclick>
+							<onclick>Skin.Reset(HomeLiveTvTile3.Label)</onclick>
+							<onclick>Skin.Reset(HomeLiveTvTile3.Icon)</onclick>
+							<onclick>Skin.Reset(HomeLiveTvTile3.Animate)</onclick>
+							<onclick>Skin.Reset(HomeLiveTvTile3.ShowLabel)</onclick>
+							<onclick>Skin.Reset(HomeLiveTvTile3.Path)</onclick>
+							<onclick>Skin.ToggleSetting(HomeLiveTvTile3)</onclick>
+							<onclick>SetProperty(HomeTileEdit.Enabled,$INFO[Skin.HasSetting(HomeLiveTvTile3)])</onclick>
+							<onfocus>SetProperty(SingleDialog,item29)</onfocus>
+							<onfocus>SetProperty(HomeTileEdit,HomeLiveTvTile3)</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.Enabled,$INFO[Skin.HasSetting(HomeLiveTvTile3)])</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.Type,$INFO[Skin.String(HomeLiveTvTile3.Type)])</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.ShowLabel,$INFO[Skin.String(HomeLiveTvTile3.ShowLabel)])</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.Animate,$INFO[Skin.String(HomeLiveTvTile3.Animate)])</onfocus>
+							<selected>Skin.HasSetting(HomeLiveTvTile3)</selected>
+						</control>
+						<control type="radiobutton" id="30">
+							<include>SettingsBackgroundDialogRadioButtonVars</include>
+							<label>$LOCALIZE[41220] tile 4</label>
+							<onclick>Skin.SetString(HomeLiveTvTile4.Type,0)</onclick>
+							<onclick>Skin.SetString(HomeLiveTvTile4.TypeName,$LOCALIZE[41145])</onclick>
+							<onclick>Skin.Reset(HomeLiveTvTile4.Label)</onclick>
+							<onclick>Skin.Reset(HomeLiveTvTile4.Icon)</onclick>
+							<onclick>Skin.Reset(HomeLiveTvTile4.Animate)</onclick>
+							<onclick>Skin.Reset(HomeLiveTvTile4.ShowLabel)</onclick>
+							<onclick>Skin.Reset(HomeLiveTvTile4.Path)</onclick>
+							<onclick>Skin.ToggleSetting(HomeLiveTvTile4)</onclick>
+							<onclick>SetProperty(HomeTileEdit.Enabled,$INFO[Skin.HasSetting(HomeLiveTvTile4)])</onclick>
+							<onfocus>SetProperty(SingleDialog,item30)</onfocus>
+							<onfocus>SetProperty(HomeTileEdit,HomeLiveTvTile4)</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.Enabled,$INFO[Skin.HasSetting(HomeLiveTvTile4)])</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.Type,$INFO[Skin.String(HomeLiveTvTile4.Type)])</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.ShowLabel,$INFO[Skin.String(HomeLiveTvTile4.ShowLabel)])</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.Animate,$INFO[Skin.String(HomeLiveTvTile4.Animate)])</onfocus>
+							<selected>Skin.HasSetting(HomeLiveTvTile4)</selected>
+						</control>
 						<control type="radiobutton" id="31">
 							<include>SettingsBackgroundDialogRadioButtonVars</include>
 							<label>$LOCALIZE[41175] 1</label>
@@ -824,6 +936,46 @@
 							<onfocus>SetProperty(HomeTileEdit.Animate,$INFO[Skin.String(HomeMusicTile2.Animate)])</onfocus>
 							<selected>Skin.HasSetting(HomeMusicTile2)</selected>
 						</control>
+						<control type="radiobutton" id="461">
+							<include>SettingsBackgroundDialogRadioButtonVars</include>
+							<label>$LOCALIZE[41161] 5</label>
+							<onclick>Skin.SetString(HomeMusicTile5.Type,0)</onclick>
+							<onclick>Skin.SetString(HomeMusicTile5.TypeName,$LOCALIZE[41145])</onclick>
+							<onclick>Skin.Reset(HomeMusicTile5.Label)</onclick>
+							<onclick>Skin.Reset(HomeMusicTile5.Icon)</onclick>
+							<onclick>Skin.Reset(HomeMusicTile5.Animate)</onclick>
+							<onclick>Skin.Reset(HomeMusicTile5.ShowLabel)</onclick>
+							<onclick>Skin.Reset(HomeMusicTile5.Path)</onclick>
+							<onclick>Skin.ToggleSetting(HomeMusicTile5)</onclick>
+							<onclick>SetProperty(HomeTileEdit.Enabled,$INFO[Skin.HasSetting(HomeMusicTile5)])</onclick>
+							<onfocus>SetProperty(SingleDialog,item25)</onfocus>
+							<onfocus>SetProperty(HomeTileEdit,HomeMusicTile5)</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.Enabled,$INFO[Skin.HasSetting(HomeMusicTile5)])</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.Type,$INFO[Skin.String(HomeMusicTile5.Type)])</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.ShowLabel,$INFO[Skin.String(HomeMusicTile5.ShowLabel)])</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.Animate,$INFO[Skin.String(HomeMusicTile5.Animate)])</onfocus>
+							<selected>Skin.HasSetting(HomeMusicTile5)</selected>
+						</control>
+						<control type="radiobutton" id="462">
+							<include>SettingsBackgroundDialogRadioButtonVars</include>
+							<label>$LOCALIZE[41161] 6</label>
+							<onclick>Skin.SetString(HomeMusicTile6.Type,0)</onclick>
+							<onclick>Skin.SetString(HomeMusicTile6.TypeName,$LOCALIZE[41145])</onclick>
+							<onclick>Skin.Reset(HomeMusicTile6.Label)</onclick>
+							<onclick>Skin.Reset(HomeMusicTile6.Icon)</onclick>
+							<onclick>Skin.Reset(HomeMusicTile6.Animate)</onclick>
+							<onclick>Skin.Reset(HomeMusicTile6.ShowLabel)</onclick>
+							<onclick>Skin.Reset(HomeMusicTile6.Path)</onclick>
+							<onclick>Skin.ToggleSetting(HomeMusicTile6)</onclick>
+							<onclick>SetProperty(HomeTileEdit.Enabled,$INFO[Skin.HasSetting(HomeMusicTile6)])</onclick>
+							<onfocus>SetProperty(SingleDialog,item26)</onfocus>
+							<onfocus>SetProperty(HomeTileEdit,HomeMusicTile6)</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.Enabled,$INFO[Skin.HasSetting(HomeMusicTile6)])</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.Type,$INFO[Skin.String(HomeMusicTile6.Type)])</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.ShowLabel,$INFO[Skin.String(HomeMusicTile6.ShowLabel)])</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.Animate,$INFO[Skin.String(HomeMusicTile6.Animate)])</onfocus>
+							<selected>Skin.HasSetting(HomeMusicTile6)</selected>
+						</control>
 						<control type="radiobutton" id="51">
 							<include>SettingsBackgroundDialogRadioButtonVars</include>
 							<label>$LOCALIZE[41159] 1</label>
@@ -983,6 +1135,46 @@
 							<onfocus>SetProperty(HomeTileEdit.ShowLabel,$INFO[Skin.String(HomeProgramTile4.ShowLabel)])</onfocus>
 							<onfocus>SetProperty(HomeTileEdit.Animate,$INFO[Skin.String(HomeProgramTile4.Animate)])</onfocus>
 							<selected>Skin.HasSetting(HomeProgramTile4)</selected>
+						</control>
+						<control type="radiobutton" id="59">
+							<include>SettingsBackgroundDialogRadioButtonVars</include>
+							<label>$LOCALIZE[41159] 9</label>
+							<onclick>Skin.SetString(HomeProgramTile9.Type,0)</onclick>
+							<onclick>Skin.SetString(HomeProgramTile9.TypeName,$LOCALIZE[41145])</onclick>
+							<onclick>Skin.Reset(HomeProgramTile9.Label)</onclick>
+							<onclick>Skin.Reset(HomeProgramTile9.Icon)</onclick>
+							<onclick>Skin.Reset(HomeProgramTile9.Animate)</onclick>
+							<onclick>Skin.Reset(HomeProgramTile9.ShowLabel)</onclick>
+							<onclick>Skin.Reset(HomeProgramTile9.Path)</onclick>
+							<onclick>Skin.ToggleSetting(HomeProgramTile9)</onclick>
+							<onclick>SetProperty(HomeTileEdit.Enabled,$INFO[Skin.HasSetting(HomeProgramTile9)])</onclick>
+							<onfocus>SetProperty(SingleDialog,item27)</onfocus>
+							<onfocus>SetProperty(HomeTileEdit,HomeProgramTile9)</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.Enabled,$INFO[Skin.HasSetting(HomeProgramTile9)])</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.Type,$INFO[Skin.String(HomeProgramTile9.Type)])</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.ShowLabel,$INFO[Skin.String(HomeProgramTile9.ShowLabel)])</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.Animate,$INFO[Skin.String(HomeProgramTile9.Animate)])</onfocus>
+							<selected>Skin.HasSetting(HomeProgramTile9)</selected>
+						</control>
+						<control type="radiobutton" id="60">
+							<include>SettingsBackgroundDialogRadioButtonVars</include>
+							<label>$LOCALIZE[41159] 10</label>
+							<onclick>Skin.SetString(HomeProgramTile10.Type,0)</onclick>
+							<onclick>Skin.SetString(HomeProgramTile10.TypeName,$LOCALIZE[41145])</onclick>
+							<onclick>Skin.Reset(HomeProgramTile10.Label)</onclick>
+							<onclick>Skin.Reset(HomeProgramTile10.Icon)</onclick>
+							<onclick>Skin.Reset(HomeProgramTile10.Animate)</onclick>
+							<onclick>Skin.Reset(HomeProgramTile10.ShowLabel)</onclick>
+							<onclick>Skin.Reset(HomeProgramTile10.Path)</onclick>
+							<onclick>Skin.ToggleSetting(HomeProgramTile10)</onclick>
+							<onclick>SetProperty(HomeTileEdit.Enabled,$INFO[Skin.HasSetting(HomeProgramTile10)])</onclick>
+							<onfocus>SetProperty(SingleDialog,item28)</onfocus>
+							<onfocus>SetProperty(HomeTileEdit,HomeProgramTile10)</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.Enabled,$INFO[Skin.HasSetting(HomeProgramTile10)])</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.Type,$INFO[Skin.String(HomeProgramTile10.Type)])</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.ShowLabel,$INFO[Skin.String(HomeProgramTile10.ShowLabel)])</onfocus>
+							<onfocus>SetProperty(HomeTileEdit.Animate,$INFO[Skin.String(HomeProgramTile10.Animate)])</onfocus>
+							<selected>Skin.HasSetting(HomeProgramTile10)</selected>
 						</control>
 					</control>
 					<control type="group">

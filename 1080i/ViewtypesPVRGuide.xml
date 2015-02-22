@@ -49,7 +49,7 @@
 					<pagecontrol>10</pagecontrol>
 					<scrolltime>250</scrolltime>
 					<timeblocks>40</timeblocks>
-					<rulerunit>7</rulerunit>
+					<rulerunit>12</rulerunit>
 					<onleft>101</onleft>
 					<onright>101</onright>
 					<onup>10</onup>
@@ -69,6 +69,21 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
+							<visible>!Skin.HasSetting(ShowIconViewEpg)</visible>
+						</control>
+						<control type="label" id="2">
+							<posx>0</posx>
+							<posy>3</posy>
+							<width>35</width>
+							<height>30</height>
+							<font>fontContextMenu</font>
+							<textcolor>SecondaryT</textcolor>
+							<selectedcolor>SecondaryT</selectedcolor>
+							<shadowcolor>55000000</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>Skin.HasSetting(ShowIconViewEpg)</visible>
 						</control>
 					</rulerlayout>
 					<include condition="!Skin.HasSetting(ShowIconViewEpg)">EpgWideWidthVar</include>
@@ -241,8 +256,8 @@
 					</control>
 					<control type="image">
 						<posy>60</posy>
-						<posx>-220</posx>
-						<width>180</width>
+						<left>-390</left>
+						<width>305</width>
 						<height>180</height>
 						<texture background="true" fallback="windows/pvr/defaultchannel.png">$INFO[Container(10).ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
@@ -250,15 +265,15 @@
 					</control>
 					<control type="videowindow">
 						<posy>50</posy>
-						<posx>-360</posx>
+						<posx>-400</posx>
 						<width>460</width>
 						<height>205</height>
 						<visible>Player.HasVideo</visible>
 					</control>
 					<control type="button">
-						<posx>138</posx>
+						<posx>20</posx>
 						<posy>30</posy>
-						<width>1252</width>
+						<width>1392</width>
 						<height>86</height>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 						<label2>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label2>
@@ -269,11 +284,12 @@
 						<aligny>center</aligny>
 						<enable>false</enable>
 						<visible>!Container(10).ListItem.IsPlaying</visible>
+						<visible>Player.HasVideo</visible>
 					</control>
 					<control type="button">
-						<posx>138</posx>
+						<posx>20</posx>
 						<posy>30</posy>
-						<width>1252</width>
+						<width>1392</width>
 						<height>86</height>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 						<label2>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label2>
@@ -284,12 +300,13 @@
 						<aligny>center</aligny>
 						<enable>false</enable>
 						<visible>Container(10).ListItem.IsPlaying</visible>
+						<visible>Player.HasVideo</visible>
 					</control>
 					<control type="textbox">
 						<description>Plot value</description>
-						<posx>138</posx>
+						<posx>20</posx>
 						<posy>90</posy>
-						<width>1252</width>
+						<width>1392</width>
 						<height>165</height>
 						<font>Font-Condensed-S30</font>
 						<align>justify</align>
@@ -298,6 +315,54 @@
 						<pagecontrol>60</pagecontrol>
 						<autoscroll delay="10000" time="3000" repeat="6000">!Control.HasFocus(60)</autoscroll>
 						<label fallback="161">$INFO[ListItem.Plot]</label>
+						<visible>Player.HasVideo</visible>
+					</control>
+					<control type="button">
+						<posx>-80</posx>
+						<posy>30</posy>
+						<width>1492</width>
+						<height>86</height>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<label2>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label2>
+						<disabledcolor>SelectedBlue</disabledcolor>
+						<shadowcolor>55000000</shadowcolor>
+						<font>Font-Condensed-S35</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<enable>false</enable>
+						<visible>!Container(10).ListItem.IsPlaying</visible>
+						<visible>!Player.HasVideo</visible>
+					</control>
+					<control type="button">
+						<posx>-80</posx>
+						<posy>30</posy>
+						<width>1492</width>
+						<height>86</height>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<label2>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label2>
+						<disabledcolor>SelectedGreen</disabledcolor>
+						<shadowcolor>55000000</shadowcolor>
+						<font>Font-Condensed-S38</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<enable>false</enable>
+						<visible>Container(10).ListItem.IsPlaying</visible>
+						<visible>!Player.HasVideo</visible>
+					</control>
+					<control type="textbox">
+						<description>Plot value</description>
+						<posx>-80</posx>
+						<posy>90</posy>
+						<width>1492</width>
+						<height>165</height>
+						<font>Font-Condensed-S30</font>
+						<align>justify</align>
+						<textcolor>PrimaryT</textcolor>
+						<shadowcolor>55000000</shadowcolor>
+						<pagecontrol>60</pagecontrol>
+						<autoscroll delay="10000" time="3000" repeat="6000">!Control.HasFocus(60)</autoscroll>
+						<label fallback="161">$INFO[ListItem.Plot]</label>
+						<visible>!Player.HasVideo</visible>
 					</control>
 				</control>
 			</control>

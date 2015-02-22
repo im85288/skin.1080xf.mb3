@@ -344,7 +344,15 @@
 					<visible>StringCompare(Skin.CurrentColourTheme,Snow) + !Skin.HasSetting(UseKodiLibrary)</visible>
 				</control>
 				<control type="image">
-					<left>0</left>
+					<left>68</left>
+					<top>15</top>
+					<width>201</width>
+					<height>70</height>
+					<texture>special://skin/extras/icons/kodi-logo.png</texture>
+					<visible>Skin.HasSetting(UseKodiLibrary)</visible>
+				</control>
+				<control type="image">
+					<left>4</left>
 					<top>21</top>
 					<width>60</width>
 					<height>60</height>
@@ -352,19 +360,28 @@
 					<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
 				</control>
 				<control type="image">
-					<left>0</left>
-					<top>21</top>
+					<left>-1</left>
+					<top>16</top>
+					<width>70</width>
+					<height>70</height>
+					<texture>windows/home/ava-overlay.png</texture>
+					<visible>!Skin.HasSetting(UseKodiLibrary)</visible>
+				</control>
+				<control type="image">
+					<posx>4</posx>
+					<posy>21</posy>
 					<width>60</width>
 					<height>60</height>
 					<texture>$INFO[System.ProfileThumb]</texture>
 					<visible>Skin.HasSetting(UseKodiLibrary)</visible>
 				</control>
 				<control type="image">
-					<left>-5</left>
-					<top>16</top>
-					<width>70</width>
-					<height>70</height>
+					<posx>-8</posx>
+					<posy>9</posy>
+					<width>84</width>
+					<height>84</height>
 					<texture>windows/home/ava-overlay.png</texture>
+					<visible>Skin.HasSetting(UseKodiLibrary)</visible>
 				</control>
 				<control type="fadelabel">
 					<posx>0</posx>
@@ -582,9 +599,9 @@
 				<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="200" />
 				<effect type="zoom" start="100,229,1720,1" end="100,170,1720,70" tween="sine" easing="out" time="200" />
 			</animation>
-			<posx>100</posx>
+			<posx>30</posx>
 			<posy>170</posy>
-			<width>1900</width>
+			<width>2150</width>
 			<height>70</height>
 			<orientation>horizontal</orientation>
 			<itemgap>45</itemgap>
@@ -1488,6 +1505,8 @@
 						<onright>902</onright>
 						<onup>925</onup>
 						<ondown>80</ondown>
+						<onback condition="!Skin.HasSetting(KioskMode)">SetProperty(EditTile,1)</onback>
+						<onback condition="!Skin.HasSetting(KioskMode)">Select</onback>
 						<scrolltime>0</scrolltime>
 						<itemlayout width="289" height="289">
 							<control type="group">
@@ -1631,16 +1650,56 @@
 						</focusedlayout>
 						<content>
 							<item id="1">
-								<label>$LOCALIZE[19069]</label>
+								<label fallback="19069">$INFO[Skin.String(HomeLiveTvTile1.Label)]</label>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeLiveTvTile1) + !stringcompare(Skin.String(HomeLiveTvTile1.Type),4) + !stringcompare(Skin.String(HomeLiveTvTile1.Type),5) + !stringcompare(Skin.String(HomeLiveTvTile1.Type),6) + !stringcompare(Skin.String(HomeLiveTvTile1.Type),7)">RunAddon($INFO[Skin.String(HomeLiveTvTile1.Path)])</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeLiveTvTile1) + stringcompare(Skin.String(HomeLiveTvTile1.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeLiveTvTile1.Path)],return)</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeLiveTvTile1) + stringcompare(Skin.String(HomeLiveTvTile1.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeLiveTvTile1.Path)],return)</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeLiveTvTile1) + [stringcompare(Skin.String(HomeLiveTvTile1.Type),6) | stringcompare(Skin.String(HomeLiveTvTile1.Type),7)]">$INFO[Skin.String(HomeLiveTvTile1.Path)]</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeLiveTvTile1)">ActivateWindow(tvguide)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeLiveTvTile1)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile)) + IsEmpty(Skin.String(HomeLiveTvTile1.Type))">Skin.SetString(HomeLiveTvTile1.Type,0)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile)) + IsEmpty(Skin.String(HomeLiveTvTile1.TypeName))">Skin.SetString(HomeLiveTvTile1.TypeName,$LOCALIZE[41145])</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(SingleDialog,item29,3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(Dialog,$LOCALIZE[41136],skinsettings)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit,HomeLiveTvTile1,3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.Type,$INFO[Skin.String(HomeLiveTvTile1.Type)],3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.ShowLabel,$INFO[Skin.String(HomeLiveTvTile1.ShowLabel)],3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.Animate,$INFO[Skin.String(HomeLiveTvTile1.Animate)],3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
+								<thumb>$INFO[Skin.String(HomeLiveTvTile1.Icon)]</thumb>
 								<icon>windows/home/icons/epg.png</icon>
-								<onclick>ActivateWindow(tvguide)</onclick>
 								<property name="tilestandardname">$INFO[Skin.String(tilelivetvstandard.name)]</property>
+								<property name="pos">top</property>
+								<property name="showlabel">$INFO[Skin.String(HomeLiveTvTile1.ShowLabel)]</property>
+								<property name="path">$INFO[Skin.String(HomeLiveTvTile1.Path)]</property>
+								<property name="animate">$INFO[Skin.String(HomeLiveTvTile1.Animate)]</property>
 							</item>
 							<item id="2">
-								<label>$LOCALIZE[19163]</label>
+								<label fallback="19163">$INFO[Skin.String(HomeLiveTvTile2.Label)]</label>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeLiveTvTile2) + !stringcompare(Skin.String(HomeLiveTvTile2.Type),4) + !stringcompare(Skin.String(HomeLiveTvTile2.Type),5) + !stringcompare(Skin.String(HomeLiveTvTile2.Type),6) + !stringcompare(Skin.String(HomeLiveTvTile2.Type),7)">RunAddon($INFO[Skin.String(HomeLiveTvTile2.Path)])</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeLiveTvTile2) + stringcompare(Skin.String(HomeLiveTvTile2.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeLiveTvTile2.Path)],return)</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeLiveTvTile2) + stringcompare(Skin.String(HomeLiveTvTile2.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeLiveTvTile2.Path)],return)</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeLiveTvTile2) + [stringcompare(Skin.String(HomeLiveTvTile2.Type),6) | stringcompare(Skin.String(HomeLiveTvTile2.Type),7)]">$INFO[Skin.String(HomeLiveTvTile2.Path)]</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeLiveTvTile2)">ActivateWindow(tvrecordings)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeLiveTvTile2)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile)) + IsEmpty(Skin.String(HomeLiveTvTile2.Type))">Skin.SetString(HomeLiveTvTile2.Type,0)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile)) + IsEmpty(Skin.String(HomeLiveTvTile2.TypeName))">Skin.SetString(HomeLiveTvTile2.TypeName,$LOCALIZE[41145])</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(SingleDialog,item30,3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(Dialog,$LOCALIZE[41136],skinsettings)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit,HomeLiveTvTile2,3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.Type,$INFO[Skin.String(HomeLiveTvTile2.Type)],3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.ShowLabel,$INFO[Skin.String(HomeLiveTvTile2.ShowLabel)],3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.Animate,$INFO[Skin.String(HomeLiveTvTile2.Animate)],3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
+								<thumb>$INFO[Skin.String(HomeLiveTvTile2.Icon)]</thumb>
 								<icon>windows/home/icons/recordings.png</icon>
-								<onclick>ActivateWindow(tvrecordings)</onclick>
 								<property name="tilestandardname">$INFO[Skin.String(tilelivetvstandard.name)]</property>
+								<property name="pos">top</property>
+								<property name="showlabel">$INFO[Skin.String(HomeLiveTvTile2.ShowLabel)]</property>
+								<property name="path">$INFO[Skin.String(HomeLiveTvTile2.Path)]</property>
+								<property name="animate">$INFO[Skin.String(HomeLiveTvTile2.Animate)]</property>
 							</item>
 						</content>
 					</control>
@@ -1656,6 +1715,8 @@
 						<onright>501</onright>
 						<onup>925</onup>
 						<ondown>80</ondown>
+						<onback condition="!Skin.HasSetting(KioskMode)">SetProperty(EditTile,1)</onback>
+						<onback condition="!Skin.HasSetting(KioskMode)">Select</onback>
 						<scrolltime>0</scrolltime>
 						<itemlayout width="289" height="289">
 							<control type="group">
@@ -1799,16 +1860,56 @@
 						</focusedlayout>
 						<content>
 							<item id="1">
-								<label>$LOCALIZE[19023]</label>
+								<label fallback="19023">$INFO[Skin.String(HomeLiveTvTile3.Label)]</label>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeLiveTvTile3) + !stringcompare(Skin.String(HomeLiveTvTile3.Type),4) + !stringcompare(Skin.String(HomeLiveTvTile3.Type),5) + !stringcompare(Skin.String(HomeLiveTvTile3.Type),6) + !stringcompare(Skin.String(HomeLiveTvTile3.Type),7)">RunAddon($INFO[Skin.String(HomeLiveTvTile3.Path)])</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeLiveTvTile3) + stringcompare(Skin.String(HomeLiveTvTile3.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeLiveTvTile3.Path)],return)</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeLiveTvTile3) + stringcompare(Skin.String(HomeLiveTvTile3.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeLiveTvTile3.Path)],return)</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeLiveTvTile3) + [stringcompare(Skin.String(HomeLiveTvTile3.Type),6) | stringcompare(Skin.String(HomeLiveTvTile3.Type),7)]">$INFO[Skin.String(HomeLiveTvTile3.Path)]</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeLiveTvTile3)">ActivateWindow(tvchannels)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeLiveTvTile3)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile)) + IsEmpty(Skin.String(HomeLiveTvTile3.Type))">Skin.SetString(HomeLiveTvTile3.Type,0)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile)) + IsEmpty(Skin.String(HomeLiveTvTile3.TypeName))">Skin.SetString(HomeLiveTvTile3.TypeName,$LOCALIZE[41145])</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(SingleDialog,item31,3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(Dialog,$LOCALIZE[41136],skinsettings)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit,HomeLiveTvTile3,3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.Type,$INFO[Skin.String(HomeLiveTvTile3.Type)],3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.ShowLabel,$INFO[Skin.String(HomeLiveTvTile3.ShowLabel)],3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.Animate,$INFO[Skin.String(HomeLiveTvTile3.Animate)],3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
+								<thumb>$INFO[Skin.String(HomeLiveTvTile3.Icon)]</thumb>
 								<icon>windows/home/icons/tvshows.png</icon>
-								<onclick>ActivateWindow(tvchannels)</onclick>
 								<property name="tilestandardname">$INFO[Skin.String(tilelivetvstandard.name)]</property>
+								<property name="pos">top</property>
+								<property name="showlabel">$INFO[Skin.String(HomeLiveTvTile3.ShowLabel)]</property>
+								<property name="path">$INFO[Skin.String(HomeLiveTvTile3.Path)]</property>
+								<property name="animate">$INFO[Skin.String(HomeLiveTvTile3.Animate)]</property>
 							</item>
 							<item id="2">
-								<label>$LOCALIZE[137]</label>
+								<label fallback="137">$INFO[Skin.String(HomeLiveTvTile4.Label)]</label>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeLiveTvTile4) + !stringcompare(Skin.String(HomeLiveTvTile4.Type),4) + !stringcompare(Skin.String(HomeLiveTvTile4.Type),5) + !stringcompare(Skin.String(HomeLiveTvTile4.Type),6) + !stringcompare(Skin.String(HomeLiveTvTile4.Type),7)">RunAddon($INFO[Skin.String(HomeLiveTvTile4.Path)])</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeLiveTvTile4) + stringcompare(Skin.String(HomeLiveTvTile4.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeLiveTvTile4.Path)],return)</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeLiveTvTile4) + stringcompare(Skin.String(HomeLiveTvTile4.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeLiveTvTile4.Path)],return)</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeLiveTvTile4) + [stringcompare(Skin.String(HomeLiveTvTile4.Type),6) | stringcompare(Skin.String(HomeLiveTvTile4.Type),7)]">$INFO[Skin.String(HomeLiveTvTile4.Path)]</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeLiveTvTile4)">ActivateWindow(tvsearch)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeLiveTvTile4)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile)) + IsEmpty(Skin.String(HomeLiveTvTile4.Type))">Skin.SetString(HomeLiveTvTile4.Type,0)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile)) + IsEmpty(Skin.String(HomeLiveTvTile4.TypeName))">Skin.SetString(HomeLiveTvTile4.TypeName,$LOCALIZE[41145])</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(SingleDialog,item32,3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(Dialog,$LOCALIZE[41136],skinsettings)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit,HomeLiveTvTile4,3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.Type,$INFO[Skin.String(HomeLiveTvTile4.Type)],3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.ShowLabel,$INFO[Skin.String(HomeLiveTvTile4.ShowLabel)],3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.Animate,$INFO[Skin.String(HomeLiveTvTile4.Animate)],3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
+								<thumb>$INFO[Skin.String(HomeLiveTvTile4.Icon)]</thumb>
 								<icon>windows/home/icons/search-tv.png</icon>
-								<onclick>ActivateWindow(tvsearch)</onclick>
 								<property name="tilestandardname">$INFO[Skin.String(tilelivetvstandard.name)]</property>
+								<property name="pos">top</property>
+								<property name="showlabel">$INFO[Skin.String(HomeLiveTvTile4.ShowLabel)]</property>
+								<property name="path">$INFO[Skin.String(HomeLiveTvTile4.Path)]</property>
+								<property name="animate">$INFO[Skin.String(HomeLiveTvTile4.Animate)]</property>
 							</item>
 						</content>
 					</control>
@@ -6569,7 +6670,7 @@
 					<animation effect="slide" end="-39" time="500" tween="cubic" easing="inout" condition="Container(20).HasFocus(6) | Container(20).HasFocus(7) | Container(20).HasFocus(8)">Conditional</animation>
 					<animation type="Conditional" condition="!Container(20).HasFocus(5) | Container(20).OnScrollNext | Container(20).OnScrollPrevious | Container(20).Scrolling | Window.IsVisible(shutdownmenu)">
 						<effect type="fade" start="100" end="80" time="500" tween="cubic" easing="inout" />
-						<effect type="zoom" start="100" end="57" time="500" tween="cubic" easing="inout" center="1160,386" />
+						<effect type="zoom" start="100" end="67" time="500" tween="cubic" easing="inout" center="1160,386" />
 					</animation>
 					<control type="image">
 						<description>Bottom shadow</description>
@@ -8202,7 +8303,7 @@
 				</control>
 				<control type="group" id="650">
 					<posy>100</posy>
-					<posx>585</posx>
+					<posx>420</posx>
 					<animation type="WindowOpen" condition="Container(20).HasFocus(5) | [Container(20).HasFocus(10) + Skin.HasSetting(HomeMusic)] | [Container(20).HasFocus(11) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePhotos)] | [Container(20).HasFocus(4) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePhotos) + Skin.HasSetting(HomeChannels)] | [Container(20).HasFocus(3) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePhotos) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeTVShows)] | [Container(20).HasFocus(2) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePhotos) + Skin.HasSetting(HomeChannels) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)]" reversible="true">
 						<effect type="slide" start="1500" end="0" tween="cubic" easing="out" time="700" />
 						<effect type="fade" start="25" end="100" tween="sine" easing="in" time="350" delay="250" />
@@ -8231,7 +8332,7 @@
 					<animation effect="slide" end="50" time="500" tween="cubic" easing="inout" condition="Container(20).HasFocus(7)">Conditional</animation>
 					<animation type="Conditional" condition="!Container(20).HasFocus(6) | Container(20).OnScrollNext | Container(20).OnScrollPrevious | Container(20).Scrolling | Window.IsVisible(shutdownmenu)">
 						<effect type="fade" start="100" end="80" time="500" tween="cubic" easing="inout" />
-						<effect type="zoom" start="100" end="65" time="500" tween="cubic" easing="inout" center="1160,386" />
+						<effect type="zoom" start="100" end="60" time="500" tween="cubic" easing="inout" center="1160,386" />
 					</animation>
 					<control type="image">
 						<description>Bottom shadow</description>
@@ -8244,7 +8345,7 @@
 					<control type="panel" id="601">
 						<posx>-24</posx>
 						<posy>-24</posy>
-						<width>1291</width>
+						<width>1580</width>
 						<height>620</height>
 						<onleft>CancelAlarm(HomeTileMove,true)</onleft>
 						<onleft condition="!Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onleft>
@@ -8542,31 +8643,28 @@
 								<property name="custom">1</property>
 							</item>
 							<item id="5">
-								<label fallback="1043">$INFO[Skin.String(HomeProgramTile6.Label)]</label>
-								<label2>$INFO[Window.Property(Music.SongsCount)]</label2>
-								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeProgramTile6) + !stringcompare(Skin.String(HomeProgramTile6.Type),4) + !stringcompare(Skin.String(HomeProgramTile6.Type),5) + !stringcompare(Skin.String(HomeProgramTile6.Type),6) + !stringcompare(Skin.String(HomeProgramTile6.Type),7)">RunAddon($INFO[Skin.String(HomeProgramTile6.Path)])</onclick>
-								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeProgramTile6) + stringcompare(Skin.String(HomeProgramTile6.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeProgramTile6.Path)],return)</onclick>
-								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeProgramTile6) + stringcompare(Skin.String(HomeProgramTile6.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeProgramTile6.Path)],return)</onclick>
-								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeProgramTile6) + [stringcompare(Skin.String(HomeProgramTile6.Type),6) | stringcompare(Skin.String(HomeProgramTile6.Type),7)]">$INFO[Skin.String(HomeProgramTile6.Path)]</onclick>
-								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeProgramTile6)">ActivateWindow(programs,addons,return)</onclick>
-								<onclick condition="!IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeProgramTile6)</onclick>
-								<onclick condition="!IsEmpty(Window.Property(EditTile)) + IsEmpty(Skin.String(HomeProgramTile6.Type))">Skin.SetString(HomeProgramTile6.Type,0)</onclick>
-								<onclick condition="!IsEmpty(Window.Property(EditTile)) + IsEmpty(Skin.String(HomeProgramTile6.TypeName))">Skin.SetString(HomeProgramTile6.TypeName,$LOCALIZE[41145])</onclick>
-								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(SingleDialog,item22,3003)</onclick>
-								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(Dialog,$LOCALIZE[41136],skinsettings)</onclick>
-								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit,HomeProgramTile6,3003)</onclick>
-								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.Type,$INFO[Skin.String(HomeProgramTile6.Type)],3003)</onclick>
-								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.ShowLabel,$INFO[Skin.String(HomeProgramTile6.ShowLabel)],3003)</onclick>
-								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.Animate,$INFO[Skin.String(HomeProgramTile6.Animate)],3003)</onclick>
-								<onclick condition="!IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
+								<label>$INFO[Skin.String(HomeProgramTile3.Label)]</label>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeProgramTile3.Type),4) + !stringcompare(Skin.String(HomeProgramTile3.Type),5) + !stringcompare(Skin.String(HomeProgramTile3.Type),6) + !stringcompare(Skin.String(HomeProgramTile3.Type),7)">RunAddon($INFO[Skin.String(HomeProgramTile3.Path)])</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeProgramTile3.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeProgramTile3.Path)],return)</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeProgramTile3.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeProgramTile3.Path)],return)</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeProgramTile3.Type),6) | stringcompare(Skin.String(HomeProgramTile3.Type),7)]">$INFO[Skin.String(HomeProgramTile3.Path)]</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeProgramTile3)</onclick>
+								<onclick condition="[IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeProgramTile3.Type))">Skin.SetString(HomeProgramTile3.Type,0)</onclick>
+								<onclick condition="[IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeProgramTile3.TypeName))">Skin.SetString(HomeProgramTile3.TypeName,$LOCALIZE[41145])</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(SingleDialog,item11,3003)</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(Dialog,$LOCALIZE[41136],skinsettings)</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit,HomeProgramTile3,3003)</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.Type,$INFO[Skin.String(HomeProgramTile3.Type)],3003)</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.ShowLabel,$INFO[Skin.String(HomeProgramTile3.ShowLabel)],3003)</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.Animate,$INFO[Skin.String(HomeProgramTile3.Animate)],3003)</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
-								<thumb>$INFO[Skin.String(HomeProgramTile6.Icon)]</thumb>
-								<icon>windows/home/icons/addons.png</icon>
+								<icon>$INFO[Skin.String(HomeProgramTile3.Icon)]</icon>
 								<property name="tilestandardname">$INFO[Skin.String(tileapplicationsstandard.name)]</property>
-								<property name="pos">top</property>
-								<property name="showlabel">$INFO[Skin.String(HomeProgramTile6.ShowLabel)]</property>
-								<property name="path">$INFO[Skin.String(HomeProgramTile6.Path)]</property>
-								<property name="animate">$INFO[Skin.String(HomeProgramTile6.Animate)]</property>
+								<property name="showlabel">$INFO[Skin.String(HomeProgramTile3.ShowLabel)]</property>
+								<property name="path">$INFO[Skin.String(HomeProgramTile3.Path)]</property>
+								<property name="animate">$INFO[Skin.String(HomeProgramTile3.Animate)]</property>
+								<property name="custom">1</property>
 							</item>
 							<item id="6">
 								<label fallback="1">$INFO[Skin.String(HomeProgramTile8.Label)]</label>
@@ -8595,28 +8693,31 @@
 								<property name="animate">$INFO[Skin.String(HomeProgramTile8.Animate)]</property>
 							</item>
 							<item id="7">
-								<label>$INFO[Skin.String(HomeProgramTile3.Label)]</label>
-								<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeProgramTile3.Type),4) + !stringcompare(Skin.String(HomeProgramTile3.Type),5) + !stringcompare(Skin.String(HomeProgramTile3.Type),6) + !stringcompare(Skin.String(HomeProgramTile3.Type),7)">RunAddon($INFO[Skin.String(HomeProgramTile3.Path)])</onclick>
-								<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeProgramTile3.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeProgramTile3.Path)],return)</onclick>
-								<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeProgramTile3.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeProgramTile3.Path)],return)</onclick>
-								<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeProgramTile3.Type),6) | stringcompare(Skin.String(HomeProgramTile3.Type),7)]">$INFO[Skin.String(HomeProgramTile3.Path)]</onclick>
-								<onclick condition="IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeProgramTile3)</onclick>
-								<onclick condition="[IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeProgramTile3.Type))">Skin.SetString(HomeProgramTile3.Type,0)</onclick>
-								<onclick condition="[IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeProgramTile3.TypeName))">Skin.SetString(HomeProgramTile3.TypeName,$LOCALIZE[41145])</onclick>
-								<onclick condition="IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(SingleDialog,item11,3003)</onclick>
-								<onclick condition="IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(Dialog,$LOCALIZE[41136],skinsettings)</onclick>
-								<onclick condition="IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit,HomeProgramTile3,3003)</onclick>
-								<onclick condition="IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.Type,$INFO[Skin.String(HomeProgramTile3.Type)],3003)</onclick>
-								<onclick condition="IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.ShowLabel,$INFO[Skin.String(HomeProgramTile3.ShowLabel)],3003)</onclick>
-								<onclick condition="IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.Animate,$INFO[Skin.String(HomeProgramTile3.Animate)],3003)</onclick>
-								<onclick condition="IsEmpty(Skin.String(HomeProgramTile3.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
+								<label fallback="1043">$INFO[Skin.String(HomeProgramTile6.Label)]</label>
+								<label2>$INFO[Window.Property(Music.SongsCount)]</label2>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeProgramTile6) + !stringcompare(Skin.String(HomeProgramTile6.Type),4) + !stringcompare(Skin.String(HomeProgramTile6.Type),5) + !stringcompare(Skin.String(HomeProgramTile6.Type),6) + !stringcompare(Skin.String(HomeProgramTile6.Type),7)">RunAddon($INFO[Skin.String(HomeProgramTile6.Path)])</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeProgramTile6) + stringcompare(Skin.String(HomeProgramTile6.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeProgramTile6.Path)],return)</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeProgramTile6) + stringcompare(Skin.String(HomeProgramTile6.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeProgramTile6.Path)],return)</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + Skin.HasSetting(HomeProgramTile6) + [stringcompare(Skin.String(HomeProgramTile6.Type),6) | stringcompare(Skin.String(HomeProgramTile6.Type),7)]">$INFO[Skin.String(HomeProgramTile6.Path)]</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + !Skin.HasSetting(HomeProgramTile6)">ActivateWindow(programs,addons,return)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeProgramTile6)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile)) + IsEmpty(Skin.String(HomeProgramTile6.Type))">Skin.SetString(HomeProgramTile6.Type,0)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile)) + IsEmpty(Skin.String(HomeProgramTile6.TypeName))">Skin.SetString(HomeProgramTile6.TypeName,$LOCALIZE[41145])</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(SingleDialog,item22,3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(Dialog,$LOCALIZE[41136],skinsettings)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit,HomeProgramTile6,3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.Type,$INFO[Skin.String(HomeProgramTile6.Type)],3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.ShowLabel,$INFO[Skin.String(HomeProgramTile6.ShowLabel)],3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.Animate,$INFO[Skin.String(HomeProgramTile6.Animate)],3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
 								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
-								<icon>$INFO[Skin.String(HomeProgramTile3.Icon)]</icon>
+								<thumb>$INFO[Skin.String(HomeProgramTile6.Icon)]</thumb>
+								<icon>windows/home/icons/addons.png</icon>
 								<property name="tilestandardname">$INFO[Skin.String(tileapplicationsstandard.name)]</property>
-								<property name="showlabel">$INFO[Skin.String(HomeProgramTile3.ShowLabel)]</property>
-								<property name="path">$INFO[Skin.String(HomeProgramTile3.Path)]</property>
-								<property name="animate">$INFO[Skin.String(HomeProgramTile3.Animate)]</property>
-								<property name="custom">1</property>
+								<property name="pos">top</property>
+								<property name="showlabel">$INFO[Skin.String(HomeProgramTile6.ShowLabel)]</property>
+								<property name="path">$INFO[Skin.String(HomeProgramTile6.Path)]</property>
+								<property name="animate">$INFO[Skin.String(HomeProgramTile6.Animate)]</property>
 							</item>
 							<item id="8">
 								<label>$INFO[Skin.String(HomeProgramTile4.Label)]</label>
@@ -8640,6 +8741,54 @@
 								<property name="showlabel">$INFO[Skin.String(HomeProgramTile4.ShowLabel)]</property>
 								<property name="path">$INFO[Skin.String(HomeProgramTile4.Path)]</property>
 								<property name="animate">$INFO[Skin.String(HomeProgramTile4.Animate)]</property>
+								<property name="custom">1</property>
+							</item>
+							<item id="9">
+								<label>$INFO[Skin.String(HomeProgramTile9.Label)]</label>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeProgramTile9.Type),4) + !stringcompare(Skin.String(HomeProgramTile9.Type),5) + !stringcompare(Skin.String(HomeProgramTile9.Type),6) + !stringcompare(Skin.String(HomeProgramTile9.Type),7)">RunAddon($INFO[Skin.String(HomeProgramTile9.Path)])</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeProgramTile9.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeProgramTile9.Path)],return)</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeProgramTile9.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeProgramTile9.Path)],return)</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeProgramTile9.Type),6) | stringcompare(Skin.String(HomeProgramTile9.Type),7)]">$INFO[Skin.String(HomeProgramTile9.Path)]</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeProgramTile9.Path)) | !IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeProgramTile9)</onclick>
+								<onclick condition="[IsEmpty(Skin.String(HomeProgramTile9.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeProgramTile9.Type))">Skin.SetString(HomeProgramTile9.Type,0)</onclick>
+								<onclick condition="[IsEmpty(Skin.String(HomeProgramTile9.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeProgramTile9.TypeName))">Skin.SetString(HomeProgramTile9.TypeName,$LOCALIZE[41145])</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeProgramTile9.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(SingleDialog,item27,3003)</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeProgramTile9.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(Dialog,$LOCALIZE[41136],skinsettings)</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeProgramTile9.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit,HomeProgramTile9,3003)</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeProgramTile9.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.Type,$INFO[Skin.String(HomeProgramTile9.Type)],3003)</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeProgramTile9.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.ShowLabel,$INFO[Skin.String(HomeProgramTile9.ShowLabel)],3003)</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeProgramTile9.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.Animate,$INFO[Skin.String(HomeProgramTile9.Animate)],3003)</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeProgramTile9.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
+								<icon>$INFO[Skin.String(HomeProgramTile9.Icon)]</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tileapplicationsstandard.name)]</property>
+								<property name="showlabel">$INFO[Skin.String(HomeProgramTile9.ShowLabel)]</property>
+								<property name="path">$INFO[Skin.String(HomeProgramTile9.Path)]</property>
+								<property name="animate">$INFO[Skin.String(HomeProgramTile9.Animate)]</property>
+								<property name="custom">1</property>
+							</item>
+							<item id="10">
+								<label>$INFO[Skin.String(HomeProgramTile10.Label)]</label>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeProgramTile10.Type),4) + !stringcompare(Skin.String(HomeProgramTile10.Type),5) + !stringcompare(Skin.String(HomeProgramTile10.Type),6) + !stringcompare(Skin.String(HomeProgramTile10.Type),7)">RunAddon($INFO[Skin.String(HomeProgramTile10.Path)])</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeProgramTile10.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeProgramTile10.Path)],return)</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeProgramTile10.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeProgramTile10.Path)],return)</onclick>
+								<onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeProgramTile10.Type),6) | stringcompare(Skin.String(HomeProgramTile10.Type),7)]">$INFO[Skin.String(HomeProgramTile10.Path)]</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeProgramTile10.Path)) | !IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeProgramTile10)</onclick>
+								<onclick condition="[IsEmpty(Skin.String(HomeProgramTile10.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeProgramTile10.Type))">Skin.SetString(HomeProgramTile10.Type,0)</onclick>
+								<onclick condition="[IsEmpty(Skin.String(HomeProgramTile10.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeProgramTile10.TypeName))">Skin.SetString(HomeProgramTile10.TypeName,$LOCALIZE[41145])</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeProgramTile10.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(SingleDialog,item28,3003)</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeProgramTile10.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(Dialog,$LOCALIZE[41136],skinsettings)</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeProgramTile10.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit,HomeProgramTile10,3003)</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeProgramTile10.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.Type,$INFO[Skin.String(HomeProgramTile10.Type)],3003)</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeProgramTile10.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.ShowLabel,$INFO[Skin.String(HomeProgramTile10.ShowLabel)],3003)</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeProgramTile10.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(HomeTileEdit.Animate,$INFO[Skin.String(HomeProgramTile10.Animate)],3003)</onclick>
+								<onclick condition="IsEmpty(Skin.String(HomeProgramTile10.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
+								<onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
+								<icon>$INFO[Skin.String(HomeProgramTile10.Icon)]</icon>
+								<property name="tilestandardname">$INFO[Skin.String(tileapplicationsstandard.name)]</property>
+								<property name="showlabel">$INFO[Skin.String(HomeProgramTile10.ShowLabel)]</property>
+								<property name="path">$INFO[Skin.String(HomeProgramTile10.Path)]</property>
+								<property name="animate">$INFO[Skin.String(HomeProgramTile10.Animate)]</property>
 								<property name="custom">1</property>
 							</item>
 						</content>

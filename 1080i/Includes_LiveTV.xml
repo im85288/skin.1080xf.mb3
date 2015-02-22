@@ -130,18 +130,18 @@
 		</focusedchannellayout>
 	</include>
 	<include name="EpgSmallWidthVar">
-		<channellayout height="80" width="80">
+		<channellayout height="80" width="150">
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>80</width>
+				<width>150</width>
 				<height>81</height>
 				<texture border="90,3,90,3">views/list/other/separator.png</texture>
 			</control>
 			<control type="image">
 				<posx>0</posx>
 				<posy>1</posy>
-				<width>80</width>
+				<width>150</width>
 				<height>79</height>
 				<texture>views/other/selected.png</texture>
 				<colordiffuse>07FFFFFF</colordiffuse>
@@ -150,24 +150,24 @@
 			</control>
 			<control type="image">
 				<left>5</left>
-				<width>75</width>
+				<width>145</width>
 				<height>80</height>
 				<texture background="true" fallback="windows/pvr/defaultchannel.png">$VAR[PvrListIcon]</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
 		</channellayout>
-		<focusedchannellayout height="80" width="80">
+		<focusedchannellayout height="80" width="150">
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>80</width>
+				<width>150</width>
 				<height>81</height>
 				<texture border="90,3,90,3">views/list/other/separator.png</texture>
 			</control>
 			<control type="image">
 				<posx>0</posx>
 				<posy>1</posy>
-				<width>80</width>
+				<width>150</width>
 				<height>79</height>
 				<texture>views/other/selected.png</texture>
 				<colordiffuse>07FFFFFF</colordiffuse>
@@ -177,7 +177,7 @@
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>80</width>
+				<width>150</width>
 				<height>79</height>
 				<texture colordiffuse="TertiaryM">special://skin/extras/backgrounds/white.png</texture>
 				<visible>Control.HasFocus(10)</visible>
@@ -191,7 +191,7 @@
 			</control>
 			<control type="image">
 				<left>5</left>
-				<width>75</width>
+				<width>145</width>
 				<height>80</height>
 				<texture background="true" fallback="windows/pvr/defaultchannel.png">$VAR[PvrListIcon]</texture>
 				<aspectratio>keep</aspectratio>

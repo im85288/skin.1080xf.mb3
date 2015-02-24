@@ -6668,7 +6668,11 @@
 					</animation>
 					<animation effect="slide" end="-39" time="500" tween="cubic" easing="inout" condition="Container(20).HasFocus(2) | Container(20).HasFocus(3) | Container(20).HasFocus(4) | Container(20).HasFocus(11)">Conditional</animation>
 					<animation effect="slide" end="-39" time="500" tween="cubic" easing="inout" condition="Container(20).HasFocus(6) | Container(20).HasFocus(7) | Container(20).HasFocus(8)">Conditional</animation>
-					<animation type="Conditional" condition="!Container(20).HasFocus(5) | Container(20).OnScrollNext | Container(20).OnScrollPrevious | Container(20).Scrolling | Window.IsVisible(shutdownmenu)">
+					<animation type="Conditional" condition="[!Container(20).HasFocus(5) | Container(20).OnScrollNext | Container(20).OnScrollPrevious | Container(20).Scrolling | Window.IsVisible(shutdownmenu)] + !Skin.HasSetting(ShowMusicThumbs)">
+						<effect type="fade" start="100" end="80" time="500" tween="cubic" easing="inout" />
+						<effect type="zoom" start="100" end="57" time="500" tween="cubic" easing="inout" center="1160,386" />
+					</animation>
+					<animation type="Conditional" condition="[!Container(20).HasFocus(5) | Container(20).OnScrollNext | Container(20).OnScrollPrevious | Container(20).Scrolling | Window.IsVisible(shutdownmenu)] + Skin.HasSetting(ShowMusicThumbs)">
 						<effect type="fade" start="100" end="80" time="500" tween="cubic" easing="inout" />
 						<effect type="zoom" start="100" end="67" time="500" tween="cubic" easing="inout" center="1160,386" />
 					</animation>
